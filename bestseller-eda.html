@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>경제경영 독자 지도</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f6f7f5; --surface:#fcfcfb; --ink:#101312; --ink2:#4d5350; --muted:#838985;
+  --line:#e1e3de; --axis:#c3c6bf; --accent:#1c5cab; --chip:#eef1ee;
+  --m:#2a78d6; --f:#eb6834;
+  --s100:#e6eef8; --s200:#9ec5f4; --s300:#6da7ec; --s400:#3987e5; --s500:#256abf; --s600:#184f95; --s700:#0d366b;
+  --cell-ink-light:#101312; --cell-ink-dark:#ffffff; --zero:#f0f1ee;
+  --tip:#101312; --tip-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0f1110; --surface:#181a19; --ink:#f3f4f2; --ink2:#c3c6bf; --muted:#8a8f8b;
+    --line:#2a2d2b; --axis:#3a3e3b; --accent:#6da7ec; --chip:#232624;
+    --m:#3987e5; --f:#d95926;
+    --zero:#202321; --tip:#f3f4f2; --tip-ink:#101312;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0f1110; --surface:#181a19; --ink:#f3f4f2; --ink2:#c3c6bf; --muted:#8a8f8b;
+  --line:#2a2d2b; --axis:#3a3e3b; --accent:#6da7ec; --chip:#232624;
+  --m:#3987e5; --f:#d95926;
+  --zero:#202321; --tip:#f3f4f2; --tip-ink:#101312;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans KR",system-ui,-apple-system,"Malgun Gothic",sans-serif;line-height:1.6;padding-inline:16px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-block:40px 64px;display:flex;flex-direction:column;gap:28px}
+.num,.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+header .eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+h1{font-size:clamp(26px,4vw,36px);line-height:1.25;margin:6px 0 8px;letter-spacing:-.02em;text-wrap:balance}
+header p{margin:0;color:var(--ink2);max-width:680px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.stat b{display:block;font-size:26px;font-weight:600;letter-spacing:-.01em}
+.stat span{font-size:12.5px;color:var(--ink2)}
+section.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:14px}
+h2{font-size:18px;margin:0;letter-spacing:-.01em}
+.sub{margin:0;color:var(--ink2);font-size:13.5px;max-width:720px}
+.scroll{overflow-x:auto;position:relative}
+/* heatmap */
+table.heat{border-collapse:separate;border-spacing:2px;min-width:760px;width:100%}
+.heat th{font-size:12px;font-weight:500;color:var(--ink2);padding:4px 6px;white-space:nowrap}
+.heat thead th.g{font-size:12.5px;font-weight:600;color:var(--ink);text-align:center;border-bottom:2px solid var(--line)}
+.heat th.row{text-align:right;padding-right:10px}
+.heat td{height:38px;text-align:center;font-size:12.5px;border-radius:4px;cursor:default;transition:outline .1s}
+.heat td:hover{outline:2px solid var(--ink);outline-offset:-2px}
+.legend{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.ramp{display:flex;height:10px;width:180px;border-radius:3px;overflow:hidden}
+.ramp i{flex:1}
+/* explorer */
+.pick{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+.seg{display:flex;gap:4px;background:var(--chip);padding:4px;border-radius:9px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;color:var(--ink2);font:inherit;font-size:13.5px;padding:6px 12px;border-radius:6px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.pick label{font-size:12px;color:var(--muted)}
+.explore{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px}
+@media (max-width:760px){.explore{grid-template-columns:1fr}}
+.bars{display:flex;flex-direction:column;gap:9px}
+.bar{display:grid;grid-template-columns:104px minmax(0,1fr) 42px;gap:10px;align-items:center;font-size:13px}
+.bar .lab{color:var(--ink2);white-space:nowrap}
+.bar .track{position:relative;height:14px}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--s400);border-radius:0 4px 4px 0}
+.bar .avg{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);opacity:.55}
+.bar .val{text-align:right;font-size:12.5px}
+.note{font-size:12px;color:var(--muted)}
+.insight{background:var(--chip);border-radius:8px;padding:12px 14px;font-size:13.5px}
+ol.top{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ol.top li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+ol.top li:last-child{border-bottom:0}
+ol.top .rk{color:var(--muted);font-size:12.5px}
+ol.top .t{overflow-wrap:anywhere}
+.tag{font-size:11.5px;color:var(--ink2);background:var(--chip);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.tag.only{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+h3{font-size:14px;margin:0 0 6px}
+/* presence */
+table.pres{border-collapse:collapse;min-width:760px;width:100%}
+.pres th{font-size:12px;font-weight:500;color:var(--ink2);padding:6px 4px;white-space:nowrap}
+.pres th.bk{text-align:left;font-size:13px;color:var(--ink);font-weight:500;max-width:230px;white-space:normal;padding-right:12px}
+.pres td{text-align:center;padding:4px 0;border-top:1px solid var(--line)}
+.pres thead th.g{border-bottom:2px solid var(--line);font-weight:600;color:var(--ink)}
+.dot{display:inline-block;border-radius:50%;vertical-align:middle;box-shadow:0 0 0 2px var(--surface)}
+/* overlap */
+.cols{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;align-items:end;height:200px;padding-top:18px;border-bottom:1px solid var(--axis)}
+.col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px}
+.col .v{font-size:13px;font-weight:600}
+.col .b{width:min(56px,70%);background:var(--s400);border-radius:4px 4px 0 0}
+.col .b.low{background:var(--f)}
+.xl{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;font-size:12.5px;color:var(--ink2);text-align:center}
+ul.find{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:14px}
+ul.find b{font-weight:600}
+footer{font-size:12px;color:var(--muted);max-width:760px}
+#tip{position:fixed;pointer-events:none;background:var(--tip);color:var(--tip-ink);font-size:12.5px;padding:7px 10px;border-radius:6px;max-width:260px;z-index:10;line-height:1.45}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap" style="padding-top:8px">
+  <header>
+    <div class="eyebrow">예스24 경제경영 주간 베스트 · 2026.09.20 – 09.26</div>
+    <h1>누가 어떤 경제경영서를 읽나</h1>
+    <p>성별 2 × 연령대 6, 모두 12개 독자층의 베스트셀러 Top 20(240건)을 주제별로 나눠 비교했습니다. 순위가 높을수록 가중치를 크게 줘서(1위 20점 … 20위 1점) 각 독자층의 관심이 어디에 몰려 있는지 봅니다.</p>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b class="num">240</b><span>수집한 순위 (12개 독자층 × 20위)</span></div>
+    <div class="stat"><b class="num">74</b><span>서로 다른 책</span></div>
+    <div class="stat"><b class="num">2</b><span>12개 독자층 모두의 Top 20에 든 책</span></div>
+    <div class="stat"><b class="num">48%</b><span>남성 60대 이상의 주식·투자 비중 (최고)</span></div>
+  </div>
+
+  <section class="panel">
+    <h2>핵심 발견</h2>
+    <ul class="find">
+      <li><b>연령이 오를수록 '돈 공부'에서 '투자 실전'으로.</b> 남성은 주식·투자 비중이 10대 16%에서 60대 이상 48%까지 올라갑니다. 여성 20대는 돈 공부·재테크가 44%로 가장 높습니다.</li>
+      <li><b>30대 여성은 부동산이 1위.</b> 『나의 첫 번째 부동산 교과서』가 여성 30대 1위, 20대 2위입니다. 부동산 비중도 여성 30~50대가 7~11%로 같은 연령대 남성(2~8%)보다 높습니다.</li>
+      <li><b>10대는 교양과 고전을 읽습니다.</b> 경제교양·고전 비중이 남성 30%, 여성 23%로 다른 연령보다 확연히 높고, 다른 독자층에 없는 책도 가장 많습니다(남 8권, 여 9권).</li>
+      <li><b>성별 차이는 양 끝 세대에서 큽니다.</b> 같은 연령대 남녀가 공유하는 책은 20~50대 12~15권이지만 10대와 60대 이상은 7권뿐입니다.</li>
+      <li><b>모두가 읽는 책은 전망서.</b> 『트렌드 코리아 2027』과 『머니 트렌드 2027』은 12개 독자층 모두의 Top 20에 들었습니다. 연말 전망서 시즌의 영향으로 보입니다.</li>
+    </ul>
+  </section>
+
+  <section class="panel" id="heat">
+    <h2>주제별 관심도: 독자층 × 주제</h2>
+    <p class="sub">각 칸은 그 독자층 Top 20의 순위 가중 점수 중 해당 주제가 차지하는 비중(%)입니다. 세로 한 줄을 더하면 100%입니다. 칸에 마우스를 올리면 해당하는 책이 보입니다.</p>
+    <div class="scroll"><table class="heat" id="heatT"></table></div>
+    <div class="legend"><span>0%</span><div class="ramp" id="ramp"></div><span id="rampMax">48%</span></div>
+  </section>
+
+  <section class="panel" id="explorer">
+    <h2>독자층 살펴보기</h2>
+    <div class="pick">
+      <div><label id="gl">성별</label><div class="seg" role="group" aria-labelledby="gl" id="gBtns"></div></div>
+      <div><label id="al">연령대</label><div class="seg" role="group" aria-labelledby="al" id="aBtns"></div></div>
+    </div>
+    <div class="insight" id="insight"></div>
+    <div class="explore">
+      <div>
+        <h3 id="barsTitle">주제 비중</h3>
+        <div class="bars" id="bars"></div>
+        <p class="note" style="margin-top:10px">막대는 선택한 독자층, 세로선은 12개 독자층 평균입니다.</p>
+      </div>
+      <div>
+        <h3 id="topTitle">Top 10</h3>
+        <ol class="top" id="top"></ol>
+        <p class="note" style="margin-top:8px"><span class="tag only">이 독자층만</span> 표시는 다른 11개 독자층의 Top 20에는 없는 책입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>많이 겹치는 책 15권의 독자층별 순위</h2>
+    <p class="sub">원이 클수록 순위가 높습니다. 빈칸은 그 독자층의 Top 20에 없다는 뜻입니다.</p>
+    <div class="legend"><span class="dot" style="width:10px;height:10px;background:var(--m)"></span>남성 <span class="dot" style="width:10px;height:10px;background:var(--f);margin-left:10px"></span>여성 <span style="margin-left:10px">· 큰 원 1위 → 작은 원 20위</span></div>
+    <div class="scroll"><table class="pres" id="presT"></table></div>
+  </section>
+
+  <section class="panel">
+    <h2>같은 연령대 남녀가 함께 고른 책</h2>
+    <p class="sub">같은 연령대의 남성 Top 20과 여성 Top 20에 모두 들어간 책의 수(최대 20권)입니다. 10권 미만인 연령대는 주황색으로 표시했습니다. 막대에 마우스를 올리면 공통 도서가 보입니다.</p>
+    <div class="cols" id="cols"></div>
+    <div class="xl" id="xl"></div>
+  </section>
+
+  <section class="panel">
+    <h2>과제 정보</h2>
+    <p class="sub">과목: 인공지능 경영과 법 (2026 가을, KAIST I&amp;TM) · 작성: 김보나 · Claude(AI 에이전트)를 활용해 데이터 수집부터 분석 대시보드 제작까지 진행했습니다.</p>
+  </section>
+
+  <footer>
+    데이터: 예스24 경제경영 주간 베스트셀러, 성별·연령대 필터별 Top 20 (2026.09.20–09.26 집계, 2026-09-27 수집).
+    주제 분류는 제목과 부제를 바탕으로 직접 나눈 것이라 해석에 따라 달라질 수 있습니다. 비중은 순위 가중치(1위 20점 … 20위 1점)로 계산했습니다.
+    예스24의 성별·연령대 집계는 구매 회원 기준이며, 선물 구매 등이 섞여 있을 수 있습니다.
+  </footer>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const D={"themes":["주식·투자","돈 공부·재테크","부동산","트렌드·경제전망","경제교양·고전","AI·기술","마케팅·창업","일·커리어·리더십"],"books":{"172574653":{"t":"돈의 심리학 (50만 부 기념 뉴 에디션)","a":"모건 하우절, 이지연","p":"인플루엔셜","d":"2026년 01월","th":1},"103990890":{"t":"제로 투 원 (10주년 기념판)","a":"피터 틸, 블레이크 매스터스, 이지연","p":"한국경제신문사(한경비피)","d":"2025년 04월","th":6},"154827889":{"t":"손자병법","a":"손자, 소준섭","p":"현대지성","d":"2025년 10월","th":4},"195124653":{"t":"찰리 멍거 바이블 완결판","a":"김재현, 이건","p":"에프엔미디어","d":"2026년 08월","th":0},"193850463":{"t":"교양을 위한 최소한의 경제지식","a":"SBS 교양이를 부탁해, 한동훈","p":"인플루엔셜","d":"2026년 07월","th":4},"122532297":{"t":"돈, 뜨겁게 사랑하고 차갑게 다루어라","a":"앙드레 코스톨라니, 한윤진","p":"미래의창","d":"2023년 09월","th":1},"110878515":{"t":"워런 버핏의 주주 서한","a":"워런 버핏, 로렌스 커닝햄, 이건","p":"에프엔미디어","d":"2022년 08월","th":0},"90428162":{"t":"돈의 속성 400쇄 리커버","a":"김승호","p":"스노우폭스북스","d":"2020년 06월","th":1},"2931642":{"t":"국부론 (상)","a":"애덤 스미스, 김수행","p":"비봉출판사(BBbooks)","d":"2007년 12월","th":4},"196721432":{"t":"돈의 흐름을 읽는 최소한의 경제 공부","a":"김선율(김멘사)","p":"리미트리스","d":"2026년 09월","th":4},"196187299":{"t":"에이전트 워크플로우","a":"로사장(김다솔)","p":"필름","d":"2026년 09월","th":5},"196012164":{"t":"왜 당신의 노력은 돈이 되지 않는가","a":"고윤(페이서스 코리아)","p":"오팬하우스","d":"2026년 09월","th":1},"195842609":{"t":"트렌드 코리아 2027","a":"김난도, 전미영, 최지혜, 권정윤, 한다혜, 이혜원, 전다현, 이수진, 서유현, 이준영, 이향은, 김나은, 문지수","p":"미래의창","d":"2026년 09월","th":3},"195804438":{"t":"시대예보: 수고인류의 시간","a":"송길영","p":"교보문고","d":"2026년 09월","th":3},"195613503":{"t":"머니 트렌드 2027","a":"정태익, 김도윤, 김광석, 김용섭, 김학렬, 박세익, 박정호, 이효석","p":"북모먼트","d":"2026년 09월","th":3},"194403422":{"t":"일터의 대화","a":"최익성, 이누리","p":"플랜비디자인","d":"2026년 08월","th":7},"191479772":{"t":"머니볼","a":"마이클 루이스, 김찬별, 노은아","p":"비즈니스맵","d":"2026년 06월","th":4},"190817457":{"t":"기술이 인류를 구원한다는 착각","a":"애덤 베커, 박주용","p":"동아시아","d":"2026년 06월","th":5},"190811719":{"t":"부의 갈림길","a":"오건영","p":"포레스트북스","d":"2026년 06월","th":0},"188831720":{"t":"넛지 디자인","a":"석지현","p":"모티브","d":"2026년 05월","th":4},"59580017":{"t":"생각에 관한 생각","a":"대니얼 카너먼, 이창신","p":"김영사","d":"2018년 03월","th":4},"11081680":{"t":"자본주의","a":"EBS 〈자본주의〉제작팀, 정지은, 고희정, EBS MEDIA","p":"가나출판사","d":"2013년 09월","th":4},"190813759":{"t":"나의 첫 번째 부동산 교과서","a":"송희구","p":"서삼독","d":"2026년 06월","th":2},"184261820":{"t":"AI, 신의 탄생 인간의 종말","a":"엘리에저 유드코스키, 네이트 소아레스, 고영훈","p":"상상스퀘어","d":"2026년 04월","th":5},"195223734":{"t":"인생을 바꾸는 투자학개론","a":"한정수","p":"토네이도","d":"2026년 08월","th":0},"106369008":{"t":"부의 추월차선 (10주년 스페셜 에디션)","a":"엠제이 드마코, 신소영","p":"토트출판사","d":"2022년 02월","th":1},"58774995":{"t":"부자 아빠 가난한 아빠 20주년 특별 기념판","a":"로버트 기요사키, 안진환","p":"민음인","d":"2018년 02월","th":1},"196492194":{"t":"완벽한 장부","a":"손보승","p":"한국세무정보","d":"2026년 09월","th":6},"195955310":{"t":"클릭 히어","a":"알렉스 슐츠, 김태훈, 최창석","p":"알에이치코리아(RHK)","d":"2026년 09월","th":6},"195790309":{"t":"미래를 바꿀 7개의 메가트렌드에 올라타라","a":"테크피드","p":"토네이도","d":"2026년 09월","th":3},"162149188":{"t":"부자 아빠 투자 불변의 법칙","a":"타짱, 박선영","p":"큰숲","d":"2025년 10월","th":0},"117389523":{"t":"레버리지","a":"롭 무어, 김유미","p":"다산북스","d":"2023년 02월","th":1},"194505604":{"t":"살 것인가, 팔 것인가, 버틸 것인가 Buy · Sell · Hold","a":"목대균","p":"서삼독","d":"2026년 08월","th":0},"116255710":{"t":"마케팅 설계자","a":"러셀 브런슨, 이경식","p":"윌북(willbook)","d":"2022년 12월","th":6},"195391090":{"t":"이효석의 21세기 투자법","a":"이효석","p":"상상스퀘어","d":"2026년 09월","th":0},"193154549":{"t":"독하게 돈 공부","a":"박소연","p":"메이븐","d":"2026년 07월","th":1},"148032819":{"t":"박곰희 연금 부자 수업","a":"박곰희","p":"인플루엔셜","d":"2025년 06월","th":1},"194892341":{"t":"대한민국 부의 감각","a":"터보832","p":"체인지업","d":"2026년 09월","th":1},"195381284":{"t":"돈의 역류 2027년 경제전망","a":"김광석","p":"이든하우스","d":"2026년 09월","th":3},"189696670":{"t":"시장의 마법사들","a":"잭 슈웨거, 송미리","p":"이레미디어","d":"2026년 06월","th":0},"141325413":{"t":"유대인의 상술","a":"후지다 덴, 이경미","p":"지니의서재","d":"2025년 02월","th":4},"193890335":{"t":"부의 곡선","a":"안유화","p":"경이로움","d":"2026년 08월","th":0},"196649226":{"t":"넥스트 엔비디아, 투자의 미래","a":"송종호","p":"노티스","d":"2026년 09월","th":0},"196560031":{"t":"50부터 시작하는 은퇴 후 월급 만드는 부동산","a":"김학렬","p":"포르체","d":"2026년 09월","th":2},"169902356":{"t":"캔들차트 하나로 끝내는 추세추종 투자 (리커버 개정판)","a":"성승현","p":"포르체","d":"2026년 01월","th":0},"195848248":{"t":"역사가 우리에게 가르쳐주는 것들","a":"윌 듀런트, 에어리얼 듀런트, 안인희","p":"돌베개","d":"2026년 09월","th":4},"196678732":{"t":"침투율의 법칙","a":"이형수","p":"지베르니","d":"2026년 10월","th":0},"196550773":{"t":"주도주 함부로 팔지 마라","a":"한지영","p":"다산북스","d":"2026년 09월","th":0},"195117210":{"t":"정지훈의 AI 투자 강의","a":"정지훈","p":"한빛미디어","d":"2026년 08월","th":0},"182639140":{"t":"평생 월 500만 원 받는 월배당 ETF","a":"배당의만장","p":"노티스","d":"2026년 03월","th":0},"182424060":{"t":"박태웅의 AI 강의 2026","a":"박태웅","p":"한빛비즈","d":"2026년 03월","th":5},"175467785":{"t":"주식투자 무작정 따라하기","a":"윤재수","p":"길벗","d":"2026년 01월","th":0},"195250844":{"t":"맨큐로 읽는 케이팝 경제학","a":"김현호, 백휘정","p":"드러커마인드","d":"2026년 08월","th":4},"192493548":{"t":"우리는 어떤 나라를 원하는가","a":"백승주","p":"북루덴스","d":"2026년 07월","th":4},"184337755":{"t":"주식 투자를 잘한다는 것","a":"육과장","p":"노티스","d":"2026년 04월","th":0},"184321393":{"t":"더 기버 2","a":"밥 버그, 존 데이비드 만, 조주희","p":"오팬하우스","d":"2026년 03월","th":6},"182777447":{"t":"대기업 퇴사하고 농사를 짓습니다","a":"안해성, 이종혁","p":"시대고시기획 시대교육","d":"2026년 04월","th":6},"176338718":{"t":"내가 돈을 벌고 있다는 착각","a":"commonD","p":"스틸당(STEALDANG)","d":"2026년 02월","th":1},"167503385":{"t":"자본주의 시대에서 살아남기 위한 최소한의 경제 공부","a":"백억남(김욱현)","p":"하이스트","d":"2025년 12월","th":1},"151043426":{"t":"일본어 명카피 필사 노트","a":"정규영, 김수경","p":"길벗이지톡","d":"2025년 08월","th":7},"147951393":{"t":"육일약국 갑시다","a":"김성오","p":"다크호스","d":"2025년 06월","th":6},"124999476":{"t":"불변의 법칙","a":"모건 하우절, 이수경","p":"서삼독","d":"2024년 02월","th":1},"196671419":{"t":"링크드인 취업 알고리즘","a":"강원준","p":"마인드큐브","d":"2026년 09월","th":7},"195029559":{"t":"옴스잡스의 스펙을 뛰어넘는 면접의 기술","a":"옴스","p":"원앤원북스","d":"2026년 08월","th":7},"101875887":{"t":"라오어의 미국주식 무한매수법","a":"라오어","p":"알키","d":"2021년 06월","th":0},"112323962":{"t":"라오어의 미국주식 밸류 리밸런싱","a":"라오어","p":"알키","d":"2022년 08월","th":0},"195594356":{"t":"절세미녀가 알려주는 우리 아이 부자 세팅법","a":"김희연","p":"모티브","d":"2026년 09월","th":1},"196644647":{"t":"온라인 건물주의 정석 네이버 블로그 편","a":"알파남(김지수)","p":"모티브","d":"2026년 09월","th":1},"99184511":{"t":"왜 일하는가","a":"이나모리 가즈오, 김윤경","p":"다산북스","d":"2021년 04월","th":7},"194172529":{"t":"미국 성장주 처음 투자","a":"김운아","p":"경이로움","d":"2026년 08월","th":0},"93737153":{"t":"관계우선의 법칙","a":"빌 비숍, 김승욱","p":"애플씨드북스","d":"2020년 10월","th":6},"196780452":{"t":"브랜드가 된 리더","a":"피채희","p":"이니티오","d":"2026년 09월","th":7},"196184770":{"t":"판매의 법칙","a":"김주환","p":"모티브","d":"2026년 09월","th":6},"194255353":{"t":"리더의 질문법","a":"에드거 샤인, 피터 샤인, 노승영","p":"심심","d":"2026년 07월","th":7}},"rows":[["남성","10대",1,"172574653"],["남성","10대",2,"103990890"],["남성","10대",3,"154827889"],["남성","10대",4,"195124653"],["남성","10대",5,"193850463"],["남성","10대",6,"122532297"],["남성","10대",7,"110878515"],["남성","10대",8,"90428162"],["남성","10대",9,"2931642"],["남성","10대",10,"196721432"],["남성","10대",11,"196187299"],["남성","10대",12,"196012164"],["남성","10대",13,"195842609"],["남성","10대",14,"195804438"],["남성","10대",15,"195613503"],["남성","10대",16,"194403422"],["남성","10대",17,"191479772"],["남성","10대",18,"190817457"],["남성","10대",19,"190811719"],["남성","10대",20,"188831720"],["남성","20대",1,"172574653"],["남성","20대",2,"195613503"],["남성","20대",3,"195124653"],["남성","20대",4,"59580017"],["남성","20대",5,"11081680"],["남성","20대",6,"195804438"],["남성","20대",7,"154827889"],["남성","20대",8,"190813759"],["남성","20대",9,"184261820"],["남성","20대",10,"90428162"],["남성","20대",11,"195842609"],["남성","20대",12,"195223734"],["남성","20대",13,"122532297"],["남성","20대",14,"106369008"],["남성","20대",15,"58774995"],["남성","20대",16,"196492194"],["남성","20대",17,"195955310"],["남성","20대",18,"195790309"],["남성","20대",19,"162149188"],["남성","20대",20,"117389523"],["남성","30대",1,"195613503"],["남성","30대",2,"195804438"],["남성","30대",3,"195842609"],["남성","30대",4,"190813759"],["남성","30대",5,"196012164"],["남성","30대",6,"195124653"],["남성","30대",7,"172574653"],["남성","30대",8,"194505604"],["남성","30대",9,"154827889"],["남성","30대",10,"116255710"],["남성","30대",11,"195790309"],["남성","30대",12,"195391090"],["남성","30대",13,"59580017"],["남성","30대",14,"195955310"],["남성","30대",15,"193154549"],["남성","30대",16,"162149188"],["남성","30대",17,"148032819"],["남성","30대",18,"195223734"],["남성","30대",19,"194892341"],["남성","30대",20,"195381284"],["남성","40대",1,"195124653"],["남성","40대",2,"195613503"],["남성","40대",3,"195804438"],["남성","40대",4,"195842609"],["남성","40대",5,"116255710"],["남성","40대",6,"162149188"],["남성","40대",7,"172574653"],["남성","40대",8,"196012164"],["남성","40대",9,"195391090"],["남성","40대",10,"190813759"],["남성","40대",11,"184261820"],["남성","40대",12,"190811719"],["남성","40대",13,"196187299"],["남성","40대",14,"195223734"],["남성","40대",15,"193154549"],["남성","40대",16,"148032819"],["남성","40대",17,"90428162"],["남성","40대",18,"189696670"],["남성","40대",19,"141325413"],["남성","40대",20,"59580017"],["남성","50대",1,"195613503"],["남성","50대",2,"195124653"],["남성","50대",3,"184261820"],["남성","50대",4,"195842609"],["남성","50대",5,"116255710"],["남성","50대",6,"195804438"],["남성","50대",7,"196012164"],["남성","50대",8,"195391090"],["남성","50대",9,"172574653"],["남성","50대",10,"196187299"],["남성","50대",11,"193154549"],["남성","50대",12,"193890335"],["남성","50대",13,"59580017"],["남성","50대",14,"117389523"],["남성","50대",15,"122532297"],["남성","50대",16,"196649226"],["남성","50대",17,"196560031"],["남성","50대",18,"148032819"],["남성","50대",19,"169902356"],["남성","50대",20,"154827889"],["남성","60대 이상",1,"195613503"],["남성","60대 이상",2,"195124653"],["남성","60대 이상",3,"195842609"],["남성","60대 이상",4,"193890335"],["남성","60대 이상",5,"184261820"],["남성","60대 이상",6,"196012164"],["남성","60대 이상",7,"195848248"],["남성","60대 이상",8,"195391090"],["남성","60대 이상",9,"162149188"],["남성","60대 이상",10,"116255710"],["남성","60대 이상",11,"195381284"],["남성","60대 이상",12,"196678732"],["남성","60대 이상",13,"196649226"],["남성","60대 이상",14,"196550773"],["남성","60대 이상",15,"195117210"],["남성","60대 이상",16,"194505604"],["남성","60대 이상",17,"193154549"],["남성","60대 이상",18,"182639140"],["남성","60대 이상",19,"196187299"],["남성","60대 이상",20,"195223734"],["여성","10대",1,"172574653"],["여성","10대",2,"11081680"],["여성","10대",3,"196012164"],["여성","10대",4,"182424060"],["여성","10대",5,"175467785"],["여성","10대",6,"196187299"],["여성","10대",7,"195842609"],["여성","10대",8,"195804438"],["여성","10대",9,"195613503"],["여성","10대",10,"195250844"],["여성","10대",11,"193850463"],["여성","10대",12,"193154549"],["여성","10대",13,"192493548"],["여성","10대",14,"184337755"],["여성","10대",15,"184321393"],["여성","10대",16,"182777447"],["여성","10대",17,"176338718"],["여성","10대",18,"167503385"],["여성","10대",19,"151043426"],["여성","10대",20,"147951393"],["여성","20대",1,"195613503"],["여성","20대",2,"190813759"],["여성","20대",3,"195842609"],["여성","20대",4,"172574653"],["여성","20대",5,"58774995"],["여성","20대",6,"196012164"],["여성","20대",7,"195955310"],["여성","20대",8,"90428162"],["여성","20대",9,"193154549"],["여성","20대",10,"154827889"],["여성","20대",11,"148032819"],["여성","20대",12,"124999476"],["여성","20대",13,"195804438"],["여성","20대",14,"195124653"],["여성","20대",15,"11081680"],["여성","20대",16,"196671419"],["여성","20대",17,"195790309"],["여성","20대",18,"195029559"],["여성","20대",19,"190811719"],["여성","20대",20,"167503385"],["여성","30대",1,"190813759"],["여성","30대",2,"195613503"],["여성","30대",3,"195842609"],["여성","30대",4,"195804438"],["여성","30대",5,"196012164"],["여성","30대",6,"148032819"],["여성","30대",7,"193154549"],["여성","30대",8,"154827889"],["여성","30대",9,"122532297"],["여성","30대",10,"59580017"],["여성","30대",11,"101875887"],["여성","30대",12,"195955310"],["여성","30대",13,"190811719"],["여성","30대",14,"172574653"],["여성","30대",15,"112323962"],["여성","30대",16,"195594356"],["여성","30대",17,"195223734"],["여성","30대",18,"195124653"],["여성","30대",19,"90428162"],["여성","30대",20,"196644647"],["여성","40대",1,"195613503"],["여성","40대",2,"195804438"],["여성","40대",3,"195842609"],["여성","40대",4,"195124653"],["여성","40대",5,"196012164"],["여성","40대",6,"193154549"],["여성","40대",7,"190813759"],["여성","40대",8,"148032819"],["여성","40대",9,"99184511"],["여성","40대",10,"172574653"],["여성","40대",11,"59580017"],["여성","40대",12,"154827889"],["여성","40대",13,"195790309"],["여성","40대",14,"190811719"],["여성","40대",15,"116255710"],["여성","40대",16,"195391090"],["여성","40대",17,"184261820"],["여성","40대",18,"122532297"],["여성","40대",19,"195594356"],["여성","40대",20,"194172529"],["여성","50대",1,"195613503"],["여성","50대",2,"195124653"],["여성","50대",3,"195842609"],["여성","50대",4,"195804438"],["여성","50대",5,"172574653"],["여성","50대",6,"116255710"],["여성","50대",7,"196560031"],["여성","50대",8,"148032819"],["여성","50대",9,"99184511"],["여성","50대",10,"193154549"],["여성","50대",11,"59580017"],["여성","50대",12,"190813759"],["여성","50대",13,"90428162"],["여성","50대",14,"196012164"],["여성","50대",15,"195391090"],["여성","50대",16,"184261820"],["여성","50대",17,"190811719"],["여성","50대",18,"154827889"],["여성","50대",19,"141325413"],["여성","50대",20,"122532297"],["여성","60대 이상",1,"195124653"],["여성","60대 이상",2,"195613503"],["여성","60대 이상",3,"172574653"],["여성","60대 이상",4,"195842609"],["여성","60대 이상",5,"195804438"],["여성","60대 이상",6,"184261820"],["여성","60대 이상",7,"141325413"],["여성","60대 이상",8,"116255710"],["여성","60대 이상",9,"99184511"],["여성","60대 이상",10,"193890335"],["여성","60대 이상",11,"182424060"],["여성","60대 이상",12,"122532297"],["여성","60대 이상",13,"93737153"],["여성","60대 이상",14,"196780452"],["여성","60대 이상",15,"196560031"],["여성","60대 이상",16,"196184770"],["여성","60대 이상",17,"195790309"],["여성","60대 이상",18,"195391090"],["여성","60대 이상",19,"194255353"],["여성","60대 이상",20,"189696670"]]};
+const G=['남성','여성'], A=['10대','20대','30대','40대','50대','60대 이상'];
+const SEGS=G.flatMap(g=>A.map(a=>[g,a]));
+const TH=D.themes;
+const byseg={}; SEGS.forEach(([g,a])=>byseg[g+a]=D.rows.filter(r=>r[0]===g&&r[1]===a).sort((x,y)=>x[2]-y[2]));
+const appear={}; D.rows.forEach(r=>appear[r[3]]=(appear[r[3]]||0)+1);
+function share(g,a){const w=TH.map(()=>0);byseg[g+a].forEach(r=>w[D.books[r[3]].th]+=21-r[2]);const t=w.reduce((s,x)=>s+x,0);return w.map(x=>100*x/t);}
+const SH={}; SEGS.forEach(([g,a])=>SH[g+a]=share(g,a));
+const AVG=TH.map((_,i)=>SEGS.reduce((s,[g,a])=>s+SH[g+a][i],0)/SEGS.length);
+const MAX=Math.max(...Object.values(SH).flat());
+const cssv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const STEPS=['--s100','--s200','--s300','--s400','--s500','--s600','--s700'];
+function cellColor(v){ if(v<0.5) return ['var(--zero)','var(--muted)']; const i=Math.min(6,Math.floor(v/MAX*6.999)); return ['var('+STEPS[i]+')', i>=3?'var(--cell-ink-dark)':'var(--cell-ink-light)']; }
+const tip=document.getElementById('tip');
+function showTip(e,html){tip.innerHTML=html;tip.hidden=false;const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8),y=Math.min(e.clientY+14,innerHeight-tip.offsetHeight-8);tip.style.left=x+'px';tip.style.top=y+'px';}
+function hideTip(){tip.hidden=true;}
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// heatmap
+(function(){
+  const t=document.getElementById('heatT');
+  let h='<caption class="sr">독자층별 주제 비중 표</caption><thead><tr><th></th>'+G.map(g=>`<th class="g" colspan="6">${g}</th>`).join('')+'</tr><tr><th></th>'+SEGS.map(([g,a])=>`<th scope="col">${a.replace(' 이상','+')}</th>`).join('')+'</tr></thead><tbody>';
+  TH.forEach((th,i)=>{h+=`<tr><th class="row" scope="row">${th}</th>`;SEGS.forEach(([g,a])=>{const v=SH[g+a][i];const [bg,fg]=cellColor(v);h+=`<td data-g="${g}" data-a="${a}" data-i="${i}" style="background:${bg};color:${fg}" class="num">${Math.round(v)}</td>`;});h+='</tr>';});
+  t.innerHTML=h+'</tbody>';
+  t.addEventListener('mousemove',e=>{const td=e.target.closest('td');if(!td)return hideTip();const g=td.dataset.g,a=td.dataset.a,i=+td.dataset.i;const bs=byseg[g+a].filter(r=>D.books[r[3]].th===i);showTip(e,`<b>${g} ${a} · ${TH[i]} ${Math.round(SH[g+a][i])}%</b><br>`+(bs.length?bs.map(r=>`${r[2]}위 ${esc(D.books[r[3]].t)}`).join('<br>'):'해당 주제의 책 없음'));});
+  t.addEventListener('mouseleave',hideTip);
+  document.getElementById('ramp').innerHTML=STEPS.map(s=>`<i style="background:var(${s})"></i>`).join('');
+  document.getElementById('rampMax').textContent=Math.round(MAX)+'%';
+})();
+
+// explorer
+let cur=['여성','30대'];
+const NOTES={
+ '남성10대':'교양·고전 비중(30%)이 가장 높은 독자층입니다. 『국부론』『머니볼』『제로 투 원』처럼 다른 독자층에 없는 책이 8권으로 취향이 넓게 퍼져 있습니다.',
+ '남성20대':'돈 공부·재테크(25%)와 교양(22%)이 비슷합니다. 『부의 추월차선』『부자 아빠 가난한 아빠』 같은 스테디셀러가 아직 상위권입니다.',
+ '남성30대':'트렌드·경제전망 비중(32%)이 가장 높은 독자층입니다. 1~3위가 모두 2027 전망서입니다.',
+ '남성40대':'주식·투자(31%)가 가장 큰 주제입니다. 『찰리 멍거 바이블』이 1위로, 투자 대가의 원칙을 찾는 흐름이 보입니다.',
+ '남성50대':'AI·기술 비중(14%)이 남성 중 가장 높습니다. 『넥스트 엔비디아』처럼 AI를 투자 관점에서 보는 책이 함께 올라와 있습니다.',
+ '남성60대 이상':'주식·투자가 48%로 전체에서 가장 쏠린 독자층입니다. 월배당 ETF, 주도주, AI 투자처럼 실전형 신간이 많고 Top 20 중 18권이 2026년 출간작입니다.',
+ '여성10대':'다른 독자층에 없는 책이 9권으로 가장 많습니다. 『주식투자 무작정 따라하기』 같은 입문서와 케이팝 경제학, 영농 창업까지 관심사가 다양합니다.',
+ '여성20대':'돈 공부·재테크가 44%로 가장 높은 독자층입니다. 『링크드인 취업 알고리즘』, 면접 책처럼 커리어를 시작하는 시기의 책도 보입니다.',
+ '여성30대':'『나의 첫 번째 부동산 교과서』가 1위이고, 라오어의 미국주식 책 2권은 이 독자층에만 있습니다. 내 집 마련과 자산 형성에 관심이 모여 있습니다.',
+ '여성40대':'트렌드·경제전망(31%)과 재테크(29%)가 중심입니다. 연금, 자녀 절세 책이 함께 올라 가계 단위의 돈 관리가 보입니다.',
+ '여성50대':'부동산 비중(11%)이 전체에서 가장 높습니다. 『50부터 시작하는 은퇴 후 월급 만드는 부동산』처럼 노후 현금흐름에 관심이 있습니다.',
+ '여성60대 이상':'마케팅·창업(12%)과 일·리더십(10%) 비중이 가장 높은 독자층입니다. 『리더의 질문법』『브랜드가 된 리더』 등 4권이 이 독자층에만 있습니다.'
+};
+function btns(id,list,idx){const el=document.getElementById(id);el.innerHTML=list.map(v=>`<button type="button" id="${id}-${list.indexOf(v)}" aria-pressed="${cur[idx]===v}">${v}</button>`).join('');el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;cur[idx]=b.textContent;render();});}
+btns('gBtns',G,0);btns('aBtns',A,1);
+function render(){
+  const [g,a]=cur;
+  document.querySelectorAll('#gBtns button').forEach(b=>b.setAttribute('aria-pressed',b.textContent===g));
+  document.querySelectorAll('#aBtns button').forEach(b=>b.setAttribute('aria-pressed',b.textContent===a));
+  document.getElementById('insight').innerHTML=`<b>${g} ${a}</b> · ${NOTES[g+a]}`;
+  document.getElementById('barsTitle').textContent=`${g} ${a} 주제 비중`;
+  document.getElementById('topTitle').textContent=`${g} ${a} Top 10`;
+  const sh=SH[g+a], mx=Math.max(MAX,1);
+  document.getElementById('bars').innerHTML=TH.map((th,i)=>`<div class="bar"><span class="lab">${th}</span><span class="track"><span class="fill" style="width:${sh[i]/mx*100}%"></span><span class="avg" style="left:${AVG[i]/mx*100}%" title="평균 ${Math.round(AVG[i])}%"></span></span><span class="val num">${Math.round(sh[i])}%</span></div>`).join('');
+  document.getElementById('top').innerHTML=byseg[g+a].slice(0,10).map(r=>{const b=D.books[r[3]];const only=appear[r[3]]===1;return `<li><span class="rk num">${r[2]}</span><span class="t">${esc(b.t)}</span><span>${only?'<span class="tag only">이 독자층만</span>':`<span class="tag">${TH[b.th]}</span>`}</span></li>`;}).join('');
+}
+render();
+
+// presence
+(function(){
+  const top=Object.entries(appear).sort((x,y)=>y[1]-x[1]||x[0].localeCompare(y[0])).slice(0,15).map(x=>x[0]);
+  const rank={};D.rows.forEach(r=>rank[r[3]+'|'+r[0]+r[1]]=r[2]);
+  let h='<caption class="sr">책별 독자층 순위</caption><thead><tr><th></th>'+G.map(g=>`<th class="g" colspan="6">${g}</th>`).join('')+'<th></th></tr><tr><th></th>'+SEGS.map(([g,a])=>`<th>${a.replace(' 이상','+')}</th>`).join('')+'<th>등장</th></tr></thead><tbody>';
+  top.forEach(id=>{const b=D.books[id];h+=`<tr><th class="bk" scope="row">${esc(b.t)}</th>`;SEGS.forEach(([g,a])=>{const rk=rank[id+'|'+g+a];if(!rk){h+='<td></td>';return;}const d=6+(21-rk)/20*14;h+=`<td data-t="${esc(b.t)}" data-s="${g} ${a}" data-r="${rk}"><span class="dot" style="width:${d}px;height:${d}px;background:${g==='남성'?'var(--m)':'var(--f)'}"></span><span class="sr">${rk}위</span></td>`;});h+=`<td class="num" style="font-size:12.5px;color:var(--ink2)">${appear[id]}/12</td></tr>`;});
+  const t=document.getElementById('presT');t.innerHTML=h+'</tbody>';
+  t.addEventListener('mousemove',e=>{const td=e.target.closest('td[data-r]');if(!td)return hideTip();showTip(e,`<b>${td.dataset.t}</b><br>${td.dataset.s} · ${td.dataset.r}위`);});
+  t.addEventListener('mouseleave',hideTip);
+})();
+
+// overlap
+(function(){
+  const vals=A.map(a=>{const m=new Set(byseg['남성'+a].map(r=>r[3]));return byseg['여성'+a].filter(r=>m.has(r[3])).length;});
+  document.getElementById('cols').innerHTML=vals.map((v,i)=>`<div class="col" data-a="${A[i]}" data-v="${v}"><span class="v num">${v}권</span><span class="b ${v<10?'low':''}" style="height:${v/20*150}px"></span></div>`).join('');
+  document.getElementById('xl').innerHTML=A.map(a=>`<span>${a}</span>`).join('');
+  const c=document.getElementById('cols');
+  c.addEventListener('mousemove',e=>{const col=e.target.closest('.col');if(!col)return hideTip();const a=col.dataset.a;const m=new Set(byseg['남성'+a].map(r=>r[3]));const sh=byseg['여성'+a].filter(r=>m.has(r[3])).map(r=>esc(D.books[r[3]].t));showTip(e,`<b>${a} 남녀 공통 ${col.dataset.v}권</b><br>`+sh.join('<br>'));});
+  c.addEventListener('mouseleave',hideTip);
+})();
+</script>
+
+</body>
+</html>
