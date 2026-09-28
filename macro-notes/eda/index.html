@@ -163,7 +163,7 @@ ul.tight{margin:0;padding-left:20px;display:grid;gap:4px;font-size:.93rem}
     <div class="panel"><div class="legend"><span><i style="background:var(--s1)"></i>미 10년물(%)</span><span class="small">점선 = 저자 트리거 4.5% · 5.0%</span></div><div class="chart" id="c10y"></div></div>
     <div class="panel"><div class="legend"><span><i style="background:var(--s1)"></i>10년−3개월(%p)</span><span class="small">점선 1.5%p = 장기채 진입 조건</span></div><div class="chart" id="c103m"></div></div>
   </div>
-  <div class="panel"><div class="legend"><span><i style="background:var(--s1)"></i>WTI 선물($)</span><span><i class="sq" style="background:var(--band)"></i>저자 매수 구간 $74~85</span><span class="small">점선 $120 = 리밸런싱 시작</span></div><div class="chart" id="cwti"></div></div>
+  <div class="panel"><div class="legend"><span><i style="background:var(--s1)"></i>WTI 선물($)</span><span><i class="sq" style="background:var(--band)"></i>저자 매수 구간 $74~85</span><span class="small">점선 $120 = 단기 박스권 상단(현금 비중 확보)</span></div><div class="chart" id="cwti"></div></div>
   <div class="tbl"><table>
     <tr><th>층</th><th>프레임워크가 보는 것</th><th>지금 데이터</th><th>판독</th></tr>
     <tr><td>① 레짐</td><td>부채·통화량 → 인플레이션 재발</td><td>CPI 3.7%(8월), 근원 PCE 3.3%, M2 +5.7% YoY, 부채/GDP 123%</td><td><span class="pill p-warn">인플레 레짐 유지</span></td></tr>
@@ -180,7 +180,7 @@ ul.tight{margin:0;padding-left:20px;display:grid;gap:4px;font-size:.93rem}
   <div class="tbl"><table>
     <tr><th>자산</th><th>프레임워크 신호</th><th>과거 신뢰도 (6개월)</th><th>지금 상태</th><th>프레임워크상 조건</th></tr>
     <tr><td><b>중국/홍콩 주식</b></td><td><span class="pill p-good">강세</span></td><td><span class="pill p-good">높음</span> 69% vs 49%</td><td>FXI 연초 대비 −10.6%</td><td>신호와 과거 신뢰도가 함께 가리키는 유일한 자산. 최근 글에는 일부 중립 표현도 있음</td></tr>
-    <tr><td><b>에너지 E&amp;P 주식</b></td><td><span class="pill p-good">강세</span></td><td><span class="pill p-neu">중간</span> 76% vs 77%</td><td>XOP 연초 대비 +45.6%, WTI $96</td><td>WTI $120부터 리밸런싱, $150~200이면 원유보다 기업을 선호. 지금은 보유 구간</td></tr>
+    <tr><td><b>에너지 E&amp;P 주식</b></td><td><span class="pill p-good">강세</span></td><td><span class="pill p-neu">중간</span> 76% vs 77%</td><td>XOP 연초 대비 +45.6%, WTI $96</td><td>투자 순서는 원유 직접 → 생산기업. WTI $150~200에서 원유 직접 비중을 줄이고 E&amp;P로 옮기라는 조건(빠르면 올여름 시작 가능). 지금은 원유 직접투자가 우선인 단계</td></tr>
     <tr><td><b>원유(직접)</b></td><td><span class="pill p-good">강세 · 확신 최상</span></td><td><span class="pill p-warn">방향 낮음</span> · <span class="pill p-good">가격대 매수 72%</span></td><td>$96, 매수 구간($74~85)보다 위</td><td>종전·MOU 헤드라인에 급락하면 매수 기회라는 논리. 과거에는 구간에 들어올 때까지 기다리는 방식이 유효</td></tr>
     <tr><td><b>단기채·현금</b></td><td><span class="pill p-good">선호</span> (2024~25)</td><td>—</td><td>3개월물 4.24%, 연준 인상 중</td><td>매수 구간과 장기채 진입 조건을 기다리는 대기 자금</td></tr>
     <tr><td><b>미 장기채</b></td><td><span class="pill p-bad">약세</span></td><td><span class="pill p-warn">낮음</span> 53% vs 64%</td><td>10년물 5.18%, 10Y−3M +0.93%p</td><td>진입 조건 10Y−3M ≥ 1.5%p는 아직 미충족</td></tr>
@@ -282,7 +282,7 @@ function drawAll(){
   hitChart(document.getElementById('hitChart'));
   lineChart(document.getElementById('c10y'),{dates:D.dgs10.map(x=>x[0]),series:[{name:'10Y',color:'--s1',v:D.dgs10.map(x=>x[1])}],h:220,refs:[{y:4.5,label:'4.5%'},{y:5.0,label:'5.0%'}],fmt:v=>v.toFixed(2),endLabels:true});
   lineChart(document.getElementById('c103m'),{dates:D.t10y3m.map(x=>x[0]),series:[{name:'10Y−3M',color:'--s1',v:D.t10y3m.map(x=>x[1])}],h:220,refs:[{y:1.5,label:'1.5%p'},{y:0,label:'0'}],fmt:v=>v.toFixed(2)});
-  lineChart(document.getElementById('cwti'),{dates:D.wti.map(x=>x[0]),series:[{name:'WTI',color:'--s1',v:D.wti.map(x=>x[1])}],h:240,refs:[{y:120,label:'$120 리밸런싱'}],bands:[{lo:74,hi:85}],fmt:v=>v.toFixed(0)});
+  lineChart(document.getElementById('cwti'),{dates:D.wti.map(x=>x[0]),series:[{name:'WTI',color:'--s1',v:D.wti.map(x=>x[1])}],h:240,refs:[{y:120,label:'$120 박스권 상단'}],bands:[{lo:74,hi:85}],fmt:v=>v.toFixed(0)});
 }
 
 function barYear(host){
