@@ -94,25 +94,37 @@ ol.plain{padding-left:20px} ol.plain li{margin:6px 0}
 .eff b{font-weight:600}
 .back{display:inline-flex;gap:6px;align-items:center;font-size:14px;text-decoration:none;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;font:inherit}
 .back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.oneline{font-size:16.5px;line-height:1.7;background:var(--paper);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 6px 6px 0;margin:16px 0 0}
+ol.flow{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:0;border-left:2px solid var(--line)}
+ol.flow li{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:8px 0 8px 16px;position:relative;font-size:14.5px}
+ol.flow li::before{content:"";position:absolute;left:-6px;top:15px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+ol.flow .when{font-weight:600;color:var(--accent)}
+dl.gl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;margin:10px 0 4px} dl.gl dt{font-weight:600} dl.gl dd{margin:0}
 .pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:14px}
 footer{margin-top:52px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
 code{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px 5px;border-radius:3px}
 @media (max-width:720px){.abc,.qa{grid-template-columns:1fr}.erow{grid-template-columns:1fr 48px}.erow span{grid-column:1/-1}
- .step{grid-template-columns:32px 1fr}.step .who{grid-column:2}.eff>div{grid-template-columns:1fr;gap:2px}.facts{grid-template-columns:1fr;gap:2px 0}.facts dd{margin-bottom:8px}}
+ .step{grid-template-columns:32px 1fr}.step .who{grid-column:2}.eff>div{grid-template-columns:1fr;gap:2px}.facts{grid-template-columns:1fr;gap:2px 0}.facts dd{margin-bottom:8px}ol.flow li{grid-template-columns:1fr;gap:2px}dl.gl{grid-template-columns:1fr}}
 </style>
 </head><body>
 <div class="wrap read" style="max-width:780px">
   <a class="back" href="../index.html" data-back>← EDA 요약으로</a>
-  <div class="eyebrow" style="margin-top:18px">사례 4 / 7 · ⑤ 모니터링·평가</div>
+  <div class="eyebrow" style="margin-top:18px">사례 4 / 9 · ⑤ 모니터링·평가</div>
   <h1 style="font-size:clamp(24px,4vw,32px);margin-top:6px">적응은 정말 위험을 줄였나: ML로 4.8만 편을 훑은 전 세계 점검</h1>
   <p class="sub" style="font-size:15px">ML로 적응 문헌을 선별해 전 세계 적응 실행 사례를 모았더니, 위험 감소를 제대로 평가한 연구는 3.4%뿐이었다.</p>
   <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span class="lvl" title="근거 수준 1/5"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>1/5</span></span><span class="sub">평가 도구(방법 성능)</span><span><i class="dot d-bf" title="Berrang-Ford 2021"></i><span class="sub">Berrang-Ford 2021</span></span></div>
-  <dl class="facts"><dt>규모</dt><dd>2013~2019년 출판 문헌 48,816편 선별 → 1,682편 분석, 연구자 126명 참여</dd><dt>AI·ML</dt><dd>지도학습 분류기: 4명이 일부를 직접 분류해 학습시키고, 관련성 높은 순으로 사람이 확인·재학습 반복</dd><dt>성능</dt><dd>관련 문헌의 최소 80%를 찾은 것으로 추정(재현율)</dd><dt>연구 기간</dt><dd>대상 문헌 2013~2019년, 논문 2021년 출판(IPCC 6차 보고서 일정에 맞춤)</dd></dl>
-  <h2>배경</h2><ul><li>파리협정은 적응 진척을 점검하도록 요구하지만, 적응 문헌은 방대하고 흩어져 있어 사람만으로는 종합이 불가능했다.</li></ul>
-  <h2>효과</h2><div class="eff"><div><b>적응 실태</b><span>대응의 82%가 가구·개인 수준, 행동 변화형 75%. 대부분 단편적·국지적·점진적</span></div><div><b>위험 감소 근거</b><span>62%가 위험 감소를 암시했지만 실행 후 공식 평가는 58편(3.4%), 1차 근거 제시는 30편(1.8%)</span></div><div><b>역효과</b><span>약 33%가 역효과 가능성을 언급(예: 상류의 빗물 저장이 하류에 피해)</span></div><div><b>공백</b><span>남미, 중앙·북아프리카, 중앙아시아, 중동, 민간 부문 대응 근거가 부족</span></div></div>
+  <p class="oneline">사람이 다 읽을 수 없는 수만 편의 논문을 AI가 먼저 걸러 주고, 전 세계 연구자 126명이 나머지를 읽어 &quot;적응이 실제로 효과가 있었는지&quot; 점검했다.</p>
+  <dl class="facts"><dt>규모</dt><dd>2013~2019년 출판 문헌 48,816편 → 1,682편 분석</dd><dt>AI·ML</dt><dd>지도학습 분류기(반복 재학습)</dd><dt>성능</dt><dd>관련 문헌의 최소 80%를 찾은 것으로 추정</dd><dt>발표</dt><dd>Nature Climate Change, 2021</dd><dt>현재 상태</dt><dd>1회 연구(2021)</dd></dl>
+  <h2>무엇에 대응하나</h2><ul><li>특정 재해가 아니라 &quot;우리가 적응을 잘하고 있는지 모른다&quot;는 문제. 파리협정은 각국이 적응 진척을 점검하도록 요구한다.</li></ul>
+  <h2>왜 이 기술이 등장했나</h2><ul><li>적응 문헌은 방대하고 여러 학문에 흩어져 있어 사람만으로는 종합이 불가능했다.</li><li>실제로 실행된 적응을 기록한 논문만 골라내는 일 자체가 &quot;엄청난 작업&quot;이었다.</li></ul>
+  <h2>누구를 위한 기술인가</h2><ul><li>정책결정자, 기후 재원 배분 기관, IPCC 평가 보고서 작성자. 연구 일정은 IPCC 6차 보고서에 맞췄다.</li></ul>
+  <h2>언제, 어떻게 쓰이나</h2><ol class="flow"><li><span class="when">1단계</span><span>연구자 4명이 무작위로 뽑은 논문을 직접 &quot;관련 있음/없음&quot;으로 분류한다.</span></li><li><span class="when">2단계</span><span>이 분류로 AI 분류기를 학습시켜 나머지 논문의 관련 가능성을 점수화한다.</span></li><li><span class="when">3단계</span><span>점수가 높은 순서로 사람이 확인하고, 그 결과로 AI를 다시 학습시키기를 반복한다.</span></li><li><span class="when">4단계</span><span>걸러진 1,682편을 지역·분야별 전문가 126명이 읽고 공통 질문지로 정보를 뽑는다.</span></li></ol>
+  <h2>실제로 어떤 효과가 있었나</h2><div class="eff"><div><b>적응 실태</b><span>대응의 82%가 가구·개인 수준, 행동 변화형 75%. 대부분 단편적·국지적·점진적</span></div><div><b>위험 감소 근거</b><span>62%가 위험 감소를 암시했지만 실행 후 공식 평가는 58편(3.4%), 1차 근거 제시는 30편(1.8%)</span></div><div><b>역효과</b><span>약 33%가 역효과 가능성을 언급(예: 상류의 빗물 저장이 하류에 피해)</span></div></div>
+  <h3>위기에 취약한 사람들에게는</h3><ul><li>기록된 적응의 대부분은 아프리카·아시아의 농가·가구가 스스로 한 대응이었다(가뭄에 강한 작물, 생계 다각화 등).</li><li>남미, 중앙·북아프리카, 중앙아시아, 중동처럼 취약하지만 연구가 적은 지역과 민간 부문 대응은 근거가 부족하다.</li></ul>
   <h2>비용·수익성</h2><ul><li>보고되지 않음. ML로 사람이 읽어야 할 문헌을 줄인 것이 비용 절감 효과지만 금액은 제시되지 않았다.</li></ul>
   <h2>한계</h2><ul><li>학술 문헌만 보며 회색 문헌·현장 지식은 빠졌다.</li><li>이 연구에서 ML은 적응 수단이 아니라 &quot;적응을 평가하는 도구&quot;다.</li></ul>
-  <h2>향후 활용방안</h2><ul><li>저자들이 꼽은 1순위 과제는 &quot;적응 효과 평가&quot;다. 사업 시작 단계부터 반사실(대조군)과 함께 성과 지표를 모니터링하라고 권한다.</li><li>ML로 더 세밀한 정보 추출까지 자동화하면 적응 점검을 주기적으로 갱신할 수 있다.</li></ul>
+  <h2>앞으로 어떻게 쓸 수 있나</h2><ul><li>저자들의 1순위 과제는 &quot;적응 효과 평가&quot;다. 사업 시작 단계부터 대조군과 함께 성과 지표를 모니터링하라고 권한다.</li><li>ML로 정보 추출까지 자동화하면 적응 점검을 주기적으로 갱신할 수 있다.</li></ul>
+  <details class="more"><summary>용어 풀이</summary><dl class="gl"><dt>적응</dt><dd>이미 일어나거나 예상되는 기후변화에 맞춰 피해를 줄이도록 생활·제도·시설을 바꾸는 것. 배출을 줄이는 &quot;감축&quot;과 구분된다.</dd><dt>재현율</dt><dd>찾아야 할 것 중 실제로 찾아낸 비율.</dd></dl></details>
   <h2>출처</h2><ul style="font-size:14px"><li><a href="https://eprints.whiterose.ac.uk/id/eprint/191186/">Berrang-Ford et al. (2021) Nature Climate Change 11, 989–1000 (White Rose 저장소 수락 원고)</a></li></ul>
   <div class="pager"><a href="c3-noaa-gbrt.html">← 위험기상 AI 예보 후처리</a><a href="c5-relocation-rl.html">이주 인센티브 맞춤(제안) →</a></div>
 </div>

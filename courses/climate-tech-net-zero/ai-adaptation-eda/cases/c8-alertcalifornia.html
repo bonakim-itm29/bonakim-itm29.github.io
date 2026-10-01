@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>이주 인센티브 맞춤(제안)</title>
+<title>AI 산불 감시 카메라</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -109,24 +109,24 @@ code{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px
 </head><body>
 <div class="wrap read" style="max-width:780px">
   <a class="back" href="../index.html" data-back>← EDA 요약으로</a>
-  <div class="eyebrow" style="margin-top:18px">사례 5 / 9 · ④ 적응 옵션 선택·맞춤</div>
-  <h1 style="font-size:clamp(24px,4vw,32px);margin-top:6px">누구에게 어떤 이주 지원을: 강화학습 맞춤 인센티브(제안)</h1>
-  <p class="sub" style="font-size:15px">위험 지역 주민마다 반응하는 유인(위험 정보 vs 금전)이 다르므로, 강화학습으로 개인별 지원을 맞추자는 제안.</p>
-  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span class="lvl" title="근거 수준 0/5"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>0/5</span></span><span class="sub">제안 단계</span><span><i class="dot d-cheong" title="Cheong 2022"></i><span class="sub">Cheong 2022</span></span></div>
-  <p class="oneline">위험 지역 주민마다 이사를 결심하게 만드는 이유가 다르다. AI가 실험을 하면서 누구에게 어떤 지원이 통하는지 배워 가자는 아이디어다.</p>
-  <dl class="facts"><dt>출처</dt><dd>Cheong et al.(2022) 3.2절</dd><dt>AI·ML</dt><dd>강화학습·다중 슬롯머신(multi-armed bandit), 이질적 처치효과 추정 ML</dd><dt>유사 선례</dt><dd>그리스가 강화학습으로 코로나19 입국자 검사를 감염 가능성이 높은 관광객 유형에 집중한 사례(Bastani et al. 2021, Nature)</dd><dt>기간</dt><dd>해당 없음(미실행)</dd><dt>현재 상태</dt><dd>제안(미실행)</dd></dl>
-  <h2>무엇에 대응하나</h2><ul><li>산불·홍수가 잦아져 계속 살기 어려워진 지역에서 안전한 곳으로 옮겨야 하는 문제(관리된 이주).</li></ul>
-  <h2>왜 이 기술이 등장했나</h2><ul><li>어떤 사람은 위험 정보에, 어떤 사람은 금전 지원에 반응한다. 모두에게 같은 지원을 주면 자원이 낭비된다.</li><li>적응은 새로운 분야라 어떤 정책이 효과적인지 보여 주는 대규모 데이터가 없다.</li></ul>
-  <h2>누구를 위한 기술인가</h2><ul><li>정책 설계자(이주 지원 사업 담당 정부).</li><li>대상: 재해 위험 지역 주민.</li></ul>
-  <h2>언제, 어떻게 쓰이나</h2><ol class="flow"><li><span class="when">시작</span><span>여러 지원 방식(위험 정보 제공, 금전 인센티브 등)을 무작위로 일부 주민에게 제공한다.</span></li><li><span class="when">진행 중</span><span>강화학습이 반응이 좋은 방식에 더 많은 자원을 배분하면서, 덜 알려진 방식도 계속 시험한다.</span></li><li><span class="when">결과</span><span>ML로 집단별 효과 차이를 추정해 다음 지원 대상을 정한다.</span></li></ol>
-  <h2>실제로 어떤 효과가 있었나</h2><div class="eff"><div><b>효과</b><span>기후 이주에 적용한 효과는 보고되지 않음(제안)</span></div></div>
-  <h3>위기에 취약한 사람들에게는</h3><ul><li>아직 적용되지 않았다.</li></ul>
-  <h2>비용·수익성</h2><ul><li>보고되지 않음.</li></ul>
-  <h2>한계</h2><ul><li>개인 맞춤은 개인정보와 공정성 문제를 낳는다. Cheong도 해석 가능성과 편향 제거를 앞으로 중요한 과제로 꼽는다.</li><li>이주는 삶의 터전을 옮기는 결정이라 실험 대상이 되는 데 윤리적 검토가 필요하다.</li></ul>
-  <h2>앞으로 어떻게 쓸 수 있나</h2><ul><li>적응 옵션 선택 단계에 AI를 쓰는 드문 제안으로, 침수 위험 주택 매입·이주 지원 사업 설계에 응용할 수 있다.</li></ul>
-  <details class="more"><summary>용어 풀이</summary><dl class="gl"><dt>강화학습</dt><dd>시도와 결과를 반복하며 더 좋은 선택을 스스로 배우는 AI 방식.</dd><dt>다중 슬롯머신 문제</dt><dd>여러 선택지 중 이미 좋은 것을 쓰면서도 모르는 것을 계속 시험해 보는 균형 문제.</dd></dl></details>
-  <h2>출처</h2><ul style="font-size:14px"><li><a href="https://doi.org/10.1002/widm.1459">Cheong, Sankaran &amp; Bastani (2022) WIREs Data Min. Knowl. Discov. 12:e1459, 3.2절</a></li></ul>
-  <div class="pager"><a href="c4-adaptation-stocktake.html">← ML 기반 적응 근거 점검</a><a href="c6-camera-trap.html">생물 모니터링 영상 인식 →</a></div>
+  <div class="eyebrow" style="margin-top:18px">사례 8 / 9 · ③ 조기경보·대응</div>
+  <h1 style="font-size:clamp(24px,4vw,32px);margin-top:6px">산불을 911보다 먼저 본다: 캘리포니아 AI 산불 감시 카메라</h1>
+  <p class="sub" style="font-size:15px">AI가 2025년 캘리포니아 산불 신고 약 3,600건 중 절반 이상을 911 신고보다 먼저 포착했다.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span class="lvl" title="근거 수준 3/5"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i> <span>3/5</span></span><span class="sub">조기 탐지(운영 통계)</span><span><i class="dot d-ext" title="외부 자료"></i><span class="sub">외부 자료</span></span></div>
+  <p class="oneline">산 정상의 카메라 1,000여 대가 24시간 주변을 살피고, AI가 연기를 발견하면 상황실 요원이 확인해 바로 소방대를 보낸다.</p>
+  <dl class="facts"><dt>운영 주체</dt><dd>UC 샌디에이고 ALERTCalifornia + 캘리포니아 소방청(CAL FIRE)</dd><dt>AI·ML</dt><dd>DigitalPath의 영상 기반 연기·화재 탐지 AI</dd><dt>규모</dt><dd>카메라 1,050여 대(2023) → 1,263대(2026), 21개 지휘센터 전체에 알림</dd><dt>기간</dt><dd>카메라 플랫폼 2017년~, AI 탐지는 2023년 9월 전 지휘센터로 확대</dd><dt>현재 상태</dt><dd>운영 중(AI 탐지 2023~)</dd></dl>
+  <h2>무엇에 대응하나</h2><ul><li>산불. 처음 몇 분 안에 잡지 못하면 바람을 타고 커져 마을과 생명을 위협한다.</li></ul>
+  <h2>왜 이 기술이 등장했나</h2><ul><li>산불 발견은 지나가는 사람의 911 신고에 의존해 왔다. 밤이나 외딴 산에서는 신고가 늦어진다.</li><li>카메라가 있어도 사람이 수백 개 화면을 동시에 지켜볼 수는 없다.</li></ul>
+  <h2>누구를 위한 기술인가</h2><ul><li>직접 사용자: 캘리포니아 소방청(CAL FIRE) 21개 지휘센터의 상황 요원과 소방관.</li><li>최종 수혜자: 산불 위험 지역 주민. 대피 판단과 소방 자원 배치에 쓰인다.</li></ul>
+  <h2>언제, 어떻게 쓰이나</h2><ol class="flow"><li><span class="when">24시간</span><span>산 정상 등에 설치한 카메라 네트워크가 주변을 계속 촬영한다.</span></li><li><span class="when">연기 발견 시</span><span>AI(DigitalPath)가 화재일 확률과 예상 위치를 계산해 알림을 띄운다.</span></li><li><span class="when">수 분 안</span><span>훈련받은 요원이 영상을 보고 진짜 산불인지 확인한다.</span></li><li><span class="when">확인 즉시</span><span>지휘센터가 소방대를 보내고, 실시간 영상으로 불의 확산과 대피를 관리한다.</span></li><li><span class="when">이후</span><span>CAL FIRE의 판정 결과가 AI 학습에 다시 쓰여 정확도가 계속 높아진다.</span></li></ol>
+  <h2>실제로 어떤 효과가 있었나</h2><div class="eff"><div><b>조기 탐지(2025)</b><span>약 3,600건의 사고 중 절반 이상을 911 신고보다 먼저 알림</span></div><div><b>사례</b><span>2023년 9월 11일 그래스밸리 인근: AI가 오전 5시 19분에 발화를 포착, 첫 911 신고(6시 01분)보다 42분 빨랐고 불은 1/4에이커 미만에서 진화됨</span></div><div><b>평가 수준</b><span>&quot;훨씬 작은 규모에서 진화된 사례가 많다&quot;는 설명은 있으나, 산불 규모 감소의 통계나 독립 평가는 공개되지 않음</span></div></div>
+  <h3>위기에 취약한 사람들에게는</h3><ul><li>신고가 늦기 쉬운 밤 시간과 외딴 산간 지역에서 특히 유용하다고 소개되지만, 취약 지역별 효과를 따로 측정한 자료는 없다.</li></ul>
+  <h2>비용·수익성</h2><ul><li>처음에는 전력회사 PG&amp;E가 후원했고, 현재는 캘리포니아주, 미국 지질조사국(USGS), 전력회사, CAL FIRE가 비용을 댄다. 총비용과 회피 피해액은 보고되지 않음.</li></ul>
+  <h2>한계</h2><ul><li>오경보 비율과 놓친 산불 비율이 공개되지 않았다.</li><li>&quot;911보다 빨랐다&quot;는 운영 통계이지, 그 덕분에 피해가 얼마나 줄었는지에 대한 측정은 아니다.</li><li>다섯 논문 밖의 외부 자료이며 운영 기관·언론 보도에 근거한다.</li></ul>
+  <h2>앞으로 어떻게 쓸 수 있나</h2><ul><li>캘리포니아는 2026년 7월 산불 탐지 위성(FireSat) 발사를 발표해, 지상 카메라와 우주 관측을 함께 쓰는 방향으로 가고 있다.</li><li>산불 감시 카메라를 운영하는 다른 지역도 AI 판독을 붙여 상황 요원의 부담을 줄일 수 있다.</li></ul>
+  <details class="more"><summary>용어 풀이</summary><dl class="gl"><dt>911</dt><dd>미국의 긴급 신고 번호(한국의 119).</dd><dt>에이커</dt><dd>약 4,047㎡. 1/4에이커는 약 1,000㎡.</dd></dl></details>
+  <h2>출처</h2><ul style="font-size:14px"><li><a href="https://today.ucsd.edu/story/alertcalifornia-and-cal-fires-fire-detection-ai-program-named-one-of-times-best-inventions-of-2023">UC San Diego Today (2023-10-24) ALERTCalifornia and CAL FIRE’s Fire Detection AI Program</a></li><li><a href="https://www.route-fifty.com/public-safety/2026/07/what-california-has-learned-ai-enabled-early-wildfire-detection-system/414566/">Route Fifty (2026-07) What California has learned from an AI-enabled early wildfire detection system</a></li><li><a href="https://www.gov.ca.gov/2026/07/07/californias-wildfire-defense-blasts-off-governor-newsom-launches-firesat-wildfire-detection-satellites-to-spot-blazes-from-space/">California Governor (2026-07-07) FireSat wildfire-detection satellites</a></li></ul>
+  <div class="pager"><a href="c7-drought-warning.html">← 가뭄 조기경보·물 배분(제안)</a><a href="c9-givedirectly-cash.html">AI 예보 기반 선제 현금 지원 →</a></div>
 </div>
 <script>document.querySelectorAll('[data-back]').forEach(a=>a.addEventListener('click',ev=>{if(document.referrer&&history.length>1){ev.preventDefault();history.back();}}));</script>
 

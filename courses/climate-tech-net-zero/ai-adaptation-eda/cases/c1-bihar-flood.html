@@ -94,26 +94,38 @@ ol.plain{padding-left:20px} ol.plain li{margin:6px 0}
 .eff b{font-weight:600}
 .back{display:inline-flex;gap:6px;align-items:center;font-size:14px;text-decoration:none;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;font:inherit}
 .back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.oneline{font-size:16.5px;line-height:1.7;background:var(--paper);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 6px 6px 0;margin:16px 0 0}
+ol.flow{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:0;border-left:2px solid var(--line)}
+ol.flow li{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:8px 0 8px 16px;position:relative;font-size:14.5px}
+ol.flow li::before{content:"";position:absolute;left:-6px;top:15px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+ol.flow .when{font-weight:600;color:var(--accent)}
+dl.gl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;margin:10px 0 4px} dl.gl dt{font-weight:600} dl.gl dd{margin:0}
 .pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:14px}
 footer{margin-top:52px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
 code{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px 5px;border-radius:3px}
 @media (max-width:720px){.abc,.qa{grid-template-columns:1fr}.erow{grid-template-columns:1fr 48px}.erow span{grid-column:1/-1}
- .step{grid-template-columns:32px 1fr}.step .who{grid-column:2}.eff>div{grid-template-columns:1fr;gap:2px}.facts{grid-template-columns:1fr;gap:2px 0}.facts dd{margin-bottom:8px}}
+ .step{grid-template-columns:32px 1fr}.step .who{grid-column:2}.eff>div{grid-template-columns:1fr;gap:2px}.facts{grid-template-columns:1fr;gap:2px 0}.facts dd{margin-bottom:8px}ol.flow li{grid-template-columns:1fr;gap:2px}dl.gl{grid-template-columns:1fr}}
 </style>
 </head><body>
 <div class="wrap read" style="max-width:780px">
   <a class="back" href="../index.html" data-back>← EDA 요약으로</a>
-  <div class="eyebrow" style="margin-top:18px">사례 1 / 7 · ③ 조기경보·대응</div>
+  <div class="eyebrow" style="margin-top:18px">사례 1 / 9 · ③ 조기경보·대응</div>
   <h1 style="font-size:clamp(24px,4vw,32px);margin-top:6px">AI 홍수 경보를 마을까지: 인도 비하르 무작위 실험</h1>
   <p class="sub" style="font-size:15px">Google의 AI 홍수 예보를 자원봉사자가 마을에 다시 전달하자 경보가 더 많은 가구에 더 일찍 닿았고, 심한 침수 지역에서 질병과 치료비가 줄었다.</p>
   <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span class="lvl" title="근거 수준 4/5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i> <span>4/5</span></span><span class="sub">피해 감소 측정(무작위 실험)</span><span><i class="dot d-jp" title="Jagnani &amp; Pande 2024"></i><span class="sub">Jagnani &amp; Pande 2024</span></span></div>
-  <dl class="facts"><dt>지역</dt><dd>인도 비하르주 12개 홍수 취약 군, 319개 판차야트(처치 160 · 대조 159), 인구 360만 명 이상</dd><dt>AI·ML</dt><dd>Google 홍수 예보: 강 유량을 예측하는 수문 AI 모델 + 침수 지역·수위를 추정하는 범람 AI 모델. 2~4일 전 예보를 안드로이드 위치기반 알림으로 발송</dd><dt>연구 기간</dt><dd>2019 시범 → 2022·2023 홍수기 평가 → 2026 홍수기까지 계속 예정. 2022.12~2023.3 대면 조사(5,582가구)</dd><dt>설계</dt><dd>마을 단위 무작위 배정. 두 집단 모두 Google AI 경보를 받음. 처치 마을에만 자원봉사자 2~3명이 확성기·깃발·WhatsApp으로 경보를 재전달</dd></dl>
-  <h2>배경</h2><ul><li>비하르는 인도 홍수 취약 면적의 17.2%를 차지한다. 2019년 홍수 후 가구의 65%가 수확 감소, 54%가 질병을 겪었다.</li><li>홍수 예보소의 20%만 가동되고, 2019년 가구의 95% 이상이 침수 피해를 입었지만 경보를 받은 가구는 45%에 그쳤다. 스마트폰 사용자 중에서도 Google 경보를 제대로 확인할 수 있는 비율은 약 55%였다.</li><li>2019년 시범에서는 마을 지도자 1명에게 알리는 방식으로는 효과가 없었다. 이후 지역 NGO(Yuganter)와 자원봉사자 모델을 만들었다.</li></ul>
-  <h2>효과</h2><div class="eff"><div><b>경보 수신(2023)</b><span>처치 마을 가구가 경보를 받을 확률 +74%(22.9% → 39.9%), 침수 전 수신 +88%, &quot;완전히 신뢰&quot; +89%</span></div><div><b>경보 정확도(2022~23 합산)</b><span>오경보는 늘고(8.09% vs 3.64%) 미경보는 줄어(32.84% vs 42.97%) 전체 오류율이 낮아짐(40.94% vs 46.61%)</span></div><div><b>건강(심한 침수 지역)</b><span>사전 대응·건강 지수 +0.18 표준편차, 질병 증상 0.36개(−16.6%) 감소</span></div><div><b>의료비(심한 침수 지역)</b><span>치료비 약 6,500루피(−32.87%) 감소(경보가 가장 많았던 상위 삼분위). 초록은 &quot;30%&quot;로 표기</span></div><div><b>경제</b><span>소득·경제적 회복 개선은 확인되지 않음. 저자들은 2~4일 리드타임으로는 농지·작물 보호가 어렵다고 해석</span></div><div><b>형평</b><span>상위·하위 카스트 모두에서 경보 접근이 비슷하게 개선</span></div></div>
-  <h2>비용·수익성</h2><ul><li>의료비 절감만으로 계산해도 심한 홍수 시즌에 사업비 1달러당 최소 30달러의 편익(저자 추정).</li><li>사업비 총액과 Google 시스템 운영비는 논문에 보고되지 않음.</li></ul>
-  <h2>한계</h2><ul><li>비교한 것은 &quot;AI 예보 유무&quot;가 아니라 &quot;공동체 전달 유무&quot;다. AI 예보 자체의 효과는 이 실험으로 분리되지 않는다.</li><li>학술지 심사 전 워킹페이퍼이며 2년치 단기 결과다.</li><li>오경보가 늘면 장기적으로 신뢰가 떨어질 수 있어 저자들도 장기 효과를 추가로 볼 예정이다.</li></ul>
-  <h2>향후 활용방안</h2><ul><li>AI 예보의 정확도보다 &quot;마지막 1km 전달&quot;이 효과를 좌우한다는 점에서, 다른 국가의 AI 경보에도 지역 자원봉사·메신저 재전달을 결합할 수 있다.</li><li>농업 피해를 줄이려면 더 긴 리드타임(계절 예보)과 보험·현금 지원 같은 선제 조치가 필요하다.</li><li>한국에서는 도시 침수 예보를 통·반장, 주민 단체 대화방과 연결하는 방식으로 응용할 수 있다.</li></ul>
-  <h2>출처</h2><ul style="font-size:14px"><li><a href="https://bpb-us-w2.wpmucdn.com/campuspress.yale.edu/dist/7/2986/files/2024/04/Google_Floods-bcdf49042e23059a.pdf">Jagnani &amp; Pande (2024) Forecasting Fate, 워킹페이퍼</a></li><li><a href="https://www.nature.com/articles/s41586-024-07145-1">Nearing et al. (2024) Nature 627 — 미계측 유역 홍수 예측</a></li></ul>
+  <p class="oneline">AI가 며칠 뒤 강이 넘칠 곳을 미리 계산해 휴대폰으로 알려 주고, 마을 자원봉사자가 그 경보를 확성기와 메신저로 다시 퍼뜨린다.</p>
+  <dl class="facts"><dt>지역</dt><dd>인도 비하르주 12개 군, 319개 판차야트(처치 160 · 대조 159), 인구 360만 명 이상</dd><dt>AI·ML</dt><dd>강 유량을 예측하는 수문 AI 모델 + 침수 지역·수위를 추정하는 범람 AI 모델</dd><dt>기간</dt><dd>2019 시범 → 2022·2023 홍수기 평가 → 2026년까지 계속 예정</dd><dt>평가 방식</dt><dd>마을 단위 무작위 실험. 두 집단 모두 Google AI 경보를 받고, 처치 마을에만 자원봉사자 재전달</dd><dt>현재 상태</dt><dd>운영 중(2018~)</dd></dl>
+  <h2>무엇에 대응하나</h2><ul><li>매년 몬순(우기)마다 강이 넘치는 홍수. 인도 비하르주는 전체 면적 942만 ha 중 687만 ha가 해마다 홍수 영향을 받는, 인도에서 가장 홍수가 잦은 지역 중 하나다.</li><li>저자들은 기후변화로 홍수 위험이 커지고 있으며, 남아시아에서 5억 7,600만 명이 심각한 홍수 위험에 노출돼 있다고 설명한다.</li></ul>
+  <h2>왜 이 기술이 등장했나</h2><ul><li>홍수 예보소의 20%만 가동되고, 2019년 가구의 95% 이상이 침수 피해를 입었지만 경보를 받은 가구는 45%에 그쳤다.</li><li>경보를 받아도 사람들이 가장 원하는 정보(물이 언제, 얼마나 깊이 오는지)는 거의 담겨 있지 않았다.</li><li>기계학습 덕분에 48~72시간 홍수 예측이 크게 정확해졌지만, 그 경보가 실제로 사람을 보호하는지는 측정된 적이 없었다.</li></ul>
+  <h2>누구를 위한 기술인가</h2><ul><li>직접 대상: 홍수 위험 지역의 농촌 가구. 문해율이 낮고 스마트폰 위치 서비스를 잘 쓰지 않는 가구가 많다.</li><li>운영 주체: Google(예보·알림), 인도 중앙수자원위원회(정부), 지역 NGO Yuganter(자원봉사자 교육), 연구진(Tufts·Yale).</li></ul>
+  <h2>언제, 어떻게 쓰이나</h2><ol class="flow"><li><span class="when">홍수기 전(6월)</span><span>마을마다 안드로이드폰을 가진 자원봉사자 2~3명을 뽑아 경보 읽는 법을 교육한다.</span></li><li><span class="when">홍수 2~4일 전</span><span>AI 두 개가 공개 데이터로 강 유량과 침수 지역·수위를 예측해 위험 지역의 안드로이드폰에 경고 알림을 보낸다.</span></li><li><span class="when">경보 직후</span><span>자원봉사자가 확성기, 깃발 꽂기, WhatsApp 단체방으로 마을 전체에 알린다.</span></li><li><span class="when">물이 차오를 때</span><span>경고가 &quot;심각&quot; 단계로 올라가고, 가구는 모래주머니 쌓기, 식량을 높은 곳으로 옮기기 같은 행동을 한다.</span></li><li><span class="when">홍수 후(11~2월)</span><span>연구진이 가구를 방문해 건강·의료비·소득 변화를 조사한다.</span></li></ol>
+  <h2>실제로 어떤 효과가 있었나</h2><div class="eff"><div><b>경보 수신(2023)</b><span>경보를 받을 확률 +74%(22.9% → 39.9%), 물이 차기 전 수신 +88%, &quot;완전히 신뢰&quot; +89%</span></div><div><b>경보 정확도(2022~23 합산)</b><span>오경보는 늘었지만(8.09% vs 3.64%) 미경보가 줄어(32.84% vs 42.97%) 전체 오류율이 낮아짐(40.94% vs 46.61%)</span></div><div><b>건강(심한 침수 지역)</b><span>사전 대응·건강 지수 +0.18 표준편차, 질병 증상 0.36개(−16.6%) 감소. 수인성 질병과 미끄러짐 사고가 줄어든 영향</span></div><div><b>의료비(심한 침수 지역)</b><span>치료비 약 6,500루피(−32.87%) 감소(상위 삼분위). 초록은 &quot;30%&quot;로 표기</span></div><div><b>경제</b><span>소득·경제적 회복 개선은 확인되지 않음</span></div></div>
+  <h3>위기에 취약한 사람들에게는</h3><ul><li>상위·하위 카스트 모두에서 경보 접근이 비슷하게 좋아져, 사회적으로 소외된 가구에도 혜택이 닿았다.</li><li>건강 개선은 60세 이상 노인과, 집안을 돌보며 미끄러짐 사고 위험이 큰 16~60세 여성에게서 두드러졌다.</li></ul>
+  <h2>비용·수익성</h2><ul><li>의료비 절감만으로 계산해도 심한 홍수 시즌에 사업비 1달러당 최소 30달러의 편익(저자 추정).</li><li>사업비 총액과 Google 시스템 운영비는 보고되지 않음.</li></ul>
+  <h2>한계</h2><ul><li>비교한 것은 &quot;AI 예보 유무&quot;가 아니라 &quot;공동체 전달 유무&quot;다. AI 예보 자체의 효과는 이 실험으로 분리되지 않는다.</li><li>학술지 심사 전 워킹페이퍼이며 2년치 단기 결과다.</li><li>2~4일의 리드타임은 몸을 지키기엔 충분하지만 농지·작물을 지키기엔 짧다는 것이 저자들의 해석이다.</li></ul>
+  <h2>앞으로 어떻게 쓸 수 있나</h2><ul><li>AI 예보의 정확도만큼 &quot;마지막 1km 전달&quot;에 투자해야 한다. 다른 나라의 AI 경보에도 지역 자원봉사·메신저 재전달을 결합할 수 있다.</li><li>농업 피해를 줄이려면 더 긴 리드타임(계절 예보)과 선제 현금 지원 같은 조치가 필요하다(사례 9 참고).</li><li>한국에서는 도시 침수 예보를 통·반장, 주민 단체 대화방과 연결하는 방식으로 응용할 수 있다.</li></ul>
+  <details class="more"><summary>용어 풀이</summary><dl class="gl"><dt>판차야트</dt><dd>인도 농촌의 가장 작은 행정 단위. 보통 마을 2~5개를 묶는다.</dd><dt>무작위 실험(RCT)</dt><dd>대상을 제비뽑기처럼 나눠 한쪽에만 개입하고 결과를 비교하는 방법. 효과를 인과적으로 확인하는 가장 강한 방법이다.</dd><dt>오경보 / 미경보</dt><dd>경보가 왔는데 홍수가 안 난 경우 / 홍수가 났는데 경보가 안 온 경우</dd></dl></details>
+  <h2>출처</h2><ul style="font-size:14px"><li><a href="https://bpb-us-w2.wpmucdn.com/campuspress.yale.edu/dist/7/2986/files/2024/04/Google_Floods-bcdf49042e23059a.pdf">Jagnani &amp; Pande (2024) Forecasting Fate, 워킹페이퍼</a></li><li><a href="https://sites.research.google/gr/floodforecasting/">Google Research – Flood Forecasting</a></li><li><a href="https://www.nature.com/articles/s41586-024-07145-1">Nearing et al. (2024) Nature 627 — 미계측 유역 홍수 예측</a></li></ul>
   <div class="pager"><span></span><a href="c2-ecmwf-aifs.html">AI 기상예보 운영 전환 →</a></div>
 </div>
 <script>document.querySelectorAll('[data-back]').forEach(a=>a.addEventListener('click',ev=>{if(document.referrer&&history.length>1){ev.preventDefault();history.back();}}));</script>

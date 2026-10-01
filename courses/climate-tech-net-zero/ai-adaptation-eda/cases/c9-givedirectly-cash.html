@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>이주 인센티브 맞춤(제안)</title>
+<title>AI 예보 기반 선제 현금 지원</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -109,24 +109,24 @@ code{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px
 </head><body>
 <div class="wrap read" style="max-width:780px">
   <a class="back" href="../index.html" data-back>← EDA 요약으로</a>
-  <div class="eyebrow" style="margin-top:18px">사례 5 / 9 · ④ 적응 옵션 선택·맞춤</div>
-  <h1 style="font-size:clamp(24px,4vw,32px);margin-top:6px">누구에게 어떤 이주 지원을: 강화학습 맞춤 인센티브(제안)</h1>
-  <p class="sub" style="font-size:15px">위험 지역 주민마다 반응하는 유인(위험 정보 vs 금전)이 다르므로, 강화학습으로 개인별 지원을 맞추자는 제안.</p>
-  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span class="lvl" title="근거 수준 0/5"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>0/5</span></span><span class="sub">제안 단계</span><span><i class="dot d-cheong" title="Cheong 2022"></i><span class="sub">Cheong 2022</span></span></div>
-  <p class="oneline">위험 지역 주민마다 이사를 결심하게 만드는 이유가 다르다. AI가 실험을 하면서 누구에게 어떤 지원이 통하는지 배워 가자는 아이디어다.</p>
-  <dl class="facts"><dt>출처</dt><dd>Cheong et al.(2022) 3.2절</dd><dt>AI·ML</dt><dd>강화학습·다중 슬롯머신(multi-armed bandit), 이질적 처치효과 추정 ML</dd><dt>유사 선례</dt><dd>그리스가 강화학습으로 코로나19 입국자 검사를 감염 가능성이 높은 관광객 유형에 집중한 사례(Bastani et al. 2021, Nature)</dd><dt>기간</dt><dd>해당 없음(미실행)</dd><dt>현재 상태</dt><dd>제안(미실행)</dd></dl>
-  <h2>무엇에 대응하나</h2><ul><li>산불·홍수가 잦아져 계속 살기 어려워진 지역에서 안전한 곳으로 옮겨야 하는 문제(관리된 이주).</li></ul>
-  <h2>왜 이 기술이 등장했나</h2><ul><li>어떤 사람은 위험 정보에, 어떤 사람은 금전 지원에 반응한다. 모두에게 같은 지원을 주면 자원이 낭비된다.</li><li>적응은 새로운 분야라 어떤 정책이 효과적인지 보여 주는 대규모 데이터가 없다.</li></ul>
-  <h2>누구를 위한 기술인가</h2><ul><li>정책 설계자(이주 지원 사업 담당 정부).</li><li>대상: 재해 위험 지역 주민.</li></ul>
-  <h2>언제, 어떻게 쓰이나</h2><ol class="flow"><li><span class="when">시작</span><span>여러 지원 방식(위험 정보 제공, 금전 인센티브 등)을 무작위로 일부 주민에게 제공한다.</span></li><li><span class="when">진행 중</span><span>강화학습이 반응이 좋은 방식에 더 많은 자원을 배분하면서, 덜 알려진 방식도 계속 시험한다.</span></li><li><span class="when">결과</span><span>ML로 집단별 효과 차이를 추정해 다음 지원 대상을 정한다.</span></li></ol>
-  <h2>실제로 어떤 효과가 있었나</h2><div class="eff"><div><b>효과</b><span>기후 이주에 적용한 효과는 보고되지 않음(제안)</span></div></div>
-  <h3>위기에 취약한 사람들에게는</h3><ul><li>아직 적용되지 않았다.</li></ul>
-  <h2>비용·수익성</h2><ul><li>보고되지 않음.</li></ul>
-  <h2>한계</h2><ul><li>개인 맞춤은 개인정보와 공정성 문제를 낳는다. Cheong도 해석 가능성과 편향 제거를 앞으로 중요한 과제로 꼽는다.</li><li>이주는 삶의 터전을 옮기는 결정이라 실험 대상이 되는 데 윤리적 검토가 필요하다.</li></ul>
-  <h2>앞으로 어떻게 쓸 수 있나</h2><ul><li>적응 옵션 선택 단계에 AI를 쓰는 드문 제안으로, 침수 위험 주택 매입·이주 지원 사업 설계에 응용할 수 있다.</li></ul>
-  <details class="more"><summary>용어 풀이</summary><dl class="gl"><dt>강화학습</dt><dd>시도와 결과를 반복하며 더 좋은 선택을 스스로 배우는 AI 방식.</dd><dt>다중 슬롯머신 문제</dt><dd>여러 선택지 중 이미 좋은 것을 쓰면서도 모르는 것을 계속 시험해 보는 균형 문제.</dd></dl></details>
-  <h2>출처</h2><ul style="font-size:14px"><li><a href="https://doi.org/10.1002/widm.1459">Cheong, Sankaran &amp; Bastani (2022) WIREs Data Min. Knowl. Discov. 12:e1459, 3.2절</a></li></ul>
-  <div class="pager"><a href="c4-adaptation-stocktake.html">← ML 기반 적응 근거 점검</a><a href="c6-camera-trap.html">생물 모니터링 영상 인식 →</a></div>
+  <div class="eyebrow" style="margin-top:18px">사례 9 / 9 · ④ 적응 옵션 선택·맞춤 · ③ 대응</div>
+  <h1 style="font-size:clamp(24px,4vw,32px);margin-top:6px">홍수가 오기 전에 현금을: AI 예보로 움직이는 선제 지원</h1>
+  <p class="sub" style="font-size:15px">예측이 맞아도 등록·확인·지급 체계가 받쳐 주지 못하면 가장 취약한 사람을 놓칠 수 있다는 것을 보여 준 사례.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span class="lvl" title="근거 수준 3/5"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i> <span>3/5</span></span><span class="sub">운영·자체 평가, 결과 엇갈림</span><span><i class="dot d-ext" title="외부 자료"></i><span class="sub">외부 자료</span></span></div>
+  <p class="oneline">AI 홍수 예보가 &quot;곧 강이 넘친다&quot;고 판단하면, 미리 등록해 둔 가난한 가구의 휴대폰으로 현금을 보내 대피와 대비에 쓰게 한다.</p>
+  <dl class="facts"><dt>운영 주체</dt><dd>GiveDirectly(비영리 현금 지원 단체)</dd><dt>AI·ML</dt><dd>Google Flood Hub의 수문 예보(강 수위·유량)와 침수 예보</dd><dt>규모(2022~23 시범)</dt><dd>나이지리아·모잠비크 13,782가구, 총 300만 달러</dd><dt>지급액</dt><dd>모잠비크 선제 지급 가구당 225달러. 2024 나이지리아: 대피용 105달러 + 복구용 210달러</dd><dt>현재 상태</dt><dd>시범 반복(2022~)</dd></dl>
+  <h2>무엇에 대응하나</h2><ul><li>강 홍수와 사이클론. 나이지리아 코기주 이바지(Ibaji), 모잠비크(2023년 사이클론 프레디) 등.</li></ul>
+  <h2>왜 이 기술이 등장했나</h2><ul><li>재난 지원은 보통 피해가 난 뒤에 도착한다. 홍수 직전에 돈이 있으면 가족을 대피시키고 식량·가축·농자재를 지킬 수 있다.</li><li>AI 홍수 예보로 언제, 어디가 잠길지 미리 알 수 있게 되면서 &quot;예측을 근거로 먼저 지원하는&quot; 방식이 가능해졌다.</li></ul>
+  <h2>누구를 위한 기술인가</h2><ul><li>대상: 홍수 위험 지역의 가난한 농촌 가구.</li><li>운영 주체: 국제 현금지원 단체 GiveDirectly. 예보는 Google Flood Hub.</li></ul>
+  <h2>언제, 어떻게 쓰이나</h2><ol class="flow"><li><span class="when">홍수기 전</span><span>위험 지역 주민을 미리 등록하고 휴대폰 송금 수단을 확인해 둔다.</span></li><li><span class="when">홍수 며칠 전</span><span>Google Flood Hub의 강 수위 예보와 침수 지역 예보가 기준을 넘으면 지급을 시작한다(모잠비크: 강이 크게 불어나기 3일 전).</span></li><li><span class="when">지급</span><span>휴대폰 송금으로 현금을 보낸다. 빠르면 48시간 안에 받는다.</span></li><li><span class="when">홍수 후</span><span>추가 복구 지원을 보내고, 수혜자 설문으로 돈의 쓰임과 문제를 조사한다.</span></li></ol>
+  <h2>실제로 어떤 효과가 있었나</h2><div class="eff"><div><b>쓰임새</b><span>수혜자는 대피, 식량·생필품, 피해 농지 복구용 농자재, 집 수리에 돈을 썼다(GiveDirectly 2023)</span></div><div><b>접근성</b><span>설문 응답자의 94%가 휴대폰 송금 현금화가 쉬웠다고 답함</span></div><div><b>빗나간 지급</b><span>모잠비크에서는 사이클론 경로가 북쪽으로 바뀌어 &quot;돈을 보낸 마을에는 심한 홍수가 오지 않았다&quot;(GiveDirectly 자체 평가)</span></div><div><b>누락(2024 나이지리아)</b><span>약 3만 9,000명이 사전 등록했지만 거주지 확인·통신 문제 등으로 실제 수혜자는 4,600명. 약 3분의 1은 홍수 정점이 지난 뒤 돈을 받음(The New Humanitarian·Egab 탐사보도, 2026)</span></div></div>
+  <h3>위기에 취약한 사람들에게는</h3><ul><li>가장 취약한 사람이 오히려 빠졌다. 휴대폰 충전이 어려운 주민은 확인 전화를 놓쳤고, &quot;나무나 지붕에 올라가야 통화가 됐다&quot;는 증언도 있다.</li><li>이유 설명 없이 탈락 문자를 받은 주민 중에는 지원을 기대하고 빚을 진 경우도 있었다.</li><li>GiveDirectly는 설계가 &quot;가장 취약한 주민 일부를 구조적으로 배제했다&quot;고 인정하면서도, 정밀한 선별보다 속도와 범위를 택한 것은 옳은 판단이었다고 밝혔다.</li></ul>
+  <h2>비용·수익성</h2><ul><li>선제 지급이 사후 지원보다 얼마나 비용을 아끼는지는 GiveDirectly가 정량화 중이며 아직 결과가 없음(2025년 3월 기준).</li></ul>
+  <h2>한계</h2><ul><li>독립적인 무작위 효과 평가는 아직 없다. 자체 설문과 언론 탐사보도가 근거의 전부다.</li><li>예측 지역이 좁게 고정되면 재해 경로가 바뀔 때 대응하기 어렵다.</li><li>다섯 논문 밖의 외부 자료다.</li></ul>
+  <h2>앞으로 어떻게 쓸 수 있나</h2><ul><li>현장에서 모은 수위·사진 자료로 AI 예보를 보정하면 지급 지역을 더 정확하게 정할 수 있다(GiveDirectly의 교훈).</li><li>등록·확인 과정을 휴대폰에만 의존하지 않고 지역 조직과 대면 확인을 결합해야 한다(사례 1의 공동체 전달과 같은 교훈).</li></ul>
+  <details class="more"><summary>용어 풀이</summary><dl class="gl"><dt>선제 지원(anticipatory action)</dt><dd>재해가 오기 전에 예보를 근거로 미리 지원하는 방식.</dd><dt>Google Flood Hub</dt><dd>Google이 공개하는 AI 홍수 예보 플랫폼.</dd></dl></details>
+  <h2>출처</h2><ul style="font-size:14px"><li><a href="https://www.givedirectly.org/flood-pilots/">GiveDirectly (2023-07-27) Cash to flood survivors: 4 things we got right &amp; wrong</a></li><li><a href="https://www.anticipation-hub.org/Documents/Case_Studies/GiveDirectly-AI-supported-triggers-for-cash-transfers.pdf">Anticipation Hub (2025-03) GiveDirectly: AI-supported triggers for cash transfers</a></li><li><a href="https://www.thenewhumanitarian.org/investigations/2026/08/31/givedirectlys-ai-experiment-left-flood-victims-behind-nigeria">The New Humanitarian (2026-08-31) GiveDirectly’s AI experiment left vulnerable flood victims behind in Nigeria</a></li></ul>
+  <div class="pager"><a href="c8-alertcalifornia.html">← AI 산불 감시 카메라</a><span></span></div>
 </div>
 <script>document.querySelectorAll('[data-back]').forEach(a=>a.addEventListener('click',ev=>{if(document.referrer&&history.length>1){ev.preventDefault();history.back();}}));</script>
 
