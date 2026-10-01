@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>생물 모니터링 영상 인식</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F5F3; --paper:#FFFFFF; --fg:#17201D; --muted:#5A6661; --line:#D5DCD8; --soft:#E8EDEA;
+  --accent:#1E6B62; --warn:#965812; --warnbg:#FBF1E3; --ok:#2E6B3A; --okbg:#E5F1E7; --bad:#A3362B; --badbg:#F8E6E3;
+  --hunt:#2D5C8C; --cheong:#1E8A6E; --bf:#7350A6; --kaack:#8A6A1E; --jp:#C0611B; --ext:#7A8580;
+  --display:"Noto Serif KR","Nanum Myeongjo",Georgia,serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320;
+  --hunt:#7FAEE0; --cheong:#5FD0AE; --bf:#B79BE6; --kaack:#D7B65E; --jp:#F09A55; --ext:#9AA8A2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320;
+  --hunt:#7FAEE0; --cheong:#5FD0AE; --bf:#B79BE6; --kaack:#D7B65E; --jp:#F09A55; --ext:#9AA8A2; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.72;margin:0}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:28px 64px}
+.read{max-width:740px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.3;margin:0}
+h1{font-size:clamp(26px,4.4vw,38px);font-weight:800}
+h2{font-size:22px;font-weight:800;margin-top:52px;padding-top:16px;border-top:1px solid var(--line)}
+h3{font-size:16.5px;font-weight:600;margin-top:22px}
+p{margin:.65em 0}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.sub{color:var(--muted);font-size:14px}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:0}
+.d-hunt{background:var(--hunt)} .c-hunt{color:var(--hunt)}
+.d-cheong{background:var(--cheong)} .c-cheong{color:var(--cheong)}
+.d-bf{background:var(--bf)} .c-bf{color:var(--bf)}
+.d-kaack{background:var(--kaack)} .c-kaack{color:var(--kaack)}
+.d-jp{background:var(--jp)} .c-jp{color:var(--jp)}
+.d-ext{background:var(--ext)} .c-ext{color:var(--ext)}
+
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-top:10px}
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.qa>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.qa .q{font-family:var(--display);font-weight:600;font-size:15.5px}
+.qa .q b{color:var(--accent);font-family:var(--mono);margin-right:6px}
+.qa p{font-size:14.5px;margin:.4em 0 0}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin-top:16px}
+a.case{display:flex;flex-direction:column;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;text-decoration:none;color:var(--fg);min-width:0;transition:border-color .15s, transform .15s}
+a.case:hover{border-color:var(--accent);transform:translateY(-1px)}
+a.case:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a.case h3{margin:0;font-size:16px}
+a.case .s{font-size:13.5px;color:var(--muted);line-height:1.6;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.lvl{display:inline-flex;align-items:center;gap:3px;font-size:12px;color:var(--muted)}
+.lvl i{width:9px;height:9px;border-radius:2px;background:var(--soft);border:1px solid var(--line)}
+.lvl i.on{background:var(--accent);border-color:var(--accent)}
+.more-link{font-size:13px;color:var(--accent);margin-top:auto}
+.scroll{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--soft);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12.5px;background:var(--soft)}
+tr:last-child td{border-bottom:0}
+td.c,th.c{text-align:center}
+.cov td.c{font-size:17px}
+.s2{color:var(--accent)} .s1{color:var(--muted)} .s0{color:var(--line)}
+.ladder{display:grid;gap:8px;margin-top:14px}
+.step{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.step>div{min-width:0}
+.step .lv{font-family:var(--mono);font-size:16px;color:#fff;background:var(--accent);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center}
+.step.gap{border-style:dashed} .step.gap .lv{background:var(--muted)}
+.step p{margin:.2em 0 0;font-size:13.8px;color:var(--muted)}
+.abc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.abc>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.abc .k{font-family:var(--mono);font-weight:500;color:var(--kaack)}
+.abc p{font-size:13.8px;margin:.4em 0 0}
+.emis{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:14px 0;display:grid;gap:8px}
+.erow{display:grid;grid-template-columns:200px 1fr 56px;gap:10px;align-items:center;font-size:13.5px}
+.erow b{text-align:right}
+.etrack{height:16px;background:var(--soft);border-radius:3px;overflow:hidden}
+.ebar{height:100%} .e-up{background:var(--bad)} .e-down{background:var(--ok)}
+.note{background:var(--warnbg);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;font-size:14px;margin:14px 0}
+.aside{background:var(--paper);border:1px dashed var(--line);padding:14px 16px;border-radius:6px;font-size:14px;margin:16px 0}
+details.more{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px}
+details.more summary{cursor:pointer;font-weight:600;font-size:14px}
+details.more summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ol.plain{padding-left:20px} ol.plain li{margin:6px 0}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-size:14px;margin-top:16px}
+.facts dt{color:var(--muted);white-space:nowrap} .facts dd{margin:0;min-width:0}
+.eff{display:grid;gap:8px;margin-top:10px}
+.eff>div{display:grid;grid-template-columns:150px 1fr;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:14px}
+.eff b{font-weight:600}
+.back{display:inline-flex;gap:6px;align-items:center;font-size:14px;text-decoration:none;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;font:inherit}
+.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:14px}
+footer{margin-top:52px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+code{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px 5px;border-radius:3px}
+@media (max-width:720px){.abc,.qa{grid-template-columns:1fr}.erow{grid-template-columns:1fr 48px}.erow span{grid-column:1/-1}
+ .step{grid-template-columns:32px 1fr}.step .who{grid-column:2}.eff>div{grid-template-columns:1fr;gap:2px}.facts{grid-template-columns:1fr;gap:2px 0}.facts dd{margin-bottom:8px}}
+</style>
+</head><body>
+<div class="wrap read" style="max-width:780px">
+  <a class="back" href="../index.html" data-back>← EDA 요약으로</a>
+  <div class="eyebrow" style="margin-top:18px">사례 6 / 7 · ⑤ 모니터링·평가</div>
+  <h1 style="font-size:clamp(24px,4vw,32px);margin-top:6px">기후가 바꾸는 생태계를 세다: 카메라트랩 영상 인식</h1>
+  <p class="sub" style="font-size:15px">카메라트랩·항공·음향 센서 자료를 AI가 자동 분류해 야생동물 개체수 조사를 더 빠르고 촘촘하게 만든다.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span class="lvl" title="근거 수준 1/5"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>1/5</span></span><span class="sub">처리 효율</span><span><i class="dot d-cheong" title="Cheong 2022"></i><span class="sub">Cheong 2022</span></span></div>
+  <dl class="facts"><dt>출처</dt><dd>Cheong et al.(2022) 3.1절, 표 1</dd><dt>AI·ML</dt><dd>이미지 분류, 객체 탐지, 개체 수 세기(지도학습). 인용 사례 Norouzzadeh et al.(2021)은 능동학습 시스템</dd><dt>데이터</dt><dd>카메라트랩, 항공 영상, 음향 센서</dd><dt>기간</dt><dd>보고되지 않음</dd></dl>
+  <h2>배경</h2><ul><li>생태계 적응에는 기후 변화에 따른 생물 상태를 자세하고 빠르게 아는 정보가 필요하다.</li><li>사람이 영상을 일일이 판독하는 데 드는 시간이 조사 규모를 제한해 왔다.</li></ul>
+  <h2>효과</h2><div class="eff"><div><b>효과</b><span>사람의 판독 시간을 줄이고 같은 시간에 더 많은 센서를 처리해 해상도를 높일 수 있다(정량 수치는 논문에 없음)</span></div><div><b>속도</b><span>Cheong은 2절에서 일반론으로, 주석 자동화와 지도학습이 적응 질문 평가를 &quot;1년 → 1개월&quot;로 줄일 수 있다고 언급</span></div></div>
+  <h2>비용·수익성</h2><ul><li>보고되지 않음.</li></ul>
+  <h2>한계</h2><ul><li>라벨이 붙은 학습 자료가 필요하고, 새 지역에서는 성능이 떨어질 수 있다(전이학습 필요).</li></ul>
+  <h2>향후 활용방안</h2><ul><li>한국 국립공원·습지의 기후 영향 모니터링에 같은 방식을 적용할 수 있다.</li></ul>
+  <h2>출처</h2><ul style="font-size:14px"><li><a href="https://doi.org/10.1002/widm.1459">Cheong, Sankaran &amp; Bastani (2022) 3.1절</a></li></ul>
+  <div class="pager"><a href="c5-relocation-rl.html">← 이주 인센티브 맞춤(제안)</a><a href="c7-drought-warning.html">가뭄 조기경보·물 배분(제안) →</a></div>
+</div>
+<script>document.querySelectorAll('[data-back]').forEach(a=>a.addEventListener('click',ev=>{if(document.referrer&&history.length>1){ev.preventDefault();history.back();}}));</script>
+
+</body></html>

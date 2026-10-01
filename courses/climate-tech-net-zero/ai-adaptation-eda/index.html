@@ -1,265 +1,209 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="AI·ML 기후변화 적응 논문 3편 EDA와 디스커션">
 <title>AI 기후적응 문헌 EDA</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: 한 단 읽기 폭(760px) 본문 + 표·히트맵은 넓게(1040px). 세 논문은 끝까지 같은 색으로 구분 */
 :root{
-  --bg:#F4F6F4; --paper:#FFFFFF; --fg:#18211E; --muted:#5A6661; --line:#D6DDD9; --soft:#E9EEEB;
-  --accent:#1E6B62; --warn:#9A5A12; --warnbg:#FBF1E3; --bad:#A3362B; --badbg:#F8E6E3; --ok:#2E6B3A; --okbg:#E6F2E8;
-  --hunt:#2D5C8C; --cheong:#1E8A6E; --jain:#B06A1C;
+  --bg:#F3F5F3; --paper:#FFFFFF; --fg:#17201D; --muted:#5A6661; --line:#D5DCD8; --soft:#E8EDEA;
+  --accent:#1E6B62; --warn:#965812; --warnbg:#FBF1E3; --ok:#2E6B3A; --okbg:#E5F1E7; --bad:#A3362B; --badbg:#F8E6E3;
+  --hunt:#2D5C8C; --cheong:#1E8A6E; --bf:#7350A6; --kaack:#8A6A1E; --jp:#C0611B; --ext:#7A8580;
   --display:"Noto Serif KR","Nanum Myeongjo",Georgia,serif;
   --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#121816; --paper:#19211E; --fg:#E4EAE7; --muted:#9AA8A2; --line:#2F3A36; --soft:#222C29;
-  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --bad:#EE8B7E; --badbg:#3A2320; --ok:#8DD39A; --okbg:#1E3223;
-  --hunt:#7FAEE0; --cheong:#5FD0AE; --jain:#E8A560; color-scheme:dark}}
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320;
+  --hunt:#7FAEE0; --cheong:#5FD0AE; --bf:#B79BE6; --kaack:#D7B65E; --jp:#F09A55; --ext:#9AA8A2; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#121816; --paper:#19211E; --fg:#E4EAE7; --muted:#9AA8A2; --line:#2F3A36; --soft:#222C29;
-  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --bad:#EE8B7E; --badbg:#3A2320; --ok:#8DD39A; --okbg:#1E3223;
-  --hunt:#7FAEE0; --cheong:#5FD0AE; --jain:#E8A560; color-scheme:dark}
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320;
+  --hunt:#7FAEE0; --cheong:#5FD0AE; --bf:#B79BE6; --kaack:#D7B65E; --jp:#F09A55; --ext:#9AA8A2; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.72;margin:0}
-.wrap{max-width:1040px;margin:0 auto;padding-inline:20px;padding-block:28px 64px}
-.read{max-width:760px}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:28px 64px}
+.read{max-width:740px}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.3;margin:0}
-h1{font-size:clamp(28px,4.6vw,40px);font-weight:800;letter-spacing:-.01em}
-h2{font-size:23px;font-weight:800;margin-top:56px;padding-top:18px;border-top:1px solid var(--line)}
-h3{font-size:17px;font-weight:600;margin-top:26px}
-p{margin:.7em 0}
+h1{font-size:clamp(26px,4.4vw,38px);font-weight:800}
+h2{font-size:22px;font-weight:800;margin-top:52px;padding-top:16px;border-top:1px solid var(--line)}
+h3{font-size:16.5px;font-weight:600;margin-top:22px}
+p{margin:.65em 0}
+a{color:var(--accent)}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .sub{color:var(--muted);font-size:14px}
 .num{font-variant-numeric:tabular-nums;font-family:var(--mono)}
-.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
-.p-hunt{color:var(--hunt)} .p-cheong{color:var(--cheong)} .p-jain{color:var(--jain)}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:0}
-.d-hunt{background:var(--hunt)} .d-cheong{background:var(--cheong)} .d-jain{background:var(--jain)}
-.key{display:grid;gap:14px;margin-top:22px}
-.key li{list-style:none;padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:6px}
-.key{padding:0}
-.key b{font-weight:600}
+.d-hunt{background:var(--hunt)} .c-hunt{color:var(--hunt)}
+.d-cheong{background:var(--cheong)} .c-cheong{color:var(--cheong)}
+.d-bf{background:var(--bf)} .c-bf{color:var(--bf)}
+.d-kaack{background:var(--kaack)} .c-kaack{color:var(--kaack)}
+.d-jp{background:var(--jp)} .c-jp{color:var(--jp)}
+.d-ext{background:var(--ext)} .c-ext{color:var(--ext)}
+
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-top:10px}
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.qa>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.qa .q{font-family:var(--display);font-weight:600;font-size:15.5px}
+.qa .q b{color:var(--accent);font-family:var(--mono);margin-right:6px}
+.qa p{font-size:14.5px;margin:.4em 0 0}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin-top:16px}
+a.case{display:flex;flex-direction:column;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;text-decoration:none;color:var(--fg);min-width:0;transition:border-color .15s, transform .15s}
+a.case:hover{border-color:var(--accent);transform:translateY(-1px)}
+a.case:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a.case h3{margin:0;font-size:16px}
+a.case .s{font-size:13.5px;color:var(--muted);line-height:1.6;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.lvl{display:inline-flex;align-items:center;gap:3px;font-size:12px;color:var(--muted)}
+.lvl i{width:9px;height:9px;border-radius:2px;background:var(--soft);border:1px solid var(--line)}
+.lvl i.on{background:var(--accent);border-color:var(--accent)}
+.more-link{font-size:13px;color:var(--accent);margin-top:auto}
 .scroll{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
 table{border-collapse:collapse;width:100%;font-size:13.5px}
 th,td{padding:8px 10px;border-bottom:1px solid var(--soft);text-align:left;vertical-align:top}
 th{font-weight:600;color:var(--muted);font-size:12.5px;background:var(--soft)}
 tr:last-child td{border-bottom:0}
 td.c,th.c{text-align:center}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:16px}
-.card{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:6px;padding:16px;min-width:0}
-.card h3{margin:0 0 4px;font-size:16px}
-.card dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:10px 0 0;font-size:13.5px}
-.card dt{color:var(--muted)} .card dd{margin:0;min-width:0}
-.heat td.v{text-align:center;font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;min-width:74px}
-.grp td{background:var(--soft);font-weight:600;font-size:12px;color:var(--muted);padding:5px 10px}
-.bars{display:grid;gap:10px;margin-top:12px}
-.bar{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:center;font-size:13.5px}
-.bar .track{display:flex;height:22px;border-radius:3px;overflow:hidden;background:var(--soft)}
-.bar .seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-family:var(--mono);min-width:0;overflow:hidden}
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--muted);margin-top:8px}
-.legend span{display:inline-flex;align-items:center;gap:6px}
-.sw{width:12px;height:12px;border-radius:2px;display:inline-block}
-.hist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:12px}
-.hbox{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
-.cols{display:flex;align-items:flex-end;gap:3px;height:110px;margin-top:10px;border-bottom:1px solid var(--line)}
-.cols div{flex:1;border-radius:2px 2px 0 0;min-width:0}
-.axis{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px}
-.stage td.c{font-size:18px;line-height:1}
+.cov td.c{font-size:17px}
 .s2{color:var(--accent)} .s1{color:var(--muted)} .s0{color:var(--line)}
-.why{font-size:12.5px;color:var(--muted);display:block;margin-top:4px;line-height:1.5}
-.pill{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:99px;white-space:nowrap}
-.m-불일치,.m-출처없음{background:var(--badbg);color:var(--bad)}
-.m-약함,.m-부분일치{background:var(--warnbg);color:var(--warn)}
-.m-일치{background:var(--okbg);color:var(--ok)}
+.ladder{display:grid;gap:8px;margin-top:14px}
+.step{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.step>div{min-width:0}
+.step .lv{font-family:var(--mono);font-size:16px;color:#fff;background:var(--accent);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center}
+.step.gap{border-style:dashed} .step.gap .lv{background:var(--muted)}
+.step p{margin:.2em 0 0;font-size:13.8px;color:var(--muted)}
+.abc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.abc>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.abc .k{font-family:var(--mono);font-weight:500;color:var(--kaack)}
+.abc p{font-size:13.8px;margin:.4em 0 0}
+.emis{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:14px 0;display:grid;gap:8px}
+.erow{display:grid;grid-template-columns:200px 1fr 56px;gap:10px;align-items:center;font-size:13.5px}
+.erow b{text-align:right}
+.etrack{height:16px;background:var(--soft);border-radius:3px;overflow:hidden}
+.ebar{height:100%} .e-up{background:var(--bad)} .e-down{background:var(--ok)}
 .note{background:var(--warnbg);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;font-size:14px;margin:14px 0}
 .aside{background:var(--paper);border:1px dashed var(--line);padding:14px 16px;border-radius:6px;font-size:14px;margin:16px 0}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.filters button{font:inherit;font-size:13px;padding:4px 12px;border-radius:99px;border:1px solid var(--line);background:var(--paper);color:var(--fg);cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-.filters button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:16px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--paper)}
-.flow>div{padding:14px 16px;border-right:1px solid var(--line);min-width:0}
-.flow>div:last-child{border-right:0}
-.flow .q{font-family:var(--display);font-weight:600;font-size:16px;margin:4px 0 6px}
-.flow ul{margin:6px 0 0;padding-left:18px;font-size:13.5px}
-#mtab{min-width:980px} #mtab td:first-child{white-space:nowrap}
-ol.plain{padding-left:20px} ol.plain li{margin:6px 0}
-footer{margin-top:56px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
-code{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px 5px;border-radius:3px}
-@media (max-width:720px){
-  .hist,.flow{grid-template-columns:1fr}
-  .flow>div{border-right:0;border-bottom:1px solid var(--line)}
-  .bar{grid-template-columns:1fr}
-}
-.ext{display:inline-block;font-size:11px;font-weight:600;padding:0 6px;border-radius:3px;background:var(--soft);color:var(--muted);border:1px solid var(--line);vertical-align:1px;white-space:nowrap}
-.ext-dot{background:var(--muted)}
-.qa{display:grid;gap:12px;margin-top:18px}
-.qa>div{display:grid;grid-template-columns:44px 1fr;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
-.qa>div>div{min-width:0}
-.qn{font-family:var(--display);font-weight:800;font-size:20px;color:var(--accent)}
-.qa p{margin:.35em 0 0;font-size:14.5px}
-.ladder{display:grid;gap:8px;margin-top:14px}
-.step{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
-.step>div{min-width:0}
-.step .lv{font-family:var(--mono);font-size:18px;font-weight:500;color:#fff;background:var(--accent);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center}
-.step.gap{border-style:dashed}
-.step.gap .lv{background:var(--muted)}
-.step .who{white-space:nowrap}
-.emis{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:14px 0;display:grid;gap:8px}
-.erow{display:grid;grid-template-columns:190px 1fr 56px;gap:10px;align-items:center;font-size:13.5px}
-.erow b{text-align:right}
-.etrack{height:18px;background:var(--soft);border-radius:3px;overflow:hidden}
-.ebar{height:100%}
-.e-up{background:var(--bad)} .e-down{background:var(--ok)}
-details.more{margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px}
+details.more{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px}
 details.more summary{cursor:pointer;font-weight:600;font-size:14px}
 details.more summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-a.crumb-a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}
-ul.src{font-size:13.5px} ul.src a{color:var(--accent)}
-@media (max-width:720px){.erow{grid-template-columns:1fr 48px}.erow span{grid-column:1/-1}.step{grid-template-columns:36px 1fr}.step .who{grid-column:2}}
+ol.plain{padding-left:20px} ol.plain li{margin:6px 0}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-size:14px;margin-top:16px}
+.facts dt{color:var(--muted);white-space:nowrap} .facts dd{margin:0;min-width:0}
+.eff{display:grid;gap:8px;margin-top:10px}
+.eff>div{display:grid;grid-template-columns:150px 1fr;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:14px}
+.eff b{font-weight:600}
+.back{display:inline-flex;gap:6px;align-items:center;font-size:14px;text-decoration:none;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;font:inherit}
+.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:14px}
+footer{margin-top:52px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+code{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px 5px;border-radius:3px}
+@media (max-width:720px){.abc,.qa{grid-template-columns:1fr}.erow{grid-template-columns:1fr 48px}.erow span{grid-column:1/-1}
+ .step{grid-template-columns:32px 1fr}.step .who{grid-column:2}.eff>div{grid-template-columns:1fr;gap:2px}.facts{grid-template-columns:1fr;gap:2px 0}.facts dd{margin-bottom:8px}}
 </style>
-
 </head><body>
 <div class="wrap">
 <header class="read">
-  <div class="eyebrow"><a class="crumb-a" href="../index.html">기후기술과 탄소중립경영</a> · 과제 · 탐색적 문헌 분석</div>
+  <div class="eyebrow"><a href="../index.html" style="color:inherit">기후기술과 탄소중립경영</a> · 과제 · 탐색적 문헌 분석</div>
   <h1>AI는 기후위기 적응을 도울 수 있는가, 그리고 그것은 모순인가</h1>
-  <p class="sub">Huntingford et al. (2019) · Cheong et al. (2022) · Jain et al. (2023) 세 논문의 EDA를 바탕으로, 논문 밖의 최신 자료(IEA, ECMWF, Nature 등)로 효과와 에너지 문제를 보완했습니다. 논문 밖 자료는 <span class="ext">외부 자료</span> 표시를 붙였습니다. 2026-09-30 작성.</p>
-  <div class="legend" style="margin-top:10px"><span><i class="dot d-hunt"></i>Huntingford 2019 (Letter)</span><span><i class="dot d-cheong"></i>Cheong 2022 (Perspective)</span><span><i class="dot d-jain"></i>Jain 2023 (Review)</span></div>
+  <p class="sub">논문 5편을 원문으로 읽고 비교했습니다. 사례 카드를 누르면 배경·기간·수익성·효과·향후 활용을 정리한 상세 페이지가 열립니다. 2026-10-01 작성.</p>
+  <div class="legend"><span><i class="dot d-hunt"></i>Huntingford 2019</span><span><i class="dot d-cheong"></i>Cheong 2022</span><span><i class="dot d-bf"></i>Berrang-Ford 2021</span><span><i class="dot d-kaack"></i>Kaack 2022</span><span><i class="dot d-jp"></i>Jagnani &amp; Pande 2024</span><span><i class="dot d-ext"></i>외부 자료</span></div>
 </header>
 
-<section class="read">
-  <h2>네 가지 질문과 짧은 답</h2>
+<section>
+  <h2>한눈에 보기</h2>
   <div class="qa">
-    <div><div class="qn">Q1</div><div><b>AI·ML을 적응에 어떻게 쓰고 있나?</b><p>세 논문에서 뽑은 사례 64건 중 64%가 "기후·위험을 이해하는 일"과 "조기경보"에 몰려 있습니다. 주력은 위성·기후모델 자료를 읽는 예측 모델(신경망, 트리 앙상블, 확률 모델)입니다. 어떤 적응 조치를 누구에게 적용할지 고르는 일과 조치의 효과를 평가하는 일에는 사례가 적습니다.</p></div></div>
-    <div><div class="qn">Q2</div><div><b>효과는 무엇인가?</b><p>세 논문이 보여 주는 효과는 대부분 <b>모델 정확도</b> 수준(예: 산불 탐지 97%)에 머뭅니다. "AI 덕분에 피해가 줄었다"는 결과는 세 논문 어디에도 없습니다. 논문 밖에서는 AI 홍수 예보가 계측소 없는 유역에서도 5일 앞서 경보를 내고 80여 개국에서 운영된다는 결과가 나왔지만, 피해 감소를 AI 몫으로 따로 측정한 연구는 여전히 드뭅니다.</p></div></div>
-    <div><div class="qn">Q3</div><div><b>앞으로의 역할은 기대되는가?</b><p>기대는 높지만 조건이 붙어 있습니다. 논문들이 제안한 방향(기후모델 에뮬레이션, 데이터 부족 지역으로의 전이, 맞춤형 적응)은 2023~2025년에 실제로 운영 단계에 들어섰습니다. 세 논문 모두 데이터 대표성, 해석 가능성, 전문가 감독을 전제 조건으로 둡니다.</p></div></div>
-    <div><div class="qn">Q4</div><div><b>기후위기를 키우는 AI로 기후위기에 대응하는 것은 모순 아닌가?</b><p>우선 규모를 바로잡아야 합니다. 데이터센터 전체 배출은 2024년 전 세계 연소 CO₂의 약 0.5%로 "가장 큰 주범"은 아닙니다. 다만 증가 속도가 가장 빠른 부문 중 하나입니다. 모순은 AI라는 기술 자체보다 <b>어떤 AI를, 어떤 전력으로, 무엇을 위해 쓰느냐</b>에서 생깁니다. 적응용 AI는 대부분 작은 특화 모델이어서 에너지 부담이 작고, 오히려 물리 모델보다 에너지를 줄이기도 합니다. 반면 배출 증가를 이끄는 것은 범용 생성형 AI 수요입니다. 세 논문은 이 문제를 사실상 다루지 않습니다.</p></div></div>
+    <div><div class="q"><b>Q1</b>어떻게 쓰고 있나</div><p>논문에 나온 AI·ML 사례 49건 중 65%가 기후·위험 이해와 조기경보에 몰려 있습니다. 어떤 적응 조치를 누구에게 할지 고르는 일(3건)과 효과 평가(5건)는 적습니다.</p></div>
+    <div><div class="q"><b>Q2</b>효과가 있나</div><p>대부분은 모델 정확도 수준의 근거입니다. 피해 감소를 무작위 실험으로 잰 연구는 Jagnani &amp; Pande뿐이며, 건강·의료비는 줄었지만 경제 피해는 줄지 않았습니다. 적응 연구 전체로 봐도 위험 감소를 공식 평가한 연구는 3.4%입니다.</p></div>
+    <div><div class="q"><b>Q3</b>앞으로 기대되나</div><p>예측·경보에서는 기대가 현실이 되고 있습니다(AI 홍수 예보, AI 기상예보 운영). 다만 효과를 만드는 것은 예측 정확도보다 경보가 마지막 사람까지 닿는 전달 체계라는 점이 실험으로 드러났습니다.</p></div>
+    <div><div class="q"><b>Q4</b>모순인가</div><p>데이터센터는 세계 연소 CO₂의 약 0.5%로 "주범"은 아니지만 가장 빠르게 늘어나는 배출원 중 하나입니다. Kaack는 AI의 영향을 계산·활용·시스템 세 층으로 나눕니다. 적응용 AI는 대체로 작은 특화 모델이어서, 모순은 기술보다 규모·전력·효과 측정의 문제입니다.</p></div>
   </div>
 </section>
 
 <section>
-  <h2>Q1. AI·ML을 적응에 어떻게 쓰고 있나</h2>
-  <p class="read">적응 과정을 다섯 단계(①기후·위험 이해 → ②영향·취약성 평가 → ③조기경보·대응 → ④적응 옵션 선택·맞춤 → ⑤이행 후 모니터링·평가)로 나누고, 세 논문이 각 단계를 얼마나 다루는지 판정했습니다. ●는 논문의 핵심, ◐는 언급, ○는 없음입니다. 오른쪽 열은 논문의 표·본문에서 기법 이름이 나온 사례 64건을 단계별로 센 결과입니다.</p>
-  <div class="scroll"><table class="stage" id="stage"></table></div>
-  <h3>어떤 기법이 쓰이나</h3>
-  <p class="read"><span class="p-hunt">Huntingford</span>는 기후과학의 실제 연구 27건을 표로 정리해 신경망·트리 앙상블·확률 모델이 고르게 나옵니다. <span class="p-cheong">Cheong</span>은 알고리즘보다 <b>학습 방식</b>(전이·준지도·강화·멀티모달·다목적)을 말하고, <span class="p-jain">Jain</span>은 ML·DL·NLP·컴퓨터비전 같은 넓은 범주와 상용 서비스를 나열합니다.</p>
-  <div class="bars" id="famBars"></div>
-  <div class="legend" id="famLegend"></div>
-  <h3>세 논문은 서로 다른 층을 본다</h3>
-  <div class="flow">
-    <div style="border-top:3px solid var(--hunt)">
-      <div class="eyebrow p-hunt">Huntingford 2019</div>
-      <div class="q">무엇에 적응해야 하는가</div>
-      <p style="font-size:13.5px;margin:0">빅데이터(관측·기후모델 출력) → ML(숨은 연결 발견) → AI(경보·조언)의 3단 구분. "ML이 행동 지시로 이어질 때 AI가 된다."</p>
-      <ul><li>기후모델 간 불일치 줄이기, 원격상관·티핑포인트 탐지</li><li>2018 영국 가뭄 원인 탐색</li><li>가뭄 조기경보와 물 배분</li></ul>
-    </div>
-    <div style="border-top:3px solid var(--cheong)">
-      <div class="eyebrow p-cheong">Cheong 2022</div>
-      <div class="q">무엇을, 누구에게 맞춰 고르는가</div>
-      <p style="font-size:13.5px;margin:0">적응이 어려운 이유를 상충관계, 서로 다른 주체, 알 수 없는 결과로 정리하고 데이터가 부족한 상황에 맞는 학습 방식을 제안.</p>
-      <ul><li>전이학습: 데이터 풍부 지역 → 부족 지역</li><li>강화학습: 이주 인센티브를 개인별로</li><li>다목적 최적화: 수확량만 쫓다 물을 고갈시키지 않기</li></ul>
-    </div>
-    <div style="border-top:3px solid var(--jain)">
-      <div class="eyebrow p-jain">Jain 2023</div>
-      <div class="q">현장에서 어떻게 쓰는가</div>
-      <p style="font-size:13.5px;margin:0">지역사회·인프라·기업을 보호 대상으로 놓고 적용 분야를 넓게 정리. 방법 세부와 출처 정확도는 약함(부록 B).</p>
-      <ul><li>취약성 지도(위성·기후모델)</li><li>홍수·산불·산사태 경보, 재난 SNS 분석</li><li>연안 인프라 시뮬레이션, 기업 기후리스크 도구</li></ul>
-    </div>
+  <h2>주요 사례</h2>
+  <p class="read">다섯 논문과 확인한 외부 자료에서 고른 사례 7개입니다. 막대는 근거 수준(아래 "효과의 근거 사다리" 기준, 0 = 제안 단계)입니다.</p>
+  <div class="cases"><a class="case" href="cases/c1-bihar-flood.html">
+  <div class="chips"><span class="chip">③ 조기경보·대응</span><span class="chip">홍수</span></div>
+  <h3>AI 홍수 경보를 마을까지: 인도 비하르 무작위 실험</h3><p class="s">Google의 AI 홍수 예보를 자원봉사자가 마을에 다시 전달하자 경보가 더 많은 가구에 더 일찍 닿았고, 심한 침수 지역에서 질병과 치료비가 줄었다.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="lvl" title="근거 수준 4/5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i> <span>4/5</span></span><span><i class="dot d-jp" title="Jagnani &amp; Pande 2024"></i></span></div>
+  <span class="more-link">자세히 보기 →</span></a><a class="case" href="cases/c2-ecmwf-aifs.html">
+  <div class="chips"><span class="chip">① 기후·위험 이해 · ③ 조기경보</span><span class="chip">기상 전반(태풍 진로 등)</span></div>
+  <h3>AI 기상예보의 정식 운영: 유럽중기예보센터(ECMWF) AIFS</h3><p class="s">Huntingford(2019)가 제안한 &quot;비싼 물리 모델 구성요소의 신경망 대체&quot; 방향이 2025년 유럽의 공식 예보 체계에서 현실이 됐다.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="lvl" title="근거 수준 2/5"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i> <span>2/5</span></span><span><i class="dot d-hunt" title="Huntingford 2019"></i><i class="dot d-ext" title="외부 자료"></i></span></div>
+  <span class="more-link">자세히 보기 →</span></a><a class="case" href="cases/c3-noaa-gbrt.html">
+  <div class="chips"><span class="chip">③ 조기경보·대응</span><span class="chip">폭풍 등 위험기상</span></div>
+  <h3>예보관 옆의 AI: 미국 위험기상 예보 후처리</h3><p class="s">트리 앙상블(GBRT) 예보를 미국 해양대기청(NOAA) 시험대에 넣자 예보관이 75%의 경우 AI 예보를 택했다.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="lvl" title="근거 수준 2/5"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i> <span>2/5</span></span><span><i class="dot d-hunt" title="Huntingford 2019"></i></span></div>
+  <span class="more-link">자세히 보기 →</span></a><a class="case" href="cases/c4-adaptation-stocktake.html">
+  <div class="chips"><span class="chip">⑤ 모니터링·평가</span><span class="chip">전 위험</span></div>
+  <h3>적응은 정말 위험을 줄였나: ML로 4.8만 편을 훑은 전 세계 점검</h3><p class="s">ML로 적응 문헌을 선별해 전 세계 적응 실행 사례를 모았더니, 위험 감소를 제대로 평가한 연구는 3.4%뿐이었다.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="lvl" title="근거 수준 1/5"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>1/5</span></span><span><i class="dot d-bf" title="Berrang-Ford 2021"></i></span></div>
+  <span class="more-link">자세히 보기 →</span></a><a class="case" href="cases/c5-relocation-rl.html">
+  <div class="chips"><span class="chip">④ 적응 옵션 선택·맞춤</span><span class="chip">산불·홍수</span></div>
+  <h3>누구에게 어떤 이주 지원을: 강화학습 맞춤 인센티브(제안)</h3><p class="s">위험 지역 주민마다 반응하는 유인(위험 정보 vs 금전)이 다르므로, 강화학습으로 개인별 지원을 맞추자는 제안.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="lvl" title="근거 수준 0/5"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>0/5</span></span><span><i class="dot d-cheong" title="Cheong 2022"></i></span></div>
+  <span class="more-link">자세히 보기 →</span></a><a class="case" href="cases/c6-camera-trap.html">
+  <div class="chips"><span class="chip">⑤ 모니터링·평가</span><span class="chip">생태계 변화</span></div>
+  <h3>기후가 바꾸는 생태계를 세다: 카메라트랩 영상 인식</h3><p class="s">카메라트랩·항공·음향 센서 자료를 AI가 자동 분류해 야생동물 개체수 조사를 더 빠르고 촘촘하게 만든다.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="lvl" title="근거 수준 1/5"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>1/5</span></span><span><i class="dot d-cheong" title="Cheong 2022"></i></span></div>
+  <span class="more-link">자세히 보기 →</span></a><a class="case" href="cases/c7-drought-warning.html">
+  <div class="chips"><span class="chip">① 기후·위험 이해 · ③ 조기경보</span><span class="chip">가뭄</span></div>
+  <h3>가뭄을 미리 보고 물을 나누다: 가뭄 조기경보(제안)</h3><p class="s">위험기상에서 효과를 본 ML 예보를 가뭄에 적용해 물 배분과 사전 대응을 최적화하자는 제안.</p>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="lvl" title="근거 수준 0/5"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>0/5</span></span><span><i class="dot d-hunt" title="Huntingford 2019"></i></span></div>
+  <span class="more-link">자세히 보기 →</span></a></div>
+</section>
+
+<section>
+  <h2>다섯 논문은 각자 무엇을 보나</h2>
+  <div class="scroll"><table><thead><tr><th>논문</th><th>제목</th><th>이 분석에서의 역할</th><th>읽은 판본</th></tr></thead><tbody><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i><b>Huntingford 2019</b></td><td>Machine learning and artificial intelligence to aid climate change research and preparedness<div class="sub">Environmental Research Letters 14, 124007 · Letter</div></td><td>기후를 더 잘 이해하는 AI</td><td class="sub">출판본(CC BY 3.0)</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i><b>Cheong 2022</b></td><td>Artificial intelligence for climate change adaptation<div class="sub">WIREs Data Mining and Knowledge Discovery 12(5), e1459 · Perspective</div></td><td>무엇을 누구에게 맞춰 고를지 돕는 AI</td><td class="sub">출판본</td></tr><tr><td style="white-space:nowrap"><i class="dot d-bf"></i><b>Berrang-Ford 2021</b></td><td>A systematic global stocktake of evidence on human adaptation to climate change<div class="sub">Nature Climate Change 11, 989–1000 · Analysis</div></td><td>적응이 실제로 위험을 줄였는지 근거를 모은 연구(ML로 문헌 선별)</td><td class="sub">저자 수락 원고(White Rose 저장소)</td></tr><tr><td style="white-space:nowrap"><i class="dot d-kaack"></i><b>Kaack 2022</b></td><td>Aligning artificial intelligence with climate change mitigation<div class="sub">Nature Climate Change 12, 518–527 · Perspective</div></td><td>AI가 배출에 미치는 영향의 틀(계산·활용·시스템)</td><td class="sub">2021-10 프리프린트(HAL hal-03368037). 학술지 게재본과 문구가 다를 수 있음</td></tr><tr><td style="white-space:nowrap"><i class="dot d-jp"></i><b>Jagnani &amp; Pande 2024</b></td><td>Forecasting Fate: Experimental Evaluation of a Flood Early Warning System<div class="sub">Working paper (Tufts·Yale), 2024-04-03 · Working paper</div></td><td>AI 홍수 경보의 효과를 무작위 실험으로 측정</td><td class="sub">워킹페이퍼(학술지 심사 전)</td></tr></tbody></table></div>
+  <p class="sub read">v1에서 다룬 Jain et al.(2023)은 사례 인용의 신뢰성 문제로 이번 분석에서 뺐습니다.</p>
+</section>
+
+<section>
+  <h2>적응 단계별 지도</h2>
+  <p class="read">●는 논문의 핵심, ◐는 언급, ○는 없음. 오른쪽 숫자는 논문의 표·본문에서 기법 이름이 나온 AI·ML 사례 수입니다(Kaack는 감축·비용 관점이라 사례 집계에서 제외).</p>
+  <div class="scroll"><table class="cov"><thead><tr><th>적응 단계</th><th class="c"><span class="c-hunt">Huntingford 2019</span></th><th class="c"><span class="c-cheong">Cheong 2022</span></th><th class="c"><span class="c-bf">Berrang-Ford 2021</span></th><th class="c"><span class="c-kaack">Kaack 2022</span></th><th class="c"><span class="c-jp">Jagnani &amp; Pande 2024</span></th><th class="c">사례</th></tr></thead><tbody><tr><td style="white-space:nowrap;font-weight:600">① 기후·위험 이해</td><td class="c" title="논문의 대부분(차원 축소, 원격상관, 기후모델 불확실성)"><span class="s2">●</span></td><td class="c" title="물리+ML 결합을 결론에서 제안"><span class="s1">◐</span></td><td class="c" title="없음(위험은 대응 동기로만 집계)"><span class="s0">○</span></td><td class="c" title="기후 모델링 등 시뮬레이션 가속을 활용 예로 언급"><span class="s1">◐</span></td><td class="c" title="없음"><span class="s0">○</span></td><td class="c num" style="font-size:14px">23</td></tr><tr><td style="white-space:nowrap;font-weight:600">② 영향·취약성 평가</td><td class="c" title="표 2 &quot;기후 영향&quot; 7행, 2018 영국 가뭄"><span class="s1">◐</span></td><td class="c" title="멀티모달 다면 영향"><span class="s1">◐</span></td><td class="c" title="대응을 촉발한 위험·부문 집계"><span class="s1">◐</span></td><td class="c" title="없음"><span class="s0">○</span></td><td class="c" title="비하르 홍수 피해 형성 조사(수확 감소 65% 등)"><span class="s1">◐</span></td><td class="c num" style="font-size:14px">9</td></tr><tr><td style="white-space:nowrap;font-weight:600">③ 조기경보·대응</td><td class="c" title="가뭄 조기경보 절, 예보 후처리(75%)"><span class="s2">●</span></td><td class="c" title="전이학습 홍수 경보 언급"><span class="s1">◐</span></td><td class="c" title="SIDS의 조기경보 구축을 사례로 언급"><span class="s0">○</span></td><td class="c" title="없음"><span class="s0">○</span></td><td class="c" title="경보 수신·적시성·신뢰 측정(핵심)"><span class="s2">●</span></td><td class="c num" style="font-size:14px">9</td></tr><tr><td style="white-space:nowrap;font-weight:600">④ 적응 옵션 선택·맞춤</td><td class="c" title="없음"><span class="s0">○</span></td><td class="c" title="이주 인센티브 맞춤, 다목적 상충 조정"><span class="s2">●</span></td><td class="c" title="대응 유형·주체(가구 82%) 집계"><span class="s1">◐</span></td><td class="c" title="없음"><span class="s0">○</span></td><td class="c" title="가구의 사전 대응 행동 지수"><span class="s1">◐</span></td><td class="c num" style="font-size:14px">3</td></tr><tr><td style="white-space:nowrap;font-weight:600">⑤ 모니터링·평가</td><td class="c" title="없음"><span class="s0">○</span></td><td class="c" title="생물 모니터링, 정책문서 NLP"><span class="s2">●</span></td><td class="c" title="위험 감소 근거 평가: 공식 평가 3.4%, 1차 근거 1.8%"><span class="s2">●</span></td><td class="c" title="없음(배출 영향 평가 틀은 별도 축)"><span class="s0">○</span></td><td class="c" title="무작위 실험으로 건강·의료비·경제 효과 측정"><span class="s2">●</span></td><td class="c num" style="font-size:14px">5</td></tr></tbody></table></div>
+  <details class="more"><summary>판정 근거 보기</summary><div class="scroll"><table><thead><tr><th>단계</th><th>Huntingford 2019</th><th>Cheong 2022</th><th>Berrang-Ford 2021</th><th>Kaack 2022</th><th>Jagnani &amp; Pande 2024</th></tr></thead><tbody><tr><td style="white-space:nowrap">① 기후·위험 이해</td><td>논문의 대부분(차원 축소, 원격상관, 기후모델 불확실성)</td><td>물리+ML 결합을 결론에서 제안</td><td>없음(위험은 대응 동기로만 집계)</td><td>기후 모델링 등 시뮬레이션 가속을 활용 예로 언급</td><td>없음</td></tr><tr><td style="white-space:nowrap">② 영향·취약성 평가</td><td>표 2 &quot;기후 영향&quot; 7행, 2018 영국 가뭄</td><td>멀티모달 다면 영향</td><td>대응을 촉발한 위험·부문 집계</td><td>없음</td><td>비하르 홍수 피해 형성 조사(수확 감소 65% 등)</td></tr><tr><td style="white-space:nowrap">③ 조기경보·대응</td><td>가뭄 조기경보 절, 예보 후처리(75%)</td><td>전이학습 홍수 경보 언급</td><td>SIDS의 조기경보 구축을 사례로 언급</td><td>없음</td><td>경보 수신·적시성·신뢰 측정(핵심)</td></tr><tr><td style="white-space:nowrap">④ 적응 옵션 선택·맞춤</td><td>없음</td><td>이주 인센티브 맞춤, 다목적 상충 조정</td><td>대응 유형·주체(가구 82%) 집계</td><td>없음</td><td>가구의 사전 대응 행동 지수</td></tr><tr><td style="white-space:nowrap">⑤ 모니터링·평가</td><td>없음</td><td>생물 모니터링, 정책문서 NLP</td><td>위험 감소 근거 평가: 공식 평가 3.4%, 1차 근거 1.8%</td><td>없음(배출 영향 평가 틀은 별도 축)</td><td>무작위 실험으로 건강·의료비·경제 효과 측정</td></tr></tbody></table></div></details>
+</section>
+
+<section>
+  <h2>효과의 근거 사다리</h2>
+  <p class="read">모델이 정확하다는 것과 사람들이 덜 다쳤다는 것 사이에는 여러 계단이 있습니다.</p>
+  <div class="ladder"><div class="step"><div class="lv">1</div><div><b>모델이 정확하다</b><p>Huntingford 표 2의 27개 연구, Cheong의 카메라트랩·전이학습 사례 등 대부분이 이 단계.</p></div><div class="who"><i class="dot d-hunt" title="Huntingford 2019"></i><i class="dot d-cheong" title="Cheong 2022"></i></div></div><div class="step"><div class="lv">2</div><div><b>현업이 실제로 쓴다</b><p>NOAA 시험대에서 예보관이 AI(GBRT) 예보를 택한 비율 75%(Huntingford가 인용한 McGovern 2017). 외부: ECMWF AI 예보 2025년 정식 운영.</p></div><div class="who"><i class="dot d-hunt" title="Huntingford 2019"></i><i class="dot d-ext" title="외부 자료"></i></div></div><div class="step"><div class="lv">3</div><div><b>경보가 더 많은 사람에게 더 일찍 닿는다</b><p>Jagnani &amp; Pande: 공동체 전달을 더한 마을은 경보 수신 확률 +74%, 침수 전 수신 +88%(2023). 외부: AI 홍수 예보가 80여 개국 미계측 유역까지 5일 전 예보(Nearing 2024).</p></div><div class="who"><i class="dot d-jp" title="Jagnani &amp; Pande 2024"></i><i class="dot d-ext" title="외부 자료"></i></div></div><div class="step"><div class="lv">4</div><div><b>피해가 줄어든다</b><p>Jagnani &amp; Pande: 심한 침수 지역에서 질병 증상 −16.6%, 치료비 약 6,500루피(−33%) 감소, 의료비만으로 편익 1달러당 최소 30달러. 경제적 회복 효과는 확인되지 않음.</p></div><div class="who"><i class="dot d-jp" title="Jagnani &amp; Pande 2024"></i><i class="dot d-ext" title="외부 자료"></i></div></div><div class="step gap"><div class="lv">5</div><div><b>그 감소가 AI 덕분임이 입증된다</b><p>빈칸. Jagnani &amp; Pande는 두 집단 모두 Google AI 경보를 받는 상태에서 &quot;공동체 전달&quot;의 효과를 측정했다. Berrang-Ford: 적응 문헌 1,682편 중 위험 감소를 공식 평가한 것은 58편(3.4%), 1차 근거를 제시한 것은 30편(1.8%).</p></div><div class="who"><i class="dot d-bf" title="Berrang-Ford 2021"></i></div></div></div>
+  <div class="aside"><b>읽을거리.</b> 비하르 실험의 2019년 시범에서는 AI 경보가 있어도 침수 가구의 절반 이상이 경보를 받지 못했고 효과도 없었습니다. 자원봉사자가 경보를 다시 전달하자 효과가 나타났습니다. AI의 가치는 예측 자체보다 예측이 행동으로 이어지는 경로에서 결정됩니다.</div>
+</section>
+
+<section>
+  <h2>AI의 배출, 모순인가</h2>
+  <p class="read"><span class="c-kaack" style="font-weight:600">Kaack et al.</span>은 AI가 온실가스에 미치는 영향을 세 층으로 나눕니다. 적응용 AI를 평가할 때도 이 틀을 그대로 쓸 수 있습니다.</p>
+  <div class="abc">
+    <div><div class="k">A · 계산</div><b>학습·추론에 드는 전력과 장비</b><p>ICT 부문 전체가 세계 온실가스의 약 1.4%(2020), 클라우드·하이퍼스케일 데이터센터는 0.1~0.2%, 그중 ML 작업은 1/4 미만으로 추정. 모델 규모에 따라 차이가 크다(ResNet-152는 ResNet-50보다 계산 2.5배 이상, 오류율은 1.6%p 개선).</p></div>
+    <div><div class="k">B · 활용</div><b>AI를 어디에 쓰느냐</b><p>재생에너지 예측·건물 효율처럼 배출을 줄이는 데도, 석유·가스 탐사 가속처럼 늘리는 데도 쓰인다. 같은 알고리즘이 목적 함수에 따라 반대 효과를 낸다.</p></div>
+    <div><div class="k">C · 시스템</div><b>사회 전체의 반응</b><p>효율이 오르면 사용이 늘어나는 반동 효과, 특정 기술의 고착(lock-in). 측정은 가장 어렵지만 영향은 가장 클 수 있다.</p></div>
   </div>
-  <details class="more"><summary>용어 빈도 히트맵 보기 (1,000단어당)</summary>
-    <p class="sub">칸 색이 진할수록 그 행에서 상대적으로 많이 쓴 논문입니다(행마다 따로 정규화). 괄호는 원래 횟수. Jain의 mitigat* 상당수는 "영향을 줄이다"라는 뜻이라 온실가스 감축과 구분해야 합니다.</p>
-    <div class="scroll"><table class="heat" id="heat"></table></div>
-  </details>
-  <details class="more"><summary>AI 사례 64건 전체 목록 보기</summary>
-    <div class="filters" role="group" aria-label="논문 필터">
-      <button type="button" id="f-all" data-f="all" aria-pressed="true">전체 64</button>
-      <button type="button" id="f-hunt" data-f="hunt" aria-pressed="false">Huntingford</button>
-      <button type="button" id="f-cheong" data-f="cheong" aria-pressed="false">Cheong</button>
-      <button type="button" id="f-jain" data-f="jain" aria-pressed="false">Jain</button>
-    </div>
-    <div class="scroll"><table id="mtab"></table></div>
-  </details>
-</section>
-
-<section>
-  <h2>Q2. 효과는 무엇인가</h2>
-  <p class="read">"효과"는 층위가 다릅니다. 모델이 정확하다는 것과 사람들이 덜 다쳤다는 것 사이에는 여러 단계가 있습니다. 세 논문과 외부 자료의 근거를 다섯 계단에 배치했습니다.</p>
-  <div class="ladder">
-    <div class="step"><div class="lv">1</div><div><b>모델이 정확하다</b><span class="why">세 논문 근거의 대부분이 여기. Jain 표 5: CNN 위성 산불 탐지 정확도 97%(Oh 2020), RNN 산불 확산 예측이 회귀 대비 최대 12% 개선(Mohan 2021). Huntingford 표 2의 27개 연구도 대부분 이 단계.</span></div><div class="who"><i class="dot d-hunt"></i><i class="dot d-cheong"></i><i class="dot d-jain"></i></div></div>
-    <div class="step"><div class="lv">2</div><div><b>현업이 실제로 쓴다</b><span class="why">Huntingford: 미국 NOAA 시험대에서 예보관이 AI(GBRT) 예보를 사람 직관보다 택한 비율 75%(McGovern 2017). <span class="ext">외부 자료</span> ECMWF가 2025년 2월 AI 예보(AIFS)를 정식 운영으로 전환, 태풍 진로 등에서 물리 모델보다 최대 20% 개선.</span></div><div class="who"><i class="dot d-hunt"></i><i class="dot ext-dot"></i></div></div>
-    <div class="step"><div class="lv">3</div><div><b>경보 시간과 범위가 넓어진다</b><span class="why">Cheong: 데이터가 풍부한 유역에서 학습한 홍수 모델을 다른 곳으로 옮기는 전이학습(Google, Nevo 2020). <span class="ext">외부 자료</span> Nearing et al. (Nature 2024): 계측소 없는 유역에서 5일 앞 예보의 신뢰도가 기존 전지구 체계(GloFAS)의 당일 예보와 같거나 나음. 80여 개국에서 무료로 실시간 운영.</span></div><div class="who"><i class="dot d-cheong"></i><i class="dot ext-dot"></i></div></div>
-    <div class="step"><div class="lv">4</div><div><b>피해가 줄어든다</b><span class="why"><span class="ext">외부 자료</span> 적응위원회(GCA 2019): 폭풍·폭염 24시간 전 경보만으로 피해를 30% 줄일 수 있고, 개도국 조기경보 8억 달러 투자로 연 30억~160억 달러 손실 회피. 단, 이는 조기경보 일반의 효과이지 AI의 몫이 아님. 세 논문에는 이 단계의 근거가 없음.</span></div><div class="who"><i class="dot ext-dot"></i></div></div>
-    <div class="step gap"><div class="lv">5</div><div><b>그 감소가 AI 덕분임이 입증된다</b><span class="why">세 논문과 이번에 확인한 외부 자료 모두에서 찾지 못함. AI 도입 전후, 또는 AI 경보를 받은 지역과 받지 못한 지역의 피해를 비교한 인과 연구가 필요한 빈칸.</span></div><div class="who"><span class="pill m-불일치">빈칸</span></div></div>
-  </div>
-  <div class="note">효과를 말할 때 조심할 점: Huntingford 11쪽의 가뭄 비용 "$1.5 billion(1998~2017), 기상재해 비용의 33%"는 출처가 없고 규모가 작아 보여, 금액인지 피해 인구인지 원출처로 확인해야 합니다. Jain의 사례 인용 15건 중 9건은 주장과 무관한 문헌을 가리킵니다(부록 B). 효과의 근거로는 원출처를 직접 인용하세요.</div>
-</section>
-
-<section>
-  <h2>Q3. 앞으로의 역할은 기대되는가</h2>
-  <div class="scroll"><table>
-    <thead><tr><th>논문이 기대한 역할</th><th>그 뒤 실제로 일어난 일 <span class="ext">외부 자료</span></th><th>남은 조건</th></tr></thead>
-    <tbody>
-      <tr><td><i class="dot d-hunt"></i>비싼 기후·기상 모델의 일부를 신경망으로 에뮬레이션해 더 길고 많은 시뮬레이션을 가능하게 (Huntingford 그림 1)</td><td>ECMWF AIFS 정식 운영(2025): 예보 1회당 에너지 약 1,000분의 1, 속도는 10배 이상. 다만 격자 간격은 28km로 물리 모델(9km)보다 거침.</td><td>물리 모델은 계속 필요. AI 모델은 과거 자료로 학습해 전례 없는 극한에서 검증이 더 필요</td></tr>
-      <tr><td><i class="dot d-cheong"></i>데이터 부족 지역에 전이학습으로 경보 확대 (Cheong 2장)</td><td>AI 홍수 예보가 계측소 없는 유역까지 80여 개국에서 무료 운영(Nearing 2024)</td><td>경보가 마지막 사람까지 닿는 전달·대응 체계. 조기경보 효과는 받는 쪽 대응 역량에 달림(Jain 3.2절도 지적)</td></tr>
-      <tr><td><i class="dot d-cheong"></i>집단별 맞춤 적응, 부문 간 상충 조정 (Cheong 3.2·3.3절)</td><td>이번 조사에서 대규모 운영 사례는 확인하지 못함</td><td>집단·지역별로 조화된 데이터, 형평성 지표, 정책 실험</td></tr>
-      <tr><td><i class="dot d-jain"></i>실시간 모니터링, 형평 강화, 정확도 향상, 공동 설계, 다양한 데이터 통합 (Jain 그림 3)</td><td>방향 제시 수준. 기업 기후리스크 서비스는 확산 중이나 방법 공개는 제한적</td><td>검증 기준, 방법 공개, 윤리 감사</td></tr>
-    </tbody>
-  </table></div>
-  <p class="read">정리하면, 예측과 경보(①·③ 단계)에서는 기대가 현실이 되고 있고, 결정과 평가(④·⑤ 단계)에서는 아직 기대에 머뭅니다. 세 논문 모두 "AI는 만능이 아니다"라는 단서를 답니다. Huntingford는 알고리즘의 가정을 이해하고 신중히 적용할 것을, Cheong은 해석 가능성과 편향 제거를, Jain은 전문가 감독과 공동체 참여를 조건으로 둡니다.</p>
-</section>
-
-<section>
-  <h2>Q4. 기후위기를 키우는 AI로 기후위기에 대응하는 것은 모순인가</h2>
-  <h3>먼저 규모를 확인하면</h3>
-  <p class="read"><span class="ext">외부 자료</span> 국제에너지기구(IEA, <i>Energy and AI</i>, 2025)에 따르면 데이터센터는 2024년 세계 전력의 약 1.5%(415 TWh)를 쓰고, 전력 사용에 따른 간접 배출은 약 1.8억 톤으로 세계 연소 CO₂의 약 0.5%입니다. 발전·산업·수송에 비하면 작아서 "가장 큰 주범"이라고 하기는 어렵습니다. 그러나 전력 수요가 2030년까지 두 배 이상(945 TWh)으로 늘고, 도로 수송·항공과 함께 2030년까지 배출이 늘어나는 몇 안 되는 부문입니다. 기업 단위에서는 더 뚜렷해서, Google의 2025년 배출은 2019년보다 81% 많고 회사 스스로 "AI 인프라 확장이 전력망 탈탄소화보다 빠르다"고 밝혔습니다.</p>
-  <div class="emis" aria-label="데이터센터 배출과 AI 활용 감축 잠재력 비교(백만 톤 CO2)">
+  <div class="emis" aria-label="데이터센터 배출과 AI 활용 감축 잠재력(백만 톤 CO2)">
     <div class="erow"><span>데이터센터 배출 2024</span><div class="etrack"><div class="ebar e-up" style="width:12.9%"></div></div><b class="num">180</b></div>
     <div class="erow"><span>데이터센터 배출 2035 (기준)</span><div class="etrack"><div class="ebar e-up" style="width:21.4%"></div></div><b class="num">300</b></div>
     <div class="erow"><span>데이터센터 배출 2035 (급성장)</span><div class="etrack"><div class="ebar e-up" style="width:35.7%"></div></div><b class="num">500</b></div>
     <div class="erow"><span>AI 활용 감축 잠재력 2035</span><div class="etrack"><div class="ebar e-down" style="width:100%"></div></div><b class="num">1,400</b></div>
-    <p class="sub" style="margin:6px 0 0">단위: 백만 톤 CO₂. 출처 IEA <i>Energy and AI</i>(2025). 감축 잠재력은 기존 AI 활용(에너지·산업·수송·건물)이 널리 도입될 경우의 값이며, IEA는 "이를 보장할 추진력이 현재 없다"고 경고합니다. 적응용 AI의 효과(인명·손실 회피)는 이 저울에 들어 있지 않습니다.</p>
+    <p class="sub" style="margin:4px 0 0">외부 자료: IEA <i>Energy and AI</i>(2025), 백만 톤 CO₂. 감축 잠재력은 광범위 도입 시 값이며 IEA는 "보장할 추진력이 없다"고 경고. Kaack의 수치(2020~2021)는 생성형 AI 확산 이전이라, 이후 증가 속도는 IEA 자료로 보완했습니다.</p>
   </div>
-
-  <h3>모순이 아닌 부분</h3>
-  <ol class="plain read">
-    <li><b>적응용 AI는 대체로 작다.</b> 세 논문 사례 64건의 기법은 랜덤포레스트, GBRT, CNN, 가우시안 프로세스 같은 특화 모델이 주류이고, 범용 생성형 모델은 한 건도 없습니다. <span class="ext">외부 자료</span> Luccioni et al.(FAccT 2024)은 같은 작업이라도 범용 생성형 모델이 특화 모델보다 에너지를 "몇 자릿수" 더 쓴다고 측정했습니다.</li>
-    <li><b>AI가 오히려 계산 에너지를 줄이기도 한다.</b> ECMWF의 AI 예보는 한 번 돌리는 데 물리 모델의 약 1,000분의 1의 에너지를 씁니다(학습 비용은 별도). Huntingford가 2019년에 제안한 "비싼 모델 구성요소의 에뮬레이션"이 바로 이 방향입니다.</li>
-    <li><b>적응은 이미 배출된 온실가스의 결과를 다룬다.</b> 감축을 아무리 잘해도 이미 진행 중인 온난화의 피해는 남기 때문에, 적응을 위한 도구 사용 자체를 모순으로 보기는 어렵습니다. Huntingford도 산업화 이전 대비 1.5°C 온난화가 현재 농도만으로 이미 가까워졌을 수 있다고 적습니다.</li>
-  </ol>
-
-  <h3>모순이 되는 조건</h3>
-  <ol class="plain read">
-    <li><b>수단과 목적의 규모가 어긋날 때.</b> 작은 특화 모델로 충분한 경보·분류 작업에 범용 대형 모델을 쓰면 적응 편익보다 배출 비용이 커질 수 있습니다.</li>
-    <li><b>AI의 전력이 화석연료일 때.</b> 배출은 계산량 × 전력의 탄소 집약도입니다. 같은 모델도 어느 전력망에서 언제 돌리느냐에 따라 배출이 크게 달라집니다.</li>
-    <li><b>효과를 재지 않을 때.</b> Q2에서 보았듯 피해 감소가 측정되지 않으면 "기후 대응"이라는 명분만 남고 배출은 확실하게 남습니다. 세 논문 모두 적응 성과 측정(monitoring and evaluation)이라는 표현을 쓰지 않습니다.</li>
-    <li><b>적응이 감축을 대신할 때.</b> "AI로 적응하면 된다"는 기대가 감축 노력을 늦추면 위험이 커집니다. IEA가 경고한 반동 효과(효율이 오르면 사용이 늘어나는 현상)도 같은 구조입니다.</li>
-    <li><b>부담과 편익이 다른 사람에게 갈 때.</b> 데이터센터는 미국·중국·유럽에 약 85%가 몰려 있고(IEA), 적응 편익이 가장 필요한 곳은 데이터가 부족한 지역입니다. Cheong과 Jain이 강조한 형평 문제가 여기서 다시 나옵니다.</li>
-  </ol>
-
-  <h3>세 논문은 이 문제를 어떻게 다루나</h3>
-  <div class="scroll"><table>
-    <thead><tr><th>논문</th><th>AI 자체의 에너지·탄소 언급</th><th>근거</th></tr></thead>
-    <tbody>
-      <tr><td><i class="dot d-hunt"></i>Huntingford 2019</td><td>계산 비용(GPU, 계산 부담)만 언급. 배출 언급 없음</td><td>"carbon footprint" 0회. 에너지 언급 4회는 사회의 에너지 수요와 "AI가 비화석 에너지 개발을 도울 수 있다"는 맥락</td></tr>
-      <tr><td><i class="dot d-cheong"></i>Cheong 2022</td><td>없음</td><td>"energy" 0회</td></tr>
-      <tr><td><i class="dot d-jain"></i>Jain 2023</td><td>AI로 건물·교통 에너지 효율을 높인다는 감축 효과만 언급. AI의 배출은 윤리 절에도 없음</td><td>윤리 5항목(데이터 편향, 투명성, 대표성, 부작용, 개인정보)에 환경 비용 없음</td></tr>
-    </tbody>
-  </table></div>
-  <p class="read">세 논문 모두 AI를 "기후 문제를 푸는 도구"로만 보고 "기후 문제를 만드는 요인"으로는 보지 않습니다. 이 빈칸이 과제에서 새로 기여할 수 있는 지점입니다.</p>
+  <h3>모순이 아닌 부분 / 모순이 되는 조건</h3>
+  <ul class="read">
+    <li>분석한 사례 49건에 범용 생성형 모델은 없습니다. 적응용 AI는 트리 앙상블·CNN·가우시안 프로세스 같은 작은 특화 모델이 주류입니다(A층 부담이 작음).</li>
+    <li>AI가 계산 에너지를 줄이기도 합니다. ECMWF AI 예보는 예보 1회 에너지가 물리 모델의 약 1,000분의 1입니다(사례 2).</li>
+    <li>모순이 되는 것은 작업에 비해 과한 모델을 쓸 때, 화석 전력을 쓸 때, 효과를 측정하지 않을 때, 그리고 "적응하면 된다"는 기대가 감축을 늦출 때(C층)입니다.</li>
+  </ul>
 </section>
 
 <section class="read" id="discussion">
   <h2>디스커션</h2>
   <h3>1) 효과 측정 없는 AI 적응은 모순이 될 수 있다</h3>
   <p>AI와 ML은 데이터센터 전력 수요를 빠르게 늘리며 기후위기에 부담을 더하는 새로운 배출원이 되고 있다. 국제에너지기구(IEA)에 따르면 AI 중심 데이터센터 한 곳은 가구 10만 곳만큼의 전력을 쓰고, 현재 건설 중인 초대형 데이터센터는 그 20배를 쓴다. 전 세계 데이터센터 전력 소비는 2024년 415 TWh(세계 전력의 약 1.5%)에서 2030년 약 945 TWh로 두 배 이상 늘 전망이며, 이는 현재 일본 전체의 전력 소비보다 조금 많은 규모다(IEA, 2025). 데이터센터의 배출은 아직 세계 연소 CO₂의 약 0.5%로 발전·산업·수송보다 작지만, 2030년까지 배출이 늘어나는 몇 안 되는 부문이다. 기업 단위에서는 더 뚜렷해서, Google의 2025년 배출은 2019년보다 81% 많았고 회사 스스로 AI 인프라 확장이 전력망 탈탄소화보다 빠르다고 밝혔다.</p>
-  <p>이런 AI로 기후위기에 적응하겠다는 발상은 불난 집의 불을 끄려고 기름을 붓는 격이라는 비판을 받을 수 있다. 물론 반론도 있다. 이번에 분석한 세 논문의 AI 사례 64건은 랜덤포레스트, CNN 같은 작은 특화 모델이 대부분이었고 범용 생성형 모델은 없었다. 유럽중기예보센터(ECMWF)의 AI 예보는 기존 물리 모델보다 예보 한 번에 쓰는 에너지가 약 1,000분의 1이다. 적응용 AI 자체는 배출 증가의 주된 원인이 아닐 수 있다.</p>
-  <p>그럼에도 핵심 질문은 남는다. AI를 활용한 적응 노력의 성과를 측정할 수 있는가, 그리고 그 성과가 AI 확장에 따른 배출 비용보다 큰가? 세 논문이 제시한 효과 근거는 대부분 모델 정확도(예: 산불 탐지 97%)에 머물렀고, AI 덕분에 실제 피해가 줄었다는 인과적 근거는 찾기 어려웠다. 따라서 모델 정확도가 아니라 경보 도달률, 확보한 대피 시간, 회피한 인명·재산 손실로 성과를 측정하고, 이를 AI의 학습·추론 배출과 함께 보고해야 한다. 적응 편익과 배출은 단위가 달라 단순 비교가 어렵기 때문에, 오히려 두 값을 모두 공개하고 투명하게 따져 보는 체계가 필요하다.</p>
+  <p>이런 AI로 기후위기에 적응하겠다는 발상은 불난 집의 불을 끄려고 기름을 붓는 격이라는 비판을 받을 수 있다. 물론 반론도 있다. 이번에 분석한 논문의 AI 사례 49건은 트리 앙상블, CNN 같은 작은 특화 모델이 대부분이었고 범용 생성형 모델은 없었다. 유럽중기예보센터(ECMWF)의 AI 예보는 기존 물리 모델보다 예보 한 번에 쓰는 에너지가 약 1,000분의 1이다. 적응용 AI 자체는 배출 증가의 주된 원인이 아닐 수 있다.</p>
+  <p>그럼에도 핵심 질문은 남는다. AI를 활용한 적응 노력의 성과를 측정할 수 있는가, 그리고 그 성과가 AI 확장에 따른 배출 비용보다 큰가? 분석한 논문들의 효과 근거는 대부분 모델 정확도 수준이었다. 피해 감소를 무작위 실험으로 측정한 연구는 Jagnani &amp; Pande(2024) 하나였고, 그마저 건강·의료비 개선에 그쳤으며 경제적 피해 감소는 확인되지 않았다. 적응 연구 전체로 넓혀도 위험 감소를 공식 평가한 연구는 3.4%에 불과하다(Berrang-Ford et al., 2021). 따라서 모델 정확도가 아니라 경보 도달률, 확보한 대피 시간, 회피한 인명·재산 손실로 성과를 측정하고, 이를 AI의 학습·추론 배출과 함께 보고해야 한다. 적응 편익과 배출은 단위가 달라 단순 비교가 어렵기 때문에, 오히려 두 값을 모두 공개하고 투명하게 따져 보는 체계가 필요하다.</p>
   <h3>2) 적응 가능하다는 믿음이 감축을 늦출 수 있다</h3>
-  <p>AI로 기후위기에 대응하고 적응할 수 있다는 인식은 오히려 기후위기를 완화하려는 노력을 약하게 만들 수 있다. 위험을 관리할 수 있다고 믿으면 감축의 긴박감이 줄어드는 일종의 도덕적 해이이며, 효율이 높아질수록 사용이 늘어 절감 효과가 상쇄되는 반동 효과도 같은 구조다. IEA 역시 AI 활용으로 2035년 약 14억 톤의 배출을 줄일 수 있다고 추정하면서도, 이를 보장할 추진력은 현재 없다고 경고했다. 적응은 감축을 대신할 수 없으며 감축과 함께 가야 한다.</p>
+  <p>AI로 기후위기에 대응하고 적응할 수 있다는 인식은 오히려 기후위기를 완화하려는 노력을 약하게 만들 수 있다. 위험을 관리할 수 있다고 믿으면 감축의 긴박감이 줄어드는 일종의 도덕적 해이이며, Kaack et al.(2022)이 말한 시스템 차원의 영향, 곧 효율이 높아질수록 사용이 늘어 절감 효과가 상쇄되는 반동 효과와 특정 기술의 고착도 같은 구조다. IEA 역시 AI 활용으로 2035년 약 14억 톤의 배출을 줄일 수 있다고 추정하면서도, 이를 보장할 추진력은 현재 없다고 경고했다. 적응은 감축을 대신할 수 없으며 감축과 함께 가야 한다.</p>
   <p>따라서 기업은 기후위기 적응과 대응을 위해 AI를 도입할 때 다음 원칙을 지켜야 한다.</p>
   <ul>
     <li>모델 학습과 추론에서 나오는 온실가스를 Scope 2·3 배출에 포함해 관리하고 공시한다.</li>
@@ -273,142 +217,34 @@ ul.src{font-size:13.5px} ul.src a{color:var(--accent)}
 <section class="read">
   <h2>시사점</h2>
   <ol class="plain">
-    <li><b>AI의 적응 효과는 "예측"에서는 입증 단계, "결정·평가"에서는 기대 단계.</b> 연구와 투자가 ④·⑤ 단계로 옮겨 가야 적응 성과로 이어집니다.</li>
-    <li><b>효과 측정이 가장 큰 빈칸.</b> 모델 정확도가 아니라 경보 도달률, 대피 시간, 회피 손실로 평가하는 틀이 필요합니다. 이것이 있어야 AI의 배출 비용과 편익을 비교할 수 있습니다.</li>
-    <li><b>모순 여부는 "적합한 규모"가 가른다.</b> 적응용 AI는 작은 특화 모델, 재생에너지 전력, 필요한 만큼의 계산이라는 원칙을 지킬 때 순편익이 분명합니다. 범용 생성형 AI의 무분별한 확장과 적응용 AI를 한 덩어리로 묶어 판단하면 논점이 흐려집니다.</li>
-    <li><b>탄소중립 경영 관점.</b> 기업은 AI 도입 시 학습·추론 배출을 Scope 2·3에 포함해 관리하고, 기후 적응용 AI를 조달할 때 정확도뿐 아니라 에너지 사용량, 검증 방법, 효과 지표를 요구해야 합니다. Google 사례처럼 넷제로 목표와 AI 확장이 충돌하는 현실은 이미 공시에서 드러나고 있습니다.</li>
-    <li><b>형평.</b> 계산 자원과 배출은 부유한 지역에, 적응 수요는 데이터가 부족한 지역에 있습니다. 전이학습·오픈 데이터·무료 경보(예: 80여 개국 무료 홍수 예보)는 이 간극을 줄이는 방향입니다.</li>
+    <li><b>예측은 입증, 결정·평가는 기대 단계.</b> 연구와 투자가 적응 옵션 선택과 효과 평가로 옮겨 가야 적응 성과로 이어집니다.</li>
+    <li><b>전달이 효과를 만든다.</b> AI 예보의 정확도를 높이는 것만큼, 경보가 취약 계층에 닿게 하는 공동체 체계에 투자해야 합니다(사례 1).</li>
+    <li><b>효과 측정이 가장 큰 빈칸.</b> 사업 시작부터 대조군과 성과 지표를 설계하라는 Berrang-Ford의 1순위 권고는 AI 적응 사업에도 그대로 적용됩니다.</li>
+    <li><b>모순 여부는 "적합한 규모"가 가른다.</b> Kaack의 A·B·C 세 층을 모두 보고하는 체계가 있어야 적응용 AI의 순편익을 판단할 수 있습니다.</li>
   </ol>
-  <div class="aside"><b>과제 결론 문장 예시.</b> "AI·ML은 기후 위험의 예측과 조기경보에서 적응에 실질적으로 기여하기 시작했으나, 그 효과는 아직 모델 성능 수준에서 주로 입증되었고 피해 감소에 대한 인과적 근거는 부족하다. AI 확장이 배출을 늘린다는 우려는 정당하지만, 적응용 AI의 대부분은 에너지 부담이 작은 특화 모델이다. 따라서 모순은 기술 자체보다 모델 규모, 전력원, 효과 측정의 문제이며, 이를 관리하는 거버넌스가 AI 기반 적응의 정당성을 결정한다."</div>
 </section>
 
 <section>
-  <h2>부록 A. 자료 개요</h2>
-  <div class="cards" id="paperCards"></div>
-  <p class="sub">본문 단어 수는 참고문헌·표지·라이선스 문구 제외. Cheong 2022는 Huntingford 2019를 인용하고, Jain 2023은 두 논문을 인용하지 않습니다.</p>
-  <div class="hist" id="refHist"></div>
-</section>
-
-<section>
-  <h2>부록 B. 근거의 질</h2>
-  <h3>논문에 나온 정량 주장</h3>
-  <div class="scroll"><table id="claims"></table></div>
-  <h3>Jain 2023: 사례와 인용 문헌의 대응</h3>
-  <p class="read">Jain 본문의 사례와 그 문장에 붙은 인용을 <b>Jain 자체의 참고문헌 목록 제목</b>으로 대조했습니다.</p>
-  <div class="scroll"><table id="cite"></table></div>
-  <ul class="read" id="structNotes"></ul>
-</section>
-
-<section class="read">
-  <h2>부록 C. 방법·한계·출처</h2>
-  <ul>
-    <li><b>원자료</b>: PDF 3편을 쪽 배치를 유지해 추출(pdftotext -layout), 합자 정규화. 표는 원문 구조대로 옮기고 그림은 쪽 이미지로 확인.</li>
-    <li><b>용어 빈도</b>는 정규식 검색이라 뜻을 구분하지 못합니다. <b>적응 단계 판정</b>은 읽은 사람의 판단이며 근거 문장을 함께 적었습니다. <b>사례 64건</b>은 기법 이름이 나온 곳만 셌고, Jain 표 2·3은 중복이라 한 번만 셌습니다.</li>
-    <li><b>외부 자료</b>는 세 논문의 빈칸(효과, 에너지)을 보완하려고 2026-09-30에 확인한 공개 자료입니다. 수치는 각 출처의 기준 연도·시나리오에 따릅니다.</li>
-  </ul>
-  <h3>외부 출처</h3>
-  <ul class="src">
-    <li>IEA (2025) <a href="https://www.iea.org/reports/energy-and-ai/executive-summary">Energy and AI – Executive summary</a>, <a href="https://www.iea.org/reports/energy-and-ai/ai-and-climate-change">AI and climate change</a></li>
-    <li>Carbon Brief (2025-09-15) <a href="https://www.carbonbrief.org/ai-five-charts-that-put-data-centre-energy-use-and-emissions-into-context">AI: Five charts that put data-centre energy use and emissions into context</a></li>
-    <li>ESG Dive (2026-07-02) <a href="https://www.esgdive.com/news/googles-emissions-continue-to-climb-due-to-ai-buildout/824373/">Google’s emissions continue to climb due to AI buildout</a></li>
-    <li>ECMWF (2025-02-25) <a href="https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational">ECMWF’s AI forecasts become operational</a></li>
-    <li>Nearing et al. (2024) <a href="https://www.nature.com/articles/s41586-024-07145-1">Global prediction of extreme floods in ungauged watersheds</a>, <i>Nature</i> 627</li>
-    <li>Global Commission on Adaptation (2019) <a href="https://gca.org/wp-content/uploads/2019/09/GlobalCommission_Report_FINAL.pdf">Adapt Now</a></li>
-    <li>Luccioni, Jernite &amp; Strubell (2024) <a href="https://arxiv.org/abs/2311.16863">Power Hungry Processing: Watts Driving the Cost of AI Deployment?</a></li>
-  </ul>
+  <h2>부록</h2>
+  <details class="more"><summary>용어 빈도 (본문 1,000단어당)</summary>
+    <p class="sub">행마다 따로 정규화한 색입니다. Huntingford의 "배출·에너지"는 기후 과학 맥락(온실가스 배출 시나리오 등)이고, Kaack는 AI의 배출을 다룹니다.</p>
+    <div class="scroll"><table><thead><tr><th>분류</th><th>용어</th><th class="c"><span class="c-hunt">Huntingford 2019</span></th><th class="c"><span class="c-cheong">Cheong 2022</span></th><th class="c"><span class="c-bf">Berrang-Ford 2021</span></th><th class="c"><span class="c-kaack">Kaack 2022</span></th><th class="c"><span class="c-jp">Jagnani &amp; Pande 2024</span></th></tr></thead><tbody><tr><td class="sub">주제</td><td>적응(adapt*)</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 2%, transparent)">1.2</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 29%, transparent)">16.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 55%, transparent)">30.2</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 1%, transparent)">0.6</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 11%, transparent)">6.3</td></tr><tr><td class="sub">주제</td><td>완화(mitigat*)</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 19%, transparent)">0.7</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 28%, transparent)">1.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 55%, transparent)">2.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 32%, transparent)">1.1</td></tr><tr><td class="sub">주제</td><td>예측·전망</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 55%, transparent)">6.1</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 21%, transparent)">2.4</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 2%, transparent)">0.2</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 16%, transparent)">1.8</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 46%, transparent)">5.1</td></tr><tr><td class="sub">주제</td><td>조기경보(warning·alert)</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 2%, transparent)">0.7</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 1%, transparent)">0.3</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 0%, transparent)">0.2</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 55%, transparent)">23.1</td></tr><tr><td class="sub">주제</td><td>효과·평가</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 14%, transparent)">3.2</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 31%, transparent)">7.2</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 31%, transparent)">7.3</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 45%, transparent)">10.4</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 55%, transparent)">12.8</td></tr><tr><td class="sub">주제</td><td>배출·에너지</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 6%, transparent)">2.7</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 55%, transparent)">25.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 0%, transparent)">0.0</td></tr><tr><td class="sub">주제</td><td>불확실성</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 55%, transparent)">1.5</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 13%, transparent)">0.3</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 34%, transparent)">0.9</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 0%, transparent)">0.0</td></tr><tr><td class="sub">주제</td><td>형평·편향</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 11%, transparent)">0.5</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 55%, transparent)">2.4</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 5%, transparent)">0.2</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 7%, transparent)">0.3</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 7%, transparent)">0.3</td></tr><tr><td class="sub">주제</td><td>신뢰(trust)</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 55%, transparent)">4.3</td></tr><tr><td class="sub">위험</td><td>홍수</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 0%, transparent)">0.1</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 2%, transparent)">1.4</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 3%, transparent)">2.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 55%, transparent)">31.6</td></tr><tr><td class="sub">위험</td><td>가뭄</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 55%, transparent)">2.6</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 7%, transparent)">0.3</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 42%, transparent)">2.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 0%, transparent)">0.0</td></tr><tr><td class="sub">위험</td><td>폭염</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 55%, transparent)">2.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 27%, transparent)">1.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 0%, transparent)">0.0</td></tr><tr><td class="sub">데이터</td><td>위성·원격탐사</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 26%, transparent)">1.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 55%, transparent)">2.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 16%, transparent)">0.6</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 0%, transparent)">0.0</td></tr><tr><td class="sub">데이터</td><td>기후모델</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 55%, transparent)">8.6</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 1%, transparent)">0.1</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 0%, transparent)">0.0</td></tr><tr><td class="sub">데이터</td><td>설문·실험</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--hunt) 1%, transparent)">0.1</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--cheong) 21%, transparent)">2.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--bf) 0%, transparent)">0.0</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--kaack) 6%, transparent)">0.6</td><td class="c num" style="font-size:12.5px;background:color-mix(in srgb, var(--jp) 55%, transparent)">5.4</td></tr></tbody></table></div></details>
+  <details class="more"><summary>AI·ML 사례 49건 전체 목록</summary>
+    <div class="scroll"><table style="min-width:760px"><thead><tr><th>논문</th><th>위치</th><th>과제</th><th>기법</th><th>적응 단계</th></tr></thead><tbody><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (ESM 모델링)</td><td>대류 모수화 개선(ML 에뮬레이터)</td><td>ANN</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (ESM 모델링)</td><td>GCM 모수화 속도 개선</td><td>ANN</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (ESM 모델링)</td><td>기후모델 에뮬레이션(모수 범위 확장)</td><td>Ensemble Kalman inversion, MCMC</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (ESM 모델링)</td><td>위성 자료로 토지피복 분류</td><td>Random Forest</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (ESM 모델링)</td><td>유로-대서양 NWP 선호 위상공간 식별</td><td>Clustering</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (ESM 모델링)</td><td>에어로졸 모델 에뮬레이션</td><td>Gaussian process</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (원격상관)</td><td>MJO 구조·동역학 포착</td><td>Self-Organising Map</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (원격상관)</td><td>열대 육지-PDO 연결 식별</td><td>Clustering, EOF</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (원격상관)</td><td>SST 지수와 육상 기후 영향</td><td>SRNN, graph-based</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (일기예보)</td><td>예보 후처리로 예보관 지원</td><td>Random Forest, GBRT</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (미래 시나리오)</td><td>계절 예측 모델 기술(skill) 가중 결합</td><td>Bayesian linear regression</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (미래 시나리오)</td><td>기후모델 기술 가중(앙상블 평균보다 우수)</td><td>Generalized HMM</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 영향)</td><td>지상부 바이오매스 영향</td><td>SVM, ANN, GRNN</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 영향)</td><td>전지구 물순환(증발산) 영향</td><td>Model Tree Ensemble</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 영향)</td><td>인도 수문·하천유량 영향</td><td>PCA, fuzzy clustering, RVM</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 영향)</td><td>인도 증발산 예측</td><td>Fuzzy logic, LS-SVR, ANN, ANFIS</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 영향)</td><td>물 부족(가뭄) 영향</td><td>Model Tree Ensemble (RF)</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 영향)</td><td>위성으로 작물 수확량 추정</td><td>CNN, Gaussian process regression</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 영향)</td><td>반건조지 모래 퇴적 동인</td><td>ANN</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 자료)</td><td>장기 전지구 유출량 자료 생산</td><td>Random Forest</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 자료)</td><td>위성 기반 전지구 강수 추정(PERSIANN)</td><td>ANN</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 자료)</td><td>결측 최고·최저기온 보정</td><td>Gaussian process + MCMC</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 자료)</td><td>GCM 강수 상세화(downscaling)</td><td>Kernel regression</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 극한)</td><td>GCM 출력에서 극한기상 식별</td><td>CNN, 3D conv encoder-decoder</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 극한)</td><td>가뭄지수 예측</td><td>Extreme Learning Machine, CNN</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 극한)</td><td>위성으로 기상·농업 가뭄 판정</td><td>Random Forest, GBRT</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">표 2 (기후 극한)</td><td>에티오피아 기상가뭄 예보</td><td>ANN, SVR, wavelet</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 6쪽·그림 1</td><td>기능적 반응 결정(예: 생태계-기온 반응)</td><td>Gradient descent</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 6쪽·그림 1</td><td>희소 관측소 → 격자 자료</td><td>Gaussian process</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 7쪽</td><td>ESM 핵심 모수 점진 갱신</td><td>Kalman filter, Sequential Monte Carlo, Bayesian hierarchical</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 8쪽·그림 1</td><td>ESM 고비용 요소 에뮬레이션</td><td>Deep neural networks</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 8쪽</td><td>물리 제약 강우-유출(하이브리드)</td><td>LSTM + 유역 속성</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 5·10쪽</td><td>자료에서 미지의 방정식 도출</td><td>Neural ODE, physics-informed NN</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 10쪽</td><td>생태 모델 구조 탐색</td><td>Symbolic regression, Bayesian inversion</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 8쪽·그림 2</td><td>2018 영국 가뭄 원인 탐색(스토리라인)</td><td>ML 표적 탐색(방법 미지정)</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td class="sub">본문 10~11쪽</td><td>가뭄 조기경보·물 배분</td><td>GBRT 등(제안)</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">표 1</td><td>야생동물 조사·인프라 모니터링·예지정비</td><td>Supervised learning</td><td style="white-space:nowrap">⑤ 모니터링·평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">표 1</td><td>도시계획·홍수 조기경보·작물 모니터링(데이터 풍부 지역 → 부족 지역)</td><td>Transfer learning</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">표 1·3.2절</td><td>이주(relocation) 개인별 인센티브</td><td>Reinforcement learning, multi-armed bandits</td><td style="white-space:nowrap">④ 적응 옵션 선택·맞춤</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">표 1</td><td>작물 수확량 모니터링(라벨 일부만)</td><td>Semi-supervised learning</td><td style="white-space:nowrap">⑤ 모니터링·평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">표 1</td><td>폭염·가뭄·식량 공급 다면 영향, 회복력 있는 인프라 계획</td><td>Multimodal learning</td><td style="white-space:nowrap">② 영향·취약성 평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">표 1·3.3절</td><td>농업·물 관리, 열섬 대응(형평 보장)</td><td>Multiobjective techniques</td><td style="white-space:nowrap">④ 적응 옵션 선택·맞춤</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">3.1절</td><td>카메라트랩·항공·음향으로 종 개체수 파악</td><td>Image classification, object detection, counting</td><td style="white-space:nowrap">⑤ 모니터링·평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">3.1절</td><td>법·정책문서·협상 발언에서 적응 증거 지도</td><td>Topic modeling, geoparsing</td><td style="white-space:nowrap">⑤ 모니터링·평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">3.2절</td><td>이질적 처치효과 추정</td><td>Heterogeneous treatment effect ML</td><td style="white-space:nowrap">④ 적응 옵션 선택·맞춤</td></tr><tr><td style="white-space:nowrap"><i class="dot d-cheong"></i>Cheong 2022</td><td class="sub">4장</td><td>물리 법칙을 지키는 예측</td><td>Physics-based + ML</td><td style="white-space:nowrap">① 기후·위험 이해</td></tr><tr><td style="white-space:nowrap"><i class="dot d-bf"></i>Berrang-Ford 2021</td><td class="sub">Methods 26쪽</td><td>적응 문헌 48,816편 중 실제 적응 사례 문헌 선별(1,682편)</td><td>Supervised ML 분류기(반복 재학습)</td><td style="white-space:nowrap">⑤ 모니터링·평가</td></tr><tr><td style="white-space:nowrap"><i class="dot d-jp"></i>Jagnani &amp; Pande 2024</td><td class="sub">3쪽</td><td>강 유량 예측(수문 모델)</td><td>AI 모델(세부 구조 미기재)</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr><tr><td style="white-space:nowrap"><i class="dot d-jp"></i>Jagnani &amp; Pande 2024</td><td class="sub">3쪽</td><td>침수 지역·수위 추정(범람 모델) → 안드로이드 경보</td><td>AI 모델(세부 구조 미기재)</td><td style="white-space:nowrap">③ 조기경보·대응</td></tr></tbody></table></div></details>
+  <details class="more"><summary>논문에 나온 정량 수치</summary>
+    <div class="scroll"><table><thead><tr><th>논문</th><th>항목</th><th>값</th><th>근거</th></tr></thead><tbody><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td>AI(GBRT) 예보가 예보관 선택에서 채택된 비율</td><td class="num">75%</td><td class="sub">McGovern 2017 인용 · 11쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-hunt"></i>Huntingford 2019</td><td>가뭄 비용 1998~2017</td><td class="num">&quot;$1.5 billion&quot;, 기상재해 비용의 33%</td><td class="sub">⚠ 출처 없음·단위 모호 · 11쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-bf"></i>Berrang-Ford 2021</td><td>선별 대상 → 포함 문헌</td><td class="num">48,816편 → 1,682편</td><td class="sub">본문 · 8~9쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-bf"></i>Berrang-Ford 2021</td><td>위험 감소를 공식 평가한 문헌</td><td class="num">58편(3.4%), 1차 근거 30편(1.8%)</td><td class="sub">본문 · 13쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-bf"></i>Berrang-Ford 2021</td><td>역효과(maladaptive) 가능성 언급 문헌</td><td class="num">약 33%</td><td class="sub">본문 · 14쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-bf"></i>Berrang-Ford 2021</td><td>가구·개인이 대응 주체인 문헌</td><td class="num">82%</td><td class="sub">표 1 · 10쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-bf"></i>Berrang-Ford 2021</td><td>ML 선별의 재현율</td><td class="num">최소 80%</td><td class="sub">Methods · 27쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-kaack"></i>Kaack 2022</td><td>ICT 부문 배출(2020)</td><td class="num">약 700 MtCO2e, 세계 GHG의 약 1.4%</td><td class="sub">참고문헌 [47,48] · 5쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-kaack"></i>Kaack 2022</td><td>클라우드·하이퍼스케일 데이터센터 배출</td><td class="num">세계 GHG의 0.1~0.2%, 이 중 ML 작업은 1/4 미만 추정</td><td class="sub">본문 · 5쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-kaack"></i>Kaack 2022</td><td>데이터센터 에너지(2010~2018)</td><td class="num">작업량 +550%에도 에너지 +6%</td><td class="sub">참고문헌 [49] · 5쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-kaack"></i>Kaack 2022</td><td>ResNet-50 → ResNet-152</td><td class="num">계산량 2.5배 이상, 오류율 1.6%p 개선</td><td class="sub">본문 · 4쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-jp"></i>Jagnani &amp; Pande 2024</td><td>평가 규모</td><td class="num">319개 판차야트(처치 160), 360만 명 이상, 가구 5,582</td><td class="sub">본문 · 3쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-jp"></i>Jagnani &amp; Pande 2024</td><td>경보 수신 확률(2023)</td><td class="num">처치 +74%(22.9% → 39.9%)</td><td class="sub">그림 7 · 12쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-jp"></i>Jagnani &amp; Pande 2024</td><td>오경보 / 미경보</td><td class="num">오경보 8.09% vs 3.64%, 미경보 32.84% vs 42.97%</td><td class="sub">그림 11 · 15쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-jp"></i>Jagnani &amp; Pande 2024</td><td>치료비(심한 침수, 상위 삼분위)</td><td class="num">약 −6,500루피(−32.87%). 초록은 &quot;30%&quot;로 표기</td><td class="sub">표 4 · 6쪽·19쪽</td></tr><tr><td style="white-space:nowrap"><i class="dot d-jp"></i>Jagnani &amp; Pande 2024</td><td>편익/비용</td><td class="num">1달러당 최소 30달러(의료비 절감만, 심한 홍수 시즌)</td><td class="sub">본문 · 6쪽</td></tr></tbody></table></div></details>
+  <details class="more"><summary>방법·한계·출처</summary>
+    <ul style="font-size:14px">
+      <li>PDF 5편을 쪽 배치를 유지해 텍스트로 추출하고 표·그림은 원문 구조대로 확인했습니다. 용어 빈도는 정규식 검색이라 뜻을 구분하지 못합니다. 적응 단계 판정은 읽은 사람의 판단입니다.</li>
+      <li>Kaack et al.은 HAL 저장소의 2021년 10월 프리프린트를 읽었습니다(학술지 게재본은 2022). Berrang-Ford et al.은 저자 수락 원고입니다. Jagnani &amp; Pande는 학술지 심사 전 워킹페이퍼입니다.</li>
+      <li>⚠ Huntingford 11쪽의 가뭄 비용 "$1.5 billion(1998~2017), 33%"는 출처가 없고 단위가 모호해 계산에 쓰지 않았습니다. Jagnani &amp; Pande의 치료비 감소는 초록 30%, 본문 32.87%로 표기가 다릅니다.</li>
+      <li>외부 출처: <a href="https://www.iea.org/reports/energy-and-ai/executive-summary">IEA Energy and AI (2025)</a> · <a href="https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational">ECMWF (2025)</a> · <a href="https://www.nature.com/articles/s41586-024-07145-1">Nearing et al. (2024) Nature</a> · <a href="https://www.esgdive.com/news/googles-emissions-continue-to-climb-due-to-ai-buildout/824373/">ESG Dive (2026)</a> · <a href="https://arxiv.org/abs/2311.16863">Luccioni et al. (2024)</a></li>
+    </ul></details>
 </section>
 
 <footer>
-    원문: Huntingford et al. 2019, <i>Environ. Res. Lett.</i> 14:124007 (CC BY 3.0) · Cheong, Sankaran &amp; Bastani 2022, <i>WIREs Data Min. Knowl. Discov.</i> 12:e1459 · Jain et al. 2023, <i>Comput. Urban Sci.</i> 3:25 (CC BY 4.0).
+  원문: Huntingford et al. 2019 <i>Environ. Res. Lett.</i> 14:124007 · Cheong, Sankaran &amp; Bastani 2022 <i>WIREs DMKD</i> 12:e1459 · Berrang-Ford et al. 2021 <i>Nat. Clim. Change</i> 11:989 · Kaack et al. 2022 <i>Nat. Clim. Change</i> 12:518 · Jagnani &amp; Pande 2024 워킹페이퍼.
 </footer>
 </div>
-
-
-<script>
-const D = {"papers": [{"id": "hunt", "short": "Huntingford 2019", "title": "Machine learning and artificial intelligence to aid climate change research and preparedness", "authors": "Huntingford C, Jeffers ES, Bonsall MB, Christensen HM, Lees T, Yang H", "journal": "Environmental Research Letters 14, 124007", "type": "Letter", "year": 2019, "received": "2019-08-09", "published": "2019-11-22", "pages": 15, "doi": "10.1088/1748-9326/ab4e55", "license": "CC BY 3.0", "affil": "영국 CEH·옥스퍼드대(동물학·물리학·지리), 중국 베이징대", "disc": "기후과학·생태학·수리모델링", "data_stmt": "교신저자 요청 시 제공(그림 2는 ECMWF ERA-Interim 재분석)"}, {"id": "cheong", "short": "Cheong et al. 2022", "title": "Artificial intelligence for climate change adaptation", "authors": "Cheong S-M, Sankaran K, Bastani H", "journal": "WIREs Data Mining and Knowledge Discovery 12(5), e1459", "type": "Perspective", "year": 2022, "received": "2021-07-08", "published": "2022 (accepted 2022-03-21)", "pages": 7, "doi": "10.1002/widm.1459", "license": "Wiley (구독)", "affil": "미국 캔자스대(지리·대기), 위스콘신대(통계), 와튼스쿨(운영·정보·의사결정)", "disc": "지리학·통계학·운영관리", "data_stmt": "새 데이터 없음"}, {"id": "jain", "short": "Jain et al. 2023", "title": "AI-enabled strategies for climate change adaptation: protecting communities, infrastructure, and businesses from the impacts of climate change", "authors": "Jain H, Dhupper R, Shrivastava A, Kumar D, Kumari M", "journal": "Computational Urban Science 3, 25", "type": "Review", "year": 2023, "received": "2023-03-17", "published": "2023 (accepted 2023-07-10)", "pages": 17, "doi": "10.1007/s43762-023-00100-2", "license": "CC BY 4.0", "affil": "인도 Amity대(환경과학·지리정보·자원), 미국 SUNY Albany ASRC", "disc": "환경과학·원격탐사·지리정보", "data_stmt": "해당 없음"}], "words": {"hunt": 8161, "cheong": 2932, "jain": 9843}, "terms": [{"group": "주제", "term": "적응(adapt*)", "regex": "\\badapt\\w*", "hunt": 10, "hunt_per1k": 1.23, "cheong": 47, "cheong_per1k": 16.03, "jain": 84, "jain_per1k": 8.53}, {"group": "주제", "term": "완화(mitigat*)", "regex": "\\bmitigat\\w*", "hunt": 0, "hunt_per1k": 0.0, "cheong": 2, "cheong_per1k": 0.68, "jain": 18, "jain_per1k": 1.83}, {"group": "주제", "term": "예측·전망", "regex": "\\b(?:predict\\w*|forecast\\w*|projection\\w*)", "hunt": 50, "hunt_per1k": 6.13, "cheong": 7, "cheong_per1k": 2.39, "jain": 74, "jain_per1k": 7.52}, {"group": "주제", "term": "조기경보(warning)", "regex": "\\bwarning\\w*", "hunt": 6, "hunt_per1k": 0.74, "cheong": 1, "cheong_per1k": 0.34, "jain": 23, "jain_per1k": 2.34}, {"group": "주제", "term": "불확실성", "regex": "\\buncertain\\w*", "hunt": 12, "hunt_per1k": 1.47, "cheong": 1, "cheong_per1k": 0.34, "jain": 2, "jain_per1k": 0.2}, {"group": "주제", "term": "의사결정", "regex": "\\bdecision\\w*", "hunt": 7, "hunt_per1k": 0.86, "cheong": 8, "cheong_per1k": 2.73, "jain": 12, "jain_per1k": 1.22}, {"group": "주제", "term": "물리·방정식", "regex": "\\b(?:physic\\w*|equation\\w*)", "hunt": 40, "hunt_per1k": 4.9, "cheong": 2, "cheong_per1k": 0.68, "jain": 1, "jain_per1k": 0.1}, {"group": "주제", "term": "정책", "regex": "\\bpolic\\w*", "hunt": 2, "hunt_per1k": 0.25, "cheong": 8, "cheong_per1k": 2.73, "jain": 6, "jain_per1k": 0.61}, {"group": "주제", "term": "편향·공정·형평", "regex": "\\b(?:bias\\w*|fair\\w*|equit\\w*|inequ\\w*|justice)", "hunt": 4, "hunt_per1k": 0.49, "cheong": 7, "cheong_per1k": 2.39, "jain": 43, "jain_per1k": 4.37}, {"group": "주제", "term": "해석·투명성", "regex": "\\b(?:interpretab\\w*|transparen\\w*|explain\\w*|explanation\\w*)", "hunt": 3, "hunt_per1k": 0.37, "cheong": 6, "cheong_per1k": 2.05, "jain": 9, "jain_per1k": 0.91}, {"group": "주제", "term": "데이터 부족", "regex": "(?:data[- ]scarc\\w*|scarce|sparse|limited data|lack of high-quality data)", "hunt": 1, "hunt_per1k": 0.12, "cheong": 6, "cheong_per1k": 2.05, "jain": 1, "jain_per1k": 0.1}, {"group": "대상", "term": "기업(business)", "regex": "\\bbusiness\\w*", "hunt": 0, "hunt_per1k": 0.0, "cheong": 0, "cheong_per1k": 0.0, "jain": 37, "jain_per1k": 3.76}, {"group": "대상", "term": "인프라", "regex": "\\binfrastructure\\w*", "hunt": 0, "hunt_per1k": 0.0, "cheong": 2, "cheong_per1k": 0.68, "jain": 67, "jain_per1k": 6.81}, {"group": "대상", "term": "지역사회", "regex": "\\bcommunit\\w*", "hunt": 1, "hunt_per1k": 0.12, "cheong": 3, "cheong_per1k": 1.02, "jain": 45, "jain_per1k": 4.57}, {"group": "위험", "term": "홍수", "regex": "\\bflood\\w*", "hunt": 1, "hunt_per1k": 0.12, "cheong": 4, "cheong_per1k": 1.36, "jain": 43, "jain_per1k": 4.37}, {"group": "위험", "term": "가뭄", "regex": "\\bdrought\\w*", "hunt": 21, "hunt_per1k": 2.57, "cheong": 1, "cheong_per1k": 0.34, "jain": 5, "jain_per1k": 0.51}, {"group": "위험", "term": "산불", "regex": "\\b(?:wildfire\\w*|fires?)\\b", "hunt": 0, "hunt_per1k": 0.0, "cheong": 1, "cheong_per1k": 0.34, "jain": 26, "jain_per1k": 2.64}, {"group": "위험", "term": "산사태", "regex": "\\blandslide\\w*", "hunt": 0, "hunt_per1k": 0.0, "cheong": 0, "cheong_per1k": 0.0, "jain": 31, "jain_per1k": 3.15}, {"group": "위험", "term": "해수면 상승", "regex": "\\bsea[- ]levels?", "hunt": 0, "hunt_per1k": 0.0, "cheong": 0, "cheong_per1k": 0.0, "jain": 35, "jain_per1k": 3.56}, {"group": "위험", "term": "폭염·열섬", "regex": "\\bheat\\b", "hunt": 0, "hunt_per1k": 0.0, "cheong": 6, "cheong_per1k": 2.05, "jain": 0, "jain_per1k": 0.0}, {"group": "위험", "term": "태풍·폭풍", "regex": "\\b(?:hurricane\\w*|storm\\w*|cyclone\\w*|tornado\\w*)", "hunt": 3, "hunt_per1k": 0.37, "cheong": 0, "cheong_per1k": 0.0, "jain": 14, "jain_per1k": 1.42}, {"group": "부문", "term": "생태계·생물", "regex": "\\b(?:ecosystem\\w*|wildlife|species|biodiversity)", "hunt": 7, "hunt_per1k": 0.86, "cheong": 10, "cheong_per1k": 3.41, "jain": 2, "jain_per1k": 0.2}, {"group": "부문", "term": "식량·농업", "regex": "\\b(?:crops?|food|agricultur\\w*|farm\\w*|yields?)\\b", "hunt": 12, "hunt_per1k": 1.47, "cheong": 15, "cheong_per1k": 5.12, "jain": 5, "jain_per1k": 0.51}, {"group": "부문", "term": "물 관리", "regex": "\\bwater\\b", "hunt": 3, "hunt_per1k": 0.37, "cheong": 6, "cheong_per1k": 2.05, "jain": 6, "jain_per1k": 0.61}, {"group": "데이터", "term": "위성·원격탐사", "regex": "\\b(?:satellite\\w*|remote\\w* sens\\w*|remotely-sensed|imagery)", "hunt": 9, "hunt_per1k": 1.1, "cheong": 6, "cheong_per1k": 2.05, "jain": 59, "jain_per1k": 5.99}, {"group": "데이터", "term": "기후모델(ESM·CMIP·GCM)", "regex": "\\b(?:ESMs?|CMIP5|climate models?|GCM)\\b", "hunt": 70, "hunt_per1k": 8.58, "cheong": 0, "cheong_per1k": 0.0, "jain": 16, "jain_per1k": 1.63}, {"group": "데이터", "term": "재분석(ECMWF·ERA)", "regex": "\\b(?:re-?analys\\w*|ERA-Interim|ECMWF)", "hunt": 10, "hunt_per1k": 1.23, "cheong": 0, "cheong_per1k": 0.0, "jain": 0, "jain_per1k": 0.0}, {"group": "데이터", "term": "소셜미디어", "regex": "\\b(?:social media|tweets?|twitter)", "hunt": 0, "hunt_per1k": 0.0, "cheong": 2, "cheong_per1k": 0.68, "jain": 21, "jain_per1k": 2.13}, {"group": "데이터", "term": "센서·IoT", "regex": "\\b(?:sensors?|IoT)\\b", "hunt": 0, "hunt_per1k": 0.0, "cheong": 4, "cheong_per1k": 1.36, "jain": 9, "jain_per1k": 0.91}, {"group": "데이터", "term": "텍스트·문서(NLP)", "regex": "\\b(?:texts?|documents?|NLP|natural language)\\b", "hunt": 0, "hunt_per1k": 0.0, "cheong": 8, "cheong_per1k": 2.73, "jain": 12, "jain_per1k": 1.22}], "refstat": {"hunt": {"n": 111, "min": 1975, "max": 2019, "median_age": 4, "share_3y": 0.45, "hist": {"1975": 1, "1977": 1, "1991": 1, "1997": 2, "2003": 4, "2005": 1, "2006": 3, "2007": 3, "2008": 3, "2009": 3, "2010": 5, "2011": 4, "2012": 5, "2013": 9, "2014": 7, "2015": 9, "2016": 11, "2017": 12, "2018": 15, "2019": 12}, "note": "참고문헌 목록 111편(두 단 조판에서 저자·연도 줄 기준 집계)"}, "cheong": {"n": 34, "min": 1985, "max": 2022, "median_age": 3, "share_3y": 0.56, "hist": {"1985": 1, "2012": 1, "2013": 2, "2014": 2, "2016": 2, "2017": 4, "2018": 3, "2019": 6, "2020": 4, "2021": 8, "2022": 1}, "note": "참고문헌 목록 34편"}, "jain": {"n": 89, "min": 2006, "max": 2023, "median_age": 1, "share_3y": 0.92, "hist": {"2006": 1, "2015": 1, "2016": 1, "2018": 3, "2019": 1, "2020": 6, "2021": 22, "2022": 39, "2023": 15}, "note": "참고문헌 목록 89편(목록 순서대로 연도 판독)"}}, "methods": [{"paper": "hunt", "where": "표 2 (ESM 모델링)", "task": "대류 모수화 개선(ML 에뮬레이터)", "methods": "ANN", "family": "신경망·딥러닝", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": "Gentine 2018"}, {"paper": "hunt", "where": "표 2 (ESM 모델링)", "task": "GCM 모수화 속도 개선", "methods": "ANN", "family": "신경망·딥러닝", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": "Krasnopolsky 2005"}, {"paper": "hunt", "where": "표 2 (ESM 모델링)", "task": "기후모델 에뮬레이션(모수 범위 확장)", "methods": "Ensemble Kalman inversion, MCMC", "family": "확률·베이지안", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": "Schneider 2017"}, {"paper": "hunt", "where": "표 2 (ESM 모델링)", "task": "위성 자료로 토지피복 분류", "methods": "Random Forest", "family": "트리 앙상블", "hazard": "-", "data": "위성", "stage": "① 기후·위험 이해", "ref": "Rodriguez-Galiano 2012"}, {"paper": "hunt", "where": "표 2 (ESM 모델링)", "task": "유로-대서양 NWP 선호 위상공간 식별", "methods": "Clustering", "family": "비지도·차원축소", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": "Dawson 2012"}, {"paper": "hunt", "where": "표 2 (ESM 모델링)", "task": "에어로졸 모델 에뮬레이션", "methods": "Gaussian process", "family": "확률·베이지안", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": "Lee 2013"}, {"paper": "hunt", "where": "표 2 (원격상관)", "task": "MJO 구조·동역학 포착", "methods": "Self-Organising Map", "family": "비지도·차원축소", "hazard": "-", "data": "관측·재분석", "stage": "① 기후·위험 이해", "ref": "Chattopadhyay 2013"}, {"paper": "hunt", "where": "표 2 (원격상관)", "task": "열대 육지-PDO 연결 식별", "methods": "Clustering, EOF", "family": "비지도·차원축소", "hazard": "-", "data": "관측·재분석", "stage": "① 기후·위험 이해", "ref": "Yang 2019"}, {"paper": "hunt", "where": "표 2 (원격상관)", "task": "SST 지수와 육상 기후 영향", "methods": "SRNN, graph-based", "family": "비지도·차원축소", "hazard": "-", "data": "관측·재분석", "stage": "① 기후·위험 이해", "ref": "Liess 2017"}, {"paper": "hunt", "where": "표 2 (일기예보)", "task": "예보 후처리로 예보관 지원", "methods": "Random Forest, GBRT", "family": "트리 앙상블", "hazard": "위험기상", "data": "예보모델", "stage": "③ 조기경보·대응", "ref": "McGovern 2017"}, {"paper": "hunt", "where": "표 2 (미래 시나리오)", "task": "계절 예측 모델 기술(skill) 가중 결합", "methods": "Bayesian linear regression", "family": "확률·베이지안", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": "Luo 2007"}, {"paper": "hunt", "where": "표 2 (미래 시나리오)", "task": "기후모델 기술 가중(앙상블 평균보다 우수)", "methods": "Generalized HMM", "family": "확률·베이지안", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": "Monteleoni 2011"}, {"paper": "hunt", "where": "표 2 (기후 영향)", "task": "지상부 바이오매스 영향", "methods": "SVM, ANN, GRNN", "family": "커널·SVM", "hazard": "-", "data": "현장·기후", "stage": "② 영향·취약성 평가", "ref": "Wu 2019"}, {"paper": "hunt", "where": "표 2 (기후 영향)", "task": "전지구 물순환(증발산) 영향", "methods": "Model Tree Ensemble", "family": "트리 앙상블", "hazard": "가뭄·물", "data": "관측", "stage": "② 영향·취약성 평가", "ref": "Jung 2010"}, {"paper": "hunt", "where": "표 2 (기후 영향)", "task": "인도 수문·하천유량 영향", "methods": "PCA, fuzzy clustering, RVM", "family": "비지도·차원축소", "hazard": "가뭄·물", "data": "기후모델", "stage": "② 영향·취약성 평가", "ref": "Ghosh 2008"}, {"paper": "hunt", "where": "표 2 (기후 영향)", "task": "인도 증발산 예측", "methods": "Fuzzy logic, LS-SVR, ANN, ANFIS", "family": "커널·SVM", "hazard": "가뭄·물", "data": "기상 관측", "stage": "② 영향·취약성 평가", "ref": "Goyal 2014"}, {"paper": "hunt", "where": "표 2 (기후 영향)", "task": "물 부족(가뭄) 영향", "methods": "Model Tree Ensemble (RF)", "family": "트리 앙상블", "hazard": "가뭄·물", "data": "관측", "stage": "② 영향·취약성 평가", "ref": "Yang 2016"}, {"paper": "hunt", "where": "표 2 (기후 영향)", "task": "위성으로 작물 수확량 추정", "methods": "CNN, Gaussian process regression", "family": "신경망·딥러닝", "hazard": "식량", "data": "위성", "stage": "② 영향·취약성 평가", "ref": "Azzari 2017; Burke & Lobell 2017"}, {"paper": "hunt", "where": "표 2 (기후 영향)", "task": "반건조지 모래 퇴적 동인", "methods": "ANN", "family": "신경망·딥러닝", "hazard": "-", "data": "관측", "stage": "② 영향·취약성 평가", "ref": "Buckland 2019"}, {"paper": "hunt", "where": "표 2 (기후 자료)", "task": "장기 전지구 유출량 자료 생산", "methods": "Random Forest", "family": "트리 앙상블", "hazard": "가뭄·물", "data": "관측", "stage": "① 기후·위험 이해", "ref": "Ghiggi 2019"}, {"paper": "hunt", "where": "표 2 (기후 자료)", "task": "위성 기반 전지구 강수 추정(PERSIANN)", "methods": "ANN", "family": "신경망·딥러닝", "hazard": "-", "data": "위성", "stage": "① 기후·위험 이해", "ref": "Hsu 1997 외"}, {"paper": "hunt", "where": "표 2 (기후 자료)", "task": "결측 최고·최저기온 보정", "methods": "Gaussian process + MCMC", "family": "확률·베이지안", "hazard": "폭염", "data": "관측소", "stage": "① 기후·위험 이해", "ref": "Rischard 2018"}, {"paper": "hunt", "where": "표 2 (기후 자료)", "task": "GCM 강수 상세화(downscaling)", "methods": "Kernel regression", "family": "커널·SVM", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": "Salvi 2017"}, {"paper": "hunt", "where": "표 2 (기후 극한)", "task": "GCM 출력에서 극한기상 식별", "methods": "CNN, 3D conv encoder-decoder", "family": "신경망·딥러닝", "hazard": "극한기상", "data": "기후모델", "stage": "③ 조기경보·대응", "ref": "Liu 2016"}, {"paper": "hunt", "where": "표 2 (기후 극한)", "task": "가뭄지수 예측", "methods": "Extreme Learning Machine, CNN", "family": "신경망·딥러닝", "hazard": "가뭄·물", "data": "기상·기후지수", "stage": "③ 조기경보·대응", "ref": "Deo & Sahin 2015"}, {"paper": "hunt", "where": "표 2 (기후 극한)", "task": "위성으로 기상·농업 가뭄 판정", "methods": "Random Forest, GBRT", "family": "트리 앙상블", "hazard": "가뭄·물", "data": "위성", "stage": "③ 조기경보·대응", "ref": "Park 2016"}, {"paper": "hunt", "where": "표 2 (기후 극한)", "task": "에티오피아 기상가뭄 예보", "methods": "ANN, SVR, wavelet", "family": "신경망·딥러닝", "hazard": "가뭄·물", "data": "기상 관측", "stage": "③ 조기경보·대응", "ref": "Mishra 2006; Belayneh 2016"}, {"paper": "hunt", "where": "본문 6쪽·그림 1", "task": "기능적 반응 결정(예: 생태계-기온 반응)", "methods": "Gradient descent", "family": "기타", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "hunt", "where": "본문 6쪽·그림 1", "task": "희소 관측소 → 격자 자료", "methods": "Gaussian process", "family": "확률·베이지안", "hazard": "-", "data": "관측소", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "hunt", "where": "본문 7쪽", "task": "ESM 핵심 모수 점진 갱신", "methods": "Kalman filter, Sequential Monte Carlo, Bayesian hierarchical", "family": "확률·베이지안", "hazard": "-", "data": "기후모델+관측", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "hunt", "where": "본문 8쪽·그림 1", "task": "ESM 고비용 요소 에뮬레이션", "methods": "Deep neural networks", "family": "신경망·딥러닝", "hazard": "-", "data": "기후모델", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "hunt", "where": "본문 8쪽", "task": "물리 제약 강우-유출(하이브리드)", "methods": "LSTM + 유역 속성", "family": "과학적 ML(물리·방정식)", "hazard": "홍수·물", "data": "관측", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "hunt", "where": "본문 5·10쪽", "task": "자료에서 미지의 방정식 도출", "methods": "Neural ODE, physics-informed NN", "family": "과학적 ML(물리·방정식)", "hazard": "-", "data": "관측", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "hunt", "where": "본문 10쪽", "task": "생태 모델 구조 탐색", "methods": "Symbolic regression, Bayesian inversion", "family": "과학적 ML(물리·방정식)", "hazard": "-", "data": "위성·고기록(나이테·퇴적)", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "hunt", "where": "본문 8쪽·그림 2", "task": "2018 영국 가뭄 원인 탐색(스토리라인)", "methods": "ML 표적 탐색(방법 미지정)", "family": "기타", "hazard": "가뭄·물", "data": "재분석(ERA-Interim)", "stage": "② 영향·취약성 평가", "ref": ""}, {"paper": "hunt", "where": "본문 10~11쪽", "task": "가뭄 조기경보·물 배분", "methods": "GBRT 등(제안)", "family": "트리 앙상블", "hazard": "가뭄·물", "data": "예보모델", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "cheong", "where": "표 1", "task": "야생동물 조사·인프라 모니터링·예지정비", "methods": "Supervised learning", "family": "학습 패러다임", "hazard": "생태계", "data": "카메라트랩·센서", "stage": "⑤ 모니터링·평가", "ref": ""}, {"paper": "cheong", "where": "표 1", "task": "도시계획·홍수 조기경보·작물 모니터링(데이터 풍부 지역 → 부족 지역)", "methods": "Transfer learning", "family": "학습 패러다임", "hazard": "홍수·식량", "data": "위성·거리 이미지", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "cheong", "where": "표 1·3.2절", "task": "이주(relocation) 개인별 인센티브", "methods": "Reinforcement learning, multi-armed bandits", "family": "학습 패러다임", "hazard": "산불·홍수", "data": "실험 결과", "stage": "④ 적응 옵션 선택·맞춤", "ref": ""}, {"paper": "cheong", "where": "표 1", "task": "작물 수확량 모니터링(라벨 일부만)", "methods": "Semi-supervised learning", "family": "학습 패러다임", "hazard": "식량", "data": "위성", "stage": "⑤ 모니터링·평가", "ref": ""}, {"paper": "cheong", "where": "표 1", "task": "폭염·가뭄·식량 공급 다면 영향, 회복력 있는 인프라 계획", "methods": "Multimodal learning", "family": "학습 패러다임", "hazard": "폭염·가뭄", "data": "소셜미디어+센서", "stage": "② 영향·취약성 평가", "ref": ""}, {"paper": "cheong", "where": "표 1·3.3절", "task": "농업·물 관리, 열섬 대응(형평 보장)", "methods": "Multiobjective techniques", "family": "학습 패러다임", "hazard": "폭염·물", "data": "다부문 지표", "stage": "④ 적응 옵션 선택·맞춤", "ref": ""}, {"paper": "cheong", "where": "3.1절", "task": "카메라트랩·항공·음향으로 종 개체수 파악", "methods": "Image classification, object detection, counting", "family": "컴퓨터비전", "hazard": "생태계", "data": "카메라트랩·항공·음향", "stage": "⑤ 모니터링·평가", "ref": ""}, {"paper": "cheong", "where": "3.1절", "task": "법·정책문서·협상 발언에서 적응 증거 지도", "methods": "Topic modeling, geoparsing", "family": "NLP", "hazard": "-", "data": "텍스트·문서", "stage": "⑤ 모니터링·평가", "ref": ""}, {"paper": "cheong", "where": "3.2절", "task": "이질적 처치효과 추정", "methods": "Heterogeneous treatment effect ML", "family": "학습 패러다임", "hazard": "-", "data": "실험 결과", "stage": "④ 적응 옵션 선택·맞춤", "ref": ""}, {"paper": "cheong", "where": "4장", "task": "물리 법칙을 지키는 예측", "methods": "Physics-based + ML", "family": "과학적 ML(물리·방정식)", "hazard": "-", "data": "-", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "jain", "where": "표 1", "task": "미래 기후 패턴 예측", "methods": "Machine learning", "family": "기타", "hazard": "-", "data": "기후모델·위성", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "jain", "where": "표 1", "task": "위성으로 토지이용·식생 변화 탐지", "methods": "Deep learning", "family": "신경망·딥러닝", "hazard": "-", "data": "위성", "stage": "② 영향·취약성 평가", "ref": ""}, {"paper": "jain", "where": "표 1", "task": "소셜미디어로 기후 인식 파악", "methods": "NLP", "family": "NLP", "hazard": "-", "data": "소셜미디어", "stage": "② 영향·취약성 평가", "ref": ""}, {"paper": "jain", "where": "표 1", "task": "토지이용·도시개발 지도화", "methods": "Computer vision", "family": "컴퓨터비전", "hazard": "-", "data": "위성", "stage": "② 영향·취약성 평가", "ref": ""}, {"paper": "jain", "where": "표 2·3", "task": "홍수 예측·경보", "methods": "Machine learning", "family": "기타", "hazard": "홍수", "data": "센서(강우·수위)", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 2·3", "task": "산불 예측·경보", "methods": "Deep learning", "family": "신경망·딥러닝", "hazard": "산불", "data": "위성·기상", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 2·3", "task": "재난 대응 소셜미디어 모니터링", "methods": "NLP", "family": "NLP", "hazard": "재난 일반", "data": "소셜미디어", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 2·3", "task": "산사태 위험지역 식별", "methods": "Computer vision", "family": "컴퓨터비전", "hazard": "산사태", "data": "위성·기상", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 4", "task": "홍수 예측 알고리즘 비교(4건)", "methods": "ANN, SVR/SVM, RF, XGBoost, DT, LSTM", "family": "트리 앙상블", "hazard": "홍수", "data": "하천 유량·강우·지형", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 5", "task": "산불 탐지(위성)", "methods": "CNN", "family": "신경망·딥러닝", "hazard": "산불", "data": "위성·영상", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 5", "task": "산불 강도·확산 예측", "methods": "RNN", "family": "신경망·딥러닝", "hazard": "산불", "data": "기상·센서", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 5", "task": "합성 산불 이미지로 학습 보강", "methods": "GAN", "family": "신경망·딥러닝", "hazard": "산불", "data": "영상", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 6", "task": "재난 트윗 감성·개체명·토픽·정보추출", "methods": "Sentiment, NER, topic modeling, IE", "family": "NLP", "hazard": "태풍·산불·홍수", "data": "소셜미디어", "stage": "③ 조기경보·대응", "ref": ""}, {"paper": "jain", "where": "표 7", "task": "산사태 위험 평가(객체탐지·분할·LiDAR·특징추출·ML)", "methods": "Object detection, segmentation, feature extraction", "family": "컴퓨터비전", "hazard": "산사태", "data": "위성·항공·LiDAR", "stage": "② 영향·취약성 평가", "ref": ""}, {"paper": "jain", "where": "표 8", "task": "기업·정부 기후 리스크 평가 도구 5종", "methods": "상용 서비스(방법 미기재)", "family": "기타", "hazard": "홍수·가뭄 등", "data": "위성·기후", "stage": "② 영향·취약성 평가", "ref": ""}, {"paper": "jain", "where": "표 9", "task": "AI 기후 모델링·전망 시스템 5종", "methods": "상용 플랫폼(방법 미기재)", "family": "기타", "hazard": "-", "data": "위성·기후모델", "stage": "① 기후·위험 이해", "ref": ""}, {"paper": "jain", "where": "3.1절·그림 1·2", "task": "해수면 상승이 연안 인프라에 미치는 영향 시뮬레이션", "methods": "Machine learning(세부 미기재)", "family": "기타", "hazard": "해수면 상승", "data": "기후+인프라", "stage": "④ 적응 옵션 선택·맞춤", "ref": ""}, {"paper": "jain", "where": "3장", "task": "IoT 지오태그 자료로 모델 보정·편향 완화", "methods": "AI 모델 보정", "family": "기타", "hazard": "-", "data": "센서·IoT", "stage": "⑤ 모니터링·평가", "ref": ""}], "fam": {"hunt": {"신경망·딥러닝": 9, "확률·베이지안": 7, "트리 앙상블": 7, "비지도·차원축소": 5, "커널·SVM": 3, "기타": 2, "과학적 ML(물리·방정식)": 3}, "cheong": {"학습 패러다임": 7, "컴퓨터비전": 1, "NLP": 1, "과학적 ML(물리·방정식)": 1}, "jain": {"기타": 6, "신경망·딥러닝": 5, "NLP": 3, "컴퓨터비전": 3, "트리 앙상블": 1}}, "stg": {"hunt": {"① 기후·위험 이해": 22, "③ 조기경보·대응": 6, "② 영향·취약성 평가": 8}, "cheong": {"⑤ 모니터링·평가": 4, "③ 조기경보·대응": 1, "④ 적응 옵션 선택·맞춤": 3, "② 영향·취약성 평가": 1, "① 기후·위험 이해": 1}, "jain": {"① 기후·위험 이해": 2, "② 영향·취약성 평가": 5, "③ 조기경보·대응": 9, "④ 적응 옵션 선택·맞춤": 1, "⑤ 모니터링·평가": 1}}, "stages": ["① 기후·위험 이해", "② 영향·취약성 평가", "③ 조기경보·대응", "④ 적응 옵션 선택·맞춤", "⑤ 모니터링·평가"], "coverage": {"hunt": [2, 1, 2, 0, 0], "cheong": [1, 1, 1, 2, 2], "jain": [1, 2, 2, 1, 1]}, "cov_why": {"hunt": ["논문의 대부분(차원 축소, 원격상관, ESM 불확실성, 미지의 방정식)", "표 2의 \"기후 영향\" 7행, 2018 영국 가뭄 사례", "\"AI to support climate adaptation, with an emphasis on drought warning\" 절", "옵션 선택 논의 없음(작물 파종 시기 언급 정도)", "없음"], "cheong": ["물리+ML 결합을 결론에서 짧게 제안", "다면 영향(멀티모달) 예시", "전이학습 홍수 경보(Google 사례) 언급", "3.2 맞춤형 적응(이주 인센티브), 3.3 시너지·상충(다목적 최적화)", "3.1 적응 현황 정보(생물 모니터링, 정책문서 NLP)"], "jain": ["5장 AI 기후 모델링·전망(표 9)", "2장 취약성 평가(표 1), 4장 기업·인프라 리스크(표 8)", "3.2절 조기경보(표 2~7) — 분량 최대", "3.1절 연안 인프라 시뮬레이션이 방호벽·이전 권고", "IoT 자료로 모델 보정, 실시간 모니터링(7장)"]}, "claims": [["hunt", "AI 예보(GBRT)가 예보관 선택에서 채택된 비율", "75%", "McGovern 2017, NOAA Hazardous Weather Testbed", "11쪽", "출처 명시"], ["hunt", "기후 연구센터 / ESM 변형 수", "약 20곳 / 약 40개(CMIP5)", "표 1", "3쪽", "출처 명시"], ["hunt", "가뭄 비용(1998~2017)", "\"$1.5 billion\", 기상재해 비용의 33%", "출처 표기 없음", "11쪽", "⚠ 확인 필요: 20년 전 세계 가뭄 비용으로는 작아 보이며 단위·지표(피해액인지 피해 인구인지)가 모호. 원출처로 대조 필요"], ["hunt", "2011 아프리카의 뿔 가뭄 피해", "900만 명 이상, 소말리아 사망 14.3만~27.3만 명", "Checchi & Robinson 2013", "11쪽", "출처 명시"], ["cheong", "데이터 주석 가속 효과", "적응 질문 평가 1년 → 1개월 가능", "예시적 서술(실증 아님)", "2쪽", "예시"], ["jain", "CNN 위성 산불 탐지 정확도", "97%", "Oh et al. 2020", "표 5", "출처 명시"], ["jain", "RNN 산불 확산 예측 개선", "전통 회귀 대비 최대 12%", "Mohan et al. 2021", "표 5", "출처 명시"], ["jain", "GAN 합성 이미지로 데이터 요구량 감소", "50%", "Park et al. 2020", "표 5", "출처 명시"], ["jain", "21세기 말 해수면 상승", "\"up to a meter or more\"", "출처 표기 없음", "6쪽", "일반 서술"]], "cite_check": [["FloodNet: 위성영상으로 실시간 홍수 예측", "Gangisetty & Rai 2022", "FloodNet: Underwater image restoration based on residual dense learning", "불일치", "같은 이름의 수중 영상 복원 논문"], ["CoastalAI: 미국 연안 인프라 해수면 시뮬레이션(그림 1)", "Kulp & Strauss 2018", "CoastalDEM: A global coastal digital elevation model improved from SRTM using a neural network", "부분 일치", "인용 논문은 신경망 고도모델(CoastalDEM). \"CoastalAI\" 시스템 자체의 출처는 없음"], ["Deltares: 네덜란드 연안 인프라 AI 시뮬레이션(그림 2)", "MacLeod 2021; Yost 2021", "미얀마·필리핀 극한기상 예보 검증 / 콘관입시험(CPT) 얇은 층 보정", "불일치", "두 논문 모두 Deltares 시스템을 다루지 않음"], ["Cervest: 기업 기후 인텔리전스(표 8)", "Cioffi 2020", "AI and ML applications in smart production", "불일치", "제조 스마트생산 리뷰"], ["Jupiter: 위성·AI 기업 기후리스크(표 8)", "Ullah 2023", "Assessing impacts of flood and drought over the Punjab region of Pakistan using multi-satellite data", "불일치", "파키스탄 위성 연구"], ["DeepMind: 기후모델 불확실성 감소(표 9)", "Subramaniam 2022", "AI technologies for forecasting air pollution and human health", "불일치", "대기오염·건강 예측 리뷰"], ["Microsoft Azure: 고해상도 기후 모델(표 9)", "Khan 2023", "A biologist’s guide to the galaxy: AI and very high-resolution satellite imagery to monitor marine mammals", "불일치", "해양 포유류 위성 모니터링"], ["IBM Watson: 기후 전망·인프라 리스크(표 9)", "Yigitcanlar 2020", "Contributions and risks of AI in building smarter cities", "약함", "스마트시티 AI 리뷰(Watson 기후 기능 근거 아님)"], ["Google Earth Engine(표 9)", "Yang L 2022", "Google Earth Engine and AI: A comprehensive review", "일치", ""], ["AI 조기경보가 위험 지역 식별", "Raffaghelli 2022", "Applying the UTAUT model to explain students’ acceptance of an early warning system in higher education", "불일치", "대학 학업 조기경보"], ["AI 조기경보가 재난 대응 지원", "van der Stam 2023", "A wearable patch based remote early warning score in cancer surgery patients", "불일치", "수술 환자 조기경보"], ["AI 조기경보 시스템 발전", "Yang X 2021", "Understanding static code warnings: An incremental AI approach", "불일치", "소프트웨어 정적분석 경고"], ["산불 위험지역 분석(과거 기상·식생·인간활동)", "Masupha 2021", "Prospects of an agricultural drought early warning system in South Africa", "약함", "농업 가뭄 조기경보"], ["허리케인 하비(2017) 미 해안경비대 NLP 활용", "(인용 없음)", "-", "출처 없음", ""], ["DeepSD, Climate Informatics Toolbox", "(직접 인용 없음, 문단 인용은 Yang H 2022)", "Statistical downscaling of NWP based on CNNs", "약함", "두 도구의 원출처 미기재"]], "structure_notes": ["표 2와 표 3은 행(기술·목적·입력·출력)이 같고 인용만 다름 — 사실상 중복 표", "3.1절 CoastalAI와 Deltares 문단은 문장 구조가 거의 같음(수집→결합→ML 예측→방호벽·이전 권고)", "본문 인용 \"Seydi et al., 2023\"과 참고문헌 \"(2022)\" 연도 불일치", "\"mitigat*\" 18회 중 상당수는 \"영향을 줄이다(mitigate impacts)\" 뜻 — 온실가스 감축(완화)과 구분 필요"]};
-const P = ['hunt','cheong','jain'];
-const NAME = {hunt:'Huntingford 2019', cheong:'Cheong 2022', jain:'Jain 2023'};
-const $ = id => document.getElementById(id);
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-
-// 1. cards
-$('paperCards').innerHTML = D.papers.map(p => `
-  <div class="card" style="--c:var(--${p.id})">
-    <div class="eyebrow p-${p.id}">${p.type} · ${p.year}</div>
-    <h3>${esc(p.title)}</h3>
-    <div class="sub">${esc(p.authors)}</div>
-    <dl>
-      <dt>학술지</dt><dd>${esc(p.journal)}</dd>
-      <dt>분량</dt><dd class="num">${p.pages}쪽 · 본문 ${D.words[p.id].toLocaleString()}단어 · 참고문헌 ${D.refstat[p.id].n}편</dd>
-      <dt>저자 소속</dt><dd>${esc(p.affil)}</dd>
-      <dt>분야</dt><dd>${esc(p.disc)}</dd>
-      <dt>데이터</dt><dd>${esc(p.data_stmt)}</dd>
-    </dl>
-  </div>`).join('');
-
-// 2. reference histograms (bucket: ≤2009 then yearly 2010–2023)
-const yrs = ['~09'].concat(Array.from({length:14},(_,i)=>String(2010+i).slice(2)));
-$('refHist').innerHTML = P.map(f => {
-  const h = D.refstat[f].hist; const b = {};
-  for (const [y,c] of Object.entries(h)) { const k = +y <= 2009 ? '~09' : String(y).slice(2); b[k] = (b[k]||0) + c; }
-  const mx = Math.max(...Object.values(b));
-  const r = D.refstat[f];
-  return `<div class="hbox"><div class="p-${f}" style="font-weight:600">${NAME[f]}</div>
-    <div class="sub num">중앙값 ${r.median_age}년 전 · 3년 이내 ${Math.round(r.share_3y*100)}% · ${r.min}–${r.max}</div>
-    <div class="cols" aria-label="${NAME[f]} 참고문헌 연도 분포">${yrs.map(k => `<div title="${k}: ${b[k]||0}편" style="height:${(b[k]||0)/mx*100}%;background:var(--${f})"></div>`).join('')}</div>
-    <div class="axis"><span>~2009</span><span>2016</span><span>2023</span></div></div>`;
-}).join('');
-
-// 3. heatmap
-let hh = `<thead><tr><th>분류</th><th>용어</th>${P.map(f=>`<th class="c"><span class="p-${f}">${NAME[f]}</span></th>`).join('')}</tr></thead><tbody>`;
-let g0 = '';
-for (const r of D.terms) {
-  if (r.group !== g0) { g0 = r.group; }
-  const vals = P.map(f => r[f+'_per1k']); const mx = Math.max(...vals) || 1;
-  hh += `<tr><td class="sub">${r.group}</td><td>${r.term}</td>${P.map(f => {
-    const v = r[f+'_per1k']; const a = v/mx;
-    return `<td class="v" style="background:color-mix(in srgb, var(--${f}) ${Math.round(a*55)}%, transparent)">${v.toFixed(1)} <span class="sub">(${r[f]})</span></td>`; }).join('')}</tr>`;
-}
-$('heat').innerHTML = hh + '</tbody>';
-
-// 4. family bars
-const FAM = ['신경망·딥러닝','트리 앙상블','커널·SVM','확률·베이지안','비지도·차원축소','과학적 ML(물리·방정식)','학습 패러다임','NLP','컴퓨터비전','기타'];
-const FC = ['#3C6E9E','#5B8C3A','#8A6BB0','#2A8C8C','#C0843A','#B34D5E','#1E6B62','#9A7B2C','#6C7A89','#9AA39F'];
-$('famBars').innerHTML = P.map(f => {
-  const c = D.fam[f]; const n = Object.values(c).reduce((a,b)=>a+b,0);
-  return `<div class="bar"><div><span class="p-${f}" style="font-weight:600">${NAME[f]}</span> <span class="sub num">${n}건</span></div>
-   <div class="track">${FAM.map((k,i)=> c[k] ? `<div class="seg" title="${k} ${c[k]}건" style="width:${c[k]/n*100}%;background:${FC[i]}">${c[k]}</div>` : '').join('')}</div></div>`;
-}).join('');
-$('famLegend').innerHTML = FAM.map((k,i)=>`<span><i class="sw" style="background:${FC[i]}"></i>${k}</span>`).join('');
-
-// 4b. methods table
-function drawM(filter){
-  const rows = D.methods.filter(r => filter==='all' || r.paper===filter);
-  $('mtab').innerHTML = `<thead><tr><th>논문</th><th>위치</th><th>과제</th><th>기법</th><th>계열</th><th>위험·부문</th><th>데이터</th><th>적응 단계</th></tr></thead><tbody>` +
-    rows.map(r => `<tr><td><i class="dot d-${r.paper}"></i>${NAME[r.paper].split(' ')[0]}</td><td class="sub">${esc(r.where)}</td><td>${esc(r.task)}${r.ref?`<span class="why">${esc(r.ref)}</span>`:''}</td><td>${esc(r.methods)}</td><td>${esc(r.family)}</td><td>${esc(r.hazard)}</td><td>${esc(r.data)}</td><td style="white-space:nowrap">${esc(r.stage)}</td></tr>`).join('') + '</tbody>';
-}
-document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
-  document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', x===b ? 'true':'false'));
-  drawM(b.dataset.f);
-}));
-drawM('all');
-
-// 5. stage table
-const SYM = ['<span class="s0">○</span>','<span class="s1">◐</span>','<span class="s2">●</span>'];
-$('stage').innerHTML = `<thead><tr><th>적응 단계</th>${P.map(f=>`<th><span class="p-${f}">${NAME[f]}</span></th>`).join('')}<th class="c">사례 수</th></tr></thead><tbody>` +
-  D.stages.map((s,i) => {
-    const tot = P.reduce((a,f)=>a+(D.stg[f][s]||0),0);
-    return `<tr><td style="font-weight:600;white-space:nowrap">${s}</td>${P.map(f=>`<td>${SYM[D.coverage[f][i]]}<span class="why">${esc(D.cov_why[f][i])}</span></td>`).join('')}
-    <td class="c num" style="font-size:14px">${tot}<span class="why">${P.map(f=>D.stg[f][s]||0).join(' / ')}</span></td></tr>`;
-  }).join('') + '</tbody>';
-
-// 7. claims + cite check
-$('claims').innerHTML = `<thead><tr><th>논문</th><th>주장</th><th>값</th><th>근거</th><th>쪽</th><th>상태</th></tr></thead><tbody>` +
-  D.claims.map(c => `<tr><td><i class="dot d-${c[0]}"></i>${NAME[c[0]].split(' ')[0]}</td><td>${esc(c[1])}</td><td class="num">${esc(c[2])}</td><td class="sub">${esc(c[3])}</td><td class="sub">${esc(c[4])}</td><td>${c[5].startsWith('⚠') ? `<span class="pill m-약함">⚠ 확인 필요</span><span class="why">${esc(c[5].slice(8))}</span>` : `<span class="sub">${esc(c[5])}</span>`}</td></tr>`).join('') + '</tbody>';
-const cnt = {}; D.cite_check.forEach(c => cnt[c[3]] = (cnt[c[3]]||0)+1);
-$('cite').innerHTML = `<thead><tr><th>Jain 본문의 사례·주장</th><th>붙은 인용</th><th>그 문헌의 제목(Jain 참고문헌 목록)</th><th>대응</th></tr></thead><tbody>` +
-  D.cite_check.map(c => `<tr><td>${esc(c[0])}</td><td class="sub">${esc(c[1])}</td><td>${esc(c[2])}${c[4]?`<span class="why">${esc(c[4])}</span>`:''}</td><td><span class="pill m-${c[3].replace(/\s/g,'')}">${c[3]}</span></td></tr>`).join('') + '</tbody>';
-$('structNotes').innerHTML = `<li class="sub">대응 판정 합계: ${Object.entries(cnt).map(([k,v])=>`${k} ${v}`).join(' · ')}</li>` + D.structure_notes.map(s=>`<li>${esc(s)}</li>`).join('');
-</script>
 
 </body></html>

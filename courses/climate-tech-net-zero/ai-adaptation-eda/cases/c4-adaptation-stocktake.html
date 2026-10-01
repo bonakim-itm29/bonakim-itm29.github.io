@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ML 기반 적응 근거 점검</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F5F3; --paper:#FFFFFF; --fg:#17201D; --muted:#5A6661; --line:#D5DCD8; --soft:#E8EDEA;
+  --accent:#1E6B62; --warn:#965812; --warnbg:#FBF1E3; --ok:#2E6B3A; --okbg:#E5F1E7; --bad:#A3362B; --badbg:#F8E6E3;
+  --hunt:#2D5C8C; --cheong:#1E8A6E; --bf:#7350A6; --kaack:#8A6A1E; --jp:#C0611B; --ext:#7A8580;
+  --display:"Noto Serif KR","Nanum Myeongjo",Georgia,serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320;
+  --hunt:#7FAEE0; --cheong:#5FD0AE; --bf:#B79BE6; --kaack:#D7B65E; --jp:#F09A55; --ext:#9AA8A2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320;
+  --hunt:#7FAEE0; --cheong:#5FD0AE; --bf:#B79BE6; --kaack:#D7B65E; --jp:#F09A55; --ext:#9AA8A2; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.72;margin:0}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:28px 64px}
+.read{max-width:740px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.3;margin:0}
+h1{font-size:clamp(26px,4.4vw,38px);font-weight:800}
+h2{font-size:22px;font-weight:800;margin-top:52px;padding-top:16px;border-top:1px solid var(--line)}
+h3{font-size:16.5px;font-weight:600;margin-top:22px}
+p{margin:.65em 0}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.sub{color:var(--muted);font-size:14px}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:0}
+.d-hunt{background:var(--hunt)} .c-hunt{color:var(--hunt)}
+.d-cheong{background:var(--cheong)} .c-cheong{color:var(--cheong)}
+.d-bf{background:var(--bf)} .c-bf{color:var(--bf)}
+.d-kaack{background:var(--kaack)} .c-kaack{color:var(--kaack)}
+.d-jp{background:var(--jp)} .c-jp{color:var(--jp)}
+.d-ext{background:var(--ext)} .c-ext{color:var(--ext)}
+
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-top:10px}
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.qa>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.qa .q{font-family:var(--display);font-weight:600;font-size:15.5px}
+.qa .q b{color:var(--accent);font-family:var(--mono);margin-right:6px}
+.qa p{font-size:14.5px;margin:.4em 0 0}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin-top:16px}
+a.case{display:flex;flex-direction:column;gap:8px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;text-decoration:none;color:var(--fg);min-width:0;transition:border-color .15s, transform .15s}
+a.case:hover{border-color:var(--accent);transform:translateY(-1px)}
+a.case:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a.case h3{margin:0;font-size:16px}
+a.case .s{font-size:13.5px;color:var(--muted);line-height:1.6;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.lvl{display:inline-flex;align-items:center;gap:3px;font-size:12px;color:var(--muted)}
+.lvl i{width:9px;height:9px;border-radius:2px;background:var(--soft);border:1px solid var(--line)}
+.lvl i.on{background:var(--accent);border-color:var(--accent)}
+.more-link{font-size:13px;color:var(--accent);margin-top:auto}
+.scroll{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--soft);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12.5px;background:var(--soft)}
+tr:last-child td{border-bottom:0}
+td.c,th.c{text-align:center}
+.cov td.c{font-size:17px}
+.s2{color:var(--accent)} .s1{color:var(--muted)} .s0{color:var(--line)}
+.ladder{display:grid;gap:8px;margin-top:14px}
+.step{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.step>div{min-width:0}
+.step .lv{font-family:var(--mono);font-size:16px;color:#fff;background:var(--accent);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center}
+.step.gap{border-style:dashed} .step.gap .lv{background:var(--muted)}
+.step p{margin:.2em 0 0;font-size:13.8px;color:var(--muted)}
+.abc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.abc>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.abc .k{font-family:var(--mono);font-weight:500;color:var(--kaack)}
+.abc p{font-size:13.8px;margin:.4em 0 0}
+.emis{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:14px 0;display:grid;gap:8px}
+.erow{display:grid;grid-template-columns:200px 1fr 56px;gap:10px;align-items:center;font-size:13.5px}
+.erow b{text-align:right}
+.etrack{height:16px;background:var(--soft);border-radius:3px;overflow:hidden}
+.ebar{height:100%} .e-up{background:var(--bad)} .e-down{background:var(--ok)}
+.note{background:var(--warnbg);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;font-size:14px;margin:14px 0}
+.aside{background:var(--paper);border:1px dashed var(--line);padding:14px 16px;border-radius:6px;font-size:14px;margin:16px 0}
+details.more{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px}
+details.more summary{cursor:pointer;font-weight:600;font-size:14px}
+details.more summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ol.plain{padding-left:20px} ol.plain li{margin:6px 0}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;font-size:14px;margin-top:16px}
+.facts dt{color:var(--muted);white-space:nowrap} .facts dd{margin:0;min-width:0}
+.eff{display:grid;gap:8px;margin-top:10px}
+.eff>div{display:grid;grid-template-columns:150px 1fr;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:14px}
+.eff b{font-weight:600}
+.back{display:inline-flex;gap:6px;align-items:center;font-size:14px;text-decoration:none;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;font:inherit}
+.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:14px}
+footer{margin-top:52px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+code{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px 5px;border-radius:3px}
+@media (max-width:720px){.abc,.qa{grid-template-columns:1fr}.erow{grid-template-columns:1fr 48px}.erow span{grid-column:1/-1}
+ .step{grid-template-columns:32px 1fr}.step .who{grid-column:2}.eff>div{grid-template-columns:1fr;gap:2px}.facts{grid-template-columns:1fr;gap:2px 0}.facts dd{margin-bottom:8px}}
+</style>
+</head><body>
+<div class="wrap read" style="max-width:780px">
+  <a class="back" href="../index.html" data-back>← EDA 요약으로</a>
+  <div class="eyebrow" style="margin-top:18px">사례 4 / 7 · ⑤ 모니터링·평가</div>
+  <h1 style="font-size:clamp(24px,4vw,32px);margin-top:6px">적응은 정말 위험을 줄였나: ML로 4.8만 편을 훑은 전 세계 점검</h1>
+  <p class="sub" style="font-size:15px">ML로 적응 문헌을 선별해 전 세계 적응 실행 사례를 모았더니, 위험 감소를 제대로 평가한 연구는 3.4%뿐이었다.</p>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center"><span class="lvl" title="근거 수준 1/5"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i> <span>1/5</span></span><span class="sub">평가 도구(방법 성능)</span><span><i class="dot d-bf" title="Berrang-Ford 2021"></i><span class="sub">Berrang-Ford 2021</span></span></div>
+  <dl class="facts"><dt>규모</dt><dd>2013~2019년 출판 문헌 48,816편 선별 → 1,682편 분석, 연구자 126명 참여</dd><dt>AI·ML</dt><dd>지도학습 분류기: 4명이 일부를 직접 분류해 학습시키고, 관련성 높은 순으로 사람이 확인·재학습 반복</dd><dt>성능</dt><dd>관련 문헌의 최소 80%를 찾은 것으로 추정(재현율)</dd><dt>연구 기간</dt><dd>대상 문헌 2013~2019년, 논문 2021년 출판(IPCC 6차 보고서 일정에 맞춤)</dd></dl>
+  <h2>배경</h2><ul><li>파리협정은 적응 진척을 점검하도록 요구하지만, 적응 문헌은 방대하고 흩어져 있어 사람만으로는 종합이 불가능했다.</li></ul>
+  <h2>효과</h2><div class="eff"><div><b>적응 실태</b><span>대응의 82%가 가구·개인 수준, 행동 변화형 75%. 대부분 단편적·국지적·점진적</span></div><div><b>위험 감소 근거</b><span>62%가 위험 감소를 암시했지만 실행 후 공식 평가는 58편(3.4%), 1차 근거 제시는 30편(1.8%)</span></div><div><b>역효과</b><span>약 33%가 역효과 가능성을 언급(예: 상류의 빗물 저장이 하류에 피해)</span></div><div><b>공백</b><span>남미, 중앙·북아프리카, 중앙아시아, 중동, 민간 부문 대응 근거가 부족</span></div></div>
+  <h2>비용·수익성</h2><ul><li>보고되지 않음. ML로 사람이 읽어야 할 문헌을 줄인 것이 비용 절감 효과지만 금액은 제시되지 않았다.</li></ul>
+  <h2>한계</h2><ul><li>학술 문헌만 보며 회색 문헌·현장 지식은 빠졌다.</li><li>이 연구에서 ML은 적응 수단이 아니라 &quot;적응을 평가하는 도구&quot;다.</li></ul>
+  <h2>향후 활용방안</h2><ul><li>저자들이 꼽은 1순위 과제는 &quot;적응 효과 평가&quot;다. 사업 시작 단계부터 반사실(대조군)과 함께 성과 지표를 모니터링하라고 권한다.</li><li>ML로 더 세밀한 정보 추출까지 자동화하면 적응 점검을 주기적으로 갱신할 수 있다.</li></ul>
+  <h2>출처</h2><ul style="font-size:14px"><li><a href="https://eprints.whiterose.ac.uk/id/eprint/191186/">Berrang-Ford et al. (2021) Nature Climate Change 11, 989–1000 (White Rose 저장소 수락 원고)</a></li></ul>
+  <div class="pager"><a href="c3-noaa-gbrt.html">← 위험기상 AI 예보 후처리</a><a href="c5-relocation-rl.html">이주 인센티브 맞춤(제안) →</a></div>
+</div>
+<script>document.querySelectorAll('[data-back]').forEach(a=>a.addEventListener('click',ev=>{if(document.referrer&&history.length>1){ev.preventDefault();history.back();}}));</script>
+
+</body></html>
