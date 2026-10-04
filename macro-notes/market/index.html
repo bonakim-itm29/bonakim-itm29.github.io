@@ -53,7 +53,7 @@
 const OIL=['wti_dec27','wti_dec28','brent_dec27','brent_dec28'], RATE=['ust10','bei10','tp10_acm','tp10_kw'];
 const fmt=(v,u)=>u==='$/bbl'?v.toFixed(2):v.toFixed(2);
 function back(pts,days){const last=new Date(pts[pts.length-1][0]);last.setDate(last.getDate()-days);const t=last.toISOString().slice(0,10);for(let i=pts.length-1;i>=0;i--)if(pts[i][0]<=t)return pts[i];return null}
-function delta(a,b,u){if(!b)return '';const d=a-b[1];const cls=d>0?'up':d<0?'dn':'';const s=(d>0?'+':'')+(u==='$/bbl'?d.toFixed(2):(d*100).toFixed(0)+'bp');return `<span class="${cls}">${s}</span>`}
+function delta(a,b,u){if(!b)return '';let d=a-b[1];d=u==='$/bbl'?Math.round(d*100)/100:Math.round(d*100)/100;const cls=d>0?'up':d<0?'dn':'';const s=(d>0?'+':'')+(u==='$/bbl'?d.toFixed(2):(d*100).toFixed(0)+'bp');return `<span class="${cls}">${s}</span>`}
 function spark(pts){const w=300,h=56,p=3;const ys=pts.map(x=>x[1]);const lo=Math.min(...ys),hi=Math.max(...ys);const sx=i=>p+i*(w-2*p)/Math.max(1,pts.length-1),sy=v=>h-p-(hi===lo?.5:(v-lo)/(hi-lo))*(h-2*p);
  const d=pts.map((x,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(x[1]).toFixed(1)).join(' ');
  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>`}
