@@ -7,13 +7,16 @@
 한 출처가 실패해도 이전 값은 지우지 않고 남겨 두고, 실패 사실을 기록한다.
 """
 import csv, io, json, datetime as dt, pathlib, sys, traceback
-import urllib.request
+import urllib.request, urllib.parse
 
 OUT = pathlib.Path(__file__).resolve().parents[1] / "macro-notes" / "market" / "data.json"
 START = "2025-01-01"
 UA = {"User-Agent": "Mozilla/5.0 (bonakim-itm29.github.io market updater)"}
 
 FUT = [  # key, 표시명, 야후 심볼, 단위
+    ("wti_front", "WTI 근월물", "CL=F", "$/bbl"),
+    ("brent_front", "Brent 근월물", "BZ=F", "$/bbl"),
+    ("move", "MOVE 지수 (미 국채 내재변동성)", "^MOVE", "pt"),
     ("wti_dec27", "WTI 2027년 12월물", "CLZ27.NYM", "$/bbl"),
     ("wti_dec28", "WTI 2028년 12월물", "CLZ28.NYM", "$/bbl"),
     ("brent_dec27", "Brent 2027년 12월물", "BZZ27.NYM", "$/bbl"),
@@ -23,6 +26,9 @@ FRED = [
     ("ust10", "미 국채 10년물 금리", "DGS10", "%"),
     ("bei10", "10년 기대인플레이션(BEI)", "T10YIE", "%"),
     ("tp10_kw", "10년 명목 텀프리미엄 (Kim-Wright)", "THREEFYTP10", "%p"),
+    ("real10", "10년 실질금리 (TIPS)", "DFII10", "%"),
+    ("wti_spot", "WTI 현물 (쿠싱)", "DCOILWTICO", "$/bbl"),
+    ("brent_spot", "Brent 현물 (유럽)", "DCOILBRENTEU", "$/bbl"),
 ]
 
 
@@ -33,7 +39,7 @@ def get(url, timeout=40):
 
 
 def yahoo(sym):
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=2y&interval=1d"
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range=2y&interval=1d"
     j = json.loads(get(url))["chart"]["result"][0]
     ts = j["timestamp"]; close = j["indicators"]["quote"][0]["close"]
     pts = []
@@ -59,23 +65,33 @@ def fred(sid):
     return pts
 
 
-def acm():
+_ACM = {}
+
+
+def acm(col):
     import pandas as pd
+    if "df" in _ACM:
+        df = _ACM["df"]
+        return [[d.date().isoformat(), round(float(v), 3)] for d, v in zip(df["DATE"], df[col]) if v == v]
     raw = get("https://www.newyorkfed.org/medialibrary/media/research/data_indicators/ACMTermPremium.xls", 90)
     df = pd.read_excel(io.BytesIO(raw), sheet_name="ACM Daily")
     df["DATE"] = pd.to_datetime(df["DATE"], format="%d-%b-%Y", errors="coerce")
-    df = df.dropna(subset=["DATE", "ACMTP10"])
+    df = df.dropna(subset=["DATE"])
     df = df[df["DATE"] >= START]
-    return [[d.date().isoformat(), round(float(v), 3)] for d, v in zip(df["DATE"], df["ACMTP10"])]
+    _ACM["df"] = df
+    return acm(col)
 
 
 def main():
     old = json.loads(OUT.read_text()) if OUT.exists() else {"series": {}}
     series, errors = {}, []
-    jobs = [(k, n, u, "Yahoo Finance", f"https://finance.yahoo.com/quote/{s}", (lambda s=s: yahoo(s))) for k, n, s, u in FUT]
+    jobs = [(k, n, u, "Yahoo Finance", f"https://finance.yahoo.com/quote/{urllib.parse.quote(s)}", (lambda s=s: yahoo(s))) for k, n, s, u in FUT]
     jobs += [(k, n, u, "FRED", f"https://fred.stlouisfed.org/series/{s}", (lambda s=s: fred(s))) for k, n, s, u in FRED]
-    jobs.append(("tp10_acm", "10년 명목 텀프리미엄 (ACM)", "%p", "뉴욕 연은",
-                 "https://www.newyorkfed.org/research/data_indicators/term-premia-tabs", acm))
+    ACM_LINK = "https://www.newyorkfed.org/research/data_indicators/term-premia-tabs"
+    for key, name, col in [("tp10_acm", "10년 명목 텀프리미엄 (ACM)", "ACMTP10"),
+                           ("rny10_acm", "기대 단기금리 경로 (ACM 위험중립 10년)", "ACMRNY10"),
+                           ("y10_acm", "10년물 금리 (ACM 모형 적합치)", "ACMY10")]:
+        jobs.append((key, name, "%" if col != "ACMTP10" else "%p", "뉴욕 연은", ACM_LINK, (lambda c=col: acm(c))))
     for key, name, unit, src, link, fn in jobs:
         prev = old.get("series", {}).get(key)
         try:

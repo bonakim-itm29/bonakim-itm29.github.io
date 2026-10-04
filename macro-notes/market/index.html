@@ -4,24 +4,47 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>시장 지표 · 김보나</title>
-<meta name="description" content="원유 장기 선물과 미국 10년물 금리·BEI·텀프리미엄을 매일 갱신">
+<meta name="description" content="원유 현물·선물, 미국 10년물 금리 분해(기대 단기금리 경로·BEI·실질 경로·텀프리미엄), MOVE를 매일 갱신">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="../../assets/style.css">
 <style>
+:root{--c-real:#2f5d50;--c-bei:#a8701a;--c-tp:#6a4fb5;--c-rn:#2f6bb4;--up:#b4442f;--dn:#2f6bb4}
+@media (prefers-color-scheme: dark){:root{--c-real:#8cc4b0;--c-bei:#e0b25c;--c-tp:#b6a2f0;--c-rn:#7fb0ef;--up:#ef8a73;--dn:#7fb0ef}}
 .mk{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:14px}
-.mk .c{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.c,.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .mk h3{font-size:14px;margin:0 0 6px;font-weight:600}
-.mk .v{font-size:28px;font-weight:700;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
-.mk .u{font-size:13px;color:var(--muted);margin-left:4px;font-weight:500}
-.mk .d{font-size:13px;font-variant-numeric:tabular-nums;margin-top:2px}
-.mk .d span{margin-right:10px}
-.up{color:#b4442f}.dn{color:#2f6bb4}
-@media (prefers-color-scheme: dark){.up{color:#ef8a73}.dn{color:#7fb0ef}}
-.mk svg{display:block;width:100%;height:56px;margin-top:8px}
-.mk .s{font-size:12px;color:var(--muted);margin-top:6px}
-.mk .s a{color:var(--muted)}
-.warn{color:#b4442f;font-size:12px;margin-top:4px}
+.v{font-size:28px;font-weight:700;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.u{font-size:13px;color:var(--muted);margin-left:4px;font-weight:500}
+.d{font-size:13px;font-variant-numeric:tabular-nums;margin-top:2px}
+.d span{margin-right:10px}
+.up{color:var(--up)}.dn{color:var(--dn)}
+a.sp{display:block;margin-top:8px;border-radius:6px}
+a.sp:hover{background:var(--accent-soft)}
+a.sp svg{display:block;width:100%;height:56px}
+.s{font-size:12px;color:var(--muted);margin-top:6px}
+.s a{color:var(--muted)}
+.warn{color:var(--up);font-size:12px;margin-top:4px}
 .stamp{font-size:13px;color:var(--muted)}
+h3.sub{font-size:15px;margin:22px 0 4px}
+.hint{font-size:13px;color:var(--muted);margin:0 0 10px}
+.tree{font-size:14px;line-height:1.9;margin:6px 0 0}
+.tree b{font-variant-numeric:tabular-nums}
+.tree .l1{padding-left:18px}.tree .l2{padding-left:40px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:baseline}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 10px}
+.tabs button{font:inherit;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.br{display:grid;grid-template-columns:minmax(120px,190px) 1fr 64px;align-items:center;gap:8px;font-size:13px;margin:6px 0}
+.br .lab.k1{padding-left:14px}.br .lab.k2{padding-left:28px;color:var(--muted)}
+.br .num{text-align:right;font-variant-numeric:tabular-nums}
+.br .track{position:relative;height:16px}
+.br .track .zero{position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--line)}
+.br .track .bar{position:absolute;top:2px;height:12px;border-radius:2px}
+.lg{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;margin:8px 0 2px;color:var(--muted)}
+a.big{display:block;color:inherit;text-decoration:none}
+a.big svg{display:block;width:100%;height:auto}
+a.big:hover{opacity:.92}
+.cav{font-size:12.5px;color:var(--muted);margin-top:10px}
 </style>
 </head>
 <body>
@@ -33,42 +56,103 @@
 <header class="page">
   <span class="eyebrow">매일 자동 갱신</span>
   <h1>시장 지표</h1>
-  <p class="lead">원유 장기 선물과 미국 10년물 금리 구성요소를 매일 아침 갱신합니다. 각 지표의 기준일은 출처마다 다릅니다.</p>
+  <p class="lead">원유 현물·선물, 미국 10년물 금리의 구성요소와 금리 변동성을 매일 갱신합니다. 그래프를 누르면 출처의 상세 페이지가 열립니다.</p>
   <p class="stamp" id="stamp">불러오는 중…</p>
 </header>
+
 <section>
-  <h2>원유 장기 선물</h2>
-  <div class="mk" id="oil"></div>
+  <h2>원유</h2>
+  <h3 class="sub">현물과 근월물</h3>
+  <p class="hint">현물은 미 에너지정보청(EIA) 공표값이라 며칠 늦게 반영됩니다. 매일 시세는 근월물로 보세요.</p>
+  <div class="mk" id="oil1"></div>
+  <h3 class="sub">장기 선물</h3>
+  <div class="mk" id="oil2"></div>
 </section>
+
 <section>
-  <h2>미국 10년물 금리</h2>
+  <h2>미국 10년물 금리 분해</h2>
+  <div class="panel">
+    <div id="tree" class="tree"></div>
+    <h3 class="sub">기간별로 무엇이 움직였나</h3>
+    <div class="tabs" id="tabs"></div>
+    <div id="bridge"></div>
+    <h3 class="sub">구성요소 추이 (2025년 이후)</h3>
+    <div class="lg" id="legend"></div>
+    <a class="big" id="bigchart" href="https://www.newyorkfed.org/research/data_indicators/term-premia-tabs" target="_blank" rel="noopener" title="뉴욕 연은 ACM 텀프리미엄 페이지 열기"></a>
+    <p class="cav">10년물 = 기대 단기금리 경로 + 명목 텀프리미엄은 뉴욕 연은 ACM 모형의 분해입니다(합이 정확히 맞음). 기대 단기금리 경로를 BEI와 실질 경로로 나눈 것은 근사입니다. BEI에는 인플레이션 위험 프리미엄과 TIPS 유동성 프리미엄이 섞여 있고, 이 일부는 ACM 텀프리미엄과 겹칩니다. 그래서 "실질 경로(근사)"는 기대 단기금리 경로에서 BEI를 뺀 나머지로 계산했습니다.</p>
+  </div>
+  <h3 class="sub">구성요소별 지표</h3>
   <div class="mk" id="rate"></div>
 </section>
+
 <section>
-  <p class="note">원유는 NYMEX 종가(Brent는 NYMEX Brent Last Day Financial, ICE Brent와 연동), 금리는 FRED·뉴욕 연은 공표값입니다. 텀프리미엄은 모형 추정치로, ACM(뉴욕 연은)과 Kim-Wright(연준) 두 가지를 함께 싣습니다. 그래프는 2025년 1월 이후. 개인 학습 기록이며 투자 권유가 아닙니다.</p>
+  <h2>금리 변동성</h2>
+  <div class="mk" id="vol"></div>
+  <p class="hint" style="margin-top:10px">MOVE는 미 국채 2·5·10·30년물 옵션의 1개월 내재변동성을 가중평균한 지수로, 10년물만의 변동성은 아닙니다. 단위는 bp(연율).</p>
+</section>
+
+<section>
+  <p class="note">원유 선물은 NYMEX 종가(Brent는 NYMEX Brent Last Day Financial, ICE Brent와 연동), 현물·금리는 FRED, 텀프리미엄 분해는 뉴욕 연은 ACM 모형입니다. 개인 학습 기록이며 투자 권유가 아닙니다.</p>
 </section>
 </main>
 <footer><div class="wrap">© 2026 김보나</div></footer>
 <script>
-const OIL=['wti_dec27','wti_dec28','brent_dec27','brent_dec28'], RATE=['ust10','bei10','tp10_acm','tp10_kw'];
-const fmt=(v,u)=>u==='$/bbl'?v.toFixed(2):v.toFixed(2);
+const $=id=>document.getElementById(id);
+const OIL1=['wti_spot','brent_spot','wti_front','brent_front'],OIL2=['wti_dec27','wti_dec28','brent_dec27','brent_dec28'];
+const RATE=['ust10','real10','bei10','rny10_acm','tp10_acm','tp10_kw'],VOL=['move'];
+const STALE={wti_spot:10,brent_spot:10,tp10_kw:21};
+const bp=v=>(v>0?'+':'')+Math.round(v*100)+'bp';
 function back(pts,days){const last=new Date(pts[pts.length-1][0]);last.setDate(last.getDate()-days);const t=last.toISOString().slice(0,10);for(let i=pts.length-1;i>=0;i--)if(pts[i][0]<=t)return pts[i];return null}
-function delta(a,b,u){if(!b)return '';let d=a-b[1];d=u==='$/bbl'?Math.round(d*100)/100:Math.round(d*100)/100;const cls=d>0?'up':d<0?'dn':'';const s=(d>0?'+':'')+(u==='$/bbl'?d.toFixed(2):(d*100).toFixed(0)+'bp');return `<span class="${cls}">${s}</span>`}
+function delta(a,b,u){if(!b)return '';let d=Math.round((a-b[1])*100)/100;const cls=d>0?'up':d<0?'dn':'';const s=(u==='$/bbl'||u==='pt')?(d>0?'+':'')+d.toFixed(u==='pt'?1:2):bp(d);return `<span class="${cls}">${s}</span>`}
 function spark(pts){const w=300,h=56,p=3;const ys=pts.map(x=>x[1]);const lo=Math.min(...ys),hi=Math.max(...ys);const sx=i=>p+i*(w-2*p)/Math.max(1,pts.length-1),sy=v=>h-p-(hi===lo?.5:(v-lo)/(hi-lo))*(h-2*p);
  const d=pts.map((x,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(x[1]).toFixed(1)).join(' ');
  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>`}
-function card(s,k){if(!s||!s.points||!s.points.length)return '<div class="c"><h3>데이터 없음</h3></div>';
+function card(s,k){if(!s||!s.points||!s.points.length)return '<div class="c"><h3>데이터 없음</h3><p class="s">다음 갱신 때 다시 시도합니다.</p></div>';
  const p=s.points,L=p[p.length-1];const age=(Date.now()-new Date(L[0]))/864e5;
- const unit=s.unit==='$/bbl'?'$/배럴':s.unit;
- return `<div class="c"><h3>${s.name}</h3><div class="v">${fmt(L[1],s.unit)}<span class="u">${unit}</span></div>
+ const unit=s.unit==='$/bbl'?'$/배럴':s.unit;const dec=s.unit==='pt'?1:2;
+ return `<div class="c"><h3>${s.name}</h3><div class="v">${L[1].toFixed(dec)}<span class="u">${unit}</span></div>
  <div class="d"><span>전일 ${delta(L[1],p[p.length-2],s.unit)}</span><span>1개월 ${delta(L[1],back(p,30),s.unit)}</span><span>1년 ${delta(L[1],back(p,365),s.unit)}</span></div>
- ${spark(p)}<div class="s">기준일 ${L[0]} · <a href="${s.link}" target="_blank" rel="noopener">${s.source}</a></div>
- ${(!s.ok||age>(k==='tp10_kw'?21:7))?'<div class="warn">최근 갱신 실패 또는 지연 — 마지막으로 받은 값입니다.</div>':''}</div>`}
-fetch('data.json?'+Date.now()).then(r=>r.json()).then(D=>{
- document.getElementById('oil').innerHTML=OIL.map(k=>card(D.series[k],k)).join('');
- document.getElementById('rate').innerHTML=RATE.map(k=>card(D.series[k],k)).join('');
- const t=new Date(D.updated_utc);document.getElementById('stamp').textContent='마지막 갱신: '+t.toLocaleString('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'})+' (한국 시간)';
-}).catch(()=>{document.getElementById('stamp').textContent='데이터를 불러오지 못했습니다.'});
+ <a class="sp" href="${s.link}" target="_blank" rel="noopener" title="${s.source}에서 자세히 보기">${spark(p)}</a>
+ <div class="s">기준일 ${L[0]} · <a href="${s.link}" target="_blank" rel="noopener">${s.source} ↗</a></div>
+ ${(!s.ok||age>(STALE[k]||7))?'<div class="warn">최근 갱신 실패 또는 지연 — 마지막으로 받은 값입니다.</div>':''}</div>`}
+
+/* ---- 10년물 분해 ---- */
+function decomp(S){const need=['y10_acm','rny10_acm','tp10_acm','bei10'];if(need.some(k=>!S[k]||!S[k].points.length))return null;
+ const m=k=>new Map(S[k].points);const Y=m('y10_acm'),RN=m('rny10_acm'),TP=m('tp10_acm'),B=m('bei10');
+ const rows=[];for(const [d,y] of Y){if(RN.has(d)&&TP.has(d)&&B.has(d)){const rn=RN.get(d),b=B.get(d);rows.push({d,y,rn,tp:TP.get(d),bei:b,real:rn-b})}}
+ return rows}
+const COMP=[['y','10년물 금리 (ACM)','var(--text)',0],['rn','기대 단기금리 경로','var(--c-rn)',1],['bei','BEI (장기 물가보상)','var(--c-bei)',2],['real','실질 경로 (근사)','var(--c-real)',2],['tp','명목 텀프리미엄','var(--c-tp)',1]];
+function tree(r){const sw=c=>`<span class="sw" style="background:${c}"></span>`;
+ $('tree').innerHTML=`<div><b>10년물 금리 ${r.y.toFixed(2)}%</b> <span class="hint">(기준일 ${r.d}, ACM 모형 적합치)</span></div>
+ <div class="l1">= ${sw('var(--c-rn)')}기대 단기금리 경로 <b>${r.rn.toFixed(2)}%</b> + ${sw('var(--c-tp)')}명목 텀프리미엄 <b>${r.tp.toFixed(2)}%p</b></div>
+ <div class="l2">기대 단기금리 경로 ≈ ${sw('var(--c-bei)')}BEI <b>${r.bei.toFixed(2)}%</b> + ${sw('var(--c-real)')}실질 경로(근사) <b>${r.real.toFixed(2)}%</b></div>`}
+function bridge(rows,days){const L=rows[rows.length-1];const t=new Date(L.d);t.setDate(t.getDate()-days);const ts=t.toISOString().slice(0,10);
+ let B=null;for(let i=rows.length-1;i>=0;i--)if(rows[i].d<=ts){B=rows[i];break}if(!B){$('bridge').innerHTML='<p class="hint">이 기간의 데이터가 없습니다.</p>';return}
+ const ch=COMP.map(([k,n,c,lv])=>[n,c,lv,L[k]-B[k]]);const mx=Math.max(...ch.map(x=>Math.abs(x[3])),0.0001);
+ $('bridge').innerHTML=`<p class="hint">${B.d} → ${L.d} 변화. 위 두 줄(경로·텀프리미엄)의 합이 10년물 변화이고, 경로 변화는 BEI와 실질 경로로 나뉩니다.</p>`+
+ ch.map(([n,c,lv,d])=>{const w=Math.abs(d)/mx*50;const left=d>=0?50:50-w;
+  return `<div class="br"><span class="lab k${lv}">${lv?'└ ':''}${n}</span><span class="track"><span class="zero"></span><span class="bar" style="left:${left}%;width:${Math.max(w,.4)}%;background:${c}"></span></span><span class="num ${d>0?'up':d<0?'dn':''}">${bp(d)}</span></div>`}).join('')}
+function bigchart(rows){const W=900,H=300,ml=44,mr=12,mt=10,mb=26;const keys=[['y','var(--text)',2],['rn','var(--c-rn)',1.6],['bei','var(--c-bei)',1.6],['real','var(--c-real)',1.6],['tp','var(--c-tp)',1.6]];
+ const vals=rows.flatMap(r=>keys.map(k=>r[k[0]]));let lo=Math.floor(Math.min(...vals,0)*2)/2,hi=Math.ceil(Math.max(...vals)*2)/2;
+ const sx=i=>ml+i*(W-ml-mr)/(rows.length-1),sy=v=>mt+(hi-v)/(hi-lo)*(H-mt-mb);
+ let g='';for(let v=lo;v<=hi+1e-9;v+=0.5){g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(v)}" y2="${sy(v)}" stroke="var(--line)" stroke-width="${Math.abs(v)<1e-9?1.2:.6}"/><text x="${ml-6}" y="${sy(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v.toFixed(1)}%</text>`}
+ let lastM='';rows.forEach((r,i)=>{const m=r.d.slice(0,7);if(m!==lastM&&(m.endsWith('01')||m.endsWith('07'))){g+=`<text x="${sx(i)}" y="${H-8}" font-size="11" fill="var(--muted)" text-anchor="middle">${m.replace('-','.')}</text>`}lastM=m});
+ const lines=keys.map(([k,c,w])=>`<path d="${rows.map((r,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(r[k]).toFixed(1)).join(' ')}" fill="none" stroke="${c}" stroke-width="${w}"/>`).join('');
+ $('bigchart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="10년물 금리 구성요소 추이">${g}${lines}</svg>`;
+ $('legend').innerHTML=COMP.map(([k,n,c])=>`<span><span class="sw" style="background:${c}"></span>${n}</span>`).join('')+'<span>· 그래프를 누르면 뉴욕 연은 ACM 페이지가 열립니다</span>'}
+
+fetch('data.json?'+Date.now()).then(r=>r.json()).then(D=>{const S=D.series;
+ $('oil1').innerHTML=OIL1.map(k=>card(S[k],k)).join('');$('oil2').innerHTML=OIL2.map(k=>card(S[k],k)).join('');
+ $('rate').innerHTML=RATE.map(k=>card(S[k],k)).join('');$('vol').innerHTML=VOL.map(k=>card(S[k],k)).join('');
+ const rows=decomp(S);
+ if(rows&&rows.length>5){tree(rows[rows.length-1]);bigchart(rows);
+  const P=[['1주',7],['1개월',30],['3개월',91],['1년',365]];
+  $('tabs').innerHTML=P.map(([n,d],i)=>`<button type="button" data-d="${d}" aria-pressed="${i===1}">${n}</button>`).join('');
+  $('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('tabs').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));bridge(rows,+b.dataset.d)});
+  bridge(rows,30)}
+ else{$('tree').innerHTML='<p class="hint">분해 데이터를 아직 받지 못했습니다. 다음 갱신 때 채워집니다.</p>'}
+ $('stamp').textContent='마지막 갱신: '+new Date(D.updated_utc).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'})+' (한국 시간)';
+}).catch(e=>{$('stamp').textContent='데이터를 불러오지 못했습니다.';console.error(e)});
 </script>
 </body>
 </html>
