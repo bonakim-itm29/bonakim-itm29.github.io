@@ -1,0 +1,102 @@
+"""매크로 투자노트 '시장 지표' 데이터를 매일 갱신한다 (GitHub Actions에서 실행).
+
+출처
+- 원유 선물: Yahoo Finance 차트 API (NYMEX WTI CL, NYMEX Brent Last Day Financial BZ)
+- 10년물 금리 DGS10, 10년 BEI T10YIE, Kim-Wright 10년 텀프리미엄 THREEFYTP10: FRED
+- ACM 10년 텀프리미엄 ACMTP10: 뉴욕 연은
+한 출처가 실패해도 이전 값은 지우지 않고 남겨 두고, 실패 사실을 기록한다.
+"""
+import csv, io, json, datetime as dt, pathlib, sys, traceback
+import urllib.request
+
+OUT = pathlib.Path(__file__).resolve().parents[1] / "macro-notes" / "market" / "data.json"
+START = "2025-01-01"
+UA = {"User-Agent": "Mozilla/5.0 (bonakim-itm29.github.io market updater)"}
+
+FUT = [  # key, 표시명, 야후 심볼, 단위
+    ("wti_dec27", "WTI 2027년 12월물", "CLZ27.NYM", "$/bbl"),
+    ("wti_dec28", "WTI 2028년 12월물", "CLZ28.NYM", "$/bbl"),
+    ("brent_dec27", "Brent 2027년 12월물", "BZZ27.NYM", "$/bbl"),
+    ("brent_dec28", "Brent 2028년 12월물", "BZZ28.NYM", "$/bbl"),
+]
+FRED = [
+    ("ust10", "미 국채 10년물 금리", "DGS10", "%"),
+    ("bei10", "10년 기대인플레이션(BEI)", "T10YIE", "%"),
+    ("tp10_kw", "10년 명목 텀프리미엄 (Kim-Wright)", "THREEFYTP10", "%p"),
+]
+
+
+def get(url, timeout=40):
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read()
+
+
+def yahoo(sym):
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=2y&interval=1d"
+    j = json.loads(get(url))["chart"]["result"][0]
+    ts = j["timestamp"]; close = j["indicators"]["quote"][0]["close"]
+    pts = []
+    for t, c in zip(ts, close):
+        if c is None:
+            continue
+        d = dt.datetime.utcfromtimestamp(t).date().isoformat()
+        if d >= START:
+            pts.append([d, round(float(c), 2)])
+    # 같은 날짜 중복 시 마지막 값
+    return [[d, v] for d, v in dict(pts).items()]
+
+
+def fred(sid):
+    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={START}"
+    rows = list(csv.reader(io.StringIO(get(url).decode())))
+    pts = []
+    for r in rows[1:]:
+        try:
+            pts.append([r[0], round(float(r[1]), 3)])
+        except (ValueError, IndexError):
+            pass  # 휴일 '.' 등
+    return pts
+
+
+def acm():
+    import pandas as pd
+    raw = get("https://www.newyorkfed.org/medialibrary/media/research/data_indicators/ACMTermPremium.xls", 90)
+    df = pd.read_excel(io.BytesIO(raw), sheet_name="ACM Daily")
+    df["DATE"] = pd.to_datetime(df["DATE"], format="%d-%b-%Y", errors="coerce")
+    df = df.dropna(subset=["DATE", "ACMTP10"])
+    df = df[df["DATE"] >= START]
+    return [[d.date().isoformat(), round(float(v), 3)] for d, v in zip(df["DATE"], df["ACMTP10"])]
+
+
+def main():
+    old = json.loads(OUT.read_text()) if OUT.exists() else {"series": {}}
+    series, errors = {}, []
+    jobs = [(k, n, u, "Yahoo Finance", f"https://finance.yahoo.com/quote/{s}", (lambda s=s: yahoo(s))) for k, n, s, u in FUT]
+    jobs += [(k, n, u, "FRED", f"https://fred.stlouisfed.org/series/{s}", (lambda s=s: fred(s))) for k, n, s, u in FRED]
+    jobs.append(("tp10_acm", "10년 명목 텀프리미엄 (ACM)", "%p", "뉴욕 연은",
+                 "https://www.newyorkfed.org/research/data_indicators/term-premia-tabs", acm))
+    for key, name, unit, src, link, fn in jobs:
+        prev = old.get("series", {}).get(key)
+        try:
+            pts = fn()
+            if not pts:
+                raise ValueError("빈 데이터")
+            series[key] = dict(name=name, unit=unit, source=src, link=link, points=pts, ok=True)
+        except Exception as e:
+            errors.append(f"{key}: {e}")
+            traceback.print_exc()
+            if prev:
+                prev["ok"] = False
+                series[key] = prev
+    out = dict(updated_utc=dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+               series=series, errors=errors)
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")))
+    print(f"wrote {OUT} ({len(series)} series, {len(errors)} errors)")
+    if len(errors) == len(jobs):
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

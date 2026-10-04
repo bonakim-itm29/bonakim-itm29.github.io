@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>시장 지표 · 김보나</title>
+<meta name="description" content="원유 장기 선물과 미국 10년물 금리·BEI·텀프리미엄을 매일 갱신">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+.mk{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:14px}
+.mk .c{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.mk h3{font-size:14px;margin:0 0 6px;font-weight:600}
+.mk .v{font-size:28px;font-weight:700;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.mk .u{font-size:13px;color:var(--muted);margin-left:4px;font-weight:500}
+.mk .d{font-size:13px;font-variant-numeric:tabular-nums;margin-top:2px}
+.mk .d span{margin-right:10px}
+.up{color:#b4442f}.dn{color:#2f6bb4}
+@media (prefers-color-scheme: dark){.up{color:#ef8a73}.dn{color:#7fb0ef}}
+.mk svg{display:block;width:100%;height:56px;margin-top:8px}
+.mk .s{font-size:12px;color:var(--muted);margin-top:6px}
+.mk .s a{color:var(--muted)}
+.warn{color:#b4442f;font-size:12px;margin-top:4px}
+.stamp{font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a href="../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../index.html#direction">연구방향</a></li><li><a href="../../courses/index.html">대학원 과목</a></li><li><a href="../index.html">투자노트</a></li>
+</ul></div></nav>
+<main class="wrap">
+<p class="crumb"><a href="../../index.html">홈</a> / <a href="../index.html">매크로 투자노트</a> / 시장 지표</p>
+<header class="page">
+  <span class="eyebrow">매일 자동 갱신</span>
+  <h1>시장 지표</h1>
+  <p class="lead">원유 장기 선물과 미국 10년물 금리 구성요소를 매일 아침 갱신합니다. 각 지표의 기준일은 출처마다 다릅니다.</p>
+  <p class="stamp" id="stamp">불러오는 중…</p>
+</header>
+<section>
+  <h2>원유 장기 선물</h2>
+  <div class="mk" id="oil"></div>
+</section>
+<section>
+  <h2>미국 10년물 금리</h2>
+  <div class="mk" id="rate"></div>
+</section>
+<section>
+  <p class="note">원유는 NYMEX 종가(Brent는 NYMEX Brent Last Day Financial, ICE Brent와 연동), 금리는 FRED·뉴욕 연은 공표값입니다. 텀프리미엄은 모형 추정치로, ACM(뉴욕 연은)과 Kim-Wright(연준) 두 가지를 함께 싣습니다. 그래프는 2025년 1월 이후. 개인 학습 기록이며 투자 권유가 아닙니다.</p>
+</section>
+</main>
+<footer><div class="wrap">© 2026 김보나</div></footer>
+<script>
+const OIL=['wti_dec27','wti_dec28','brent_dec27','brent_dec28'], RATE=['ust10','bei10','tp10_acm','tp10_kw'];
+const fmt=(v,u)=>u==='$/bbl'?v.toFixed(2):v.toFixed(2);
+function back(pts,days){const last=new Date(pts[pts.length-1][0]);last.setDate(last.getDate()-days);const t=last.toISOString().slice(0,10);for(let i=pts.length-1;i>=0;i--)if(pts[i][0]<=t)return pts[i];return null}
+function delta(a,b,u){if(!b)return '';const d=a-b[1];const cls=d>0?'up':d<0?'dn':'';const s=(d>0?'+':'')+(u==='$/bbl'?d.toFixed(2):(d*100).toFixed(0)+'bp');return `<span class="${cls}">${s}</span>`}
+function spark(pts){const w=300,h=56,p=3;const ys=pts.map(x=>x[1]);const lo=Math.min(...ys),hi=Math.max(...ys);const sx=i=>p+i*(w-2*p)/Math.max(1,pts.length-1),sy=v=>h-p-(hi===lo?.5:(v-lo)/(hi-lo))*(h-2*p);
+ const d=pts.map((x,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(x[1]).toFixed(1)).join(' ');
+ return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>`}
+function card(s,k){if(!s||!s.points||!s.points.length)return '<div class="c"><h3>데이터 없음</h3></div>';
+ const p=s.points,L=p[p.length-1];const age=(Date.now()-new Date(L[0]))/864e5;
+ const unit=s.unit==='$/bbl'?'$/배럴':s.unit;
+ return `<div class="c"><h3>${s.name}</h3><div class="v">${fmt(L[1],s.unit)}<span class="u">${unit}</span></div>
+ <div class="d"><span>전일 ${delta(L[1],p[p.length-2],s.unit)}</span><span>1개월 ${delta(L[1],back(p,30),s.unit)}</span><span>1년 ${delta(L[1],back(p,365),s.unit)}</span></div>
+ ${spark(p)}<div class="s">기준일 ${L[0]} · <a href="${s.link}" target="_blank" rel="noopener">${s.source}</a></div>
+ ${(!s.ok||age>(k==='tp10_kw'?21:7))?'<div class="warn">최근 갱신 실패 또는 지연 — 마지막으로 받은 값입니다.</div>':''}</div>`}
+fetch('data.json?'+Date.now()).then(r=>r.json()).then(D=>{
+ document.getElementById('oil').innerHTML=OIL.map(k=>card(D.series[k],k)).join('');
+ document.getElementById('rate').innerHTML=RATE.map(k=>card(D.series[k],k)).join('');
+ const t=new Date(D.updated_utc);document.getElementById('stamp').textContent='마지막 갱신: '+t.toLocaleString('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'})+' (한국 시간)';
+}).catch(()=>{document.getElementById('stamp').textContent='데이터를 불러오지 못했습니다.'});
+</script>
+</body>
+</html>
