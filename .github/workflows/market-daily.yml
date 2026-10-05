@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  issues: write
 concurrency: market-daily
 jobs:
   update:
@@ -25,3 +26,21 @@ jobs:
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git commit -m "Update market indicators $(date -u +%F)"
           git push
+      - name: Alerts (open an issue when a signal turns on or off)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          try:
+              items = json.load(open("alerts_new.json"))
+          except Exception:
+              items = []
+          for s in items:
+              head = "[신호 발생] " if s["on"] else "[신호 해제] "
+              title = f'{head}{s["name"]} — {s["value"]} ({s["date"]})'
+              body = (f'@bonakim-itm29\n\n- 지표: {s["name"]}\n- 값: {s["value"]} (기준일 {s["date"]})\n'
+                      f'- 근거: {s["note"]}\n\n대시보드: https://bonakim-itm29.github.io/macro-notes/market/\n\n'
+                      '개인 설정 기준에 따른 자동 알림이며 투자 권유가 아닙니다.')
+              subprocess.run(["gh", "issue", "create", "--title", title, "--body", body], check=False)
+          PY

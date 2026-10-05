@@ -17,6 +17,7 @@ FUT = [  # key, 표시명, 야후 심볼, 단위
     ("wti_front", "WTI 근월물", "CL=F", "$/bbl"),
     ("brent_front", "Brent 근월물", "BZ=F", "$/bbl"),
     ("silver_front", "은 근월물", "SI=F", "$/oz"),
+    ("gold_front", "금 근월물", "GC=F", "$/oz"),
     ("move", "MOVE 지수 (미 국채 내재변동성)", "^MOVE", "pt"),
     ("wti_dec27", "WTI 2027년 12월물", "CLZ27.NYM", "$/bbl"),
     ("wti_dec28", "WTI 2028년 12월물", "CLZ28.NYM", "$/bbl"),
@@ -39,7 +40,7 @@ def get(url, timeout=40):
         return r.read()
 
 
-LONG = {"CL=F", "SI=F"}  # 오일/실버 비율의 장기 비교용
+LONG = {"CL=F", "SI=F", "GC=F"}  # 오일/실버 비율의 장기 비교용
 
 
 def yahoo(sym):
@@ -86,6 +87,46 @@ def acm(col):
     return acm(col)
 
 
+# 포트폴리오 재구성·위험 신호 (기준은 이선철 칼럼에서 가져옴, 페이지에 출처 표기)
+RULES = [
+    dict(key="oil_silver", name="오일/실버 비율 3 이상", note="투자 시계열에서 원유 MAX 포지션을 줄이고 다변화할 시점 (NOTE #251, 2026-09-15)"),
+    dict(key="gold_oil", name="금/원유 비율 13배럴 이하 (오일/금 정상화)", note="금 1온스 = 원유 약 13배럴이 장기 평균. 비율 정상화는 유가 급등으로 이뤄질 것 (2026-07-23, 2026-08-09 칼럼)"),
+    dict(key="move", name="MOVE 120 이상", note="국채 변동성 급등 → 나스닥·S&P 500 위험 신호 (사용자 설정 기준)"),
+]
+
+
+def _ratio(series, a, b, inv=False):
+    if a not in series or b not in series:
+        return None
+    B = dict(series[b]["points"])
+    rows = [(d, v / B[d]) for d, v in series[a]["points"] if d in B and v > 0 and B[d] > 0]
+    if not rows:
+        return None
+    d, v = rows[-1]
+    return d, (1 / v if inv else v)
+
+
+def compute_signals(series, prev):
+    vals = {
+        "oil_silver": _ratio(series, "wti_front", "silver_front"),
+        "gold_oil": _ratio(series, "gold_front", "wti_front"),
+        "move": (series["move"]["points"][-1][0], series["move"]["points"][-1][1]) if "move" in series else None,
+    }
+    test = {"oil_silver": lambda v: v >= 3.0, "gold_oil": lambda v: v <= 13.0, "move": lambda v: v >= 120.0}
+    out = {}
+    for r in RULES:
+        k = r["key"]; v = vals.get(k)
+        if not v:
+            if k in prev: out[k] = prev[k]
+            continue
+        on = bool(test[k](v[1]))
+        was = prev.get(k, {}).get("on", False)
+        since = prev.get(k, {}).get("since") if on == was else v[0]
+        out[k] = dict(name=r["name"], note=r["note"], date=v[0], value=round(v[1], 3), on=on, since=since,
+                      changed=(on != was))
+    return out
+
+
 def main():
     old = json.loads(OUT.read_text()) if OUT.exists() else {"series": {}}
     series, errors = {}, []
@@ -109,10 +150,13 @@ def main():
             if prev:
                 prev["ok"] = False
                 series[key] = prev
-    out = dict(updated_utc=dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+    signals = compute_signals(series, old.get("signals", {}))
+    out = dict(signals=signals, updated_utc=dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
                series=series, errors=errors)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")))
+    newly = [s for s in signals.values() if s.get("changed")]
+    (OUT.parent.parent.parent / "alerts_new.json").write_text(json.dumps(newly, ensure_ascii=False))
     print(f"wrote {OUT} ({len(series)} series, {len(errors)} errors)")
     if len(errors) == len(jobs):
         sys.exit(1)

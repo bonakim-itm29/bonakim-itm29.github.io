@@ -47,6 +47,12 @@ a.big:hover{opacity:.92}
 .badge{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;margin-left:10px;vertical-align:middle}
 .badge.on{background:var(--up);color:var(--surface)}.badge.off{background:var(--accent-soft);color:var(--accent)}
 .rule{font-size:13.5px;margin:8px 0 4px}
+.sig{display:grid;grid-template-columns:1.6fr .8fr .9fr 1.2fr;gap:8px 12px;align-items:center;font-size:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.sig:last-child{border-bottom:0}.sig .nm b{display:block}.sig .nm span{font-size:12px;color:var(--muted)}
+.sig .val{font-variant-numeric:tabular-nums;font-weight:700;font-size:18px}
+@media (max-width:640px){.sig{grid-template-columns:1fr 1fr}}
+.alert{border:1px solid var(--up);background:color-mix(in srgb,var(--up) 12%,var(--surface));color:var(--text);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:14px}
+.alert b{color:var(--up)}
 .cav{font-size:12.5px;color:var(--muted);margin-top:10px}
 </style>
 </head>
@@ -65,6 +71,12 @@ a.big:hover{opacity:.92}
 </header>
 
 <section>
+  <h2>신호판</h2>
+  <div class="panel" id="signals"><p class="hint">불러오는 중…</p></div>
+  <p class="hint" style="margin-top:8px">신호가 켜지거나 꺼지면 깃헙 이슈로 알림이 갑니다(깃헙 앱·이메일). 기준은 개인 설정이며 투자 권유가 아닙니다.</p>
+</section>
+
+<section>
   <h2>원유</h2>
   <h3 class="sub">현물과 근월물</h3>
   <p class="hint">현물은 미 에너지정보청(EIA) 공표값이라 며칠 늦게 반영됩니다. 매일 시세는 근월물로 보세요.</p>
@@ -74,11 +86,16 @@ a.big:hover{opacity:.92}
 </section>
 
 <section>
-  <h2>오일/실버 비율</h2>
+  <h2>귀금속 대비 원유 (포트폴리오 재구성 기준)</h2>
   <div class="panel">
+    <h3 class="sub" style="margin-top:0">오일/실버 비율</h3>
     <div id="osr"></div>
     <a class="big" id="osrchart" href="https://finance.yahoo.com/quote/SI%3DF" target="_blank" rel="noopener" title="Yahoo Finance 은 선물 페이지 열기"></a>
-    <p class="cav">WTI 근월물(달러/배럴) ÷ 은 근월물(달러/온스), 2010년 이후 일별 종가(WTI가 마이너스였던 2020년 4월 20일은 제외). 점선이 기준선 3입니다. 그래프를 누르면 은 선물 페이지가 열리고, WTI는 위 원유 카드에서 볼 수 있습니다.</p>
+    <p class="cav">WTI 근월물(달러/배럴) ÷ 은 근월물(달러/온스), 2010년 이후 일별 종가(WTI가 마이너스였던 2020년 4월 20일 제외). 점선이 기준선 3입니다. 그래프를 누르면 은 선물 페이지가 열립니다.</p>
+    <h3 class="sub">오일/금 비율 (금 1온스로 살 수 있는 원유 배럴 수로 표시)</h3>
+    <div id="ogr"></div>
+    <a class="big" id="ogrchart" href="https://finance.yahoo.com/quote/GC%3DF" target="_blank" rel="noopener" title="Yahoo Finance 금 선물 페이지 열기"></a>
+    <p class="cav">금 근월물(달러/온스) ÷ WTI 근월물(달러/배럴). 오일/금 비율을 뒤집은 값으로, 이선철 대표가 이 형태(금 1온스 = 원유 몇 배럴)로 기준을 제시해 그대로 따랐습니다. 숫자가 내려갈수록 원유가 금보다 강해진 것이며, 점선이 장기 평균 13배럴입니다. 2020년 3~5월처럼 유가가 극단적으로 낮았던 구간은 그래프 위쪽을 잘랐습니다.</p>
   </div>
   <div class="mk" id="silver"></div>
 </section>
@@ -101,6 +118,9 @@ a.big:hover{opacity:.92}
 
 <section>
   <h2>금리 변동성</h2>
+  <div id="movebanner"></div>
+  <div class="panel"><div id="movev"></div><a class="big" id="movechart" href="https://finance.yahoo.com/quote/%5EMOVE" target="_blank" rel="noopener" title="Yahoo Finance MOVE 지수 페이지 열기"></a>
+  <p class="cav">점선이 120입니다. 120 이상이면 국채 변동성이 커져 나스닥·S&amp;P 500의 위험 신호로 표시합니다.</p></div>
   <div class="mk" id="vol"></div>
   <p class="hint" style="margin-top:10px">MOVE는 미 국채 2·5·10·30년물 옵션의 1개월 내재변동성을 가중평균한 지수로, 10년물만의 변동성은 아닙니다. 단위는 bp(연율).</p>
 </section>
@@ -156,26 +176,35 @@ function bigchart(rows){const W=900,H=300,ml=44,mr=12,mt=10,mb=26;const keys=[['
  $('legend').innerHTML=COMP.map(([k,n,c])=>`<span><span class="sw" style="background:${c}"></span>${n}</span>`).join('')+'<span>· 그래프를 누르면 뉴욕 연은 ACM 페이지가 열립니다</span>'}
 
 
-/* ---- 오일/실버 ---- */
-const OSR_TH=3;
-function osr(S){const a=S.wti_front,b=S.silver_front;if(!a||!b||!a.points.length||!b.points.length){$('osr').innerHTML='<p class="hint">은 가격을 아직 받지 못했습니다. 다음 갱신 때 채워집니다.</p>';return}
- const sv=new Map(b.points);const rows=a.points.filter(([d,v])=>sv.has(d)&&v>0).map(([d,v])=>[d,v/sv.get(d)]);if(rows.length<2)return;
- const L=rows[rows.length-1],on=L[1]>=OSR_TH;let i0=rows.length-1;while(i0>=0&&(rows[i0][1]>=OSR_TH)===on)i0--;const since=i0>=0?rows[i0+1][0]:null;const lastOther=i0>=0?rows[i0][0]:null;const mx=rows.reduce((a,r)=>r[1]>a[1]?r:a);
- const p1=back(rows,30),p12=back(rows,365);const df=(x)=>x?((L[1]-x[1]>0?'+':'')+(L[1]-x[1]).toFixed(2)):'';
- $('osr').innerHTML=`<div class="v">${L[1].toFixed(2)}<span class="badge ${on?'on':'off'}">${on?'3 이상':'3 미만'}</span></div>
- <div class="d"><span>1개월 ${df(p1)}</span><span>1년 ${df(p12)}</span><span>${since?(on?'3 이상 유지 시작 ':'3 미만 전환 ')+since+' (마지막 '+(on?'3 미만':'3 이상')+' '+lastOther+')':(on?'2010년 이후 계속 3 이상':'2010년 이후 계속 3 미만')}</span><span>2010년 이후 최고 ${mx[1].toFixed(2)} (${mx[0]})</span><span>기준일 ${L[0]}</span></div>
- <p class="rule"><b>내 대응 기준:</b> 3 이상이면 오일 최대 비중에서 귀금속, 가치주 영역에 들어온 헬스케어·소비주, 중국 빅테크로 다변화를 검토하는 시점.</p>`;
- const W=900,H=240,ml=40,mr=12,mt=10,mb=26;const ys=rows.map(r=>r[1]);let lo=Math.floor(Math.min(...ys,OSR_TH)*2)/2,hi=Math.ceil(Math.max(...ys,OSR_TH)*2)/2;
- const sx=i=>ml+i*(W-ml-mr)/(rows.length-1),sy=v=>mt+(hi-v)/(hi-lo)*(H-mt-mb);let g='';const st=(hi-lo)>4?1:.5;
- for(let v=lo;v<=hi+1e-9;v+=st)g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(v)}" y2="${sy(v)}" stroke="var(--line)" stroke-width=".6"/><text x="${ml-6}" y="${sy(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v.toFixed(1)}</text>`;
- let lm='';rows.forEach((r,i)=>{const m=r[0].slice(0,7);if(m!==lm&&m.endsWith('01')&&(+m.slice(0,4))%2===0)g+=`<text x="${sx(i)}" y="${H-8}" font-size="11" fill="var(--muted)" text-anchor="middle">${m.slice(0,4)}</text>`;lm=m});
- g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(OSR_TH)}" y2="${sy(OSR_TH)}" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="6 4"/><text x="${ml+6}" y="${sy(OSR_TH)+14}" text-anchor="start" font-size="11" fill="var(--up)">기준선 3</text>`;
- const path=rows.map((r,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(r[1]).toFixed(1)).join(' ');
- $('osrchart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="오일/실버 비율 추이">${g}<path d="${path}" fill="none" stroke="var(--accent)" stroke-width="2"/><circle cx="${sx(rows.length-1)}" cy="${sy(L[1])}" r="4" fill="var(--accent)"/></svg>`}
+/* ---- 비율·임계값 차트 ---- */
+function ratioRows(S,num,den,minDate){const a=S[num],b=S[den];if(!a||!b||!a.points.length||!b.points.length)return null;const m=new Map(b.points);
+ return a.points.filter(([d,v])=>m.has(d)&&v>0&&m.get(d)>0&&(!minDate||d>=minDate)).map(([d,v])=>[d,v/m.get(d)])}
+function thChart(el,rows,th,o){const W=900,H=240,ml=44,mr=12,mt=10,mb=26;let ys=rows.map(r=>r[1]);let hi=Math.max(...ys,th),lo=Math.min(...ys,th);if(o.cap)hi=Math.min(hi,o.cap);
+ const st=o.step||((hi-lo)>8?10:(hi-lo)>4?1:.5);lo=Math.floor(lo/st)*st;hi=Math.ceil(hi/st)*st;
+ const sx=i=>ml+i*(W-ml-mr)/(rows.length-1),sy=v=>mt+(hi-Math.min(v,hi))/(hi-lo)*(H-mt-mb);let g='';
+ for(let v=lo;v<=hi+1e-9;v+=st)g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(v)}" y2="${sy(v)}" stroke="var(--line)" stroke-width=".6"/><text x="${ml-6}" y="${sy(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${+v.toFixed(2)}</text>`;
+ let lm='';const yrStep=rows.length>1500?2:1;rows.forEach((r,i)=>{const m=r[0].slice(0,7);if(m!==lm&&m.endsWith('01')&&(+m.slice(0,4))%yrStep===0)g+=`<text x="${sx(i)}" y="${H-8}" font-size="11" fill="var(--muted)" text-anchor="middle">${m.slice(0,4)}</text>`;else if(rows.length<700&&m!==lm&&m.endsWith('07'))g+=`<text x="${sx(i)}" y="${H-8}" font-size="11" fill="var(--muted)" text-anchor="middle">${m.replace('-','.')}</text>`;lm=m});
+ g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(th)}" y2="${sy(th)}" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="6 4"/><text x="${ml+6}" y="${sy(th)+(o.labelAbove?-6:14)}" font-size="11" fill="var(--up)">${o.thLabel}</text>`;
+ const path=rows.map((r,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(r[1]).toFixed(1)).join(' ');const L=rows[rows.length-1];
+ $(el).innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.aria}">${g}<path d="${path}" fill="none" stroke="var(--accent)" stroke-width="1.8"/><circle cx="${sx(rows.length-1)}" cy="${sy(L[1])}" r="4" fill="var(--accent)"/></svg>`}
+function thSummary(el,rows,th,o){const L=rows[rows.length-1],hit=v=>o.below?v<=th:v>=th,on=hit(L[1]);let i0=rows.length-1;while(i0>=0&&hit(rows[i0][1])===on)i0--;
+ const since=i0>=0?rows[i0+1][0]:null,lastOther=i0>=0?rows[i0][0]:null;const df=x=>x?((L[1]-x[1]>0?'+':'')+(L[1]-x[1]).toFixed(2)):'';
+ $(el).innerHTML=`<div class="v">${L[1].toFixed(2)}<span class="u">${o.unit||''}</span><span class="badge ${on?'on':'off'}">${on?o.onTxt:o.offTxt}</span></div>
+ <div class="d"><span>1개월 ${df(back(rows,30))}</span><span>1년 ${df(back(rows,365))}</span><span>${since?(on?o.onTxt+' 시작 ':o.offTxt+' 전환 ')+since+' (마지막 '+(on?o.offTxt:o.onTxt)+' '+lastOther+')':'2010년 이후 계속 '+(on?o.onTxt:o.offTxt)}</span><span>기준일 ${L[0]}</span></div>
+ <p class="rule"><b>기준:</b> ${o.rule}</p>`}
+function signals(D){const S=D.signals||{};const order=['oil_silver','gold_oil','move'];const th={oil_silver:'≥ 3.0',gold_oil:'≤ 13배럴',move:'≥ 120'};
+ const rows=order.filter(k=>S[k]).map(k=>{const s=S[k];return `<div class="sig"><div class="nm"><b>${s.name}</b><span>${s.note}</span></div><div class="val">${(+s.value).toFixed(2)}</div><div>기준 ${th[k]}<br><span class="hint">기준일 ${s.date}</span></div><div><span class="badge ${s.on?'on':'off'}">${s.on?'신호 켜짐':'대기'}</span><br><span class="hint">${s.on?'켜진 날 '+s.since:''}</span></div></div>`}).join('');
+ $('signals').innerHTML=rows||'<p class="hint">신호 데이터는 다음 갱신 때 채워집니다.</p>'}
 
 fetch('data.json?'+Date.now()).then(r=>r.json()).then(D=>{const S=D.series;
  $('oil1').innerHTML=OIL1.map(k=>card(S[k],k)).join('');$('oil2').innerHTML=OIL2.map(k=>card(S[k],k)).join('');
- $('rate').innerHTML=RATE.map(k=>card(S[k],k)).join('');$('vol').innerHTML=VOL.map(k=>card(S[k],k)).join('');$('silver').innerHTML=card(S.silver_front,'silver_front');osr(S);
+ $('rate').innerHTML=RATE.map(k=>card(S[k],k)).join('');$('vol').innerHTML=VOL.map(k=>card(S[k],k)).join('');$('silver').innerHTML=card(S.silver_front,'silver_front')+card(S.gold_front,'gold_front');signals(D);
+ const r1=ratioRows(S,'wti_front','silver_front','2010-01-01');if(r1&&r1.length>2){thSummary('osr',r1,3,{onTxt:'3 이상',offTxt:'3 미만',rule:'3 이상이면 오일 최대 비중에서 귀금속, 가치주 영역에 들어온 헬스케어·소비주, 중국 빅테크로 다변화를 검토 (이선철 NOTE #251, 2026-09-15: "원유에 대한 MAX 포지션을 줄이고 다변화시켜야 될 시점은 3.0 전후")'});thChart('osrchart',r1,3,{thLabel:'기준선 3',aria:'오일/실버 비율 추이'})}
+ const r2=ratioRows(S,'gold_front','wti_front','2010-01-01');if(r2&&r2.length>2){thSummary('ogr',r2,13,{below:true,unit:'배럴',onTxt:'13 이하',offTxt:'13 초과',rule:'금 1온스 = 원유 약 13배럴이 장기 평균이며, 비율 정상화는 금 하락이 아니라 유가 급등으로 이뤄질 것이라는 판단(2026-07-23 「사실은 수요의 이야기」, 2026-08-09 「클라이막스」). 13배럴 이하로 내려오면 원유의 상대 저평가가 해소된 것으로 보고 재구성을 검토'});thChart('ogrchart',r2,13,{thLabel:'장기 평균 13배럴',aria:'금/원유 비율 추이',cap:80,step:10,labelAbove:true})}
+ const mv=S.move&&S.move.points.filter(p=>p[0]>='2025-01-01');if(mv&&mv.length>2){const L=mv[mv.length-1];const on=L[1]>=120;
+  $('movev').innerHTML=`<div class="v">${L[1].toFixed(1)}<span class="u">bp</span><span class="badge ${on?'on':'off'}">${on?'120 이상':'120 미만'}</span></div><div class="d"><span>기준일 ${L[0]}</span></div>`;
+  thChart('movechart',mv,120,{thLabel:'위험 기준 120',aria:'MOVE 지수 추이',labelAbove:true});
+  $('movebanner').innerHTML=on?`<div class="alert"><b>나스닥·S&amp;P 500 위험 신호</b> — MOVE ${L[1].toFixed(1)} (기준 120 이상, ${L[0]}). 국채 변동성 급등은 주식 위험자산의 할인율 불안으로 이어질 수 있습니다.</div>`:''}
  const rows=decomp(S);
  if(rows&&rows.length>5){tree(rows[rows.length-1]);bigchart(rows);
   const P=[['1주',7],['1개월',30],['3개월',91],['1년',365]];
