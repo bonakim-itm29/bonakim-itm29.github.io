@@ -26,10 +26,16 @@ jobs:
       - name: Save to research-data branch
         if: always()
         run: |
+          set +e
+          du -sh out; find out -size +50M -print -delete
+          cd "$GITHUB_WORKSPACE"
           git config user.name "research-bot"
           git config user.email "research-bot@users.noreply.github.com"
-          mkdir -p /tmp/rd && cd /tmp/rd
-          git init -q && git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
-          if git fetch -q --depth 1 origin research-data; then git checkout -q -b research-data FETCH_HEAD; else git checkout -q --orphan research-data; fi
-          rm -rf "${{ inputs.tag }}" && mkdir -p "${{ inputs.tag }}" && cp -r "$GITHUB_WORKSPACE/out/." "${{ inputs.tag }}/"
-          git add -A && git commit -q -m "research data ${{ inputs.tag }}" && git push -q origin research-data
+          git fetch -q origin research-data && git checkout -q -B research-data FETCH_HEAD || git checkout -q --orphan research-data
+          git rm -rq --cached . >/dev/null 2>&1
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name out -exec rm -rf {} +
+          mkdir -p "${{ inputs.tag }}" && cp -r out/. "${{ inputs.tag }}/" && rm -rf out
+          git add -A >/tmp/add.log 2>&1 || echo "::error::add $(tail -c 400 /tmp/add.log | tr '\n' ' ')"
+          git commit -q -m "research data ${{ inputs.tag }}" >/tmp/c.log 2>&1 || echo "::error::commit $(tail -c 400 /tmp/c.log | tr '\n' ' ')"
+          git push -q origin HEAD:refs/heads/research-data >/tmp/p.log 2>&1 || { echo "::error::push $(tail -c 600 /tmp/p.log | tr '\n' ' ')"; exit 1; }
+          echo "::notice::saved $(git ls-files | wc -l) files"
