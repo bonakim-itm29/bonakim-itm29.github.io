@@ -43,7 +43,7 @@ LONG = {"CL=F", "SI=F"}  # 오일/실버 비율의 장기 비교용
 
 
 def yahoo(sym):
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?range={'max' if sym in LONG else '2y'}&interval=1d"
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?{'period1=1262304000&period2=' + str(int(dt.datetime.utcnow().timestamp())) if sym in LONG else 'range=2y'}&interval=1d"
     j = json.loads(get(url))["chart"]["result"][0]
     ts = j["timestamp"]; close = j["indicators"]["quote"][0]["close"]
     pts = []
