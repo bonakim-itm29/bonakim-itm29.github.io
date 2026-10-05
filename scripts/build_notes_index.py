@@ -1,0 +1,67 @@
+"""매크로 투자노트 첫 화면의 '관심 종목'을 섹터별로 묶고 종합 매력도 색을 붙인다.
+점수는 각 기업 페이지에 들어 있는 값을 그대로 읽는다(8점 이상 녹색, 6점 이상 노랑, 6점 미만 빨강)."""
+import re, pathlib, html
+ROOT = pathlib.Path(__file__).resolve().parents[1] / "macro-notes"
+SECTORS = [
+  ("에너지 E&amp;P", "유가 민감 생산기업", [
+    ("crescent-energy", "Crescent Energy", "티커 CRGY · 유가 베타·인수 할인"),
+    ("kosmos-energy", "Kosmos Energy", "티커 KOS · Brent·신용 민감도"),
+    ("sm-energy", "SM Energy", "티커 SM · 33년 유가 사이클·Civitas 합병")]),
+  ("중국 이커머스·소비 플랫폼", "내수 소비와 직접 연결된 플랫폼", [
+    ("alibaba", "Alibaba", "NYSE BABA · 위안화·항셍 민감도·AI 투자와 FCF"),
+    ("jd", "JD.com", "NASDAQ JD · PER 7배·주주환원"),
+    ("pdd", "PDD Holdings", "NASDAQ PDD · 핀둬둬·테무, 순현금이 시총의 절반 이상"),
+    ("meituan", "Meituan", "HKEX 3690 · 배달 가격 전쟁 이후 회복"),
+    ("trip-com", "Trip.com", "NASDAQ TCOM · 중국·해외 여행 소비")]),
+  ("중국 검색·게임·소셜", "광고·게임·콘텐츠 중심 인터넷", [
+    ("tencent", "Tencent", "HKEX 0700 · 게임·광고·AI 설비투자와 주주환원"),
+    ("baidu", "Baidu", "NASDAQ BIDU · 순현금이 시총의 90%"),
+    ("netease", "NetEase", "NASDAQ NTES · 게임·순현금·배당")]),
+  ("한국 반도체", "메모리 사이클", [
+    ("samsung-electronics", "Samsung Electronics", "KOSPI 005930 · AI 메모리 호황과 사이클 정점 논쟁"),
+    ("sk-hynix", "SK hynix", "KOSPI 000660 · HBM 이익률 76%·원화 민감도")]),
+]
+
+def score(slug):
+    p = ROOT / "companies" / slug / "index.html"
+    if not p.exists():
+        return None
+    m = re.search(r'"score":\{"total":([0-9.]+)', p.read_text())
+    return float(m.group(1)) if m else None
+
+def tier(v):
+    return ("g", "녹색") if v >= 8 else ("y", "노랑") if v >= 6 else ("r", "빨강")
+
+out = ['<section id="companies">', '  <h2>관심 종목</h2>',
+       '  <p class="sc-legend"><span class="scb g">8+</span> 녹색 · <span class="scb y">6+</span> 노랑 · <span class="scb r">6 미만</span> 빨강 — 같은 섹터 안에서 비교한 학습용 종합 매력도(10점 만점)이며 매수·매도 권유가 아닙니다.</p>']
+for name, sub, items in SECTORS:
+    rows = [(s, n, d, score(s)) for s, n, d in items]
+    rows = [r for r in rows if r[3] is not None]
+    if not rows:
+        continue
+    rows.sort(key=lambda r: -r[3])
+    out.append(f'  <h3 class="sector">{name} <span>{sub}</span></h3>')
+    out.append('  <div class="grid2">')
+    for s, n, d, v in rows:
+        t, lab = tier(v)
+        out.append(f'    <a class="card" href="companies/{s}/index.html">\n      <h3>{html.escape(n)} <span class="scb {t}" title="종합 매력도 {v:.1f} ({lab})">{v:.1f}</span></h3>\n      <p>{d}</p>\n      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">{name}</span></div>\n    </a>')
+    out.append('  </div>')
+out.append('</section>')
+STYLE = '''<style id="sc-style">
+.scb{display:inline-block;min-width:2.6em;text-align:center;font-size:13px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:2px;color:#fff}
+.scb.g{background:#2e7d4f}.scb.y{background:#b8860b}.scb.r{background:#c0392b}
+@media (prefers-color-scheme: dark){.scb.g{background:#3f9e66}.scb.y{background:#c99a1e}.scb.r{background:#d0574a}}
+.sc-legend{font-size:13px;color:var(--muted)}
+.sc-legend .scb{margin:0 2px 0 0;min-width:0}
+h3.sector{font-size:16px;margin:26px 0 8px}
+h3.sector span{font-size:13px;color:var(--muted);font-weight:500;margin-left:6px}
+</style>'''
+idx = ROOT / "index.html"
+t = idx.read_text()
+t = re.sub(r'<section id="companies">.*?</section>', "\n".join(out), t, count=1, flags=re.S)
+if 'id="sc-style"' in t:
+    t = re.sub(r'<style id="sc-style">.*?</style>', STYLE, t, flags=re.S)
+else:
+    t = t.replace("</head>", STYLE + "\n</head>", 1)
+idx.write_text(t)
+print("ok")

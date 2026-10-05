@@ -7,6 +7,15 @@
 <meta name="description" content="거시경제 흐름과 투자기업, 칼럼 기록">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="../assets/style.css">
+<style id="sc-style">
+.scb{display:inline-block;min-width:2.6em;text-align:center;font-size:13px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:2px;color:#fff}
+.scb.g{background:#2e7d4f}.scb.y{background:#b8860b}.scb.r{background:#c0392b}
+@media (prefers-color-scheme: dark){.scb.g{background:#3f9e66}.scb.y{background:#c99a1e}.scb.r{background:#d0574a}}
+.sc-legend{font-size:13px;color:var(--muted)}
+.sc-legend .scb{margin:0 2px 0 0;min-width:0}
+h3.sector{font-size:16px;margin:26px 0 8px}
+h3.sector span{font-size:13px;color:var(--muted);font-weight:500;margin-left:6px}
+</style>
 </head>
 <body>
 <nav><div class="wrap"><a href="../index.html" class="logo">김보나</a><ul>
@@ -23,61 +32,72 @@
 <section id="market">
   <h2>시장 지표</h2>
   <div class="list">
-    <a class="card" href="market/index.html"><h3>원유 장기 선물과 10년물 금리</h3><p>WTI·Brent 2027·2028년 12월물, 10년물 금리·BEI·텀프리미엄(ACM, Kim-Wright)을 매일 아침 자동 갱신</p>
+    <a class="card" href="market/index.html"><h3>원유·금리·변동성 대시보드</h3><p>WTI·Brent 현물·근월물·장기 선물, 오일/실버 비율(기준선 3), 10년물 금리 분해(기대 단기금리 경로·BEI·실질 경로·텀프리미엄), MOVE를 매일 자동 갱신</p>
       <div class="meta"><span class="tag live">매일 갱신</span><span class="tag">NYMEX</span><span class="tag">FRED</span><span class="tag">뉴욕 연은</span></div></a>
   </div>
 </section>
 <section id="companies">
   <h2>관심 종목</h2>
+  <p class="sc-legend"><span class="scb g">8+</span> 녹색 · <span class="scb y">6+</span> 노랑 · <span class="scb r">6 미만</span> 빨강 — 같은 섹터 안에서 비교한 학습용 종합 매력도(10점 만점)이며 매수·매도 권유가 아닙니다.</p>
+  <h3 class="sector">에너지 E&amp;P <span>유가 민감 생산기업</span></h3>
   <div class="grid2">
     <a class="card" href="companies/crescent-energy/index.html">
-      <h3>Crescent Energy</h3>
-      <p>티커 CRGY · 유가 베타·인수 할인 · 공시 검증과 매크로 EDA</p>
-      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">에너지 E&amp;P</span></div>
-    </a>
-    <a class="card" href="companies/kosmos-energy/index.html">
-      <h3>Kosmos Energy</h3>
-      <p>티커 KOS · Brent·신용 민감도 · 공시 검증과 매크로 EDA</p>
+      <h3>Crescent Energy <span class="scb y" title="종합 매력도 7.3 (노랑)">7.3</span></h3>
+      <p>티커 CRGY · 유가 베타·인수 할인</p>
       <div class="meta"><span class="tag live">심층 분석</span><span class="tag">에너지 E&amp;P</span></div>
     </a>
     <a class="card" href="companies/sm-energy/index.html">
-      <h3>SM Energy</h3>
-      <p>티커 SM · 33년 유가 사이클·Civitas 합병 · 공시 검증과 매크로 EDA</p>
+      <h3>SM Energy <span class="scb y" title="종합 매력도 7.0 (노랑)">7.0</span></h3>
+      <p>티커 SM · 33년 유가 사이클·Civitas 합병</p>
       <div class="meta"><span class="tag live">심층 분석</span><span class="tag">에너지 E&amp;P</span></div>
     </a>
-    <a class="card" href="companies/alibaba/index.html">
-      <h3>Alibaba</h3>
-      <p>티커 BABA · 위안화·항셍 민감도·AI 투자와 FCF · 공시 검증과 매크로 EDA</p>
-      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 인터넷</span></div>
+    <a class="card" href="companies/kosmos-energy/index.html">
+      <h3>Kosmos Energy <span class="scb r" title="종합 매력도 5.9 (빨강)">5.9</span></h3>
+      <p>티커 KOS · Brent·신용 민감도</p>
+      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">에너지 E&amp;P</span></div>
     </a>
-    <a class="card" href="companies/baidu/index.html">
-      <h3>Baidu</h3>
-      <p>티커 BIDU · 순현금이 시총의 90% · 공시 검증과 매크로 EDA</p>
-      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 인터넷</span></div>
-    </a>
+  </div>
+  <h3 class="sector">중국 이커머스·소비 플랫폼 <span>내수 소비와 직접 연결된 플랫폼</span></h3>
+  <div class="grid2">
     <a class="card" href="companies/jd/index.html">
-      <h3>JD.com</h3>
-      <p>티커 JD · PER 7배·주주환원 · 공시 검증과 매크로 EDA</p>
-      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 인터넷</span></div>
+      <h3>JD.com <span class="scb g" title="종합 매력도 8.7 (녹색)">8.7</span></h3>
+      <p>NASDAQ JD · PER 7배·주주환원</p>
+      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 이커머스·소비 플랫폼</span></div>
     </a>
-    <a class="card" href="companies/tencent/index.html">
-      <h3>Tencent</h3>
-      <p>HKEX 0700 · 게임·광고·AI 설비투자와 주주환원 · HKEX 공시 검증과 매크로 EDA</p>
-      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 인터넷</span></div>
+    <a class="card" href="companies/alibaba/index.html">
+      <h3>Alibaba <span class="scb r" title="종합 매력도 5.1 (빨강)">5.1</span></h3>
+      <p>NYSE BABA · 위안화·항셍 민감도·AI 투자와 FCF</p>
+      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 이커머스·소비 플랫폼</span></div>
     </a>
     <a class="card" href="companies/meituan/index.html">
-      <h3>Meituan</h3>
-      <p>HKEX 3690 · 배달 가격 전쟁 이후 회복 · HKEX 공시 검증과 매크로 EDA</p>
-      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 인터넷</span></div>
+      <h3>Meituan <span class="scb r" title="종합 매력도 4.7 (빨강)">4.7</span></h3>
+      <p>HKEX 3690 · 배달 가격 전쟁 이후 회복</p>
+      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 이커머스·소비 플랫폼</span></div>
     </a>
+  </div>
+  <h3 class="sector">중국 검색·게임·소셜 <span>광고·게임·콘텐츠 중심 인터넷</span></h3>
+  <div class="grid2">
+    <a class="card" href="companies/baidu/index.html">
+      <h3>Baidu <span class="scb y" title="종합 매력도 7.0 (노랑)">7.0</span></h3>
+      <p>NASDAQ BIDU · 순현금이 시총의 90%</p>
+      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 검색·게임·소셜</span></div>
+    </a>
+    <a class="card" href="companies/tencent/index.html">
+      <h3>Tencent <span class="scb y" title="종합 매력도 6.3 (노랑)">6.3</span></h3>
+      <p>HKEX 0700 · 게임·광고·AI 설비투자와 주주환원</p>
+      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">중국 검색·게임·소셜</span></div>
+    </a>
+  </div>
+  <h3 class="sector">한국 반도체 <span>메모리 사이클</span></h3>
+  <div class="grid2">
     <a class="card" href="companies/samsung-electronics/index.html">
-      <h3>Samsung Electronics</h3>
-      <p>KOSPI 005930 · AI 메모리 호황과 사이클 정점 논쟁 · DART 공시 검증과 매크로 EDA</p>
+      <h3>Samsung Electronics <span class="scb r" title="종합 매력도 5.8 (빨강)">5.8</span></h3>
+      <p>KOSPI 005930 · AI 메모리 호황과 사이클 정점 논쟁</p>
       <div class="meta"><span class="tag live">심층 분석</span><span class="tag">한국 반도체</span></div>
     </a>
     <a class="card" href="companies/sk-hynix/index.html">
-      <h3>SK hynix</h3>
-      <p>KOSPI 000660 · HBM 이익률 76%·원화 민감도 · DART 공시 검증과 매크로 EDA</p>
+      <h3>SK hynix <span class="scb r" title="종합 매력도 5.5 (빨강)">5.5</span></h3>
+      <p>KOSPI 000660 · HBM 이익률 76%·원화 민감도</p>
       <div class="meta"><span class="tag live">심층 분석</span><span class="tag">한국 반도체</span></div>
     </a>
   </div>
