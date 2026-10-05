@@ -22,6 +22,13 @@ FUT = [  # key, 표시명, 야후 심볼, 단위
     ("ndx", "나스닥 종합", "^IXIC", "pt"),
     ("dji", "다우존스 산업평균", "^DJI", "pt"),
     ("move", "MOVE 지수 (미 국채 내재변동성)", "^MOVE", "pt"),
+    ("copper_front", "구리 근월물", "HG=F", "$/lb"),
+    ("dxy", "달러 인덱스", "DX-Y.NYB", "pt"),
+    ("usdcny", "달러/위안", "CNY=X", "CNY"),
+    ("usdjpy", "달러/엔", "JPY=X", "JPY"),
+    ("usdkrw", "달러/원", "KRW=X", "KRW"),
+    ("hsi", "항셍 지수", "^HSI", "pt"),
+    ("hstech", "항셍테크 지수", "HSTECH.HK", "pt"),
     ("wti_dec27", "WTI 2027년 12월물", "CLZ27.NYM", "$/bbl"),
     ("wti_dec28", "WTI 2028년 12월물", "CLZ28.NYM", "$/bbl"),
     ("brent_dec27", "Brent 2027년 12월물", "BZZ27.NYM", "$/bbl"),
@@ -34,6 +41,31 @@ FRED = [
     ("real10", "10년 실질금리 (TIPS)", "DFII10", "%"),
     ("wti_spot", "WTI 현물 (쿠싱)", "DCOILWTICO", "$/bbl"),
     ("brent_spot", "Brent 현물 (유럽)", "DCOILBRENTEU", "$/bbl"),
+    ("t10y3m", "장단기 금리차 10년−3개월", "T10Y3M", "%p"),
+    ("t10y2y", "장단기 금리차 10년−2년", "T10Y2Y", "%p"),
+    ("fed_assets", "연준 총자산", "WALCL", "$M"),
+    ("rrp", "역레포(RRP) 잔고", "RRPONTSYD", "$B"),
+    ("tga", "재무부 일반계정(TGA)", "WTREGEN", "$M"),
+    ("reserves", "은행 지급준비금", "WRESBAL", "$B"),
+    ("m2", "M2 통화량", "M2SL", "$B"),
+    ("m2v", "M2 유통속도", "M2V", "배"),
+    ("debt_gdp", "연방정부 부채/GDP", "GFDEGDQ188S", "%"),
+    ("interest", "연방정부 이자비용 (연율)", "A091RC1Q027SBEA", "$B"),
+    ("cpi", "CPI", "CPIAUCSL", "지수"),
+    ("core_cpi", "근원 CPI", "CPILFESL", "지수"),
+    ("pce", "PCE 물가", "PCEPI", "지수"),
+    ("core_pce", "근원 PCE 물가", "PCEPILFE", "지수"),
+    ("export_px", "미국 수출물가", "IQ", "지수"),
+    ("payrolls", "비농업 고용", "PAYEMS", "천명"),
+    ("unrate", "실업률", "UNRATE", "%"),
+    ("jolts", "JOLTS 구인", "JTSJOL", "천건"),
+    ("claims", "신규 실업수당 청구", "ICSA", "건"),
+]
+LONG_FRED = {"M2SL", "M2V", "GFDEGDQ188S", "A091RC1Q027SBEA", "CPIAUCSL", "CPILFESL", "PCEPI", "PCEPILFE", "IQ", "PAYEMS", "UNRATE", "JTSJOL"}
+EIA = [  # EIA 주간 원유 재고 (천 배럴)
+    ("crude_comm", "미국 상업 원유재고 (SPR 제외)", "WCESTUS1"),
+    ("crude_spr", "전략비축유(SPR)", "WCSSTUS1"),
+    ("crude_cushing", "쿠싱 원유재고", "W_EPC0_SAX_YCUOK_MBBL"),
 ]
 
 
@@ -62,7 +94,7 @@ def yahoo(sym):
 
 
 def fred(sid):
-    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={START}"
+    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={'2015-01-01' if sid in LONG_FRED else START}"
     rows = list(csv.reader(io.StringIO(get(url).decode())))
     pts = []
     for r in rows[1:]:
@@ -74,6 +106,17 @@ def fred(sid):
 
 
 _ACM = {}
+
+
+def eia(sid):
+    import pandas as pd
+    raw = get(f"https://www.eia.gov/dnav/pet/hist_xls/{sid}w.xls", 90)
+    df = pd.read_excel(io.BytesIO(raw), sheet_name="Data 1", skiprows=2)
+    df = df.iloc[:, :2].dropna()
+    df.columns = ["date", "v"]
+    df["date"] = pd.to_datetime(df["date"])
+    df = df[df["date"] >= START]
+    return [[d.date().isoformat(), float(v)] for d, v in zip(df["date"], df["v"])]
 
 
 def acm(col):
@@ -135,6 +178,7 @@ def main():
     series, errors = {}, []
     jobs = [(k, n, u, "Yahoo Finance", f"https://finance.yahoo.com/quote/{urllib.parse.quote(s)}", (lambda s=s: yahoo(s))) for k, n, s, u in FUT]
     jobs += [(k, n, u, "FRED", f"https://fred.stlouisfed.org/series/{s}", (lambda s=s: fred(s))) for k, n, s, u in FRED]
+    jobs += [(k, n, "천배럴", "미 에너지정보청(EIA)", f"https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s={s}&f=W", (lambda s=s: eia(s))) for k, n, s in EIA]
     ACM_LINK = "https://www.newyorkfed.org/research/data_indicators/term-premia-tabs"
     for key, name, col in [("tp10_acm", "10년 명목 텀프리미엄 (ACM)", "ACMTP10"),
                            ("rny10_acm", "기대 단기금리 경로 (ACM 위험중립 10년)", "ACMRNY10"),
