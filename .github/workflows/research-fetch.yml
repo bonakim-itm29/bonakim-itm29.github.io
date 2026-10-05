@@ -22,8 +22,9 @@ jobs:
       - name: Fetch
         env:
           SPEC: ${{ inputs.spec }}
-        run: python scripts/research_fetch.py
+        run: python scripts/research_fetch.py; mkdir -p out; ls -R out | head -50
       - name: Save to research-data branch
+        if: always()
         run: |
           git config user.name "research-bot"
           git config user.email "research-bot@users.noreply.github.com"

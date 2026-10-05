@@ -68,9 +68,15 @@ def submissions(cik):
 def main(spec):
     sec = spec.get("sec", [])
     since = spec.get("since", "2026-01-01")
-    cmap = ciks() if (sec or spec.get("docs")) else {}
+    cmap = dict(spec.get("ciks", {}))
+    if (sec or spec.get("docs")) and not cmap:
+        try:
+            cmap = ciks()
+        except Exception as e:
+            log.append(f"ciks fail: {e}")
     hist = {}
     for t in sec:
+      try:
         cik = cmap[t]
         base, rows = submissions(cik)
         hist[t] = dict(name=base.get("name"), cik=cik, fiscalYearEnd=base.get("fiscalYearEnd"), rows=rows)
@@ -84,6 +90,8 @@ def main(spec):
             for name in filing_files(cik, r["acc"]):
                 save(f"raw/{t}__{r['form']}__{r['filed']}__{name}", sec_get(
                     f"https://www.sec.gov/Archives/edgar/data/{cik}/{r['acc'].replace('-', '')}/{name}"))
+      except Exception as e:
+        import traceback; log.append(f"sec fail {t}: {traceback.format_exc()}")
     if hist:
         save("sec_hist.json", json.dumps(hist, ensure_ascii=False))
     for t, acc in spec.get("docs", []):
@@ -120,4 +128,10 @@ def main(spec):
 
 
 if __name__ == "__main__":
-    main(json.loads(os.environ["SPEC"]))
+    import traceback
+    try:
+        main(json.loads(os.environ["SPEC"]))
+    except Exception:
+        log.append(traceback.format_exc())
+        save("log.txt", "\n".join(log))
+        print("\n".join(log[-30:]))
