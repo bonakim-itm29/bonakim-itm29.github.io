@@ -16,6 +16,7 @@ UA = {"User-Agent": "Mozilla/5.0 (bonakim-itm29.github.io market updater)"}
 FUT = [  # key, 표시명, 야후 심볼, 단위
     ("wti_front", "WTI 근월물", "CL=F", "$/bbl"),
     ("brent_front", "Brent 근월물", "BZ=F", "$/bbl"),
+    ("silver_front", "은 근월물", "SI=F", "$/oz"),
     ("move", "MOVE 지수 (미 국채 내재변동성)", "^MOVE", "pt"),
     ("wti_dec27", "WTI 2027년 12월물", "CLZ27.NYM", "$/bbl"),
     ("wti_dec28", "WTI 2028년 12월물", "CLZ28.NYM", "$/bbl"),
