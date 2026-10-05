@@ -22,7 +22,9 @@ jobs:
       - name: Fetch
         env:
           SPEC: ${{ inputs.spec }}
-        run: python scripts/research_fetch.py; mkdir -p out; ls -R out | head -50
+        run: |
+          python scripts/research_fetch.py; mkdir -p out
+          echo "::notice::files $(find out -type f | wc -l) log: $(tail -c 900 out/log.txt 2>/dev/null | tr "\n" " ")"
       - name: Save to research-data branch
         if: always()
         run: |
