@@ -1,0 +1,34 @@
+name: research-fetch
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "JSON spec (see scripts/research_fetch.py)"
+        required: true
+      tag:
+        description: "output folder name"
+        required: true
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch
+        env:
+          SPEC: ${{ inputs.spec }}
+        run: python scripts/research_fetch.py
+      - name: Save to research-data branch
+        run: |
+          git config user.name "research-bot"
+          git config user.email "research-bot@users.noreply.github.com"
+          mkdir -p /tmp/rd && cd /tmp/rd
+          git init -q && git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          if git fetch -q --depth 1 origin research-data; then git checkout -q -b research-data FETCH_HEAD; else git checkout -q --orphan research-data; fi
+          rm -rf "${{ inputs.tag }}" && mkdir -p "${{ inputs.tag }}" && cp -r "$GITHUB_WORKSPACE/out/." "${{ inputs.tag }}/"
+          git add -A && git commit -q -m "research data ${{ inputs.tag }}" && git push -q origin research-data
