@@ -77,6 +77,12 @@ a.big:hover{opacity:.92}
 </section>
 
 <section>
+  <h2>미국 주식</h2>
+  <div id="eqbanner"></div>
+  <div class="mk" id="eq"></div>
+</section>
+
+<section>
   <h2>원유</h2>
   <h3 class="sub">현물과 근월물</h3>
   <p class="hint">현물은 미 에너지정보청(EIA) 공표값이라 며칠 늦게 반영됩니다. 매일 시세는 근월물로 보세요.</p>
@@ -133,7 +139,7 @@ a.big:hover{opacity:.92}
 <script>
 const $=id=>document.getElementById(id);
 const OIL1=['wti_spot','brent_spot','wti_front','brent_front'],OIL2=['wti_dec27','wti_dec28','brent_dec27','brent_dec28'];
-const RATE=['ust10','real10','bei10','rny10_acm','tp10_acm','tp10_kw'],VOL=['move'];
+const EQ=['spx','ndx','dji'];const RATE=['ust10','real10','bei10','rny10_acm','tp10_acm','tp10_kw'],VOL=['move'];
 const STALE={wti_spot:10,brent_spot:10,tp10_kw:21};
 const bp=v=>(v>0?'+':'')+Math.round(v*100)+'bp';
 function back(pts,days){const last=new Date(pts[pts.length-1][0]);last.setDate(last.getDate()-days);const t=last.toISOString().slice(0,10);for(let i=pts.length-1;i>=0;i--)if(pts[i][0]<=t)return pts[i];return null}
@@ -198,12 +204,13 @@ function signals(D){const S=D.signals||{};const order=['oil_silver','gold_oil','
 
 fetch('data.json?'+Date.now()).then(r=>r.json()).then(D=>{const S=D.series;
  $('oil1').innerHTML=OIL1.map(k=>card(S[k],k)).join('');$('oil2').innerHTML=OIL2.map(k=>card(S[k],k)).join('');
- $('rate').innerHTML=RATE.map(k=>card(S[k],k)).join('');$('vol').innerHTML=VOL.map(k=>card(S[k],k)).join('');$('silver').innerHTML=card(S.silver_front,'silver_front')+card(S.gold_front,'gold_front');signals(D);
+ $('eq').innerHTML=EQ.map(k=>card(S[k],k)).join('');$('rate').innerHTML=RATE.map(k=>card(S[k],k)).join('');$('vol').innerHTML=VOL.map(k=>card(S[k],k)).join('');$('silver').innerHTML=card(S.silver_front,'silver_front')+card(S.gold_front,'gold_front');signals(D);
  const r1=ratioRows(S,'wti_front','silver_front','2010-01-01');if(r1&&r1.length>2){thSummary('osr',r1,3,{onTxt:'3 이상',offTxt:'3 미만',rule:'3 이상이면 오일 최대 비중에서 귀금속, 가치주 영역에 들어온 헬스케어·소비주, 중국 빅테크로 다변화를 검토 (이선철 NOTE #251, 2026-09-15: "원유에 대한 MAX 포지션을 줄이고 다변화시켜야 될 시점은 3.0 전후")'});thChart('osrchart',r1,3,{thLabel:'기준선 3',aria:'오일/실버 비율 추이'})}
  const r2=ratioRows(S,'gold_front','wti_front','2010-01-01');if(r2&&r2.length>2){thSummary('ogr',r2,13,{below:true,unit:'배럴',onTxt:'13 이하',offTxt:'13 초과',rule:'금 1온스 = 원유 약 13배럴이 장기 평균이며, 비율 정상화는 금 하락이 아니라 유가 급등으로 이뤄질 것이라는 판단(2026-07-23 「사실은 수요의 이야기」, 2026-08-09 「클라이막스」). 13배럴 이하로 내려오면 원유의 상대 저평가가 해소된 것으로 보고 재구성을 검토'});thChart('ogrchart',r2,13,{thLabel:'장기 평균 13배럴',aria:'금/원유 비율 추이',cap:80,step:10,labelAbove:true})}
  const mv=S.move&&S.move.points.filter(p=>p[0]>='2025-01-01');if(mv&&mv.length>2){const L=mv[mv.length-1];const on=L[1]>=120;
   $('movev').innerHTML=`<div class="v">${L[1].toFixed(1)}<span class="u">bp</span><span class="badge ${on?'on':'off'}">${on?'120 이상':'120 미만'}</span></div><div class="d"><span>기준일 ${L[0]}</span></div>`;
   thChart('movechart',mv,120,{thLabel:'위험 기준 120',aria:'MOVE 지수 추이',labelAbove:true});
+  $('eqbanner').innerHTML=on?`<div class="alert"><b>위험 신호</b> — 국채 변동성(MOVE) ${L[1].toFixed(1)}로 기준 120 이상입니다(${L[0]}). 아래 금리 변동성 섹션을 확인하세요.</div>`:'';
   $('movebanner').innerHTML=on?`<div class="alert"><b>나스닥·S&amp;P 500 위험 신호</b> — MOVE ${L[1].toFixed(1)} (기준 120 이상, ${L[0]}). 국채 변동성 급등은 주식 위험자산의 할인율 불안으로 이어질 수 있습니다.</div>`:''}
  const rows=decomp(S);
  if(rows&&rows.length>5){tree(rows[rows.length-1]);bigchart(rows);
