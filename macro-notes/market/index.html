@@ -5,56 +5,76 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>시장 지표 · 김보나</title>
-<meta name="description" content="원유 현물·선물, 미국 10년물 금리 분해(기대 단기금리 경로·BEI·실질 경로·텀프리미엄), MOVE를 매일 갱신">
+<meta name="description" content="이선철 대표의 인과 사슬로 엮어 읽는 매크로 지표 대시보드. 매일 자동 갱신">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="../../assets/style.css">
 <style>
-:root{--c-real:#2f5d50;--c-bei:#a8701a;--c-tp:#6a4fb5;--c-rn:#2f6bb4;--up:#b4442f;--dn:#2f6bb4}
-@media (prefers-color-scheme: dark){:root{--c-real:#8cc4b0;--c-bei:#e0b25c;--c-tp:#b6a2f0;--c-rn:#7fb0ef;--up:#ef8a73;--dn:#7fb0ef}}
-.mk{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:14px}
-.c,.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.mk h3{font-size:14px;margin:0 0 6px;font-weight:600}
-.v{font-size:28px;font-weight:700;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
-.u{font-size:13px;color:var(--muted);margin-left:4px;font-weight:500}
-.d{font-size:13px;font-variant-numeric:tabular-nums;margin-top:2px}
-.d span{margin-right:10px}
+:root{--c-real:#2f5d50;--c-bei:#a8701a;--c-tp:#6a4fb5;--c-rn:#2f6bb4;--up:#b4442f;--dn:#2f6bb4;--warm:#b4442f;--cool:#2f6bb4;--ok:#2e7d4f;--warn:#b8860b}
+@media (prefers-color-scheme: dark){:root{--c-real:#8cc4b0;--c-bei:#e0b25c;--c-tp:#b6a2f0;--c-rn:#7fb0ef;--up:#ef8a73;--dn:#7fb0ef;--warm:#ef8a73;--cool:#7fb0ef;--ok:#5fc58a;--warn:#e6b93d}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.stamp{font-size:13px;color:var(--muted);margin:2px 0}
+.hint{font-size:13px;color:var(--muted)}
 .up{color:var(--up)}.dn{color:var(--dn)}
-a.sp{display:block;margin-top:8px;border-radius:6px}
-a.sp:hover{background:var(--accent-soft)}
-a.sp svg{display:block;width:100%;height:56px}
-.s{font-size:12px;color:var(--muted);margin-top:6px}
-.s a{color:var(--muted)}
-.warn{color:var(--up);font-size:12px;margin-top:4px}
-.stamp{font-size:13px;color:var(--muted)}
-h3.sub{font-size:15px;margin:22px 0 4px}
-.hint{font-size:13px;color:var(--muted);margin:0 0 10px}
-.tree{font-size:14px;line-height:1.9;margin:6px 0 0}
-.tree b{font-variant-numeric:tabular-nums}
-.tree .l1{padding-left:18px}.tree .l2{padding-left:40px}
-.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:baseline}
-.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 10px}
-.tabs button{font:inherit;font-size:13px;padding:4px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer}
-.tabs button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
-.br{display:grid;grid-template-columns:minmax(120px,190px) 1fr 64px;align-items:center;gap:8px;font-size:13px;margin:6px 0}
-.br .lab.k1{padding-left:14px}.br .lab.k2{padding-left:28px;color:var(--muted)}
-.br .num{text-align:right;font-variant-numeric:tabular-nums}
-.br .track{position:relative;height:16px}
-.br .track .zero{position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--line)}
-.br .track .bar{position:absolute;top:2px;height:12px;border-radius:2px}
-.lg{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;margin:8px 0 2px;color:var(--muted)}
-a.big{display:block;color:inherit;text-decoration:none}
-a.big svg{display:block;width:100%;height:auto}
-a.big:hover{opacity:.92}
-.badge{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;margin-left:10px;vertical-align:middle}
-.badge.on{background:var(--up);color:var(--surface)}.badge.off{background:var(--accent-soft);color:var(--accent)}
-.rule{font-size:13.5px;margin:8px 0 4px}
-.sig{display:grid;grid-template-columns:1.6fr .8fr .9fr 1.2fr;gap:8px 12px;align-items:center;font-size:14px;padding:10px 0;border-bottom:1px solid var(--line)}
-.sig:last-child{border-bottom:0}.sig .nm b{display:block}.sig .nm span{font-size:12px;color:var(--muted)}
-.sig .val{font-variant-numeric:tabular-nums;font-weight:700;font-size:18px}
-@media (max-width:640px){.sig{grid-template-columns:1fr 1fr}}
-.alert{border:1px solid var(--up);background:color-mix(in srgb,var(--up) 12%,var(--surface));color:var(--text);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:14px}
+.num{font-variant-numeric:tabular-nums}
+/* 시나리오 */
+.scen{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+@media (max-width:700px){.scen{grid-template-columns:1fr}}
+.sc{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--bg)}
+.sc.best{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:var(--accent-soft)}
+.sc h3{font-size:15px;margin:0 0 2px}.sc .p{font-size:12px;color:var(--muted)}
+.sc ul{margin:8px 0 0;padding:0;list-style:none;font-size:13px}.sc li{margin:3px 0}
+.ck{display:inline-block;width:1.2em}
+.sigs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;background:var(--surface)}
+.chip b{font-variant-numeric:tabular-nums}
+.chip.on{border-color:var(--up);color:var(--up)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}.chip.on .dot{background:var(--up)}
+.alert{border:1px solid var(--up);background:color-mix(in srgb,var(--up) 10%,var(--surface));border-radius:10px;padding:10px 14px;margin-top:10px;font-size:14px}
 .alert b{color:var(--up)}
-.cav{font-size:12.5px;color:var(--muted);margin-top:10px}
+/* 인과 사슬 */
+.chains{display:grid;gap:14px;margin-top:12px}
+.chain h3{font-size:15.5px;margin:0 0 4px}
+.chain .q{font-size:13px;color:var(--muted);margin:0 0 10px}
+.flow{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:6px}
+.node{flex:1 1 120px;min-width:112px;border:1px solid var(--line);border-radius:9px;padding:8px 10px;background:var(--bg);cursor:pointer;text-align:left;font:inherit;color:inherit}
+.node:hover{border-color:var(--accent)}
+.node .n{font-size:12px;color:var(--muted);display:block;line-height:1.3}
+.node .v{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums}
+.node .c{display:block;font-size:12px;font-variant-numeric:tabular-nums;margin-top:1px}
+.node .n i{font-style:normal;color:var(--accent);margin-right:3px}
+.arr{align-self:center;color:var(--muted);font-size:16px}
+@media (max-width:700px){.arr{display:none}}
+.read{margin:10px 0 0;padding:10px 12px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;font-size:14px;line-height:1.6}
+.read li{margin:2px 0}.read ul{margin:0;padding-left:18px}
+/* 지표 목록 */
+.grp{margin-top:8px}
+.rows{border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+details.row{border-top:1px solid var(--line)}details.row:first-child{border-top:0}
+details.row>summary{list-style:none;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(70px,.8fr) minmax(64px,.7fr) 110px 18px;gap:10px;align-items:center;padding:10px 14px;cursor:pointer}
+details.row>summary::-webkit-details-marker{display:none}
+details.row>summary:hover{background:var(--accent-soft)}
+.rn{font-size:14px;font-weight:600;line-height:1.3}.rn small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.rv{font-size:15px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}.rv small{font-weight:500;color:var(--muted);font-size:11px;margin-left:2px}
+.rc{font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums}
+.rs svg{display:block;width:110px;height:28px}
+.chev{color:var(--muted);transition:transform .15s}details[open] .chev{transform:rotate(90deg)}
+.flag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;margin-left:6px;vertical-align:1px;background:color-mix(in srgb,var(--up) 15%,transparent);color:var(--up)}
+@media (max-width:640px){details.row>summary{grid-template-columns:minmax(0,1fr) auto 18px}.rc,.rs{display:none}}
+.more{padding:4px 16px 16px;font-size:14px;line-height:1.65}
+.more .lab{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-top:10px}
+.more .src{font-size:12px;color:var(--muted);margin-top:10px}.more .src a{color:var(--muted)}
+.more svg{display:block;width:100%;height:auto;margin-top:8px}
+a.big{display:block;color:inherit}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.tabs button{font:inherit;font-size:12.5px;padding:3px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.br{display:grid;grid-template-columns:minmax(110px,180px) 1fr 60px;align-items:center;gap:8px;font-size:13px;margin:5px 0}
+.br .k1{padding-left:12px}.br .k2{padding-left:24px;color:var(--muted)}
+.br .track{position:relative;height:14px}.br .zero{position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--line)}
+.br .bar{position:absolute;top:2px;height:10px;border-radius:2px}.br .num{text-align:right}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}
+.lg{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted);margin-top:6px}
+.miss{font-size:13px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -66,161 +86,219 @@ a.big:hover{opacity:.92}
 <header class="page">
   <span class="eyebrow">매일 자동 갱신</span>
   <h1>시장 지표</h1>
-  <p class="lead">원유 현물·선물, 미국 10년물 금리의 구성요소와 금리 변동성을 매일 갱신합니다. 그래프를 누르면 출처의 상세 페이지가 열립니다.</p>
+  <p class="lead">이선철 대표의 인과 사슬(재정·유동성 → 물가 → 금리 → 자산)에 맞춰 지표를 엮어 읽습니다. 맨 위에서 지금 국면을, 가운데서 지표 간 연결을, 아래에서 개별 지표를 봅니다.</p>
   <p class="stamp" id="stamp">불러오는 중…</p>
-  <p class="stamp">갱신 시각: 매일 07:07(화~토, 미국 장 마감 종가 반영)과 22:37(월~금, 전날 금리·텀프리미엄 공표분 반영), 한국 시간. 깃헙 사정으로 수십 분 늦어질 수 있습니다.</p>
+  <p class="stamp">갱신: 매일 07:07(화~토, 미국 장 마감 종가)·22:37(월~금, 금리·물가 공표분), 한국 시간</p>
 </header>
 
 <section>
-  <h2>신호판</h2>
-  <div class="panel" id="signals"><p class="hint">불러오는 중…</p></div>
-  <p class="hint" style="margin-top:8px">신호가 켜지거나 꺼지면 깃헙 이슈로 알림이 갑니다(깃헙 앱·이메일). 기준은 개인 설정이며 투자 권유가 아닙니다.</p>
-</section>
-
-<section>
-  <h2>미국 주식</h2>
-  <div id="eqbanner"></div>
-  <div class="mk" id="eq"></div>
-</section>
-
-<section>
-  <h2>원유</h2>
-  <h3 class="sub">현물과 근월물</h3>
-  <p class="hint">현물은 미 에너지정보청(EIA) 공표값이라 며칠 늦게 반영됩니다. 매일 시세는 근월물로 보세요.</p>
-  <div class="mk" id="oil1"></div>
-  <h3 class="sub">장기 선물</h3>
-  <div class="mk" id="oil2"></div>
-</section>
-
-<section>
-  <h2>귀금속 대비 원유 (포트폴리오 재구성 기준)</h2>
+  <h2>지금 시장은 어디에</h2>
   <div class="panel">
-    <h3 class="sub" style="margin-top:0">오일/실버 비율</h3>
-    <div id="osr"></div>
-    <a class="big" id="osrchart" href="https://finance.yahoo.com/quote/SI%3DF" target="_blank" rel="noopener" title="Yahoo Finance 은 선물 페이지 열기"></a>
-    <p class="cav">WTI 근월물(달러/배럴) ÷ 은 근월물(달러/온스), 2010년 이후 일별 종가(WTI가 마이너스였던 2020년 4월 20일 제외). 점선이 기준선 3입니다. 그래프를 누르면 은 선물 페이지가 열립니다.</p>
-    <h3 class="sub">오일/금 비율 (금 1온스로 살 수 있는 원유 배럴 수로 표시)</h3>
-    <div id="ogr"></div>
-    <a class="big" id="ogrchart" href="https://finance.yahoo.com/quote/GC%3DF" target="_blank" rel="noopener" title="Yahoo Finance 금 선물 페이지 열기"></a>
-    <p class="cav">금 근월물(달러/온스) ÷ WTI 근월물(달러/배럴). 오일/금 비율을 뒤집은 값으로, 이선철 대표가 이 형태(금 1온스 = 원유 몇 배럴)로 기준을 제시해 그대로 따랐습니다. 숫자가 내려갈수록 원유가 금보다 강해진 것이며, 점선이 장기 평균 13배럴입니다. 2020년 3~5월처럼 유가가 극단적으로 낮았던 구간은 그래프 위쪽을 잘랐습니다.</p>
+    <div id="scenTitle"></div>
+    <div class="scen" id="scen"></div>
+    <div class="sigs" id="sigs"></div>
+    <div id="moveAlert"></div>
   </div>
-  <div class="mk" id="silver"></div>
+  <p class="hint" style="margin-top:8px">시나리오 조건은 칼럼 분석(2편)의 A·B·C 정의를 데이터로 옮긴 것입니다. 신호가 켜지면 깃헙 이슈로 알림이 갑니다. 학습용이며 투자 권유가 아닙니다.</p>
 </section>
 
 <section>
-  <h2>미국 10년물 금리 분해</h2>
-  <div class="panel">
-    <div id="tree" class="tree"></div>
-    <h3 class="sub">기간별로 무엇이 움직였나</h3>
-    <div class="tabs" id="tabs"></div>
-    <div id="bridge"></div>
-    <h3 class="sub">구성요소 추이 (2025년 이후)</h3>
-    <div class="lg" id="legend"></div>
-    <a class="big" id="bigchart" href="https://www.newyorkfed.org/research/data_indicators/term-premia-tabs" target="_blank" rel="noopener" title="뉴욕 연은 ACM 텀프리미엄 페이지 열기"></a>
-    <p class="cav">10년물 = 기대 단기금리 경로 + 명목 텀프리미엄은 뉴욕 연은 ACM 모형의 분해입니다(합이 정확히 맞음). 기대 단기금리 경로를 BEI와 실질 경로로 나눈 것은 근사입니다. BEI에는 인플레이션 위험 프리미엄과 TIPS 유동성 프리미엄이 섞여 있고, 이 일부는 ACM 텀프리미엄과 겹칩니다. 그래서 "실질 경로(근사)"는 기대 단기금리 경로에서 BEI를 뺀 나머지로 계산했습니다.</p>
-  </div>
-  <h3 class="sub">구성요소별 지표</h3>
-  <div class="mk" id="rate"></div>
+  <h2>연결해서 읽기</h2>
+  <p class="hint">각 줄은 이선철 대표가 반복해서 쓰는 인과 사슬입니다. 칸을 누르면 아래의 해당 지표가 펼쳐집니다. 변화는 최근 1개월(월간 지표는 직전 발표 대비).</p>
+  <div class="chains" id="chains"></div>
+</section>
+
+<section id="list">
+  <h2>지표 한눈에</h2>
+  <p class="hint">줄을 누르면 설명, 읽는 법, 판단 기준, 긴 그래프, 출처가 열립니다.</p>
+  <div id="groups"></div>
+  <p class="miss" style="margin-top:14px">무료 자동 데이터가 없어 넣지 못한 지표: ISM·PMI(<a href="https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/" target="_blank" rel="noopener">ISM</a>), 분기 국채 발행 계획 QRA(<a href="https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding" target="_blank" rel="noopener">미 재무부</a>), 주식 리스크 프리미엄, 중국 신용·원유 수입.</p>
 </section>
 
 <section>
-  <h2>금리 변동성</h2>
-  <div id="movebanner"></div>
-  <div class="panel"><div id="movev"></div><a class="big" id="movechart" href="https://finance.yahoo.com/quote/%5EMOVE" target="_blank" rel="noopener" title="Yahoo Finance MOVE 지수 페이지 열기"></a>
-  <p class="cav">점선이 120입니다. 120 이상이면 국채 변동성이 커져 나스닥·S&amp;P 500의 위험 신호로 표시합니다.</p></div>
-  <div class="mk" id="vol"></div>
-  <p class="hint" style="margin-top:10px">MOVE는 미 국채 2·5·10·30년물 옵션의 1개월 내재변동성을 가중평균한 지수로, 10년물만의 변동성은 아닙니다. 단위는 bp(연율).</p>
-</section>
-
-<section>
-  <p class="note">원유 선물은 NYMEX 종가(Brent는 NYMEX Brent Last Day Financial, ICE Brent와 연동), 현물·금리는 FRED, 텀프리미엄 분해는 뉴욕 연은 ACM 모형입니다. 개인 학습 기록이며 투자 권유가 아닙니다.</p>
+  <p class="note">원유·주식·환율은 Yahoo Finance(NYMEX·거래소 종가), 금리·물가·고용·유동성은 FRED, 텀프리미엄 분해는 뉴욕 연은 ACM 모형, 원유 재고는 미 에너지정보청(EIA)입니다. 지표 설명의 "읽는 법"은 칼럼 분석(1편 지표 사전)을 요약한 것입니다. 개인 학습 기록이며 투자 권유가 아닙니다.</p>
 </section>
 </main>
 <footer><div class="wrap">© 2026 김보나</div></footer>
 <script>
 const $=id=>document.getElementById(id);
-const OIL1=['wti_spot','brent_spot','wti_front','brent_front'],OIL2=['wti_dec27','wti_dec28','brent_dec27','brent_dec28'];
-const EQ=['spx','ndx','dji'];const RATE=['ust10','real10','bei10','rny10_acm','tp10_acm','tp10_kw'],VOL=['move'];
-const STALE={wti_spot:10,brent_spot:10,tp10_kw:21};
+let S={},D={};
+/* ---------- 데이터 도우미 ---------- */
+const pts=k=>(S[k]&&S[k].points)||[];
+function backPt(p,days){if(!p.length)return null;const t=new Date(p[p.length-1][0]);t.setDate(t.getDate()-days);const ts=t.toISOString().slice(0,10);for(let i=p.length-1;i>=0;i--)if(p[i][0]<=ts)return p[i];return null}
+function join(a,b,f){const m=new Map(b);return a.filter(([d,v])=>m.has(d)&&v>0&&m.get(d)>0).map(([d,v])=>[d,f(v,m.get(d))])}
+function yoy(p){const out=[];const m=new Map(p);for(const [d,v] of p){const y=(+d.slice(0,4)-1)+d.slice(4);if(m.has(y))out.push([d,(v/m.get(y)-1)*100])}return out}
+function ann3(p){const out=[];for(let i=3;i<p.length;i++)out.push([p[i][0],(Math.pow(p[i][1]/p[i-3][1],4)-1)*100]);return out}
+function mdiff(p){const out=[];for(let i=1;i<p.length;i++)out.push([p[i][0],p[i][1]-p[i-1][1]]);return out}
+function scale(p,f){return p.map(([d,v])=>[d,v*f])}
+function freq(p){if(p.length<3)return 'd';const a=new Date(p[p.length-1][0]),b=new Date(p[p.length-3][0]);const g=(a-b)/864e5/2;return g>60?'q':g>20?'m':g>4?'w':'d'}
+/* ---------- 지표 정의 ---------- */
+/* dir: 이 지표가 오르면 이선철 대표 시각에서 무엇을 뜻하나 (warm=인플레·긴축 압력, cool=완화) */
+const IND={
+ spx:{n:'S&P 500',g:'eq',u:'',dec:0,why:'미국 대형주 지수.',read:'구조적으로 약세로 봅니다. 10년물 4.5% 돌파는 균열, 5% 이상은 본격 조정 레벨입니다. 강세 판단은 대부분 "단기 반등"입니다.',rule:'MOVE 120 이상이면 위험 신호(사용자 설정).'},
+ ndx:{n:'나스닥 종합',g:'eq',u:'',dec:0,why:'성장·기술주 중심 지수. 할인율(장기금리)에 가장 민감합니다.',read:'버블·듀레이션 자산으로 봅니다. 텀프리미엄이 오르면 멀티플이 깎인다고 봅니다.',rule:'10년물·텀프리미엄 상승과 함께 읽습니다.'},
+ dji:{n:'다우존스',g:'eq',u:'',dec:0,why:'미국 전통 대형주 30개.',read:'',rule:''},
+ move:{n:'MOVE 국채 변동성',g:'eq',u:'',dec:1,th:[[120,'위험 120']],why:'미 국채 옵션의 1개월 내재변동성(2·5·10·30년 가중). 단위 bp.',read:'10년물이 5% 가까이 가도 증시가 조용한 이유를 MOVE가 낮은 데서 찾습니다. MOVE가 급등하면 모든 자산이 다시 가격을 매겨야 한다고 봅니다.',rule:'120 이상: 나스닥·S&P 500 위험 신호(사용자 설정).'},
+ wti_front:{n:'WTI 근월물',g:'oil',u:'$',dec:2,why:'뉴욕 원유 선물 최근월물.',read:'유가를 "기대인플레이션을 결정하는 최대 요소"로 봅니다. 재고 대비 싸면 강세 근거입니다.',rule:'$80~85 1차 매수·$74~79 적극 매수, $120 근처 단기 박스 상단, $150~200에서 원유 직접 비중 축소·생산기업 확대.'},
+ brent_front:{n:'Brent 근월물',g:'oil',u:'$',dec:2,why:'북해 원유 선물(NYMEX Brent, ICE와 연동).',read:'',rule:'Brent가 빠르게 $70~80으로 돌아가면 고유가 시나리오의 무효화 조건입니다.'},
+ wti_spot:{n:'WTI 현물',g:'oil',u:'$',dec:2,why:'EIA 공표 현물가. 며칠 늦게 반영됩니다.',read:'',rule:''},
+ brent_spot:{n:'Brent 현물',g:'oil',u:'$',dec:2,why:'EIA 공표 현물가.',read:'',rule:''},
+ wti_dec27:{n:'WTI 2027년 12월물',g:'oil',u:'$',dec:2,why:'시장이 예상하는 1년 뒤 유가.',read:'근월물보다 낮으면(백워데이션) 시장이 고유가를 일시적으로 본다는 뜻입니다.',rule:''},
+ wti_dec28:{n:'WTI 2028년 12월물',g:'oil',u:'$',dec:2,why:'2년 뒤 유가 기대.',read:'',rule:''},
+ brent_dec27:{n:'Brent 2027년 12월물',g:'oil',u:'$',dec:2,why:'',read:'',rule:''},
+ brent_dec28:{n:'Brent 2028년 12월물',g:'oil',u:'$',dec:2,why:'',read:'',rule:''},
+ crude_comm:{n:'미국 상업 원유재고',g:'oil',u:'억 배럴',dec:2,f:p=>scale(p,1e-5),why:'SPR 제외 상업 재고(주간).',read:'재고가 바닥나면 행정적 가격 억제(SPR 방출·종전 발언)가 한계에 이른다고 봅니다.',rule:'재고가 계속 쌓이고 정제마진이 붕괴하는데 생산이 줄지 않으면 판단을 재점검합니다.'},
+ crude_spr:{n:'전략비축유(SPR)',g:'oil',u:'억 배럴',dec:2,f:p=>scale(p,1e-5),why:'미국 정부 비축유(주간).',read:'2026년 11월 전후 대여분 반환이 시작되면 시장 공급이 비축 수요로 뒤집혀 2027년 큰 강세 요인이 된다고 봅니다.',rule:'주간 SPR 변화가 감소에서 증가로 바뀌는지가 확인 신호입니다.'},
+ crude_cushing:{n:'쿠싱 원유재고',g:'oil',u:'백만 배럴',dec:1,f:p=>scale(p,1e-3),why:'WTI 인도 지점 재고(주간).',read:'',rule:''},
+ osr:{n:'오일/실버 비율',g:'oil',u:'',dec:2,f:()=>join(pts('wti_front'),pts('silver_front'),(a,b)=>a/b),th:[[3,'기준 3']],long:true,why:'WTI(달러/배럴) ÷ 은(달러/온스). 원유의 실질 가격을 재는 대표의 지표.',read:'금·은은 금융 유동성과 화폐가치 하락을, 원유는 실물경제를 대변한다고 봅니다. 비율이 역사적 저점이면 원유가 실질적으로 싸다는 뜻입니다.',rule:'3.0 전후: 투자 기간 기준으로 원유 최대 비중을 줄이고 귀금속·중국 등으로 다변화를 검토(신호판).'},
+ gor:{n:'금/원유 비율',g:'oil',u:'배럴',dec:1,f:()=>join(pts('gold_front'),pts('wti_front'),(a,b)=>a/b),th:[[13,'장기 평균 13']],long:true,cap:80,why:'금 1온스로 살 수 있는 원유 배럴 수(오일/금 비율의 역수).',read:'장기 평균은 약 13배럴이며, 정상화는 금 하락이 아니라 유가 급등으로 이뤄질 것으로 봅니다.',rule:'13배럴 이하: 원유의 상대 저평가 해소 → 재구성 검토(신호판).'},
+ cgr:{n:'구리/금 비율',g:'oil',u:'×1000',dec:2,f:()=>join(pts('copper_front'),pts('gold_front'),(a,b)=>a/b*1000),why:'구리(달러/파운드) ÷ 금(달러/온스).',read:'장기금리·실질금리의 선행지표로 씁니다. 반등하면 장기채 약세, 원자재·신흥국 강세 신호입니다.',rule:'10년물 금리와 같은 방향인지 함께 봅니다.'},
+ gold_front:{n:'금 근월물',g:'oil',u:'$',dec:0,why:'',read:'2025년에 강세로 전환. 2026년 9월에는 포지션 과열로 단기 의견 보류.',rule:'BEI↑·실질금리↓·달러↓가 함께 오면 1970년대식 귀금속 국면.'},
+ silver_front:{n:'은 근월물',g:'oil',u:'$',dec:2,why:'',read:'',rule:''},
+ copper_front:{n:'구리 근월물',g:'oil',u:'$',dec:2,why:'달러/파운드.',read:'AI·전력망 투자와 중국 부양을 구리 수요 근거로 봅니다.',rule:''},
+ ust10:{n:'미 국채 10년물',g:'rate',u:'%',dec:2,th:[[4.5,'균열 4.5%'],[5,'조정 5%']],decomp:true,why:'금융여건을 결정하는 핵심 금리.',read:'칼럼에서 가장 많이 등장하는 변수입니다. 기준금리보다 10년물이 실제 금융여건을 정한다고 봅니다. 아래에서 기대 단기금리 경로·BEI·실질 경로·텀프리미엄으로 나눠 봅니다.',rule:'4.5% 돌파 = 과열된 미국 주식의 균열, 5% 이상 = 본격 자산 조정.'},
+ real10:{n:'10년 실질금리 (TIPS)',g:'rate',u:'%',dec:2,why:'명목 10년물 − 기대인플레이션(시장 기준).',read:'실질금리가 오르는 동안은 금에 불리하다고 봅니다.',rule:''},
+ bei10:{n:'10년 BEI (기대인플레)',g:'rate',u:'%',dec:2,th:[[2.6,'2.6%'],[2.8,'2.8%']],why:'국채와 물가연동국채의 금리 차.',read:'BEI는 유가에 크게 좌우된다고 봅니다. 유가와 무관하게 오르면 장기채에 위험 신호입니다.',rule:'2.6% → 2.8% 상승은 장기 인플레이션 레짐을 다시 평가하는 신호.'},
+ rny10_acm:{n:'기대 단기금리 경로',g:'rate',u:'%',dec:2,why:'ACM 모형의 위험중립 10년 금리(시장이 예상하는 단기금리 평균).',read:'',rule:''},
+ tp10_acm:{n:'텀프리미엄 (ACM)',g:'rate',u:'%p',dec:2,why:'장기채를 오래 들고 있는 위험에 대한 추가 보상.',read:'2022년 이후 주식 하락은 텀프리미엄 상승으로 발현됐다고 볼 만큼 중시합니다. 이번 유가 충격은 BEI보다 텀프리미엄으로 먼저 번졌다고 봅니다.',rule:'플러스 전환·수년래 최고 = 장기금리 상승의 주 동인, 주가와 역상관.'},
+ tp10_kw:{n:'텀프리미엄 (Kim-Wright)',g:'rate',u:'%p',dec:2,why:'연준 모형. 1~2주 늦게 공표.',read:'',rule:''},
+ t10y3m:{n:'10년−3개월 금리차',g:'rate',u:'%p',dec:2,th:[[1.5,'150bp']],why:'장단기 커브.',read:'역전 자체보다 역전이 풀리는 방식(베어/불 스티프닝)에 주목합니다.',rule:'150bp 이상이면 장기채 진입을 고려(2025.09).'},
+ t10y2y:{n:'10년−2년 금리차',g:'rate',u:'%p',dec:2,th:[[0,'0']],why:'장단기 커브.',read:'장기금리가 오르며 벌어지면 베어 스티프닝(인플레이션형)입니다. 이번 사이클을 이 형태로 봅니다.',rule:'스티프닝이 진행되면 주가 붕괴와 실물 리세션이 뒤따른다고 봅니다.'},
+ fed_assets:{n:'연준 총자산',g:'liq',u:'조 달러',dec:2,f:p=>scale(p,1e-6),why:'연준 대차대조표(주간).',read:'QT를 해도 규모 자체가 크면 긴축이 "허풍"이라고 봤습니다.',rule:''},
+ rrp:{n:'역레포(RRP) 잔고',g:'liq',u:'억 달러',dec:0,f:p=>scale(p,10),why:'MMF 등이 연준에 맡긴 단기자금.',read:'RRP가 바닥나면 T-bill 발행으로 유동성을 공급하던 경로가 막힌 것으로 봅니다.',rule:''},
+ tga:{n:'재무부 일반계정(TGA)',g:'liq',u:'억 달러',dec:0,f:p=>scale(p,1e-2),why:'재무부의 연준 예금(주간).',read:'TGA가 늘면 시중 유동성을 흡수(약세 요인)한다고 봅니다.',rule:'TGA 목표 상향 = 유동성 흡수.'},
+ reserves:{n:'은행 지급준비금',g:'liq',u:'조 달러',dec:2,f:p=>scale(p,1e-6),why:'은행이 연준에 둔 준비금(주간).',read:'GDP 대비 지준 비율로 QT 종료 시점을 판단합니다.',rule:''},
+ m2y:{n:'M2 증가율 (전년비)',g:'liq',u:'%',dec:1,f:()=>yoy(pts('m2')),why:'시중 통화량 증가율(월간).',read:'M2 증가율은 1~3년 시차를 두고 CPI를 선행한다고 봅니다.',rule:'M2가 정점을 찍은 뒤에도 최소 3년은 인플레이션 정점이 오지 않는다고 봅니다.'},
+ m2v:{n:'M2 유통속도',g:'liq',u:'',dec:3,why:'명목 GDP ÷ M2(분기).',read:'유통속도를 곱한 실질 통화량으로 디스인플레이션 해석을 경계합니다.',rule:''},
+ debt_gdp:{n:'연방정부 부채/GDP',g:'liq',u:'%',dec:1,why:'분기.',read:'이 비율이 2차대전 수준이라 연준이 진짜 긴축을 할 수 없다는 주장의 뿌리입니다.',rule:'부채가 클수록 긴축은 짧고 불완전하며 인플레이션 용인 쪽으로 기운다고 봅니다.'},
+ interest:{n:'연방정부 이자비용',g:'liq',u:'조$/년',dec:2,f:p=>scale(p,1e-3),why:'분기, 연율 환산.',read:'실질금리를 크게 플러스로 유지하면 이자비용이 재정을 무너뜨린다고 봅니다.',rule:''},
+ cpiy:{n:'CPI (전년비)',g:'px',u:'%',dec:1,f:()=>yoy(pts('cpi')),why:'소비자물가(월간).',read:'헤드라인보다 흐름과 구성을 봅니다.',rule:'기저효과를 감안한 예상치를 크게 벗어나면 연준의 워딩 관리가 통하지 않는다고 봅니다.'},
+ corecpi:{n:'근원 CPI (전년비)',g:'px',u:'%',dec:1,f:()=>yoy(pts('core_cpi')),why:'에너지·식품 제외(월간).',read:'',rule:'근원물가가 6개월 내 4%를 크게 넘을 가능성을 경고(2026.09).'},
+ corecpi3:{n:'근원 CPI (3개월 연율)',g:'px',u:'%',dec:1,f:()=>ann3(pts('core_cpi')),why:'최근 3개월 상승 속도를 연율로.',read:'',rule:''},
+ corepce:{n:'근원 PCE (전년비)',g:'px',u:'%',dec:1,f:()=>yoy(pts('core_pce')),why:'연준이 보는 물가(월간).',read:'',rule:''},
+ expx:{n:'수출물가 (전년비)',g:'px',u:'%',dec:1,f:()=>yoy(pts('export_px')),why:'미국 수출물가지수(월간).',read:'"가장 왜곡되지 않은 실질 물가"로 중시합니다.',rule:''},
+ nfp:{n:'비농업 고용 증감',g:'px',u:'천 명',dec:0,f:()=>mdiff(pts('payrolls')),why:'월간 일자리 증가.',read:'2026년에는 이민 단속·자동화로 노동공급이 줄어 "일자리 없는 성장"이 되었다고 보고, 약한 고용을 완화 신호로 읽는 해석을 반박합니다.',rule:'ISM 신규주문·실질소비·근로시간·실업수당·JOLTS가 동시에 꺾일 때만 명목 둔화로 인정.'},
+ unrate:{n:'실업률',g:'px',u:'%',dec:1,why:'월간.',read:'후행지표로 봅니다. 자산 하락 뒤에 오른다는 것입니다.',rule:''},
+ jolts:{n:'JOLTS 구인',g:'px',u:'만 건',dec:0,f:p=>scale(p,0.1),why:'월간 구인 건수.',read:'',rule:''},
+ claims:{n:'신규 실업수당 청구',g:'px',u:'만 건',dec:1,f:p=>scale(p,1e-4),why:'주간.',read:'',rule:''},
+ dxy:{n:'달러 인덱스',g:'fx',u:'',dec:2,th:[[110,'110']],why:'주요 6개 통화 대비 달러.',read:'장기 달러 약세를 봅니다. 단기 강세는 인정하되 "연준에 대한 잘못된 신뢰"로 해석합니다.',rule:'110이 큰 변곡점(2023.10).'},
+ usdcny:{n:'달러/위안',g:'fx',u:'',dec:3,th:[[7.5,'7.5']],why:'',read:'위안화 강세는 중국 자산에 우호적입니다.',rule:'7.5 이상 약세면 중국의 금 매도 가능성을 경고.'},
+ usdjpy:{n:'달러/엔',g:'fx',u:'',dec:2,why:'',read:'',rule:''},
+ usdkrw:{n:'달러/원',g:'fx',u:'',dec:1,why:'',read:'',rule:''},
+ hsi:{n:'항셍 지수',g:'fx',u:'',dec:0,why:'홍콩 증시.',read:'2020년부터 "거품이 없고 정부부채가 낮은 중국"을 가장 유망한 투자처로 꼽았습니다.',rule:'항셍테크의 장기 이동평균 지지, 나스닥 대비 상대 언더퍼폼 폭을 봅니다.'},
+ hstech:{n:'항셍테크 ETF (3033)',g:'fx',u:'HK$',dec:2,why:'홍콩 상장 중국 플랫폼 중심.',read:'',rule:''},
+ hsindx:{n:'항셍/나스닥 상대강도',g:'fx',u:'',dec:3,f:()=>join(pts('hsi'),pts('ndx'),(a,b)=>a/b),why:'항셍 ÷ 나스닥. 오르면 홍콩이 상대적으로 강함.',read:'항셍과 나스닥의 극단적 상대 저평가를 찾습니다.',rule:''},
+};
+const GROUPS=[['eq','미국 주식·변동성'],['oil','원유·원자재'],['rate','금리 (10년물 분해 포함)'],['liq','재정·유동성'],['px','물가·고용'],['fx','달러·중국']];
+const ORDER={eq:['spx','ndx','dji','move'],oil:['wti_front','brent_front','wti_spot','brent_spot','wti_dec27','wti_dec28','brent_dec27','brent_dec28','crude_comm','crude_spr','crude_cushing','osr','gor','cgr','gold_front','silver_front','copper_front'],
+ rate:['ust10','real10','bei10','rny10_acm','tp10_acm','tp10_kw','t10y3m','t10y2y'],liq:['fed_assets','rrp','tga','reserves','m2y','m2v','debt_gdp','interest'],
+ px:['cpiy','corecpi','corecpi3','corepce','expx','nfp','unrate','jolts','claims'],fx:['dxy','usdcny','usdjpy','usdkrw','hsi','hstech','hsindx']};
+const SRC={};
+function series(k){const c=IND[k];let p;if(c.f&&!S[k])p=c.f(pts(c.base||k));else if(c.f)p=c.f(pts(k));else p=pts(k);
+ if(!c.long)p=p.filter(x=>x[0]>=(freq(p)==='d'||freq(p)==='w'?'2025-01-01':'2019-01-01'));return p}
+function srcOf(k){const s=S[k];if(s)return [s.source,s.link];const dep={osr:'wti_front',gor:'gold_front',cgr:'copper_front',m2y:'m2',cpiy:'cpi',corecpi:'core_cpi',corecpi3:'core_cpi',corepce:'core_pce',expx:'export_px',nfp:'payrolls',hsindx:'hsi'}[k];return S[dep]?[S[dep].source,S[dep].link]:['','#']}
+const fmt=(v,dec)=>v==null||isNaN(v)?'–':v.toLocaleString('ko-KR',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+function change(k){const p=series(k);if(p.length<2)return null;const L=p[p.length-1];const fr=freq(p);const B=(fr==='d')?backPt(p,30):p[p.length-2];if(!B)return null;return {L,B,d:L[1]-B[1],fr}}
+function chgText(k){const c=change(k);if(!c)return '';const dec=IND[k].dec;const pctUnit=['%','%p'].includes(IND[k].u);const d=c.d;
+ const txt=pctUnit?(IND[k].g==='rate'||k==='bei10'?(d>0?'+':'')+Math.round(d*100)+'bp':(d>0?'+':'')+d.toFixed(2)+'%p'):(Math.abs(c.B[1])>0&&!['nfp'].includes(k)&&IND[k].u!=='%')?(d>0?'+':'')+(d/Math.abs(c.B[1])*100).toFixed(1)+'%':(d>0?'+':'')+fmt(d,dec);
+ return `<span class="${d>0?'up':d<0?'dn':''}">${txt}</span>`}
+/* ---------- 차트 ---------- */
+function spark(p,w=110,h=28){if(p.length<2)return '';const ys=p.map(x=>x[1]);const lo=Math.min(...ys),hi=Math.max(...ys);const sx=i=>2+i*(w-4)/(p.length-1),sy=v=>h-2-(hi===lo?.5:(v-lo)/(hi-lo))*(h-4);
+ return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><path d="${p.map((x,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(x[1]).toFixed(1)).join(' ')}" fill="none" stroke="var(--accent)" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>`}
+function line(p,o={}){const W=900,H=230,ml=48,mr=12,mt=10,mb=24;if(p.length<2)return '<p class="hint">데이터 부족</p>';
+ const ys=p.map(r=>r[1]);let lo=Math.min(...ys,...(o.th||[]).map(t=>t[0])),hi=Math.max(...ys,...(o.th||[]).map(t=>t[0]));if(o.cap)hi=Math.min(hi,o.cap);if(hi===lo){hi+=1;lo-=1}
+ const span=hi-lo,raw=span/5,mag=Math.pow(10,Math.floor(Math.log10(raw))),st=[1,2,2.5,5,10].map(x=>x*mag).find(x=>x>=raw);lo=Math.floor(lo/st)*st;hi=Math.ceil(hi/st)*st;
+ const sx=i=>ml+i*(W-ml-mr)/(p.length-1),sy=v=>mt+(hi-Math.min(v,hi))/(hi-lo)*(H-mt-mb);let g='';
+ for(let v=lo;v<=hi+st/2;v+=st)g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(v)}" y2="${sy(v)}" stroke="var(--line)" stroke-width=".6"/><text x="${ml-6}" y="${sy(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${+v.toFixed(3)}</text>`;
+ const yrs=(new Date(p[p.length-1][0])-new Date(p[0][0]))/3.15e10;let lm='';p.forEach((r,i)=>{const m=r[0].slice(0,7);if(m===lm)return;lm=m;const mm=+m.slice(5);
+  const show=yrs>6?(mm===1&&+m.slice(0,4)%2===0):yrs>2.5?mm===1:(mm===1||mm===7);if(show)g+=`<text x="${sx(i)}" y="${H-6}" font-size="11" fill="var(--muted)" text-anchor="middle">${yrs>2.5?m.slice(0,4):m.replace('-','.')}</text>`});
+ (o.th||[]).forEach(([v,l])=>{g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(v)}" y2="${sy(v)}" stroke="var(--up)" stroke-width="1.3" stroke-dasharray="6 4"/><text x="${W-mr-4}" y="${sy(v)-5}" text-anchor="end" font-size="11" font-weight="600" fill="var(--up)" paint-order="stroke" stroke="var(--surface)" stroke-width="3">${l}</text>`});
+ const d=p.map((r,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(r[1]).toFixed(1)).join(' ');
+ return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.aria||''}">${g}<path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.8"/></svg>`}
+/* ---------- 10년물 분해 ---------- */
+function decompRows(){const need=['y10_acm','rny10_acm','tp10_acm','bei10'];if(need.some(k=>!pts(k).length))return null;const m=k=>new Map(pts(k));const Y=m('y10_acm'),RN=m('rny10_acm'),TP=m('tp10_acm'),B=m('bei10');
+ const rows=[];for(const [d,y] of Y){if(RN.has(d)&&TP.has(d)&&B.has(d)){const rn=RN.get(d),b=B.get(d);rows.push({d,y,rn,tp:TP.get(d),bei:b,real:rn-b})}}return rows}
+const COMP=[['y','10년물 (ACM)','var(--text)',0],['rn','기대 단기금리 경로','var(--c-rn)',1],['bei','BEI','var(--c-bei)',2],['real','실질 경로(근사)','var(--c-real)',2],['tp','텀프리미엄','var(--c-tp)',1]];
 const bp=v=>(v>0?'+':'')+Math.round(v*100)+'bp';
-function back(pts,days){const last=new Date(pts[pts.length-1][0]);last.setDate(last.getDate()-days);const t=last.toISOString().slice(0,10);for(let i=pts.length-1;i>=0;i--)if(pts[i][0]<=t)return pts[i];return null}
-function delta(a,b,u){if(!b)return '';let d=Math.round((a-b[1])*100)/100;const cls=d>0?'up':d<0?'dn':'';const s=(u==='$/bbl'||u==='$/oz'||u==='pt')?(d>0?'+':'')+d.toFixed(u==='pt'?1:2):bp(d);return `<span class="${cls}">${s}</span>`}
-function spark(pts){const w=300,h=56,p=3;const ys=pts.map(x=>x[1]);const lo=Math.min(...ys),hi=Math.max(...ys);const sx=i=>p+i*(w-2*p)/Math.max(1,pts.length-1),sy=v=>h-p-(hi===lo?.5:(v-lo)/(hi-lo))*(h-2*p);
- const d=pts.map((x,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(x[1]).toFixed(1)).join(' ');
- return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><path d="${d}" fill="none" stroke="var(--accent)" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>`}
-function card(s,k){if(s&&s.points)s=Object.assign({},s,{points:s.points.filter(x=>x[0]>='2025-01-01')});if(!s||!s.points||!s.points.length)return '<div class="c"><h3>데이터 없음</h3><p class="s">다음 갱신 때 다시 시도합니다.</p></div>';
- const p=s.points,L=p[p.length-1];const age=(Date.now()-new Date(L[0]))/864e5;
- const unit=s.unit==='$/bbl'?'$/배럴':s.unit==='$/oz'?'$/온스':s.unit;const dec=s.unit==='pt'?1:2;
- return `<div class="c"><h3>${s.name}</h3><div class="v">${L[1].toFixed(dec)}<span class="u">${unit}</span></div>
- <div class="d"><span>전일 ${delta(L[1],p[p.length-2],s.unit)}</span><span>1개월 ${delta(L[1],back(p,30),s.unit)}</span><span>1년 ${delta(L[1],back(p,365),s.unit)}</span></div>
- <a class="sp" href="${s.link}" target="_blank" rel="noopener" title="${s.source}에서 자세히 보기">${spark(p)}</a>
- <div class="s">기준일 ${L[0]} · <a href="${s.link}" target="_blank" rel="noopener">${s.source} ↗</a></div>
- ${(!s.ok||age>(STALE[k]||7))?'<div class="warn">최근 갱신 실패 또는 지연 — 마지막으로 받은 값입니다.</div>':''}</div>`}
-
-/* ---- 10년물 분해 ---- */
-function decomp(S){const need=['y10_acm','rny10_acm','tp10_acm','bei10'];if(need.some(k=>!S[k]||!S[k].points.length))return null;
- const m=k=>new Map(S[k].points);const Y=m('y10_acm'),RN=m('rny10_acm'),TP=m('tp10_acm'),B=m('bei10');
- const rows=[];for(const [d,y] of Y){if(RN.has(d)&&TP.has(d)&&B.has(d)){const rn=RN.get(d),b=B.get(d);rows.push({d,y,rn,tp:TP.get(d),bei:b,real:rn-b})}}
- return rows}
-const COMP=[['y','10년물 금리 (ACM)','var(--text)',0],['rn','기대 단기금리 경로','var(--c-rn)',1],['bei','BEI (장기 물가보상)','var(--c-bei)',2],['real','실질 경로 (근사)','var(--c-real)',2],['tp','명목 텀프리미엄','var(--c-tp)',1]];
-function tree(r){const sw=c=>`<span class="sw" style="background:${c}"></span>`;
- $('tree').innerHTML=`<div><b>10년물 금리 ${r.y.toFixed(2)}%</b> <span class="hint">(기준일 ${r.d}, ACM 모형 적합치)</span></div>
- <div class="l1">= ${sw('var(--c-rn)')}기대 단기금리 경로 <b>${r.rn.toFixed(2)}%</b> + ${sw('var(--c-tp)')}명목 텀프리미엄 <b>${r.tp.toFixed(2)}%p</b></div>
- <div class="l2">기대 단기금리 경로 ≈ ${sw('var(--c-bei)')}BEI <b>${r.bei.toFixed(2)}%</b> + ${sw('var(--c-real)')}실질 경로(근사) <b>${r.real.toFixed(2)}%</b></div>`}
-function bridge(rows,days){const L=rows[rows.length-1];const t=new Date(L.d);t.setDate(t.getDate()-days);const ts=t.toISOString().slice(0,10);
- let B=null;for(let i=rows.length-1;i>=0;i--)if(rows[i].d<=ts){B=rows[i];break}if(!B){$('bridge').innerHTML='<p class="hint">이 기간의 데이터가 없습니다.</p>';return}
- const ch=COMP.map(([k,n,c,lv])=>[n,c,lv,L[k]-B[k]]);const mx=Math.max(...ch.map(x=>Math.abs(x[3])),0.0001);
- $('bridge').innerHTML=`<p class="hint">${B.d} → ${L.d} 변화. 위 두 줄(경로·텀프리미엄)의 합이 10년물 변화이고, 경로 변화는 BEI와 실질 경로로 나뉩니다.</p>`+
- ch.map(([n,c,lv,d])=>{const w=Math.abs(d)/mx*50;const left=d>=0?50:50-w;
-  return `<div class="br"><span class="lab k${lv}">${lv?'└ ':''}${n}</span><span class="track"><span class="zero"></span><span class="bar" style="left:${left}%;width:${Math.max(w,.4)}%;background:${c}"></span></span><span class="num ${d>0?'up':d<0?'dn':''}">${bp(d)}</span></div>`}).join('')}
-function bigchart(rows){const W=900,H=300,ml=44,mr=12,mt=10,mb=26;const keys=[['y','var(--text)',2],['rn','var(--c-rn)',1.6],['bei','var(--c-bei)',1.6],['real','var(--c-real)',1.6],['tp','var(--c-tp)',1.6]];
- const vals=rows.flatMap(r=>keys.map(k=>r[k[0]]));let lo=Math.floor(Math.min(...vals,0)*2)/2,hi=Math.ceil(Math.max(...vals)*2)/2;
- const sx=i=>ml+i*(W-ml-mr)/(rows.length-1),sy=v=>mt+(hi-v)/(hi-lo)*(H-mt-mb);
- let g='';for(let v=lo;v<=hi+1e-9;v+=0.5){g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(v)}" y2="${sy(v)}" stroke="var(--line)" stroke-width="${Math.abs(v)<1e-9?1.2:.6}"/><text x="${ml-6}" y="${sy(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v.toFixed(1)}%</text>`}
- let lastM='';rows.forEach((r,i)=>{const m=r.d.slice(0,7);if(m!==lastM&&(m.endsWith('01')||m.endsWith('07'))){g+=`<text x="${sx(i)}" y="${H-8}" font-size="11" fill="var(--muted)" text-anchor="middle">${m.replace('-','.')}</text>`}lastM=m});
- const lines=keys.map(([k,c,w])=>`<path d="${rows.map((r,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(r[k]).toFixed(1)).join(' ')}" fill="none" stroke="${c}" stroke-width="${w}"/>`).join('');
- $('bigchart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="10년물 금리 구성요소 추이">${g}${lines}</svg>`;
- $('legend').innerHTML=COMP.map(([k,n,c])=>`<span><span class="sw" style="background:${c}"></span>${n}</span>`).join('')+'<span>· 그래프를 누르면 뉴욕 연은 ACM 페이지가 열립니다</span>'}
-
-
-/* ---- 비율·임계값 차트 ---- */
-function ratioRows(S,num,den,minDate){const a=S[num],b=S[den];if(!a||!b||!a.points.length||!b.points.length)return null;const m=new Map(b.points);
- return a.points.filter(([d,v])=>m.has(d)&&v>0&&m.get(d)>0&&(!minDate||d>=minDate)).map(([d,v])=>[d,v/m.get(d)])}
-function thChart(el,rows,th,o){const W=900,H=240,ml=44,mr=12,mt=10,mb=26;let ys=rows.map(r=>r[1]);let hi=Math.max(...ys,th),lo=Math.min(...ys,th);if(o.cap)hi=Math.min(hi,o.cap);
- const st=o.step||((hi-lo)>8?10:(hi-lo)>4?1:.5);lo=Math.floor(lo/st)*st;hi=Math.ceil(hi/st)*st;
- const sx=i=>ml+i*(W-ml-mr)/(rows.length-1),sy=v=>mt+(hi-Math.min(v,hi))/(hi-lo)*(H-mt-mb);let g='';
- for(let v=lo;v<=hi+1e-9;v+=st)g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(v)}" y2="${sy(v)}" stroke="var(--line)" stroke-width=".6"/><text x="${ml-6}" y="${sy(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${+v.toFixed(2)}</text>`;
- let lm='';const yrStep=rows.length>1500?2:1;rows.forEach((r,i)=>{const m=r[0].slice(0,7);if(m!==lm&&m.endsWith('01')&&(+m.slice(0,4))%yrStep===0)g+=`<text x="${sx(i)}" y="${H-8}" font-size="11" fill="var(--muted)" text-anchor="middle">${m.slice(0,4)}</text>`;else if(rows.length<700&&m!==lm&&m.endsWith('07'))g+=`<text x="${sx(i)}" y="${H-8}" font-size="11" fill="var(--muted)" text-anchor="middle">${m.replace('-','.')}</text>`;lm=m});
- g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(th)}" y2="${sy(th)}" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="6 4"/><text x="${o.labelAbove?W-mr-4:ml+6}" y="${sy(th)+(o.labelAbove?-6:14)}" text-anchor="${o.labelAbove?'end':'start'}" font-size="11" font-weight="600" fill="var(--up)" paint-order="stroke" stroke="var(--surface)" stroke-width="3">${o.thLabel}</text>`;
- const path=rows.map((r,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(r[1]).toFixed(1)).join(' ');const L=rows[rows.length-1];
- $(el).innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.aria}">${g}<path d="${path}" fill="none" stroke="var(--accent)" stroke-width="1.8"/><circle cx="${sx(rows.length-1)}" cy="${sy(L[1])}" r="4" fill="var(--accent)"/></svg>`}
-function thSummary(el,rows,th,o){const L=rows[rows.length-1],hit=v=>o.below?v<=th:v>=th,on=hit(L[1]);let i0=rows.length-1;while(i0>=0&&hit(rows[i0][1])===on)i0--;
- const since=i0>=0?rows[i0+1][0]:null,lastOther=i0>=0?rows[i0][0]:null;const df=x=>x?((L[1]-x[1]>0?'+':'')+(L[1]-x[1]).toFixed(2)):'';
- $(el).innerHTML=`<div class="v">${L[1].toFixed(2)}<span class="u">${o.unit||''}</span><span class="badge ${on?'on':'off'}">${on?o.onTxt:o.offTxt}</span></div>
- <div class="d"><span>1개월 ${df(back(rows,30))}</span><span>1년 ${df(back(rows,365))}</span><span>${since?(on?o.onTxt+' 시작 ':o.offTxt+' 전환 ')+since+' (마지막 '+(on?o.offTxt:o.onTxt)+' '+lastOther+')':'2010년 이후 계속 '+(on?o.onTxt:o.offTxt)}</span><span>기준일 ${L[0]}</span></div>
- <p class="rule"><b>기준:</b> ${o.rule}</p>`}
-function signals(D){const S=D.signals||{};const order=['oil_silver','gold_oil','move'];const th={oil_silver:'≥ 3.0',gold_oil:'≤ 13배럴',move:'≥ 120'};
- const rows=order.filter(k=>S[k]).map(k=>{const s=S[k];return `<div class="sig"><div class="nm"><b>${s.name}</b><span>${s.note}</span></div><div class="val">${(+s.value).toFixed(2)}</div><div>기준 ${th[k]}<br><span class="hint">기준일 ${s.date}</span></div><div><span class="badge ${s.on?'on':'off'}">${s.on?'신호 켜짐':'대기'}</span><br><span class="hint">${s.on?'켜진 날 '+s.since:''}</span></div></div>`}).join('');
- $('signals').innerHTML=rows||'<p class="hint">신호 데이터는 다음 갱신 때 채워집니다.</p>'}
-
-fetch('data.json?'+Date.now()).then(r=>r.json()).then(D=>{const S=D.series;
- $('oil1').innerHTML=OIL1.map(k=>card(S[k],k)).join('');$('oil2').innerHTML=OIL2.map(k=>card(S[k],k)).join('');
- $('eq').innerHTML=EQ.map(k=>card(S[k],k)).join('');$('rate').innerHTML=RATE.map(k=>card(S[k],k)).join('');$('vol').innerHTML=VOL.map(k=>card(S[k],k)).join('');$('silver').innerHTML=card(S.silver_front,'silver_front')+card(S.gold_front,'gold_front');signals(D);
- const r1=ratioRows(S,'wti_front','silver_front','2010-01-01');if(r1&&r1.length>2){thSummary('osr',r1,3,{onTxt:'3 이상',offTxt:'3 미만',rule:'3 이상이면 원유 최대 비중을 줄이고 귀금속, 가치주 영역의 헬스케어·소비주, 중국 빅테크로 다변화를 검토 (이선철 대표가 제시한 기준을 사용자가 설정)'});thChart('osrchart',r1,3,{thLabel:'기준선 3',aria:'오일/실버 비율 추이'})}
- const r2=ratioRows(S,'gold_front','wti_front','2010-01-01');if(r2&&r2.length>2){thSummary('ogr',r2,13,{below:true,unit:'배럴',onTxt:'13 이하',offTxt:'13 초과',rule:'금 1온스 = 원유 약 13배럴(장기 평균, 이선철 대표 칼럼의 기준). 13배럴 이하로 내려오면 원유의 상대 저평가가 해소된 것으로 보고 재구성을 검토'});thChart('ogrchart',r2,13,{thLabel:'장기 평균 13배럴',aria:'금/원유 비율 추이',cap:80,step:10,labelAbove:true})}
- const mv=S.move&&S.move.points.filter(p=>p[0]>='2025-01-01');if(mv&&mv.length>2){const L=mv[mv.length-1];const on=L[1]>=120;
-  $('movev').innerHTML=`<div class="v">${L[1].toFixed(1)}<span class="u">bp</span><span class="badge ${on?'on':'off'}">${on?'120 이상':'120 미만'}</span></div><div class="d"><span>기준일 ${L[0]}</span></div>`;
-  thChart('movechart',mv,120,{thLabel:'위험 기준 120',aria:'MOVE 지수 추이',labelAbove:true});
-  $('eqbanner').innerHTML=on?`<div class="alert"><b>위험 신호</b> — 국채 변동성(MOVE) ${L[1].toFixed(1)}로 기준 120 이상입니다(${L[0]}). 아래 금리 변동성 섹션을 확인하세요.</div>`:'';
-  $('movebanner').innerHTML=on?`<div class="alert"><b>나스닥·S&amp;P 500 위험 신호</b> — MOVE ${L[1].toFixed(1)} (기준 120 이상, ${L[0]}). 국채 변동성 급등은 주식 위험자산의 할인율 불안으로 이어질 수 있습니다.</div>`:''}
- const rows=decomp(S);
- if(rows&&rows.length>5){tree(rows[rows.length-1]);bigchart(rows);
-  const P=[['1주',7],['1개월',30],['3개월',91],['1년',365]];
-  $('tabs').innerHTML=P.map(([n,d],i)=>`<button type="button" data-d="${d}" aria-pressed="${i===1}">${n}</button>`).join('');
-  $('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('tabs').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));bridge(rows,+b.dataset.d)});
-  bridge(rows,30)}
- else{$('tree').innerHTML='<p class="hint">분해 데이터를 아직 받지 못했습니다. 다음 갱신 때 채워집니다.</p>'}
- $('stamp').textContent='마지막 갱신: '+new Date(D.updated_utc).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'})+' (한국 시간)';
+function bridgeHtml(rows,days){const L=rows[rows.length-1];const t=new Date(L.d);t.setDate(t.getDate()-days);const ts=t.toISOString().slice(0,10);let B=null;for(let i=rows.length-1;i>=0;i--)if(rows[i].d<=ts){B=rows[i];break}if(!B)return '';
+ const ch=COMP.map(([k,n,c,lv])=>[n,c,lv,L[k]-B[k]]);const mx=Math.max(...ch.map(x=>Math.abs(x[3])),1e-4);
+ return `<p class="hint">${B.d} → ${L.d}</p>`+ch.map(([n,c,lv,d])=>{const w=Math.abs(d)/mx*50;return `<div class="br"><span class="k${lv}">${lv?'└ ':''}${n}</span><span class="track"><span class="zero"></span><span class="bar" style="left:${d>=0?50:50-w}%;width:${Math.max(w,.4)}%;background:${c}"></span></span><span class="num ${d>0?'up':d<0?'dn':''}">${bp(d)}</span></div>`}).join('')}
+function decompHtml(){const rows=decompRows();if(!rows||rows.length<10)return '';const L=rows[rows.length-1];const sw=c=>`<span class="sw" style="background:${c}"></span>`;
+ const W=900,H=260,ml=44,mr=12,mt=10,mb=24;const ks=[['y','var(--text)',2],['rn','var(--c-rn)',1.5],['bei','var(--c-bei)',1.5],['real','var(--c-real)',1.5],['tp','var(--c-tp)',1.5]];
+ const vals=rows.flatMap(r=>ks.map(k=>r[k[0]]));let lo=Math.floor(Math.min(...vals,0)*2)/2,hi=Math.ceil(Math.max(...vals)*2)/2;const sx=i=>ml+i*(W-ml-mr)/(rows.length-1),sy=v=>mt+(hi-v)/(hi-lo)*(H-mt-mb);let g='';
+ for(let v=lo;v<=hi+1e-9;v+=.5)g+=`<line x1="${ml}" x2="${W-mr}" y1="${sy(v)}" y2="${sy(v)}" stroke="var(--line)" stroke-width=".6"/><text x="${ml-6}" y="${sy(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v.toFixed(1)}%</text>`;
+ let lm='';rows.forEach((r,i)=>{const m=r.d.slice(0,7);if(m!==lm&&(m.endsWith('01')||m.endsWith('07')))g+=`<text x="${sx(i)}" y="${H-6}" font-size="11" fill="var(--muted)" text-anchor="middle">${m.replace('-','.')}</text>`;lm=m});
+ const lines=ks.map(([k,c,w])=>`<path d="${rows.map((r,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(r[k]).toFixed(1)).join(' ')}" fill="none" stroke="${c}" stroke-width="${w}"/>`).join('');
+ return `<span class="lab">10년물 구성 (${L.d}, 뉴욕 연은 ACM)</span>
+ <div>10년물 <b>${L.y.toFixed(2)}%</b> = ${sw('var(--c-rn)')}기대 단기금리 경로 <b>${L.rn.toFixed(2)}%</b> + ${sw('var(--c-tp)')}텀프리미엄 <b>${L.tp.toFixed(2)}%p</b><br>&nbsp;&nbsp;└ 경로 ≈ ${sw('var(--c-bei)')}BEI <b>${L.bei.toFixed(2)}%</b> + ${sw('var(--c-real)')}실질 경로(근사) <b>${L.real.toFixed(2)}%</b></div>
+ <span class="lab">기간별로 무엇이 움직였나</span><div class="tabs" data-bridge>${[['1주',7],['1개월',30],['3개월',91],['1년',365]].map(([n,d],i)=>`<button type="button" data-d="${d}" aria-pressed="${i===1}">${n}</button>`).join('')}</div><div class="bridge">${bridgeHtml(rows,30)}</div>
+ <span class="lab">구성요소 추이</span><div class="lg">${COMP.map(([k,n,c])=>`<span>${sw(c)}${n}</span>`).join('')}</div>
+ <a class="big" href="https://www.newyorkfed.org/research/data_indicators/term-premia-tabs" target="_blank" rel="noopener" title="뉴욕 연은 ACM 페이지"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="10년물 구성요소 추이">${g}${lines}</svg></a>
+ <p class="hint">경로/텀프리미엄 분해는 ACM 모형(합이 정확히 맞음), BEI/실질 경로 분해는 근사입니다(BEI에 인플레 위험 프리미엄·TIPS 유동성 프리미엄이 섞임).</p>`}
+/* ---------- 지표 목록 ---------- */
+function rowHtml(k){const c=IND[k];const p=series(k);if(!p.length)return '';const L=p[p.length-1];const F={move:x=>x>=120,osr:x=>x>=3,gor:x=>x<=13,ust10:x=>x>=5,bei10:x=>x>=2.6,dxy:x=>x>=110,usdcny:x=>x>=7.5,t10y3m:x=>x>=1.5};const flag=F[k]?F[k](L[1]):false;
+ return `<details class="row" id="r-${k}" data-k="${k}"><summary><span class="rn">${c.n}${flag?'<span class="flag">기준 도달</span>':''}<small>${L[0]}</small></span><span class="rv">${fmt(L[1],c.dec)}<small>${c.u}</small></span><span class="rc">${chgText(k)}</span><span class="rs">${spark(p.slice(-260))}</span><span class="chev">›</span></summary><div class="more"></div></details>`}
+function fillMore(el){const k=el.dataset.k,c=IND[k],m=el.querySelector('.more');if(m.dataset.done)return;m.dataset.done=1;const p=series(k);const [sn,sl]=srcOf(k);
+ let h='';if(c.why)h+=`<div>${c.why}</div>`;if(c.read)h+=`<span class="lab">이선철 대표가 읽는 법</span><div>${c.read}</div>`;if(c.rule)h+=`<span class="lab">판단 기준</span><div>${c.rule}</div>`;
+ h+=`<a class="big" href="${sl}" target="_blank" rel="noopener" title="${sn}에서 자세히 보기">${line(p,{th:c.th,cap:c.cap,aria:c.n})}</a>`;
+ if(c.decomp)h+=decompHtml();
+ h+=`<div class="src">기준일 ${p[p.length-1][0]} · 출처 <a href="${sl}" target="_blank" rel="noopener">${sn} ↗</a></div>`;m.innerHTML=h;
+ const tb=m.querySelector('[data-bridge]');if(tb){const rows=decompRows();tb.querySelectorAll('button').forEach(b=>b.onclick=()=>{tb.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));m.querySelector('.bridge').innerHTML=bridgeHtml(rows,+b.dataset.d)})}}
+function openRow(k){const el=$('r-'+k);if(!el)return;el.open=true;fillMore(el);el.scrollIntoView({behavior:'smooth',block:'center'})}
+/* ---------- 시나리오 ---------- */
+function v(k){const p=series(k);return p.length?p[p.length-1][1]:null}
+function d1m(k){const c=change(k);return c?c.d:null}
+function scenarios(){const wti=v('wti_front'),brent=v('brent_front'),u10=v('ust10'),s2=d1m('t10y2y'),du=d1m('ust10'),dbei=d1m('bei10'),dbr=d1m('brent_front');
+ const A=[[wti>=80&&wti<=120,`WTI $80~120 박스 (현재 $${fmt(wti,1)})`],[u10>=4.8,`10년물 5%대 (현재 ${fmt(u10,2)}%)`],[s2>0&&du>0,`베어 스티프닝 (1개월 10년물 ${bp(du)}, 10−2년 ${bp(s2)})`]];
+ const B=[[wti>120||brent>130,`WTI $120 초과 또는 Brent $130 초과`],[dbr>0.1*(brent-dbr),`Brent 1개월 +10% 이상 급등 (${dbr>0?'+':''}${fmt(dbr/(brent-dbr)*100,1)}%)`],[dbei>0.1,`BEI 1개월 +10bp 이상 (${bp(dbei)})`]];
+ const C=[[brent<=80,`Brent $80 이하 (현재 $${fmt(brent,1)})`],[du<0,`10년물 1개월 하락 (${bp(du)})`],[dbei<0,`BEI 1개월 하락 (${bp(dbei)})`]];
+ const sc=[['A','고착 인플레 (기본)','학습용 확률 45%',A],['B','2차 원유 급등','35%',B],['C','평화·디스인플레','20%',C]];
+ const score=sc.map(s=>s[3].filter(x=>x[0]).length/s[3].length);const best=score.indexOf(Math.max(...score));
+ $('scenTitle').innerHTML=`<div><b>지금 데이터는 시나리오 ${sc[best][0]}(${sc[best][1]})에 가장 가깝습니다.</b> <span class="hint">조건 ${Math.round(score[best]*3)}/3 충족</span></div>`;
+ $('scen').innerHTML=sc.map((s,i)=>`<div class="sc ${i===best?'best':''}"><h3>${s[0]}. ${s[1]}</h3><div class="p">${s[2]}</div><ul>${s[3].map(([ok,t])=>`<li><span class="ck">${ok?'✓':'·'}</span>${t}</li>`).join('')}</ul></div>`).join('')}
+function signals(){const G=D.signals||{};const th={oil_silver:'3 이상',gold_oil:'13배럴 이하',move:'120 이상'};const nm={oil_silver:'오일/실버',gold_oil:'금/원유',move:'MOVE'};const go={oil_silver:'osr',gold_oil:'gor',move:'move'};
+ $('sigs').innerHTML=Object.keys(th).filter(k=>G[k]).map(k=>{const s=G[k];return `<button type="button" class="chip ${s.on?'on':''}" data-go="${go[k]}"><span class="dot"></span>${nm[k]} <b>${(+s.value).toFixed(2)}</b> · 기준 ${th[k]} · ${s.on?'신호 켜짐':'대기'}</button>`}).join('');
+ $('sigs').querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>openRow(b.dataset.go));
+ const mv=v('move');$('moveAlert').innerHTML=mv>=120?`<div class="alert"><b>나스닥·S&amp;P 500 위험 신호</b> — MOVE ${fmt(mv,1)} (기준 120 이상)</div>`:''}
+/* ---------- 인과 사슬 ---------- */
+function node(k,label,i){const c=IND[k];const p=series(k);if(!p.length)return '';const L=p[p.length-1];return `<button type="button" class="node" data-go="${k}"><span class="n">${i?'<i>→</i>':''}${label||c.n}</span><span class="v">${fmt(L[1],c.dec)}<small style="font-size:11px;color:var(--muted);font-weight:500"> ${c.u}</small></span><span class="c">${chgText(k)}</span></button>`}
+const ar='<span class="arr">→</span>';
+function chains(){const dbei=d1m('bei10'),dtp=d1m('tp10_acm'),du=d1m('ust10'),s2=d1m('t10y2y'),u10=v('ust10'),mv=v('move'),dnd=change('ndx');
+ const R=[];
+ // 1. 유가 → 금리 → 주식
+ let r1=[];if(dbei!=null&&dtp!=null){r1.push(Math.abs(dtp)>Math.abs(dbei)?`최근 1개월 금리 상승분은 <b>텀프리미엄(${bp(dtp)})</b>이 BEI(${bp(dbei)})보다 큽니다. 유가 충격이 물가 기대보다 "장기채를 들고 있는 위험"으로 먼저 번지는 대표의 진단과 같은 그림입니다.`:`최근 1개월은 <b>BEI(${bp(dbei)})</b>가 텀프리미엄(${bp(dtp)})보다 크게 움직였습니다. 유가가 물가 기대로 직접 번지는 국면입니다.`)}
+ if(u10!=null)r1.push(`10년물 ${fmt(u10,2)}%는 ${u10>=5?'대표가 말한 "본격 자산 조정" 레벨(5%) 위':u10>=4.5?'균열 레벨(4.5%)과 조정 레벨(5%) 사이':'4.5% 아래'}입니다.`);
+ if(mv!=null)r1.push(mv>=120?`MOVE ${fmt(mv,1)}로 채권 변동성이 위험 수준입니다.`:`그런데도 MOVE가 ${fmt(mv,0)}로 120 아래라 주식시장은 아직 조용합니다. 대표는 MOVE가 튀는 순간을 전 자산 재가격의 계기로 봅니다.`);
+ R.push(['① 유가 → 기대인플레·텀프리미엄 → 10년물 → 주식','유가 충격이 금리를 거쳐 주식 할인율로 번지는 경로',[ ['brent_front','Brent'],['bei10','BEI'],['tp10_acm','텀프리미엄'],['ust10','10년물'],['move','MOVE'],['ndx','나스닥'] ],r1]);
+ // 2. 커브
+ let r2=[];if(du!=null&&s2!=null){const t=s2>0?(du>0?'베어 스티프닝 — 장기금리가 오르며 커브가 벌어지는 인플레이션형':'불 스티프닝 — 단기금리가 내리며 벌어지는 경기 둔화형'):(du>0?'베어 플래트닝 — 단기금리가 더 오르는 긴축형':'불 플래트닝 — 장기금리가 더 내리는 안전자산 선호형');r2.push(`최근 1개월 커브는 <b>${t}</b>입니다(10년물 ${bp(du)}, 10−2년 ${bp(s2)}). 대표는 이번 사이클을 베어 스티프닝형으로 봅니다.`)}
+ const c3=v('t10y3m');if(c3!=null)r2.push(`10년−3개월은 ${bp(c3).replace('+','')} — 대표가 장기채 진입을 고려하는 150bp ${c3>=1.5?'이상입니다':'에는 못 미칩니다'}.`);
+ const weak=[d1m('unrate')>0,d1m('claims')>0,d1m('jolts')<0,(v('nfp')??999)<50].filter(Boolean).length;r2.push(`고용 약화 신호 ${weak}/4개(실업률 상승, 실업수당 증가, 구인 감소, 고용 증가 5만 미만). 대표는 이런 지표가 <b>동시에</b> 꺾일 때만 명목 경기 둔화로 인정합니다.`);
+ R.push(['② 물가·고용 → 연준 → 장단기 커브','연준이 긴축할 수 있는지, 커브가 어떤 모양으로 풀리는지',[ ['corecpi','근원 CPI'],['corepce','근원 PCE'],['unrate','실업률'],['claims','실업수당'],['t10y2y','10−2년'],['t10y3m','10−3개월'] ],r2]);
+ // 3. 재정·유동성 → 물가
+ let r3=[];const rrp=v('rrp');if(rrp!=null)r3.push(rrp<500?`RRP 잔고가 ${fmt(rrp,0)}억 달러로 사실상 바닥입니다. T-bill 발행으로 유동성을 메우던 완충이 소진된 상태입니다.`:`RRP 잔고 ${fmt(rrp,0)}억 달러.`);
+ const dtga=d1m('tga');if(dtga!=null)r3.push(`TGA는 직전 대비 ${dtga>0?'증가(유동성 흡수)':'감소(유동성 공급)'}했습니다.`);
+ const m2=v('m2y');if(m2!=null)r3.push(`M2는 전년비 ${fmt(m2,1)}% ${m2>0?'증가':'감소'} — 대표는 M2가 1~3년 시차로 물가를 끌어올린다고 봅니다. 부채/GDP ${fmt(v('debt_gdp'),0)}%는 연준이 끝까지 긴축하기 어렵다는 논리의 뿌리입니다.`);
+ R.push(['③ 재정·유동성 → 통화량 → 물가','정부 부채와 유동성 배관이 물가의 바닥을 받치는 구조',[ ['debt_gdp','부채/GDP'],['interest','이자비용'],['tga','TGA'],['rrp','RRP'],['reserves','지준'],['m2y','M2 증가율'],['corecpi3','근원 CPI 3개월'] ],r3]);
+ // 4. 달러·원자재 → 중국
+ let r4=[];const dx=v('dxy'),cny=v('usdcny');if(dx!=null)r4.push(`달러 인덱스 ${fmt(dx,1)}${dx>=110?'로 대표가 말한 변곡점 110 위':', 변곡점 110 아래'}, 달러/위안 ${fmt(cny,3)}${cny>=7.5?'(경고선 7.5 이상)':'(경고선 7.5 아래)'}입니다.`);
+ const dcg=d1m('cgr');if(dcg!=null&&du!=null)r4.push(`구리/금 비율은 1개월 ${dcg>0?'상승':'하락'}, 10년물은 ${du>0?'상승':'하락'} — ${Math.sign(dcg)===Math.sign(du)?'같은 방향이라 장기금리 선행 관계가 유지되고 있습니다':'방향이 엇갈려, 대표가 쓰는 선행 관계가 지금은 흔들립니다'}.`);
+ const hs=change('hsindx');if(hs)r4.push(`항셍/나스닥 상대강도는 1개월 ${hs.d>0?'상승(홍콩 우위)':'하락(나스닥 우위)'}입니다. 대표는 일관되게 중국·홍콩 주식 강세를 봐 왔습니다(칼럼 1편: 455편 중 강세 108회).`);
+ R.push(['④ 달러·원자재 → 중국','달러 약세·원자재 강세가 신흥국·중국으로 번지는 경로',[ ['dxy','달러 인덱스'],['usdcny','달러/위안'],['cgr','구리/금'],['hsi','항셍'],['hstech','항셍테크'],['hsindx','항셍/나스닥'] ],r4]);
+ // 5. 원유 실물
+ let r5=[];const spr=change('crude_spr');if(spr)r5.push(`SPR은 직전 주 대비 ${spr.d>0?'증가 — 반환이 시작됐다는 신호':'감소 — 아직 방출 중'}입니다(현재 ${fmt(spr.L[1],2)}억 배럴). 대표는 2026년 11월 전후 반환 전환을 2027년 강세 요인으로 봅니다.`);
+ const f=v('wti_front'),z=v('wti_dec27');if(f&&z)r5.push(`근월물 $${fmt(f,1)} vs 2027년 12월물 $${fmt(z,1)}: 시장은 고유가를 ${f>z?'일시적으로(백워데이션)':'지속적으로(콘탱고)'} 보고 있습니다.`);
+ const o=v('osr');if(o)r5.push(`오일/실버 ${fmt(o,2)} — 원유는 은 대비 아직 ${o<3?'싸고, 다변화 기준 3까지 거리가 있습니다':'비싸져 다변화 기준을 넘었습니다'}.`);
+ R.push(['⑤ 원유 실물 → 가격 → 재구성 신호','재고와 선물 커브, 귀금속 대비 가격으로 보는 원유 사이클',[ ['crude_comm','상업 재고'],['crude_spr','SPR'],['wti_front','WTI'],['wti_dec27','27년 12월물'],['osr','오일/실버'],['gor','금/원유'] ],r5]);
+ $('chains').innerHTML=R.map(([t,q,ns,rd])=>`<div class="panel chain"><h3>${t}</h3><p class="q">${q}</p><div class="flow">${ns.map(([k,l],i)=>node(k,l,i)).filter(Boolean).join('')}</div><div class="read"><ul>${rd.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`).join('');
+ $('chains').querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>openRow(b.dataset.go))}
+/* ---------- 시작 ---------- */
+fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;S=d.series;
+ $('stamp').textContent='마지막 갱신: '+new Date(d.updated_utc).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'})+' (한국 시간)';
+ try{scenarios()}catch(e){console.error(e)}try{signals()}catch(e){console.error(e)}try{chains()}catch(e){console.error(e)}
+ $('groups').innerHTML=GROUPS.map(([g,t])=>`<h3 class="grp">${t}</h3><div class="rows">${ORDER[g].map(rowHtml).join('')}</div>`).join('');
+ document.querySelectorAll('details.row').forEach(el=>el.addEventListener('toggle',()=>{if(el.open)fillMore(el)}));
+ if(location.hash.startsWith('#r-'))openRow(location.hash.slice(3));
 }).catch(e=>{$('stamp').textContent='데이터를 불러오지 못했습니다.';console.error(e)});
 </script>
 </body>
