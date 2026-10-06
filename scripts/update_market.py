@@ -75,6 +75,15 @@ def get(url, timeout=40):
         return r.read()
 
 
+COMP = [  # 관심기업 주가: slug(페이지 폴더), 야후 심볼, 통화
+    ("crescent-energy", "CRGY", "USD"), ("kosmos-energy", "KOS", "USD"), ("sm-energy", "SM", "USD"),
+    ("alibaba", "BABA", "USD"), ("baidu", "BIDU", "USD"), ("jd", "JD", "USD"),
+    ("pdd", "PDD", "USD"), ("netease", "NTES", "USD"), ("trip-com", "TCOM", "USD"),
+    ("tencent", "0700.HK", "HKD"), ("meituan", "3690.HK", "HKD"),
+    ("samsung-electronics", "005930.KS", "KRW"), ("sk-hynix", "000660.KS", "KRW"),
+]
+PRICES = OUT.parent.parent / "companies" / "prices.json"
+
 LONG = {"CL=F", "SI=F", "GC=F"}  # 오일/실버 비율의 장기 비교용
 
 
@@ -204,9 +213,30 @@ def main():
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")))
     newly = [s for s in signals.values() if s.get("changed")]
     (OUT.parent.parent.parent / "alerts_new.json").write_text(json.dumps(newly, ensure_ascii=False))
+    write_prices()
     print(f"wrote {OUT} ({len(series)} series, {len(errors)} errors)")
     if len(errors) == len(jobs):
         sys.exit(1)
+
+
+def write_prices():
+    """관심기업 주가를 companies/prices.json에 저장. 실패한 종목은 이전 값을 유지."""
+    old = json.loads(PRICES.read_text()) if PRICES.exists() else {"prices": {}}
+    out, errs = {}, []
+    for slug, sym, cur in COMP:
+        try:
+            pts = yahoo(sym)
+            if not pts:
+                raise ValueError("빈 데이터")
+            out[slug] = dict(symbol=sym, currency=cur, points=pts, ok=True,
+                             link=f"https://finance.yahoo.com/quote/{urllib.parse.quote(sym)}")
+        except Exception as e:
+            errs.append(f"{slug}: {e}")
+            if slug in old.get("prices", {}):
+                out[slug] = dict(old["prices"][slug], ok=False)
+    PRICES.write_text(json.dumps(dict(updated_utc=dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+                                      prices=out, errors=errs), ensure_ascii=False, separators=(",", ":")))
+    print(f"wrote {PRICES} ({len(out)} companies, {len(errs)} errors)")
 
 
 if __name__ == "__main__":
