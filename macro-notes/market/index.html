@@ -131,6 +131,9 @@ function yoy(p){const out=[];const m=new Map(p);for(const [d,v] of p){const y=(+
 function ann3(p){const out=[];for(let i=3;i<p.length;i++)out.push([p[i][0],(Math.pow(p[i][1]/p[i-3][1],4)-1)*100]);return out}
 function mdiff(p){const out=[];for(let i=1;i<p.length;i++)out.push([p[i][0],p[i][1]-p[i-1][1]]);return out}
 function scale(p,f){return p.map(([d,v])=>[d,v*f])}
+// SEC 기준가: 매월 첫 거래일 현물가의 직전 12개월 단순평균(가중치 없음). 각 점 = 그 달까지 12개월 평균
+function secAvg(p){const first=[];let m='';for(const [d,v] of p){if(d.slice(0,7)!==m&&v>0){m=d.slice(0,7);first.push([d,v])}}
+ const out=[];for(let i=11;i<first.length;i++){let s=0;for(let j=i-11;j<=i;j++)s+=first[j][1];out.push([first[i][0],s/12])}return out}
 function freq(p){if(p.length<3)return 'd';const a=new Date(p[p.length-1][0]),b=new Date(p[p.length-3][0]);const g=(a-b)/864e5/2;return g>60?'q':g>20?'m':g>4?'w':'d'}
 /* ---------- 지표 정의 ---------- */
 /* dir: 이 지표가 오르면 이선철 대표 시각에서 무엇을 뜻하나 (warm=인플레·긴축 압력, cool=완화) */
@@ -143,6 +146,8 @@ const IND={
  brent_front:{n:'Brent 근월물',g:'oil',u:'$',dec:2,why:'북해 원유 선물(NYMEX Brent, ICE와 연동).',read:'',rule:'Brent가 빠르게 $70~80으로 돌아가면 고유가 시나리오의 무효화 조건입니다.'},
  wti_spot:{n:'WTI 현물',g:'oil',u:'$',dec:2,why:'EIA 공표 현물가. 며칠 늦게 반영됩니다.',read:'',rule:''},
  brent_spot:{n:'Brent 현물',g:'oil',u:'$',dec:2,why:'EIA 공표 현물가.',read:'',rule:''},
+ wti_sec:{n:'WTI 12개월 평균 (SEC 기준가)',g:'oil',u:'$',dec:2,base:'wti_spot',f:p=>secAvg(p),long:true,why:'직전 12개월 각 달의 첫 거래일 WTI 현물가(쿠싱)를 단순평균한 값. 미국 E&P 기업이 SEC 규정에 따라 매장량과 세후 NAV(표준화 측정치)를 계산할 때 쓰는 가격입니다. 날짜 = 12개월 창의 마지막 달.',read:'에너지 기업 페이지의 "SEC 기준가 NAV"는 연간 보고서(10-K) 기준이라 회계연도(1~12월) 12개월 평균을 씁니다. 이 값이 현재 유가보다 크게 낮으면 공시 NAV가 실제 가치를 과소평가하고 있다는 뜻입니다. 여기서는 EIA 쿠싱 현물가를 써서, 회사 10-K에 적힌 SEC 가격(예: 2025년 $65.34)과는 가격 게시처 차이로 $1 안팎 다를 수 있습니다(같은 방식의 2025년 값 $66.35).',rule:''},
+ brent_sec:{n:'Brent 12개월 평균 (SEC 기준가)',g:'oil',u:'$',dec:2,base:'brent_spot',f:p=>secAvg(p),long:true,why:'직전 12개월 각 달의 첫 거래일 Brent 현물가(유럽)를 단순평균한 값. 해외 생산 비중이 큰 기업(예: Kosmos)은 Brent 기준으로 매장량을 평가합니다.',read:'',rule:''},
  wti_dec27:{n:'WTI 2027년 12월물',g:'oil',u:'$',dec:2,why:'시장이 예상하는 1년 뒤 유가.',read:'근월물보다 낮으면(백워데이션) 시장이 고유가를 일시적으로 본다는 뜻입니다.',rule:''},
  wti_dec28:{n:'WTI 2028년 12월물',g:'oil',u:'$',dec:2,why:'2년 뒤 유가 기대.',read:'',rule:''},
  brent_dec27:{n:'Brent 2027년 12월물',g:'oil',u:'$',dec:2,why:'',read:'',rule:''},
@@ -190,13 +195,13 @@ const IND={
  hsindx:{n:'항셍/나스닥 상대강도',g:'fx',u:'',dec:3,f:()=>join(pts('hsi'),pts('ndx'),(a,b)=>a/b),why:'항셍 ÷ 나스닥. 오르면 홍콩이 상대적으로 강함.',read:'항셍과 나스닥의 극단적 상대 저평가를 찾습니다.',rule:''},
 };
 const GROUPS=[['eq','미국 주식·변동성'],['oil','원유·원자재'],['rate','금리 (10년물 분해 포함)'],['liq','재정·유동성'],['px','물가·고용'],['fx','달러·중국']];
-const ORDER={eq:['spx','ndx','dji','move'],oil:['wti_front','brent_front','wti_spot','brent_spot','wti_dec27','wti_dec28','brent_dec27','brent_dec28','crude_comm','crude_spr','crude_cushing','osr','gor','cgr','gold_front','silver_front','copper_front'],
+const ORDER={eq:['spx','ndx','dji','move'],oil:['wti_front','brent_front','wti_spot','brent_spot','wti_sec','brent_sec','wti_dec27','wti_dec28','brent_dec27','brent_dec28','crude_comm','crude_spr','crude_cushing','osr','gor','cgr','gold_front','silver_front','copper_front'],
  rate:['ust10','real10','bei10','rny10_acm','tp10_acm','tp10_kw','t10y3m','t10y2y'],liq:['fed_assets','rrp','tga','reserves','m2y','m2v','debt_gdp','interest'],
  px:['cpiy','corecpi','corecpi3','corepce','expx','nfp','unrate','jolts','claims'],fx:['dxy','usdcny','usdjpy','usdkrw','hsi','hstech','hsindx']};
 const SRC={};
 function series(k){const c=IND[k];let p;if(c.f&&!S[k])p=c.f(pts(c.base||k));else if(c.f)p=c.f(pts(k));else p=pts(k);
  if(!c.long)p=p.filter(x=>x[0]>=(freq(p)==='d'||freq(p)==='w'?'2025-01-01':'2019-01-01'));return p}
-function srcOf(k){const s=S[k];if(s)return [s.source,s.link];const dep={osr:'wti_front',gor:'gold_front',cgr:'copper_front',m2y:'m2',cpiy:'cpi',corecpi:'core_cpi',corecpi3:'core_cpi',corepce:'core_pce',expx:'export_px',nfp:'payrolls',hsindx:'hsi'}[k];return S[dep]?[S[dep].source,S[dep].link]:['','#']}
+function srcOf(k){const s=S[k];if(s)return [s.source,s.link];const dep=IND[k]&&IND[k].base?IND[k].base:{osr:'wti_front',gor:'gold_front',cgr:'copper_front',m2y:'m2',cpiy:'cpi',corecpi:'core_cpi',corecpi3:'core_cpi',corepce:'core_pce',expx:'export_px',nfp:'payrolls',hsindx:'hsi'}[k];return S[dep]?[S[dep].source,S[dep].link]:['','#']}
 const fmt=(v,dec)=>v==null||isNaN(v)?'–':v.toLocaleString('ko-KR',{minimumFractionDigits:dec,maximumFractionDigits:dec});
 function change(k){const p=series(k);if(p.length<2)return null;const L=p[p.length-1];const fr=freq(p);const B=(fr==='d')?backPt(p,30):p[p.length-2];if(!B)return null;return {L,B,d:L[1]-B[1],fr}}
 function chgText(k){const c=change(k);if(!c)return '';const dec=IND[k].dec;const pctUnit=['%','%p'].includes(IND[k].u);const d=c.d;

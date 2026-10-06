@@ -61,7 +61,7 @@ FRED = [
     ("jolts", "JOLTS 구인", "JTSJOL", "천건"),
     ("claims", "신규 실업수당 청구", "ICSA", "건"),
 ]
-LONG_FRED = {"M2SL", "M2V", "GFDEGDQ188S", "A091RC1Q027SBEA", "CPIAUCSL", "CPILFESL", "PCEPI", "PCEPILFE", "IQ", "PAYEMS", "UNRATE", "JTSJOL"}
+LONG_FRED = {"DCOILWTICO", "DCOILBRENTEU", "M2SL", "M2V", "GFDEGDQ188S", "A091RC1Q027SBEA", "CPIAUCSL", "CPILFESL", "PCEPI", "PCEPILFE", "IQ", "PAYEMS", "UNRATE", "JTSJOL"}
 EIA = [  # EIA 주간 원유 재고 (천 배럴)
     ("crude_comm", "미국 상업 원유재고 (SPR 제외)", "WCESTUS1"),
     ("crude_spr", "전략비축유(SPR)", "WCSSTUS1"),
