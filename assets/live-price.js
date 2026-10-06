@@ -40,6 +40,25 @@
   function tier(v){return v>=8?'sc-g':v>=6?'sc-y':'sc-r'}
   function last(s){return s&&s.points&&s.points.length?s.points[s.points.length-1]:null}
 
+
+  // 페이지 맨 위 요약 타일도 최신 주가 기준으로 바꾼다(실적 지표 타일은 그대로)
+  function updateHero(B,c,lp,r,evR,tot){
+    var box=document.getElementById('heroTiles');if(!box)return;
+    var md=(+lp[0].slice(5,7))+'/'+(+lp[0].slice(8));
+    function scaleNum(el,f){if(!el)return;el.textContent=el.textContent.replace(/-?[\d,]*\.?\d+/,function(m){
+      var dec=(m.split('.')[1]||'').length,v=parseFloat(m.replace(/,/g,''))*f;
+      return v.toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec})})}
+    box.querySelectorAll('.tile').forEach(function(t){
+      var l=t.querySelector('.l'),v=t.querySelector('.v'),d=t.querySelector('.d');if(!l||!v)return;
+      var k=l.textContent;
+      if(/^주가 \(/.test(k)){l.textContent='주가 ('+md+' 종가)';v.textContent=cur(c,lp[1]);
+        if(d)d.textContent='분석 시점('+(+B.date.slice(5,7))+'/'+(+B.date.slice(8))+') 대비 '+((r-1)*100>=0?'+':'')+((r-1)*100).toFixed(1)+'%'}
+      else if(/^시가총액/.test(k)){scaleNum(v,r);l.textContent='시가총액 (현재 주가)'}
+      else if(/^EV/.test(k)&&!/NAV/.test(k)){scaleNum(v,evR);l.textContent=k+' · 현재 주가'}
+      else if(/^PER/.test(k)){scaleNum(v,r);l.textContent=k+' · 현재 주가'}
+      else if(/^종합 매력도/.test(k)&&tot!=null&&d){d.textContent='분석 시점 점수 · 주가 반영 추정 '+tot.toFixed(1)}
+    });
+  }
   function render(B,P,M,E){
     var pts=P.points,lp=pts[pts.length-1],p1=lp[1],p0=B.price,r=p1/p0;
     var c=P.currency, dPct=(r-1)*100;
@@ -88,6 +107,7 @@
         rows.map(function(x){return '<tr><td>'+x[0]+'</td><td>'+x[1]+'</td><td>'+x[2]+'</td><td>'+(x[3]===x[4]?x[4]:x[3]+'→'+x[4])+'</td></tr>'}).join('')+'</tbody></table></div>':'')+
       sc+navLive+(E?'<p class="note"><b>실적 반영:</b> 현재 분석은 '+E.reflected_period+' 실적까지 반영 · 다음 발표 '+E.period+' '+E.date+' ('+E.status+(E.kind?', '+E.kind:'')+')'+(E.next?' / '+E.next.date+' ('+E.next.status+', '+E.next.kind+')':'')+'. 발표 후 실적보고서를 확인해 분석을 갱신합니다.</p>':'')+
       '<p class="note">이익·현금흐름·순현금·순부채·NAV는 최근 실적보고서 기준 그대로 두고 주가만 바꿔 다시 계산한 추정치입니다. 이 페이지의 나머지 분석은 실적 발표 후 갱신됩니다. 투자 권유가 아닙니다.</p>';
+    updateHero(B,c,lp,r,evR,vp?vp.others+newPil:null);
     var box=document.createElement('section');box.className='lp';box.id='livePrice';box.innerHTML=html;
     var hd=document.querySelector('header.page');
     if(hd)hd.insertAdjacentElement('afterend',box);else document.querySelector('main').prepend(box);
