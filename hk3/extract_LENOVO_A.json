@@ -1,0 +1,1581 @@
+{
+ "ticker": "LENOVO",
+ "currency": "USD",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 26942.766,
+   "raw": "26,942,766",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "Revenue",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 18829.869,
+   "raw": "18,829,869",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "Revenue",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 21588.33,
+   "raw": "21,588,330",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "Revenue (segment table total after Eliminations)",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; p10 요약표 US$ million 21,588과 일치"
+  },
+  {
+   "id": "Q2_IDG",
+   "period": "2026Q2",
+   "value": 17105.518,
+   "raw": "17,105,518",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "IDG / Revenue",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_IDG",
+   "period": "2026Q2",
+   "value": 1210.05,
+   "raw": "1,210,050",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "IDG / Operating profit",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_ISG",
+   "period": "2026Q2",
+   "value": 8510.078,
+   "raw": "8,510,078",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "ISG / Revenue",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_ISG",
+   "period": "2026Q2",
+   "value": 776.938,
+   "raw": "776,938",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "ISG / Operating profit",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_SSG",
+   "period": "2026Q2",
+   "value": 2883.628,
+   "raw": "2,883,628",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "SSG / Revenue",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_SSG",
+   "period": "2026Q2",
+   "value": 696.773,
+   "raw": "696,773",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "SSG / Operating profit",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_Eliminations",
+   "period": "2026Q2",
+   "value": -1556.458,
+   "raw": "(1,556,458)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "Eliminations / Revenue",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 간 제거(부문 아님, 합계 조정용)"
+  },
+  {
+   "id": "Q4_Eliminations",
+   "period": "2026Q2",
+   "value": -601.608,
+   "raw": "(601,608)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "Eliminations / Operating profit",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전; 부문 간 제거"
+  },
+  {
+   "id": "Q2_IDG",
+   "period": "2025Q2",
+   "value": 13459.338,
+   "raw": "13,459,338",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "IDG / Revenue",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_IDG",
+   "period": "2025Q2",
+   "value": 950.43,
+   "raw": "950,430",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "IDG / Operating profit/(loss)",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_ISG",
+   "period": "2025Q2",
+   "value": 4290.149,
+   "raw": "4,290,149",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "ISG / Revenue",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_ISG",
+   "period": "2025Q2",
+   "value": -85.52,
+   "raw": "(85,520)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "ISG / Operating profit/(loss)",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_SSG",
+   "period": "2025Q2",
+   "value": 2257.718,
+   "raw": "2,257,718",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "SSG / Revenue",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_SSG",
+   "period": "2025Q2",
+   "value": 500.772,
+   "raw": "500,772",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "SSG / Operating profit/(loss)",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_Eliminations",
+   "period": "2025Q2",
+   "value": -1177.336,
+   "raw": "(1,177,336)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "Eliminations / Revenue",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 간 제거(부문 아님, 합계 조정용)"
+  },
+  {
+   "id": "Q4_Eliminations",
+   "period": "2025Q2",
+   "value": -393.16,
+   "raw": "(393,160)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 20,
+    "row": "Eliminations / Operating profit/(loss)",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전; 부문 간 제거"
+  },
+  {
+   "id": "Q2_IDG",
+   "period": "2026Q1",
+   "value": 14613.719,
+   "raw": "14,613,719",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "IDG / Revenue",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_IDG",
+   "period": "2026Q1",
+   "value": 1015.351,
+   "raw": "1,015,351",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "IDG / Operating profit",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_ISG",
+   "period": "2026Q1",
+   "value": 5634.663,
+   "raw": "5,634,663",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "ISG / Revenue",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_ISG",
+   "period": "2026Q1",
+   "value": 201.775,
+   "raw": "201,775",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "ISG / Operating profit",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_SSG",
+   "period": "2026Q1",
+   "value": 2562.536,
+   "raw": "2,562,536",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "SSG / Revenue",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q4_SSG",
+   "period": "2026Q1",
+   "value": 573.305,
+   "raw": "573,305",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "SSG / Operating profit",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전"
+  },
+  {
+   "id": "Q2_Eliminations",
+   "period": "2026Q1",
+   "value": -1222.588,
+   "raw": "(1,222,588)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "Eliminations / Revenue",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 간 제거(부문 아님, 합계 조정용)"
+  },
+  {
+   "id": "Q4_Eliminations",
+   "period": "2026Q1",
+   "value": -476.397,
+   "raw": "(476,397)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "Eliminations / Operating profit",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 부문 영업이익은 본사비용·상각 등 미배분 항목 차감 전; 부문 간 제거"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 19.202,
+   "raw": "19,202",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "Operating profit",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 워런트 파생부채 공정가치손실 US$1,690,299k 포함"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 784.809,
+   "raw": "784,809",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "Operating profit",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 885.555,
+   "raw": "885,555",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 15,
+    "row": "Operating profit / As reported",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; p10 요약표 US$ million 886"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": -179.921,
+   "raw": "(179,921)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "(Loss)/profit before taxation",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 622.104,
+   "raw": "622,104",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "(Loss)/profit before taxation",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 735.334,
+   "raw": "735,334",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 12,
+    "row": "Consolidated profit before taxation",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": -608.6,
+   "raw": "(608,600)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "(Loss)/profit attributable to: Equity holders of the Company",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": 505.333,
+   "raw": "505,333",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "(Loss)/profit attributable to: Equity holders of the Company",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": 520.806,
+   "raw": "520,806",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 15,
+    "row": "Profit attributable to equity holders / As reported",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; p10 요약표 US$ million 521"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 1074.717,
+   "raw": "1,074,717",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 10,
+    "row": "Adjusted (column: (Loss)/profit attributable to equity holders)",
+    "col": "Three months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 회사 명칭 'non-HKFRS adjusted profit' (Adjusted profit attributable to equity holders)"
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q2",
+   "value": 389.403,
+   "raw": "389,403",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 10,
+    "row": "Adjusted (column: Profit attributable to equity holders)",
+    "col": "Three months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 558.74,
+   "raw": "558,740",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 15,
+    "row": "Adjusted (column: Profit attributable to equity holders)",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; p1 표 'Adjusted profit attributable to equity holders of the Company' 559"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": -5.04,
+   "raw": "US(5.04) cents",
+   "unit": "US cents",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "(Loss)/earnings per share – Diluted",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "희석증권 반희석으로 기본=희석"
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q2",
+   "value": 3.65,
+   "raw": "US3.65 cents",
+   "unit": "US cents",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 13,
+    "row": "(Loss)/earnings per share – Diluted",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 3.8,
+   "raw": "US3.80 cents",
+   "unit": "US cents",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 10,
+    "row": "Earnings per share – Diluted",
+    "col": "3 months ended March 31, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q2",
+   "value": 382.301,
+   "raw": "382,301",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 17,
+    "row": "Net cash generated from operating activities",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q9",
+   "period": "2025Q2",
+   "value": 1219.084,
+   "raw": "1,219,084",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 17,
+    "row": "Net cash generated from operating activities",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 22,
+    "row": "",
+    "col": ""
+   },
+   "note": "연간 발표문에 4분기(3개월) 현금흐름표 없음(연간만)"
+  },
+  {
+   "id": "Q10_Purchase of property, plant and equipment",
+   "period": "2026Q2",
+   "value": -91.009,
+   "raw": "(91,009)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 17,
+    "row": "Purchase of property, plant and equipment",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 현금유출(음수)"
+  },
+  {
+   "id": "Q10_Payment for construction-in-progress",
+   "period": "2026Q2",
+   "value": -115.183,
+   "raw": "(115,183)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 17,
+    "row": "Payment for construction-in-progress",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 현금유출(음수)"
+  },
+  {
+   "id": "Q10_Payment for intangible assets",
+   "period": "2026Q2",
+   "value": -168.018,
+   "raw": "(168,018)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 17,
+    "row": "Payment for intangible assets",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 현금유출(음수)"
+  },
+  {
+   "id": "Q10_Purchase of property, plant and equipment",
+   "period": "2025Q2",
+   "value": -91.849,
+   "raw": "(91,849)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 17,
+    "row": "Purchase of property, plant and equipment",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 현금유출(음수)"
+  },
+  {
+   "id": "Q10_Payment for construction-in-progress",
+   "period": "2025Q2",
+   "value": -85.2,
+   "raw": "(85,200)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 17,
+    "row": "Payment for construction-in-progress",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 현금유출(음수)"
+  },
+  {
+   "id": "Q10_Payment for intangible assets",
+   "period": "2025Q2",
+   "value": -290.853,
+   "raw": "(290,853)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 17,
+    "row": "Payment for intangible assets",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 현금유출(음수)"
+  },
+  {
+   "id": "Q10_Capital expenditure (MD&A)",
+   "period": "2026Q2",
+   "value": 374,
+   "raw": "US$374 million",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 11,
+    "row": "Capital Expenditure 문단",
+    "col": "three months ended June 30, 2026"
+   },
+   "note": "MD&A 서술 수치; 현금흐름표 3개 행 합계 374.21과 일치"
+  },
+  {
+   "id": "Q10_Capital expenditure (MD&A)",
+   "period": "2025Q2",
+   "value": 468,
+   "raw": "(2025/26: US$468 million)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 11,
+    "row": "Capital Expenditure 문단",
+    "col": "전년 동기 괄호"
+   },
+   "note": "MD&A 서술 수치; 현금흐름표 3개 행 합계 467.90"
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 15,
+    "row": "",
+    "col": ""
+   },
+   "note": "연간 발표문에 4분기(3개월) 설비투자 수치 없음"
+  },
+  {
+   "id": "Q11",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사 제시 FCF 없음"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 5907.477,
+   "raw": "5,907,477",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 15,
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "B2_Bank deposits",
+   "period": "2026-06-30",
+   "value": 173.304,
+   "raw": "173,304",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 15,
+    "row": "Bank deposits",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; MD&A 'Bank deposits and cash and cash equivalents' 합계 US$6,081m (p12)"
+  },
+  {
+   "id": "B3_Short-term loans (current)",
+   "period": "2026-06-30",
+   "value": 483.029,
+   "raw": "483,029",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 29,
+    "row": "Current liabilities – Short-term loans",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "B3_Convertible bonds (current)",
+   "period": "2026-06-30",
+   "value": 402.033,
+   "raw": "402,033",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 29,
+    "row": "Current liabilities – Convertible bonds",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 2029 CB(풋 행사 가능으로 유동 분류). 이후 2026년 8~9월 전액 주식 전환(월간보고 p6)"
+  },
+  {
+   "id": "B3_Notes (non-current)",
+   "period": "2026-06-30",
+   "value": 2053.318,
+   "raw": "2,053,318",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 29,
+    "row": "Non-current liabilities – Notes",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 2030/2028/2032 Notes"
+  },
+  {
+   "id": "B3_Convertible bonds (non-current)",
+   "period": "2026-06-30",
+   "value": 3321.719,
+   "raw": "3,321,719",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 29,
+    "row": "Non-current liabilities – Convertible bonds",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 2028 CB 1,835,491 + 2033 CB 1,486,228 (p30)"
+  },
+  {
+   "id": "B3_Total borrowings",
+   "period": "2026-06-30",
+   "value": 6260.099,
+   "raw": "6,260,099",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 29,
+    "row": "Borrowings total",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 유동 885,062 + 비유동 5,375,037. 리스부채·워런트 파생부채(1,787,099)는 차입금에 미포함"
+  },
+  {
+   "id": "B4_Net (debt)/cash position",
+   "period": "2026-06-30",
+   "value": -179,
+   "raw": "(179)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 12,
+    "row": "Net (debt)/cash position",
+    "col": "June 30, 2026 US$ million"
+   },
+   "note": "정의: Bank deposits and cash and cash equivalents(6,081) − Borrowings[Short-term loans 483 + Notes 2,053 + Convertible bonds 3,724]. 2026-03-31은 +242"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 70112.116,
+   "raw": "70,112,116",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 15,
+    "row": "Total assets",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 7213.359,
+   "raw": "7,213,359",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 16,
+    "row": "Equity attributable to owners of the Company",
+    "col": "June 30, 2026 (unaudited)"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "B6_Perpetual securities",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 16,
+    "row": "",
+    "col": ""
+   },
+   "note": "재무상태표에 영구증권 항목 없음"
+  },
+  {
+   "id": "S1",
+   "period": "2026-09-30",
+   "value": 12826044682,
+   "raw": "12,826,044,682",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__monthly_return_2026-09__2026100600886.pdf",
+    "page": 2,
+    "row": "Balance at close of the month – Number of issued shares (excluding treasury shares)",
+    "col": "For the month ended 30 September 2026"
+   },
+   "note": "자사주 0; 9월 중 2029 CB 전환으로 411,277,744주 증가"
+  },
+  {
+   "id": "S2",
+   "period": "2026Q2",
+   "value": 12077851410,
+   "raw": "12,077,851,410",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 24,
+    "row": "Weighted average number of ordinary shares used as the denominator in calculating diluted (loss)/earnings per share",
+    "col": "3 months ended June 30, 2026"
+   },
+   "note": "손실로 희석증권 모두 반희석 → 기본과 동일"
+  },
+  {
+   "id": "S2",
+   "period": "2025Q2",
+   "value": 14746010930,
+   "raw": "14,746,010,930",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 24,
+    "row": "Weighted average number ... diluted (loss)/earnings per share",
+    "col": "3 months ended June 30, 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "S2",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 29,
+    "row": "",
+    "col": ""
+   },
+   "note": "연간 발표문에 4분기 희석 가중평균 주식 수 없음"
+  },
+  {
+   "id": "S3_Warrants",
+   "period": "2026-09-30",
+   "value": 1229930495,
+   "raw": "1,229,930,495",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__monthly_return_2026-09__2026100600886.pdf",
+    "page": 4,
+    "row": "1,150,000,000 warrants issued on January 8, 2025 – Number of shares which may be issued ... as at close of the month",
+    "col": "close of the month"
+   },
+   "note": "조정 행사가 HK$11.51, 만기 2028-01-08"
+  },
+  {
+   "id": "S3_2028 Convertible Bonds",
+   "period": "2026-09-30",
+   "value": 1667342582,
+   "raw": "1,667,342,582",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__monthly_return_2026-09__2026100600886.pdf",
+    "page": 5,
+    "row": "Zero coupon convertible bonds due 2028 – Number of shares which may be issued",
+    "col": "close of the month"
+   },
+   "note": "전환가 HK$9.37, 만기일에만 전환"
+  },
+  {
+   "id": "S3_2033 Convertible Bonds",
+   "period": "2026-09-30",
+   "value": 438343592,
+   "raw": "438,343,592",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__monthly_return_2026-09__2026100600886.pdf",
+    "page": 6,
+    "row": "US$2,000 million zero coupon convertible bonds due 2033 – Number of shares which may be issued",
+    "col": "close of the month"
+   },
+   "note": "전환가 HK$35.74, 2032-06-25 이후 전환"
+  },
+  {
+   "id": "S3_2029 Convertible Bonds",
+   "period": "2026-09-30",
+   "value": 0,
+   "raw": "0",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__monthly_return_2026-09__2026100600886.pdf",
+    "page": 5,
+    "row": "2.50% convertible bonds due 2029 – Number of shares which may be issued",
+    "col": "close of the month"
+   },
+   "note": "2026년 9월 잔여 US$439,165,000 전환(411,277,744주), 잔액 0"
+  },
+  {
+   "id": "R1_Final dividend per share",
+   "period": "FY2026",
+   "value": 33.7,
+   "raw": "HK33.7 cents",
+   "unit": "HK cents per share",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 29,
+    "row": "Proposed final dividend – HK33.7 cents per ordinary share",
+    "col": "2026"
+   },
+   "note": "2026-07-23 AGM 승인(Q1 발표문 p37), 2026-08-19 지급 예정"
+  },
+  {
+   "id": "R1_Final dividend total",
+   "period": "FY2026",
+   "value": 533.748,
+   "raw": "533,748",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 29,
+    "row": "Proposed final dividend",
+    "col": "2026 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "R1_Interim dividend per share",
+   "period": "FY2026",
+   "value": 8.5,
+   "raw": "HK8.5 cents",
+   "unit": "HK cents per share",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 29,
+    "row": "Interim dividend of HK8.5 cents per ordinary share, paid on December 24, 2025",
+    "col": "2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_Interim dividend total",
+   "period": "FY2026",
+   "value": 135.417,
+   "raw": "135,417",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 29,
+    "row": "Interim dividend ... paid on December 24, 2025",
+    "col": "2026 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "R1_Total dividend",
+   "period": "FY2026",
+   "value": 669.165,
+   "raw": "669,165",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 29,
+    "row": "Dividends total",
+    "col": "2026 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 주당 합계 HK42.2 cents"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "LENOVO__results_2026Q1__2026081300141.pdf",
+    "page": 39,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사 자사주 매입 없음. 장기인센티브·ESPP 수탁자가 시장에서 621,838주 매입(Q1 p39); 2029 CB US$225,042,000 재매입·소각(주식 아님)"
+  },
+  {
+   "id": "A1_2026",
+   "period": "FY2026",
+   "value": 83074.555,
+   "raw": "83,074,555",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 18,
+    "row": "Revenue",
+    "col": "2026 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A2_2026",
+   "period": "FY2026",
+   "value": 1911.951,
+   "raw": "1,911,951",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 18,
+    "row": "Profit attributable to: Equity holders of the Company",
+    "col": "2026 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A3_2026",
+   "period": "FY2026",
+   "value": 4023.705,
+   "raw": "4,023,705",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 22,
+    "row": "Net cash generated from operating activities",
+    "col": "2026 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A4_2026",
+   "period": "FY2026",
+   "value": 1859,
+   "raw": "US$1,859 million",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 15,
+    "row": "Capital Expenditure 문단 ('The Group incurred capital expenditure of ...')",
+    "col": "2026"
+   },
+   "note": "MD&A 서술 수치. 현금흐름표(p22, LENOVO__results_FY2026__2026052200033.pdf) 행: Purchase of property, plant and equipment (653,978), Payment for construction-in-progress (608,017), Payment for intangible assets (596,979) (US$'000) 합계 1,858.974"
+  },
+  {
+   "id": "A5_2026",
+   "period": "FY2026",
+   "value": 2048.739,
+   "raw": "2,048,739",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 14,
+    "row": "Adjusted (column: Profit attributable to equity holders)",
+    "col": "Year ended March 31, 2026"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 회사 명칭: 'Adjusted profit attributable to equity holders' (non-HKFRS)"
+  },
+  {
+   "id": "A1_2025",
+   "period": "FY2025",
+   "value": 69076.968,
+   "raw": "69,076,968",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 18,
+    "row": "Revenue",
+    "col": "2025 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 최신 발표문 전기 열 사용, 해당연도 자체 발표문 값과 동일"
+  },
+  {
+   "id": "A2_2025",
+   "period": "FY2025",
+   "value": 1384.445,
+   "raw": "1,384,445",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 18,
+    "row": "Profit attributable to: Equity holders of the Company",
+    "col": "2025 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A3_2025",
+   "period": "FY2025",
+   "value": 1099.822,
+   "raw": "1,099,822",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 22,
+    "row": "Net cash generated from operating activities",
+    "col": "2025 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A4_2025",
+   "period": "FY2025",
+   "value": 1151,
+   "raw": "(2025: US$1,151 million)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 15,
+    "row": "Capital Expenditure 문단 ('The Group incurred capital expenditure of ...')",
+    "col": "전기 괄호(2025)"
+   },
+   "note": "MD&A 서술 수치. 현금흐름표(p22, LENOVO__results_FY2026__2026052200033.pdf) 행: Purchase of property, plant and equipment (352,979), Payment for construction-in-progress (313,499), Payment for intangible assets (484,674) (US$'000) 합계 1,151.152"
+  },
+  {
+   "id": "A5_2025",
+   "period": "FY2025",
+   "value": 1441.291,
+   "raw": "1,441,291",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2026__2026052200033.pdf",
+    "page": 14,
+    "row": "Adjusted (column: Profit attributable to equity holders)",
+    "col": "Year ended March 31, 2025"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 회사 명칭: 'Adjusted profit attributable to equity holders' (non-HKFRS); FY2025 발표문(p13, 'Non-HKFRS')과 동일"
+  },
+  {
+   "id": "A1_2024",
+   "period": "FY2024",
+   "value": 56863.784,
+   "raw": "56,863,784",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2025__2025052200193.pdf",
+    "page": 18,
+    "row": "Revenue",
+    "col": "2024 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 최신 발표문 전기 열 사용, 해당연도 자체 발표문 값과 동일"
+  },
+  {
+   "id": "A2_2024",
+   "period": "FY2024",
+   "value": 1010.506,
+   "raw": "1,010,506",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2025__2025052200193.pdf",
+    "page": 18,
+    "row": "Profit attributable to: Equity holders of the Company",
+    "col": "2024 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A3_2024",
+   "period": "FY2024",
+   "value": 2010.991,
+   "raw": "2,010,991",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2025__2025052200193.pdf",
+    "page": 22,
+    "row": "Net cash generated from operating activities",
+    "col": "2024 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A4_2024",
+   "period": "FY2024",
+   "value": 1286,
+   "raw": "(2024: US$1,286 million)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2025__2025052200193.pdf",
+    "page": 14,
+    "row": "Capital Expenditure 문단 ('The Group incurred capital expenditure of ...')",
+    "col": "전기 괄호(2024)"
+   },
+   "note": "MD&A 서술 수치. 현금흐름표(p22, LENOVO__results_FY2025__2025052200193.pdf) 행: Purchase of property, plant and equipment (275,096), Payment for construction-in-progress (454,681), Payment for intangible assets (556,120) (US$'000) 합계 1,285.897"
+  },
+  {
+   "id": "A5_2024",
+   "period": "FY2024",
+   "value": 1060.177,
+   "raw": "1,060,177",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2025__2025052200193.pdf",
+    "page": 13,
+    "row": "Non-HKFRS (column: Profit attributable to equity holders)",
+    "col": "Year ended March 31, 2024"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 회사 명칭: 'Non-HKFRS profit attributable to equity holders'; 최신(FY2025) 발표문 값. FY2024 발표문(p15)은 1,038,017 — 차이 22,160은 FY2025부터 'Notional interest of convertible bonds' 조정을 추가해 재표시한 것"
+  },
+  {
+   "id": "A1_2023",
+   "period": "FY2023",
+   "value": 61946.854,
+   "raw": "61,946,854",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2024__2024052300285.pdf",
+    "page": 18,
+    "row": "Revenue",
+    "col": "2023 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 최신 발표문 전기 열 사용, 해당연도 자체 발표문 값과 동일"
+  },
+  {
+   "id": "A2_2023",
+   "period": "FY2023",
+   "value": 1607.722,
+   "raw": "1,607,722",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2024__2024052300285.pdf",
+    "page": 18,
+    "row": "Profit attributable to: Equity holders of the Company",
+    "col": "2023 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A3_2023",
+   "period": "FY2023",
+   "value": 2801.402,
+   "raw": "2,801,402",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2024__2024052300285.pdf",
+    "page": 22,
+    "row": "Net cash generated from operating activities",
+    "col": "2023 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A4_2023",
+   "period": "FY2023",
+   "value": 1578,
+   "raw": "(2023: US$1,578 million)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2024__2024052300285.pdf",
+    "page": 16,
+    "row": "Capital Expenditure 문단 ('The Group incurred capital expenditure of ...')",
+    "col": "전기 괄호(2023)"
+   },
+   "note": "MD&A 서술 수치. 현금흐름표(p22, LENOVO__results_FY2024__2024052300285.pdf) 행: Purchase of property, plant and equipment (428,366), Payment for construction-in-progress (688,696), Payment for intangible assets (461,084) (US$'000) 합계 1,578.146"
+  },
+  {
+   "id": "A5_2023",
+   "period": "FY2023",
+   "value": 1878.347,
+   "raw": "1,878,347",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2024__2024052300285.pdf",
+    "page": 15,
+    "row": "Non-HKFRS (column: Profit attributable to equity holders)",
+    "col": "Year ended March 31, 2023"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 회사 명칭: 'Non-HKFRS profit attributable to equity holders'; FY2023 발표문(p14)과 동일"
+  },
+  {
+   "id": "A1_2022",
+   "period": "FY2022",
+   "value": 71618.216,
+   "raw": "71,618,216",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2023__2023052400219.pdf",
+    "page": 18,
+    "row": "Revenue",
+    "col": "2022 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A2_2022",
+   "period": "FY2022",
+   "value": 2029.818,
+   "raw": "2,029,818",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2023__2023052400219.pdf",
+    "page": 18,
+    "row": "Profit attributable to: Equity holders of the Company",
+    "col": "2022 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A3_2022",
+   "period": "FY2022",
+   "value": 4076.979,
+   "raw": "4,076,979",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2023__2023052400219.pdf",
+    "page": 22,
+    "row": "Net cash generated from operating activities",
+    "col": "2022 US$'000"
+   },
+   "note": "원 단위 US$'000 → ÷1,000"
+  },
+  {
+   "id": "A4_2022",
+   "period": "FY2022",
+   "value": 1284,
+   "raw": "(2022: US$1,284 million)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2023__2023052400219.pdf",
+    "page": 15,
+    "row": "Capital Expenditure 문단 ('The Group incurred capital expenditure of ...')",
+    "col": "전기 괄호(2022)"
+   },
+   "note": "MD&A 서술 수치. 현금흐름표(p22, LENOVO__results_FY2023__2023052400219.pdf) 행: Purchase of property, plant and equipment (396,358), Payment for construction-in-progress (601,946), Payment for intangible assets (285,777) (US$'000) 합계 1,284.081"
+  },
+  {
+   "id": "A5_2022",
+   "period": "FY2022",
+   "value": 2163.965,
+   "raw": "2,163,965",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "LENOVO__results_FY2023__2023052400219.pdf",
+    "page": 14,
+    "row": "Non-HKFRS (column: Profit attributable to equity holders)",
+    "col": "Year ended March 31, 2022"
+   },
+   "note": "원 단위 US$'000 → ÷1,000; 회사 명칭: 'Non-HKFRS profit attributable to equity holders'"
+  }
+ ]
+}

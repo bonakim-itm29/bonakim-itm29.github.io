@@ -1,0 +1,395 @@
+{
+ "ticker": "0992.HK",
+ "units": "R, res는 % (일간)",
+ "top": [
+  {
+   "date": "2009-01-08",
+   "filed": "2009-01-08",
+   "title_ko": "분기 대규모 손실 예고 및 인력 11% 감축 구조조정",
+   "summary_ko": "1월 7일 거래정지 후 1월 8일 재개와 함께 2008년 10~12월 분기 '중대한 손실' 가능성과 약 2,500명(전체 인력 약 11%) 감원, 약 1.5억 달러 구조조정 비용을 포함한 자원 재배치 계획을 발표했다. 재개 당일 주가는 -26.0% 급락했으며 매크로 모델 예측은 -1.9%에 불과해 잔차는 -28.2%로 표본 내 최대 하락 잔차였다.",
+   "why_important_ko": "PC 수요 급감과 중국 경기 둔화로 IBM PC 인수 이후 첫 대규모 적자 경고가 나온 사건으로, 감원·임원 보수 삭감·중국과 아태 조직 통합(APR) 등 회사 구조를 바꾼 전환점이다.",
+   "facts": [
+    {
+     "fact_ko": "회사 요청으로 2009-01-07 09:30부터 거래 정지",
+     "quote": "trading in the shares of the Company will be temporarily suspended",
+     "file": "LENOVO__0107__ltn20090107014.pdf"
+    },
+    {
+     "fact_ko": "2008년 12월 말 종료 분기에 중대한 손실 가능성",
+     "quote": "likely to incur a material loss for the three months ended December 31, 2008",
+     "file": "LENOVO__0108__ltn20090108011.pdf"
+    },
+    {
+     "fact_ko": "전 세계 인력 약 2,500명(약 11%) 감축",
+     "quote": "reducing the number of the Group’s worldwide employees by approximately 2,500",
+     "file": "LENOVO__0108__ltn20090108011.pdf"
+    },
+    {
+     "fact_ko": "FY2009/10 연간 약 3억 달러 비용 절감 기대",
+     "quote": "realizing annual savings of approximately US$300 million",
+     "file": "LENOVO__0108__ltn20090108011.pdf"
+    },
+    {
+     "fact_ko": "FY2008/09 세전 구조조정 비용 약 1.5억 달러, 주로 4분기 반영",
+     "quote": "pre-tax restructuring charge of approximately US$150 million",
+     "file": "LENOVO__0108__ltn20090108011.pdf"
+    },
+    {
+     "fact_ko": "중국·아태 조직을 APR 사업부로 통합",
+     "quote": "consolidation of China and Asia Pacific organizations into a new business unit",
+     "file": "LENOVO__0108__ltn20090108011.pdf"
+    },
+    {
+     "fact_ko": "손실 원인으로 상업용 PC 수요 감소와 중국 경기 둔화 제시",
+     "quote": "the slowing down in the Chinese economy",
+     "file": "LENOVO__0108__ltn20090108011.pdf"
+    },
+    {
+     "fact_ko": "2009-01-08 09:30 거래 재개",
+     "quote": "will be resumed at 9:30 a.m. today (8/1/2009)",
+     "file": "LENOVO__0108__ltn20090108021.htm"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-13",
+   "filed": "2026-08-13",
+   "title_ko": "FY2026/27 1분기 사상 최대 실적·AI 서버 파이프라인 540억 달러",
+   "summary_ko": "6월 말 종료 분기 매출이 전년 대비 43% 늘어난 269억 달러로 분기 최고치를 기록했고, 조정 순이익은 10.75억 달러(+176%)로 처음 10억 달러를 넘었다. 다만 2025년 발행 워런트 평가손 약 17억 달러로 보고 기준 순손실 6.09억 달러가 났다. 주가는 당일 +20.2% 급등했고 매크로 예측은 +0.2%여서 잔차는 +18.2%였다.",
+   "why_important_ko": "ISG(서버) 매출이 98% 늘고 영업이익률 9.1%, AI 서버 파이프라인이 전 분기 대비 157% 증가한 540억 달러로 제시되는 등 PC 중심에서 AI 인프라 성장주로의 재평가를 뒷받침한 실적이다.",
+   "facts": [
+    {
+     "fact_ko": "그룹 매출 269.43억 달러, 전년 동기(188.30억 달러) 대비 +43%",
+     "quote": "Group revenue increased 43 percent year-on-year, reaching a record quarterly high of US$26.9 billion",
+     "file": "LENOVO__results_2026Q1__2026081300141.pdf"
+    },
+    {
+     "fact_ko": "조정 지배주주 순이익 10.75억 달러, +176%",
+     "quote": "grew to US$1,075 million, up 176 percent year-on-year",
+     "file": "LENOVO__results_2026Q1__2026081300141.pdf"
+    },
+    {
+     "fact_ko": "보고 기준 순손실 6.09억 달러, 워런트 재평가 비현금 손실 17억 달러 때문",
+     "quote": "Reported net loss attributable to equity holders was US$609 million",
+     "file": "LENOVO__results_2026Q1__2026081300141.pdf"
+    },
+    {
+     "fact_ko": "AI 관련 매출 +60%, 그룹 매출의 35%",
+     "quote": "AI-related revenues increased 60 percent year-on-year representing 35 percent of Group revenue",
+     "file": "LENOVO__results_2026Q1__2026081300141.pdf"
+    },
+    {
+     "fact_ko": "ISG 매출 85억 달러(+98%), 영업이익률 9.1%",
+     "quote": "ISG revenue reached a record quarterly high of US$8.5 billion, growing 98 percent",
+     "file": "LENOVO__results_2026Q1__2026081300141.pdf"
+    },
+    {
+     "fact_ko": "AI 서버 파이프라인 540억 달러, 전 분기 대비 +157%",
+     "quote": "The AI server pipeline reached US$54.0 billion, up 157 percent quarter-over-quarter",
+     "file": "LENOVO__results_2026Q1__2026081300141.pdf"
+    },
+    {
+     "fact_ko": "글로벌 PC 점유율 24.2%",
+     "quote": "Global PC market share reached 24.2 percent",
+     "file": "LENOVO__results_2026Q1__2026081300141.pdf"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2002-10-07",
+   "filed": "2002-10-07",
+   "title_ko": "주가 급락 관련 '원인 모름' 해명 공시(Legend Group)",
+   "R": -11.76,
+   "res": -11.82,
+   "file": "LENOVO__1007__ltn20021007065.htm"
+  },
+  {
+   "date": "2004-06-03",
+   "filed": "2004-06-02",
+   "title_ko": "FY2003/04 연간 실적(순이익 +3.5%) 및 Digital China 계속적 관련자 거래",
+   "R": -9.47,
+   "res": -9.95,
+   "file": "LENOVO__0602__ltn20040602054.htm"
+  },
+  {
+   "date": "2004-08-12",
+   "filed": "2004-08-11",
+   "title_ko": "FY2004/05 1분기 실적(순이익 +21.1%)",
+   "R": 11.11,
+   "res": 10.57,
+   "file": "LENOVO__0811__ltn20040811073.htm"
+  },
+  {
+   "date": "2004-11-16",
+   "filed": "2004-11-16",
+   "title_ko": "FY2004/05 중간 실적(상반기 순이익 +16.2%, 매출 소폭 감소)",
+   "R": -11.2,
+   "res": -11.85,
+   "file": "LENOVO__1116__ltn20041116089.htm"
+  },
+  {
+   "date": "2005-08-11",
+   "filed": "2005-08-11",
+   "title_ko": "FY2005/06 1분기 실적(매출 196억 홍콩달러) 및 독립이사 선임",
+   "R": 11.5,
+   "res": 11.14,
+   "file": "LENOVO__0811__ltn20050811042.pdf"
+  },
+  {
+   "date": "2006-11-10",
+   "filed": "2006-11-09",
+   "title_ko": "FY2006/07 중간 실적(상반기 순이익 -52.7%)",
+   "R": -10.98,
+   "res": -11.42,
+   "file": "LENOVO__1109__ltn20061109120.htm"
+  },
+  {
+   "date": "2007-05-25",
+   "filed": "2007-05-23",
+   "title_ko": "FY2006/07 연간 실적(순이익 1.61억 달러) 및 CFO 교체",
+   "R": 13.66,
+   "res": 13.12,
+   "file": "LENOVO__0523__ltn20070523112.pdf"
+  },
+  {
+   "date": "2009-02-06",
+   "filed": "2009-02-05",
+   "title_ko": "FY2008/09 3분기 실적 (원문 미확보)",
+   "R": 10.96,
+   "res": 9.89,
+   "file": ""
+  },
+  {
+   "date": "2010-02-05",
+   "filed": "2010-02-04",
+   "title_ko": "FY2009/10 3분기 실적 (원문 미확보)",
+   "R": -10.19,
+   "res": -8.61,
+   "file": ""
+  },
+  {
+   "date": "2011-09-27",
+   "filed": "2011-09-27",
+   "title_ko": "합작법인 설립 관련 공시 대상 거래 (원문 미확보)",
+   "R": 11.21,
+   "res": 9.38,
+   "file": ""
+  },
+  {
+   "date": "2015-08-13",
+   "filed": "2015-08-13",
+   "title_ko": "FY2015/16 1분기 실적(순이익 -51%, 영업이익 -67%)",
+   "R": -9.09,
+   "res": -10.14,
+   "file": "LENOVO__0813__ltn20150813023.pdf"
+  },
+  {
+   "date": "2016-02-03",
+   "filed": "2016-02-03",
+   "title_ko": "FY2015/16 3분기 실적 (원문 미확보)",
+   "R": -10.19,
+   "res": -9.56,
+   "file": ""
+  },
+  {
+   "date": "2018-10-05",
+   "filed": "2018-10-05",
+   "title_ko": "미국 메인보드 보안침해 보도 관련 '해당 제조사는 공급사 아님' 해명",
+   "R": -15.1,
+   "res": -15.52,
+   "file": "LENOVO__1005__ltn201810051318.pdf"
+  },
+  {
+   "date": "2019-02-21",
+   "filed": "2019-02-21",
+   "title_ko": "FY2018/19 3분기 실적(세전이익 3.5억 달러 사상 최대)",
+   "R": 11.91,
+   "res": 10.78,
+   "file": "LENOVO__0221__ltn20190221029.pdf"
+  },
+  {
+   "date": "2021-10-11",
+   "filed": "2021-10-10",
+   "title_ko": "상하이 STAR 마켓 CDR 상장 신청 철회",
+   "R": -13.39,
+   "res": -14.14,
+   "file": "LENOVO__1010__2021101000019.pdf"
+  },
+  {
+   "date": "2025-02-21",
+   "filed": "2025-02-20",
+   "title_ko": "FY2024/25 3분기 실적(매출 +20%, 순이익 +106%)",
+   "R": 15.45,
+   "res": 14.53,
+   "file": "LENOVO__0220__2025022000139.pdf"
+  },
+  {
+   "date": "2026-06-29",
+   "filed": "2026-06-26",
+   "title_ko": "2025/26 연차보고서·ESG 보고서·주총 안건 등 정기 공시 (원문 미확보)",
+   "R": -9.22,
+   "res": -9.6,
+   "file": ""
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2007-07-30",
+   "R": 10.56,
+   "res": 12.98,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2007-08-27",
+   "R": 14.37,
+   "res": 12.0,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2007-10-02",
+   "R": 17.2,
+   "res": 15.19,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2007-11-14",
+   "R": 15.77,
+   "res": 12.03,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2008-01-09",
+   "R": -10.23,
+   "res": -8.4,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2008-01-25",
+   "R": 15.29,
+   "res": 14.26,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2008-03-25",
+   "R": 10.73,
+   "res": 8.44,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2008-09-19",
+   "R": 22.03,
+   "res": 14.96,
+   "note": "공시 없음·원인 미확인 (중국 공통 충격)"
+  },
+  {
+   "date": "2008-11-10",
+   "R": -13.51,
+   "res": -16.39,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2008-12-10",
+   "R": 26.59,
+   "res": 24.56,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2009-04-08",
+   "R": -11.16,
+   "res": -11.42,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2009-04-27",
+   "R": -11.3,
+   "res": -12.37,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2009-05-08",
+   "R": 17.6,
+   "res": 17.8,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2009-05-25",
+   "R": 13.21,
+   "res": 14.76,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2012-06-21",
+   "R": -9.37,
+   "res": -9.34,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2014-02-04",
+   "R": -16.4,
+   "res": -16.66,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2021-03-30",
+   "R": 12.35,
+   "res": 11.94,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2023-03-23",
+   "R": 11.39,
+   "res": 11.38,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2023-10-18",
+   "R": -10.12,
+   "res": -10.68,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2023-12-05",
+   "R": -10.22,
+   "res": -9.42,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2024-01-26",
+   "R": -9.94,
+   "res": -10.77,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2024-05-22",
+   "R": 12.18,
+   "res": 11.27,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2024-10-08",
+   "R": -10.71,
+   "res": -10.4,
+   "note": "공시 없음·원인 미확인 (중국 공통 충격)"
+  },
+  {
+   "date": "2025-04-07",
+   "R": -22.89,
+   "res": -21.55,
+   "note": "공시 없음·원인 미확인 (매크로 충격)"
+  },
+  {
+   "date": "2026-05-29",
+   "R": 21.95,
+   "res": 19.52,
+   "note": "공시 없음·원인 미확인"
+  },
+  {
+   "date": "2026-06-10",
+   "R": -9.38,
+   "res": -9.67,
+   "note": "공시 없음·원인 미확인"
+  }
+ ]
+}

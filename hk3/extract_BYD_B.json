@@ -1,0 +1,1942 @@
+{
+ "ticker": "BYD",
+ "currency": "RMB",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 344815.421,
+   "raw": "344,815,421",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 65,
+    "row": "I. Operating revenue",
+    "col": "For the six months ended 30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q1",
+   "period": "2025H1",
+   "value": 371280.948,
+   "raw": "371,280,948",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 65,
+    "row": "I. Operating revenue",
+    "col": "For the six months ended 30 June 2025 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 150225.314,
+   "raw": "150,225,314,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 12,
+    "row": "Including: Operating revenue",
+    "col": "Amount for the current period (Jan-Mar 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q1",
+   "value": 170360.448,
+   "raw": "170,360,448,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 12,
+    "row": "Including: Operating revenue",
+    "col": "Amount for the previous period (Jan-Mar 2025)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q2_Electronics and other products",
+   "period": "2026H1",
+   "value": 69404.994,
+   "raw": "69,404,994",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 76,
+    "row": "Revenue from external trading",
+    "col": "Electronics and other products / six months ended 30 June 2026",
+    "orig_unit": "RMB'000"
+   },
+   "note": "Note 3 Segment reporting 표 'Revenue from external trading'(외부매출, 합계 344,815,421와 일치) 값 사용. 부문간 포함 Total 83,215,735; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q2_Automobiles and related products, and other products",
+   "period": "2026H1",
+   "value": 275341.358,
+   "raw": "275,341,358",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 76,
+    "row": "Revenue from external trading",
+    "col": "Automobiles and related products, and other products / six months ended 30 June 2026",
+    "orig_unit": "RMB'000"
+   },
+   "note": "Note 3 Segment reporting 표 'Revenue from external trading'(외부매출, 합계 344,815,421와 일치) 값 사용. 부문간 포함 Total 276,245,631; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q2_Adjustments and eliminations",
+   "period": "2026H1",
+   "value": 69.069,
+   "raw": "69,069",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 76,
+    "row": "Revenue from external trading",
+    "col": "Adjustments and eliminations / 2026H1",
+    "orig_unit": "RMB'000"
+   },
+   "note": "조정·상계 열의 외부매출; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q2_Electronics and other products",
+   "period": "2025H1",
+   "value": 68743.903,
+   "raw": "68,743,903",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 77,
+    "row": "Revenue from external trading",
+    "col": "Electronics and other products / six months ended 30 June 2025",
+    "orig_unit": "RMB'000"
+   },
+   "note": "Note 3 Segment reporting 표 'Revenue from external trading'(외부매출, 합계 344,815,421와 일치) 값 사용. 부문간 포함 Total 81,434,962; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q2_Automobiles and related products, and other products",
+   "period": "2025H1",
+   "value": 302506.271,
+   "raw": "302,506,271",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 77,
+    "row": "Revenue from external trading",
+    "col": "Automobiles and related products, and other products / six months ended 30 June 2025",
+    "orig_unit": "RMB'000"
+   },
+   "note": "Note 3 Segment reporting 표 'Revenue from external trading'(외부매출, 합계 344,815,421와 일치) 값 사용. 부문간 포함 Total 304,602,117; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q2_Adjustments and eliminations",
+   "period": "2025H1",
+   "value": 30.774,
+   "raw": "30,774",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 77,
+    "row": "Revenue from external trading",
+    "col": "Adjustments and eliminations / 2025H1",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q3",
+   "period": "2026H1",
+   "value": 14743.578,
+   "raw": "14,743,578",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 65,
+    "row": "II. Operating profit",
+    "col": "For the six months ended 30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q3",
+   "period": "2025H1",
+   "value": 18719.509,
+   "raw": "18,719,509",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 65,
+    "row": "II. Operating profit",
+    "col": "For the six months ended 30 June 2025 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 4695.889,
+   "raw": "4,695,889,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 13,
+    "row": "III. Operating profit",
+    "col": "Amount for the current period (Jan-Mar 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q1",
+   "value": 11020.649,
+   "raw": "11,020,649,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 13,
+    "row": "III. Operating profit",
+    "col": "Amount for the previous period (Jan-Mar 2025)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 12325.408,
+   "raw": "12,325,408",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 66,
+    "row": "Net profit attributable to shareholders of the parent company",
+    "col": "For the six months ended 30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q5",
+   "period": "2025H1",
+   "value": 15510.533,
+   "raw": "15,510,533",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 66,
+    "row": "Net profit attributable to shareholders of the parent company",
+    "col": "For the six months ended 30 June 2025 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 4084.551,
+   "raw": "4,084,551,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 13,
+    "row": "Net profit attributable to shareholders of the parent company",
+    "col": "Amount for the current period (Jan-Mar 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q1",
+   "value": 9154.985,
+   "raw": "9,154,985,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 13,
+    "row": "Net profit attributable to shareholders of the parent company",
+    "col": "Amount for the previous period (Jan-Mar 2025)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q6",
+   "period": "2026H1",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 0,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2026 중간보고서(HK판)에 비경상손익 차감 귀속순이익 표 없음(grep 'non-recurring/extraordinary/扣除非' 결과 해당 없음)"
+  },
+  {
+   "id": "Q6",
+   "period": "2025H1",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 0,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "중간보고서에 미공시"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": 4147.574,
+   "raw": "4,147,574,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 2,
+    "row": "Net profit attributable to shareholders of the listed company after deduction of extraordinary gains or losses (RMB)",
+    "col": "The Reporting Period",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q1",
+   "value": 8171.627,
+   "raw": "8,171,627,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 2,
+    "row": "Net profit attributable to shareholders of the listed company after deduction of extraordinary gains or losses (RMB)",
+    "col": "The corresponding period of last year",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q7_basic",
+   "period": "2026H1",
+   "value": 1.35,
+   "raw": "1.35",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 66,
+    "row": "Basic earnings per share",
+    "col": "For the six months ended 30 June 2026 (Unaudited)",
+    "orig_unit": "RMB/share"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_diluted",
+   "period": "2026H1",
+   "value": 1.35,
+   "raw": "1.35",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 66,
+    "row": "Diluted earnings per share",
+    "col": "For the six months ended 30 June 2026 (Unaudited)",
+    "orig_unit": "RMB/share"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_basic",
+   "period": "2025H1",
+   "value": 1.71,
+   "raw": "1.71",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 66,
+    "row": "Basic earnings per share",
+    "col": "For the six months ended 30 June 2025 (Unaudited)",
+    "orig_unit": "RMB/share"
+   },
+   "note": "2025년 7월 보너스주·자본전입 후 조정 주식수 기준"
+  },
+  {
+   "id": "Q7_diluted",
+   "period": "2025H1",
+   "value": 1.71,
+   "raw": "1.71",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 66,
+    "row": "Diluted earnings per share",
+    "col": "For the six months ended 30 June 2025 (Unaudited)",
+    "orig_unit": "RMB/share"
+   },
+   "note": "2025년 7월 보너스주·자본전입 후 조정 주식수 기준"
+  },
+  {
+   "id": "Q7_basic",
+   "period": "2026Q1",
+   "value": 0.448,
+   "raw": "0.4480",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 15,
+    "row": "(I) Basic earnings per share",
+    "col": "Amount for the current period (Jan-Mar 2026)",
+    "orig_unit": "RMB/share"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_diluted",
+   "period": "2026Q1",
+   "value": 0.448,
+   "raw": "0.4480",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 15,
+    "row": "(II) Diluted earnings per share",
+    "col": "Amount for the current period (Jan-Mar 2026)",
+    "orig_unit": "RMB/share"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_basic",
+   "period": "2025Q1",
+   "value": 1.0391,
+   "raw": "1.0391",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 15,
+    "row": "(I) Basic earnings per share",
+    "col": "Amount for the previous period (Jan-Mar 2025)",
+    "orig_unit": "RMB/share"
+   },
+   "note": "2025년 7월 보너스주·자본전입 후 조정 주식수 기준"
+  },
+  {
+   "id": "Q7_diluted",
+   "period": "2025Q1",
+   "value": 1.0391,
+   "raw": "1.0391",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 15,
+    "row": "(II) Diluted earnings per share",
+    "col": "Amount for the previous period (Jan-Mar 2025)",
+    "orig_unit": "RMB/share"
+   },
+   "note": "2025년 7월 보너스주·자본전입 후 조정 주식수 기준"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 37334.744,
+   "raw": "37,334,744",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 70,
+    "row": "Net cash flow from operating activities",
+    "col": "For the six months ended 30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q8",
+   "period": "2025H1",
+   "value": 31833.471,
+   "raw": "31,833,471",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 70,
+    "row": "Net cash flow from operating activities",
+    "col": "For the six months ended 30 June 2025 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 2790.305,
+   "raw": "2,790,305,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 16,
+    "row": "Net cash flows from operating activities",
+    "col": "Amount for the current period (Jan-Mar 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q1",
+   "value": 8580.961,
+   "raw": "8,580,961,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 16,
+    "row": "Net cash flows from operating activities",
+    "col": "Amount for the previous period (Jan-Mar 2025)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q9",
+   "period": "2026H1",
+   "value": 44703.066,
+   "raw": "44,703,066",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 71,
+    "row": "Cash paid for purchase and construction of fixed assets, intangible assets and other long-term assets",
+    "col": "For the six months ended 30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "현금유출(양수 표기). 참고: 부문표 'Capital expenditure'(장기자산 증가 기준) 32,715,476 RMB'000 (p76); 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q9",
+   "period": "2025H1",
+   "value": 80524.516,
+   "raw": "80,524,516",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 71,
+    "row": "Cash paid for purchase and construction of fixed assets, intangible assets and other long-term assets",
+    "col": "For the six months ended 30 June 2025 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "참고: 부문표 Capital expenditure 77,891,401 RMB'000 (p77); 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q1",
+   "value": 22062.59,
+   "raw": "22,062,590,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 17,
+    "row": "Cash paid for purchase and construction of fixed assets, intangible assets and other long-term assets",
+    "col": "Amount for the current period (Jan-Mar 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "Q9",
+   "period": "2025Q1",
+   "value": 37276.487,
+   "raw": "37,276,487,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 17,
+    "row": "Cash paid for purchase and construction of fixed assets, intangible assets and other long-term assets",
+    "col": "Amount for the previous period (Jan-Mar 2025)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 58737.867,
+   "raw": "58,737,867",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 62,
+    "row": "Monetary funds",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 75786.508,
+   "raw": "75,786,508,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 8,
+    "row": "Monetary funds",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B2_Financial assets held for trading",
+   "period": "2026-06-30",
+   "value": 69940.449,
+   "raw": "69,940,449",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 62,
+    "row": "Financial assets held for trading",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B2_Financial assets held for trading",
+   "period": "2026-03-31",
+   "value": 53754.642,
+   "raw": "53,754,642,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 8,
+    "row": "Financial assets held for trading",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B3_Short-term borrowings",
+   "period": "2026-06-30",
+   "value": 37645.979,
+   "raw": "37,645,979",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 63,
+    "row": "Short-term borrowings",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B3_Short-term borrowings",
+   "period": "2026-03-31",
+   "value": 66296.294,
+   "raw": "66,296,294,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 10,
+    "row": "Short-term borrowings",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B3_Long-term borrowings",
+   "period": "2026-06-30",
+   "value": 61201.246,
+   "raw": "61,201,246",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 63,
+    "row": "Long-term borrowings",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B3_Long-term borrowings",
+   "period": "2026-03-31",
+   "value": 60570.442,
+   "raw": "60,570,442,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 11,
+    "row": "Long-term borrowings",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B3_Bond payables",
+   "period": "2026-06-30",
+   "value": 14993.8,
+   "raw": "14,993,800",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 63,
+    "row": "Bond payables / Bonds payables",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B3_Bond payables",
+   "period": "2026-03-31",
+   "value": 4998.1,
+   "raw": "4,998,100,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 11,
+    "row": "Bond payables / Bonds payables",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 941278.424,
+   "raw": "941,278,424",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 62,
+    "row": "Total assets",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 902076.965,
+   "raw": "902,076,965,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 9,
+    "row": "Total assets",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 260818.431,
+   "raw": "260,818,431",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 64,
+    "row": "Total shareholders' equity attributable to the parent company",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "B6는 영구채(其他權益工具) 포함 금액; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B6",
+   "period": "2026-03-31",
+   "value": 249916.729,
+   "raw": "249,916,729,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 11,
+    "row": "Total shareholders' equity attributable to the parent company",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "B6는 영구채(其他權益工具) 포함 금액; 원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B6_Perpetual bond",
+   "period": "2026-06-30",
+   "value": 20846.86,
+   "raw": "20,846,860",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 64,
+    "row": "Other equity instruments - Including: Perpetual bond",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B6_Perpetual bond",
+   "period": "2026-03-31",
+   "value": 18004.109,
+   "raw": "18,004,109,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 11,
+    "row": "Other equity instruments - Including: Perpetual bond",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B7_Trade payables",
+   "period": "2026-06-30",
+   "value": 176356.021,
+   "raw": "176,356,021",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 63,
+    "row": "Trade payables",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B7_Trade payables",
+   "period": "2026-03-31",
+   "value": 164328.815,
+   "raw": "164,328,815,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 10,
+    "row": "Trade payables",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B7_Bills payables",
+   "period": "2026-06-30",
+   "value": 53413.166,
+   "raw": "53,413,166",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 63,
+    "row": "Bills payables",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B7_Bills payables",
+   "period": "2026-03-31",
+   "value": 48603.44,
+   "raw": "48,603,440,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 10,
+    "row": "Bills payables",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B7_Other payables",
+   "period": "2026-06-30",
+   "value": 105921.363,
+   "raw": "105,921,363",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 63,
+    "row": "Other payables",
+    "col": "30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B7_Other payables",
+   "period": "2026-03-31",
+   "value": 107833.023,
+   "raw": "107,833,023,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 10,
+    "row": "Other payables",
+    "col": "Balance at the end of the period (31 March 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B1_cash_equivalents_CF",
+   "period": "2026-06-30",
+   "value": 55619.085,
+   "raw": "55,619,085",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 72,
+    "row": "VI. Balance of cash and cash equivalents at the end of the period",
+    "col": "For the six months ended 30 June 2026 (Unaudited)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "현금흐름표상 현금및현금성자산(貨幣資金과 다름); 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "B1_cash_equivalents_CF",
+   "period": "2026-03-31",
+   "value": 73408.489,
+   "raw": "73,408,489,000.00",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 18,
+    "row": "VI. Closing balance of cash and cash equivalents",
+    "col": "Amount for the current period (Jan-Mar 2026)",
+    "orig_unit": "RMB"
+   },
+   "note": "원 단위 RMB(元), ÷1,000,000"
+  },
+  {
+   "id": "B2_Cash reserves (company-defined)",
+   "period": "2026-06-30",
+   "value": 167400,
+   "raw": "1,674 億元",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 7,
+    "row": "CASH RESERVES (Note 2)",
+    "col": "Performance overview 2026H1",
+    "orig_unit": "RMB 100 million"
+   },
+   "note": "회사 정의: 'Cash reserves include, but not limited to, monetary funds and financial assets held for trading'. 1,674億元 = RMB 167,400 million (반올림 표기)"
+  },
+  {
+   "id": "B3_Non-current liabilities due within one year (borrowings portion)",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 63,
+    "row": "Non-current liabilities due within one year",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "재무상태표 합계 3,452,964 RMB'000만 있고 차입 부분 내역 미공시. MD&A(p43) 총차입(은행대출+사채) 약 RMB120,055m, 1년내 상환 약 43,860m, 2~5년 76,195m — 표 항목 합(113,841m)과 차이 6,214m, 내역 불명"
+  },
+  {
+   "id": "B3_Non-current liabilities due within one year (borrowings portion)",
+   "period": "2026-03-31",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__results_2026Q1__2026042803001.pdf",
+    "page": 10,
+    "row": "Non-current liabilities due within one year",
+    "col": "",
+    "orig_unit": "RMB"
+   },
+   "note": "합계 3,950,898,000 RMB만 공시, 차입분 내역 없음"
+  },
+  {
+   "id": "B3_Total borrowings (MD&A)",
+   "period": "2026-06-30",
+   "value": 120055,
+   "raw": "RMB120,055 million",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 43,
+    "row": "Total borrowings ... including all bank loans and bonds",
+    "col": "as at 30 June 2026",
+    "orig_unit": "RMB million"
+   },
+   "note": "MD&A 서술값(approximately)"
+  },
+  {
+   "id": "B3_Total borrowings (MD&A)",
+   "period": "2025-12-31",
+   "value": 113435,
+   "raw": "RMB113,435 million",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 43,
+    "row": "Total borrowings ... including all bank loans and bonds",
+    "col": "as at 31 December 2025",
+    "orig_unit": "RMB million"
+   },
+   "note": "MD&A 서술값(approximately)"
+  },
+  {
+   "id": "S1_H",
+   "period": "2026-09-30",
+   "value": 3683400000,
+   "raw": "3,683,400,000",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "BYD__monthly_return_2026-09__2026100100053.pdf",
+    "page": 2,
+    "row": "II.1 Ordinary shares H (01211)",
+    "col": "Balance at close of the month (30 September 2026), Number of issued shares (excluding treasury shares)",
+    "orig_unit": "shares"
+   },
+   "note": "treasury shares 0"
+  },
+  {
+   "id": "S1_A",
+   "period": "2026-09-30",
+   "value": 5433797565,
+   "raw": "5,433,797,565",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "BYD__monthly_return_2026-09__2026100100053.pdf",
+    "page": 2,
+    "row": "II.2 Ordinary shares A (002594)",
+    "col": "Balance at close of the month (30 September 2026), Number of issued shares (excluding treasury shares)",
+    "orig_unit": "shares"
+   },
+   "note": "treasury shares 0"
+  },
+  {
+   "id": "S1_total",
+   "period": "2026-09-30",
+   "value": 9117197565,
+   "raw": "9,117,197,565",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "BYD__monthly_return_2026-09__2026100100053.pdf",
+    "page": 1,
+    "row": "Total authorised/registered share capital at the end of the month",
+    "col": "RMB (par RMB1)",
+    "orig_unit": "shares"
+   },
+   "note": "등록자본 합계 RMB9,117,197,565(액면 RMB1) = H+A 발행주식 합과 일치"
+  },
+  {
+   "id": "R1_DPS",
+   "period": "FY2025",
+   "value": 0.358,
+   "raw": "RMB0.358 per share (including tax)",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 114,
+    "row": "Final dividend for the year ended 31 December 2025",
+    "col": "Report of the Directors",
+    "orig_unit": "RMB/share"
+   },
+   "note": "결산배당(제안), AGM 승인 조건; 8월 9일 전 지급 예정(p115)"
+  },
+  {
+   "id": "R1_total",
+   "period": "FY2025",
+   "value": 3263.957,
+   "raw": "3,263,957",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 345,
+    "row": "XV.1 2025 profit distribution plan - cash dividends totalling",
+    "col": "Events after balance sheet date",
+    "orig_unit": "RMB'000"
+   },
+   "note": "기준주식 9,117,197,565주; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "R1_interim",
+   "period": "2026H1",
+   "value": null,
+   "raw": "Nil",
+   "unit": "RMB per share",
+   "status": "null",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 58,
+    "row": "INTERIM DIVIDEND",
+    "col": "",
+    "orig_unit": ""
+   },
+   "note": "2026 중간배당 없음(2025H1도 Nil)"
+  },
+  {
+   "id": "R2",
+   "period": "2026H1",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 56,
+    "row": "ISSUE, PURCHASE, SALE OR REDEMPTION OF THE COMPANY'S LISTED SECURITIES",
+    "col": "",
+    "orig_unit": ""
+   },
+   "note": "상반기 상장증권 매입·매각·상환 없음. FY2025도 없음(AR p76, p118). 월간보고 9월 자사주 0"
+  },
+  {
+   "id": "V1_NEV_sales",
+   "period": "2026-09",
+   "value": 463561,
+   "raw": "463,561",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "New energy vehicle",
+    "col": "Sales Volume / September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_NEV_sales",
+   "period": "2025-09",
+   "value": 396270,
+   "raw": "396,270",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "New energy vehicle",
+    "col": "Sales Volume / September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_NEV_sales",
+   "period": "2026-01~09",
+   "value": 3131576,
+   "raw": "3,131,576",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "New energy vehicle",
+    "col": "Sales Volume / Year-to-date September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_NEV_sales",
+   "period": "2025-01~09",
+   "value": 3260146,
+   "raw": "3,260,146",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "New energy vehicle",
+    "col": "Sales Volume / Year-to-date September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_Passenger_sales",
+   "period": "2026-09",
+   "value": 456713,
+   "raw": "456,713",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Passenger vehicle",
+    "col": "Sales Volume / September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_Passenger_sales",
+   "period": "2025-09",
+   "value": 393060,
+   "raw": "393,060",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Passenger vehicle",
+    "col": "Sales Volume / September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_Passenger_sales",
+   "period": "2026-01~09",
+   "value": 3078544,
+   "raw": "3,078,544",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Passenger vehicle",
+    "col": "Sales Volume / Year-to-date September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_Passenger_sales",
+   "period": "2025-01~09",
+   "value": 3218862,
+   "raw": "3,218,862",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Passenger vehicle",
+    "col": "Sales Volume / Year-to-date September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_BEV_sales",
+   "period": "2026-09",
+   "value": 273143,
+   "raw": "273,143",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Battery electric vehicle",
+    "col": "Sales Volume / September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_BEV_sales",
+   "period": "2025-09",
+   "value": 205050,
+   "raw": "205,050",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Battery electric vehicle",
+    "col": "Sales Volume / September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_BEV_sales",
+   "period": "2026-01~09",
+   "value": 1629957,
+   "raw": "1,629,957",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Battery electric vehicle",
+    "col": "Sales Volume / Year-to-date September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_BEV_sales",
+   "period": "2025-01~09",
+   "value": 1605903,
+   "raw": "1,605,903",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Battery electric vehicle",
+    "col": "Sales Volume / Year-to-date September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_PHEV_sales",
+   "period": "2026-09",
+   "value": 183570,
+   "raw": "183,570",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Plug-in hybrid electric vehicle",
+    "col": "Sales Volume / September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_PHEV_sales",
+   "period": "2025-09",
+   "value": 188010,
+   "raw": "188,010",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Plug-in hybrid electric vehicle",
+    "col": "Sales Volume / September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_PHEV_sales",
+   "period": "2026-01~09",
+   "value": 1448587,
+   "raw": "1,448,587",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Plug-in hybrid electric vehicle",
+    "col": "Sales Volume / Year-to-date September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_PHEV_sales",
+   "period": "2025-01~09",
+   "value": 1612959,
+   "raw": "1,612,959",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 1,
+    "row": "– Plug-in hybrid electric vehicle",
+    "col": "Sales Volume / Year-to-date September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_Commercial_sales",
+   "period": "2026-09",
+   "value": 6848,
+   "raw": "6,848",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 2,
+    "row": "– Commercial vehicle",
+    "col": "Sales Volume / September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_Commercial_sales",
+   "period": "2025-09",
+   "value": 3210,
+   "raw": "3,210",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 2,
+    "row": "– Commercial vehicle",
+    "col": "Sales Volume / September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_Commercial_sales",
+   "period": "2026-01~09",
+   "value": 53032,
+   "raw": "53,032",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 2,
+    "row": "– Commercial vehicle",
+    "col": "Sales Volume / Year-to-date September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_Commercial_sales",
+   "period": "2025-01~09",
+   "value": 41284,
+   "raw": "41,284",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 2,
+    "row": "– Commercial vehicle",
+    "col": "Sales Volume / Year-to-date September 2025",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_NEV_export",
+   "period": "2026-09",
+   "value": 180700,
+   "raw": "180,700 units",
+   "unit": "units",
+   "status": "ok",
+   "source": {
+    "file": "BYD__sales_2026-09__2026100100047.pdf",
+    "page": 2,
+    "row": "Note: export volume of New Energy Vehicle",
+    "col": "September 2026",
+    "orig_unit": "units"
+   },
+   "note": ""
+  },
+  {
+   "id": "A1_2025",
+   "period": "FY2025",
+   "value": 803964.958,
+   "raw": "803,964,958",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "I. Operating revenue",
+    "col": "2025 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A2_2025",
+   "period": "FY2025",
+   "value": 32619.022,
+   "raw": "32,619,022",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "Net profit attributable to Shareholders of the parent company",
+    "col": "2025 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A1_2024",
+   "period": "FY2024",
+   "value": 777102.455,
+   "raw": "777,102,455",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "I. Operating revenue",
+    "col": "2024 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A2_2024",
+   "period": "FY2024",
+   "value": 40254.346,
+   "raw": "40,254,346",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "Net profit attributable to Shareholders of the parent company",
+    "col": "2024 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A1_2023",
+   "period": "FY2023",
+   "value": 602315.354,
+   "raw": "602,315,354",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "I. Operating revenue",
+    "col": "2023 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2021~2023은 (Restated) 표기; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A2_2023",
+   "period": "FY2023",
+   "value": 30040.811,
+   "raw": "30,040,811",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "Net profit attributable to Shareholders of the parent company",
+    "col": "2023 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2021~2023은 (Restated) 표기; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A1_2022",
+   "period": "FY2022",
+   "value": 424060.635,
+   "raw": "424,060,635",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "I. Operating revenue",
+    "col": "2022 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2021~2023은 (Restated) 표기; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A2_2022",
+   "period": "FY2022",
+   "value": 16622.448,
+   "raw": "16,622,448",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "Net profit attributable to Shareholders of the parent company",
+    "col": "2022 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2021~2023은 (Restated) 표기; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A1_2021",
+   "period": "FY2021",
+   "value": 216142.395,
+   "raw": "216,142,395",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "I. Operating revenue",
+    "col": "2021 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2021~2023은 (Restated) 표기; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A2_2021",
+   "period": "FY2021",
+   "value": 3045.188,
+   "raw": "3,045,188",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "Net profit attributable to Shareholders of the parent company",
+    "col": "2021 (Five Year Financial Summary)",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2021~2023은 (Restated) 표기; 원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A3_2025",
+   "period": "FY2025",
+   "value": 59135.544,
+   "raw": "59,135,544",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 148,
+    "row": "Net cash flow from operating activities",
+    "col": "2025",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A3_2024",
+   "period": "FY2024",
+   "value": 133453.873,
+   "raw": "133,453,873",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 148,
+    "row": "Net cash flow from operating activities",
+    "col": "2024",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A4_2025",
+   "period": "FY2025",
+   "value": 156807.853,
+   "raw": "156,807,853",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 149,
+    "row": "Cash paid for purchase and construction of fixed assets, intangible assets and other long-term assets",
+    "col": "2025",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A4_2024",
+   "period": "FY2024",
+   "value": 97359.768,
+   "raw": "97,359,768",
+   "unit": "RMB million",
+   "status": "ok",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 149,
+    "row": "Cash paid for purchase and construction of fixed assets, intangible assets and other long-term assets",
+    "col": "2024",
+    "orig_unit": "RMB'000"
+   },
+   "note": "원 단위 RMB'000, ÷1,000"
+  },
+  {
+   "id": "A3_2023",
+   "period": "FY2023",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "5개년 요약표에 현금흐름 항목 없음, 2025 연차보고서 현금흐름표는 2025·2024만 제공"
+  },
+  {
+   "id": "A4_2023",
+   "period": "FY2023",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "5개년 요약표에 설비투자 항목 없음, 현금흐름표는 2025·2024만"
+  },
+  {
+   "id": "A3_2022",
+   "period": "FY2022",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "5개년 요약표에 현금흐름 항목 없음, 2025 연차보고서 현금흐름표는 2025·2024만 제공"
+  },
+  {
+   "id": "A4_2022",
+   "period": "FY2022",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "5개년 요약표에 설비투자 항목 없음, 현금흐름표는 2025·2024만"
+  },
+  {
+   "id": "A3_2021",
+   "period": "FY2021",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "5개년 요약표에 현금흐름 항목 없음, 2025 연차보고서 현금흐름표는 2025·2024만 제공"
+  },
+  {
+   "id": "A4_2021",
+   "period": "FY2021",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 368,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "5개년 요약표에 설비투자 항목 없음, 현금흐름표는 2025·2024만"
+  },
+  {
+   "id": "A5_2025",
+   "period": "FY2025",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 366,
+    "row": "XVIII.1 Breakdown of non-recurring profit or loss - Total",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "비경상 차감 귀속순이익 금액은 직접 공시되지 않음. 비경상손익 합계 3,173,319 RMB'000(p366), 비경상 차감 기본 EPS 3.23 RMB(p367)만 있음. 차감 계산은 하지 않음"
+  },
+  {
+   "id": "A5_2024",
+   "period": "FY2024",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 0,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2025 연차보고서에 해당 연도 비경상 차감 순이익 미공시"
+  },
+  {
+   "id": "A5_2023",
+   "period": "FY2023",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 0,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2025 연차보고서에 해당 연도 비경상 차감 순이익 미공시"
+  },
+  {
+   "id": "A5_2022",
+   "period": "FY2022",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 0,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2025 연차보고서에 해당 연도 비경상 차감 순이익 미공시"
+  },
+  {
+   "id": "A5_2021",
+   "period": "FY2021",
+   "value": null,
+   "raw": "",
+   "unit": "RMB million",
+   "status": "null",
+   "source": {
+    "file": "BYD__AR2025__2026032703008.pdf",
+    "page": 0,
+    "row": "",
+    "col": "",
+    "orig_unit": "RMB'000"
+   },
+   "note": "2025 연차보고서에 해당 연도 비경상 차감 순이익 미공시"
+  },
+  {
+   "id": "X1",
+   "period": "2026H1",
+   "value": "ASBE (China Accounting Standards for Business Enterprises)",
+   "raw": "The financial statements have been prepared in accordance with the \"Accounting Standards for Business Enterprises - Basic Standard\" issued by the Ministry of Finance and the specific accounting standards ... (collectively known as the \"ASBE\").",
+   "unit": "text",
+   "status": "ok",
+   "source": {
+    "file": "BYD__results_2026H1__2026082801633.pdf",
+    "page": 74,
+    "row": "2. BASIS OF PREPARATION OF THE FINANCIAL STATEMENTS",
+    "col": "",
+    "orig_unit": ""
+   },
+   "note": "중국 기업회계준칙(CAS/ASBE) — HKFRS 아님. 2025 연차보고서 p161도 동일 문구. 1분기 보고서도 CAS 양식(營業收入 등)"
+  }
+ ]
+}

@@ -1,0 +1,1581 @@
+{
+ "ticker": "XIAOMI",
+ "currency": "RMB",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 108921.609,
+   "raw": "108,921,609",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 115956.091,
+   "raw": "115,956,091",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 99141.618,
+   "raw": "99,141,618",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 30,
+    "row": "Revenue",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smartphones",
+   "period": "2026Q2",
+   "value": 42118.683,
+   "raw": "42,118,683",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smartphones / Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smartphones",
+   "period": "2025Q2",
+   "value": 45520.009,
+   "raw": "45,520,009",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smartphones / Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smartphones",
+   "period": "2026Q1",
+   "value": 44273.331,
+   "raw": "44,273,331",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smartphones / Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_IoT and lifestyle products",
+   "period": "2026Q2",
+   "value": 31278.003,
+   "raw": "31,278,003",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "IoT and lifestyle products / Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_IoT and lifestyle products",
+   "period": "2025Q2",
+   "value": 38712.153,
+   "raw": "38,712,153",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "IoT and lifestyle products / Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_IoT and lifestyle products",
+   "period": "2026Q1",
+   "value": 24681.157,
+   "raw": "24,681,157",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "IoT and lifestyle products / Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Internet services",
+   "period": "2026Q2",
+   "value": 9043.663,
+   "raw": "9,043,663",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Internet services / Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Internet services",
+   "period": "2025Q2",
+   "value": 9097.747,
+   "raw": "9,097,747",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Internet services / Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Internet services",
+   "period": "2026Q1",
+   "value": 9468.346,
+   "raw": "9,468,346",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Internet services / Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Other related businesses",
+   "period": "2026Q2",
+   "value": 1585.424,
+   "raw": "1,585,424",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Other related businesses / Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Other related businesses",
+   "period": "2025Q2",
+   "value": 1362.918,
+   "raw": "1,362,918",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Other related businesses / Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Other related businesses",
+   "period": "2026Q1",
+   "value": 854.367,
+   "raw": "854,367",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Other related businesses / Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smartphone × AIoT Subtotal",
+   "period": "2026Q2",
+   "value": 84025.773,
+   "raw": "84,025,773",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smartphone × AIoT — Subtotal / Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smartphone × AIoT Subtotal",
+   "period": "2025Q2",
+   "value": 94692.827,
+   "raw": "94,692,827",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smartphone × AIoT — Subtotal / Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smartphone × AIoT Subtotal",
+   "period": "2026Q1",
+   "value": 79277.201,
+   "raw": "79,277,201",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smartphone × AIoT — Subtotal / Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smart EV, AI and other new initiatives",
+   "period": "2026Q2",
+   "value": 24895.836,
+   "raw": "24,895,836",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smart EV, AI and other new initiatives / Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smart EV, AI and other new initiatives",
+   "period": "2025Q2",
+   "value": 21263.264,
+   "raw": "21,263,264",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smart EV, AI and other new initiatives / Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q2_Smart EV, AI and other new initiatives",
+   "period": "2026Q1",
+   "value": 19864.417,
+   "raw": "19,864,417",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 36,
+    "row": "Segment revenues",
+    "col": "Smart EV, AI and other new initiatives / Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 10870.168,
+   "raw": "10,870,168",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Operating profit",
+    "col": "Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 13436.719,
+   "raw": "13,436,719",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Operating profit",
+    "col": "Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 5312.645,
+   "raw": "5,312,645",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 30,
+    "row": "Operating profit",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q4_Smart EV, AI and other new initiatives",
+   "period": "2026Q2",
+   "value": -2600.0,
+   "raw": "the loss from operations related to our smart EV, AI and other new initiatives segment was RMB2.6 billion",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 6,
+    "row": "Business Review 3. Smart EV, AI and Other New Initiatives (본문 문장, 표 아님): loss from operations",
+    "col": "second quarter of 2026"
+   },
+   "note": "원문 RMB billion 반올림 수치(1자리) ×1,000. 정의(각주9): Income/(loss) from operations = gross profit minus operating expenses. 회사 IFRS 부문 손익 표(주석2)는 매출총이익까지만 공시."
+  },
+  {
+   "id": "Q4_Smart EV, AI and other new initiatives",
+   "period": "2026Q1",
+   "value": -3100.0,
+   "raw": "the loss from operations related to our smart EV, AI and other new initiatives segment was RMB3.1 billion",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 6,
+    "row": "Business Review 3. Smart EV, AI and Other New Initiatives (본문 문장): loss from operations",
+    "col": "first quarter of 2026"
+   },
+   "note": "원문 RMB billion 반올림 수치 ×1,000. 정의: gross profit minus operating expenses."
+  },
+  {
+   "id": "Q4_Smart EV, AI and other new initiatives",
+   "period": "2025Q2",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "2025년 2분기 부문 영업손익은 제공된 파일(2026Q2·2026Q1·FY2025 발표문, AR2025)에 없음. FY2025 발표문은 2025년 연간 +0.9bn, 2025Q4 +1.1bn만 기재(p7)."
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 9462.405,
+   "raw": "9,462,405",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Attributable to: — Owners of the Company",
+    "col": "Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 11904.405,
+   "raw": "11,904,405",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Attributable to: — Owners of the Company",
+    "col": "Three months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 4723.12,
+   "raw": "4,723,120",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 30,
+    "row": "Attributable to: — Owners of the Company",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": 6219.073,
+   "raw": "6,219,073",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 24,
+    "row": "Profit for the period — Non-IFRS (Adjusted Net Profit)",
+    "col": "Three Months Ended June 30, 2026 / Non-IFRS"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Non-IFRS Measure: Adjusted Net Profit. 조정 기준은 귀속이 아닌 Profit for the period(비지배 포함)."
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": 6072.135,
+   "raw": "6,072,135",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 24,
+    "row": "Profit for the period — Non-IFRS (Adjusted Net Profit)",
+    "col": "Three Months Ended March 31, 2026 / Non-IFRS"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Adjusted Net Profit. 1분기 발표문 요약표 6,072.1과 일치."
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": 10830.667,
+   "raw": "10,830,667",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 24,
+    "row": "Profit for the period — Non-IFRS (Adjusted Net Profit)",
+    "col": "Three Months Ended June 30, 2025 / Non-IFRS"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Adjusted Net Profit."
+  },
+  {
+   "id": "Q6",
+   "period": "2026H1",
+   "value": 12291.208,
+   "raw": "12,291,208",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 25,
+    "row": "Profit for the period — Non-IFRS (Adjusted Net Profit)",
+    "col": "Six Months Ended June 30, 2026 / Non-IFRS"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Adjusted Net Profit."
+  },
+  {
+   "id": "Q7_IFRS_diluted",
+   "period": "2026Q2",
+   "value": 0.36,
+   "raw": "0.36",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Earnings per share — Diluted",
+    "col": "Three months ended June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_IFRS_diluted",
+   "period": "2025Q2",
+   "value": 0.45,
+   "raw": "0.45",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Earnings per share — Diluted",
+    "col": "Three months ended June 30, 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_IFRS_diluted",
+   "period": "2026Q1",
+   "value": 0.18,
+   "raw": "0.18",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 30,
+    "row": "Earnings per share — Diluted",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_IFRS_diluted",
+   "period": "2026H1",
+   "value": 0.53,
+   "raw": "0.53",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Earnings per share — Diluted",
+    "col": "Six months ended June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_Adjusted_diluted",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "RMB per share",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사가 조정(Non-IFRS) EPS를 공시하지 않음(발표문 전체 검색, per share 항목은 IFRS 기본·희석 EPS뿐)."
+  },
+  {
+   "id": "Q7_Adjusted_diluted",
+   "period": "2025Q2",
+   "value": null,
+   "raw": "",
+   "unit": "RMB per share",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사가 조정(Non-IFRS) EPS를 공시하지 않음(발표문 전체 검색, per share 항목은 IFRS 기본·희석 EPS뿐)."
+  },
+  {
+   "id": "Q7_Adjusted_diluted",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "RMB per share",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사가 조정(Non-IFRS) EPS를 공시하지 않음(발표문 전체 검색, per share 항목은 IFRS 기본·희석 EPS뿐)."
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": 3842.2,
+   "raw": "3,842.2",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 27,
+    "row": "Net cash generated from/(used in) operating activities(1)",
+    "col": "Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB in millions. MD&A 요약 현금흐름표. 각주(1): 팩토링 매입채무·핀테크 대출채권·제한현금 변동 제외 시 RMB11.2bn(경영자료, 미검토)."
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": -1792.0,
+   "raw": "(1,792.0)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 27,
+    "row": "Net cash generated from/(used in) operating activities(1)",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB in millions. 각주(1) 조정 시 -RMB5.2bn. 1분기 발표문 p34 (1,792,006) RMB'000과 일치."
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 2050.234,
+   "raw": "2,050,234",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 34,
+    "row": "Net cash generated from operating activities",
+    "col": "Six months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q2",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "2025년 2분기 단독 영업현금흐름 표 없음. 참고: 2025H1 28,054,740(RMB'000, 2026Q2 발표문 p34), 2025Q1 4,509,497(2026Q1 발표문 p34) — 차감 계산은 하지 않음."
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q2",
+   "value": 3620.5,
+   "raw": "3,620.5",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 28,
+    "row": "Capital expenditures — Total",
+    "col": "Three months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB in millions. MD&A 'Capital Expenditure' 표. 부문: Smartphone × AIoT 1,237.9 / Smart EV, AI and other new initiatives 2,382.6. 현금흐름표 'Purchase of property, plant and equipment' 분기 행은 이 발표문에 없음(본문: PP&E 구입 RMB1.5bn)."
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q1",
+   "value": 3274.1,
+   "raw": "3,274.1",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 28,
+    "row": "Capital expenditures — Total",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 RMB in millions. 부문: Smartphone × AIoT 1,780.0 / Smart EV, AI and other new initiatives 1,494.1. 1분기 발표문 p28과 일치."
+  },
+  {
+   "id": "Q9",
+   "period": "2025Q2",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "2025년 2분기 capex는 제공 파일에 없음."
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사가 FCF(free cash flow)를 제시하지 않음(발표문 검색 결과 없음)."
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사가 FCF(free cash flow)를 제시하지 않음(발표문 검색 결과 없음)."
+  },
+  {
+   "id": "H1_매출",
+   "period": "2026H1",
+   "value": 208063.227,
+   "raw": "208,063,227",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Revenue",
+    "col": "Six months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "H1_매출",
+   "period": "2025H1",
+   "value": 227249.428,
+   "raw": "227,249,428",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Revenue",
+    "col": "Six months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "H1_귀속순이익",
+   "period": "2026H1",
+   "value": 14185.525,
+   "raw": "14,185,525",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Attributable to: — Owners of the Company",
+    "col": "Six months ended June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "H1_귀속순이익",
+   "period": "2025H1",
+   "value": 22828.726,
+   "raw": "22,828,726",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 30,
+    "row": "Attributable to: — Owners of the Company",
+    "col": "Six months ended June 30, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 37252.369,
+   "raw": "37,252,369",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 32,
+    "row": "Current assets — Cash and cash equivalents",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B2_Term bank deposits (current)",
+   "period": "2026-06-30",
+   "value": 62465.572,
+   "raw": "62,465,572",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 32,
+    "row": "Current assets — Term bank deposits",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B2_Term bank deposits (non-current)",
+   "period": "2026-06-30",
+   "value": 65710.773,
+   "raw": "65,710,773",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 32,
+    "row": "Non-current assets — Term bank deposits",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B2_Restricted cash",
+   "period": "2026-06-30",
+   "value": 4138.063,
+   "raw": "4,138,063",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 32,
+    "row": "Current assets — Restricted cash",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B2_Short-term investments measured at fair value through profit or loss",
+   "period": "2026-06-30",
+   "value": 21505.612,
+   "raw": "21,505,612",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 32,
+    "row": "Current assets — Short-term investments measured at fair value through profit or loss",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B2_Short-term investments measured at amortized cost",
+   "period": "2026-06-30",
+   "value": 500.0,
+   "raw": "500,000",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 32,
+    "row": "Current assets — Short-term investments measured at amortized cost",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B2_Long-term investments measured at amortized cost",
+   "period": "2026-06-30",
+   "value": 16008.606,
+   "raw": "16,008,606",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 32,
+    "row": "Non-current assets — Long-term investments measured at amortized cost",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B2_Treasury investments (in long-term investments measured at FVTPL)",
+   "period": "2026-06-30",
+   "value": 19890.149,
+   "raw": "19,890,149",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 40,
+    "row": "Note 6 Investments — Long-term investments measured at fair value through profit or loss — Treasury investments",
+    "col": "As of June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B3_Borrowings (current)",
+   "period": "2026-06-30",
+   "value": 9706.402,
+   "raw": "9,706,402",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 33,
+    "row": "Current liabilities — Borrowings",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 주석9(p42): Secured 74,486 / Unsecured 9,631,916."
+  },
+  {
+   "id": "B3_Borrowings (non-current)",
+   "period": "2026-06-30",
+   "value": 29570.36,
+   "raw": "29,570,360",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 33,
+    "row": "Non-current liabilities — Borrowings",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 주석9(p42): Secured 1,717,308 / Unsecured 22,774,895 / Convertible bonds 5,078,157. 본문(p28) total borrowings RMB39.3bn."
+  },
+  {
+   "id": "B3_Convertible bonds (non-current, 내역)",
+   "period": "2026-06-30",
+   "value": 5078.157,
+   "raw": "5,078,157",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 42,
+    "row": "Note 9 Borrowings — Included in non-current liabilities — Convertible bonds",
+    "col": "As of June 30, 2026"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. B3_Borrowings (non-current)에 포함된 내역(중복 합산 금지)."
+  },
+  {
+   "id": "B4_Cash resources",
+   "period": "2026-06-30",
+   "value": 219300.0,
+   "raw": "cash resources of RMB219.3 billion as of June 30, 2026",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 26,
+    "row": "Liquidity and Financial Resources (본문 문장) + 각주17",
+    "col": "as of June 30, 2026"
+   },
+   "note": "원문 RMB billion(1자리) ×1,000. 정의(각주17): (i) cash and cash equivalents, (ii) restricted cash, (iii) term bank deposits, (iv) short-term investments measured at FVTPL, (v) short-term investments measured at amortized cost, (vi) long-term investments measured at amortized cost, (vii) treasury investments included in long-term investments measured at FVTPL. 주의: 위 B1·B2 대차대조표 항목을 단순 합하면 약 227.5bn으로 219.3bn과 차이(약 8.2bn) — 회사 산식 세부(예: 일부 제한현금·예금 제외 여부) 미공시."
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 516040.794,
+   "raw": "516,040,794",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 32,
+    "row": "Total assets",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000."
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 269699.912,
+   "raw": "269,699,912",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 33,
+    "row": "Equity attributable to owners of the Company (subtotal)",
+    "col": "As of June 30, 2026 (Unaudited)"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. Non-controlling interests 119,490 별도."
+  },
+  {
+   "id": "S1_Class B",
+   "period": "2026-08-31",
+   "value": 21329946459,
+   "raw": "21,329,946,459",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__monthly_return_2026-08__2026090401115.pdf",
+    "page": 2,
+    "row": "II.1 WVR ordinary shares Type B — Balance at close of the month — Number of issued shares (excluding treasury shares)",
+    "col": "31 August 2026"
+   },
+   "note": "Treasury shares 0."
+  },
+  {
+   "id": "S1_Class A",
+   "period": "2026-08-31",
+   "value": 4429236628,
+   "raw": "4,429,236,628",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__monthly_return_2026-08__2026090401115.pdf",
+    "page": 2,
+    "row": "II.2 WVR ordinary shares Type A — Balance at close of the month — Number of issued shares (excluding treasury shares)",
+    "col": "31 August 2026"
+   },
+   "note": "Treasury shares 0."
+  },
+  {
+   "id": "S1_Total",
+   "period": "2026-08-31",
+   "value": 25759183087,
+   "raw": "21,329,946,459 + 4,429,236,628",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__monthly_return_2026-08__2026090401115.pdf",
+    "page": 2,
+    "row": "Class A + Class B (합계는 월간보고에 직접 기재 없음, 두 원문 값 합산)",
+    "col": "31 August 2026"
+   },
+   "note": "합계는 단순 가산값."
+  },
+  {
+   "id": "S2",
+   "period": "2026Q2",
+   "value": 26508777000,
+   "raw": "26,508,777",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 39,
+    "row": "Weighted average number of ordinary shares for calculation of diluted earnings per share (thousand shares)",
+    "col": "Three months ended June 30, 2026"
+   },
+   "note": "원 단위 thousand shares ×1,000."
+  },
+  {
+   "id": "S2",
+   "period": "2025Q2",
+   "value": 26791370000,
+   "raw": "26,791,370",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 39,
+    "row": "Weighted average number of ordinary shares for calculation of diluted earnings per share (thousand shares)",
+    "col": "Three months ended June 30, 2025"
+   },
+   "note": "원 단위 thousand shares ×1,000."
+  },
+  {
+   "id": "S2",
+   "period": "2026H1",
+   "value": 26451879000,
+   "raw": "26,451,879",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 39,
+    "row": "Weighted average number of ordinary shares for calculation of diluted earnings per share (thousand shares)",
+    "col": "Six months ended June 30, 2026"
+   },
+   "note": "원 단위 thousand shares ×1,000."
+  },
+  {
+   "id": "S2",
+   "period": "2026Q1",
+   "value": 26451163000,
+   "raw": "26,451,163",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q1__2026052600770.pdf",
+    "page": 38,
+    "row": "Weighted average number of ordinary shares for calculation of diluted earnings per share (thousand shares)",
+    "col": "Three months ended March 31, 2026"
+   },
+   "note": "원 단위 thousand shares ×1,000."
+  },
+  {
+   "id": "R1_shares",
+   "period": "2026H1",
+   "value": 351319000,
+   "raw": "68,751,000+39,376,400+40,503,800+78,918,600+47,844,200+75,925,000",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 44,
+    "row": "Purchase, Sale or Redemption — No. of Shares Repurchased (January~June 월별 행)",
+    "col": "No. of Shares Repurchased"
+   },
+   "note": "Class B 주식. 1~6월 월별 행 합산값(상반기 합계 행은 원문에 없음). 원문 Total 377,465,400주는 2026-08-13(Latest Practicable Date)까지 포함."
+  },
+  {
+   "id": "R1_amount_HKD",
+   "period": "2026H1",
+   "value": 10962777913,
+   "raw": "2,540,279,326+1,392,181,061+1,326,056,687+2,453,839,435+1,407,447,346+1,842,974,058",
+   "unit": "HK$",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 44,
+    "row": "Aggregate Consideration (approximately) (HK$) — January~June 월별 행",
+    "col": "Aggregate Consideration (approximately) (HK$)"
+   },
+   "note": "1~6월 월별 합산. 원문 Total HK$11,665,522,937은 8/13까지 포함. 현금흐름 본문: 2분기 shares repurchase 지급 RMB5.0bn(p28)."
+  },
+  {
+   "id": "R1_shares",
+   "period": "2026-01-01~2026-08-13",
+   "value": 377465400,
+   "raw": "377,465,400",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 44,
+    "row": "Total — No. of Shares Repurchased",
+    "col": "No. of Shares Repurchased"
+   },
+   "note": "Latest Practicable Date(2026-08-13)까지 누계."
+  },
+  {
+   "id": "R1_amount_HKD",
+   "period": "2026-01-01~2026-08-13",
+   "value": 11665522937,
+   "raw": "HK$11,665,522,937",
+   "unit": "HK$",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 44,
+    "row": "Total — Aggregate Consideration",
+    "col": "Aggregate Consideration (approximately) (HK$)"
+   },
+   "note": ""
+  },
+  {
+   "id": "R2",
+   "period": "2026H1",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "XIAOMI__results_2026Q2__2026081801014.pdf",
+    "page": 43,
+    "row": "11 Dividends",
+    "col": ""
+   },
+   "note": "배당 없음: 'No dividends have been paid or declared ... during the three months and six months ended June 30, 2026 and 2025'(주석11, p43); 'The Board has resolved not to declare an interim dividend'(p46)."
+  },
+  {
+   "id": "A1_2021",
+   "period": "FY2021",
+   "value": 328309.145,
+   "raw": "328,309,145",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Revenue",
+    "col": "Year ended December 31, 2021"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6."
+  },
+  {
+   "id": "A2_2021",
+   "period": "FY2021",
+   "value": 19339.321,
+   "raw": "19,339,321",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Profit attributable to owners of the Company",
+    "col": "Year ended December 31, 2021"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6."
+  },
+  {
+   "id": "A5_2021",
+   "period": "FY2021",
+   "value": 22039.474,
+   "raw": "22,039,474",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Non-IFRS Measure: Adjusted net profit",
+    "col": "Year ended December 31, 2021"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Adjusted net profit. 인쇄 페이지 6."
+  },
+  {
+   "id": "A1_2022",
+   "period": "FY2022",
+   "value": 280044.016,
+   "raw": "280,044,016",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Revenue",
+    "col": "Year ended December 31, 2022"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6."
+  },
+  {
+   "id": "A2_2022",
+   "period": "FY2022",
+   "value": 2474.03,
+   "raw": "2,474,030",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Profit attributable to owners of the Company",
+    "col": "Year ended December 31, 2022"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6."
+  },
+  {
+   "id": "A5_2022",
+   "period": "FY2022",
+   "value": 8518.007,
+   "raw": "8,518,007",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Non-IFRS Measure: Adjusted net profit",
+    "col": "Year ended December 31, 2022"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Adjusted net profit. 인쇄 페이지 6."
+  },
+  {
+   "id": "A1_2023",
+   "period": "FY2023",
+   "value": 270970.141,
+   "raw": "270,970,141",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Revenue",
+    "col": "Year ended December 31, 2023"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6."
+  },
+  {
+   "id": "A2_2023",
+   "period": "FY2023",
+   "value": 17475.173,
+   "raw": "17,475,173",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Profit attributable to owners of the Company",
+    "col": "Year ended December 31, 2023"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6."
+  },
+  {
+   "id": "A5_2023",
+   "period": "FY2023",
+   "value": 19272.754,
+   "raw": "19,272,754",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Non-IFRS Measure: Adjusted net profit",
+    "col": "Year ended December 31, 2023"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Adjusted net profit. 인쇄 페이지 6."
+  },
+  {
+   "id": "A1_2024",
+   "period": "FY2024",
+   "value": 365906.35,
+   "raw": "365,906,350",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Revenue",
+    "col": "Year ended December 31, 2024"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6. FY2025 발표문 p43과 일치."
+  },
+  {
+   "id": "A2_2024",
+   "period": "FY2024",
+   "value": 23658.126,
+   "raw": "23,658,126",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Profit attributable to owners of the Company",
+    "col": "Year ended December 31, 2024"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6."
+  },
+  {
+   "id": "A5_2024",
+   "period": "FY2024",
+   "value": 27234.531,
+   "raw": "27,234,531",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Non-IFRS Measure: Adjusted net profit",
+    "col": "Year ended December 31, 2024"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Adjusted net profit. 인쇄 페이지 6."
+  },
+  {
+   "id": "A1_2025",
+   "period": "FY2025",
+   "value": 457286.687,
+   "raw": "457,286,687",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Revenue",
+    "col": "Year ended December 31, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6. FY2025 발표문 p43과 일치."
+  },
+  {
+   "id": "A2_2025",
+   "period": "FY2025",
+   "value": 41643.389,
+   "raw": "41,643,389",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Profit attributable to owners of the Company",
+    "col": "Year ended December 31, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 6."
+  },
+  {
+   "id": "A5_2025",
+   "period": "FY2025",
+   "value": 39166.303,
+   "raw": "39,166,303",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 8,
+    "row": "Five-Year Financial Summary — Non-IFRS Measure: Adjusted net profit",
+    "col": "Year ended December 31, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 명칭: Adjusted net profit. 인쇄 페이지 6."
+  },
+  {
+   "id": "A3_2025",
+   "period": "FY2025",
+   "value": 34142.377,
+   "raw": "34,142,377",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 278,
+    "row": "Net cash generated from operating activities",
+    "col": "Year ended December 31, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 276. FY2025 발표문 p47과 일치."
+  },
+  {
+   "id": "A3_2024",
+   "period": "FY2024",
+   "value": 39295.499,
+   "raw": "39,295,499",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 278,
+    "row": "Net cash generated from operating activities",
+    "col": "Year ended December 31, 2024"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 276."
+  },
+  {
+   "id": "A4_2025",
+   "period": "FY2025",
+   "value": -12769.155,
+   "raw": "(12,769,155)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 278,
+    "row": "Purchase of property, plant and equipment, land use rights and intangible assets",
+    "col": "Year ended December 31, 2025"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 276. 음수=현금유출. 참고: MD&A 'Capital expenditures' 합계는 18,157.0(RMB mn, FY2025 발표문 p41)로 정의가 다름."
+  },
+  {
+   "id": "A4_2024",
+   "period": "FY2024",
+   "value": -7297.307,
+   "raw": "(7,297,307)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "XIAOMI__AR2025__2026042800526.pdf",
+    "page": 278,
+    "row": "Purchase of property, plant and equipment, land use rights and intangible assets",
+    "col": "Year ended December 31, 2024"
+   },
+   "note": "원 단위 RMB'000, ÷1,000. 인쇄 페이지 276. 참고: MD&A capex 10,480.2(FY2025 발표문 p41)."
+  },
+  {
+   "id": "A3_2021",
+   "period": "FY2021",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "5개년 요약표에 현금흐름 항목 없음. AR2025 현금흐름표는 2025·2024만 수록. 해당 연도 연차보고서 미제공."
+  },
+  {
+   "id": "A4_2021",
+   "period": "FY2021",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "5개년 요약표에 capex 없음. AR2025 현금흐름표는 2025·2024만 수록."
+  },
+  {
+   "id": "A3_2022",
+   "period": "FY2022",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "5개년 요약표에 현금흐름 항목 없음. AR2025 현금흐름표는 2025·2024만 수록. 해당 연도 연차보고서 미제공."
+  },
+  {
+   "id": "A4_2022",
+   "period": "FY2022",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "5개년 요약표에 capex 없음. AR2025 현금흐름표는 2025·2024만 수록."
+  },
+  {
+   "id": "A3_2023",
+   "period": "FY2023",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "5개년 요약표에 현금흐름 항목 없음. AR2025 현금흐름표는 2025·2024만 수록. 해당 연도 연차보고서 미제공."
+  },
+  {
+   "id": "A4_2023",
+   "period": "FY2023",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "5개년 요약표에 capex 없음. AR2025 현금흐름표는 2025·2024만 수록."
+  }
+ ]
+}

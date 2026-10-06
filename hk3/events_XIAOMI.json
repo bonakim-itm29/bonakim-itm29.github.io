@@ -1,0 +1,38 @@
+{"ticker":"1810.HK",
+"top":[
+{"date":"2021-01-15","filed":"2021-01-15","title_ko":"미 국방부 '중국군 연계기업' 명단 편입 해명 공시",
+"summary_ko":"미 국방부가 1월 14일(미국시간) 샤오미를 NDAA 1237조 적격 기업 명단에 추가하자, 샤오미는 홍콩거래소 요청에 따라 군과 무관하다는 해명 공시를 냈다. 당일 주가는 -10.3%로, 매크로 모델 예측(-0.4%)을 크게 밑돌아 잔차가 -10.5%였다.",
+"why_important_ko":"미국 제재 리스크가 처음 직접 현실화된 규제 사건으로, 매크로와 무관한 회사 고유 충격 중 표본 기간 최대 하락 잔차에 해당한다. 회사는 영향 파악 중이라며 후속 공시를 예고했다.",
+"facts":[
+{"fact_ko":"미 국방부가 샤오미를 NDAA 1237조 적격 기업 목록에 추가했다고 회사가 인지","quote":"adding the Company to the list of qualifying entities prepared in response to section 1237","file":"XIAOMI__0115__2021011500282.pdf"},
+{"fact_ko":"회사는 중국군 소유·통제·관계가 없다고 부인","quote":"not owned, controlled or affiliated with the Chinese military","file":"XIAOMI__0115__2021011500282.pdf"},
+{"fact_ko":"공시는 홍콩거래소 요청으로 발표됨","quote":"at the request of The Stock Exchange of Hong Kong Limited","file":"XIAOMI__0115__2021011500282.pdf"},
+{"fact_ko":"그룹에 대한 영향을 검토 중이며 추가 공시 예정","quote":"reviewing the potential consequences of this to develop a fuller understanding of its impact","file":"XIAOMI__0115__2021011500282.pdf"}]},
+{"date":"2024-08-22","filed":"2024-08-21","title_ko":"2024년 2분기 실적: 매출 사상 최대·전기차 SU7 첫 온전한 인도 분기",
+"summary_ko":"8월 21일 장 마감 후 발표된 2분기 실적에서 매출은 885억 위안으로 전년 대비 32.0% 늘어 사상 최대를 기록했고, 전기차 SU7은 27,307대 인도·EV 부문 총이익률 15.4%를 공개했다. 다음 거래일 주가는 +9.0%로 매크로 예측(+0.3%) 대비 잔차 +8.4%였다.",
+"why_important_ko":"스마트폰 회사에서 'Human × Car × Home' 전기차 회사로의 전환이 실적 숫자로 처음 확인된 분기로, 사업부문도 스마트폰×AIoT와 스마트EV 2개로 재편됐다. 연간 인도 목표를 12만 대로 상향했다.",
+"facts":[
+{"fact_ko":"2분기 매출 885억 위안, 전년 대비 32.0% 증가, 사상 최대","quote":"RMB88.9 billion, hitting an all-time high with an increase of 32.0% year-over-year","file":"XIAOMI__0821__2024082100537.pdf"},
+{"fact_ko":"SU7 첫 온전한 인도 분기에 27,307대 인도","quote":"successfully delivering 27,307 vehicles during the quarter","file":"XIAOMI__0821__2024082100537.pdf"},
+{"fact_ko":"스마트EV 및 기타 신사업 부문 총이익률 15.4%","quote":"gross profit margin of our smart EV and other new initiatives segment reached 15.4%","file":"XIAOMI__0821__2024082100537.pdf"},
+{"fact_ko":"2024년 SU7 인도 목표 12만 대로 제시","quote":"strive to reach a new target of delivering 120,000 vehicles of Xiaomi SU7 Series","file":"XIAOMI__0821__2024082100537.pdf"},
+{"fact_ko":"조정순이익 62억 위안(전년 대비 +20.1%), 이 중 EV·신사업 조정순손실 18억 위안 포함","quote":"included RMB1.8 billion in adjusted net loss related to our smart EV","file":"XIAOMI__0821__2024082100537.pdf"}]}
+],
+"others":[
+{"date":"2020-08-27","filed":"2020-08-26","title_ko":"2020년 2분기 실적(매출 535억 위안 +3.1%, 기간이익 +129.8%) 및 CFO(Alain Lam) 선임","R":0.1143,"res":0.1107,"file":"XIAOMI__0826__2020082600689.pdf; XIAOMI__0826__2020082600767.pdf"},
+{"date":"2024-08-22","filed":"2024-08-22","title_ko":"2023 주식계획에 따른 41,019,038주 보상 부여(장 마감 후 공시, 실적 반응일과 겹침)","R":0.0902,"res":0.0836,"file":"XIAOMI__0822__2024082201039.pdf"}
+],
+"no_filing_moves":[
+{"date":"2020-06-24","R":0.0912,"res":0.0854},
+{"date":"2022-06-27","R":0.1244,"res":0.0989},
+{"date":"2022-12-05","R":0.1364,"res":0.1275},
+{"date":"2023-01-26","R":0.1248,"res":0.116},
+{"date":"2024-03-12","R":0.1134,"res":0.1094},
+{"date":"2024-04-02","R":0.0897,"res":0.0927},
+{"date":"2025-04-07","R":-0.2059,"res":-0.2152,"note":"매크로 충격(미국 지수 급락일) — top 제외"},
+{"date":"2026-03-20","R":-0.0859,"res":-0.1029,"note":"공시 없음·원인 미확인 (웹검색에서 신뢰 출처 미확보)"},
+{"date":"2026-07-08","R":0.0952,"res":0.0941},
+{"date":"2026-07-29","R":0.0895,"res":0.084}
+],
+"excluded_china_common_shock":["2021-03-08","2022-03-16","2022-10-24","2024-10-08"]
+}
