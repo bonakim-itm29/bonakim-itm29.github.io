@@ -102,12 +102,13 @@ def yahoo(sym, closed_only=False):
     meta = j.get("meta", {})
     mp, mt = meta.get("regularMarketPrice"), meta.get("regularMarketTime")
     reg_end = (meta.get("currentTradingPeriod") or {}).get("regular", {}).get("end", 0)
-    closed = mt and reg_end and mt >= reg_end - 60  # 정규장 마감 이후 가격만(장중 가격은 쓰지 않음)
+    closed = mt and reg_end and not ((meta.get('currentTradingPeriod') or {}).get('regular', {}).get('start', 0) <= mt < reg_end - 60)  # 정규장 마감 이후 가격만(장중 가격은 쓰지 않음)
     if mp is not None and closed:
         md = dt.datetime.utcfromtimestamp(mt + int(meta.get("gmtoffset") or 0)).date().isoformat()
         if not pts or md > pts[-1][0]:
             pts.append([md, round(float(mp), 2)])
-    if closed_only and mt and reg_end and mt < reg_end - 60 and pts:
+    reg_start = (meta.get("currentTradingPeriod") or {}).get("regular", {}).get("start", 0)
+    if closed_only and mt and reg_end and reg_start <= mt < reg_end - 60 and pts:
         # 장중이면 오늘의 미완성 일봉은 빼고 직전 종가까지만 쓴다
         today = dt.datetime.utcfromtimestamp(mt + int(meta.get("gmtoffset") or 0)).date().isoformat()
         if pts[-1][0] == today:
