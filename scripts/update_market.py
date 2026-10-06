@@ -98,6 +98,15 @@ def yahoo(sym):
         d = dt.datetime.utcfromtimestamp(t).date().isoformat()
         if d >= ("2010-01-01" if sym in LONG else START):
             pts.append([d, round(float(c), 2)])
+    # 마지막 일봉 종가가 아직 비어 있으면(야후 지연) 메타의 정규장 가격으로 보충
+    meta = j.get("meta", {})
+    mp, mt = meta.get("regularMarketPrice"), meta.get("regularMarketTime")
+    reg_end = (meta.get("currentTradingPeriod") or {}).get("regular", {}).get("end", 0)
+    closed = mt and reg_end and mt >= reg_end - 60  # 정규장 마감 이후 가격만(장중 가격은 쓰지 않음)
+    if mp is not None and closed:
+        md = dt.datetime.utcfromtimestamp(mt + int(meta.get("gmtoffset") or 0)).date().isoformat()
+        if not pts or md > pts[-1][0]:
+            pts.append([md, round(float(mp), 2)])
     # 같은 날짜 중복 시 마지막 값
     return [[d, v] for d, v in dict(pts).items()]
 

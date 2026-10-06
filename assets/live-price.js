@@ -22,10 +22,10 @@
   document.head.appendChild(css);
 
   function J(u){return fetch(u,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return null})}
-  Promise.all([J('../base.json'),J('../prices.json'),J('../../market/data.json')]).then(function(a){
-    var B=a[0]&&a[0][slug],P=a[1]&&a[1].prices&&a[1].prices[slug],M=a[2];
+  Promise.all([J('../base.json'),J('../prices.json'),J('../../market/data.json'),J('../earnings.json')]).then(function(a){
+    var B=a[0]&&a[0][slug],P=a[1]&&a[1].prices&&a[1].prices[slug],M=a[2],E=a[3]&&a[3].companies&&a[3].companies[slug];
     if(!B||!P||!P.points||!P.points.length)return;
-    render(B,P,M);
+    render(B,P,M,E);
   });
 
   function clip(v){return Math.max(0,Math.min(1,v))}
@@ -40,7 +40,7 @@
   function tier(v){return v>=8?'sc-g':v>=6?'sc-y':'sc-r'}
   function last(s){return s&&s.points&&s.points.length?s.points[s.points.length-1]:null}
 
-  function render(B,P,M){
+  function render(B,P,M,E){
     var pts=P.points,lp=pts[pts.length-1],p1=lp[1],p0=B.price,r=p1/p0;
     var c=P.currency, dPct=(r-1)*100;
     var evR=(B.ev+B.mcap*(r-1))/B.ev;   // 순현금(순부채)은 고정, 시가총액 변화만큼 EV 변화
@@ -86,7 +86,7 @@
       '<div style="flex:1;min-width:180px">'+svg+'<div style="font-size:.72rem;color:var(--muted)">점선 = 분석 기준일</div></div></div>'+
       (rows.length?'<div class="tw"><table><thead><tr><th>가치평가 항목</th><th>분석 시점</th><th>현재 주가</th><th>점수</th></tr></thead><tbody>'+
         rows.map(function(x){return '<tr><td>'+x[0]+'</td><td>'+x[1]+'</td><td>'+x[2]+'</td><td>'+(x[3]===x[4]?x[4]:x[3]+'→'+x[4])+'</td></tr>'}).join('')+'</tbody></table></div>':'')+
-      sc+navLive+
+      sc+navLive+(E?'<p class="note"><b>실적 반영:</b> 현재 분석은 '+E.reflected_period+' 실적까지 반영 · 다음 발표 '+E.period+' '+E.date+' ('+E.status+(E.kind?', '+E.kind:'')+')'+(E.next?' / '+E.next.date+' ('+E.next.status+', '+E.next.kind+')':'')+'. 발표 후 실적보고서를 확인해 분석을 갱신합니다.</p>':'')+
       '<p class="note">이익·현금흐름·순현금·순부채·NAV는 최근 실적보고서 기준 그대로 두고 주가만 바꿔 다시 계산한 추정치입니다. 이 페이지의 나머지 분석은 실적 발표 후 갱신됩니다. 투자 권유가 아닙니다.</p>';
     var box=document.createElement('section');box.className='lp';box.id='livePrice';box.innerHTML=html;
     var hd=document.querySelector('header.page');
