@@ -1,0 +1,1357 @@
+{
+ "ticker": "BABA",
+ "run": "A",
+ "fiscal_note": "Fiscal year ends March 31; June quarter 2026 = FY2027 Q1",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 268953,
+   "raw": "Revenue | 247,652 | 268,953 | 39,639",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Consolidated income statement (table = 0-based index of <table> elements in file)"
+  },
+  {
+   "id": "Q1_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 247652,
+   "raw": "Revenue | 247,652 | 268,953 | 39,639",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_Total_Alibaba_E-commerce_Group",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 205862,
+   "raw": "Total Alibaba E-commerce Group | 198,812 | 205,862 | 30,340 | 4 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "Total Alibaba E-commerce Group",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment revenue table; new segment structure implemented in June 2026 quarter"
+  },
+  {
+   "id": "Q2_Total_Alibaba_E-commerce_Group_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 198812,
+   "raw": "Total Alibaba E-commerce Group | 198,812 | 205,862 | 30,340 | 4 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "Total Alibaba E-commerce Group",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_AI_Cloud_and_Compute_Services",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 48437,
+   "raw": "AI Cloud and Compute Services | 33,418 | 48,437 | 7,139 | 45 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "AI Cloud and Compute Services",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment revenue table; new segment structure implemented in June 2026 quarter"
+  },
+  {
+   "id": "Q2_AI_Cloud_and_Compute_Services_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 33418,
+   "raw": "AI Cloud and Compute Services | 33,418 | 48,437 | 7,139 | 45 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "AI Cloud and Compute Services",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_AI_Labs_and_Applications",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 3338,
+   "raw": "AI Labs and Applications | 2,882 | 3,338 | 492 | 16 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "AI Labs and Applications",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment revenue table; new segment structure implemented in June 2026 quarter"
+  },
+  {
+   "id": "Q2_AI_Labs_and_Applications_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 2882,
+   "raw": "AI Labs and Applications | 2,882 | 3,338 | 492 | 16 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "AI Labs and Applications",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_All_others",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 28803,
+   "raw": "All others | 28,629 | 28,803 | 4,245 | 1 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "All others",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment revenue table; new segment structure implemented in June 2026 quarter"
+  },
+  {
+   "id": "Q2_All_others_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 28629,
+   "raw": "All others | 28,629 | 28,803 | 4,245 | 1 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "All others",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_Unallocated",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 783,
+   "raw": "Unallocated | 519 | 783 | 116",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "Unallocated",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment revenue table; new segment structure implemented in June 2026 quarter"
+  },
+  {
+   "id": "Q2_Unallocated_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 519,
+   "raw": "Unallocated | 519 | 783 | 116",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "Unallocated",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_Inter-segment_elimination",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": -18270,
+   "raw": "Inter-segment elimination | (16,608 | ) | (18,270 | ) | (2,693 | )",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "Inter-segment elimination",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment revenue table; new segment structure implemented in June 2026 quarter"
+  },
+  {
+   "id": "Q2_Inter-segment_elimination_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": -16608,
+   "raw": "Inter-segment elimination | (16,608 | ) | (18,270 | ) | (2,693 | )",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "Inter-segment elimination",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_sub_China_Ecommerce_Customer_management",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 82547,
+   "raw": "- Customer management | 89,199 | 82,547 | 12,166 | (7 | )%",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "- Customer management",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Sub-line within Alibaba E-commerce Group"
+  },
+  {
+   "id": "Q2_sub_China_Ecommerce_Customer_management_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 89199,
+   "raw": "- Customer management | 89,199 | 82,547 | 12,166 | (7 | )%",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "- Customer management",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_sub_China_Ecommerce_Direct_sales_logistics_others",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 28353,
+   "raw": "- Direct sales, logistics and others (2) | 31,675 | 28,353 | 4,179 | (10 | )%",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "- Direct sales, logistics and others (2)",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Sub-line within Alibaba E-commerce Group"
+  },
+  {
+   "id": "Q2_sub_China_Ecommerce_Direct_sales_logistics_others_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 31675,
+   "raw": "- Direct sales, logistics and others (2) | 31,675 | 28,353 | 4,179 | (10 | )%",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "- Direct sales, logistics and others (2)",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_sub_China_Quick_Commerce",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 53295,
+   "raw": "China Quick Commerce (3) | 36,725 | 53,295 | 7,855 | 45 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "China Quick Commerce (3)",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Sub-line within Alibaba E-commerce Group"
+  },
+  {
+   "id": "Q2_sub_China_Quick_Commerce_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 36725,
+   "raw": "China Quick Commerce (3) | 36,725 | 53,295 | 7,855 | 45 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "China Quick Commerce (3)",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_sub_International_E-commerce",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 27761,
+   "raw": "International E-commerce | 28,177 | 27,761 | 4,091 | (1 | )%",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "International E-commerce",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Sub-line within Alibaba E-commerce Group"
+  },
+  {
+   "id": "Q2_sub_International_E-commerce_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 28177,
+   "raw": "International E-commerce | 28,177 | 27,761 | 4,091 | (1 | )%",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "International E-commerce",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q2_sub_Global_Wholesale",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 13906,
+   "raw": "Global Wholesale | 13,036 | 13,906 | 2,049 | 7 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "Global Wholesale",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Sub-line within Alibaba E-commerce Group"
+  },
+  {
+   "id": "Q2_sub_Global_Wholesale_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 13036,
+   "raw": "Global Wholesale | 13,036 | 13,906 | 2,049 | 7 | %",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 14,
+    "row": "Global Wholesale",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q3",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 15161,
+   "raw": "Income from operations | 34,988 | 15,161 | 2,234",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Income from operations",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 34988,
+   "raw": "Income from operations | 34,988 | 15,161 | 2,234",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Income from operations",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q4",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 27329,
+   "raw": "Adjusted EBITA | 38,844 | 27,329 | 4,028",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 47,
+    "row": "Adjusted EBITA",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Company non-GAAP measure named \"Adjusted EBITA\" (reconciliation from net income)"
+  },
+  {
+   "id": "Q4_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 38844,
+   "raw": "Adjusted EBITA | 38,844 | 27,329 | 4,028",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 47,
+    "row": "Adjusted EBITA",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q4b_Adjusted_EBITDA",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 39143,
+   "raw": "Adjusted EBITDA | 45,735 | 39,143 | 5,769",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 47,
+    "row": "Adjusted EBITDA",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Also presented by company"
+  },
+  {
+   "id": "Q4b_Adjusted_EBITDA_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 45735,
+   "raw": "Adjusted EBITDA | 45,735 | 39,143 | 5,769",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 47,
+    "row": "Adjusted EBITDA",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q5",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 10537,
+   "raw": "Net income attributable to ordinary shareholders | 43,116 | 10,537 | 1,553",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 43116,
+   "raw": "Net income attributable to ordinary shareholders | 43,116 | 10,537 | 1,553",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q6",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 20583,
+   "raw": "Non-GAAP net income attributable to ordinary shareholders for computing non-GAAP diluted earnings per share/ADS | 35,291 | 20,583 | 3,034",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 50,
+    "row": "Non-GAAP net income attributable to ordinary shareholders for computing non-GAAP diluted earnings per share/ADS",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Attributable-to-ordinary-shareholders non-GAAP figure (used for non-GAAP EPS). Company headline \"Non-GAAP net income\" (before NCI attribution) = see Q6b"
+  },
+  {
+   "id": "Q6_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 35291,
+   "raw": "Non-GAAP net income attributable to ordinary shareholders for computing non-GAAP diluted earnings per share/ADS | 35,291 | 20,583 | 3,034",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 50,
+    "row": "Non-GAAP net income attributable to ordinary shareholders for computing non-GAAP diluted earnings per share/ADS",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q6b_NonGAAP_net_income_total",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 20715,
+   "raw": "Non-GAAP net income | 33,510 | 20,715 | 3,053",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 48,
+    "row": "Non-GAAP net income",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Headline non-GAAP net income, NOT attributable-only (includes NCI)"
+  },
+  {
+   "id": "Q6b_NonGAAP_net_income_total_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 33510,
+   "raw": "Non-GAAP net income | 33,510 | 20,715 | 3,053",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 48,
+    "row": "Non-GAAP net income",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 3.71,
+   "raw": "Diluted | 17.98 | 3.71 | 0.55",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Diluted",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Earnings per ADS attributable to ordinary shareholders - Diluted; 1 ADS = 8 ordinary shares; US$ col = 0.55"
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 17.98,
+   "raw": "Diluted | 17.98 | 3.71 | 0.55",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Diluted",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 8.52,
+   "raw": "Non-GAAP diluted earnings per ADS (2)(4) | 14.75 | 8.52 | 1.26",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 50,
+    "row": "Non-GAAP diluted earnings per ADS (2)(4)",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "US$ col = 1.26"
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 14.75,
+   "raw": "Non-GAAP diluted earnings per ADS (2)(4) | 14.75 | 8.52 | 1.26",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 50,
+    "row": "Non-GAAP diluted earnings per ADS (2)(4)",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q8",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 22945,
+   "raw": "Net cash provided by operating activities | 20,672 | 22,945 | 3,382",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 46,
+    "row": "Net cash provided by operating activities",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": 20672,
+   "raw": "Net cash provided by operating activities | 20,672 | 22,945 | 3,382",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 46,
+    "row": "Net cash provided by operating activities",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q9",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": -44670,
+   "raw": "Free cash flow | (18,815 | ) | (44,670 | ) | (6,584 | )",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 55,
+    "row": "Free cash flow",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Definition: \"Free cash flow represents net cash provided by operating activities ... less purchases of property and equipment (excluding acquisition of land use rights and construction in progress relating to office campuses) and intangible assets (excluding those acquired through acquisitions), as well as adjustments to exclude ... the buyer protection fund deposits from merchants on our marketplaces.\""
+  },
+  {
+   "id": "Q9_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": -18815,
+   "raw": "Free cash flow | (18,815 | ) | (44,670 | ) | (6,584 | )",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 55,
+    "row": "Free cash flow",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "same table, year-ago column"
+  },
+  {
+   "id": "Q10",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": -67660,
+   "raw": "Less: Purchase of property and equipment (excluding land use rights and construction in progress relating to office campuses) | (38,629 | ) | (67,660 | ) | (9,972 | )",
+   "unit": "RMB millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 55,
+    "row": "Less: Purchase of property and equipment (excluding land use rights and construction in progress relating to office campuses)",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Two values for capex in release: FCF-reconciliation row = 67,660 (excl. office-campus land use rights/CIP); text \"Capital Expenditures\" section says \"capital expenditures were RMB67,678 million (US$9,975 million)\" (broader definition, not reconciled in a table). Sign: outflow shown as (67,660)."
+  },
+  {
+   "id": "Q10_prior_yoy",
+   "period": "3M ended 2025-06-30 (FY2026 Q1)",
+   "value": -38629,
+   "raw": "Less: Purchase of property and equipment (excluding land use rights and construction in progress relating to office campuses) | (38,629 | ) | (67,660 | ) | (9,972 | )",
+   "unit": "RMB millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 55,
+    "row": "Less: Purchase of property and equipment (excluding land use rights and construction in progress relating to office campuses)",
+    "col": "Three months ended June 30, 2025 / RMB"
+   },
+   "note": "Text says capex RMB38,676 million for same quarter of 2025"
+  },
+  {
+   "id": "B1",
+   "period": "as of 2026-06-30",
+   "value": 142914,
+   "raw": "Cash and cash equivalents | 131,530 | 142,914 | 21,063",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Cash and cash equivalents",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 131530,
+   "raw": "Cash and cash equivalents | 131,530 | 142,914 | 21,063",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Cash and cash equivalents",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B2_Short-term_investments",
+   "period": "as of 2026-06-30",
+   "value": 154653,
+   "raw": "Short-term investments | 155,310 | 154,653 | 22,793",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Short-term investments",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Short-term_investments_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 155310,
+   "raw": "Short-term investments | 155,310 | 154,653 | 22,793",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Short-term investments",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B2_Restricted_cash_and_escrow_receivables",
+   "period": "as of 2026-06-30",
+   "value": 42585,
+   "raw": "Restricted cash and escrow receivables | 42,038 | 42,585 | 6,276",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Restricted cash and escrow receivables",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Restricted_cash_and_escrow_receivables_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 42038,
+   "raw": "Restricted cash and escrow receivables | 42,038 | 42,585 | 6,276",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Restricted cash and escrow receivables",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B2_Equity_securities_and_other_investments_current",
+   "period": "as of 2026-06-30",
+   "value": 88130,
+   "raw": "Equity securities and other investments | 30,054 | 88,130 | 12,989",
+   "unit": "RMB millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Equity securities and other investments",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "Current-asset row; mixes equity securities with other treasury investments (fixed deposits/CDs/debt securities) - not purely cash-like, amount of treasury portion not broken out"
+  },
+  {
+   "id": "B2_Equity_securities_and_other_investments_current_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 30054,
+   "raw": "Equity securities and other investments | 30,054 | 88,130 | 12,989",
+   "unit": "RMB millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Equity securities and other investments",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B3_Current_bank_borrowings",
+   "period": "as of 2026-06-30",
+   "value": 30614,
+   "raw": "Current bank borrowings | 28,224 | 30,614 | 4,512",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Current bank borrowings",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Current_bank_borrowings_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 28224,
+   "raw": "Current bank borrowings | 28,224 | 30,614 | 4,512",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Current bank borrowings",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B3_Non-current_bank_borrowings",
+   "period": "as of 2026-06-30",
+   "value": 56007,
+   "raw": "Non-current bank borrowings | 47,450 | 56,007 | 8,254",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Non-current bank borrowings",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "Current portions of notes (if any) are not shown as separate balance sheet rows in the release"
+  },
+  {
+   "id": "B3_Non-current_bank_borrowings_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 47450,
+   "raw": "Non-current bank borrowings | 47,450 | 56,007 | 8,254",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Non-current bank borrowings",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B3_Non-current_unsecured_senior_notes",
+   "period": "as of 2026-06-30",
+   "value": 115716,
+   "raw": "Non-current unsecured senior notes | 117,485 | 115,716 | 17,054",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Non-current unsecured senior notes",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "Current portions of notes (if any) are not shown as separate balance sheet rows in the release"
+  },
+  {
+   "id": "B3_Non-current_unsecured_senior_notes_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 117485,
+   "raw": "Non-current unsecured senior notes | 117,485 | 115,716 | 17,054",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Non-current unsecured senior notes",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B3_Non-current_convertible_unsecured_senior_notes",
+   "period": "as of 2026-06-30",
+   "value": 54905,
+   "raw": "Non-current convertible unsecured senior notes | 55,861 | 54,905 | 8,092",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Non-current convertible unsecured senior notes",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "Current portions of notes (if any) are not shown as separate balance sheet rows in the release"
+  },
+  {
+   "id": "B3_Non-current_convertible_unsecured_senior_notes_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 55861,
+   "raw": "Non-current convertible unsecured senior notes | 55,861 | 54,905 | 8,092",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Non-current convertible unsecured senior notes",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B3_Non-current_exchangeable_bonds",
+   "period": "as of 2026-06-30",
+   "value": 9288,
+   "raw": "Non-current exchangeable bonds | 10,976 | 9,288 | 1,369",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Non-current exchangeable bonds",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "Current portions of notes (if any) are not shown as separate balance sheet rows in the release"
+  },
+  {
+   "id": "B3_Non-current_exchangeable_bonds_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 10976,
+   "raw": "Non-current exchangeable bonds | 10,976 | 9,288 | 1,369",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Non-current exchangeable bonds",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B4",
+   "period": "as of 2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Release does not state a \"net cash\" figure. It states \"cash and other liquid investments\" (non-debt-adjusted) = RMB474,505 million, recorded as B4_ref"
+  },
+  {
+   "id": "B4_ref_cash_and_other_liquid_investments",
+   "period": "as of 2026-06-30",
+   "value": 474505,
+   "raw": "As of June 30, 2026, cash and cash equivalents, short-term investments and other treasury investments ... unrestricted for withdrawal and use, were RMB474,505 million (US$69,933 million), compared to RMB520,824 million as of March 31, 2026.",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": null,
+    "row": "text paragraph (Liquidity)",
+    "col": "text"
+   },
+   "note": "Gross liquidity, NOT net of debt; prior quarter-end 520,824"
+  },
+  {
+   "id": "B5",
+   "period": "as of 2026-06-30",
+   "value": 1962109,
+   "raw": "Total assets | 1,909,570 | 1,962,109 | 289,179",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Total assets",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 1909570,
+   "raw": "Total assets | 1,909,570 | 1,962,109 | 289,179",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Total assets",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B6_Total_equity",
+   "period": "as of 2026-06-30",
+   "value": 1106310,
+   "raw": "Total equity | 1,118,425 | 1,106,310 | 163,050",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Total equity",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "Includes noncontrolling interests; excludes mezzanine equity (7,584)"
+  },
+  {
+   "id": "B6_Total_equity_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 1118425,
+   "raw": "Total equity | 1,118,425 | 1,106,310 | 163,050",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Total equity",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B6_Total_shareholders_equity",
+   "period": "as of 2026-06-30",
+   "value": 1049038,
+   "raw": "Total shareholders’ equity | 1,060,886 | 1,049,038 | 154,609",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Total shareholders’ equity",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Total_shareholders_equity_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 1060886,
+   "raw": "Total shareholders’ equity | 1,060,886 | 1,049,038 | 154,609",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Total shareholders’ equity",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "B6_Noncontrolling_interests",
+   "period": "as of 2026-06-30",
+   "value": 57272,
+   "raw": "Noncontrolling interests | 57,539 | 57,272 | 8,441",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Noncontrolling interests",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Noncontrolling_interests_prior_qtr",
+   "period": "as of 2026-03-31",
+   "value": 57539,
+   "raw": "Noncontrolling interests | 57,539 | 57,272 | 8,441",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Noncontrolling interests",
+    "col": "As of March 31, 2026 / RMB"
+   },
+   "note": "same table, prior quarter-end column"
+  },
+  {
+   "id": "S1_shares_outstanding_20F_cover",
+   "period": "as of 2026-03-31 (FY2026 close)",
+   "value": 18580374278,
+   "raw": "Indicate the number of outstanding shares ... as of the close of the period covered by the annual report: 18,580,374,278 Ordinary Shares",
+   "unit": "ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": null,
+    "row": "Cover page text",
+    "col": "text"
+   },
+   "note": "Same number in balance sheet caption \"18,580,374,278 shares issued and outstanding as of March 31, 2026\". Latest-quarter (June 30, 2026) outstanding count not disclosed in the June-quarter release"
+  },
+  {
+   "id": "S1_shares_outstanding_20F_ownership",
+   "period": "as of 2026-05-18",
+   "value": 18669888147,
+   "raw": "based on 18,669,888,147 ordinary shares (equivalent to approximately 2,333,736,018 ADSs) outstanding as of May 18, 2026",
+   "unit": "ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": null,
+    "row": "Item 6.E / 7.A beneficial ownership text",
+    "col": "text"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_issued_shares_HKEX_monthly_return",
+   "period": "as of 2026-06-30",
+   "value": 19206078670,
+   "raw": "Balance at close of the month 19,206,078,670 0 19,206,078,670",
+   "unit": "ordinary shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "BABA__6-K__2026-07-07__tm2619926d1_ex99-1.htm",
+    "table": 1,
+    "row": "II. Movements in Issued Shares - Balance at close of the month",
+    "col": "Number of issued shares (excluding treasury shares)"
+   },
+   "note": "HKEX FF301 basis; differs from US GAAP \"outstanding\" (e.g. 20-F 18.58bn at 3/31) since it includes shares issued to the Depositary in bulk reserved for future award settlement, and 13,387,512 shares repurchased pending cancellation noted separately. Definition mismatch → ambiguous"
+  },
+  {
+   "id": "S1_ADS_ratio",
+   "period": "",
+   "value": 8,
+   "raw": "Each ADS represents eight ordinary shares.",
+   "unit": "ordinary shares per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 12,
+    "row": "(5) footnote",
+    "col": ""
+   },
+   "note": "ordinary shares per ADS"
+  },
+  {
+   "id": "S2",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "value": 19324,
+   "raw": "Diluted | 19,142 | 19,324",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Weighted average number of shares ... (million shares) - Diluted",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Company gives ordinary shares, not ADS; ADS count = /8 not stated in table (not recorded as separate value). Year-ago diluted: 19142"
+  },
+  {
+   "id": "R1_quarter_repurchase_amount",
+   "period": "3M ended 2026-06-30",
+   "value": 162,
+   "raw": "During the quarter ended June 30, 2026, we repurchased a total of 13.4 million ordinary shares (equivalent to approximately 1.7 million ADSs) for a total of US$162 million.",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": null,
+    "row": "Share Repurchases paragraph",
+    "col": "text"
+   },
+   "note": "US$ as stated; no RMB figure given"
+  },
+  {
+   "id": "R1_quarter_repurchase_shares",
+   "period": "3M ended 2026-06-30",
+   "value": 13.4,
+   "raw": "repurchased a total of 13.4 million ordinary shares (equivalent to approximately 1.7 million ADSs)",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": null,
+    "row": "Share Repurchases paragraph",
+    "col": "text"
+   },
+   "note": "~1.7 million ADSs"
+  },
+  {
+   "id": "R1_remaining_authorization",
+   "period": "as of March 2026 (end of FY2026)",
+   "value": 19050,
+   "raw": "March 2026 | - | - | - | 19,050",
+   "unit": "US$ millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 46,
+    "row": "March 2026",
+    "col": "Approximate Dollar Value of Shares that May Yet Be Purchased Under Share Repurchase Program (US$, in millions)"
+   },
+   "note": "Program authorized through end of March 2027. Remaining balance after June-quarter purchases (US$162M) NOT disclosed in June-quarter release; figure is as of March 2026 only (stale) → ambiguous"
+  },
+  {
+   "id": "R2",
+   "period": "FY2026 (fiscal year ended 2026-03-31), declared 2026-05-13",
+   "value": 1.05,
+   "raw": "Our board of directors has approved an annual regular cash dividend for fiscal year 2026 in the amount of US$0.13125 per ordinary share or US$1.05 per ADS ... as of the close of business on June 11, 2026",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-05-13__tm2614494d1_ex99-1.htm",
+    "table": null,
+    "row": "Dividends paragraph",
+    "col": "text"
+   },
+   "note": "Annual regular dividend (no special dividend for FY2026; FY2025 had US$0.95/ADS one-time extraordinary + US$1.05 annual). Aggregate ~US$2.5 billion. No new dividend in June-quarter release."
+  },
+  {
+   "id": "A1",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "value": 1023670,
+   "raw": "Revenue | 5, 25 | 941,168 | 996,347 | 1,023,670 | 148,401",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 53,
+    "row": "Revenue",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": "Consolidated income statement"
+  },
+  {
+   "id": "A2",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "value": 105904,
+   "raw": "Net income attributable to ordinary shareholders | 79,741 | 129,470 | 105,904 | 15,353",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 53,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": "Consolidated income statement"
+  },
+  {
+   "id": "A3",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "value": 76213,
+   "raw": "Net cash provided by operating activities | 182,593 | 163,509 | 76,213 | 11,049",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 60,
+    "row": "Net cash provided by operating activities",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": "Consolidated statement of cash flows"
+  },
+  {
+   "id": "A4",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "value": -126063,
+   "raw": "Land use rights, property and equipment | ( 32,087 | ) | ( 85,972 | ) | ( 126,063 | ) | ( 18,275 | )",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 60,
+    "row": "Land use rights, property and equipment",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": "Consolidated statement of cash flows; row under \"Acquisitions of:\" - full label \"Acquisitions of: Land use rights, property and equipment\"; outflow shown in parentheses. Separate row \"Acquisitions of: Intangible assets\" = (874)"
+  },
+  {
+   "id": "A4b_intangible_assets",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "value": -874,
+   "raw": "Intangible assets | ( 842 | ) | — | ( 874 | ) | ( 127 | )",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 60,
+    "row": "Acquisitions of: Intangible assets",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "X1",
+   "period": "as of 2026-06-30",
+   "value": 6.7851,
+   "raw": "all translations of RMB into US$ were made at RMB6.7851 to US$1.00, the exchange rate on June 30, 2026 as set forth in the H.10 statistical release of the Federal Reserve Board",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": null,
+    "row": "EXCHANGE RATE INFORMATION",
+    "col": "text"
+   },
+   "note": "Used in June-quarter release. 20-F / March-quarter release use RMB6.8980 as of 2026-03-31 (see X1_20F)"
+  },
+  {
+   "id": "X1_20F",
+   "period": "as of 2026-03-31",
+   "value": 6.898,
+   "raw": "calculated at the rate of US$1.00=RMB 6.8980 , representing the exchange rate set forth in the H.10 statistical release of the Federal Reserve Board on March 31, 2026",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": null,
+    "row": "Note 2(a)",
+    "col": "text"
+   },
+   "note": "For FY2026 annual figures"
+  }
+ ]
+}

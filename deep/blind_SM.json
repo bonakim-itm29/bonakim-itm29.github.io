@@ -1,0 +1,434 @@
+{
+ "ticker": "SM",
+ "items": [
+  {
+   "id": "F1",
+   "value": 2500,
+   "raw": "2,500",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:Revenues",
+    "contextRef": "c-5",
+    "table": 10,
+    "row": "Total operating revenues and other income",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Header scale=6 (millions). Company total line includes $262M gain on divestiture and $82M other operating income; oil, gas & NGL production revenue alone = 2,156."
+  },
+  {
+   "id": "F2",
+   "value": 1071,
+   "raw": "1,071",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetIncomeLoss",
+    "contextRef": "c-5",
+    "table": 10,
+    "row": "Net income",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "No noncontrolling interest; Net income = company net income."
+  },
+  {
+   "id": "F3",
+   "value": 736,
+   "raw": "736",
+   "unit": "USD millions",
+   "period": "2026-01-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetIncomeLoss",
+    "contextRef": "c-1",
+    "table": 10,
+    "row": "Net income",
+    "col": "Six Months Ended June 30, 2026"
+   },
+   "note": "Q1 2026 net loss (335) + Q2 1,071 = 736 (equity statement table 12)."
+  },
+  {
+   "id": "F4",
+   "value": 1743,
+   "raw": "1,743",
+   "unit": "USD millions",
+   "period": "2026-01-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+    "contextRef": "c-1",
+    "table": 14,
+    "row": "Net cash provided by operating activities",
+    "col": "Six Months Ended June 30, 2026 (col 2026)"
+   },
+   "note": ""
+  },
+  {
+   "id": "F5",
+   "value": 620,
+   "raw": "620",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "contextRef": "c-3",
+    "table": 9,
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F6",
+   "value": 18858,
+   "raw": "18,858",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:Assets",
+    "contextRef": "c-3",
+    "table": 9,
+    "row": "Total assets",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F7",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "null",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 9,
+    "row": "(no Total liabilities row)",
+    "col": "June 30, 2026"
+   },
+   "note": "Balance sheet has no total-liabilities row and no us-gaap:Liabilities fact. Subtotals: Total current liabilities 3,089 (us-gaap:LiabilitiesCurrent) + Total noncurrent liabilities 7,956 (us-gaap:LiabilitiesNoncurrent) = 11,045 (derived, not reported); equals 18,858 - 7,813."
+  },
+  {
+   "id": "F8",
+   "value": {
+    "total_equity_incl_NCI": 7813,
+    "stockholders_equity_company": 7813
+   },
+   "raw": "7,813",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:StockholdersEquity",
+    "contextRef": "c-3",
+    "table": 9,
+    "row": "Total stockholders' equity",
+    "col": "June 30, 2026"
+   },
+   "note": "Only one equity total row ('Total stockholders' equity'); no noncontrolling interest line, so total equity = company stockholders' equity = 7,813."
+  },
+  {
+   "id": "F9",
+   "value": 7036,
+   "raw": "416 + 6,620 = 7,036",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:SeniorNotesCurrent + us-gaap:SeniorLongTermNotes; us-gaap:SeniorNotes (total)",
+    "contextRef": "c-3",
+    "table": 21,
+    "row": "Senior Notes, net (current 416; noncurrent 6,620); Note 6 'Total' Principal Amount, Net 7,036",
+    "col": "June 30, 2026"
+   },
+   "note": "Carrying value incl. unamortized premium 198 and deferred financing costs (35); principal 6,873. Revolving credit facility balance = 0 (us-gaap:LongTermLineOfCredit)."
+  },
+  {
+   "id": "F10",
+   "value": 237854068,
+   "raw": "237,854,068",
+   "unit": "shares",
+   "period": "2026-07-23",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "ixbrl",
+    "ix_name": "dei:EntityCommonStockSharesOutstanding",
+    "contextRef": "c-2",
+    "table": null,
+    "row": "cover page",
+    "col": "as of 2026-07-23"
+   },
+   "note": "Single class common stock ($0.01 par). Balance sheet shows 237,494,374 issued and outstanding at 2026-06-30."
+  },
+  {
+   "id": "O1",
+   "value": 439.7,
+   "raw": "439.7",
+   "unit": "MBoe/d",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 38,
+    "row": "Average net daily production: Equivalent (MBOE per day)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Production basis ('Net production volumes' / 'Average net daily production'); same 439.7 in 8-K Ex.99.1 Production Data table. Includes Civitas assets post 2026-01-30 merger."
+  },
+  {
+   "id": "O2",
+   "value": 229.8,
+   "raw": "229.8",
+   "unit": "MBbl/d",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 38,
+    "row": "Average net daily production: Oil (MBbl per day)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Production basis; matches 8-K Ex.99.1."
+  },
+  {
+   "id": "O3",
+   "value": 96.85,
+   "raw": "96.85",
+   "unit": "USD/Bbl",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 34,
+    "row": "Oil (per Bbl): Realized price",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Before net derivative settlements (effect shown separately: (16.23)); 8-K Ex.99.1 labels it 'Realized sales price (before the effect of net derivative settlements)'. Post-hedge 80.62."
+  },
+  {
+   "id": "O4",
+   "value": 6.71,
+   "raw": "6.71",
+   "unit": "USD/Boe",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 37,
+    "row": "Lease operating expense (per BOE)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Also in table 38 and 8-K Ex.99.1 (6.71)."
+  },
+  {
+   "id": "O5",
+   "value": 1406,
+   "raw": "1,406",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__8-K__2026-08-05__exhibit99108052026er.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 21,
+    "row": "Adjusted EBITDAX (non-GAAP)",
+    "col": "For the Three Months Ended June 30, 2026"
+   },
+   "note": "Same figure in 10-Q MD&A reconciliation (table 54)."
+  },
+  {
+   "id": "O6",
+   "value": 467,
+   "raw": "467",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__8-K__2026-08-05__exhibit99108052026er.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 25,
+    "row": "Adjusted free cash flow (non-GAAP)",
+    "col": "For the Three Months Ended June 30, 2026"
+   },
+   "note": "Company name: 'Adjusted free cash flow'. = Operating CF before WC 1,184 - capex before accruals 717. Includes ~$42M one-time merger/divestiture cash costs per footnote."
+  },
+  {
+   "id": "O7",
+   "value": 6253,
+   "raw": "6,253",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "SM__8-K__2026-08-05__exhibit99108052026er.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 26,
+    "row": "Net Debt (non-GAAP)",
+    "col": "June 30, 2026"
+   },
+   "note": "Principal amount of Senior Notes 6,873 + revolver 0 - cash 620 (principal basis, not carrying value)."
+  },
+  {
+   "id": "O8",
+   "value": {
+    "total_oil_hedge_bbl": 23022000,
+    "swap_bbl": 14071000,
+    "collar_bbl": 8951000,
+    "swap_wavg_price_usd_per_bbl": 62.17
+   },
+   "raw": "Swaps 3Q26 6,398 MBbl @63.30, 4Q26 7,673 MBbl @61.22; Collars 3Q26 5,662, 4Q26 3,289 MBbl",
+   "unit": "Bbl; USD/Bbl",
+   "period": "2026-07-01~2026-12-31 (as of 2026-06-30)",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:DerivativeNonmonetaryNotionalAmountVolume (s3); us-gaap:DerivativeSwapTypeAverageFixedPrice",
+    "contextRef": "c-205,c-206,c-213,c-214; c-209,c-210",
+    "table": 23,
+    "row": "Oil Derivatives: NYMEX WTI Swaps / Collars",
+    "col": "Third Quarter 2026 + Fourth Quarter 2026"
+   },
+   "note": "Table columns are 3Q26 and 4Q26, together = H2 2026 (preamble: 'As of June 30, 2026'). Total = NYMEX WTI swaps + collars; basis swaps (Midland 2,115; MEH 770 MBbl) and roll differential swaps (4,766 MBbl) excluded as they are differential, not price, hedges. Swap price is my volume-weighted average of the two quarterly weighted-average prices ((6398*63.30+7673*61.22)/14071=62.166). Collar floors 59.51/58.66, ceilings 69.09/66.07."
+  },
+  {
+   "id": "R1",
+   "value": 673.0,
+   "raw": "673.0",
+   "unit": "MMBoe",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 9,
+    "row": "Total proved: MMBOE",
+    "col": "As of December 31, 2025"
+   },
+   "note": "Not iXBRL-tagged; also table 90 end of year 673.0. Legacy SM only (pre-Civitas merger, closed 2026-01-30)."
+  },
+  {
+   "id": "R2",
+   "value": {
+    "pd_pct": 61,
+    "pd_mmboe": 412.3
+   },
+   "raw": "61 %; 412.3",
+   "unit": "% ; MMBoe",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 9,
+    "row": "Net proved developed reserves percentage; Proved developed MMBOE",
+    "col": "As of December 31, 2025"
+   },
+   "note": "Legacy SM only."
+  },
+  {
+   "id": "R3",
+   "value": 5956,
+   "raw": "5,956",
+   "unit": "USD millions",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 94,
+    "row": "Standardized measure of discounted future net cash flows",
+    "col": "As of December 31, 2025"
+   },
+   "note": "Also table 9/10. Not iXBRL-tagged."
+  },
+  {
+   "id": "R4",
+   "value": 6847,
+   "raw": "6,847",
+   "unit": "USD millions",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 10,
+    "row": "PV-10 (non-GAAP)",
+    "col": "As of December 31, 2025"
+   },
+   "note": "PD PV-10 5,130; PUD PV-10 1,717 (table 9)."
+  },
+  {
+   "id": "R5",
+   "value": {
+    "oil_usd_per_bbl": 65.34,
+    "gas_usd_per_mmbtu": 3.39,
+    "ngl_usd_per_bbl": 27.45
+   },
+   "raw": "65.34; 3.39; 27.45",
+   "unit": "USD/Bbl; USD/MMBtu",
+   "period": "2025 12-month trailing average",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 9,
+    "row": "12-month trailing average prices: Oil (per Bbl); Gas (per MMBtu)",
+    "col": "2025"
+   },
+   "note": "SEC first-day-of-month unweighted average, before quality/location differentials (footnote 1)."
+  }
+ ]
+}

@@ -1,0 +1,433 @@
+{
+ "ticker": "REI",
+ "items": [
+  {
+   "id": "F1",
+   "value": 104.681,
+   "raw": "104,681,489",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+    "contextRef": "c-5",
+    "table": 7,
+    "row": "Oil, Natural Gas, and Natural Gas Liquids Revenues",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "No 'Total revenues' row; the single revenue line on the statement of operations is used. Financial statements are in whole dollars (no scale). Oil 110.17 + gas -9.18 + NGL 3.69."
+  },
+  {
+   "id": "F2",
+   "value": 64.793,
+   "raw": "64,793,310",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetIncomeLoss",
+    "contextRef": "c-5",
+    "table": 7,
+    "row": "Net Income (Loss)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "No noncontrolling interest; Net Income (Loss) used."
+  },
+  {
+   "id": "F3",
+   "value": -155.798,
+   "raw": "(155,798,172)",
+   "unit": "USD millions",
+   "period": "2026-01-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetIncomeLoss",
+    "contextRef": "c-1",
+    "table": 7,
+    "row": "Net Income (Loss)",
+    "col": "Six Months Ended June 30, 2026"
+   },
+   "note": "ix sign='-'. Includes a $162.1M ceiling test impairment in Q1."
+  },
+  {
+   "id": "F4",
+   "value": 66.684,
+   "raw": "66,683,994",
+   "unit": "USD millions",
+   "period": "2026-01-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+    "contextRef": "c-1",
+    "table": 9,
+    "row": "Net Cash Provided by Operating Activities",
+    "col": "Six Months Ended June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F5",
+   "value": 1.137,
+   "raw": "1,137,410",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "contextRef": "c-3",
+    "table": 6,
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F6",
+   "value": 1281.557,
+   "raw": "1,281,557,096",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:Assets",
+    "contextRef": "c-3",
+    "table": 6,
+    "row": "Total Assets",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F7",
+   "value": 528.133,
+   "raw": "528,133,334",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:Liabilities",
+    "contextRef": "c-3",
+    "table": 6,
+    "row": "Total Liabilities",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F8",
+   "value": {
+    "total_equity": 753.424,
+    "company_stockholders_equity": 753.424
+   },
+   "raw": "753,423,762",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:StockholdersEquity",
+    "contextRef": "c-3",
+    "table": 6,
+    "row": "Total Stockholders' Equity",
+    "col": "June 30, 2026"
+   },
+   "note": "No noncontrolling interest, so there is no separate total-equity row; the Total Stockholders' Equity row is used for both."
+  },
+  {
+   "id": "F9",
+   "value": 360.0,
+   "raw": "360,000,000",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:LineOfCredit",
+    "contextRef": "c-3",
+    "table": 6,
+    "row": "Revolving line of credit (non-current)",
+    "col": "June 30, 2026"
+   },
+   "note": "Only debt is the revolver (no current portion). NOTE 8 text says $360 million outstanding (ix LineOfCredit scale=6). Excluded: current Notes payable of $1.496M, which is insurance premium financing. Covenant 'Consolidated Total Debt' (revolver + notes payable + finance lease) is $362.72M."
+  },
+  {
+   "id": "F10",
+   "value": 260539607,
+   "raw": "260,539,607",
+   "unit": "shares",
+   "period": "2026-08-05",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "ixbrl",
+    "ix_name": "dei:EntityCommonStockSharesOutstanding",
+    "contextRef": "c-2",
+    "table": null,
+    "row": "Cover: 'As of August 5, 2026, the registrant had outstanding 260,539,607 shares of common stock'",
+    "col": ""
+   },
+   "note": "Single class of common stock. Balance sheet shares outstanding at 2026-06-30 were 260,520,291."
+  },
+  {
+   "id": "O1",
+   "value": 19990,
+   "raw": "19,990",
+   "unit": "Boe/d",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 0,
+    "row": "Average Daily Sales Volumes (Boe/d)",
+    "col": "Q2 2026"
+   },
+   "note": "SALES basis: the release labels it 'Average Daily Sales Volumes' and the release text says 'Produced ... 19,990 Boe per day'. Cross-check: 10-Q MD&A table 59 'Net production: Total production (Boe)' 1,819,076 / 91 days = 19,990. The MD&A text calls this 'sales volume'. 6 Mcf = 1 Boe."
+  },
+  {
+   "id": "O2",
+   "value": 12683,
+   "raw": "12,683",
+   "unit": "Bbl/d",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 0,
+    "row": "Crude Oil (Bo/d)",
+    "col": "Q2 2026"
+   },
+   "note": "Sales basis. Cross-check: 10-Q table 59 Oil 1,154,147 Bbls / 91 = 12,683."
+  },
+  {
+   "id": "O3",
+   "value": 95.45,
+   "raw": "95.45",
+   "unit": "USD/Bbl",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 59,
+    "row": "Average sales price: Oil (per Bbl)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Excludes hedges: oil revenue / volume (110,167,205 / 1,154,147). Derivative gains/losses are a separate other income line. Matches 'Realized Price - Crude Oil ($/Bo) $95.45' in the release."
+  },
+  {
+   "id": "O4",
+   "value": 10.12,
+   "raw": "10.12",
+   "unit": "USD/Boe",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 61,
+    "row": "Average LOE per Boe",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "LOE of 18,409,462 / 1,819,076 Boe. The release reports the same $10.12."
+  },
+  {
+   "id": "O5",
+   "value": 54.482,
+   "raw": "54,481,542",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 13,
+    "row": "Adjusted EBITDA",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Company-presented 'Adjusted EBITDA'. There is also a separate covenant 'Consolidated EBITDAX' of $54,595,292 (table 18). It is not Adjusted EBITDAX."
+  },
+  {
+   "id": "O6",
+   "value": 4.375,
+   "raw": "4,374,688",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 14,
+    "row": "Adjusted Free Cash Flow",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Name as presented: 'Adjusted Free Cash Flow'. Table 15 reconciles to the same figure from Adjusted EBITDA."
+  },
+  {
+   "id": "O7",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "null",
+   "source": {
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 18,
+    "row": "",
+    "col": ""
+   },
+   "note": "No 'Net debt' figure in the release or the presentation (EX-99.2). For reference, the company presents 'Consolidated Total Debt' of $362,722,948 (covenant basis; leverage ratio 2.02x) and cash of $1.14M."
+  },
+  {
+   "id": "O8",
+   "value": {
+    "total_oil_hedged_bbl": 1724085,
+    "swap_bbl": 792400,
+    "collar_bbl": 931685,
+    "swap_weighted_avg_price_usd_per_bbl": 64.15
+   },
+   "raw": "Swaps Q3'26 263,400 @61.77, Q4'26 529,000 @65.34; Collars Q3'26 563,685, Q4'26 368,000",
+   "unit": "Bbl; USD/Bbl",
+   "period": "2026-07-01~2026-12-31",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:DerivativeNonmonetaryNotionalAmountVolume / rei:DerivativePriceRiskSwapContractPrice",
+    "contextRef": "c-140,c-141,c-156,c-157 / c-148,c-149",
+    "table": 38,
+    "row": "Oil Hedges (WTI) Swaps/Two-way collars Hedged volume (Bbl); Weighted average swap price",
+    "col": "Q3 2026 + Q4 2026"
+   },
+   "note": "Contracts outstanding as of 2026-06-30. The Q3 2026 and Q4 2026 columns together cover the second half of 2026. The swap price is a volume-weighted average I computed. Collars: put 60.82/65.00, call 76.19/80.00. Total including collars: 1,724,085 Bbl."
+  },
+  {
+   "id": "R1",
+   "value": 153.278,
+   "raw": "153,277,821",
+   "unit": "MMBoe",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 98,
+    "row": "End of year (Boe)",
+    "col": "2025"
+   },
+   "note": "Not iXBRL-tagged. Matches the Table 7 summary (153,277,821 Boe)."
+  },
+  {
+   "id": "R2",
+   "value": {
+    "pd_mmboe": 103.799,
+    "pd_pct": 67.7
+   },
+   "raw": "103,798,946",
+   "unit": "MMBoe; %",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 13,
+    "row": "Total PD (Boe) / % of Total Proved",
+    "col": "Total"
+   },
+   "note": "103,798,946 / 153,277,821 = 67.7%. The table shows a rounded 68%. PUD is 49,478,875 Boe."
+  },
+  {
+   "id": "R3",
+   "value": 1123.493,
+   "raw": "1,123,493,332",
+   "unit": "USD millions",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 11,
+    "row": "Standardized Measure of Discounted Future Net Cash Flows",
+    "col": "2025"
+   },
+   "note": "Not iXBRL-tagged. Matches table 8."
+  },
+  {
+   "id": "R4",
+   "value": 1318.208,
+   "raw": "1,318,208,128",
+   "unit": "USD millions",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 8,
+    "row": "Present value of estimated future net revenues (PV-10)",
+    "col": "2025"
+   },
+   "note": "Company-presented pre-tax PV-10 (non-GAAP). PV-10 minus discounted tax of 194,714,796 equals SM."
+  },
+  {
+   "id": "R5",
+   "value": {
+    "oil_usd_per_bbl": 61.82,
+    "gas_usd_per_mmbtu": 3.387
+   },
+   "raw": "$61.82 per Bbl of WTI oil posted and $3.387 per MMBtu of Henry Hub",
+   "unit": "USD/Bbl; USD/MMBtu",
+   "period": "2025 SEC 12-month average",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": null,
+    "row": "Reserves narrative: 'our reserves were based on an SEC average price of $61.82 per Bbl ... $3.387 per MMBtu'",
+    "col": ""
+   },
+   "note": "Source is narrative text, not a table (method listed as table/narrative). These are benchmark prices before differentials."
+  }
+ ]
+}

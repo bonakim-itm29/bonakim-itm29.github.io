@@ -1,0 +1,1595 @@
+{
+ "ticker": "BIDU",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 31325.0,
+   "raw": "31,325",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Revenue",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 32075.0,
+   "raw": "32,075",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Revenue",
+    "col": "Three Months Ended March 31, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 32713.0,
+   "raw": "32,713",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Revenue",
+    "col": "Three Months Ended June 30, 2025 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 3024.0,
+   "raw": "3,024",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Operating income",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": "Row label in release is \"Operating income\" (= income from operations)."
+  },
+  {
+   "id": "Q3_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 3193.0,
+   "raw": "3,193",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Operating income",
+    "col": "Three Months Ended March 31, 2026 RMB"
+   },
+   "note": "Row label in release is \"Operating income\" (= income from operations)."
+  },
+  {
+   "id": "Q3_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 3277.0,
+   "raw": "3,277",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Operating income",
+    "col": "Three Months Ended June 30, 2025 RMB"
+   },
+   "note": "Row label in release is \"Operating income\" (= income from operations)."
+  },
+  {
+   "id": "Q5",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 2319.0,
+   "raw": "2,319",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Net income attributable to Baidu",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": "GAAP net income attributable to Baidu, Inc. (ordinary shareholders)."
+  },
+  {
+   "id": "Q5_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 3445.0,
+   "raw": "3,445",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Net income attributable to Baidu",
+    "col": "Three Months Ended March 31, 2026 RMB"
+   },
+   "note": "GAAP net income attributable to Baidu, Inc. (ordinary shareholders)."
+  },
+  {
+   "id": "Q5_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 7322.0,
+   "raw": "7,322",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Net income attributable to Baidu",
+    "col": "Three Months Ended June 30, 2025 RMB"
+   },
+   "note": "GAAP net income attributable to Baidu, Inc. (ordinary shareholders)."
+  },
+  {
+   "id": "Q2_Baidu_General_Business",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 25183.0,
+   "raw": "25,183",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu General Business"
+   },
+   "note": "Reporting segment (Selected Information table)."
+  },
+  {
+   "id": "Q2_iQIYI",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 6287.0,
+   "raw": "6,287",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2026 (RMB) / iQIYI"
+   },
+   "note": "Reporting segment (Selected Information table)."
+  },
+  {
+   "id": "Q2_Elim_&_adj",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": -145.0,
+   "raw": "(145",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2026 (RMB) / Elim & adj"
+   },
+   "note": "Reporting segments per Selected Information table; \"Elim & adj\" = intersegment eliminations and adjustments."
+  },
+  {
+   "id": "Q2_Baidu_General_Business_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 26001.0,
+   "raw": "26,001",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended March 31, 2026 (RMB) / Baidu General Business"
+   },
+   "note": "Reporting segment (Selected Information table)."
+  },
+  {
+   "id": "Q2_iQIYI_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 6226.0,
+   "raw": "6,226",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended March 31, 2026 (RMB) / iQIYI"
+   },
+   "note": "Reporting segment (Selected Information table)."
+  },
+  {
+   "id": "Q2_Elim_&_adj_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": -152.0,
+   "raw": "(152",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended March 31, 2026 (RMB) / Elim & adj"
+   },
+   "note": "Reporting segments per Selected Information table; \"Elim & adj\" = intersegment eliminations and adjustments."
+  },
+  {
+   "id": "Q2_Baidu_General_Business_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 26251.0,
+   "raw": "26,251",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2025 (RMB) / Baidu General Business"
+   },
+   "note": "Reporting segment (Selected Information table)."
+  },
+  {
+   "id": "Q2_iQIYI_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 6628.0,
+   "raw": "6,628",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2025 (RMB) / iQIYI"
+   },
+   "note": "Reporting segment (Selected Information table)."
+  },
+  {
+   "id": "Q2_Elim_&_adj_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": -166.0,
+   "raw": "(166",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 24,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2025 (RMB) / Elim & adj"
+   },
+   "note": "Reporting segments per Selected Information table; \"Elim & adj\" = intersegment eliminations and adjustments."
+  },
+  {
+   "id": "Q2_BGB_Baidu_Core_AI-powered_Business",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 12500.0,
+   "raw": "12.5 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Baidu Core AI-powered Business 2",
+    "col": "June 30, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Baidu_Core_AI-powered_Business_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 13600.0,
+   "raw": "13.6 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Baidu Core AI-powered Business 2",
+    "col": "March 31, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Baidu_Core_AI-powered_Business_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 10000.0,
+   "raw": "10.0 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Baidu Core AI-powered Business 2",
+    "col": "June 30, 2025 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI_Cloud_Infra",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 7300.0,
+   "raw": "7.3 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI Cloud Infra",
+    "col": "June 30, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI_Cloud_Infra_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 8800.0,
+   "raw": "8.8 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI Cloud Infra",
+    "col": "March 31, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI_Cloud_Infra_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 4900.0,
+   "raw": "4.9 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI Cloud Infra",
+    "col": "June 30, 2025 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI_Applications",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 2500.0,
+   "raw": "2.5 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI Applications",
+    "col": "June 30, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI_Applications_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 2500.0,
+   "raw": "2.5 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI Applications",
+    "col": "March 31, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI_Applications_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 2500.0,
+   "raw": "2.5 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI Applications",
+    "col": "June 30, 2025 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI-native_Marketing_Services",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 2600.0,
+   "raw": "2.6 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI-native Marketing Services",
+    "col": "June 30, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI-native_Marketing_Services_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 2300.0,
+   "raw": "2.3 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI-native Marketing Services",
+    "col": "March 31, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_AI-native_Marketing_Services_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 2600.0,
+   "raw": "2.6 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "- AI-native Marketing Services",
+    "col": "June 30, 2025 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Legacy_Business",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 10400.0,
+   "raw": "10.4 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Legacy Business 2",
+    "col": "June 30, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Legacy_Business_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 10200.0,
+   "raw": "10.2 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Legacy Business 2",
+    "col": "March 31, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Legacy_Business_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 13600.0,
+   "raw": "13.6 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Legacy Business 2",
+    "col": "June 30, 2025 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Others",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 2300.0,
+   "raw": "2.3 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Others 2",
+    "col": "June 30, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Others_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 2200.0,
+   "raw": "2.2 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Others 2",
+    "col": "March 31, 2026 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Others_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 2700.0,
+   "raw": "2.7 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 16,
+    "row": "Others 2",
+    "col": "June 30, 2025 (In billions) RMB"
+   },
+   "note": "Revenue breakdown within Baidu General Business; source table in RMB billions (1 decimal), converted x1000; unaudited internal management accounts (footnote 2)."
+  },
+  {
+   "id": "Q2_BGB_Online_Marketing_Services",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 13100.0,
+   "raw": "13.1 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 20,
+    "row": "Online Marketing Services",
+    "col": "June 30, 2026 (In billions, unaudited) RMB"
+   },
+   "note": "Alternative split of Baidu General Business revenue (online marketing vs others); RMB billions converted x1000."
+  },
+  {
+   "id": "Q2_BGB_Online_Marketing_Services_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 12600.0,
+   "raw": "12.6 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 20,
+    "row": "Online Marketing Services",
+    "col": "March 31, 2026 (In billions, unaudited) RMB"
+   },
+   "note": "Alternative split of Baidu General Business revenue (online marketing vs others); RMB billions converted x1000."
+  },
+  {
+   "id": "Q2_BGB_Online_Marketing_Services_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 16200.0,
+   "raw": "16.2 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 20,
+    "row": "Online Marketing Services",
+    "col": "June 30, 2025 (In billions, unaudited) RMB"
+   },
+   "note": "Alternative split of Baidu General Business revenue (online marketing vs others); RMB billions converted x1000."
+  },
+  {
+   "id": "Q2_BGB_Others_non_marketing",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 12100.0,
+   "raw": "12.1 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 20,
+    "row": "Others",
+    "col": "June 30, 2026 (In billions, unaudited) RMB"
+   },
+   "note": "Alternative split of Baidu General Business revenue (online marketing vs others); RMB billions converted x1000."
+  },
+  {
+   "id": "Q2_BGB_Others_non_marketing_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 13400.0,
+   "raw": "13.4 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 20,
+    "row": "Others",
+    "col": "March 31, 2026 (In billions, unaudited) RMB"
+   },
+   "note": "Alternative split of Baidu General Business revenue (online marketing vs others); RMB billions converted x1000."
+  },
+  {
+   "id": "Q2_BGB_Others_non_marketing_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 10000.0,
+   "raw": "10.0 (RMB billions)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 20,
+    "row": "Others",
+    "col": "June 30, 2025 (In billions, unaudited) RMB"
+   },
+   "note": "Alternative split of Baidu General Business revenue (online marketing vs others); RMB billions converted x1000."
+  },
+  {
+   "id": "Q4",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 3785.0,
+   "raw": "3,785",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Operating income (loss) (non-GAAP)",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Company-presented name: \"Non-GAAP operating income\" = operating income excl. SBC and amortization/impairment of intangibles from business combinations."
+  },
+  {
+   "id": "Q4_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 3807.0,
+   "raw": "3,807",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Operating income (loss) (non-GAAP)",
+    "col": "Three months ended March 31, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Company-presented name: \"Non-GAAP operating income\" = operating income excl. SBC and amortization/impairment of intangibles from business combinations."
+  },
+  {
+   "id": "Q4_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 4445.0,
+   "raw": "4,445",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Operating income (loss) (non-GAAP)",
+    "col": "Three months ended June 30, 2025 (RMB) / Baidu, Inc."
+   },
+   "note": "Company-presented name: \"Non-GAAP operating income\" = operating income excl. SBC and amortization/impairment of intangibles from business combinations."
+  },
+  {
+   "id": "Q4_AdjustedEBITDA",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 6150.0,
+   "raw": "6,150",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Adjusted EBITDA",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Supplementary: Adjusted EBITDA = non-GAAP operating income excl. depreciation of fixed assets and amortization of intangibles (excl. business-combination ones)."
+  },
+  {
+   "id": "Q4_AdjustedEBITDA_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 5954.0,
+   "raw": "5,954",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Adjusted EBITDA",
+    "col": "Three months ended March 31, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Supplementary: Adjusted EBITDA = non-GAAP operating income excl. depreciation of fixed assets and amortization of intangibles (excl. business-combination ones)."
+  },
+  {
+   "id": "Q4_AdjustedEBITDA_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 6492.0,
+   "raw": "6,492",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Adjusted EBITDA",
+    "col": "Three months ended June 30, 2025 (RMB) / Baidu, Inc."
+   },
+   "note": "Supplementary: Adjusted EBITDA = non-GAAP operating income excl. depreciation of fixed assets and amortization of intangibles (excl. business-combination ones)."
+  },
+  {
+   "id": "Q6",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 2573.0,
+   "raw": "2,573",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Net income (loss) attributable to Baidu (non-GAAP)",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Non-GAAP net income attributable to Baidu."
+  },
+  {
+   "id": "Q6_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 4332.0,
+   "raw": "4,332",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Net income (loss) attributable to Baidu (non-GAAP)",
+    "col": "Three months ended March 31, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Non-GAAP net income attributable to Baidu."
+  },
+  {
+   "id": "Q6_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 4795.0,
+   "raw": "4,795",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Net income (loss) attributable to Baidu (non-GAAP)",
+    "col": "Three months ended June 30, 2025 (RMB) / Baidu, Inc."
+   },
+   "note": "Non-GAAP net income attributable to Baidu."
+  },
+  {
+   "id": "Q7_GAAP",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 5.74,
+   "raw": "5.74",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Earnings per ADS (1 ADS representing 8 Class A ordinary shares): -Diluted",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": "GAAP diluted earnings per ADS (1 ADS = 8 Class A ordinary shares); currency RMB."
+  },
+  {
+   "id": "Q7_GAAP_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 8.76,
+   "raw": "8.76",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Earnings per ADS (1 ADS representing 8 Class A ordinary shares): -Diluted",
+    "col": "Three Months Ended March 31, 2026 RMB"
+   },
+   "note": "GAAP diluted earnings per ADS (1 ADS = 8 Class A ordinary shares); currency RMB."
+  },
+  {
+   "id": "Q7_GAAP_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 20.35,
+   "raw": "20.35",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Earnings per ADS (1 ADS representing 8 Class A ordinary shares): -Diluted",
+    "col": "Three Months Ended June 30, 2025 RMB"
+   },
+   "note": "GAAP diluted earnings per ADS (1 ADS = 8 Class A ordinary shares); currency RMB."
+  },
+  {
+   "id": "Q7_GAAP_USD",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 0.85,
+   "raw": "0.85",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Earnings per ADS: -Diluted",
+    "col": "Three Months Ended June 30, 2026 US$"
+   },
+   "note": "Convenience translation at RMB6.7851/US$."
+  },
+  {
+   "id": "Q7_NonGAAP",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 7.22,
+   "raw": "7.22",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Diluted earnings per ADS (non-GAAP)",
+    "col": "Three months ended June 30, 2026 (RMB)"
+   },
+   "note": "Non-GAAP diluted EPS per ADS; currency RMB."
+  },
+  {
+   "id": "Q7_NonGAAP_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 12.06,
+   "raw": "12.06",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Diluted earnings per ADS (non-GAAP)",
+    "col": "Three months ended March 31, 2026 (RMB)"
+   },
+   "note": "Non-GAAP diluted EPS per ADS; currency RMB."
+  },
+  {
+   "id": "Q7_NonGAAP_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 13.58,
+   "raw": "13.58",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Diluted earnings per ADS (non-GAAP)",
+    "col": "Three months ended June 30, 2025 (RMB)"
+   },
+   "note": "Non-GAAP diluted EPS per ADS; currency RMB."
+  },
+  {
+   "id": "Q7_NonGAAP_USD",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 1.06,
+   "raw": "1.06",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Diluted earnings per ADS (non-GAAP)",
+    "col": "Three months ended June 30, 2026 (US$)"
+   },
+   "note": "Convenience translation."
+  },
+  {
+   "id": "Q8",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 3436.0,
+   "raw": "3,436",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Net cash provided by (used in) operating activities",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Consolidated Baidu, Inc."
+  },
+  {
+   "id": "Q8_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 2670.0,
+   "raw": "2,670",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Net cash provided by (used in) operating activities",
+    "col": "Three months ended March 31, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Consolidated Baidu, Inc."
+  },
+  {
+   "id": "Q8_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": -877.0,
+   "raw": "(877",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Net cash provided by (used in) operating activities",
+    "col": "Three months ended June 30, 2025 (RMB) / Baidu, Inc."
+   },
+   "note": "Consolidated Baidu, Inc."
+  },
+  {
+   "id": "Q9",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": -7954.0,
+   "raw": "(7,954",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Free cash flow",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Definition (per reconciliation table structure): Free cash flow = Net cash provided by (used in) operating activities less capital expenditures. The Non-GAAP section lists free cash flow as a measure but gives no separate definition sentence."
+  },
+  {
+   "id": "Q9_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": -3246.0,
+   "raw": "(3,246",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Free cash flow",
+    "col": "Three months ended March 31, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Definition (per reconciliation table structure): Free cash flow = Net cash provided by (used in) operating activities less capital expenditures. The Non-GAAP section lists free cash flow as a measure but gives no separate definition sentence."
+  },
+  {
+   "id": "Q9_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": -4677.0,
+   "raw": "(4,677",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Free cash flow",
+    "col": "Three months ended June 30, 2025 (RMB) / Baidu, Inc."
+   },
+   "note": "Definition (per reconciliation table structure): Free cash flow = Net cash provided by (used in) operating activities less capital expenditures. The Non-GAAP section lists free cash flow as a measure but gives no separate definition sentence."
+  },
+  {
+   "id": "Q10",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": -11390.0,
+   "raw": "(11,390",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Less: Capital expenditures",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Row label \"Less: Capital expenditures\"; value shown as negative (cash outflow) as in source."
+  },
+  {
+   "id": "Q10_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": -5916.0,
+   "raw": "(5,916",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Less: Capital expenditures",
+    "col": "Three months ended March 31, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Row label \"Less: Capital expenditures\"; value shown as negative (cash outflow) as in source."
+  },
+  {
+   "id": "Q10_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": -3800.0,
+   "raw": "(3,800",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Less: Capital expenditures",
+    "col": "Three months ended June 30, 2025 (RMB) / Baidu, Inc."
+   },
+   "note": "Row label \"Less: Capital expenditures\"; value shown as negative (cash outflow) as in source."
+  },
+  {
+   "id": "B1",
+   "period": "As of June 30, 2026",
+   "value": 24524.0,
+   "raw": "24,524",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Restricted cash",
+   "period": "As of June 30, 2026",
+   "value": 170.0,
+   "raw": "170",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Restricted cash",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Short-term investments, net",
+   "period": "As of June 30, 2026",
+   "value": 141727.0,
+   "raw": "141,727",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Short-term investments, net",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Long-term time deposits and held-to-maturity investments",
+   "period": "As of June 30, 2026",
+   "value": 74311.0,
+   "raw": "74,311",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Long-term time deposits and held-to-maturity investments",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": "Non-current asset."
+  },
+  {
+   "id": "B3_Short-term loans",
+   "period": "As of June 30, 2026",
+   "value": 26311.0,
+   "raw": "26,311",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Short-term loans",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Long-term loans, current portion",
+   "period": "As of June 30, 2026",
+   "value": 2027.0,
+   "raw": "2,027",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Long-term loans, current portion",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Convertible senior notes, current portion",
+   "period": "As of June 30, 2026",
+   "value": 1.0,
+   "raw": "1",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Convertible senior notes, current portion",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Notes payable, current portion",
+   "period": "As of June 30, 2026",
+   "value": 2038.0,
+   "raw": "2,038",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Notes payable, current portion",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Long-term loans",
+   "period": "As of June 30, 2026",
+   "value": 20779.0,
+   "raw": "20,779",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Long-term loans",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": "Non-current."
+  },
+  {
+   "id": "B3_Notes payable",
+   "period": "As of June 30, 2026",
+   "value": 46089.0,
+   "raw": "46,089",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Notes payable",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": "Non-current."
+  },
+  {
+   "id": "B3_Convertible senior notes",
+   "period": "As of June 30, 2026",
+   "value": 6615.0,
+   "raw": "6,615",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Convertible senior notes",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": "Non-current."
+  },
+  {
+   "id": "B5",
+   "period": "As of June 30, 2026",
+   "value": 469932.0,
+   "raw": "469,932",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Total assets",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Total equity",
+   "period": "As of June 30, 2026",
+   "value": 281412.0,
+   "raw": "281,412",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Total equity",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": "Includes noncontrolling interests (9,660); excludes redeemable noncontrolling interests (13,685, mezzanine)."
+  },
+  {
+   "id": "B6_Total Baidu shareholders equity",
+   "period": "As of June 30, 2026",
+   "value": 271752.0,
+   "raw": "271,752",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Total Baidu shareholders’ equity",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Noncontrolling interests",
+   "period": "As of June 30, 2026",
+   "value": 9660.0,
+   "raw": "9,660",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Noncontrolling interests",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Redeemable noncontrolling interests",
+   "period": "As of June 30, 2026",
+   "value": 13685.0,
+   "raw": "13,685",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Redeemable noncontrolling interests",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": "Mezzanine, outside total equity."
+  },
+  {
+   "id": "B4",
+   "period": "As of June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Release does not state a net cash figure. It states \"total cash and investments were RMB283.1 billion\" (defined as cash, cash equivalents, restricted cash, short-term investments, LT time deposits & HTM investments, and adjusted long-term investments) - a gross, not net, figure; recorded separately as B4x."
+  },
+  {
+   "id": "B4x_Total cash and investments",
+   "period": "As of June 30, 2026",
+   "value": 283100.0,
+   "raw": "RMB283.1 billion ($41.72 billion)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": null,
+    "row": "text paragraph: \"As of June 30, 2026, total cash and investments were RMB283.1 billion\"",
+    "col": ""
+   },
+   "note": "Non-table sentence; gross figure (not net of debt); precision RMB 0.1 billion."
+  },
+  {
+   "id": "S1",
+   "period": "As of July 14, 2026 (Latest Practicable Date of EGM circular)",
+   "value": 2713492250,
+   "raw": "2,713,492,250 issued and outstanding Shares ... 2,189,471,930 Class A ... 524,020,320 Class B",
+   "unit": "ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-07-27__d255115dex992.htm",
+    "table": null,
+    "row": "Appendix I, 1.1 Share Capital (text)",
+    "col": ""
+   },
+   "note": "Class A 2,189,471,930 + Class B 524,020,320; excludes 16,863,158 Class A shares reserved for award issuance / to be cancelled. ADS ratio: 1 ADS = 8 Class A ordinary shares (release: \"One Baidu ADS represents eight Class A ordinary shares\"). Q2 release itself gives no share count at a date."
+  },
+  {
+   "id": "S1_20F_cover",
+   "period": "As of December 31, 2025",
+   "value": 2722014080,
+   "raw": "2,197,993,760 Class A ordinary shares and 524,020,320 Class B ordinary shares",
+   "unit": "ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": null,
+    "row": "Cover page: outstanding shares as of close of period",
+    "col": ""
+   },
+   "note": "Sum of Class A 2,197,993,760 + Class B 524,020,320 (sum computed)."
+  },
+  {
+   "id": "S1_ClassA_HK_NDDR",
+   "period": "As of September 25, 2026",
+   "value": 2209541178,
+   "raw": "Closing balance as at 25 September 2026 2,209,541,178",
+   "unit": "Class A ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-09-28__d181948dex991.htm",
+    "table": null,
+    "row": "FF305 Section I, Class A closing balance",
+    "col": ""
+   },
+   "note": "Class A only (Class B not covered); includes 8,412,600 shares repurchased under mandate but not yet cancelled per Part B/Section II; post-quarter."
+  },
+  {
+   "id": "S2",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 2755.0,
+   "raw": "2,755",
+   "unit": "millions of Class A and Class B ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Weighted average number of Class A and Class B ordinary shares outstanding (in millions): -Diluted",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": "Release presents diluted weighted average ordinary shares, not ADS count; ADS equivalent (/8) not presented and not recorded."
+  },
+  {
+   "id": "S2_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 2764.0,
+   "raw": "2,764",
+   "unit": "millions of Class A and Class B ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Weighted average number of Class A and Class B ordinary shares outstanding (in millions): -Diluted",
+    "col": "Three Months Ended March 31, 2026 RMB"
+   },
+   "note": "Release presents diluted weighted average ordinary shares, not ADS count; ADS equivalent (/8) not presented and not recorded."
+  },
+  {
+   "id": "S2_prevY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 2730.0,
+   "raw": "2,730",
+   "unit": "millions of Class A and Class B ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Weighted average number of Class A and Class B ordinary shares outstanding (in millions): -Diluted",
+    "col": "Three Months Ended June 30, 2025 RMB"
+   },
+   "note": "Release presents diluted weighted average ordinary shares, not ADS count; ADS equivalent (/8) not presented and not recorded."
+  },
+  {
+   "id": "R1_amount_Q2",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": null,
+   "raw": "Baidu has returned US$259 million to shareholders since the beginning of Q1 2026 through repurchases",
+   "unit": "US$ millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 5,
+    "row": "bullet: returned US$259 million since beginning of Q1 2026",
+    "col": ""
+   },
+   "note": "Q2 release gives only a cumulative figure since start of Q1 2026 with unspecified end date (possibly through release date); Q1 release says US$172 million in Q1 2026. Q2-only amount not directly stated (difference 87 would be derived, not recorded). No RMB figure given."
+  },
+  {
+   "id": "R1_amount_cumulative",
+   "period": "From beginning of Q1 2026 to (unspecified, up to Aug 18, 2026)",
+   "value": 259.0,
+   "raw": "US$259 million",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 5,
+    "row": "bullet: returned US$259 million ... since the beginning of Q1 2026",
+    "col": ""
+   },
+   "note": "Amount in US$ as disclosed; no RMB."
+  },
+  {
+   "id": "R1_amount_Q1",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 172.0,
+   "raw": "US$172 million",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-05-18__d156481dex991.htm",
+    "table": 3,
+    "row": "bullet: returned US$172 million to shareholders in Q1 2026",
+    "col": ""
+   },
+   "note": "Q1 circular adds quantity: 698,950 Class A ordinary shares and 1,324,177 ADSs (EGM circular Appendix I 8.2)."
+  },
+  {
+   "id": "R1_quantity_Q2",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": null,
+   "raw": "",
+   "unit": "shares/ADSs",
+   "status": "null",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Number of shares/ADSs repurchased in Q2 2026 not disclosed in the provided filings."
+  },
+  {
+   "id": "R1_program_authorization",
+   "period": "Program authorized in Q1 2026, effective until December 31, 2028",
+   "value": 5000.0,
+   "raw": "up to US$5.0 billion of its ADSs or Class A Ordinary Shares",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-07-27__d255115dex992.htm",
+    "table": null,
+    "row": "Appendix I, 8.2 (text)",
+    "col": ""
+   },
+   "note": "Total program size; remaining authorization not stated."
+  },
+  {
+   "id": "R1_remaining",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": null,
+   "raw": "",
+   "unit": "US$ millions",
+   "status": "null",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Remaining program authorization not disclosed. (Separate HK repurchase mandate from Aug 26, 2026 EGM: 273,356,149 shares authorized, 8,412,600 repurchased as of Sep 25, 2026 per FF305 - share-count mandate, post-quarter.)"
+  },
+  {
+   "id": "R2",
+   "period": "",
+   "value": null,
+   "raw": "",
+   "unit": "per ADS",
+   "status": "null",
+   "source": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": null,
+    "row": "Item 8 Dividend Policy (text)",
+    "col": ""
+   },
+   "note": "No dividend declared in provided filings. 20-F: company \"has never declared or paid any dividends\"; board adopted a dividend policy in Q1 2026 and \"expect[s] to declare the first payment of dividend in 2026\"."
+  },
+  {
+   "id": "A1",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "value": 129079.0,
+   "raw": "129,079",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 472,
+    "row": "Revenue",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "value": 5589.0,
+   "raw": "5,589",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 472,
+    "row": "Net income attributable to Baidu, Inc.",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "value": -3013.0,
+   "raw": "( 3,013",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 473,
+    "row": "Net cash provided by/ (used in) operating activities",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": "Negative (cash used)."
+  },
+  {
+   "id": "A4",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "value": -12073.0,
+   "raw": "( 12,073",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 473,
+    "row": "Acquisition of fixed assets",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": "Cash flow statement row \"Acquisition of fixed assets\"; separate row \"Acquisition of intangible assets\" = (1,344) not included."
+  },
+  {
+   "id": "A4_intangibles",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "value": -1344.0,
+   "raw": "( 1,344",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 473,
+    "row": "Acquisition of intangible assets",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": "Supplementary, separate row."
+  },
+  {
+   "id": "X1",
+   "period": "As of June 30, 2026",
+   "value": 6.7851,
+   "raw": "RMB6.7851 to US$1.00",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 22,
+    "row": "footnote (2)",
+    "col": ""
+   },
+   "note": "H.10 rate used in Q2 2026 release convenience translations."
+  },
+  {
+   "id": "X1_20F",
+   "period": "As of December 31, 2025",
+   "value": 6.9931,
+   "raw": "RMB6.9931 to US$1.00",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": null,
+    "row": "Introduction/conventions paragraph",
+    "col": ""
+   },
+   "note": "H.10 rate used in FY2025 20-F."
+  }
+ ]
+}

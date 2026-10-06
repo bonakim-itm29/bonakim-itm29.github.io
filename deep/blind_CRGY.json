@@ -1,0 +1,425 @@
+{
+ "ticker": "CRGY",
+ "items": [
+  {
+   "id": "F1",
+   "value": 1394.954,
+   "raw": "1,394,954",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+    "contextRef": "c-29",
+    "table": 15,
+    "row": "Total revenues",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "표 단위 in thousands, ix scale=3. 해당 태그가 Total revenues 행(Oil+Gas+NGL+Midstream and other) 값에 사용됨."
+  },
+  {
+   "id": "F2",
+   "value": 492.765,
+   "raw": "492,765",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetIncomeLoss",
+    "contextRef": "c-29",
+    "table": 15,
+    "row": "Net income (loss) attributable to Crescent Energy",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "연결 순이익(ProfitLoss) 493,704; 비지배지분 939 차감."
+  },
+  {
+   "id": "F3",
+   "value": 72.918,
+   "raw": "72,918",
+   "unit": "USD millions",
+   "period": "2026-01-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetIncomeLoss",
+    "contextRef": "c-1",
+    "table": 15,
+    "row": "Net income (loss) attributable to Crescent Energy",
+    "col": "Six Months Ended June 30, 2026"
+   },
+   "note": "연결 순이익 74,528."
+  },
+  {
+   "id": "F4",
+   "value": 1115.979,
+   "raw": "1,115,979",
+   "unit": "USD millions",
+   "period": "2026-01-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+    "contextRef": "c-1",
+    "table": 18,
+    "row": "Net cash provided by operating activities",
+    "col": "Six Months Ended June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F5",
+   "value": 264.882,
+   "raw": "264,882",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "contextRef": "c-3",
+    "table": 13,
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026"
+   },
+   "note": "Restricted cash 5,467(천달러) 별도, 미포함."
+  },
+  {
+   "id": "F6",
+   "value": 12008.376,
+   "raw": "12,008,376",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:Assets",
+    "contextRef": "c-3",
+    "table": 13,
+    "row": "TOTAL ASSETS",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F7",
+   "value": 6848.787,
+   "raw": "6,848,787",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:Liabilities",
+    "contextRef": "c-3",
+    "table": 14,
+    "row": "Total liabilities",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F8",
+   "value": {
+    "total_equity_incl_nci": 5159.589,
+    "company_stockholders_equity": null
+   },
+   "raw": "Total equity 5,159,589; Noncontrolling interests 7,637",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+    "contextRef": "c-3",
+    "table": 14,
+    "row": "Total equity",
+    "col": "June 30, 2026"
+   },
+   "note": "재무상태표에 회사 주주지분 합계 행이 없음(구성항목 뒤 Noncontrolling interests 7,637 후 바로 Total equity). us-gaap:StockholdersEquity 무차원 fact도 없음 → company_stockholders_equity=null. (차감 계산 5,151.952는 추정이라 미기재)"
+  },
+  {
+   "id": "F9",
+   "value": 5166.022,
+   "raw": "5,166,022",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:LongTermDebt / us-gaap:LongTermDebtNoncurrent",
+    "contextRef": "c-3",
+    "table": "13/32",
+    "row": "Long-term debt (BS) ; Total long-term debt (debt note)",
+    "col": "June 30, 2026"
+   },
+   "note": "유동 부분 없음(BS에 current debt 행 없음); 부채 주석 합계 행 5,166,022와 일치. 원금 기준 합계는 5,226,327(할인/발행비용 60,305 차감 전). 2029 Notes 258.7M은 2026년 7월 상환 결정."
+  },
+  {
+   "id": "F10",
+   "value": 330403696,
+   "raw": "330,403,696",
+   "unit": "shares",
+   "period": "2026-07-31",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "dei:EntityCommonStockSharesOutstanding",
+    "contextRef": "c-2",
+    "table": null,
+    "row": "Cover page",
+    "col": "As of July 31, 2026"
+   },
+   "note": "Class A common stock만 표지에 기재(\"approximately\"). Class B는 표지 수치 없음(BS상 Class B 발행 없음). 참고: BS 기준 2026-06-30 Class A 유통 330,345,624주."
+  },
+  {
+   "id": "O1",
+   "value": 335,
+   "raw": "335",
+   "unit": "MBoe/d",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 1,
+    "row": "Total Consolidated - Average daily net sales volumes: Total (MBoe/d)",
+    "col": "For the three months ended June 30, 2026"
+   },
+   "note": "판매(net sales) 기준. 10-Q MD&A 표44(Total (MBoe/d) 335)과 일치. 분기 총량 30,465 MBoe. WI 322 + Minerals 13."
+  },
+  {
+   "id": "O2",
+   "value": 140,
+   "raw": "140",
+   "unit": "MBbls/d",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 1,
+    "row": "Oil (MBbls/d)",
+    "col": "For the three months ended June 30, 2026"
+   },
+   "note": "판매 기준. 10-Q 표44 Oil 140 MBbls/d(분기 12,699 MBbls)와 일치."
+  },
+  {
+   "id": "O3",
+   "value": 96.61,
+   "raw": "96.61",
+   "unit": "USD/Bbl",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 44,
+    "row": "Average realized prices, before effects of derivative settlements: Oil ($/Bbl)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "실적발표문 표1 동일(96.61). 헤지 포함 시 73.33."
+  },
+  {
+   "id": "O4",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Boe",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ambiguous",
+   "source": {
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 1,
+    "row": "Operating expense (per Boe) 13.38; Adjusted operating expense excl. production taxes 10.95",
+    "col": "For the three months ended June 30, 2026"
+   },
+   "note": "회사는 LOE 단독 $/Boe를 제시하지 않음. \"Operating expense\" $13.38/Boe는 LOE+workover+GP&T+생산세+midstream 합(10-Q 표45: 407,672천달러). LOE 금액 207,122천달러/30,465MBoe=약6.80은 파생계산이라 미기재."
+  },
+  {
+   "id": "O5",
+   "value": 797.94,
+   "raw": "797,940",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 8,
+    "row": "Adjusted EBITDAX (non-GAAP)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "표 단위 in thousands."
+  },
+  {
+   "id": "O6",
+   "value": 417.678,
+   "raw": "417,678",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 8,
+    "row": "Levered Free Cash Flow (non-GAAP)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "명칭: Levered Free Cash Flow. 10-Q MD&A 표50에서도 417,678 확인."
+  },
+  {
+   "id": "O7",
+   "value": 4901,
+   "raw": "4,901",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 11,
+    "row": "Net Debt",
+    "col": "June 30, 2026 Total consolidated"
+   },
+   "note": "표 단위 in millions. Total debt 5,166 − cash 265."
+  },
+  {
+   "id": "O8",
+   "value": null,
+   "raw": "Crude oil swaps – WTI 2026: 10,552 (thousands Bbls) @ $64.64; two-way collars WTI 2026: 1,012; three-way collars WTI 2026: 3,036; Brent two-way collars 2026: 92",
+   "unit": "Bbl / USD/Bbl",
+   "period": "2026 (as of 2026-06-30)",
+   "status": "ambiguous",
+   "source": {
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:DerivativeNonmonetaryNotionalAmountVolume / us-gaap:DerivativeSwapTypeAverageFixedPrice",
+    "contextRef": "c-181 / c-182",
+    "table": 25,
+    "row": "Crude oil swaps – WTI (Bbls): 2026",
+    "col": "Volumes / Weighted Average Fixed Price"
+   },
+   "note": "표 기간 라벨이 \"2026\"뿐이고 7~12월로 명시되지 않음(ix context도 DerivativeContractPeriodOneMember, 기간 2026-01-01~06-30로 태그). 6/30 기준 잔여분으로 보이나 확정 불가. 또한 \"총량\"이 스왑만인지 칼라 포함인지 불명. 스왑만: 10,552,000 Bbl @ $64.64."
+  },
+  {
+   "id": "R1",
+   "value": 975.518,
+   "raw": "975,518",
+   "unit": "MMBoe",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "method": "both",
+    "ix_name": "srt:ProvedDevelopedAndUndevelopedReserveNetEnergy",
+    "contextRef": "c-568",
+    "table": 17,
+    "row": "Total Proved Reserves (MBoe)",
+    "col": "As of December 31, 2025"
+   },
+   "note": "원문 MBoe → MMBoe 환산. ix context에 ConsolidatedEntitiesMember 차원 있음. Oil 359,695 MBbls, Gas 2,278,059 MMcf, NGL 236,146 MBbls."
+  },
+  {
+   "id": "R2",
+   "value": 776.346,
+   "raw": "776,346",
+   "unit": "MMBoe",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "method": "both",
+    "ix_name": "srt:ProvedDevelopedReservesBOE1",
+    "contextRef": "c-568",
+    "table": "17/97",
+    "row": "Total Proved Developed Reserves (MBoe)",
+    "col": "As of December 31, 2025"
+   },
+   "note": "PD 물량. 비중 = 776,346/975,518 = 79.6% (보고 수치의 단순 비율). PUD 199,172 MBoe."
+  },
+  {
+   "id": "R3",
+   "value": 7755.55,
+   "raw": "7,755,550",
+   "unit": "USD millions",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "method": "both",
+    "ix_name": "srt:StandardizedMeasureOfDiscountedFutureNetCashFlowsRelatingToProvedOilAndGasReserves",
+    "contextRef": "c-568",
+    "table": 102,
+    "row": "Standardized measure of discounted future net cash flows",
+    "col": "2025"
+   },
+   "note": "표17에서도 7,756(millions)."
+  },
+  {
+   "id": "R4",
+   "value": 8633,
+   "raw": "8,633",
+   "unit": "USD millions",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 17,
+    "row": "PV-10 (millions) (Net Proved Reserves)",
+    "col": "2025"
+   },
+   "note": "회사 제시 non-GAAP. PD PV-10 7,517; PUD 1,116. 표13 운영지역 합계(WI 8,213 + Minerals 420 = 8,633) 일치."
+  },
+  {
+   "id": "R5",
+   "value": {
+    "oil_usd_per_bbl": 65.34,
+    "gas_usd_per_mmbtu": 3.39
+   },
+   "raw": "$65.34 per Bbl (WTI); $3.39 per MMBtu (Henry Hub)",
+   "unit": "USD/Bbl, USD/MMBtu",
+   "period": "2025 (12-month avg)",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "method": "both",
+    "ix_name": "srt:AverageSalesPrices",
+    "contextRef": "c-583 / c-586",
+    "table": null,
+    "row": "Reserve notes text",
+    "col": ""
+   },
+   "note": "12개월 월초가격 평균, 조정 전 기준가격."
+  }
+ ]
+}

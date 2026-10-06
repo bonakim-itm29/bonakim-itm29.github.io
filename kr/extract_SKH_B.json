@@ -1,0 +1,1355 @@
+{
+ "ticker": "SKH",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 79318746,
+   "raw": "79,318,746",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "매출액 (주4,21,28)",
+    "col": "제 79 기 반기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 60542608,
+   "raw": "60,542,608",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "영업이익",
+    "col": "제 79 기 반기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 93820236,
+   "raw": "93,820,236",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "지배기업의 소유주지분",
+    "col": "제 79 기 반기 3개월"
+   },
+   "note": "반기순이익의 귀속 하위 행(총포괄이익 귀속 아님)"
+  },
+  {
+   "id": "Q7_기본",
+   "period": "2026Q2",
+   "value": 132126,
+   "raw": "132,126",
+   "unit": "KRW per share",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "기본주당반기순이익 (단위 : 원)",
+    "col": "제 79 기 반기 3개월"
+   },
+   "note": "보통주; 우선주 발행없음"
+  },
+  {
+   "id": "Q7_희석",
+   "period": "2026Q2",
+   "value": 131478,
+   "raw": "131,478",
+   "unit": "KRW per share",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "희석주당반기순이익 (단위 : 원)",
+    "col": "제 79 기 반기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 22231952,
+   "raw": "22,231,952",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "매출액 (주4,21,28)",
+    "col": "제 78 기 반기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 9212851,
+   "raw": "9,212,851",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "영업이익",
+    "col": "제 78 기 반기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 6997228,
+   "raw": "6,997,228",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "지배기업의 소유주지분",
+    "col": "제 78 기 반기 3개월"
+   },
+   "note": "반기순이익의 귀속 하위 행(총포괄이익 귀속 아님)"
+  },
+  {
+   "id": "Q7_기본",
+   "period": "2025Q2",
+   "value": 10135,
+   "raw": "10,135",
+   "unit": "KRW per share",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "기본주당반기순이익 (단위 : 원)",
+    "col": "제 78 기 반기 3개월"
+   },
+   "note": "보통주; 우선주 발행없음"
+  },
+  {
+   "id": "Q7_희석",
+   "period": "2025Q2",
+   "value": 9580,
+   "raw": "9,580",
+   "unit": "KRW per share",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "희석주당반기순이익 (단위 : 원)",
+    "col": "제 78 기 반기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 52576287,
+   "raw": "52,576,287",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__Q1_2026__20260515002501.htm",
+    "table": 70,
+    "row": "매출액 (주4,21,28)",
+    "col": "제 79 기 1분기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 37610283,
+   "raw": "37,610,283",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__Q1_2026__20260515002501.htm",
+    "table": 70,
+    "row": "영업이익",
+    "col": "제 79 기 1분기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 40330176,
+   "raw": "40,330,176",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__Q1_2026__20260515002501.htm",
+    "table": 70,
+    "row": "지배기업의 소유주지분",
+    "col": "제 79 기 1분기 3개월"
+   },
+   "note": "분기순이익의 귀속 하위 행"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q1",
+   "value": 17639141,
+   "raw": "17,639,141",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__Q1_2026__20260515002501.htm",
+    "table": 70,
+    "row": "매출액 (주4,21,28)",
+    "col": "제 78 기 1분기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q1",
+   "value": 7440504,
+   "raw": "7,440,504",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__Q1_2026__20260515002501.htm",
+    "table": 70,
+    "row": "영업이익",
+    "col": "제 78 기 1분기 3개월"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q1",
+   "value": 8107081,
+   "raw": "8,107,081",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__Q1_2026__20260515002501.htm",
+    "table": 70,
+    "row": "지배기업의 소유주지분",
+    "col": "제 78 기 1분기 3개월"
+   },
+   "note": "분기순이익의 귀속 하위 행"
+  },
+  {
+   "id": "Q2_반도체 부문_매출",
+   "period": "2026H1",
+   "value": 131895033,
+   "raw": "131,895,033",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 92,
+    "row": "반도체 부문",
+    "col": "매출액"
+   },
+   "note": "사업의 내용 표, [제79기 반기 누계] 누적값(3개월 부문표 없음). 주석4: 단일영업부문(반도체)"
+  },
+  {
+   "id": "Q2_반도체 부문_영업이익",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "KRW millions",
+   "status": "null",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 124,
+    "row": "보고부문을 식별하기 위하여 사용한 요소에 대한 기술",
+    "col": ""
+   },
+   "note": "단일영업부문으로 부문별 영업이익 표 없음(부문=연결 전체, 연결 영업이익 Q3 참조)"
+  },
+  {
+   "id": "Q2_DRAM_매출",
+   "period": "2026Q2",
+   "value": 56982743,
+   "raw": "56,982,743",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 479,
+    "row": "수익",
+    "col": "부문 DRAM 3개월"
+   },
+   "note": "주석21 고객과의 계약 수익 품목별 구분(영업부문 아님; 단일영업부문)"
+  },
+  {
+   "id": "Q2_DRAM_매출",
+   "period": "2025Q2",
+   "value": 17123990,
+   "raw": "17,123,990",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 482,
+    "row": "수익",
+    "col": "부문 DRAM 3개월"
+   },
+   "note": "주석21 품목별 수익 전반기 3개월"
+  },
+  {
+   "id": "Q2_NAND Flash_매출",
+   "period": "2026Q2",
+   "value": 21959898,
+   "raw": "21,959,898",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 479,
+    "row": "수익",
+    "col": "부문 NAND Flash 3개월"
+   },
+   "note": "주석21 고객과의 계약 수익 품목별 구분(영업부문 아님; 단일영업부문)"
+  },
+  {
+   "id": "Q2_NAND Flash_매출",
+   "period": "2025Q2",
+   "value": 4727806,
+   "raw": "4,727,806",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 482,
+    "row": "수익",
+    "col": "부문 NAND Flash 3개월"
+   },
+   "note": "주석21 품목별 수익 전반기 3개월"
+  },
+  {
+   "id": "Q2_기타_매출",
+   "period": "2026Q2",
+   "value": 376105,
+   "raw": "376,105",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 479,
+    "row": "수익",
+    "col": "부문 기타 3개월"
+   },
+   "note": "주석21 고객과의 계약 수익 품목별 구분(영업부문 아님; 단일영업부문)"
+  },
+  {
+   "id": "Q2_기타_매출",
+   "period": "2025Q2",
+   "value": 380156,
+   "raw": "380,156",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 482,
+    "row": "수익",
+    "col": "부문 기타 3개월"
+   },
+   "note": "주석21 품목별 수익 전반기 3개월"
+  },
+  {
+   "id": "H1_매출",
+   "period": "2026H1",
+   "value": 131895033,
+   "raw": "131,895,033",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "매출액 (주4,21,28)",
+    "col": "제 79 기 반기 누적"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_영업이익",
+   "period": "2026H1",
+   "value": 98152891,
+   "raw": "98,152,891",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "영업이익",
+    "col": "제 79 기 반기 누적"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_지배순이익",
+   "period": "2026H1",
+   "value": 134150412,
+   "raw": "134,150,412",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 107,
+    "row": "지배기업의 소유주지분",
+    "col": "제 79 기 반기 누적"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_영업활동현금흐름",
+   "period": "2026H1",
+   "value": 91742501,
+   "raw": "91,742,501",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 111,
+    "row": "영업활동 현금흐름",
+    "col": "제 79 기 반기"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_유형자산취득",
+   "period": "2026H1",
+   "value": -18328836,
+   "raw": "(18,328,836)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 111,
+    "row": "유형자산의 취득",
+    "col": "제 79 기 반기"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_무형자산취득",
+   "period": "2026H1",
+   "value": -665180,
+   "raw": "(665,180)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 111,
+    "row": "무형자산의 취득",
+    "col": "제 79 기 반기"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_배당금지급",
+   "period": "2026H1",
+   "value": -1594365,
+   "raw": "(1,594,365)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 111,
+    "row": "배당금의 지급",
+    "col": "제 79 기 반기"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_자기주식취득",
+   "period": "2026H1",
+   "value": null,
+   "raw": "",
+   "unit": "KRW millions",
+   "status": "null",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 111,
+    "row": "",
+    "col": "제 79 기 반기"
+   },
+   "note": "연결현금흐름표 재무활동에 자기주식 취득 행 없음(자기주식의 처분 21,322만 존재). 반기 중 기타취득 73주(교환사채 단주)뿐"
+  },
+  {
+   "id": "Q1_영업활동현금흐름",
+   "period": "2026Q1",
+   "value": 26330119,
+   "raw": "26,330,119",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__Q1_2026__20260515002501.htm",
+    "table": 74,
+    "row": "영업활동 현금흐름",
+    "col": "제 79 기 1분기"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1_유형자산취득",
+   "period": "2026Q1",
+   "value": -7657403,
+   "raw": "(7,657,403)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__Q1_2026__20260515002501.htm",
+    "table": 74,
+    "row": "유형자산의 취득",
+    "col": "제 79 기 1분기"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 26835986,
+   "raw": "26,835,986",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 105,
+    "row": "현금및현금성자산 (주5,6)",
+    "col": "제 79 기 반기말"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_단기금융상품",
+   "period": "2026-06-30",
+   "value": 22397559,
+   "raw": "22,397,559",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 105,
+    "row": "단기금융상품 (주5,6)",
+    "col": "제 79 기 반기말"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_단기투자자산",
+   "period": "2026-06-30",
+   "value": 38724378,
+   "raw": "38,724,378",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 105,
+    "row": "단기투자자산 (주5,6)",
+    "col": "제 79 기 반기말"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_단기차입금",
+   "period": "2026-06-30",
+   "value": 2664419,
+   "raw": "2,664,419",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 333,
+    "row": "단기차입금",
+    "col": "공시금액"
+   },
+   "note": "주석14 차입금 구성내역 당반기말(연결)"
+  },
+  {
+   "id": "B3_유동성장기차입금",
+   "period": "2026-06-30",
+   "value": 1945289,
+   "raw": "1,945,289",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 333,
+    "row": "유동성장기차입금",
+    "col": "공시금액"
+   },
+   "note": "주석14 차입금 구성내역 당반기말(연결)"
+  },
+  {
+   "id": "B3_유동성사채",
+   "period": "2026-06-30",
+   "value": 1249165,
+   "raw": "1,249,165",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 333,
+    "row": "유동성사채",
+    "col": "공시금액"
+   },
+   "note": "주석14 차입금 구성내역 당반기말(연결)"
+  },
+  {
+   "id": "B3_장기차입금",
+   "period": "2026-06-30",
+   "value": 2183825,
+   "raw": "2,183,825",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 333,
+    "row": "장기차입금",
+    "col": "공시금액"
+   },
+   "note": "주석14 차입금 구성내역 당반기말(연결)"
+  },
+  {
+   "id": "B3_사채",
+   "period": "2026-06-30",
+   "value": 10543936,
+   "raw": "10,543,936",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 333,
+    "row": "사채",
+    "col": "공시금액"
+   },
+   "note": "주석14 차입금 구성내역 당반기말(연결)"
+  },
+  {
+   "id": "B3_소계, 유동",
+   "period": "2026-06-30",
+   "value": 5858873,
+   "raw": "5,858,873",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 333,
+    "row": "소계, 유동",
+    "col": "공시금액"
+   },
+   "note": "주석14 차입금 구성내역 당반기말(연결)"
+  },
+  {
+   "id": "B3_소계, 비유동",
+   "period": "2026-06-30",
+   "value": 12727761,
+   "raw": "12,727,761",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 333,
+    "row": "소계, 비유동",
+    "col": "공시금액"
+   },
+   "note": "주석14 차입금 구성내역 당반기말(연결)"
+  },
+  {
+   "id": "B3_합계",
+   "period": "2026-06-30",
+   "value": 18586634,
+   "raw": "18,586,634",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 333,
+    "row": "합계",
+    "col": "공시금액"
+   },
+   "note": "주석14 차입금 구성내역 당반기말(연결)"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 348862214,
+   "raw": "348,862,214",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 105,
+    "row": "자산총계",
+    "col": "제 79 기 반기말"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_자본총계",
+   "period": "2026-06-30",
+   "value": 262693228,
+   "raw": "262,693,228",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 105,
+    "row": "자본총계",
+    "col": "제 79 기 반기말"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_지배기업소유지분",
+   "period": "2026-06-30",
+   "value": 262380610,
+   "raw": "262,380,610",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 105,
+    "row": "지배기업의 소유지분",
+    "col": "제 79 기 반기말"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_발행주식총수_보통주",
+   "period": "2026-06-30",
+   "value": 712702365,
+   "raw": "712,702,365",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 39,
+    "row": "Ⅳ. 발행주식의 총수 (Ⅱ-Ⅲ)",
+    "col": "주식의 종류 보통주"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_발행주식총수_우선주",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "-",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 39,
+    "row": "Ⅳ. 발행주식의 총수 (Ⅱ-Ⅲ)",
+    "col": "주식의 종류 우선주"
+   },
+   "note": "우선주 발행없음(\"-\")"
+  },
+  {
+   "id": "S1_자기주식_보통주",
+   "period": "2026-06-30",
+   "value": 1626865,
+   "raw": "1,626,865",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 39,
+    "row": "Ⅴ. 자기주식수",
+    "col": "주식의 종류 보통주"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_자기주식_우선주",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "-",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 39,
+    "row": "Ⅴ. 자기주식수",
+    "col": "주식의 종류 우선주"
+   },
+   "note": "우선주 발행없음(\"-\")"
+  },
+  {
+   "id": "S1_유통주식수_보통주",
+   "period": "2026-06-30",
+   "value": 711075500,
+   "raw": "711,075,500",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 39,
+    "row": "Ⅵ. 유통주식수 (Ⅳ-Ⅴ)",
+    "col": "주식의 종류 보통주"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_유통주식수_우선주",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "-",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 39,
+    "row": "Ⅵ. 유통주식수 (Ⅳ-Ⅴ)",
+    "col": "주식의 종류 우선주"
+   },
+   "note": "우선주 발행없음(\"-\")"
+  },
+  {
+   "id": "R1_취득수량_2026H1",
+   "period": "2026H1",
+   "value": 73,
+   "raw": "73",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 41,
+    "row": "기타 취득(c)",
+    "col": "변동 수량 취득(+)"
+   },
+   "note": "교환사채 조기상환(Clean Up Call) 단주 처리에 따른 기타취득; 취득금액 미기재. 장내/장외/신탁 취득 없음"
+  },
+  {
+   "id": "R1_처분수량_2026H1",
+   "period": "2026H1",
+   "value": 451506,
+   "raw": "451,506",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 41,
+    "row": "총 계(a+b+c)",
+    "col": "변동 수량 처분(-)"
+   },
+   "note": "임직원·사외이사 상여지급 목적 6회 처분"
+  },
+  {
+   "id": "R1_소각수량_2026H1",
+   "period": "2026-02-09",
+   "value": 15300000,
+   "raw": "15,300,000",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 47,
+    "row": "2026년 02월 09일",
+    "col": "소각수량"
+   },
+   "note": "이익소각, 보통주"
+  },
+  {
+   "id": "R1_소각금액_2026H1",
+   "period": "2026-02-09",
+   "value": 872236.935,
+   "raw": "872,236,935,000",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 47,
+    "row": "2026년 02월 09일",
+    "col": "소각금액"
+   },
+   "note": "원문 원 단위 872,236,935,000원 → 백만원 변환. 소각 목적 원문 미기재"
+  },
+  {
+   "id": "R2_주당배당_보통주_2026H1누계",
+   "period": "2026H1",
+   "value": 750,
+   "raw": "750",
+   "unit": "KRW per share",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 1242,
+    "row": "주당 현금배당금(원)",
+    "col": "당기 제79기 반기"
+   },
+   "note": "(행 주식의 종류=보통주) 주요배당지표 제79기 반기 누계(1분기 375+2분기 375)"
+  },
+  {
+   "id": "R2_1분기배당_보통주",
+   "period": "2026Q1",
+   "value": 375,
+   "raw": "제79기 1분기 266,652백만원(주당 375원)",
+   "unit": "KRW per share",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 1243,
+    "row": "※ 분기배당금은 ...",
+    "col": ""
+   },
+   "note": "배당기준일 2026-05-31; 우선주 없음"
+  },
+  {
+   "id": "R2_2분기배당_보통주",
+   "period": "2026Q2",
+   "value": 375,
+   "raw": "보통주 1주당 375원(배당총액 2,733억원)",
+   "unit": "KRW per share",
+   "status": "ok",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 1241,
+    "row": "※ 보고서 작성기준일 이후 ...",
+    "col": ""
+   },
+   "note": "2026-08-07 이사회 결의(보고기간 후), 기준일 2026-08-31; 표1243 주석: 2분기 273,325백만원(주당 375원)"
+  },
+  {
+   "id": "R2_우선주",
+   "period": "2026H1",
+   "value": null,
+   "raw": "-",
+   "unit": "KRW per share",
+   "status": "null",
+   "source": {
+    "file": "SKH__H1_2026__20260814002925.htm",
+    "table": 1242,
+    "row": "주당 현금배당금(원) 우선주",
+    "col": "당기 제79기 반기"
+   },
+   "note": "우선주 미발행"
+  },
+  {
+   "id": "A1_2025",
+   "period": "2025",
+   "value": 97146675,
+   "raw": "97,146,675",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "매출액",
+    "col": "제78기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2_2025",
+   "period": "2025",
+   "value": 47206319,
+   "raw": "47,206,319",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "영업이익",
+    "col": "제78기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3_2025",
+   "period": "2025",
+   "value": 42919287,
+   "raw": "42,919,287",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "지배기업의 소유주지분",
+    "col": "제78기"
+   },
+   "note": "요약연결재무정보, 연결총당기순이익 하위 귀속행"
+  },
+  {
+   "id": "A1_2024",
+   "period": "2024",
+   "value": 66192960,
+   "raw": "66,192,960",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "매출액",
+    "col": "제77기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2_2024",
+   "period": "2024",
+   "value": 23467319,
+   "raw": "23,467,319",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "영업이익",
+    "col": "제77기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3_2024",
+   "period": "2024",
+   "value": 19788681,
+   "raw": "19,788,681",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "지배기업의 소유주지분",
+    "col": "제77기"
+   },
+   "note": "요약연결재무정보, 연결총당기순이익 하위 귀속행"
+  },
+  {
+   "id": "A1_2023",
+   "period": "2023",
+   "value": 32765719,
+   "raw": "32,765,719",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "매출액",
+    "col": "제76기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2_2023",
+   "period": "2023",
+   "value": -7730313,
+   "raw": "(7,730,313)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "영업이익",
+    "col": "제76기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3_2023",
+   "period": "2023",
+   "value": -9112428,
+   "raw": "(9,112,428)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 98,
+    "row": "지배기업의 소유주지분",
+    "col": "제76기"
+   },
+   "note": "요약연결재무정보, 연결총당기순이익 하위 귀속행"
+  },
+  {
+   "id": "A1_2022",
+   "period": "2022",
+   "value": 44621568,
+   "raw": "44,621,568",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "매출액",
+    "col": "제75기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2_2022",
+   "period": "2022",
+   "value": 6809417,
+   "raw": "6,809,417",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "영업이익",
+    "col": "제75기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3_2022",
+   "period": "2022",
+   "value": 2229560,
+   "raw": "2,229,560",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "지배기업의 소유주지분",
+    "col": "제75기"
+   },
+   "note": "요약연결재무정보, 연결총당기순이익 하위 귀속행"
+  },
+  {
+   "id": "A1_2021",
+   "period": "2021",
+   "value": 42997792,
+   "raw": "42,997,792",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "매출액",
+    "col": "제74기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2_2021",
+   "period": "2021",
+   "value": 12410340,
+   "raw": "12,410,340",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "영업이익",
+    "col": "제74기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3_2021",
+   "period": "2021",
+   "value": 9602316,
+   "raw": "9,602,316",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "지배기업의 소유주지분",
+    "col": "제74기"
+   },
+   "note": "요약연결재무정보, 연결총당기순이익 하위 귀속행"
+  },
+  {
+   "id": "A1_2020",
+   "period": "2020",
+   "value": 31900418,
+   "raw": "31,900,418",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "매출액",
+    "col": "제73기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2_2020",
+   "period": "2020",
+   "value": 5012624,
+   "raw": "5,012,624",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "영업이익",
+    "col": "제73기"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3_2020",
+   "period": "2020",
+   "value": 4755102,
+   "raw": "4,755,102",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 79,
+    "row": "지배기업의 소유주지분",
+    "col": "제73기"
+   },
+   "note": "요약연결재무정보, 연결총당기순이익 하위 귀속행"
+  },
+  {
+   "id": "A4_2025",
+   "period": "2025",
+   "value": 53373126,
+   "raw": "53,373,126",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 110,
+    "row": "영업활동 현금흐름",
+    "col": "제 78 기"
+   },
+   "note": "요약재무정보에 없어 연결현금흐름표 사용"
+  },
+  {
+   "id": "A5_2025",
+   "period": "2025",
+   "value": -27518924,
+   "raw": "(27,518,924)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 110,
+    "row": "유형자산의 취득",
+    "col": "제 78 기"
+   },
+   "note": "연결현금흐름표"
+  },
+  {
+   "id": "A4_2024",
+   "period": "2024",
+   "value": 29795885,
+   "raw": "29,795,885",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 110,
+    "row": "영업활동 현금흐름",
+    "col": "제 77 기"
+   },
+   "note": "요약재무정보에 없어 연결현금흐름표 사용"
+  },
+  {
+   "id": "A5_2024",
+   "period": "2024",
+   "value": -15945534,
+   "raw": "(15,945,534)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 110,
+    "row": "유형자산의 취득",
+    "col": "제 77 기"
+   },
+   "note": "연결현금흐름표"
+  },
+  {
+   "id": "A4_2023",
+   "period": "2023",
+   "value": 4278191,
+   "raw": "4,278,191",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2025__20260317000735.htm",
+    "table": 110,
+    "row": "영업활동 현금흐름",
+    "col": "제 76 기"
+   },
+   "note": "요약재무정보에 없어 연결현금흐름표 사용"
+  },
+  {
+   "id": "A4_2022",
+   "period": "2022",
+   "value": 14780517,
+   "raw": "14,780,517",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 91,
+    "row": "영업활동 현금흐름",
+    "col": "제 75 기"
+   },
+   "note": "요약재무정보에 없어 연결현금흐름표 사용"
+  },
+  {
+   "id": "A5_2022",
+   "period": "2022",
+   "value": -19010261,
+   "raw": "(19,010,261)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 91,
+    "row": "유형자산의 취득",
+    "col": "제 75 기"
+   },
+   "note": "연결현금흐름표"
+  },
+  {
+   "id": "A4_2021",
+   "period": "2021",
+   "value": 19797648,
+   "raw": "19,797,648",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 91,
+    "row": "영업활동 현금흐름",
+    "col": "제 74 기"
+   },
+   "note": "요약재무정보에 없어 연결현금흐름표 사용"
+  },
+  {
+   "id": "A5_2021",
+   "period": "2021",
+   "value": -12486635,
+   "raw": "(12,486,635)",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 91,
+    "row": "유형자산의 취득",
+    "col": "제 74 기"
+   },
+   "note": "연결현금흐름표"
+  },
+  {
+   "id": "A4_2020",
+   "period": "2020",
+   "value": 12314571,
+   "raw": "12,314,571",
+   "unit": "KRW millions",
+   "status": "ok",
+   "source": {
+    "file": "SKH__FY2022__20230321001502.htm",
+    "table": 91,
+    "row": "영업활동 현금흐름",
+    "col": "제 73 기"
+   },
+   "note": "요약재무정보에 없어 연결현금흐름표 사용"
+  }
+ ]
+}

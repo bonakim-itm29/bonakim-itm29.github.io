@@ -1,0 +1,1066 @@
+{
+ "ticker": "SM",
+ "as_of": "2025-12-31",
+ "items": [
+  {
+   "id": "S1",
+   "value": 24750,
+   "raw": "24,750",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 94,
+    "row_label": "Future cash inflows",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "(in millions)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S2",
+   "value": -10060,
+   "raw": "(10,060)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 94,
+    "row_label": "Future production costs",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "(in millions)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "생산세 포함 여부 명시 없음. 주석: future operating costs에 운영 관련 본사 overhead와 추정 폐쇄(abandonment) 비용 포함; 가격·비용에 운송·품질·basis 차이 반영"
+  },
+  {
+   "id": "S3",
+   "value": -2877,
+   "raw": "(2,877)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 94,
+    "row_label": "Future development costs",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "(in millions)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "폐쇄·복구 비용 별도 행 없음(주석상 abandonment는 future operating costs에 포함 기재)"
+  },
+  {
+   "id": "S4",
+   "value": -1539,
+   "raw": "(1,539)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 94,
+    "row_label": "Future income taxes",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "(in millions)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S5",
+   "value": 10274,
+   "raw": "10,274",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 94,
+    "row_label": "Future net cash flows",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "(in millions)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "할인 전"
+  },
+  {
+   "id": "S6",
+   "value": -4318,
+   "raw": "(4,318)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 94,
+    "row_label": "10 percent annual discount",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "(in millions)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S7",
+   "value": 5956,
+   "raw": "5,956",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 94,
+    "row_label": "Standardized measure of discounted future net cash flows",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "(in millions)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S3b",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "status": "null",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 94
+   },
+   "note": "별도 폐쇄·복구 비용 행 없음"
+  },
+  {
+   "id": "S8",
+   "value": 6847,
+   "raw": "6,847",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 10,
+    "row_label": "PV-10 (non-GAAP)",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "(in millions)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "세전; Table 9 'Total proved PV-10 (non-GAAP)' 6,847과 일치"
+  },
+  {
+   "id": "P1_oil",
+   "value": 65.34,
+   "raw": "65.34",
+   "unit": "$/Bbl",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 9,
+    "row_label": "Oil (per Bbl)",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "12-month trailing average prices (1)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "SEC 12개월 first-day-of-month 평균. 벤치마크명(WTI) 표에 명시 없음; 10-K 다른 문단에서 NYMEX 기준 비교 → NYMEX WTI로 추정"
+  },
+  {
+   "id": "P1_gas",
+   "value": 3.39,
+   "raw": "3.39",
+   "unit": "$/MMBtu",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 9,
+    "row_label": "Gas (per MMBtu)",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "12-month trailing average prices (1)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "단위 $/MMBtu, Henry Hub 명칭 표에 명시 없음(추정 HH)"
+  },
+  {
+   "id": "P1_ngl",
+   "value": 27.45,
+   "raw": "27.45",
+   "unit": "$/Bbl",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 9,
+    "row_label": "NGLs (per Bbl)",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "12-month trailing average prices (1)",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "참고: NGL 기준가(벤치마크 미명시)"
+  },
+  {
+   "id": "P2_oil",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm"
+   },
+   "note": "매장량 평가용 차이 반영 후 평균가격 미공시(footnote는 품질·지역 차이 조정했다고만 기재). 2025 생산 실현가(oil 63.52, gas 2.35/Mcf, NGL 22.22)는 매장량 가격이 아니어서 미사용"
+  },
+  {
+   "id": "P2_ngl",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm"
+   },
+   "note": "매장량 평가용 차이 반영 후 평균가격 미공시(footnote는 품질·지역 차이 조정했다고만 기재). 2025 생산 실현가(oil 63.52, gas 2.35/Mcf, NGL 22.22)는 매장량 가격이 아니어서 미사용"
+  },
+  {
+   "id": "P2_gas",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm"
+   },
+   "note": "매장량 평가용 차이 반영 후 평균가격 미공시(footnote는 품질·지역 차이 조정했다고만 기재). 2025 생산 실현가(oil 63.52, gas 2.35/Mcf, NGL 22.22)는 매장량 가격이 아니어서 미사용"
+  },
+  {
+   "id": "V1_oil",
+   "value": 283.9,
+   "raw": "283.9",
+   "unit": "MMBbl",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 9,
+    "row_label": "Oil (MMBbl)",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "Net reserve volumes: Total proved",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "Table 90 End of year와 일치"
+  },
+  {
+   "id": "V1_ngl",
+   "value": 122.6,
+   "raw": "122.6",
+   "unit": "MMBbl",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 9,
+    "row_label": "NGLs (MMBbl)",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "Net reserve volumes: Total proved",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "Table 90 End of year와 일치"
+  },
+  {
+   "id": "V1_gas",
+   "value": 1598.5,
+   "raw": "1,598.5",
+   "unit": "Bcf",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 9,
+    "row_label": "Gas (Bcf)",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "Net reserve volumes: Total proved",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "Table 90 End of year와 일치"
+  },
+  {
+   "id": "V1_total",
+   "value": 673.0,
+   "raw": "673.0",
+   "unit": "MMBOE",
+   "status": "ok",
+   "source": {
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "table_index": 9,
+    "row_label": "MMBOE",
+    "column_header": "As of December 31, 2025",
+    "unit_caption": "Net reserve volumes: Total proved",
+    "method": "table (ix 태그 없음)"
+   },
+   "note": "Table 90 End of year와 일치"
+  }
+ ],
+ "checks": [
+  {
+   "name": "S5=S1+S2+S3+S4",
+   "lhs": 10274,
+   "rhs": 10274,
+   "ok": true
+  },
+  {
+   "name": "S7=S5+S6",
+   "lhs": 5956,
+   "rhs": 5956,
+   "ok": true
+  },
+  {
+   "name": "S1 vs V1xP2",
+   "lhs": 24750,
+   "rhs": null,
+   "ok": null,
+   "note": "P2 미공시로 생략"
+  },
+  {
+   "name": "S8 recon: S7+discount net of tax(4,318)+taxes(1,539)-discount w/o tax(4,966)",
+   "lhs": 6847,
+   "rhs": 6847,
+   "ok": true
+  },
+  {
+   "name": "proforma SM: S5 & S7 sums",
+   "lhs": [
+    10274,
+    5956
+   ],
+   "rhs": [
+    10274,
+    5956
+   ],
+   "ok": true
+  },
+  {
+   "name": "proforma Civitas: S5 & S7 sums",
+   "lhs": [
+    11411,
+    7620
+   ],
+   "rhs": [
+    11411,
+    7620
+   ],
+   "ok": true
+  },
+  {
+   "name": "proforma Combined: S5 & S7 sums",
+   "lhs": [
+    21685,
+    13576
+   ],
+   "rhs": [
+    21685,
+    13576
+   ],
+   "ok": true
+  },
+  {
+   "name": "proforma Combined = SM + Civitas (S1-S7,V1)",
+   "lhs": "combined",
+   "rhs": "sum",
+   "ok": true,
+   "note": "[]"
+  },
+  {
+   "name": "proforma SM 열 = 10-K 값",
+   "lhs": [
+    24750,
+    5956,
+    283.9,
+    1598.5,
+    122.6
+   ],
+   "rhs": [
+    24750,
+    5956,
+    283.9,
+    1598.5,
+    122.6
+   ],
+   "ok": true
+  },
+  {
+   "name": "divestiture: SM S7 - 660 ≈ 5,300",
+   "lhs": 5296,
+   "rhs": 5300,
+   "ok": true
+  }
+ ],
+ "proforma": {
+  "SM": [
+   {
+    "id": "S1",
+    "value": 24750,
+    "raw": "24,750",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future cash inflows",
+     "column_header": "Historical SM Energy / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S2",
+    "value": -10060,
+    "raw": "(10,060",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future production costs",
+     "column_header": "Historical SM Energy / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S3",
+    "value": -2877,
+    "raw": "(2,877",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future development costs",
+     "column_header": "Historical SM Energy / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S4",
+    "value": -1539,
+    "raw": "(1,539",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future income taxes",
+     "column_header": "Historical SM Energy / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S5",
+    "value": 10274,
+    "raw": "10,274",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future net cash flows",
+     "column_header": "Historical SM Energy / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S6",
+    "value": -4318,
+    "raw": "(4,318",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "10 percent annual discount",
+     "column_header": "Historical SM Energy / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S7",
+    "value": 5956,
+    "raw": "5,956",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Standardized measure of discounted future net cash flows",
+     "column_header": "Historical SM Energy / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "V1_oil",
+    "value": 283.9,
+    "raw": "283.9",
+    "unit": "MMBbl",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 79,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Historical SM Energy",
+     "unit_caption": "Oil (MMBbl) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "V1_gas",
+    "value": 1598.5,
+    "raw": "1,598.5",
+    "unit": "Bcf",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 85,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Historical SM Energy",
+     "unit_caption": "Gas (Bcf) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "V1_ngl",
+    "value": 122.6,
+    "raw": "122.6",
+    "unit": "MMBbl",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 91,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Historical SM Energy",
+     "unit_caption": "NGLs (MMBbl) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "V1_total",
+    "value": 673.0,
+    "raw": "673.0",
+    "unit": "MMBOE",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 97,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Historical SM Energy",
+     "unit_caption": "Total (MMBOE) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "CHK",
+    "value": null,
+    "raw": "",
+    "unit": "",
+    "status": "ok",
+    "source": {},
+    "note": "S5합 10274 vs 10274; S7합 5956 vs 5956",
+    "ok": true
+   }
+  ],
+  "Civitas": [
+   {
+    "id": "S1",
+    "value": 28486,
+    "raw": "28,486",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future cash inflows",
+     "column_header": "Historical Civitas / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "S2",
+    "value": -13212,
+    "raw": "(13,212",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future production costs",
+     "column_header": "Historical Civitas / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "S3",
+    "value": -2706,
+    "raw": "(2,706",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future development costs",
+     "column_header": "Historical Civitas / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "S4",
+    "value": -1157,
+    "raw": "(1,157",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future income taxes",
+     "column_header": "Historical Civitas / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "S5",
+    "value": 11411,
+    "raw": "11,411",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future net cash flows",
+     "column_header": "Historical Civitas / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "S6",
+    "value": -3791,
+    "raw": "(3,791",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "10 percent annual discount",
+     "column_header": "Historical Civitas / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "S7",
+    "value": 7620,
+    "raw": "7,620",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Standardized measure of discounted future net cash flows",
+     "column_header": "Historical Civitas / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "V1_oil",
+    "value": 332.5,
+    "raw": "332.5",
+    "unit": "MMBbl",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 79,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Historical Civitas",
+     "unit_caption": "Oil (MMBbl) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "V1_gas",
+    "value": 1641.1,
+    "raw": "1,641.1",
+    "unit": "Bcf",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 85,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Historical Civitas",
+     "unit_caption": "Gas (Bcf) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "V1_ngl",
+    "value": 252.6,
+    "raw": "252.6",
+    "unit": "MMBbl",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 91,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Historical Civitas",
+     "unit_caption": "NGLs (MMBbl) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "V1_total",
+    "value": 858.6,
+    "raw": "858.6",
+    "unit": "MMBOE",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 97,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Historical Civitas",
+     "unit_caption": "Total (MMBOE) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": ""
+   },
+   {
+    "id": "CHK",
+    "value": null,
+    "raw": "",
+    "unit": "",
+    "status": "ok",
+    "source": {},
+    "note": "S5합 11411 vs 11411; S7합 7620 vs 7620",
+    "ok": true
+   }
+  ],
+  "Combined": [
+   {
+    "id": "S1",
+    "value": 53236,
+    "raw": "53,236",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future cash inflows",
+     "column_header": "Pro Forma Combined / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S2",
+    "value": -23272,
+    "raw": "(23,272",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future production costs",
+     "column_header": "Pro Forma Combined / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S3",
+    "value": -5583,
+    "raw": "(5,583",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future development costs",
+     "column_header": "Pro Forma Combined / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S4",
+    "value": -2696,
+    "raw": "(2,696",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future income taxes",
+     "column_header": "Pro Forma Combined / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S5",
+    "value": 21685,
+    "raw": "21,685",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Future net cash flows",
+     "column_header": "Pro Forma Combined / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S6",
+    "value": -8109,
+    "raw": "(8,109",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "10 percent annual discount",
+     "column_header": "Pro Forma Combined / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "S7",
+    "value": 13576,
+    "raw": "13,576",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 103,
+     "row_label": "Standardized measure of discounted future net cash flows",
+     "column_header": "Pro Forma Combined / As of December 31, 2025",
+     "unit_caption": "(In millions)",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "V1_oil",
+    "value": 616.4,
+    "raw": "616.4",
+    "unit": "MMBbl",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 79,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Pro Forma Combined",
+     "unit_caption": "Oil (MMBbl) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "V1_gas",
+    "value": 3239.6,
+    "raw": "3,239.6",
+    "unit": "Bcf",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 85,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Pro Forma Combined",
+     "unit_caption": "Gas (Bcf) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "V1_ngl",
+    "value": 375.2,
+    "raw": "375.2",
+    "unit": "MMBbl",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 91,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Pro Forma Combined",
+     "unit_caption": "NGLs (MMBbl) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "V1_total",
+    "value": 1531.6,
+    "raw": "1,531.6",
+    "unit": "MMBOE",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 97,
+     "row_label": "As of December 31, 2025",
+     "column_header": "Pro Forma Combined",
+     "unit_caption": "Total (MMBOE) / Total net proved reserves",
+     "method": "table (ix 태그 없음)"
+    },
+    "note": "Maverick 매각분 포함"
+   },
+   {
+    "id": "CHK",
+    "value": null,
+    "raw": "",
+    "unit": "",
+    "status": "ok",
+    "source": {},
+    "note": "S5합 21685 vs 21685; S7합 13576 vs 13576",
+    "ok": true
+   }
+  ],
+  "divestiture": [
+   {
+    "id": "V1_total",
+    "value": 168.1,
+    "raw": "168.1 MMBOE",
+    "unit": "MMBOE",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "paragraph": "Pro forma reserves 서두 문단",
+     "text": "SM Energy’s net proved reserves in the tables below include the net proved reserves associated with the Maverick Basin Divestiture. The net proved reserves related to the Maverick Basin Divestiture as of December 31, 2025 totaled 168.1 MMBOE. This is approximately 25% of SM Energy’s net proved reserves and 11% of pro forma combined net proved reserves as of December 31, 2025."
+    },
+    "note": "2025-12-31 매각분 순증명매장량; SM의 약 25%, 합산의 약 11% (168.1/673.0=25.0%, /1531.6=11.0%)"
+   },
+   {
+    "id": "V1_oil",
+    "value": null,
+    "raw": "",
+    "unit": "MMBbl",
+    "status": "null",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm"
+    },
+    "note": "제품별 매각 물량 미공시"
+   },
+   {
+    "id": "V1_gas",
+    "value": null,
+    "raw": "",
+    "unit": "Bcf",
+    "status": "null",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm"
+    },
+    "note": "제품별 매각 물량 미공시"
+   },
+   {
+    "id": "V1_ngl",
+    "value": null,
+    "raw": "",
+    "unit": "MMBbl",
+    "status": "null",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm"
+    },
+    "note": "제품별 매각 물량 미공시"
+   },
+   {
+    "id": "S7",
+    "value": 660,
+    "raw": "$660 million",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "paragraph": "Pro Forma Standardized Measure 서두 문단",
+     "text": "The effect of removing the Maverick Basin Divestiture would remove $660 million of discounted future net cash flows resulting in approximately $5.3 billion of discounted net cash flows for SM Energy. This is approximately 11% of SM Energy’s discounted future net cash flows and 5% of pro forma combined discounted future net cash flows at December 31, 2025."
+    },
+    "note": "매각분 standardized measure; 660/5,956=11.1%, 660/13,576=4.9%"
+   },
+   {
+    "id": "S7_SM_ex_divestiture",
+    "value": 5300,
+    "raw": "approximately $5.3 billion",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "paragraph": "Pro Forma Standardized Measure 서두 문단",
+     "text": "The effect of removing the Maverick Basin Divestiture would remove $660 million of discounted future net cash flows resulting in approximately $5.3 billion of discounted net cash flows for SM Energy. This is approximately 11% of SM Energy’s discounted future net cash flows and 5% of pro forma combined discounted future net cash flows at December 31, 2025."
+    },
+    "note": "회사 제시 근사치; 5,956-660=5,296"
+   },
+   {
+    "id": "S1-S6",
+    "value": null,
+    "raw": "",
+    "unit": "USD millions",
+    "status": "null",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm"
+    },
+    "note": "매각분 S1~S6 미공시"
+   },
+   {
+    "id": "D_cash_consideration",
+    "value": 950,
+    "raw": "950",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 18,
+     "row_label": "Cash consideration for divestment",
+     "column_header": "As of December 31, 2025",
+     "unit_caption": "(In millions)"
+    },
+    "note": "매각 대가"
+   },
+   {
+    "id": "D_book_assets",
+    "value": -630,
+    "raw": "(630",
+    "unit": "USD millions",
+    "status": "ok",
+    "source": {
+     "file": "SM__8-K__2026-03-04__tm267946d1_ex99-4.htm",
+     "table_index": 18,
+     "row_label": "Less: Divested Maverick Basin assets",
+     "column_header": "As of December 31, 2025",
+     "unit_caption": "(In millions)"
+    },
+    "note": "장부가(Std. Measure 아님); 부채 45, 세전이익 347, 세후 268"
+   }
+  ]
+ }
+}

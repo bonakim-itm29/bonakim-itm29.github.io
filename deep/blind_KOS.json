@@ -1,0 +1,423 @@
+{
+ "ticker": "KOS",
+ "items": [
+  {
+   "id": "F1",
+   "value": 607.253,
+   "raw": "607,253",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:Revenues",
+    "contextRef": "c-5",
+    "table": 13,
+    "row": "Oil and gas revenue",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Scale=3 (thousands). 'Total revenues and other income' row (kos:RevenueAndOtherIncome) = 617,035 incl. gain on sale of assets 9,421 and other income 361; chose us-gaap:Revenues (oil and gas revenue), which matches release headline 'Revenues: $607 million'."
+  },
+  {
+   "id": "F2",
+   "value": 184.775,
+   "raw": "184,775",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetIncomeLoss",
+    "contextRef": "c-5",
+    "table": 13,
+    "row": "Net income (loss)",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "No noncontrolling interest; Net income (loss) is attributable to Kosmos in full."
+  },
+  {
+   "id": "F3",
+   "value": -40.799,
+   "raw": "(40,799)",
+   "unit": "USD millions",
+   "period": "2026-01-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetIncomeLoss",
+    "contextRef": "c-1",
+    "table": 13,
+    "row": "Net income (loss)",
+    "col": "Six Months Ended June 30, 2026"
+   },
+   "note": "ix sign='-'. Q1 -225,574 + Q2 184,775 = -40,799 (matches equity statement)."
+  },
+  {
+   "id": "F4",
+   "value": 281.566,
+   "raw": "281,566",
+   "unit": "USD millions",
+   "period": "2026-01-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+    "contextRef": "c-1",
+    "table": 15,
+    "row": "Net cash provided by operating activities",
+    "col": "Six Months Ended June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F5",
+   "value": 102.137,
+   "raw": "102,137",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "contextRef": "c-3",
+    "table": 12,
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026"
+   },
+   "note": "Excludes restricted cash (current 23,505; long-term 30,589). Cash+restricted = 156,231."
+  },
+  {
+   "id": "F6",
+   "value": 4310.147,
+   "raw": "4,310,147",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:Assets",
+    "contextRef": "c-3",
+    "table": 12,
+    "row": "Total assets",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "F7",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 12,
+    "row": "(no Total liabilities row)",
+    "col": "June 30, 2026"
+   },
+   "note": "Balance sheet shows only Total current liabilities 662,796 (us-gaap:LiabilitiesCurrent) and Total long-term liabilities 2,942,454 (us-gaap:LiabilitiesNoncurrent); no us-gaap:Liabilities fact. Their sum 3,605,250 (= total L&SE 4,310,147 - equity 704,897) is a derived figure, not reported."
+  },
+  {
+   "id": "F8",
+   "value": 704.897,
+   "raw": "704,897",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:StockholdersEquity",
+    "contextRef": "c-3",
+    "table": 12,
+    "row": "Total stockholders' equity",
+    "col": "June 30, 2026"
+   },
+   "note": "No noncontrolling interest and no separate 'Total equity' row; total equity = stockholders' equity attributable to Kosmos = 704,897.",
+   "value_total_equity": 704.897,
+   "value_company_stockholders_equity": 704.897
+  },
+  {
+   "id": "F9",
+   "value": 2672.175,
+   "raw": "2,672,175",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:LongTermDebt",
+    "contextRef": "c-3",
+    "table": 26,
+    "row": "Total debt, net",
+    "col": "June 30, 2026"
+   },
+   "note": "Debt note: current maturities 145,303 + long-term debt, net 2,526,872 = 2,672,175 (carrying value, net of 47,501 unamortized deferred financing costs/discounts). Principal 'Total long-term debt' = 2,719,676 (us-gaap:DebtInstrumentCarryingAmount). Excludes TEN FPSO finance lease liability 73,203 (in accrued liabilities)."
+  },
+  {
+   "id": "F10",
+   "value": 595487651,
+   "raw": "595,487,651",
+   "unit": "shares",
+   "period": "2026-07-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "dei:EntityCommonStockSharesOutstanding",
+    "contextRef": "c-2",
+    "table": null,
+    "row": "Common Shares, $0.01 par value",
+    "col": "Outstanding at July 30, 2026"
+   },
+   "note": "Single class (common shares). Cover page text and dei fact agree."
+  },
+  {
+   "id": "O1",
+   "value": 71400,
+   "raw": "~71,400",
+   "unit": "Boe/d",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": null,
+    "row": "Total net production (text, highlights & Operational Update)",
+    "col": "Q2 2026"
+   },
+   "note": "Production basis, company-stated approximation ('approximately 71,400 boepd'); includes EG only through 2026-06-16. Sales basis: 76,982 Boepd (10-Q MD&A table 47; release table 13 76.982 MBoepd)."
+  },
+  {
+   "id": "O2",
+   "value": null,
+   "raw": "",
+   "unit": "Bbl/d",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ambiguous",
+   "source": {
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 13,
+    "row": "Oil (MMBbl) - Net Volume Sold",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "No company-wide net oil production rate disclosed; release gives only boepd by region (Ghana 36,300 boepd incl ~7,000 gas; GoA 14,300 boepd ~83% oil; EG 5,100 bopd net; GTA 15,700 boepd). Only oil SALES volume is reported: 4,571 MBbl (≈50,230 Bbl/d if divided by 91 days - derived, not reported)."
+  },
+  {
+   "id": "O3",
+   "value": 108.57,
+   "raw": "108.57",
+   "unit": "USD/Bbl",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 47,
+    "row": "Average oil sales price per Bbl",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Sales price before derivative settlements (derivatives are a separate line). Same in release table 13. Commodity cash settlements Q2 = -105,381k (-15.04/Boe on total Boe basis)."
+  },
+  {
+   "id": "O4",
+   "value": 25.61,
+   "raw": "25.61",
+   "unit": "USD/Boe",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 47,
+    "row": "Average cost per Boe: Total oil and gas production costs",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Kosmos does not use the term 'LOE'; equivalent line is 'Oil and gas production costs' (release: 'Production expense $25.61 per boe'), incl. workovers 0.20 and GTA LNG costs ($65.8M in Q2). Ex-workovers 25.41; ex-Mauritania/Senegal 20.91 (release)."
+  },
+  {
+   "id": "O5",
+   "value": 311.656,
+   "raw": "311,656",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 5,
+    "row": "EBITDAX",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Table header '(In thousands, unaudited)'. Company label is 'EBITDAX' (not 'Adjusted'); includes cash settlements on commodity derivatives (-105,381). 'Pro Forma EBITDAX' (TEN FPSO lease & EG divestiture adj.) = 338,980."
+  },
+  {
+   "id": "O6",
+   "value": 88.891,
+   "raw": "88,891",
+   "unit": "USD millions",
+   "period": "2026-04-01~2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 11,
+    "row": "Free cash flow",
+    "col": "Three Months Ended June 30, 2026"
+   },
+   "note": "Name: 'Free cash flow' = CFO 175,010 - oil and gas assets 76,430 - finance lease payments 9,689. 6M = 103,138."
+  },
+  {
+   "id": "O7",
+   "value": 2563.445,
+   "raw": "2,563,445",
+   "unit": "USD millions",
+   "period": "2026-06-30",
+   "status": "ok",
+   "source": {
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 7,
+    "row": "Net debt",
+    "col": "June 30, 2026"
+   },
+   "note": "Total long-term debt (principal) 2,719,676 - cash 102,137 - total restricted cash 54,094. Excludes $73.2M TEN FPSO finance lease liability. Same figure in 10-Q MD&A (table 52)."
+  },
+  {
+   "id": "O8",
+   "value": 3250000,
+   "raw": "1,000 + 500 + 1,000 + 750 MBbl",
+   "unit": "Bbl",
+   "period": "2026-07-01~2026-12-31",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "method": "both",
+    "ix_name": "us-gaap:DerivativeNonmonetaryNotionalAmountVolume / us-gaap:DerivativeSwapTypeAverageFixedPrice",
+    "contextRef": "c-169,c-171,c-173,c-175 / c-172,c-174,c-176",
+    "table": 30,
+    "row": "2026: Jul - Dec rows",
+    "col": "MBbl; Swap"
+   },
+   "note": "Total Jul-Dec 2026 oil hedges 3,250 MBbl (three-way collars Brent 1,000 @ 50/60/75.51; swaps 2,250). Swap weighted avg = (500x72.46 + 1,000x69.70 + 750x64.83)/2,250 = 68.69 $/Bbl (computed; mixes Dated Brent and NYMEX WTI; Brent-only 1,500 @ 70.62 per release). Swaps 'include option contracts sold to enhance swaps' (sold puts 55/50 on 1,750 MBbl; 100.00 ceiling on 500 MBbl). ix dimension kos:TermJuly2026ToDec2026Member confirms period.",
+   "swap_volume_bbl": 2250000,
+   "swap_weighted_avg_price_usd_per_bbl": 68.69
+  },
+  {
+   "id": "R1",
+   "value": 249,
+   "raw": "249",
+   "unit": "MMBoe",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 13,
+    "row": "Total Kosmos proved reserves",
+    "col": "2025 Net Proved Reserves - Total (MMBoe)"
+   },
+   "note": "Oil/cond/NGL 120 MMBbl + gas 770 Bcf. Reserves not tagged in iXBRL (table only). Same total in reserve rollforward table 73."
+  },
+  {
+   "id": "R2",
+   "value": 138,
+   "raw": "138",
+   "unit": "MMBoe",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 13,
+    "row": "Total proved developed",
+    "col": "2025 Net Proved Reserves - Total (MMBoe)"
+   },
+   "note": "PD share = 138/249 = 55.4% (computed). PUD 111 MMBoe."
+  },
+  {
+   "id": "R3",
+   "value": 1890,
+   "raw": "1,890",
+   "unit": "USD millions",
+   "period": "2025-12-31",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": 76,
+    "row": "Standardized measure of discounted future net cash flows",
+    "col": "At December 31, 2025 - Total"
+   },
+   "note": "Table header '(In millions)'. Not tagged in iXBRL."
+  },
+  {
+   "id": "R4",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "period": "2025-12-31",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Company does not present a PV-10 for total proved reserves; 'PV-10' appears only in the GoA term-loan covenant definition."
+  },
+  {
+   "id": "R5",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Bbl; USD/MMBtu",
+   "period": "2025 (12-month average)",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "method": "table",
+    "ix_name": "",
+    "contextRef": "",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "10-K states reserves use the 12-month unweighted first-day-of-month average Dated Brent price (adjusted for differentials) but does not disclose the numeric SEC price for oil or gas. Only 2025 Dated Brent range $60.20-$83.06 is given."
+  }
+ ]
+}

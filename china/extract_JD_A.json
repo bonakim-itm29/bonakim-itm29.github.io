@@ -1,0 +1,1190 @@
+{
+ "ticker": "JD",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 346401,
+   "raw": "346,401",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Total net revenues",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Statements of Operations; (In millions). Q1 2026 (PREL) = 315,694."
+  },
+  {
+   "id": "Q1_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 356660,
+   "raw": "356,660",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Total net revenues",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Statements of Operations; (In millions). Q1 2026 (PREL) = 315,694."
+  },
+  {
+   "id": "Q2_JD_Retail",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 295383,
+   "raw": "295,383",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Net revenues: JD Retail",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment table (In millions, except percentage data). Company segments: JD Retail, JD Logistics, New Businesses; eliminations listed separately; total 346,401."
+  },
+  {
+   "id": "Q2_JD_Retail_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 310075,
+   "raw": "310,075",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Net revenues: JD Retail",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Segment table (In millions, except percentage data). Company segments: JD Retail, JD Logistics, New Businesses; eliminations listed separately; total 346,401."
+  },
+  {
+   "id": "Q2_JD_Logistics",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 64102,
+   "raw": "64,102",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Net revenues: JD Logistics",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment table (In millions, except percentage data). Company segments: JD Retail, JD Logistics, New Businesses; eliminations listed separately; total 346,401."
+  },
+  {
+   "id": "Q2_JD_Logistics_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 51564,
+   "raw": "51,564",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Net revenues: JD Logistics",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Segment table (In millions, except percentage data). Company segments: JD Retail, JD Logistics, New Businesses; eliminations listed separately; total 346,401."
+  },
+  {
+   "id": "Q2_New_Businesses",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 7260,
+   "raw": "7,260",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Net revenues: New Businesses",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment table (In millions, except percentage data). Company segments: JD Retail, JD Logistics, New Businesses; eliminations listed separately; total 346,401."
+  },
+  {
+   "id": "Q2_New_Businesses_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 13852,
+   "raw": "13,852",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Net revenues: New Businesses",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Segment table (In millions, except percentage data). Company segments: JD Retail, JD Logistics, New Businesses; eliminations listed separately; total 346,401."
+  },
+  {
+   "id": "Q2_Inter-segment_eliminations",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": -20344,
+   "raw": "(20,344)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Net revenues: Inter-segment eliminations*",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Segment table (In millions, except percentage data). Company segments: JD Retail, JD Logistics, New Businesses; eliminations listed separately; total 346,401."
+  },
+  {
+   "id": "Q2_Inter-segment_eliminations_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": -18831,
+   "raw": "(18,831)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Net revenues: Inter-segment eliminations*",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Segment table (In millions, except percentage data). Company segments: JD Retail, JD Logistics, New Businesses; eliminations listed separately; total 346,401."
+  },
+  {
+   "id": "Q3",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 4547,
+   "raw": "4,547",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "(Loss)/Income from operations (2)(3)",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "GAAP; also same value in segment table 19 \"Total consolidated (loss)/income from operations\"."
+  },
+  {
+   "id": "Q3_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": -859,
+   "raw": "(859)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "(Loss)/Income from operations (2)(3)",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "GAAP; also same value in segment table 19 \"Total consolidated (loss)/income from operations\"."
+  },
+  {
+   "id": "Q4",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 5483,
+   "raw": "5,483",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 40,
+    "row": "Non-GAAP income from operations",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Company-presented name: \"Non-GAAP income from operations\" (table also gives Non-GAAP EBITDA 7,933 vs 2,999). Adds back SBC, acquired-intangible amortization, reverses gain on development properties, adds SAMR fine."
+  },
+  {
+   "id": "Q4_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 896,
+   "raw": "896",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 40,
+    "row": "Non-GAAP income from operations",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Company-presented name: \"Non-GAAP income from operations\" (table also gives Non-GAAP EBITDA 7,933 vs 2,999). Adds back SBC, acquired-intangible amortization, reverses gain on development properties, adds SAMR fine."
+  },
+  {
+   "id": "Q5",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 7129,
+   "raw": "7,129",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Net income attributable to the Company's ordinary shareholders",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "GAAP."
+  },
+  {
+   "id": "Q5_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 6178,
+   "raw": "6,178",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Net income attributable to the Company's ordinary shareholders",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "GAAP."
+  },
+  {
+   "id": "Q6",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 8930,
+   "raw": "8,930",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 41,
+    "row": "Non-GAAP net income attributable to the Company's ordinary shareholders",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Also in table 33."
+  },
+  {
+   "id": "Q6_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 7394,
+   "raw": "7,394",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 41,
+    "row": "Non-GAAP net income attributable to the Company's ordinary shareholders",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Also in table 33."
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 5.01,
+   "raw": "5.01",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Net income per ADS: Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "US$ column: 0.74 (Q2 2026). 1 ADS = 2 Class A ordinary shares."
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 4.15,
+   "raw": "4.15",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Net income per ADS: Diluted",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "US$ column: 0.74 (Q2 2026). 1 ADS = 2 Class A ordinary shares."
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 6.29,
+   "raw": "6.29",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Non-GAAP net income per ADS: Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "US$ column: 0.93 (Q2 2026)."
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 4.97,
+   "raw": "4.97",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Non-GAAP net income per ADS: Diluted",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "US$ column: 0.93 (Q2 2026)."
+  },
+  {
+   "id": "Q8",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 37718,
+   "raw": "37,718",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Net cash provided by operating activities",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Also in table 16 (FCF table)."
+  },
+  {
+   "id": "Q8_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 24409,
+   "raw": "24,409",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Net cash provided by operating activities",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Also in table 16 (FCF table)."
+  },
+  {
+   "id": "Q9",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 31835,
+   "raw": "31,835",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Free cash flow",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Definition: \"The Company defines free cash flow as operating cash flow adjusting the impact from consumer financing receivables included in the operating cash flow and capital expenditures, net of related sales proceeds.\" TTM FCF (table 18, twelve months ended June 30, 2026) = 31,415."
+  },
+  {
+   "id": "Q9_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": 22018,
+   "raw": "22,018",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Free cash flow",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Definition: \"The Company defines free cash flow as operating cash flow adjusting the impact from consumer financing receivables included in the operating cash flow and capital expenditures, net of related sales proceeds.\" TTM FCF (table 18, twelve months ended June 30, 2026) = 31,415."
+  },
+  {
+   "id": "Q10",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": -5520,
+   "raw": "(5,520)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Less: Capital expenditures, net of related sales proceeds",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Outflow shown negative. Net of related sales proceeds. Sub-rows: Capital expenditures for development properties (2,517) vs (1,076); Other capital expenditures (3,003) vs (1,956)."
+  },
+  {
+   "id": "Q10_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": -3032,
+   "raw": "(3,032)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Less: Capital expenditures, net of related sales proceeds",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Outflow shown negative. Net of related sales proceeds. Sub-rows: Capital expenditures for development properties (2,517) vs (1,076); Other capital expenditures (3,003) vs (1,956)."
+  },
+  {
+   "id": "Q10_dev_properties",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": -2517,
+   "raw": "(2,517)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Capital expenditures for development properties",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Sub-component of Q10."
+  },
+  {
+   "id": "Q10_dev_properties_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": -1076,
+   "raw": "(1,076)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Capital expenditures for development properties",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Sub-component of Q10."
+  },
+  {
+   "id": "Q10_other",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": -3003,
+   "raw": "(3,003)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Other capital expenditures",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Sub-component of Q10; includes HQ in Beijing and all other CAPEX (table 17 footnote)."
+  },
+  {
+   "id": "Q10_other_prior_year",
+   "period": "three months ended June 30, 2025 (Q2 2025)",
+   "value": -1956,
+   "raw": "(1,956)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Other capital expenditures",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "Sub-component of Q10; includes HQ in Beijing and all other CAPEX (table 17 footnote)."
+  },
+  {
+   "id": "B1",
+   "period": "as of June 30, 2026",
+   "value": 89068,
+   "raw": "89,068",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Cash and cash equivalents",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). "
+  },
+  {
+   "id": "B1_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 137488,
+   "raw": "137,488",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Cash and cash equivalents",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Restricted_cash",
+   "period": "as of June 30, 2026",
+   "value": 13396,
+   "raw": "13,396",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Restricted cash",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). "
+  },
+  {
+   "id": "B2_Restricted_cash_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 12137,
+   "raw": "12,137",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Restricted cash",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Short-term_investments",
+   "period": "as of June 30, 2026",
+   "value": 132594,
+   "raw": "132,594",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Short-term investments",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). "
+  },
+  {
+   "id": "B2_Short-term_investments_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 75744,
+   "raw": "75,744",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Short-term investments",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Marketable_securities_and_other_investments",
+   "period": "as of June 30, 2026",
+   "value": 38395,
+   "raw": "38,395",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Marketable securities and other investments",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). Non-current asset; listed for completeness, not necessarily cash-like."
+  },
+  {
+   "id": "B2_Marketable_securities_and_other_investments_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 51840,
+   "raw": "51,840",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Marketable securities and other investments",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": "Non-current asset; listed for completeness, not necessarily cash-like."
+  },
+  {
+   "id": "B3_Short-term_debts",
+   "period": "as of June 30, 2026",
+   "value": 3534,
+   "raw": "3,534",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Short-term debts",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). Current liabilities."
+  },
+  {
+   "id": "B3_Short-term_debts_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 8014,
+   "raw": "8,014",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Short-term debts",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": "Current liabilities."
+  },
+  {
+   "id": "B3_Unsecured_senior_notes_current",
+   "period": "as of June 30, 2026",
+   "value": 13555,
+   "raw": "13,555",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Unsecured senior notes (current liabilities)",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). Current portion. Per IFRS reconciliation (table 54) total unsecured senior notes 30,162 and includes convertible senior notes (no separate convertible line on US GAAP balance sheet)."
+  },
+  {
+   "id": "B3_Unsecured_senior_notes_current_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 3511,
+   "raw": "3,511",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Unsecured senior notes (current liabilities)",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": "Current portion. Per IFRS reconciliation (table 54) total unsecured senior notes 30,162 and includes convertible senior notes (no separate convertible line on US GAAP balance sheet)."
+  },
+  {
+   "id": "B3_Unsecured_senior_notes_noncurrent",
+   "period": "as of June 30, 2026",
+   "value": 16607,
+   "raw": "16,607",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Unsecured senior notes (non-current liabilities)",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). Non-current portion."
+  },
+  {
+   "id": "B3_Unsecured_senior_notes_noncurrent_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 20798,
+   "raw": "20,798",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Unsecured senior notes (non-current liabilities)",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": "Non-current portion."
+  },
+  {
+   "id": "B3_Long-term_debts",
+   "period": "as of June 30, 2026",
+   "value": 36196,
+   "raw": "36,196",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Long-term debts",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). Non-current liabilities."
+  },
+  {
+   "id": "B3_Long-term_debts_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 41675,
+   "raw": "41,675",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Long-term debts",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": "Non-current liabilities."
+  },
+  {
+   "id": "B4",
+   "period": "as of June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Company does not state a net cash figure. It states gross liquidity only: \"As of June 30, 2026, the Company's cash and cash equivalents, restricted cash and short-term investments totaled RMB235.1 billion (US$34.6 billion), compared to RMB225.4 billion as of December 31, 2025.\" (see B4_gross_liquidity)"
+  },
+  {
+   "id": "B4_gross_liquidity",
+   "period": "as of June 30, 2026",
+   "value": 235100,
+   "raw": "RMB235.1 billion",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "paragraph (Liquidity section): cash and cash equivalents, restricted cash and short-term investments totaled",
+    "col": "text"
+   },
+   "note": "Converted from RMB billions (rounded to 0.1bn); NOT net cash. Table sum 89,068+13,396+132,594=235,058. Dec 31, 2025: RMB225.4 billion."
+  },
+  {
+   "id": "B5",
+   "period": "as of June 30, 2026",
+   "value": 725406,
+   "raw": "725,406",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Total assets",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). "
+  },
+  {
+   "id": "B5_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 695201,
+   "raw": "695,201",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Total assets",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Total_shareholders_equity",
+   "period": "as of June 30, 2026",
+   "value": 282375,
+   "raw": "282,375",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total shareholders' equity",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). Includes non-controlling interests (63,257 / 68,743)."
+  },
+  {
+   "id": "B6_Total_shareholders_equity_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 293783,
+   "raw": "293,783",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total shareholders' equity",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": "Includes non-controlling interests (63,257 / 68,743)."
+  },
+  {
+   "id": "B6_JD_shareholders_equity",
+   "period": "as of June 30, 2026",
+   "value": 219118,
+   "raw": "219,118",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total JD.com, Inc. shareholders' equity",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). "
+  },
+  {
+   "id": "B6_JD_shareholders_equity_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 225040,
+   "raw": "225,040",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total JD.com, Inc. shareholders' equity",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Non-controlling_interests",
+   "period": "as of June 30, 2026",
+   "value": 63257,
+   "raw": "63,257",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Non-controlling interests",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). "
+  },
+  {
+   "id": "B6_Non-controlling_interests_prior_FYE",
+   "period": "as of December 31, 2025",
+   "value": 68743,
+   "raw": "68,743",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Non-controlling interests",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_shares_outstanding",
+   "period": "as of June 30, 2026",
+   "value": 2688,
+   "raw": "2,688 million shares outstanding",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total JD.com, Inc. shareholders' equity (US$0.00002 par value, 100,000 million shares authorized, 2,756 million shares issued and 2,688 million shares outstanding as of June 30, 2026)",
+    "col": "row caption"
+   },
+   "note": "Issued: 2,756 million. Class A+B combined."
+  },
+  {
+   "id": "S1_shares_issued",
+   "period": "as of June 30, 2026",
+   "value": 2756,
+   "raw": "2,756 million shares issued",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total JD.com, Inc. shareholders' equity (... 2,756 million shares issued ...)",
+    "col": "row caption"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_ADS_ratio",
+   "period": "",
+   "value": 2,
+   "raw": "each ADS representing two Class A ordinary shares",
+   "unit": "ordinary shares per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 7,
+    "row": "Footnote 3",
+    "col": "footnote"
+   },
+   "note": "Also: non-GAAP per ADS = per share x 2."
+  },
+  {
+   "id": "S1_shares_outstanding_FYE2025",
+   "period": "as of December 31, 2025",
+   "value": 2742,
+   "raw": "approximately 2,742 million shares",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 9,
+    "row": "Footnote 4",
+    "col": "footnote"
+   },
+   "note": "Base for buyback % calculation."
+  },
+  {
+   "id": "S2",
+   "period": "three months ended June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "million ADS",
+   "status": "null",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "",
+    "col": ""
+   },
+   "note": "Diluted weighted average ADS count not presented; only ordinary shares given (see S2_diluted_weighted_shares). ADS-equivalent would be 2,816/2 = 1,408 million (derived, not reported)."
+  },
+  {
+   "id": "S2_diluted_weighted_shares",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": 2816,
+   "raw": "2,816",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Weighted average number of shares: Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Q2 2025: 2,970. Basic: 2,692 (Q2 2026)."
+  },
+  {
+   "id": "R1_H1_amount",
+   "period": "six months ended June 30, 2026",
+   "value": 1.0,
+   "raw": "US$1.0 billion",
+   "unit": "US$ billions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "Updates of Share Repurchase Program (paragraph)",
+    "col": "text"
+   },
+   "note": "Only a six-month figure is reported in QREL: ~69.9 million Class A ordinary shares (34.9 million ADSs), ~2.5% of shares outstanding as of Dec 31, 2025. Program US$5.0bn adopted Aug 2024, through Aug 2027."
+  },
+  {
+   "id": "R1_H1_shares",
+   "period": "six months ended June 30, 2026",
+   "value": 69.9,
+   "raw": "approximately 69.9 million Class A ordinary shares (equivalent to 34.9 million ADSs)",
+   "unit": "million Class A ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "Updates of Share Repurchase Program (paragraph)",
+    "col": "text"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_Q1_amount",
+   "period": "three months ended March 31, 2026",
+   "value": 631,
+   "raw": "US$631 million",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": null,
+    "row": "Updates of Share Repurchase Program (paragraph)",
+    "col": "text"
+   },
+   "note": "~44.5 million Class A ordinary shares (22.3 million ADSs); remaining US$1.4 billion as of Mar 31, 2026."
+  },
+  {
+   "id": "R1_Q2_amount",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "value": null,
+   "raw": "",
+   "unit": "US$ millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Quarterly Q2 amount not stated. Derived H1 minus Q1 = US$1.0bn - US$631m ~ US$369m and ~25.4m shares (69.9-44.5), but H1 figure is rounded to 0.1bn so derived value imprecise; not recorded as value."
+  },
+  {
+   "id": "R1_remaining",
+   "period": "as of June 30, 2026",
+   "value": 1.0,
+   "raw": "US$1.0 billion",
+   "unit": "US$ billions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "Updates of Share Repurchase Program (paragraph)",
+    "col": "text"
+   },
+   "note": "\"The remaining amount under the share repurchase program was US$1.0 billion as of June 30, 2026.\""
+  },
+  {
+   "id": "R2",
+   "period": "declared March 2026, for year ended December 31, 2025",
+   "value": 1.0,
+   "raw": "US$0.50 per ordinary share, or US$1.00 per ADS",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": null,
+    "row": "Notes to consolidated financial statements - Subsequent events - Dividends (paragraph)",
+    "col": "text"
+   },
+   "note": "Annual cash dividend (not special); aggregate ~US$1.4 billion. PREL notes annual dividend payment completed in April 2026. No new dividend in QREL."
+  },
+  {
+   "id": "A1",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "value": 1309085,
+   "raw": "1,309,085",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 444,
+    "row": "Total net revenues",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Consolidated Statements of Operations and Comprehensive Income (in millions). FY2024: 1,158,819."
+  },
+  {
+   "id": "A2",
+   "period": "FY2025",
+   "value": 19631,
+   "raw": "19,631",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 444,
+    "row": "Net income attributable to the Company's ordinary shareholders",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "FY2024: 41,359."
+  },
+  {
+   "id": "A3",
+   "period": "FY2025",
+   "value": 18991,
+   "raw": "18,991",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 446,
+    "row": "Net cash provided by operating activities",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "Consolidated Statements of Cash Flows. FY2024: 58,095."
+  },
+  {
+   "id": "A4_Purchase_of_PPE_software_intangibles",
+   "period": "FY2025",
+   "value": -7823,
+   "raw": "(7,823)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Purchase of property, equipment and software and intangible assets",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "Investing activities; outflow negative. Company capex definition includes PPE/software, CIP, intangibles, land use rights and asset acquisitions. Sales of development properties +4,887 (separate row)."
+  },
+  {
+   "id": "A4_Cash_paid_for_construction_in_progress",
+   "period": "FY2025",
+   "value": -5964,
+   "raw": "(5,964)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Cash paid for construction in progress",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "Investing activities; outflow negative. Company capex definition includes PPE/software, CIP, intangibles, land use rights and asset acquisitions. Sales of development properties +4,887 (separate row)."
+  },
+  {
+   "id": "A4_Purchase_of_land_use_rights",
+   "period": "FY2025",
+   "value": -397,
+   "raw": "(397)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Purchase of land use rights",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "Investing activities; outflow negative. Company capex definition includes PPE/software, CIP, intangibles, land use rights and asset acquisitions. Sales of development properties +4,887 (separate row)."
+  },
+  {
+   "id": "A4_Cash_paid_for_asset_acquisitions",
+   "period": "FY2025",
+   "value": -3607,
+   "raw": "(3,607)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Cash paid for asset acquisitions, net of cash acquired",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "Investing activities; outflow negative. Company capex definition includes PPE/software, CIP, intangibles, land use rights and asset acquisitions. Sales of development properties +4,887 (separate row)."
+  },
+  {
+   "id": "X1_20F",
+   "period": "as of December 31, 2025",
+   "value": 6.9931,
+   "raw": "RMB6.9931 to US$1.00",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": null,
+    "row": "Conventions / exchange rate paragraph",
+    "col": "text"
+   },
+   "note": "H.10 release, Federal Reserve Board."
+  },
+  {
+   "id": "X1_QREL",
+   "period": "as of June 30, 2026",
+   "value": 6.7851,
+   "raw": "RMB6.7851 to US$1.00",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 5,
+    "row": "Footnote 1",
+    "col": "footnote"
+   },
+   "note": "H.10 release as of June 30, 2026; used for Q2 2026 US$ convenience amounts."
+  }
+ ]
+}

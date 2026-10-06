@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__NAME__ 심층 분석 · 매크로 투자노트</title>
+<meta name="description" content="__NAME__(__T__) 공시 검증, 상장 이후 주가와 매크로 지표의 관계, 급변동 이벤트 분석">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>
+:root{
+  --ink-2:#4d524e; --ink-3:#7c817d; --rule:#dcdfdb; --rule-2:#eceeeb; --neu-bg:#f0f1ee;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#8a5cd1; --muted-mark:#a9ada9;
+  --good:#0f7a3a; --good-bg:#e4f3e9; --warn:#9a6400; --warn-bg:#fbf1dc; --bad:#b3261e; --bad-bg:#fbe7e5;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --ink-2:#c3c6c1; --ink-3:#8f948f; --rule:#343633; --rule-2:#262826; --neu-bg:#242624;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#9d74e0; --muted-mark:#6b6f6b;
+  --good:#5cc486; --good-bg:#16291d; --warn:#e0b04a; --warn-bg:#2d2412; --bad:#ef7f76; --bad-bg:#331b19;}}
+.wrap{max-width:980px}
+section h2{font-size:1.35rem;text-transform:none;letter-spacing:-.02em;color:var(--text);font-weight:800;margin-bottom:12px}
+section h2 small{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+h3{font-size:1.02rem;margin:0 0 6px}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem;margin-top:16px}
+.toc a{color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--line)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:12px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.tile .l{display:block;font-size:.76rem;color:var(--muted)}
+.tile .v{display:block;font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums}
+.tile .d{display:block;font-size:.76rem;color:var(--ink-2)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-top:12px}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--rule-2);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:.8rem;background:var(--neu-bg);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-bg);color:var(--good)} .p-warn{background:var(--warn-bg);color:var(--warn)} .p-bad{background:var(--bad-bg);color:var(--bad)} .p-neu{background:var(--neu-bg);color:var(--ink-2)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.82rem;color:var(--ink-2);margin-bottom:6px}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.legend i.sq{width:11px;height:11px;border-radius:3px}
+.legend i.dot{width:9px;height:9px;border-radius:50%}
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{fill:var(--ink-3);font-family:var(--mono);font-size:11px}
+.chart .lab{fill:var(--ink-2);font-family:"Pretendard",system-ui,sans-serif;font-size:12px}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.12);min-width:150px;max-width:280px;z-index:20}
+.tip .t{color:var(--muted);margin-bottom:4px}
+.tip .r{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.tip[hidden]{display:none!important}
+.callout{border-left:3px solid var(--accent);background:var(--accent-soft);padding:12px 16px;border-radius:0 10px 10px 0;font-size:.93rem;margin-top:12px}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-bg)}
+ul.tight{margin:0;padding-left:20px;display:grid;gap:5px;font-size:.93rem}
+.small{font-size:.8rem;color:var(--muted)}
+.el{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px}
+.el .panel{margin-top:0}
+.el h3 .n{display:inline-block;min-width:22px;height:22px;line-height:22px;text-align:center;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:.78rem;margin-right:6px}
+.ev{display:grid;gap:12px;margin-top:12px}
+.ev .panel h3{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.ev .date{font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+.ev blockquote{margin:6px 0 0;padding-left:10px;border-left:2px solid var(--line);font-size:.82rem;color:var(--ink-2)}
+.nums{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.grid2>*,.el>*,.tiles>*{min-width:0}
+.panel p,.panel li{overflow-wrap:anywhere}
+.mon{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:12px}
+.mon div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.88rem}
+.mon b{display:block;font-size:.9rem;margin-bottom:2px}
+details.fold{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:12px}
+details.fold>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:600}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold .more{font-size:.8rem;color:var(--accent);font-weight:600;white-space:nowrap}
+details.fold .more::after{content:" ▾"} details.fold[open] .more::after{content:" ▴"}
+details.fold.mini{padding:8px 14px;font-size:.9rem}
+.acc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:12px;align-items:start}
+.acc-grid>*{min-width:0}
+details.acc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+details.acc[open]{border-color:var(--accent)}
+details.acc>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:center}
+details.acc>summary::-webkit-details-marker{display:none}
+details.acc .n{display:inline-block;min-width:24px;height:24px;line-height:24px;text-align:center;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:.8rem;font-weight:700;grid-row:span 2}
+details.acc b{font-size:.95rem}
+details.acc .hl{grid-column:2;font-size:.85rem;color:var(--ink-2)}
+details.acc .chev{grid-row:1/span 2;grid-column:3;color:var(--muted);font-size:.8rem}
+details.acc .chev::after{content:"▾"} details.acc[open] .chev::after{content:"▴"}
+details.acc ul{margin-top:10px}
+.linkbtn{font:inherit;font-size:.82rem;background:none;border:0;color:var(--accent);cursor:pointer;padding:0;text-decoration:underline}
+.term{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:help;border-bottom:1px dotted var(--accent);text-align:inherit}
+.term:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.pop{position:absolute;z-index:30;max-width:300px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.84rem;line-height:1.55;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.pop b{display:block;margin-bottom:2px}
+.pop[hidden]{display:none}
+dl.gloss{display:grid;grid-template-columns:minmax(110px,160px) 1fr;gap:8px 14px;margin-top:12px;font-size:.9rem}
+dl.gloss dt{font-weight:700} dl.gloss dd{margin:0;color:var(--ink-2)}
+@media (max-width:520px){dl.gloss{grid-template-columns:1fr} dl.gloss dd{margin-bottom:6px}}
+.scorewrap{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:12px;margin-top:12px}
+.scorewrap>*{min-width:0;margin-top:0}
+@media (max-width:640px){.scorewrap{grid-template-columns:1fr}}
+.scorebox .big{font-size:3rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.scorebox .big small{font-size:1rem;color:var(--muted);font-weight:600;margin-left:4px}
+.gauge{height:10px;border-radius:999px;background:var(--neu-bg);margin:12px 0 14px;overflow:hidden}
+.gauge i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.peers{display:grid;gap:6px;font-size:.82rem}
+.peers .row{display:grid;grid-template-columns:72px 1fr 32px;gap:8px;align-items:center}
+.peers .row i{display:block;height:6px;border-radius:999px;background:var(--muted-mark)}
+.peers .row.me i{background:var(--accent)} .peers .row.me{font-weight:700}
+.pil{margin-bottom:12px} .pil:last-child{margin-bottom:0}
+.pil .top{display:flex;justify-content:space-between;font-size:.92rem;font-weight:600}
+.pil .bar{height:8px;border-radius:999px;background:var(--neu-bg);margin:5px 0 6px;overflow:hidden}
+.pil .bar i{display:block;height:100%;background:var(--s1)}
+.pil ul{list-style:none;padding:0;margin:0;display:grid;gap:2px;font-size:.82rem;color:var(--ink-2)}
+.pil li{display:flex;justify-content:space-between;gap:10px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:8px}
+.seg button{font:inherit;font-size:.8rem;padding:4px 10px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--accent-soft);color:var(--accent);font-weight:700}
+.panel,.panel li,.panel p,.panel blockquote{min-width:0;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+<main class="wrap">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">매크로 투자노트</a> / __NAME__</p>
+<header class="page">
+  <span class="eyebrow">기업 심층 분석 · __EXCH__: __T__</span>
+  <h1>__NAME__</h1>
+  <p class="lead">__LEAD__</p>
+  <div class="tiles" id="heroTiles"></div>
+  <nav class="toc" aria-label="목차"><a href="#summary">핵심 요약</a><a href="#verify">데이터 검증</a><a href="#deep">8개 요소 분석</a><a href="#fund">장기 재무</a><a href="#price">주가와 매크로</a><a href="#eda">영향 요인 EDA</a><a href="#moves">급변동 분해</a><a href="#events">핵심 이벤트</a><a href="#watch">모니터링</a><a href="#nav">밸류에이션 시나리오</a><a href="#score"><b>종합 매력도</b></a><a href="#method">방법·용어</a></nav>
+</header>
+
+<section id="summary"><h2><small>01</small>핵심 요약</h2>
+  <ul class="tight">__THESIS__</ul>
+</section>
+
+<section id="verify"><h2><small>02</small>데이터 검증</h2>
+  <details class="fold"><summary><span id="vsum">검증 결과 요약</span><span class="more">자세히 보기</span></summary>
+  <p class="small" style="margin-top:12px">네 가지 방법으로 확인했습니다. ① DART 정기보고서 원문 HTML을 서로 모르는 두 에이전트가 표 구조로 따로 추출해 대조, ② 합계 검증(부문·품목 합 = 총계, 발행주식 − 자기주식 = 유통주식), ③ 분기 정합(1분기 + 2분기 = 상반기), ④ 상식 범위 검사.</p>
+  <div class="legend"><span><span class="pill p-good">✔ 일치</span> 둘 이상의 출처 일치</span><span><span class="pill p-neu">단일 출처</span> 원본 한 곳에만 있음</span><span><span class="pill p-warn">⚠</span> 모호·확인 필요</span><span><span class="pill p-neu">자료 없음</span> 회사 미공시</span></div>
+  <div class="tbl"><table id="vtbl" style="min-width:640px"></table></div>
+  <div class="grid2">
+    <div class="panel"><h3>② 합계 · ③ 분기 정합</h3><div id="chk"></div></div>
+    <div class="panel"><h3>④ 상식 범위 검사</h3><div id="san"></div></div>
+  </div>
+  </details>
+  __VNOTE__
+</section>
+
+<section id="deep"><h2><small>03</small>8개 요소 심층 분석</h2>
+  <p class="small">항목을 누르면 세부 내용이 열립니다. 기준: 2026년 2분기(10-Q), 매장량은 2025년 말(10-K), 주가는 9/25 종가. (계산)은 직접 계산한 값입니다.</p>
+  <div class="acc-grid">__ELEMENTS__</div><p class="small" style="margin-top:8px"><button class="linkbtn" id="openAll" type="button">모두 펼치기</button></p>
+</section>
+
+<section id="fund"><h2><small>04</small>장기 재무 추이 (연간)</h2>
+  <p class="small">2022년·2025년 사업보고서의 연결 요약재무정보(2020~2025) 값입니다. 단위 원(₩).</p>
+  <div class="panel"><div class="legend"><span><i class="sq" style="background:var(--s1)"></i>매출</span><span><i class="sq" style="background:var(--s3)"></i>영업이익</span><span><i class="sq" style="background:var(--s2)"></i>지배주주 순이익</span></div><div class="chart" id="fundChart"></div></div>
+  <div class="panel"><h3>주식 수</h3><div class="chart" id="shChart"></div><p class="small" id="shNote"></p></div>
+</section>
+
+<section id="price"><h2><small>05</small>상장 이후 주가와 매크로</h2>
+  <div class="tiles" id="stTiles"></div>
+  <div class="panel"><div class="seg" role="group" aria-label="비교 대상"><button data-k="oil" aria-pressed="true">코스피</button><button data-k="spx" aria-pressed="false">S&amp;P 500</button></div>
+    <div class="legend"><span><i style="background:var(--s1)"></i>__T__ (수정주가)</span><span><i style="background:var(--s2)" id="cmpSw"></i><span id="cmpLab">원유</span></span><span><i class="dot" style="background:var(--bad)"></i>비매크로 급변동</span><span><i class="dot" style="background:var(--s4)"></i>핵심 이벤트</span></div>
+    <div class="chart" id="pxChart"></div><p class="small">로그 눈금, 시작일 = 100. 주간 종가 기준.</p></div>
+  <div class="panel"><h3>연도별 수익률: 주가 vs 코스피</h3><div class="legend"><span><i class="sq" style="background:var(--s1)"></i>__T__</span><span><i class="sq" style="background:var(--s2)"></i><span class="oilName"></span></span></div><div class="chart" id="yrChart"></div><p class="small" id="yrNote"></p></div>
+</section>
+
+<section id="eda"><h2><small>06</small>어떤 매크로가 주가를 움직이나 (EDA)</h2>
+  <p>매주 주가 변화를 9개 매크로 지표의 변화로 얼마나 설명할 수 있는지(R²) 보고, 그 설명력을 지표별로 나눴습니다(Shapley 분해). 가장 큰 몫을 가진 지표가 "주가를 가장 크게 움직이는 매크로"입니다.</p>
+  <div class="grid2">
+    <div class="panel"><h3>설명력 분해 (전체 기간)</h3><p class="small" id="shNote2"></p><div class="chart" id="shapChart"></div></div>
+    <div class="panel"><h3>지표별 단순 상관 (주간)</h3><p class="small">+는 같은 방향, −는 반대 방향.</p><div class="chart" id="corrChart"></div></div>
+  </div>
+  <div class="panel"><h3>국면별로 바뀌는 영향 요인</h3><p class="small">막대 전체 길이 = 그 국면의 R². 색 = 지표별 몫.</p><div class="legend" id="perLegend"></div><div class="chart" id="perChart"></div><div class="tbl"><table id="perTbl" style="white-space:nowrap"></table></div></div>
+  <div class="panel"><h3>52주 이동 상관</h3><div class="legend"><span><i style="background:var(--s2)"></i>원화 약세(USD/KRW)</span><span><i style="background:var(--s1)"></i>S&amp;P 500</span><span><i style="background:var(--s5)"></i>신용스프레드</span></div><div class="chart" id="rollChart"></div></div>
+  <div class="callout"><b>해석.</b> __MACROREAD__</div>
+</section>
+
+<section id="moves"><h2><small>07</small>급변동 분해: 매크로로 설명되는가</h2>
+  <p>하루에 크게 움직인 날(상위 1%)을 골라, 그날의 매크로 변화로 예상되는 움직임과 실제를 비교했습니다. 차이가 클수록 회사 고유 사건입니다.</p>
+  <details class="fold mini"><summary><span>분류 방법</span><span class="more">보기</span></summary><p class="small" style="margin-top:8px">직전 252거래일로 추정한 매크로 모델(S&amp;P 500, 원화, 구리, 10년 금리, 달러, VIX)의 예측치가(미국 지표는 한국 장보다 늦게 끝나므로 전날 미국장 값을 씀) 실제 움직임의 절반 이상이면 <b>매크로</b>, 1/3~1/2이면 <b>혼합</b>, 1/3 미만이면 <b>비매크로</b>입니다. S&amp;P 500이 ±5% 이상 움직였고 관련 공시가 없는 날은 <b>매크로 충격</b>, 같은 날 코스피가 3% 이상 또는 전날 미국 필라델피아 반도체지수(SOX)가 5% 이상 같은 방향으로 움직여 급변동의 절반 이상을 설명하는 날은 <b>시장·업종 공통 충격</b>(한국 증시 전체 또는 반도체 업종 전체의 사건)으로 분류했습니다. 5거래일 안에 겹친 급변동은 가장 큰 날 하나만 남겼습니다.</p></details>
+  <div class="tiles" id="mvTiles"></div>
+  <div class="panel"><h3>실제 수익률 vs 매크로 예측</h3><div class="legend"><span><i class="dot" style="background:var(--s1)"></i>매크로</span><span><i class="dot" style="background:var(--s3)"></i>매크로 충격</span><span><i class="dot" style="background:var(--s5)"></i>시장·업종 공통 충격</span><span><i class="dot" style="background:var(--s4)"></i>혼합</span><span><i class="dot" style="background:var(--bad)"></i>비매크로</span></div><div class="chart" id="scChart"></div><p class="small">대각선 위의 점은 매크로가 설명한 움직임이고, 세로축 방향으로 멀리 떨어진 점일수록 회사 고유 사건입니다.</p></div>
+  <div class="tbl"><table id="mvTbl" style="min-width:560px"></table></div>
+</section>
+
+<section id="events"><h2><small>08</small>매크로로 설명되지 않은 핵심 이벤트</h2>
+  <p class="small">사실은 KRX KIND/DART 원본 공시에서 확인했습니다. 공시가 없는 급변동은 실제로 열어 본 언론 보도가 있을 때만 원인을 적었고, 나머지는 추정하지 않았습니다.</p>
+  <div class="ev" id="evList"></div>
+  <div class="panel"><h3>그 밖의 공시 연계 급변동</h3><div class="tbl" style="margin-top:6px"><table id="othTbl"></table></div><p class="small" id="nofil"></p></div>
+</section>
+
+<section id="watch"><h2><small>09</small>지금 볼 지표</h2>
+  <div class="tiles" id="snapTiles"></div>
+  <div class="mon">__MONITOR__</div>
+  <p class="small" style="margin-top:10px">민감도(주간 회귀, S&amp;P 500 통제): 원화 1% 강세 → 주가 약 <b id="sensOil"></b>, S&amp;P 500 +10% → 약 <b id="sensSpx"></b>. 평균적인 관계이며, 헤지·레버리지가 바뀌면 달라집니다.</p>
+  <p class="small">이선철 대표는 2020년부터 한국 주식을 강세로 봤고 과거 6개월 적중률도 높았지만(87% vs 무작위 59%), 2026년에는 코스피·반도체 FOMO를 경계하는 쪽으로 돌아섰습니다(<a href="../../framework/index.html">1편</a>, <a href="../../eda/index.html">2편</a>).</p>
+</section>
+
+<section id="nav"><h2><small>10</small>밸류에이션 시나리오</h2>
+  <p id="scLead2"></p>
+  <div class="tiles" id="cnTiles"></div>
+  <div class="tbl"><table id="cnTbl" style="min-width:560px"></table></div>
+  <details class="fold mini"><summary><span>계산 방법과 가정</span><span class="more">보기</span></summary><div id="cnMethod" class="small" style="margin-top:8px"></div></details>
+</section>
+
+<section id="score"><h2><small>11</small>종합 매력도</h2>
+  <p class="small">이선철 대표 프레임워크의 현재 판단, 가치평가, 과거 매크로 반응을 같은 규칙으로 점수화했습니다. 같은 업종의 관심 종목에 동일한 기준을 적용한 학습용 점수이며 매수·매도 권유가 아닙니다.</p>
+  <div class="scorewrap">
+    <div class="panel scorebox"><div class="big"><span id="scTotal"></span><small>/ 10</small></div><div class="gauge"><i id="scBar"></i></div><div id="scPeers" class="peers"></div></div>
+    <div class="panel"><h3>세 가지 기준</h3><div id="scPillars"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3>프레임워크로 읽은 지금</h3><ul class="tight"><li>한국 주식: 2020~2025년 <b>강세</b>(적중 87% vs 59%) → 2026년 <b>경계</b>. 코스피 상승이 삼성전자·SK하이닉스 두 종목의 이익 급증에 집중됐다고 봅니다(26.05.11).</li><li>반도체: 메모리 실적은 "실체가 있는 진짜"지만, 주가가 요구하는 미래 이익은 버블 영역이라고 봅니다(26.06.01). 반도체 주도주를 보유하지 않는다고 밝혔습니다(26.05.12).</li><li>경계 신호: 중국 CXMT 상장과 범용 DRAM 공급 확대(26.07.29).</li></ul><p style="margin-top:10px">__FRAMEREAD__</p></div>
+    <div class="panel"><h3>점수가 바뀌는 조건</h3><p class="small">올라가는 경우</p><ul class="tight">__UP__</ul><p class="small" style="margin-top:8px">내려가는 경우</p><ul class="tight">__DOWN__</ul></div>
+  </div>
+  <details class="fold mini"><summary><span>점수 계산 방법</span><span class="more">보기</span></summary><div class="tbl"><table id="scTbl" style="min-width:560px"></table></div><p class="small" style="margin-top:8px">프레임워크 항목은 한국 주식 신호(0~1.5점: 장기 강세 신뢰도와 2026년 경계를 반영), 저자의 종목 평가(0~0.5점), 원화 강세 수혜(0~1점)로 구성됩니다. 중국·에너지 종목과는 기준이 달라 점수를 서로 비교하지 않습니다.</p></details>
+</section>
+
+<section id="method"><h2><small>12</small>방법·한계·출처</h2>
+  <ul class="tight">
+    <li>주가: Yahoo Finance 수정주가(배당·분할 반영). 분석 시작일 __START__. __STARTNOTE__</li>
+    <li>매크로: FRED(WTI 현물, 10년 금리, Baa−10년 스프레드, 10년 BEI), Yahoo(S&amp;P 500, 달러지수, VIX, USD/KRW, 구리 선물, 코스피, 필라델피아 반도체지수). 코스피는 이 종목들을 포함하므로 회귀 변수에서 빼고 비교용으로만 썼습니다.</li>
+    <li>다변량 회귀는 모든 지표가 있는 기간만 씁니다(BEI는 2003년부터). 상관은 인과가 아니며, 주간 R²가 낮을수록 회사 고유 요인이 큽니다.</li>
+    <li>재무: 금감원 DART에 제출된 정기보고서 원문 HTML(2026년 반기·1분기보고서, 2025년·2022년 사업보고서, KRX KIND 원문 사본). 표 구조(tr/td)와 단위·기간 열을 유지해 읽었고, 서로 다른 두 에이전트가 따로 추출해 대조했습니다. 연결재무제표 기준, 단위 원(₩). 달러 환산은 2026-09-23 USD/KRW를 썼습니다.</li><li>한국 증시는 9/24~26 추석 연휴로 휴장해 주가 기준일은 9/23입니다. 한국 종목의 일간 급변동 모델은 미국 지표를 하루 늦춰 맞췄기 때문에, 미국 상장 종목보다 "비매크로" 비중이 구조적으로 크게 나옵니다.</li>
+    <li>개인 학습 기록이며 투자 권유가 아닙니다.</li>
+  </ul>
+  <details class="fold" id="glossary"><summary><span>용어 풀이</span><span class="more">보기</span></summary><dl class="gloss" id="glossList"></dl></details>
+  <p class="small" style="margin-top:10px"><a href="../../index.html">← 투자노트로</a></p>
+</section>
+</main>
+<footer><div class="wrap">© 2026 김보나</div></footer>
+<div class="tip" id="tip" hidden></div>
+<script>
+const P=__DATA__;const LAB=__LABELS__;
+const NS='http://www.w3.org/2000/svg';const tip=document.getElementById('tip');
+const css=v=>v.startsWith('--')?getComputedStyle(document.documentElement).getPropertyValue(v).trim():v;
+const $=id=>document.getElementById(id);
+const pct=(v,d=1)=>(v>0?'+':'')+(v*100).toFixed(d)+'%';
+const oilName='코스피';
+const FL=Object.assign({},LAB);const SH={SPX:'S&P 500',OIL:'WTI',CNY:'원화',COPPER:'구리',HH:'Henry Hub',UST10:'10년 금리',CREDIT:'신용스프레드',USD:'달러',BEI:'기대인플레',VIX:'VIX',INV:'원유재고'};const lab=k=>(document.documentElement.clientWidth<560?SH[k]:FL[k]);
+const FCOL={SPX:'--s1',OIL:'--muted-mark',CNY:'--s2',COPPER:'--s3',HH:'--s3',UST10:'--s4',CREDIT:'--s5',USD:'--ink-3',BEI:'--bad',VIX:'--good',INV:'--muted-mark'};
+document.querySelectorAll('.oilName').forEach(e=>e.textContent=oilName);
+function el(t,a={},p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;}
+function txt(p,x,y,s,a={}){const t=el('text',Object.assign({x,y},a),p);t.textContent=s;return t;}
+function niceTicks(lo,hi,n=5){const s=(hi-lo)/n;const m=Math.pow(10,Math.floor(Math.log10(s)));const st=[1,2,2.5,5,10].map(x=>x*m).find(x=>x>=s);const out=[];for(let v=Math.ceil(lo/st)*st;v<=hi+1e-9;v+=st)out.push(+v.toFixed(6));return out;}
+function showTip(host,x,y,html){tip.innerHTML=html;tip.hidden=false;const r=host.getBoundingClientRect();const tw=tip.offsetWidth;let left=r.left+window.scrollX+x+14;if(left+tw>window.scrollX+document.documentElement.clientWidth-8)left=r.left+window.scrollX+x-tw-14;tip.style.left=Math.max(8,left)+'px';tip.style.top=(r.top+window.scrollY+y-10)+'px';}
+function hideTip(){tip.hidden=true;}
+function tile(l,v,d){return `<div class="tile"><span class="l">${l}</span><span class="v">${v}</span>${d?`<span class="d">${d}</span>`:''}</div>`;}
+const S=P.stats,VA=P.val;
+
+// hero tiles
+$('heroTiles').innerHTML=[
+ `<a class="tile" href="#score" style="text-decoration:none;border-color:var(--accent)"><span class="l">종합 매력도</span><span class="v">${P.score.total.toFixed(1)} / 10</span><span class="d">규칙 기반 학습용 점수</span></a>`,
+ tile('주가 (9/23)','₩'+Math.round(S.p1).toLocaleString('en-US'),'상장 이후 '+pct(S.tr,0)),
+ tile('시가총액','₩'+(VA.mktcap_m/1000).toFixed(0)+'조',(VA.shares_m).toFixed(0)+'M주'),
+ tile('EV/영업이익',(P.cnval.ev_op||P.cnval.ev_op_q).toFixed(1)+'배',P.cnval.ev_op?'최근 2개 분기 연환산':'최근 분기×4'),
+ tile('PER(핵심 이익)',(P.cnval.pe||P.cnval.pe_q).toFixed(1)+'배',P.cnval.pe?'최근 2개 분기 연환산':'최근 분기×4 (상반기 적자)'),
+ tile('주가 설명력 1위',FL[Object.entries(P.eda.full.shapley).sort((a,b)=>b[1]-a[1])[0][0]],'Shapley 몫 '+Math.round(Math.max(...Object.values(P.eda.full.shapley))/P.eda.full.r2*100)+'%')].join('');
+
+// verification
+(function(){const V=P.verify;const f=v=>v==null?'–':(Math.abs(v)>=1e6?v.toLocaleString('en-US'):(+v).toLocaleString('en-US',{maximumFractionDigits:3}));
+ const cls=s=>s.startsWith('✔')?'p-good':s.startsWith('⚠')?'p-warn':'p-neu';
+ $('vtbl').innerHTML='<tr><th>항목</th><th class="num">추출 B</th><th class="num">추출 A</th><th class="num">교차</th><th>단위</th><th>판정</th></tr>'+V.rows.map(r=>`<tr><td>${r.label}<div class="small">${r.id}${r.note?' · '+r.note.replace(/</g,'&lt;').slice(0,140):''}</div></td><td class="num">${f(r.blind)}</td><td class="num">${f(r.prior)}</td><td class="num">${f(r.xbrl)}</td><td class="small">${r.unit||''}</td><td><span class="pill ${cls(r.status)}">${r.status}</span></td></tr>`).join('');
+ $('chk').innerHTML='<ul class="tight">'+V.checks.map(c=>`<li><span class="pill ${c.ok?'p-good':'p-bad'}">${c.ok?'통과':'불일치'}</span> ${c.name}<div class="small">${c.lhs.toLocaleString('en-US')} vs ${c.rhs.toLocaleString('en-US')} (백만원)</div></li>`).join('')+'</ul>';
+ $('san').innerHTML='<ul class="tight">'+V.sanity.map(c=>`<li><span class="pill ${c.ok?'p-good':'p-bad'}">${c.ok?'정상':'점검'}</span> ${c.name}: <b>${/비중|\/매출/.test(c.name)?(c.val*100).toFixed(1)+'%':(c.name.includes('−')?(c.val>0?'+$':'−$')+Math.abs(c.val).toFixed(2):c.val.toFixed(2))}</b></li>`).join('')+'</ul>';})();
+
+// fundamentals
+function barGroup(host,cats,series,{h=260,fmt=v=>v.toFixed(0)}={}){host.innerHTML='';const W=host.clientWidth||900,H=h,m={l:52,r:10,t:10,b:26};const svg=el('svg',{viewBox:`0 0 ${W} ${H}`},host);
+ let lo=0,hi=0;series.forEach(s=>s.v.forEach(v=>{if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v);}}));const pad=(hi-lo)*.06;lo-=lo<0?pad:0;hi+=pad;
+ const Y=v=>m.t+(1-(v-lo)/(hi-lo))*(H-m.t-m.b);const bw=(W-m.l-m.r)/cats.length;const inner=bw*.78/series.length;
+ niceTicks(lo,hi,5).forEach(v=>{el('line',{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),stroke:css(v===0?'--rule':'--rule-2')},svg);txt(svg,m.l-6,Y(v)+4,fmt(v),{'text-anchor':'end'});});
+ const every=Math.ceil(cats.length/(W<560?7:14));
+ cats.forEach((c,i)=>{const x0=m.l+i*bw+bw*.11;series.forEach((s,k)=>{const v=s.v[i];if(v==null)return;const r=el('rect',{x:x0+k*inner,width:Math.max(1,inner-1),y:Math.min(Y(v),Y(0)),height:Math.abs(Y(v)-Y(0)),fill:css(s.color),rx:1},svg);
+   r.addEventListener('pointermove',e=>{const b=svg.getBoundingClientRect();showTip(host,(e.clientX-b.left),(e.clientY-b.top),`<div class="t">${c}</div>`+series.map(s2=>`<div class="r"><span style="color:${css(s2.color)}">●</span><span style="flex:1">${s2.name}</span><span>${s2.v[i]==null?'–':fmt(s2.v[i])}</span></div>`).join(''));});r.addEventListener('pointerleave',hideTip);});
+   if(i%every===0)txt(svg,m.l+i*bw+bw/2,H-m.b+16,c,{'text-anchor':'middle'});});}
+function drawFund(){const F=P.fund;const yrs=F.years.map(String);const g=k=>yrs.map(y=>F.tbl[k][y]??null);
+ barGroup($('fundChart'),yrs,[{name:'매출',v:g('rev'),color:'--s1'},{name:'영업이익',v:g('ocf'),color:'--s3'},{name:'지배순이익',v:g('ni'),color:'--s2'}],{fmt:v=>'₩'+(v/1e6).toFixed(0)+'조'});
+ const sh=F.shares;if(!$('shChart'))return;if(sh.length<5){$('shChart').closest('.panel').innerHTML='<h3>주식 수</h3><p class="small">'+F.sh_note+'</p>';return;}const host=$('shChart');host.innerHTML='';const W=host.clientWidth||900,H=180,m={l:52,r:14,t:10,b:26};const svg=el('svg',{viewBox:`0 0 ${W} ${H}`},host);
+ const t=sh.map(s=>new Date(s[0]).getTime()),v=sh.map(s=>s[1]/1e6);const x0=t[0],x1=t[t.length-1];const hi=Math.max(...v)*1.08;const X=a=>m.l+(a-x0)/(x1-x0||1)*(W-m.l-m.r),Y=a=>m.t+(1-a/hi)*(H-m.t-m.b);
+ niceTicks(0,hi,4).forEach(q=>{el('line',{x1:m.l,x2:W-m.r,y1:Y(q),y2:Y(q),stroke:css('--rule-2')},svg);txt(svg,m.l-6,Y(q)+4,q.toFixed(0)+'M',{'text-anchor':'end'});});
+ const y0=new Date(x0).getFullYear(),y1=new Date(x1).getFullYear();const stp=Math.ceil((y1-y0+1)/(W<560?6:12));for(let yy=y0;yy<=y1;yy+=stp){const tt=new Date(yy,0,1).getTime();if(tt<x0)continue;txt(svg,X(tt),H-m.b+16,yy,{'text-anchor':'middle'});}
+ let d='';t.forEach((a,i)=>{d+=(i?'H'+X(a).toFixed(1)+'V':'M'+X(a).toFixed(1)+',')+Y(v[i]).toFixed(1);});el('path',{d,fill:'none',stroke:css('--s1'),'stroke-width':2},svg);
+ t.forEach((a,i)=>{const c=el('circle',{cx:X(a),cy:Y(v[i]),r:3,fill:css('--s1')},svg);c.addEventListener('pointermove',e=>{const b=svg.getBoundingClientRect();showTip(host,e.clientX-b.left,e.clientY-b.top,`<div class="t">${sh[i][0]}</div><div class="r"><span>희석 ADS</span><span>${(v[i]).toFixed(1)}M</span></div>`);});c.addEventListener('pointerleave',hideTip);});
+ $('shNote').textContent=`${sh[0][0]} ${ (v[0]).toFixed(1)}M ADS → ${sh[sh.length-1][0]} ${(v[v.length-1]).toFixed(1)}M ADS (×${(v[v.length-1]/v[0]).toFixed(2)}). ${F.sh_note} 주식 수가 늘면 같은 기업가치라도 주당 가치가 줄어듭니다.`;}
+
+// price vs macro
+$('stTiles').innerHTML=[tile('분석 시작',S.start,'₩'+Math.round(S.p0).toLocaleString('en-US')+'(수정주가)'),tile('연평균 수익률',pct(S.cagr),'총 '+pct(S.tr,0)),tile('최대낙폭',pct(S.mdd,0),S.mdd_date),tile('최고가','₩'+Math.round(S.peak).toLocaleString('en-US'),S.peak_date),tile('같은 기간 코스피',pct(S.xle_cagr)+'/년','가격지수(배당 제외)')].join('');
+let cmpKey='oil';
+function drawPx(){const host=$('pxChart');host.innerHTML='';const s=P.eda.series;const W=host.clientWidth||900,H=W<560?300:360,m={l:48,r:16,t:12,b:26};const svg=el('svg',{viewBox:`0 0 ${W} ${H}`},host);
+ const t=s.d.map(d=>new Date(d).getTime());const i0=s[cmpKey].findIndex(v=>v!=null);
+ const a=s.p.map(v=>Math.log10(v/s.p[0]*100)),b=s[cmpKey].map(v=>v==null?null:Math.log10(v/s[cmpKey][i0]*100));
+ let lo=Infinity,hi=-Infinity;[...a,...b].forEach(v=>{if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v);}});lo-=.05;hi+=.05;
+ const x0=t[0],x1=t[t.length-1];const X=v=>m.l+(v-x0)/(x1-x0)*(W-m.l-m.r),Y=v=>m.t+(1-(v-lo)/(hi-lo))*(H-m.t-m.b);
+ const tk=[1,2,5,10,20,50,100,200,500,1000,2000,5000,10000,20000,50000,100000];tk.forEach(v=>{const l=Math.log10(v);if(l<lo||l>hi)return;el('line',{x1:m.l,x2:W-m.r,y1:Y(l),y2:Y(l),stroke:css(v===100?'--rule':'--rule-2')},svg);txt(svg,m.l-6,Y(l)+4,v,{'text-anchor':'end'});});
+ const y0=new Date(x0).getFullYear(),y1=new Date(x1).getFullYear();const stp=Math.ceil((y1-y0+1)/(W<560?6:12));for(let yy=y0;yy<=y1+1;yy+=stp){const tt=new Date(yy,0,1).getTime();if(tt<x0||tt>x1)continue;txt(svg,X(tt),H-m.b+16,yy,{'text-anchor':'middle'});}
+ const path=(arr,col,w)=>{let d='';arr.forEach((v,i)=>{if(v==null)return;d+=(d?'L':'M')+X(t[i]).toFixed(1)+','+Y(v).toFixed(1);});el('path',{d,fill:'none',stroke:css(col),'stroke-width':w,'stroke-linejoin':'round'},svg);};
+ path(b,'--s2',1.4);path(a,'--s1',2);
+ const near=d=>{const tt=new Date(d).getTime();let i=0,bd=Infinity;t.forEach((v,k)=>{const q=Math.abs(v-tt);if(q<bd){bd=q;i=k;}});return i;};
+ const tops=new Set(P.events.top.map(e=>e.date));
+ P.moves.events.filter(e=>e.type==='비매크로'||tops.has(e.date)).forEach(e=>{const i=near(e.date);const top=tops.has(e.date);const c=el('circle',{cx:X(t[i]),cy:Y(a[i]),r:top?6:3.5,fill:css(top?'--s4':'--bad'),stroke:css('--surface'),'stroke-width':1.5},svg);
+   c.addEventListener('pointermove',ev=>{const r=svg.getBoundingClientRect();showTip(host,ev.clientX-r.left,ev.clientY-r.top,`<div class="t">${e.date}${top?' · 핵심 이벤트':''}</div><div class="r"><span>당일 수익률</span><span>${pct(e.R)}</span></div><div class="r"><span>매크로 예측</span><span>${pct(e.fit)}</span></div>${e.fil&&e.fil.length?`<div class="small">${e.fil.join('<br>')}</div>`:'<div class="small">관련 공시 없음</div>'}`);});c.addEventListener('pointerleave',hideTip);});
+ const cross=el('line',{y1:m.t,y2:H-m.b,stroke:css('--ink-3'),visibility:'hidden'},svg);
+ const hit=el('rect',{x:m.l,y:m.t,width:W-m.l-m.r,height:H-m.t-m.b,fill:'transparent'},svg);svg.insertBefore(hit,svg.querySelector('circle'));
+ hit.addEventListener('pointermove',e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)*W/r.width;const tv=x0+(px-m.l)/(W-m.l-m.r)*(x1-x0);let i=0,bd=Infinity;t.forEach((v,k)=>{const q=Math.abs(v-tv);if(q<bd){bd=q;i=k;}});cross.setAttribute('x1',X(t[i]));cross.setAttribute('x2',X(t[i]));cross.setAttribute('visibility','visible');
+   showTip(host,X(t[i])*r.width/W,e.clientY-r.top,`<div class="t">${s.d[i]}</div><div class="r"><span>${P.ticker}</span><span>₩${Math.round(s.p[i]).toLocaleString('en-US')}</span></div><div class="r"><span>${cmpKey==='oil'?oilName:'S&P 500'}</span><span>${s[cmpKey][i]==null?'–':s[cmpKey][i].toLocaleString('en-US',{maximumFractionDigits:2})}</span></div>`);});
+ hit.addEventListener('pointerleave',()=>{cross.setAttribute('visibility','hidden');hideTip();});}
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b));cmpKey=b.dataset.k;$('cmpLab').textContent=cmpKey==='oil'?oilName:'S&P 500';drawPx();}));
+$('cmpLab').textContent=oilName;
+function drawYr(){const Yr=P.eda.yearly;barGroup($('yrChart'),Yr.y,[{name:P.ticker,v:Yr.R,color:'--s1'},{name:oilName,v:Yr.OIL,color:'--s2'}],{h:240,fmt:v=>(v*100).toFixed(0)+'%'});
+ const n=Yr.R.length;let same=0;Yr.R.forEach((v,i)=>{if(Math.sign(v)===Math.sign(Yr.OIL[i]))same++;});
+ $('yrNote').textContent=`${n}개 연도 중 ${same}개 연도에서 주가와 코스피가 같은 방향이었습니다. 분기 수익률 상관: 코스피 ${P.eda.corr_q.OIL.toFixed(2)}, S&P 500 ${P.eda.corr_q.SPX.toFixed(2)} (n=${P.eda.corr_q.n}). 첫 해는 상장일(분석 시작일)부터입니다.`;}
+
+// EDA charts
+function hbar(host,rows,{fmt=v=>v.toFixed(2),lo=null,hi=null,colorOf=()=>'--s1'}={}){host.innerHTML='';const W=host.clientWidth||450,rowH=26,m={l:W<420?84:150,r:46,t:6,b:20},H=m.t+m.b+rows.length*rowH;const svg=el('svg',{viewBox:`0 0 ${W} ${H}`},host);
+ const mn=lo??Math.min(0,...rows.map(r=>r.v)),mx=hi??Math.max(0,...rows.map(r=>r.v));const X=v=>m.l+(v-mn)/(mx-mn||1)*(W-m.l-m.r);
+ el('line',{x1:X(0),x2:X(0),y1:m.t,y2:H-m.b,stroke:css('--rule')},svg);
+ rows.forEach((r,i)=>{const y=m.t+i*rowH;txt(svg,m.l-8,y+rowH/2+4,r.l,{'text-anchor':'end',class:'lab'});el('rect',{x:Math.min(X(0),X(r.v)),y:y+5,width:Math.max(1,Math.abs(X(r.v)-X(0))),height:rowH-10,rx:3,fill:css(colorOf(r))},svg);txt(svg,r.v>=0?X(r.v)+5:X(0)+5,y+rowH/2+4,fmt(r.v),{'text-anchor':'start'});});}
+function drawEDA(){const F=P.eda.full;
+ const sh=Object.entries(F.shapley).sort((a,b)=>b[1]-a[1]);
+ $('shNote2').textContent=`${F.start}~${F.end}, ${F.n}주. 매크로 전체 R² = ${F.r2.toFixed(2)} (주가 변동의 ${Math.round(F.r2*100)}%). 막대는 R²에서 각 지표가 차지하는 몫입니다.`;
+ hbar($('shapChart'),sh.map(([k,v])=>({l:lab(k),v:v/F.r2,k})),{fmt:v=>Math.round(v*100)+'%',lo:0,colorOf:r=>FCOL[r.k]});
+ const cr=Object.entries(P.eda.corr).sort((a,b)=>Math.abs(b[1].r)-Math.abs(a[1].r));
+ hbar($('corrChart'),cr.map(([k,v])=>({l:lab(k),v:v.r,k})),{fmt:v=>v.toFixed(2),lo:-0.6,hi:0.7,colorOf:r=>r.v>=0?'--s1':'--bad'});
+ // periods
+ const per=P.eda.periods;const keys=Object.keys(F.shapley);
+ $('perLegend').innerHTML=keys.map(k=>`<span><i class="sq" style="background:${css(FCOL[k])}"></i>${FL[k]}</span>`).join('');
+ const host=$('perChart');host.innerHTML='';const W=host.clientWidth||900,rowH=34,m={l:W<520?120:210,r:50,t:6,b:22},H=m.t+m.b+per.length*rowH;const svg=el('svg',{viewBox:`0 0 ${W} ${H}`},host);const X=v=>m.l+v/0.7*(W-m.l-m.r);
+ [0,.2,.4,.6].forEach(v=>{el('line',{x1:X(v),x2:X(v),y1:m.t,y2:H-m.b,stroke:css('--rule-2')},svg);txt(svg,X(v),H-m.b+15,v.toFixed(1),{'text-anchor':'middle'});});
+ per.forEach((p,i)=>{const y=m.t+i*rowH;txt(svg,m.l-8,y+rowH/2+4,W<520?p.label.slice(0,9):p.label,{'text-anchor':'end',class:'lab'});let acc=0;
+  keys.forEach(k=>{const v=Math.max(0,p.shapley[k]);const r=el('rect',{x:X(acc),y:y+6,width:Math.max(0,X(acc+v)-X(acc)),height:rowH-12,fill:css(FCOL[k])},svg);acc+=v;
+   r.addEventListener('pointermove',e=>{const b=svg.getBoundingClientRect();showTip(host,e.clientX-b.left,e.clientY-b.top,`<div class="t">${p.label}</div><div class="r"><span>${FL[k]}</span><span>${Math.round(p.shapley[k]/p.r2*100)}%</span></div><div class="r"><span>R²</span><span>${p.r2.toFixed(2)}</span></div>`);});r.addEventListener('pointerleave',hideTip);});
+  txt(svg,X(acc)+5,y+rowH/2+4,p.r2.toFixed(2));});
+ $('perTbl').innerHTML='<tr><th>국면</th><th class="num">주 수</th><th class="num">R²</th><th>1위 요인</th><th class="num">원화 상관</th><th class="num">원화 베타</th><th class="num">S&amp;P 베타</th></tr>'+per.map(p=>{const top=Object.entries(p.shapley).sort((a,b)=>b[1]-a[1])[0];return `<tr><td>${p.label}</td><td class="num">${p.n}</td><td class="num">${p.r2.toFixed(2)}</td><td>${FL[top[0]]} (${Math.round(top[1]/p.r2*100)}%)</td><td class="num">${p.corr_oil.toFixed(2)}</td><td class="num">${p.beta_oil.toFixed(2)}</td><td class="num">${p.beta_spx.toFixed(2)}</td></tr>`;}).join('')+`<tr><td><b>전체</b></td><td class="num">${F.n}</td><td class="num">${F.r2.toFixed(2)}</td><td>${FL[sh[0][0]]} (${Math.round(sh[0][1]/F.r2*100)}%)</td><td class="num">${P.eda.corr.CNY.r.toFixed(2)}</td><td class="num">${F.beta_oil.toFixed(2)}</td><td class="num">${F.beta_spx.toFixed(2)}</td></tr>`;
+ // rolling
+ const R=P.eda.roll;const hostR=$('rollChart');hostR.innerHTML='';const W2=hostR.clientWidth||900,H2=220,mm={l:40,r:12,t:10,b:24};const s2=el('svg',{viewBox:`0 0 ${W2} ${H2}`},hostR);const tt=R.d.map(d=>new Date(d).getTime());const a0=tt[0],a1=tt[tt.length-1];
+ const XX=v=>mm.l+(v-a0)/(a1-a0)*(W2-mm.l-mm.r),YY=v=>mm.t+(1-(v+1)/2)*(H2-mm.t-mm.b);
+ [-1,-.5,0,.5,1].forEach(v=>{el('line',{x1:mm.l,x2:W2-mm.r,y1:YY(v),y2:YY(v),stroke:css(v===0?'--rule':'--rule-2')},s2);txt(s2,mm.l-6,YY(v)+4,v.toFixed(1),{'text-anchor':'end'});});
+ const y0=new Date(a0).getFullYear(),y1=new Date(a1).getFullYear();const stp=Math.ceil((y1-y0+1)/(W2<560?6:12));for(let yy=y0;yy<=y1+1;yy+=stp){const q=new Date(yy,0,1).getTime();if(q<a0||q>a1)continue;txt(s2,XX(q),H2-mm.b+15,yy,{'text-anchor':'middle'});}
+ [['c_oil','--s2'],['c_spx','--s1'],['c_credit','--s5']].forEach(([k,c])=>{let d='';R[k].forEach((v,i)=>{if(v==null){return;}d+=(d?'L':'M')+XX(tt[i]).toFixed(1)+','+YY(v).toFixed(1);});el('path',{d,fill:'none',stroke:css(c),'stroke-width':1.6},s2);});
+ const cr2=el('line',{y1:mm.t,y2:H2-mm.b,stroke:css('--ink-3'),visibility:'hidden'},s2);const hit=el('rect',{x:mm.l,y:mm.t,width:W2-mm.l-mm.r,height:H2-mm.t-mm.b,fill:'transparent'},s2);
+ hit.addEventListener('pointermove',e=>{const r=s2.getBoundingClientRect();const px=(e.clientX-r.left)*W2/r.width;const tv=a0+(px-mm.l)/(W2-mm.l-mm.r)*(a1-a0);let i=0,bd=Infinity;tt.forEach((v,k)=>{const q=Math.abs(v-tv);if(q<bd){bd=q;i=k;}});cr2.setAttribute('x1',XX(tt[i]));cr2.setAttribute('x2',XX(tt[i]));cr2.setAttribute('visibility','visible');const f=v=>v==null?'–':v.toFixed(2);
+  showTip(hostR,XX(tt[i])*r.width/W2,e.clientY-r.top,`<div class="t">${R.d[i]}</div><div class="r"><span>원화</span><span>${f(R.c_oil[i])}</span></div><div class="r"><span>S&P 500</span><span>${f(R.c_spx[i])}</span></div><div class="r"><span>신용스프레드</span><span>${f(R.c_credit[i])}</span></div>`);});
+ hit.addEventListener('pointerleave',()=>{cr2.setAttribute('visibility','hidden');hideTip();});}
+
+// moves
+const TCOL={'매크로':'--s1','매크로 충격':'--s3','시장·업종 공통 충격':'--s5','혼합':'--s4','비매크로':'--bad'};
+function drawMoves(){const M=P.moves;const c=M.counts;const n=Object.values(c).reduce((a,b)=>a+b,0);
+ $('mvTiles').innerHTML=[tile('급변동 기준','±'+(M.threshold*100).toFixed(1)+'%','일간 상위 1%'),tile('급변동 일수',n+'일','5거래일 내 중복 제거'),tile('매크로·중국 공통',(c['매크로']+c['매크로 충격']+(c['시장·업종 공통 충격']||0))+'일','중국 공통 '+(c['시장·업종 공통 충격']||0)+'일'),tile('혼합·비매크로',(c['혼합']+c['비매크로'])+'일',''),tile('일간 분산 중 비매크로',Math.round(M.resid_var_share*100)+'%','전체 일간 변동 기준')].join('');
+ const host=$('scChart');host.innerHTML='';const W=host.clientWidth||900,H=W<560?300:340,m={l:48,r:14,t:10,b:30};const svg=el('svg',{viewBox:`0 0 ${W} ${H}`},host);
+ const E=M.events;const xs=E.map(e=>e.fit),ys=E.map(e=>Math.log(1+e.R));const lim=Math.max(.1,...ys.map(Math.abs),...xs.map(Math.abs))*1.08;
+ const X=v=>m.l+(v+lim)/(2*lim)*(W-m.l-m.r),Y=v=>m.t+(1-(v+lim)/(2*lim))*(H-m.t-m.b);
+ niceTicks(-lim,lim,6).forEach(v=>{el('line',{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),stroke:css(v===0?'--rule':'--rule-2')},svg);txt(svg,m.l-6,Y(v)+4,(v*100).toFixed(0)+'%',{'text-anchor':'end'});el('line',{x1:X(v),x2:X(v),y1:m.t,y2:H-m.b,stroke:css(v===0?'--rule':'--rule-2')},svg);txt(svg,X(v),H-m.b+15,(v*100).toFixed(0)+'%',{'text-anchor':'middle'});});
+ el('line',{x1:X(-lim),y1:Y(-lim),x2:X(lim),y2:Y(lim),stroke:css('--ink-3'),'stroke-dasharray':'4 4'},svg);
+ txt(svg,W-m.r,H-4,'매크로 모델 예측 →',{'text-anchor':'end'});txt(svg,m.l+4,m.t+10,'↑ 실제(로그)',{});
+ E.forEach(e=>{const c=el('circle',{cx:X(e.fit),cy:Y(Math.log(1+e.R)),r:5,fill:css(TCOL[e.type]),'fill-opacity':.85,stroke:css('--surface'),'stroke-width':1},svg);
+  c.addEventListener('pointermove',ev=>{const r=svg.getBoundingClientRect();showTip(host,ev.clientX-r.left,ev.clientY-r.top,`<div class="t">${e.date} · ${e.type}</div><div class="r"><span>실제</span><span>${pct(e.R)}</span></div><div class="r"><span>매크로 예측</span><span>${pct(e.fit)}</span></div><div class="r"><span>원화 당일</span><span>${pct(e.oil)}</span></div><div class="r"><span>코스피·SOX 당일</span><span>${e.cn==null?'–':pct(e.cn)}</span></div>${e.fil.length?`<div class="small">${e.fil.join('<br>')}</div>`:'<div class="small">관련 공시 없음</div>'}`);});c.addEventListener('pointerleave',hideTip);});
+ const rows=[...E].sort((a,b)=>Math.abs(b.R)-Math.abs(a.R)).slice(0,12);
+ $('mvTbl').innerHTML='<tr><th>날짜</th><th class="num">실제</th><th class="num">매크로 예측</th><th class="num">코스피·SOX</th><th>분류</th><th>±3일 내 공시</th></tr>'+rows.map(e=>`<tr><td>${e.date}</td><td class="num">${pct(e.R)}</td><td class="num">${pct(e.fit)}</td><td class="num">${e.cn==null?'–':pct(e.cn)}</td><td><span class="pill ${e.type==='비매크로'?'p-bad':e.type==='혼합'?'p-warn':'p-neu'}">${e.type}</span></td><td class="small">${e.fil.length?e.fil.join('<br>'):'없음'}</td></tr>`).join('');}
+
+// events
+(function(){const EV=P.events;const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+ $('evList').innerHTML=EV.top.map((e,i)=>`<div class="panel"><h3><span class="pill p-warn">이벤트 ${i+1}</span>${esc(e.title_ko)}<span class="date">${esc(e.date)} · 공시 ${esc(e.filed)}</span></h3><p>${esc(e.summary_ko)}</p><p class="small"><b>왜 중요한가.</b> ${esc(e.why_important_ko)}</p><ul class="tight">${e.facts.map(f=>`<li>${esc(f.fact_ko)}<blockquote>“${esc(f.quote)}” — <span class="small">${esc(f.file.split('__').slice(-1)[0])}</span></blockquote></li>`).join('')}</ul></div>`).join('')+(P.extraEvent||'');
+ $('othTbl').innerHTML='<tr><th>반응일</th><th>공시</th><th>내용</th><th class="num">수익률</th><th class="num">잔차</th></tr>'+EV.others.map(o=>`<tr><td>${esc(o.date)}</td><td class="small">${esc(o.filed)}</td><td>${esc(o.title_ko)}</td><td class="num">${o.R==null?'–':pct(o.R)}</td><td class="num">${o.res==null?'–':pct(o.res)}</td></tr>`).join('');
+ $('nofil').textContent=(EV.unread&&EV.unread.length?`같은 날 공시가 있었으나 원문을 확보하지 못해 내용을 확인하지 않은 급변동 ${EV.unread.length}건: `+EV.unread.map(x=>x.date+' '+pct(x.R,0)).join(', ')+'. ':'')+(EV.no_filing_moves.length?`공시 없이 발생한 급변동 ${EV.no_filing_moves.length}건(원인 미추정): `+EV.no_filing_moves.map(x=>x.date+' '+pct(x.R,0)).join(', '):'');})();
+
+// snapshot
+(function(){const s=P.snap;const f=(k,dig,u,bp)=>{const [a,b]=s[k];const ch=bp?((a-b)*100).toFixed(0)+'bp':pct(a/b-1,0);return tile(LAB[k]||k,(u==='$'?'$':'')+a.toFixed(dig)+(u&&u!=='$'?u:''),'1년 전 대비 '+ch);};
+ $('snapTiles').innerHTML=[f('CNY',3,''),f('HSI',0,''),f('UST10',2,'%',true),f('VIX',1,''),f('USD',1,''),f('COPPER',2,'$')].join('');
+ $('sensOil').textContent=pct(-P.eda.full.beta_cny*0.01,1);$('sensSpx').textContent=pct(P.eda.full.beta_spx*Math.log(1.1),1);})();
+
+// verify summary
+(function(){const R=P.verify.rows;const ok=R.filter(r=>r.status.startsWith('✔')).length,w=R.filter(r=>r.status.startsWith('⚠')).length,na=R.filter(r=>r.status==='자료 없음').length,one=R.filter(r=>r.status==='단일 출처').length;const c=P.verify.checks.filter(x=>x.ok).length;
+ $('vsum').innerHTML=`<span class="pill p-good">✔ ${ok}/${R.length} 교차 일치</span> <span class="pill p-neu">단일 출처 ${one}</span> ${w?`<span class="pill p-warn">⚠ ${w}</span>`:''} ${na?`<span class="pill p-neu">미공시 ${na}</span>`:''} <span class="pill p-good">합계·분기 검사 ${c}/${P.verify.checks.length} 통과</span>`;})();
+$('openAll').addEventListener('click',e=>{const all=[...document.querySelectorAll('details.acc')];const open=!all.every(d=>d.open);all.forEach(d=>d.open=open);e.target.textContent=open?'모두 접기':'모두 펼치기';});
+// score
+(function(){const S=P.score;$('scTotal').textContent=S.total.toFixed(1);$('scBar').style.width=(S.total*10)+'%';
+ const peers=Object.entries(P.peers).sort((a,b)=>b[1]-a[1]);$('scPeers').innerHTML='<div class="small">같은 기준의 관심 종목(같은 업종)</div>'+peers.map(([k,v])=>`<div class="row${({'삼성전자':'005930.KS','SK하이닉스':'000660.KS'})[k]===P.ticker?' me':''}"><span>${k}</span><i style="width:${v*10}%"></i><span>${v.toFixed(1)}</span></div>`).join('');
+ $('scPillars').innerHTML=S.pillars.map(p=>`<div class="pil"><div class="top"><span>${p.name}</span><span>${p.score.toFixed(1)} / ${p.max}</span></div><div class="bar"><i style="width:${p.score/p.max*100}%"></i></div><ul>${p.items.map(i=>`<li><span>${i.k}${i.warn?' ⚠':''}</span><span>${i.val} · <b>${i.pts.toFixed(1)}</b></span></li>`).join('')}</ul></div>`).join('');
+ $('scTbl').innerHTML='<tr><th>기준</th><th>항목</th><th>값</th><th class="num">점수</th><th>채점 규칙</th></tr>'+S.pillars.map(p=>p.items.map(i=>`<tr><td>${p.name}</td><td>${i.k}</td><td>${i.val}</td><td class="num">${i.pts.toFixed(2)} / ${i.max}</td><td class="small">${i.rule||''}</td></tr>`).join('')).join('')+`<tr><td colspan="3"><b>합계</b></td><td class="num"><b>${S.total.toFixed(1)} / 10</b></td><td></td></tr>`;})();
+// glossary
+let G=[
+['EV/EBITDAX','기업가치(EV)가 1년 현금이익(EBITDAX)의 몇 배인지. 낮을수록 이익에 비해 싸게 거래된다는 뜻입니다.'],
+['EBITDAX','이자·세금·감가상각·탐사비를 빼기 전 이익. 석유·가스 회사의 현금 창출력을 비교할 때 씁니다.'],
+['EBITDA','이자·세금·감가상각을 빼기 전 이익.'],
+['EV','기업가치 = 시가총액 + 순부채. 회사를 빚까지 통째로 살 때 드는 값입니다.'],
+['FCF 수익률','잉여현금흐름 ÷ 시가총액. 주가 대비 회사가 한 해에 남기는 현금 비율입니다.'],
+['FCF','잉여현금흐름. 영업으로 번 현금에서 설비투자를 뺀 돈으로, 배당·자사주·부채 상환에 쓸 수 있습니다.'],
+['순부채/EBITDAX','빚을 1년 현금이익으로 몇 년에 갚을 수 있는지. 2배를 넘으면 부담이 큰 편으로 봅니다.'],
+['순부채','차입금에서 현금을 뺀 값입니다.'],
+['레버리지','빚의 크기를 이익과 비교한 비율. 여기서는 순부채 ÷ EBITDA(X)입니다.'],
+['NAV','순자산가치. 매장량의 현재가치에서 순부채를 빼고 주식 수로 나눈 주당 값입니다.'],
+['PV-10','증명매장량에서 나올 미래 현금흐름을 연 10%로 할인한 세전 현재가치(SEC 가격 기준).'],
+['Std. Measure','Standardized Measure. PV-10과 같은 방식이지만 세금까지 뺀 회계기준 값입니다.'],
+['SEC 가격','매장량 평가에 쓰도록 정해진 가격. 지난 12개월 매월 첫날 유가의 단순 평균입니다.'],
+['증명매장량','현재 기술과 가격으로 생산할 수 있다고 합리적 확신이 있는 매장량입니다.'],
+['증명개발','증명매장량 가운데 이미 뚫린 유정으로 생산할 수 있는 부분. 추가 투자가 거의 필요 없습니다.'],
+['가채연수','매장량 ÷ 연간 생산량. 새로 찾지 않으면 몇 년 생산할 수 있는지를 뜻합니다.'],
+['MMBoe','백만 석유환산배럴. 가스 6,000 입방피트를 원유 1배럴로 환산해 합친 단위입니다.'],
+['Boe','석유환산배럴. 가스 6,000 입방피트를 원유 1배럴로 환산합니다.'],
+['LOE','유전 운영비(Lease Operating Expense). 배럴당 값이 낮을수록 효율적입니다.'],
+['헤지','미래 판매가격을 미리 고정해 두는 계약. 유가가 떨어질 때 방어하지만 오를 때 이익도 제한됩니다.'],
+['스왑','정해진 가격으로 판매 가격을 교환하는 헤지. 시장가격과 무관하게 고정가를 받습니다.'],
+['칼라','하한과 상한을 정한 헤지. 가격이 그 범위 밖으로 나가면 하한이나 상한 가격을 받습니다.'],
+['차입기준액','은행이 매장량 가치로 정하는 대출 한도(borrowing base). 보통 봄·가을 두 번 다시 정합니다.'],
+['RBL','매장량을 담보로 한 은행 대출(Reserve-Based Lending).'],
+['유상증자','회사가 새 주식을 팔아 돈을 모으는 것. 기존 주주의 지분이 줄어듭니다(희석).'],
+['희석','주식 수가 늘어 기존 주주의 지분과 주당 가치가 줄어드는 것입니다.'],
+['연환산','분기·반기 값을 1년 기준으로 늘린 값(2분기 × 4, 상반기 × 2).'],
+['R²','설명력. 주가 움직임 중 매크로 지표로 설명되는 비율(0~1)입니다.'],
+['Shapley','설명력을 지표별로 공정하게 나누는 방법. 서로 얽힌 지표(유가·기대인플레 등)의 몫을 평균적으로 배분합니다.'],
+['베타','지표가 1% 움직일 때 주가가 평균적으로 몇 % 움직였는지. 1보다 크면 더 크게 움직입니다.'],
+['상관','두 값이 같은 방향으로 움직이는 정도(−1~+1). 인과관계를 뜻하지는 않습니다.'],
+['잔차','실제 주가 움직임에서 매크로 모델이 예상한 부분을 뺀 나머지. 회사 고유 요인으로 봅니다.'],
+['신용스프레드','회사채 금리와 국채 금리의 차이. 커지면 돈 빌리기가 어려워졌다는 뜻입니다(여기서는 Baa−10년).'],
+['기대인플레','물가연동국채로 계산한 시장의 향후 10년 물가 예상(BEI). 유가와 함께 움직이는 경향이 있습니다.'],
+['VIX','S&P 500 옵션으로 계산한 공포지수. 높을수록 시장이 불안하다는 뜻입니다.'],
+['Brent','북해산 원유 가격. 국제 유가 기준으로, KOS 판매가가 여기에 연동됩니다.'],
+['WTI','미국 서부텍사스산 원유 가격. 미국 육상 생산업체 판매가의 기준입니다.'],
+['Henry Hub','미국 천연가스 가격 기준점.'],
+['최대낙폭','고점에서 저점까지 가장 크게 떨어진 비율입니다.'],
+['수정주가','배당과 주식 분할·병합을 반영해 과거 가격을 조정한 주가. 장기 수익률 비교에 씁니다.'],
+['XBRL','공시 숫자에 항목·기간·단위를 태그로 붙인 형식. 기계가 모호함 없이 읽을 수 있습니다.'],
+['10-Q','미국 상장사의 분기 보고서.'],['10-K','미국 상장사의 연간 보고서.'],['8-K','합병·증자·실적 등 중요 사건이 있을 때 내는 수시 공시.'],
+['베어 스티프닝','장기금리가 단기금리보다 더 많이 오르며 금리 곡선이 가팔라지는 것. 인플레·재정 우려의 신호입니다.'],
+['ADS','미국예탁증서. 미국에 상장된 중국 기업 주식 묶음(알리바바·바이두 1 ADS = 보통주 8주, JD 1 ADS = 2주).'],
+['순현금','현금·단기투자 등 회사가 제시한 유동성에서 차입금을 뺀 값. 사업가치(EV)를 구할 때 시가총액에서 뺍니다.'],
+['Non-GAAP','회사가 주식보상비용·투자손익 등 일회성 항목을 빼고 따로 제시하는 이익. 회사마다 정의가 조금씩 다릅니다.'],
+['EBITA','이자·세금·무형자산상각 차감 전 이익. 알리바바가 부문 이익 지표로 씁니다.'],
+['VIE','중국 기업이 외국인 투자 제한 업종을 운영하려고 쓰는 계약 구조. 해외 투자자는 계약을 통해 이익을 받으며 법적 위험이 따릅니다.'],
+['6-K','미국 외 기업이 수시로 내는 공시(실적 발표 포함). 미국 기업의 8-K에 해당합니다.'],
+['20-F','미국 외 기업의 연차보고서. 미국 기업의 10-K에 해당합니다.'],['Non-IFRS','국제회계기준(IFRS) 이익에서 주식보상비용·투자 손익 등 일회성·비현금 항목을 뺀 회사 정의 이익. 텐센트가 주로 씁니다.'],['조정 EBITDA','영업이익에 감가상각·주식보상비용 등을 더한 회사 정의 이익. 메이퇀이 제시합니다.'],['HKEX','홍콩증권거래소. 상장사 공시가 hkexnews.hk에 PDF로 올라옵니다.'],['P/S','주가매출비율. 시가총액 ÷ 매출. 이익이 적거나 적자일 때 쓰는 배수입니다.'],
+['시장·업종 공통 충격','한국 증시 전체나 반도체 업종 전체가 같은 날 크게 움직인 경우.'],
+['코스피','한국 증시 대표 지수. 삼성전자·SK하이닉스 비중이 매우 커서 두 종목과의 상관이 부풀려집니다.'],['SOX','필라델피아 반도체지수. 미국 상장 반도체 30개 종목 지수입니다.'],['HBM','고대역폭 메모리. AI 가속기(GPU) 옆에 붙는 적층 DRAM으로 일반 DRAM보다 비쌉니다.'],['DART','금융감독원 전자공시시스템. 한국 상장사의 사업·분기보고서 원문이 올라옵니다.'],['메모리 사이클','DRAM·NAND 가격이 공급 과잉과 부족을 오가며 크게 오르내리는 주기. 이익이 몇 배씩 출렁입니다.'],
+['백워데이션','가까운 달 선물이 먼 달 선물보다 비싼 상태. 시장이 지금의 고유가가 오래가지 않는다고 본다는 뜻입니다.'],
+['PER','주가수익비율. 주가가 1년 주당순이익의 몇 배인지.'],
+['선물 스트립','앞으로 몇 년간 월별 원유 선물 가격을 이은 곡선. 시장이 지금 거래하는 미래 유가입니다.'],
+['내재된','지금 주가가 NAV와 같아지려면 필요한 유가. 이보다 유가가 높게 유지되면 주가가 NAV보다 싸다는 뜻입니다.'],
+['투자 순서','이선철 대표가 제시한 고유가 국면의 순서: 원유 직접투자 → 원유 생산기업 → 오일서비스. 생산기업으로의 이동은 WTI $150~200 구간이 기준입니다(26.06.04).'],
+];
+{const gl=$('glossList'),BT=[...document.querySelectorAll("section:not(#method) , header, .lead")].map(e=>e.textContent).join(" ");G=G.filter(([k])=>BT.includes(k));}
+$('glossList').innerHTML=G.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('');
+(function(){const pop=document.createElement('div');pop.className='pop';pop.hidden=true;pop.setAttribute('role','tooltip');document.body.appendChild(pop);
+ const esc=s=>s.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&');
+ const keys=G.map(g=>g[0]).sort((a,b)=>b.length-a.length);
+ const re=new RegExp('('+keys.map(k=>/^[A-Za-z]/.test(k)?'(?<![A-Za-z])'+esc(k)+'(?![A-Za-z])':esc(k)).join('|')+')');
+ const def=Object.fromEntries(G);
+ const roots=document.querySelectorAll('.lead, #summary, #deep details.acc ul, #deep details.acc summary, #eda .callout, #eda > p, #score .panel, #scLead2, #watch .mon, #events .ev p, .tile .l, #navLead');
+ roots.forEach(root=>{const seen=new Set();const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('button,svg,script,.term,a')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(node=>{let txt=node.nodeValue;const frag=document.createDocumentFragment();let changed=false;let m;
+   while((m=txt.match(re))){const k=m[0];if(seen.has(k)){frag.append(txt.slice(0,m.index+k.length));txt=txt.slice(m.index+k.length);continue;}seen.add(k);changed=true;frag.append(txt.slice(0,m.index));const b=document.createElement('button');b.type='button';b.className='term';b.textContent=k;b.dataset.k=k;frag.append(b);txt=txt.slice(m.index+k.length);}
+   if(changed){frag.append(txt);node.replaceWith(frag);}});});
+ let cur=null;const show=b=>{cur=b;pop.innerHTML=`<b>${b.dataset.k}</b>${def[b.dataset.k]}`;pop.hidden=false;const r=b.getBoundingClientRect();const w=Math.min(300,document.documentElement.clientWidth-24);pop.style.maxWidth=w+'px';let left=r.left+window.scrollX;left=Math.min(left,window.scrollX+document.documentElement.clientWidth-w-12);pop.style.left=Math.max(12,left)+'px';pop.style.top=(r.bottom+window.scrollY+6)+'px';};
+ document.addEventListener('click',e=>{const b=e.target.closest('.term');if(b){e.preventDefault();e.stopPropagation();if(cur===b&&!pop.hidden){pop.hidden=true;cur=null;}else show(b);}else if(!e.target.closest('.pop')){pop.hidden=true;cur=null;}});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'){pop.hidden=true;cur=null;}});
+ if(matchMedia('(hover:hover)').matches){document.addEventListener('mouseover',e=>{const b=e.target.closest('.term');if(b)show(b);});document.addEventListener('mouseout',e=>{if(e.target.closest('.term'))pop.hidden=true;});}
+})();
+
+
+// NAV scenarios
+
+(function(){const V=P.cnval,S=P.scen;const f=v=>v==null?'–':'₩'+Math.round(v).toLocaleString('en-US');const pr=V.price;const col=v=>v==null?'':`style="color:${css(v>=pr?'--good':'--bad')}"`;
+ $('scLead2').innerHTML=`1주 = <b>순현금 ${f(S.ncps)}</b> + 사업가치로 나눠 봤습니다. 지금 주가 ${f(pr)}에서 순현금을 빼면, 시장은 ${V.ni_label}(${V.pe?'최근 2개 분기 연환산':'최근 분기 × 4'})의 <b>${S.implied_pe.toFixed(1)}배</b>를 사업가치로 매기고 있습니다.`;
+ $('cnTiles').innerHTML=[tile('시가총액','₩'+V.mcap_b.toFixed(0)+'조','약 US$'+V.mcap_usd_b.toFixed(0)+'B · '+V.ads_m.toFixed(0)+'M주'),tile('순현금(계산)','₩'+V.netcash_b.toFixed(1)+'조','시총의 '+(V.nc_share*100).toFixed(0)+'%'),tile('EV','₩'+V.ev_b.toFixed(0)+'조','시총 − 순현금'),tile('EV/'+V.op_label,(V.ev_op?V.ev_op.toFixed(1):'–')+'배','최근 분기×4: '+V.ev_op_q.toFixed(1)+'배'),tile('PER('+V.ni_label+')',(V.pe?V.pe.toFixed(1)+'배':'적자'),'최근 분기×4: '+V.pe_q.toFixed(1)+'배'),tile(V.cf_label.replace('(FCF 미공시)',''),(V.fcf_yield*100).toFixed(1)+'%',V.cf_label.includes('미공시')?'FCF 미공시 · 2개 분기 연환산':'최근 2개 분기 연환산')].join('');
+ $('cnTbl').innerHTML='<tr><th>이익 기준</th><th class="num">주당 핵심 이익</th>'+S.mults.map(m=>`<th class="num">PER ${m}배</th>`).join('')+'</tr>'+S.rows.map(r=>`<tr><td>${r.label}</td><td class="num">${f(r.eps)}</td>${r.vals.map(v=>`<td class="num"><b ${col(v)}>${f(v)}</b></td>`).join('')}</tr>`).join('')+`<tr><td colspan="${2+S.mults.length}" class="small">현재 주가 ${f(pr)} · 적정주가 = 주당 순현금 ${f(S.ncps)} + PER × EPS. 주가보다 높으면 초록, 낮으면 빨강. 이익이 적자인 행은 계산하지 않았습니다.</td></tr>`;
+ $('cnMethod').innerHTML=`<ul class="tight"><li><b>순현금</b> = ${V.liq_label} ₩${(V.liq_rmb/1e6).toFixed(1)}조 − 차입·사채 합계 ₩${(V.debt_rmb/1e6).toFixed(1)}조, 원화 기준(계산).</li><li><b>주식 수</b>: ${V.ads_note}.</li><li><b>이익</b>: ${V.op_label}·${V.ni_label}. 최근 2개 분기 합 × 2와 최근 분기 × 4 두 가지로 계산했습니다(분기 계절성 때문).</li><li><b>PER 8·12·16배는 가정입니다.</b> 순현금을 따로 더하므로 사업가치만의 배수입니다. 지분투자(비상장 지분 등)는 넣지 않았습니다.</li><li>메모리 이익은 가격 사이클에 따라 크게 흔들립니다. 최근 분기를 연환산한 이익은 사이클 정점 이익일 수 있어, 2025년 연간 이익 행을 함께 보여 줍니다.</li></ul>`;})();
+
+function drawAll(){drawFund();drawPx();drawYr();drawEDA();drawMoves();}
+drawAll();let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(drawAll,150);});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawAll);
+</script>
+<script src="../../../assets/score-color.js"></script>
+<script src="../../../assets/live-price.js"></script>
+</body>
+</html>

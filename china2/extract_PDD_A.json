@@ -1,0 +1,740 @@
+{
+ "ticker": "PDD",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 112358.0,
+   "raw": "112,358",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 10,
+    "row": "Revenues",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 103985.0,
+   "raw": "103,985",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 10,
+    "row": "Revenues",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "전년 동기, 같은 표"
+  },
+  {
+   "id": "Q1",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 106229.0,
+   "raw": "106,229",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 10,
+    "row": "Revenues",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용"
+  },
+  {
+   "id": "Q2_Online marketing services and others",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 57637.0,
+   "raw": "57,637",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Online marketing services and others",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": "NOTES TO FINANCIAL INFORMATION 매출 구분(회사는 별도 세그먼트 보고 없이 매출 유형으로 구분)"
+  },
+  {
+   "id": "Q2_Online marketing services and others",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 55703.0,
+   "raw": "55,703",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Online marketing services and others",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "전년 동기 NOTES TO FINANCIAL INFORMATION 매출 구분(회사는 별도 세그먼트 보고 없이 매출 유형으로 구분)"
+  },
+  {
+   "id": "Q2_Online marketing services and others",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 49936.0,
+   "raw": "49,936",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Online marketing services and others",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용 NOTES TO FINANCIAL INFORMATION 매출 구분(회사는 별도 세그먼트 보고 없이 매출 유형으로 구분)"
+  },
+  {
+   "id": "Q2_Transaction services",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 54721.0,
+   "raw": "54,721",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Transaction services",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": "NOTES TO FINANCIAL INFORMATION 매출 구분(회사는 별도 세그먼트 보고 없이 매출 유형으로 구분)"
+  },
+  {
+   "id": "Q2_Transaction services",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 48282.0,
+   "raw": "48,282",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Transaction services",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "전년 동기 NOTES TO FINANCIAL INFORMATION 매출 구분(회사는 별도 세그먼트 보고 없이 매출 유형으로 구분)"
+  },
+  {
+   "id": "Q2_Transaction services",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 56293.0,
+   "raw": "56,293",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Transaction services",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용 NOTES TO FINANCIAL INFORMATION 매출 구분(회사는 별도 세그먼트 보고 없이 매출 유형으로 구분)"
+  },
+  {
+   "id": "Q3",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 27764.0,
+   "raw": "27,764",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 10,
+    "row": "Operating profit",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": "원문 라벨 \"Operating profit\" (Income from operations 해당)."
+  },
+  {
+   "id": "Q3",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 25793.0,
+   "raw": "25,793",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 10,
+    "row": "Operating profit",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "원문 라벨 \"Operating profit\" (Income from operations 해당). 전년 동기"
+  },
+  {
+   "id": "Q3",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 19566.0,
+   "raw": "19,566",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 10,
+    "row": "Operating profit",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "원문 라벨 \"Operating profit\" (Income from operations 해당). 직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용"
+  },
+  {
+   "id": "Q4",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 29071.0,
+   "raw": "29,071",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP operating profit",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": "지표명: Non-GAAP operating profit (Operating profit + share-based compensation)."
+  },
+  {
+   "id": "Q4",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 27748.0,
+   "raw": "27,748",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP operating profit",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "지표명: Non-GAAP operating profit (Operating profit + share-based compensation). 전년 동기"
+  },
+  {
+   "id": "Q4",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 21090.0,
+   "raw": "21,090",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP operating profit",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "지표명: Non-GAAP operating profit (Operating profit + share-based compensation). 직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용"
+  },
+  {
+   "id": "Q5",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 27182.0,
+   "raw": "27,182",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 30754.0,
+   "raw": "30,754",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "전년 동기"
+  },
+  {
+   "id": "Q5",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 12547.0,
+   "raw": "12,547",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 11,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용"
+  },
+  {
+   "id": "Q6",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 28489.0,
+   "raw": "28,489",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP net income attributable to ordinary shareholders",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 32709.0,
+   "raw": "32,709",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP net income attributable to ordinary shareholders",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "전년 동기"
+  },
+  {
+   "id": "Q6",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 14071.0,
+   "raw": "14,071",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP net income attributable to ordinary shareholders",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용"
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 18.45,
+   "raw": "18.45",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "-Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": "표 소제목 \"Earnings per ADS (4 ordinary shares equals 1 ADS)\" 아래 -Diluted 행."
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 19.33,
+   "raw": "19.33",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP diluted earnings per ADS",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 20.75,
+   "raw": "20.75",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "-Diluted",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "표 소제목 \"Earnings per ADS (4 ordinary shares equals 1 ADS)\" 아래 -Diluted 행. 전년 동기"
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 22.07,
+   "raw": "22.07",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP diluted earnings per ADS",
+    "col": "For the three months ended June 30, 2025 / RMB (Unaudited)"
+   },
+   "note": "전년 동기"
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 8.48,
+   "raw": "8.48",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 11,
+    "row": "-Diluted",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "표 소제목 \"Earnings per ADS (4 ordinary shares equals 1 ADS)\" 아래 -Diluted 행. 직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용"
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 9.51,
+   "raw": "9.51",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP diluted earnings per ADS",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용"
+  },
+  {
+   "id": "Q8",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 25670.0,
+   "raw": "25,670",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 14,
+    "row": "Net cash generated from operating activities",
+    "col": "For the three months ended June 30, 2026 / (header row reads \"RMB\" for all six columns; position 2 = 2026 RMB)"
+   },
+   "note": "QREL 현금흐름 요약표 통화 머리행이 6열 모두 \"RMB\"로 표기(US$ 열 오표기). 2026 첫째 열 25,670은 본문 \"Net cash generated from operating activities was RMB25.7 billion (US$3.8 billion)\"와 일치해 RMB로 확정"
+  },
+  {
+   "id": "Q8",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 21642.0,
+   "raw": "21,642",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 14,
+    "row": "Net cash generated from operating activities",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": "전년 동기; 머리행 오표기는 위와 같음, 본문 \"compared with RMB21.6 billion\"과 일치"
+  },
+  {
+   "id": "Q8",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 16445.0,
+   "raw": "16,445",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-05-28__tm2615739d1_ex99-1.htm",
+    "table": 14,
+    "row": "Net cash generated from operating activities",
+    "col": "For the three months ended March 31, 2026 / RMB (Unaudited)"
+   },
+   "note": "직전 분기 값: QREL 표에는 Q1 2026 열이 없어 PREL(Q1 2026 실적발표문)의 해당 표에서 인용"
+  },
+  {
+   "id": "Q9",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "실적발표문·20-F에 회사 정의 free cash flow 지표 없음 (non-GAAP는 operating profit, net income, EPS만 제시)"
+  },
+  {
+   "id": "Q10",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "QREL 현금흐름표는 영업/투자/재무 합계만 있는 요약표로 유형자산 취득 행 없음"
+  },
+  {
+   "id": "B1",
+   "period": "June 30, 2026",
+   "value": 128918.0,
+   "raw": "128,918",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Cash and cash equivalents",
+    "col": "As of June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Restricted cash",
+   "period": "June 30, 2026",
+   "value": 77274.0,
+   "raw": "77,274",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Restricted cash",
+    "col": "As of June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Short-term investments",
+   "period": "June 30, 2026",
+   "value": 327496.0,
+   "raw": "327,496",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Short-term investments",
+    "col": "As of June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3",
+   "period": "June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "QREL 대차대조표(표 8·9)에 단기차입·장기차입·선순위채·전환사채 행 없음 (20-F상 전환사채는 2025-12-01 만기 상환, 2025년말 잔액 —)"
+  },
+  {
+   "id": "B4",
+   "period": "June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사 문장으로 제시된 \"net cash\" 없음. 참고 문장: \"Cash, cash equivalents and short-term investments were RMB456.4 billion (US$67.3 billion) as of June 30, 2026\" (순현금 아님; 128,918+327,496=456,414와 일치)"
+  },
+  {
+   "id": "B5",
+   "period": "June 30, 2026",
+   "value": 663407.0,
+   "raw": "663,407",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Total Assets",
+    "col": "As of June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Total Shareholders’ Equity",
+   "period": "June 30, 2026",
+   "value": 447787.0,
+   "raw": "447,787",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 9,
+    "row": "Total Shareholders’ Equity",
+    "col": "As of June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": "비지배지분 행 없음 → 총자본 = 주주지분 = 447,787"
+  },
+  {
+   "id": "S1_ordinary_shares_outstanding",
+   "period": "December 31, 2025",
+   "value": 5693585848,
+   "raw": "5,693,585,848",
+   "unit": "Class A ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": null,
+    "row": "20-F cover: \"5,693,585,848 Class A ordinary shares ... and no Class B ordinary shares were outstanding as of December 31, 2025\"",
+    "col": ""
+   },
+   "note": "QREL에 분기말 발행주식수 미공시 → 20-F 표지(표 밖 단일 문장) 인용; 대차대조표 표 237 Class A 행 문구와 동일"
+  },
+  {
+   "id": "S1_ADS_ratio",
+   "period": "",
+   "value": 4,
+   "raw": "Our ADSs, each representing four Class A ordinary shares",
+   "unit": "ordinary shares per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": null,
+    "row": "Item 9.A Offering and Listing Details",
+    "col": ""
+   },
+   "note": "QREL 표 11 소제목 \"Earnings per ADS (4 ordinary shares equals 1 ADS)\"와도 일치"
+  },
+  {
+   "id": "S2",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 5894.0,
+   "raw": "5,894",
+   "unit": "ordinary shares (millions)",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Weighted-average number of ordinary shares outstanding (in millions): -Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB (Unaudited)"
+   },
+   "note": "표 소제목 \"Weighted-average number of ordinary shares outstanding (in millions)\". ADS 수는 미공시; 1:4 환산 시 약 1,473.5백만 ADS(파생값)"
+  },
+  {
+   "id": "R1",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "QREL에 분기 자사주 매입·매입 한도 공시 없음"
+  },
+  {
+   "id": "R2",
+   "period": "",
+   "value": null,
+   "raw": "PDD Holdings Inc. has not declared or paid any cash dividends, nor does it have any present plan to pay any cash dividends on our ordinary shares in the foreseeable future.",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": null,
+    "row": "Item 3 / Dividend policy text",
+    "col": ""
+   },
+   "note": "선언된 배당 없음"
+  },
+  {
+   "id": "A1",
+   "period": "FY2025",
+   "value": 431845.713,
+   "raw": "431,845,713",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": 238,
+    "row": "Revenues (including services provided to a related party of RMB 4,272 , nil and nil for the years ended December 31, 2023, 2024 and 2025, respectively)",
+    "col": "For the years ended December 31, 2025 / RMB"
+   },
+   "note": "20-F 원문 단위 RMB thousands → /1000 변환"
+  },
+  {
+   "id": "A2",
+   "period": "FY2025",
+   "value": 97842.539,
+   "raw": "97,842,539",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": 238,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "For the years ended December 31, 2025 / RMB"
+   },
+   "note": "20-F 원문 단위 RMB thousands → /1000 변환"
+  },
+  {
+   "id": "A3",
+   "period": "FY2025",
+   "value": 106938.69,
+   "raw": "106,938,690",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": 242,
+    "row": "Net cash generated from operating activities",
+    "col": "For the years ended December 31, 2025 / RMB"
+   },
+   "note": "20-F 원문 단위 RMB thousands → /1000 변환"
+  },
+  {
+   "id": "A4",
+   "period": "FY2025",
+   "value": -1145.077,
+   "raw": "( 1,145,077 )",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": 242,
+    "row": "Purchase of property, equipment and software and intangible assets",
+    "col": "For the years ended December 31, 2025 / RMB"
+   },
+   "note": "20-F 원문 단위 RMB thousands → /1000 변환; 투자활동 현금흐름 행"
+  },
+  {
+   "id": "X1",
+   "period": "June 30, 2026",
+   "value": 6.7851,
+   "raw": "RMB6.7851 to US$1.00, the noon buying rate in effect on June 30, 2026",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": null,
+    "row": "footnote 1 (single paragraph)",
+    "col": ""
+   },
+   "note": "20-F(FY2025) 환율은 RMB6.9931 (Dec 31, 2025)"
+  }
+ ]
+}

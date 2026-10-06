@@ -1,0 +1,905 @@
+{
+ "ticker": "TCOM",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "3M ended 2026-06-30",
+   "value": 15663,
+   "raw": "15,663",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Total net revenues",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 16208,
+   "raw": "16,208",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Total net revenues",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 14843,
+   "raw": "14,843",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Total net revenues",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Accommodation reservation",
+   "period": "3M ended 2026-06-30",
+   "value": 6576,
+   "raw": "6,576",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Accommodation reservation",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Accommodation reservation_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 6510,
+   "raw": "6,510",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Accommodation reservation",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Accommodation reservation_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 6225,
+   "raw": "6,225",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Accommodation reservation",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Transportation ticketing",
+   "period": "3M ended 2026-06-30",
+   "value": 5350,
+   "raw": "5,350",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Transportation ticketing",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Transportation ticketing_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 6050,
+   "raw": "6,050",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Transportation ticketing",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Transportation ticketing_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 5397,
+   "raw": "5,397",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Transportation ticketing",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Packaged-tour",
+   "period": "3M ended 2026-06-30",
+   "value": 1161,
+   "raw": "1,161",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Packaged-tour",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Packaged-tour_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 1130,
+   "raw": "1,130",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Packaged-tour",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Packaged-tour_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 1079,
+   "raw": "1,079",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Packaged-tour",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Corporate travel",
+   "period": "3M ended 2026-06-30",
+   "value": 771,
+   "raw": "771",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Corporate travel",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Corporate travel_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 690,
+   "raw": "690",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Corporate travel",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Corporate travel_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 692,
+   "raw": "692",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Corporate travel",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Others",
+   "period": "3M ended 2026-06-30",
+   "value": 1805,
+   "raw": "1,805",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Others",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Others_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 1828,
+   "raw": "1,828",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Others",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Others_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 1450,
+   "raw": "1,450",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Others",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3",
+   "period": "3M ended 2026-06-30",
+   "value": -1462,
+   "raw": "(1,462)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Income/(loss) from operations",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "Q2 2026 loss includes RMB5,180m SAMR anti-monopoly penalty in G&A"
+  },
+  {
+   "id": "Q3_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 3945,
+   "raw": "3,945",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Income/(loss) from operations",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "Q2 2026 loss includes RMB5,180m SAMR anti-monopoly penalty in G&A"
+  },
+  {
+   "id": "Q3_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 4102,
+   "raw": "4,102",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Income/(loss) from operations",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": "Q2 2026 loss includes RMB5,180m SAMR anti-monopoly penalty in G&A"
+  },
+  {
+   "id": "Q4",
+   "period": "3M ended 2026-06-30",
+   "value": 4565,
+   "raw": "4,565",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Adjusted EBITDA",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "Company measure name 'Adjusted EBITDA' (= income from operations + SBC + D&A + anti-monopoly penalty). Margin 29%/30%/33%"
+  },
+  {
+   "id": "Q4_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 4830,
+   "raw": "4,830",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Adjusted EBITDA",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "Company measure name 'Adjusted EBITDA' (= income from operations + SBC + D&A + anti-monopoly penalty). Margin 29%/30%/33%"
+  },
+  {
+   "id": "Q4_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 4880,
+   "raw": "4,880",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Adjusted EBITDA",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": "Company measure name 'Adjusted EBITDA' (= income from operations + SBC + D&A + anti-monopoly penalty). Margin 29%/30%/33%"
+  },
+  {
+   "id": "Q5",
+   "period": "3M ended 2026-06-30",
+   "value": -2458,
+   "raw": "(2,458)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Net income/(loss) attributable to Trip.com Group Limited",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 2499,
+   "raw": "2,499",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Net income/(loss) attributable to Trip.com Group Limited",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 4846,
+   "raw": "4,846",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Net income/(loss) attributable to Trip.com Group Limited",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "period": "3M ended 2026-06-30",
+   "value": 4798,
+   "raw": "4,798",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Non-GAAP net income attributable to Trip.com Group Limited",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 3905,
+   "raw": "3,905",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Non-GAAP net income attributable to Trip.com Group Limited",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 5011,
+   "raw": "5,011",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Non-GAAP net income attributable to Trip.com Group Limited",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_GAAP",
+   "period": "3M ended 2026-06-30",
+   "value": -3.89,
+   "raw": "(3.89)",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Earnings/(losses) per ADS - Diluted",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "RMB; US$ convenience Q2 2026 (0.57)"
+  },
+  {
+   "id": "Q7_GAAP_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 3.67,
+   "raw": "3.67",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Earnings/(losses) per ADS - Diluted",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "RMB; US$ convenience Q2 2026 (0.57)"
+  },
+  {
+   "id": "Q7_GAAP_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 6.97,
+   "raw": "6.97",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Earnings/(losses) per ADS - Diluted",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": "RMB; US$ convenience Q2 2026 (0.57)"
+  },
+  {
+   "id": "Q7_NonGAAP",
+   "period": "3M ended 2026-06-30",
+   "value": 7.27,
+   "raw": "7.27",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Non-GAAP Diluted income per ADS",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "RMB; US$ convenience Q2 2026 1.07"
+  },
+  {
+   "id": "Q7_NonGAAP_prior_qtr",
+   "period": "3M ended 2026-03-31",
+   "value": 5.73,
+   "raw": "5.73",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Non-GAAP Diluted income per ADS",
+    "col": "March 31, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "RMB; US$ convenience Q2 2026 1.07"
+  },
+  {
+   "id": "Q7_NonGAAP_prior_year_qtr",
+   "period": "3M ended 2025-06-30",
+   "value": 7.2,
+   "raw": "7.20",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Non-GAAP Diluted income per ADS",
+    "col": "June 30, 2025 RMB (million) [Three Months Ended]"
+   },
+   "note": "RMB; US$ convenience Q2 2026 1.07"
+  },
+  {
+   "id": "Q8",
+   "period": "3M ended 2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Q2 2026 press release (and Q1 2026 release) contain no cash flow statement; no operating cash flow disclosed. 2026-09-02 6-K exhibit is only a results-date notice; 2026-09-16 IFRS reconciliation exhibit (d171419dex991) has no cash flow either."
+  },
+  {
+   "id": "Q9",
+   "period": "3M ended 2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Q2 2026 press release (and Q1 2026 release) contain no cash flow statement; no free cash flow disclosed. 2026-09-02 6-K exhibit is only a results-date notice; 2026-09-16 IFRS reconciliation exhibit (d171419dex991) has no cash flow either."
+  },
+  {
+   "id": "Q10",
+   "period": "3M ended 2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "Q2 2026 press release (and Q1 2026 release) contain no cash flow statement; no capex / purchase of property, equipment and software disclosed. 2026-09-02 6-K exhibit is only a results-date notice; 2026-09-16 IFRS reconciliation exhibit (d171419dex991) has no cash flow either."
+  },
+  {
+   "id": "B1",
+   "period": "as of 2026-06-30",
+   "value": 56016,
+   "raw": "56,016",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 6,
+    "row": "Cash, cash equivalents and restricted cash",
+    "col": "June 30, 2026 RMB (million)"
+   },
+   "note": "Only combined line disclosed (cash & equivalents not shown separately from restricted cash). Dec 31, 2025: 46,451"
+  },
+  {
+   "id": "B2_Short-term investments",
+   "period": "as of 2026-06-30",
+   "value": 23499,
+   "raw": "23,499",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 6,
+    "row": "Short-term investments",
+    "col": "June 30, 2026 RMB (million)"
+   },
+   "note": "Dec 31, 2025: 32,007"
+  },
+  {
+   "id": "B2_Held to maturity time deposit and financial products (within Investments)",
+   "period": "as of 2026-06-30",
+   "value": 21001,
+   "raw": "RMB21,001 million",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 6,
+    "row": "Investments (Includes held to maturity time deposit and financial products of RMB27,302 million and RMB21,001 million as of December 31, 2025 and June 30, 2026, respectively)",
+    "col": "row label parenthetical"
+   },
+   "note": "Non-current; part of Investments row total 51,361"
+  },
+  {
+   "id": "B3_Short-term debt and current portion of long-term debt",
+   "period": "as of 2026-06-30",
+   "value": 25767,
+   "raw": "25,767",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 6,
+    "row": "Short-term debt and current portion of long-term debt",
+    "col": "June 30, 2026 RMB (million)"
+   },
+   "note": "Dec 31, 2025: 19,335. Convertible/exchangeable notes not shown as separate lines"
+  },
+  {
+   "id": "B3_Long-term debt",
+   "period": "as of 2026-06-30",
+   "value": 630,
+   "raw": "630",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 6,
+    "row": "Long-term debt",
+    "col": "June 30, 2026 RMB (million)"
+   },
+   "note": "Dec 31, 2025: 11,430"
+  },
+  {
+   "id": "B4",
+   "period": "as of 2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "No net cash figure stated. Company states gross: 'the balance of cash and cash equivalents, restricted cash, short-term investment, and held to maturity time deposit and financial products was RMB100.5 billion (US$14.8 billion)' (QREL paragraph; = 56,016+23,499+21,001). Not netted of debt."
+  },
+  {
+   "id": "B5",
+   "period": "as of 2026-06-30",
+   "value": 259089,
+   "raw": "259,089",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 6,
+    "row": "Total assets",
+    "col": "June 30, 2026 RMB (million)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Total shareholders' equity",
+   "period": "as of 2026-06-30",
+   "value": 160664,
+   "raw": "160,664",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 6,
+    "row": "Total shareholders’ equity",
+    "col": "June 30, 2026 RMB (million)"
+   },
+   "note": "Includes NCI 1,615; excludes mezzanine equity 140"
+  },
+  {
+   "id": "B6_Total Trip.com Group Limited shareholders' equity",
+   "period": "as of 2026-06-30",
+   "value": 159049,
+   "raw": "159,049",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 6,
+    "row": "Total Trip.com Group Limited shareholders’ equity",
+    "col": "June 30, 2026 RMB (million)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_shares_outstanding",
+   "period": "as of 2025-12-31",
+   "value": 649583574,
+   "raw": "649,583,574 ordinary shares",
+   "unit": "ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__20-F__2026-04-28__d27369d20f.htm",
+    "table": null,
+    "row": "Cover page: number of outstanding shares as of close of period",
+    "col": ""
+   },
+   "note": "Latest available; Q2 2026 press release does not state shares outstanding"
+  },
+  {
+   "id": "S1_ADS_ratio",
+   "period": "current",
+   "value": 1,
+   "raw": "Each ADS currently represents one ordinary share of the Company.",
+   "unit": "ordinary shares per ADS",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": null,
+    "row": "QREL paragraph (diluted EPS)",
+    "col": ""
+   },
+   "note": "Verified: 20-F states March 18, 2021 1-to-8 share subdivision changed ratio from eight ADSs per one share to one ADS per one share; also in PREL"
+  },
+  {
+   "id": "S2_GAAP_diluted",
+   "period": "3M ended 2026-06-30",
+   "value": 632330255,
+   "raw": "632,330,255",
+   "unit": "ordinary shares (=ADS, 1:1)",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 7,
+    "row": "Weighted average ordinary shares outstanding - Diluted",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": "Equals basic due to net loss (anti-dilution). Q1 2026: 681,679,206; Q2 2025: 695,705,348"
+  },
+  {
+   "id": "S2_NonGAAP_diluted",
+   "period": "3M ended 2026-06-30",
+   "value": 659356092,
+   "raw": "659,356,092",
+   "unit": "ordinary shares (=ADS, 1:1)",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": 8,
+    "row": "Weighted average ordinary shares outstanding-Diluted-non GAAP",
+    "col": "June 30, 2026 RMB (million) [Three Months Ended]"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_quarterly_buyback",
+   "period": "3M ended 2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "No Q2 2026 repurchase amount/quantity disclosed in QREL or PREL"
+  },
+  {
+   "id": "R1_remaining_authorization",
+   "period": "as of 2025-12-31",
+   "value": 5068282436,
+   "raw": "5,068,282,436",
+   "unit": "US$",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__20-F__2026-04-28__d27369d20f.htm",
+    "table": 253,
+    "row": "Total",
+    "col": "Approximate Dollar Value of ADSs/ Ordinary Shares that May Yet Be Purchased Under the Plans"
+   },
+   "note": "Latest available (20-F Item 16E). US$5bn program authorized Aug 2025. FY2025 repurchased 10,016,014 ADS/shares at avg US$61.25"
+  },
+  {
+   "id": "R2",
+   "period": "declared Feb 2025",
+   "value": 0.3,
+   "raw": "cash dividend of US$0.30 per ordinary share, or US$0.30 per ADS",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__20-F__2026-04-28__d27369d20f.htm",
+    "table": null,
+    "row": "Item 8 dividend policy text",
+    "col": ""
+   },
+   "note": "Annual dividend under regular capital return policy (aggregate ~US$200m, record date Mar 17, 2025). No 2026 dividend found in TCOM filings available."
+  },
+  {
+   "id": "A1",
+   "period": "FY2025",
+   "value": 62409,
+   "raw": "62,409",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__20-F__2026-04-28__d27369d20f.htm",
+    "table": 272,
+    "row": "Net revenues",
+    "col": "2025 RMB"
+   },
+   "note": "Total revenues (before sales tax and surcharges) 62,510; Net revenues 62,409 used to match QREL 'Total net revenues'"
+  },
+  {
+   "id": "A2",
+   "period": "FY2025",
+   "value": 33294,
+   "raw": "33,294",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__20-F__2026-04-28__d27369d20f.htm",
+    "table": 272,
+    "row": "Net income attributable to Trip.com Group Limited",
+    "col": "2025 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3",
+   "period": "FY2025",
+   "value": 14379,
+   "raw": "14,379",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__20-F__2026-04-28__d27369d20f.htm",
+    "table": 277,
+    "row": "Net cash provided by operating activities",
+    "col": "2025 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A4",
+   "period": "FY2025",
+   "value": -797,
+   "raw": "( 797 )",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__20-F__2026-04-28__d27369d20f.htm",
+    "table": 277,
+    "row": "Purchase of property, equipment and software",
+    "col": "2025 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "X1",
+   "period": "2026-06-30",
+   "value": 6.7851,
+   "raw": "USD1.00=RMB6.7851 on June 30, 2026",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "TCOM__6-K__2026-09-16__d167816dex991.htm",
+    "table": null,
+    "row": "Note 1 (financial schedules)",
+    "col": ""
+   },
+   "note": "20-F rate: RMB6.9931 at Dec 31, 2025"
+  }
+ ]
+}

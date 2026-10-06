@@ -1,0 +1,1565 @@
+{
+ "ticker": "TCEHY",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 204785,
+   "raw": "204,785",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Revenues",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Financial Performance Highlights table, (RMB in millions); also p5/p9/p18"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 184504,
+   "raw": "184,504",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Revenues",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "Financial Performance Highlights table, (RMB in millions); also p5/p9/p18"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 196458,
+   "raw": "196,458",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Revenues",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": "Financial Performance Highlights table, (RMB in millions); also p5/p9/p18"
+  },
+  {
+   "id": "Q2_VAS",
+   "period": "2026Q2",
+   "value": 98414,
+   "raw": "98,414",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 6,
+    "row": "VAS",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Segment revenue table p6; consistent with income statement p18 ('Value-added Services' = VAS)"
+  },
+  {
+   "id": "Q2_VAS",
+   "period": "2025Q2",
+   "value": 91368,
+   "raw": "91,368",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 6,
+    "row": "VAS",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "Segment revenue table p6; consistent with income statement p18 ('Value-added Services' = VAS)"
+  },
+  {
+   "id": "Q2_Marketing Services",
+   "period": "2026Q2",
+   "value": 43565,
+   "raw": "43,565",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 6,
+    "row": "Marketing Services",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Segment revenue table p6; consistent with income statement p18 ('Value-added Services' = VAS)"
+  },
+  {
+   "id": "Q2_Marketing Services",
+   "period": "2025Q2",
+   "value": 35762,
+   "raw": "35,762",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 6,
+    "row": "Marketing Services",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "Segment revenue table p6; consistent with income statement p18 ('Value-added Services' = VAS)"
+  },
+  {
+   "id": "Q2_FinTech and Business Services",
+   "period": "2026Q2",
+   "value": 60286,
+   "raw": "60,286",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 6,
+    "row": "FinTech and Business Services",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Segment revenue table p6; consistent with income statement p18 ('Value-added Services' = VAS)"
+  },
+  {
+   "id": "Q2_FinTech and Business Services",
+   "period": "2025Q2",
+   "value": 55536,
+   "raw": "55,536",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 6,
+    "row": "FinTech and Business Services",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "Segment revenue table p6; consistent with income statement p18 ('Value-added Services' = VAS)"
+  },
+  {
+   "id": "Q2_Others",
+   "period": "2026Q2",
+   "value": 2520,
+   "raw": "2,520",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 6,
+    "row": "Others",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Segment revenue table p6; consistent with income statement p18 ('Value-added Services' = VAS)"
+  },
+  {
+   "id": "Q2_Others",
+   "period": "2025Q2",
+   "value": 1838,
+   "raw": "1,838",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 6,
+    "row": "Others",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "Segment revenue table p6; consistent with income statement p18 ('Value-added Services' = VAS)"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 67276,
+   "raw": "67,276",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Operating profit",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "IFRS; p5/p9/p18 consistent"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 60104,
+   "raw": "60,104",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Operating profit",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "IFRS; p5/p9/p18 consistent"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 67375,
+   "raw": "67,375",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Operating profit",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": "IFRS; p5/p9/p18 consistent"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 75636,
+   "raw": "75,636",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS operating profit",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Company-presented Non-IFRS operating profit; reconciliation p14-15"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 69248,
+   "raw": "69,248",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS operating profit",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "Company-presented Non-IFRS operating profit; reconciliation p14-15"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q1",
+   "value": 75627,
+   "raw": "75,627",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS operating profit",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": "Company-presented Non-IFRS operating profit; reconciliation p14-15"
+  },
+  {
+   "id": "Q4_Adjusted EBITDA",
+   "period": "2026Q2",
+   "value": 91372.0,
+   "raw": "91,372",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 12,
+    "row": "Adjusted EBITDA (a)",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Adjusted EBITDA = EBITDA plus equity-settled share-based compensation"
+  },
+  {
+   "id": "Q4_Adjusted EBITDA",
+   "period": "2026Q1",
+   "value": 89617.0,
+   "raw": "89,617",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 12,
+    "row": "Adjusted EBITDA (a)",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": "Adjusted EBITDA = EBITDA plus equity-settled share-based compensation"
+  },
+  {
+   "id": "Q4_Adjusted EBITDA",
+   "period": "2025Q2",
+   "value": 85122.0,
+   "raw": "85,122",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 12,
+    "row": "Adjusted EBITDA (a)",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "Adjusted EBITDA = EBITDA plus equity-settled share-based compensation"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 56022,
+   "raw": "56,022",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 55628,
+   "raw": "55,628",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 58093,
+   "raw": "58,093",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": 68415,
+   "raw": "68,415",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": 63052,
+   "raw": "63,052",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": 67905,
+   "raw": "67,905",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_IFRS_diluted_EPS",
+   "period": "2026Q2",
+   "value": 6.104,
+   "raw": "6.104",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "EPS (RMB per share) – diluted",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "IFRS diluted EPS, currency RMB"
+  },
+  {
+   "id": "Q7_IFRS_diluted_EPS",
+   "period": "2025Q2",
+   "value": 5.996,
+   "raw": "5.996",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "EPS (RMB per share) – diluted",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "IFRS diluted EPS, currency RMB"
+  },
+  {
+   "id": "Q7_IFRS_diluted_EPS",
+   "period": "2026Q1",
+   "value": 6.302,
+   "raw": "6.302",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "EPS (RMB per share) – diluted",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": "IFRS diluted EPS, currency RMB"
+  },
+  {
+   "id": "Q7_NonIFRS_diluted_EPS",
+   "period": "2026Q2",
+   "value": 7.433,
+   "raw": "7.433",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS EPS (RMB per share) – diluted",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Non-IFRS diluted EPS, currency RMB"
+  },
+  {
+   "id": "Q7_NonIFRS_diluted_EPS",
+   "period": "2025Q2",
+   "value": 6.793,
+   "raw": "6.793",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS EPS (RMB per share) – diluted",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": "Non-IFRS diluted EPS, currency RMB"
+  },
+  {
+   "id": "Q7_NonIFRS_diluted_EPS",
+   "period": "2026Q1",
+   "value": 7.364,
+   "raw": "7.364",
+   "unit": "RMB per share",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 1,
+    "row": "Non-IFRS EPS (RMB per share) – diluted",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": "Non-IFRS diluted EPS, currency RMB"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": 52700,
+   "raw": "RMB52.7 billion",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 17,
+    "row": "narrative: 'net cash generated from operating activities of RMB52.7 billion'",
+    "col": "second quarter of 2026"
+   },
+   "note": "Quarterly OCF only given in text (billion, 1 decimal) -> 52,700 approx. Cross-check: H1 154,061 (p24) - Q1 101.4bn (Q1 release p15) = 52.66bn"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 101400,
+   "raw": "RMB101.4 billion",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q1__2026051300334.pdf",
+    "page": 15,
+    "row": "narrative: 'net cash generated from operating activities of RMB101.4 billion'",
+    "col": "first quarter of 2026"
+   },
+   "note": "text value in billions, converted"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 154061,
+   "raw": "154,061",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 24,
+    "row": "Net cash flows generated from operating activities",
+    "col": "Six months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8",
+   "period": "2025H1",
+   "value": 151265,
+   "raw": "151,265",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 24,
+    "row": "Net cash flows generated from operating activities",
+    "col": "Six months ended 30 June 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q2",
+   "value": -13800,
+   "raw": "negative free cash flow of RMB13.8 billion",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 17,
+    "row": "narrative: free cash flow",
+    "col": "second quarter of 2026"
+   },
+   "note": "Definition (as described): net cash generated from operating activities (RMB52.7bn) minus capital expenditure payments (RMB59.3bn), media content payments (RMB5.0bn) and lease liability payments (RMB2.2bn). Excluding prepayments for compute procurement, FCF would have been RMB37.6bn."
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q1",
+   "value": 56700,
+   "raw": "RMB56.7 billion",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q1__2026051300334.pdf",
+    "page": 15,
+    "row": "narrative: Free cash flow",
+    "col": "first quarter of 2026"
+   },
+   "note": "OCF 101.4bn less capex payments 37.0bn, media content 5.9bn, lease liabilities 1.8bn"
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q2",
+   "value": 52784.0,
+   "raw": "52,784",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 12,
+    "row": "Capital expenditures (d)",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": "Company-defined capex (IT infrastructure, data centres, land use rights, office premises, IP excl. media content). Q2 cash 'capital expenditure payments' stated separately as RMB59.3bn (p17)."
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q1",
+   "value": 31936.0,
+   "raw": "31,936",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 12,
+    "row": "Capital expenditures (d)",
+    "col": "Three months ended 31 March 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q10",
+   "period": "2025Q2",
+   "value": 19107.0,
+   "raw": "19,107",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 12,
+    "row": "Capital expenditures (d)",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q10",
+   "period": "2026H1",
+   "value": 84720.0,
+   "raw": "84,720",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 12,
+    "row": "Capital expenditures (d)",
+    "col": "Six months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q10",
+   "period": "2025H1",
+   "value": 46583.0,
+   "raw": "46,583",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 12,
+    "row": "Capital expenditures (d)",
+    "col": "Six months ended 30 June 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_매출",
+   "period": "2026H1",
+   "value": 401243,
+   "raw": "401,243",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 2,
+    "row": "Revenues",
+    "col": "Six months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_매출",
+   "period": "2025H1",
+   "value": 364526,
+   "raw": "364,526",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 2,
+    "row": "Revenues",
+    "col": "Six months ended 30 June 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_귀속순이익",
+   "period": "2026H1",
+   "value": 114115,
+   "raw": "114,115",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 2,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Six months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_귀속순이익",
+   "period": "2025H1",
+   "value": 103449,
+   "raw": "103,449",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 2,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Six months ended 30 June 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "H1_NonIFRS귀속순이익",
+   "period": "2026H1",
+   "value": 136320,
+   "raw": "136,320",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 2,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Six months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 206930,
+   "raw": "206,930",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 20,
+    "row": "Cash and cash equivalents",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Term deposits (non-current)",
+   "period": "2026-06-30",
+   "value": 52724,
+   "raw": "52,724",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 20,
+    "row": "Term deposits (Non-current assets)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Term deposits (current)",
+   "period": "2026-06-30",
+   "value": 214275,
+   "raw": "214,275",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 20,
+    "row": "Term deposits (Current assets)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Term deposits and others",
+   "period": "2026-06-30",
+   "value": 304224,
+   "raw": "304,224",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 17,
+    "row": "Term deposits and others",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": "Liquidity table; includes term deposits and highly liquid investment products held for treasury purposes (net cash definition p12)"
+  },
+  {
+   "id": "B2_Restricted cash",
+   "period": "2026-06-30",
+   "value": 7729,
+   "raw": "7,729",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 20,
+    "row": "Restricted cash",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_FVPL Treasury investments and others (current)",
+   "period": "2026-06-30",
+   "value": 28041,
+   "raw": "28,041",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 35,
+    "row": "Treasury investments and others (Included in current assets, FVPL note 9)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_FVOCI Treasury investments (current)",
+   "period": "2026-06-30",
+   "value": 9658,
+   "raw": "9,658",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 36,
+    "row": "Treasury investments (Included in current assets, FVOCI note 10)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Borrowings (non-current)",
+   "period": "2026-06-30",
+   "value": 212650,
+   "raw": "212,650",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 21,
+    "row": "Borrowings (Non-current liabilities)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Borrowings (current)",
+   "period": "2026-06-30",
+   "value": 86292,
+   "raw": "86,292",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 21,
+    "row": "Borrowings (Current liabilities)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Borrowings (total)",
+   "period": "2026-06-30",
+   "value": 298942,
+   "raw": "298,942",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 40,
+    "row": "Borrowings total (Note 14)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Notes payable (non-current)",
+   "period": "2026-06-30",
+   "value": 154021,
+   "raw": "154,021",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 21,
+    "row": "Notes payable (Non-current liabilities)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Notes payable (current)",
+   "period": "2026-06-30",
+   "value": 0,
+   "raw": "–",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 21,
+    "row": "Notes payable (Current liabilities)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": "dash = nil"
+  },
+  {
+   "id": "B3_Convertible bonds",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 21,
+    "row": "(no such line)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": "No convertible bonds line in statement of financial position"
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": 58191,
+   "raw": "58,191",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 17,
+    "row": "Net cash",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": "Definition (p12 note c): cash and cash equivalents, plus term deposits and others, including highly liquid investment products held for treasury purposes, minus borrowings and notes payable. 31 Mar 2026: 146,860"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 2159394,
+   "raw": "2,159,394",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 20,
+    "row": "Total assets",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Total equity",
+   "period": "2026-06-30",
+   "value": 1222513,
+   "raw": "1,222,513",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 21,
+    "row": "Total equity",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Equity attributable to equity holders",
+   "period": "2026-06-30",
+   "value": 1135853,
+   "raw": "1,135,853",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 21,
+    "row": "Equity attributable to equity holders of the Company (subtotal)",
+    "col": "30 June 2026 (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 0,
+    "row": "",
+    "col": ""
+   },
+   "note": "Q2 release does not state total issued ordinary shares at 30 June 2026"
+  },
+  {
+   "id": "S1",
+   "period": "2025-12-31",
+   "value": 9120235999,
+   "raw": "9,120,235,999",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 71,
+    "row": "'As at 31 December 2025, the total number of issued Shares was 9,120,235,999.'",
+    "col": "31 December 2025"
+   },
+   "note": "Ordinary shares; includes 81,092,614 shares held for share award schemes (AR p245)"
+  },
+  {
+   "id": "S2",
+   "period": "2026Q2",
+   "value": 9153.0,
+   "raw": "9,153",
+   "unit": "million shares",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 33,
+    "row": "Weighted average number of ordinary shares for the calculation of diluted EPS (million shares)",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "S2",
+   "period": "2025Q2",
+   "value": 9247.0,
+   "raw": "9,247",
+   "unit": "million shares",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 33,
+    "row": "Weighted average number of ordinary shares for the calculation of diluted EPS (million shares)",
+    "col": "Three months ended 30 June 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "S2",
+   "period": "2026H1",
+   "value": 9163.0,
+   "raw": "9,163",
+   "unit": "million shares",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 33,
+    "row": "Weighted average number of ordinary shares for the calculation of diluted EPS (million shares)",
+    "col": "Six months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "S2_basic",
+   "period": "2026Q2",
+   "value": 9025,
+   "raw": "9,025",
+   "unit": "million shares",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 32,
+    "row": "Weighted average number of ordinary shares in issue excluding shares held for share award scheme and treasury shares (million shares)",
+    "col": "Three months ended 30 June 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_shares",
+   "period": "2026Q2",
+   "value": 37381100,
+   "raw": "5,161,000 + 10,186,000 + 22,034,100",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 44,
+    "row": "April / May / June",
+    "col": "No. of shares purchased"
+   },
+   "note": "Derived sum of monthly rows Apr-Jun 2026 (quarter); shares cancelled"
+  },
+  {
+   "id": "R1_amount_HKD",
+   "period": "2026Q2",
+   "value": 16853926400.75,
+   "raw": "2,602,792,121.50 + 4,506,885,838.40 + 9,744,248,440.85",
+   "unit": "HKD",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 44,
+    "row": "April / May / June",
+    "col": "Aggregate consideration paid (HKD)"
+   },
+   "note": "Derived sum of monthly rows; before expenses"
+  },
+  {
+   "id": "R1_shares",
+   "period": "2026H1",
+   "value": 50031100,
+   "raw": "50,031,100",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 44,
+    "row": "Total",
+    "col": "No. of shares purchased"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_amount_HKD",
+   "period": "2026H1",
+   "value": 24408472072.15,
+   "raw": "24,408,472,072.15",
+   "unit": "HKD",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 44,
+    "row": "Total",
+    "col": "Aggregate consideration paid (HKD)"
+   },
+   "note": "approx. HKD24.4 billion before expenses"
+  },
+  {
+   "id": "R1_remaining_plan",
+   "period": "2026",
+   "value": null,
+   "raw": "",
+   "unit": "HKD",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 44,
+    "row": "",
+    "col": ""
+   },
+   "note": "No remaining buyback programme/amount disclosed in the Q2, Q1, FY2025 releases or AR"
+  },
+  {
+   "id": "R2_DPS",
+   "period": "FY2025 final",
+   "value": 5.3,
+   "raw": "HKD5.30 per share",
+   "unit": "HKD per share",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 33,
+    "row": "Note 7 Dividends",
+    "col": "final dividend in respect of year ended 31 December 2025"
+   },
+   "note": "Final, ordinary (dividend announcement: type Final, nature Ordinary; paid 1 June 2026; record date 20 May 2026). No interim dividend for H1 2026. FY2024: HKD4.50"
+  },
+  {
+   "id": "R2_total_HKD",
+   "period": "FY2025 final",
+   "value": 47900000000,
+   "raw": "approximately HKD47.9 billion",
+   "unit": "HKD",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__results_2026Q2__2026081200296.pdf",
+    "page": 33,
+    "row": "Note 7 Dividends",
+    "col": "paid during six months ended 30 June 2026"
+   },
+   "note": "RMB equivalent: cash dividends 41,680 RMB mn (SOCE p22); p17 says 2025 dividend payments of RMB41.6bn during the quarter"
+  },
+  {
+   "id": "A1_2021",
+   "period": "FY2021",
+   "value": 560118.0,
+   "raw": "560,118",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Revenues",
+    "col": "Year ended 31 December 2021"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A1_2022",
+   "period": "FY2022",
+   "value": 554552.0,
+   "raw": "554,552",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Revenues",
+    "col": "Year ended 31 December 2022"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A1_2023",
+   "period": "FY2023",
+   "value": 609015.0,
+   "raw": "609,015",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Revenues",
+    "col": "Year ended 31 December 2023"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A1_2024",
+   "period": "FY2024",
+   "value": 660257.0,
+   "raw": "660,257",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Revenues",
+    "col": "Year ended 31 December 2024"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A1_2025",
+   "period": "FY2025",
+   "value": 751766.0,
+   "raw": "751,766",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Revenues",
+    "col": "Year ended 31 December 2025"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A2_2021",
+   "period": "FY2021",
+   "value": 224822.0,
+   "raw": "224,822",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2021"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A2_2022",
+   "period": "FY2022",
+   "value": 188243.0,
+   "raw": "188,243",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2022"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A2_2023",
+   "period": "FY2023",
+   "value": 115216.0,
+   "raw": "115,216",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2023"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A2_2024",
+   "period": "FY2024",
+   "value": 194073.0,
+   "raw": "194,073",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2024"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A2_2025",
+   "period": "FY2025",
+   "value": 224842.0,
+   "raw": "224,842",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2025"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A5_2021",
+   "period": "FY2021",
+   "value": 123788.0,
+   "raw": "123,788",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2021"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A5_2022",
+   "period": "FY2022",
+   "value": 115649.0,
+   "raw": "115,649",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2022"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A5_2023",
+   "period": "FY2023",
+   "value": 157688.0,
+   "raw": "157,688",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2023"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A5_2024",
+   "period": "FY2024",
+   "value": 222703.0,
+   "raw": "222,703",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2024"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A5_2025",
+   "period": "FY2025",
+   "value": 259626.0,
+   "raw": "259,626",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "Non-IFRS profit attributable to equity holders of the Company",
+    "col": "Year ended 31 December 2025"
+   },
+   "note": "AR Financial Summary (printed page 3), RMB'Million"
+  },
+  {
+   "id": "A3_2021",
+   "period": "FY2021",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "",
+    "col": ""
+   },
+   "note": "Not in 5-year summary; only 2025/2024 in AR cash flow statement"
+  },
+  {
+   "id": "A4_2021",
+   "period": "FY2021",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "",
+    "col": ""
+   },
+   "note": "Not in 5-year summary; only 2025/2024 in AR capex table"
+  },
+  {
+   "id": "A3_2022",
+   "period": "FY2022",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "",
+    "col": ""
+   },
+   "note": "Not in 5-year summary; only 2025/2024 in AR cash flow statement"
+  },
+  {
+   "id": "A4_2022",
+   "period": "FY2022",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "",
+    "col": ""
+   },
+   "note": "Not in 5-year summary; only 2025/2024 in AR capex table"
+  },
+  {
+   "id": "A3_2023",
+   "period": "FY2023",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "",
+    "col": ""
+   },
+   "note": "Not in 5-year summary; only 2025/2024 in AR cash flow statement"
+  },
+  {
+   "id": "A4_2023",
+   "period": "FY2023",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 4,
+    "row": "",
+    "col": ""
+   },
+   "note": "Not in 5-year summary; only 2025/2024 in AR capex table"
+  },
+  {
+   "id": "A3_2024",
+   "period": "FY2024",
+   "value": 258521,
+   "raw": "258,521",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 139,
+    "row": "Net cash flows generated from operating activities",
+    "col": "Year ended 31 December 2024"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3_2025",
+   "period": "FY2025",
+   "value": 303052,
+   "raw": "303,052",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 139,
+    "row": "Net cash flows generated from operating activities",
+    "col": "Year ended 31 December 2025"
+   },
+   "note": "FY results p31 identical"
+  },
+  {
+   "id": "A4_2024",
+   "period": "FY2024",
+   "value": 76760,
+   "raw": "76,760",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 18,
+    "row": "Capital expenditures (d)",
+    "col": "Year ended 31 December 2024"
+   },
+   "note": ""
+  },
+  {
+   "id": "A4_2025",
+   "period": "FY2025",
+   "value": 79198,
+   "raw": "79,198",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 18,
+    "row": "Capital expenditures (d)",
+    "col": "Year ended 31 December 2025"
+   },
+   "note": "Company-defined capex; FY results p18 identical. Cash flow statement purchase of/prepayments for PP&E etc. (87,482) is a different measure"
+  },
+  {
+   "id": "X1",
+   "period": "FY2025",
+   "value": null,
+   "raw": "The Group presents its consolidated financial statements in RMB, unless otherwise stated. Functional currency of the Company and certain overseas subsidiaries is USD.",
+   "unit": "text",
+   "status": "ok",
+   "source": {
+    "file": "TCEHY__AR2025__2026040901231.pdf",
+    "page": 149,
+    "row": "2.5(a) Functional and presentation currency",
+    "col": ""
+   },
+   "note": "Dividends and buybacks in HKD; dividend announcement: default payment currency HKD 5.3/share, 'Exchange rate HKD 1 : HKD 1' (RMB counter 80700). No general HKD/RMB conversion rate stated; example: HKD1,284m ≈ RMB1,184m (AR p191)"
+  }
+ ]
+}

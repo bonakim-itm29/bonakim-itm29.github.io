@@ -1,0 +1,306 @@
+{
+ "ticker": "REI",
+ "items": [
+  {
+   "id": "S1",
+   "value": 5976.6,
+   "raw": "5,976,599,552",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T101 (F-52, Supplemental 'Standardized Measure of Discounted Future Net Cash Flows'; 동일 내용 T11 Item 2)",
+    "row_label": "Future cash inflows",
+    "column": "2025 (As of December 31,)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)"
+   },
+   "note": "T11/T101에 단위 캡션 없음. 원문 셀은 '$ 5,976,599,552'처럼 달러 전액 표기. T13 '(In thousands)' 캡션 열의 PV-10 1,318,208 / SMOG 1,123,493 및 본문 '$1,318.2 million', '$1,123.5 million'과 일치하므로 whole dollars로 확정."
+  },
+  {
+   "id": "S2",
+   "value": -2473.482,
+   "raw": "(2,473,482,048)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T101 (F-52, Supplemental 'Standardized Measure of Discounted Future Net Cash Flows'; 동일 내용 T11 Item 2)",
+    "row_label": "Future production costs",
+    "column": "2025 (As of December 31,)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)"
+   },
+   "note": "T11/T101에 단위 캡션 없음. 원문 셀은 '$ 5,976,599,552'처럼 달러 전액 표기. T13 '(In thousands)' 캡션 열의 PV-10 1,318,208 / SMOG 1,123,493 및 본문 '$1,318.2 million', '$1,123.5 million'과 일치하므로 whole dollars로 확정. 생산세/ad valorem 포함 여부는 원문에 명시 없음(방법론 문단은 'estimated future expenditures ... in developing and producing')."
+  },
+  {
+   "id": "S3",
+   "value": -573.423,
+   "raw": "(573,423,296)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T101 (F-52, Supplemental 'Standardized Measure of Discounted Future Net Cash Flows'; 동일 내용 T11 Item 2)",
+    "row_label": "Future development costs (1)",
+    "column": "2025 (As of December 31,)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)"
+   },
+   "note": "T11/T101에 단위 캡션 없음. 원문 셀은 '$ 5,976,599,552'처럼 달러 전액 표기. T13 '(In thousands)' 캡션 열의 PV-10 1,318,208 / SMOG 1,123,493 및 본문 '$1,318.2 million', '$1,123.5 million'과 일치하므로 whole dollars로 확정. 각주(1): 'Future development costs include not only development costs but also future asset retirement costs.' → 폐쇄·복구 비용 포함."
+  },
+  {
+   "id": "S3b",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "status": "null",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T101",
+    "row_label": "(none)",
+    "column": "2025 (As of December 31,)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)"
+   },
+   "note": "폐쇄·복구(ARO) 비용이 별도 행으로 공시되지 않고 S3에 포함됨(각주 1)."
+  },
+  {
+   "id": "S4",
+   "value": -402.809,
+   "raw": "(402,808,797)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T101 (F-52, Supplemental 'Standardized Measure of Discounted Future Net Cash Flows'; 동일 내용 T11 Item 2)",
+    "row_label": "Future income taxes",
+    "column": "2025 (As of December 31,)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)"
+   },
+   "note": "T11/T101에 단위 캡션 없음. 원문 셀은 '$ 5,976,599,552'처럼 달러 전액 표기. T13 '(In thousands)' 캡션 열의 PV-10 1,318,208 / SMOG 1,123,493 및 본문 '$1,318.2 million', '$1,123.5 million'과 일치하므로 whole dollars로 확정."
+  },
+  {
+   "id": "S5",
+   "value": 2526.885,
+   "raw": "2,526,885,411",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T101 (F-52, Supplemental 'Standardized Measure of Discounted Future Net Cash Flows'; 동일 내용 T11 Item 2)",
+    "row_label": "Future net cash flows",
+    "column": "2025 (As of December 31,)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)"
+   },
+   "note": "T11/T101에 단위 캡션 없음. 원문 셀은 '$ 5,976,599,552'처럼 달러 전액 표기. T13 '(In thousands)' 캡션 열의 PV-10 1,318,208 / SMOG 1,123,493 및 본문 '$1,318.2 million', '$1,123.5 million'과 일치하므로 whole dollars로 확정."
+  },
+  {
+   "id": "S6",
+   "value": -1403.392,
+   "raw": "(1,403,392,079)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T101 (F-52, Supplemental 'Standardized Measure of Discounted Future Net Cash Flows'; 동일 내용 T11 Item 2)",
+    "row_label": "10% annual discount for estimated timing of cash flows",
+    "column": "2025 (As of December 31,)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)"
+   },
+   "note": "T11/T101에 단위 캡션 없음. 원문 셀은 '$ 5,976,599,552'처럼 달러 전액 표기. T13 '(In thousands)' 캡션 열의 PV-10 1,318,208 / SMOG 1,123,493 및 본문 '$1,318.2 million', '$1,123.5 million'과 일치하므로 whole dollars로 확정."
+  },
+  {
+   "id": "S7",
+   "value": 1123.493,
+   "raw": "1,123,493,332",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T101 (F-52, Supplemental 'Standardized Measure of Discounted Future Net Cash Flows'; 동일 내용 T11 Item 2)",
+    "row_label": "Standardized Measure of Discounted Future Net Cash Flows",
+    "column": "2025 (As of December 31,)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)"
+   },
+   "note": "T11/T101에 단위 캡션 없음. 원문 셀은 '$ 5,976,599,552'처럼 달러 전액 표기. T13 '(In thousands)' 캡션 열의 PV-10 1,318,208 / SMOG 1,123,493 및 본문 '$1,318.2 million', '$1,123.5 million'과 일치하므로 whole dollars로 확정. T7, T8, T13(1,123,493 in thousands)과 일치."
+  },
+  {
+   "id": "S8",
+   "value": 1318.208,
+   "raw": "1,318,208,128",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T8 (Item 2, reconciliation of PV-10 to standardized measure)",
+    "row_label": "Present value of estimated future net revenues (PV-10)",
+    "column": "single value column (as of 2025-12-31 per preceding text)",
+    "unit_caption": "whole USD (caption absent; see note)",
+    "ix": null,
+    "method": "table (ix 태그 없음: 보충정보 SMOG 표는 inline XBRL 미태깅)",
+    "cross_check": "T7 'Pre-Tax PV-10 Value (2)' 1,318,208,128; T13 Total/Total Proved 'Pre-tax PV-10 (In thousands)' 1,318,208; text '$1,318.2 million'"
+   },
+   "note": "세전, 회사 제시 non-GAAP. T8: PV-10 1,318,208,128 − 'Future income taxes, discounted at 10%' 194,714,796 = SMOG 1,123,493,332. T11/T101에 단위 캡션 없음. 원문 셀은 '$ 5,976,599,552'처럼 달러 전액 표기. T13 '(In thousands)' 캡션 열의 PV-10 1,318,208 / SMOG 1,123,493 및 본문 '$1,318.2 million', '$1,123.5 million'과 일치하므로 whole dollars로 확정."
+  },
+  {
+   "id": "P1_oil",
+   "value": 61.82,
+   "raw": "$61.82 per barrel",
+   "unit": "USD/Bbl (WTI posted)",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": null,
+    "paragraph": "Supplemental note (F-52 부근): 'The oil prices as of December 31, 2025, 2024 and 2023 are based on the respective 12-month unweighted average of the first of the month prices of the WTI posted prices which equates to $61.82 per barrel ... Henry Hub spot price which equates to $3.387 per MMBtu ...'; Item 7에도 동일 문구('SEC average price of $61.82 per Bbl of WTI oil posted and $3.387 per MMBtu of Henry Hub')",
+    "ix": null,
+    "method": "paragraph"
+   },
+   "note": "WTI posted 12개월 첫날 평균."
+  },
+  {
+   "id": "P1_gas",
+   "value": 3.387,
+   "raw": "$3.387 per MMBtu",
+   "unit": "USD/MMBtu (Henry Hub)",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": null,
+    "paragraph": "Supplemental note (F-52 부근): 'The oil prices as of December 31, 2025, 2024 and 2023 are based on the respective 12-month unweighted average of the first of the month prices of the WTI posted prices which equates to $61.82 per barrel ... Henry Hub spot price which equates to $3.387 per MMBtu ...'; Item 7에도 동일 문구('SEC average price of $61.82 per Bbl of WTI oil posted and $3.387 per MMBtu of Henry Hub')",
+    "ix": null,
+    "method": "paragraph"
+   },
+   "note": ""
+  },
+  {
+   "id": "P2_oil",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Bbl",
+   "status": "null",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": null,
+    "ix": null
+   },
+   "note": "매장량 평가용 조정 후 평균가격 미공시('Prices are adjusted by local field and lease level differentials'만 언급). T18 'Average sales price'(2025 oil $63.53/Bbl, gas $(1.33)/Mcf)는 생산 실현가로 P2 아님 → 미사용."
+  },
+  {
+   "id": "P2_ngl",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Bbl",
+   "status": "null",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": null,
+    "ix": null
+   },
+   "note": "매장량 평가용 조정 후 평균가격 미공시('Prices are adjusted by local field and lease level differentials'만 언급). T18 'Average sales price'(2025 oil $63.53/Bbl, gas $(1.33)/Mcf)는 생산 실현가로 P2 아님 → 미사용."
+  },
+  {
+   "id": "P2_gas",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Mcf",
+   "status": "null",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": null,
+    "ix": null
+   },
+   "note": "매장량 평가용 조정 후 평균가격 미공시('Prices are adjusted by local field and lease level differentials'만 언급). T18 'Average sales price'(2025 oil $63.53/Bbl, gas $(1.33)/Mcf)는 생산 실현가로 P2 아님 → 미사용."
+  },
+  {
+   "id": "V1_oil",
+   "value": 90.320048,
+   "raw": "90,320,048",
+   "unit": "MMBbl (원문 Bbl)",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T9 (Item 2 'Reserve Quantity Information'); T98 (F-51 notes, 2025 'End of year') 동일; T7/T13 Total Proved 동일",
+    "row_label": "Balance, December 31, 2025",
+    "column": "Oil (Bbl)",
+    "unit_caption": "column header unit (Bbl / Mcf)",
+    "ix": null,
+    "method": "table"
+   },
+   "note": "원유 단독(NGL 별도 공시)."
+  },
+  {
+   "id": "V1_ngl",
+   "value": 33.594344,
+   "raw": "33,594,344",
+   "unit": "MMBbl (원문 Bbl)",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T9 (Item 2 'Reserve Quantity Information'); T98 (F-51 notes, 2025 'End of year') 동일; T7/T13 Total Proved 동일",
+    "row_label": "Balance, December 31, 2025",
+    "column": "Natural Gas Liquids (Bbl)",
+    "unit_caption": "column header unit (Bbl / Mcf)",
+    "ix": null,
+    "method": "table"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_gas",
+   "value": 176.180576,
+   "raw": "176,180,576",
+   "unit": "Bcf (원문 Mcf)",
+   "status": "ok",
+   "source": {
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "table": "T9 (Item 2 'Reserve Quantity Information'); T98 (F-51 notes, 2025 'End of year') 동일; T7/T13 Total Proved 동일",
+    "row_label": "Balance, December 31, 2025",
+    "column": "Gas (Mcf)",
+    "unit_caption": "column header unit (Bbl / Mcf)",
+    "ix": null,
+    "method": "table"
+   },
+   "note": "총 153,277,821 Boe."
+  }
+ ],
+ "checks": [
+  {
+   "name": "S5 = S1+S2+S3+S4",
+   "lhs": 2526.885,
+   "rhs": 2526.886,
+   "ok": true
+  },
+  {
+   "name": "S7 = S5+S6",
+   "lhs": 1123.493,
+   "rhs": 1123.493,
+   "ok": true
+  },
+  {
+   "name": "S7 = S8 - discounted future income taxes (T8 194,714,796)",
+   "lhs": 1123.493,
+   "rhs": 1123.493,
+   "ok": true
+  },
+  {
+   "name": "S1 vs V1xP2",
+   "lhs": 5976.6,
+   "rhs": null,
+   "ok": null,
+   "note": "P2 미공시로 생략"
+  }
+ ]
+}

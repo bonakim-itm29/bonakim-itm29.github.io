@@ -1,0 +1,952 @@
+{
+ "ticker": "NTES",
+ "run": "A",
+ "method": "BeautifulSoup(lxml) tr/td walk",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 30106.546,
+   "raw": "30,106,546 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net revenues",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q1_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 30591.281,
+   "raw": "30,591,281 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net revenues",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q1_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 27891.664,
+   "raw": "27,891,664 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net revenues",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q2_Games and related value-added services",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 25022.788,
+   "raw": "25,022,788 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Games and related value-added services",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_Games and related value-added services_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 25712.975,
+   "raw": "25,712,975 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Games and related value-added services",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_Games and related value-added services_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 22806.459,
+   "raw": "22,806,459 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Games and related value-added services",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_Youdao",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 1466.861,
+   "raw": "1,466,861 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Youdao",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_Youdao_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 1348.022,
+   "raw": "1,348,022 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Youdao",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_Youdao_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 1417.541,
+   "raw": "1,417,541 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Youdao",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_NetEase Cloud Music",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 1977.472,
+   "raw": "1,977,472 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: NetEase Cloud Music",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_NetEase Cloud Music_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 1981.234,
+   "raw": "1,981,234 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: NetEase Cloud Music",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_NetEase Cloud Music_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 1968.729,
+   "raw": "1,968,729 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: NetEase Cloud Music",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_Innovative businesses and others",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 1639.425,
+   "raw": "1,639,425 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Innovative businesses and others",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_Innovative businesses and others_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 1549.05,
+   "raw": "1,549,050 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Innovative businesses and others",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q2_Innovative businesses and others_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 1698.935,
+   "raw": "1,698,935 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 22,
+    "row": "Net revenues: Innovative businesses and others",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Segment net revenues; converted from RMB thousands."
+  },
+  {
+   "id": "Q3",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 12089.338,
+   "raw": "12,089,338 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Operating profit",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Company label is \"Operating profit\" (equivalent to income from operations). Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q3_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 12656.833,
+   "raw": "12,656,833 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Operating profit",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Company label is \"Operating profit\" (equivalent to income from operations). Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q3_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 9061.084,
+   "raw": "9,061,084 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Operating profit",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Company label is \"Operating profit\" (equivalent to income from operations). Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q4",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 18,
+    "row": "(none)",
+    "col": ""
+   },
+   "note": "NetEase does not present any non-GAAP operating profit / adjusted EBITDA; its only non-GAAP measures are non-GAAP net income attributable to shareholders and per share/ADS (excluding share-based compensation)."
+  },
+  {
+   "id": "Q5",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 6980.656,
+   "raw": "6,980,656 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net income attributable to the Company’s shareholders",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q5_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 10674.106,
+   "raw": "10,674,106 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net income attributable to the Company’s shareholders",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q5_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 8601.01,
+   "raw": "8,601,010 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net income attributable to the Company’s shareholders",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q6",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 7746.714,
+   "raw": "7,746,714 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 18,
+    "row": "Non-GAAP net income attributable to the Company’s shareholders",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Defined as GAAP net income attributable to shareholders excluding share-based compensation. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q6_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 11274.824,
+   "raw": "11,274,824 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 18,
+    "row": "Non-GAAP net income attributable to the Company’s shareholders",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Defined as GAAP net income attributable to shareholders excluding share-based compensation. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q6_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 9531.931,
+   "raw": "9,531,931 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 18,
+    "row": "Non-GAAP net income attributable to the Company’s shareholders",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Defined as GAAP net income attributable to shareholders excluding share-based compensation. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 10.83,
+   "raw": "10.83",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net income per ADS — Diluted",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Currency RMB (RMB column). US$ convenience: 1.6."
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 12.02,
+   "raw": "12.02",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 18,
+    "row": "Non-GAAP net income per ADS — Diluted",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Currency RMB (RMB column). US$ convenience: 1.77."
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 16.53,
+   "raw": "16.53",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net income per ADS — Diluted",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Currency RMB (RMB column)."
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 17.46,
+   "raw": "17.46",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 18,
+    "row": "Non-GAAP net income per ADS — Diluted",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Currency RMB (RMB column)."
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 13.36,
+   "raw": "13.36",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Net income per ADS — Diluted",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Currency RMB (RMB column)."
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 14.81,
+   "raw": "14.81",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 18,
+    "row": "Non-GAAP net income per ADS — Diluted",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Currency RMB (RMB column)."
+  },
+  {
+   "id": "Q8",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 9972.929,
+   "raw": "9,972,929 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Net cash provided by operating activities",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q8_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": 13733.071,
+   "raw": "13,733,071 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Net cash provided by operating activities",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q8_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": 10861.863,
+   "raw": "10,861,863 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Net cash provided by operating activities",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q9",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "(none)",
+    "col": ""
+   },
+   "note": "Press release does not present a free cash flow measure."
+  },
+  {
+   "id": "Q10",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": -18.785,
+   "raw": "-18,785 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Purchase of property, equipment and software",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Cash outflow shown as negative. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q10_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": -312.148,
+   "raw": "-312,148 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Purchase of property, equipment and software",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Cash outflow shown as negative. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q10_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": -189.842,
+   "raw": "-189,842 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Purchase of property, equipment and software",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Cash outflow shown as negative. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q10_intangibles",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": -61.554,
+   "raw": "-61,554 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Purchase of intangible assets, content and licensed copyrights",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Separate investing line, not PP&E; cash outflow negative. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q10_intangibles_PQ",
+   "period": "Q1 2026 (3M ended 2026-03-31)",
+   "value": -290.019,
+   "raw": "-290,019 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Purchase of intangible assets, content and licensed copyrights",
+    "col": "3M ended Mar 31, 2026 (RMB)"
+   },
+   "note": "Separate investing line, not PP&E; cash outflow negative. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "Q10_intangibles_PY",
+   "period": "Q2 2025 (3M ended 2025-06-30)",
+   "value": -313.349,
+   "raw": "-313,349 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 21,
+    "row": "Purchase of intangible assets, content and licensed copyrights",
+    "col": "3M ended Jun 30, 2025 (RMB)"
+   },
+   "note": "Separate investing line, not PP&E; cash outflow negative. Converted from RMB thousands (table caption \"in thousands\")."
+  },
+  {
+   "id": "B1",
+   "period": "As of 2026-06-30",
+   "value": 22814.542,
+   "raw": "22,814,542 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Dec 31, 2025: 47,167,904 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B2_Time deposits (current)",
+   "period": "As of 2026-06-30",
+   "value": 101978.645,
+   "raw": "101,978,645 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Time deposits",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Dec 31, 2025: 92,639,378 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B2_Time deposits (non-current)",
+   "period": "As of 2026-06-30",
+   "value": 260.0,
+   "raw": "260,000 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Time deposits (non-current)",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Dec 31, 2025: 2,995,000 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B2_Restricted cash (current)",
+   "period": "As of 2026-06-30",
+   "value": 4447.483,
+   "raw": "4,447,483 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Restricted cash",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Dec 31, 2025: 4,319,344 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B2_Restricted cash (non-current)",
+   "period": "As of 2026-06-30",
+   "value": 3.775,
+   "raw": "3,775 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Restricted cash (non-current)",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Dec 31, 2025: 3,893 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B2_Short-term investments",
+   "period": "As of 2026-06-30",
+   "value": 50599.638,
+   "raw": "50,599,638 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Short-term investments",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Dec 31, 2025: 22,803,503 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B3_Short-term loans",
+   "period": "As of 2026-06-30",
+   "value": 12604.17,
+   "raw": "12,604,170 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Short-term loans",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Only borrowing line on balance sheet; no long-term loans, notes or convertibles line presented. Dec 31, 2025: 6,384,417 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B4",
+   "period": "As of 2026-06-30",
+   "value": 167500.0,
+   "raw": "RMB167.5 billion (US$24.7 billion)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": null,
+    "row": "Paragraph text: \"net cash (total cash and cash equivalents, current and non-current time deposits and restricted cash, as well as short-term investments balance, minus loans)\"",
+    "col": ""
+   },
+   "note": "From release narrative (stated in billions, 1 decimal). Dec 31, 2025: RMB163.5 billion. Table check: 22,814,542+101,978,645+4,447,483+260,000+3,775+50,599,638-12,604,170 = 167,499,913 thousand."
+  },
+  {
+   "id": "B5",
+   "period": "As of 2026-06-30",
+   "value": 232208.136,
+   "raw": "232,208,136 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Total assets",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Dec 31, 2025: 221,415,060 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B6_Total equity",
+   "period": "As of 2026-06-30",
+   "value": 171466.756,
+   "raw": "171,466,756 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "Total equity",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Includes noncontrolling interests; excludes redeemable NCI (94,938 thousand, mezzanine). Dec 31, 2025: 165,012,690 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "B6_Shareholders equity",
+   "period": "As of 2026-06-30",
+   "value": 167090.54,
+   "raw": "167,090,540 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 19,
+    "row": "NetEase, Inc.’s shareholders’ equity",
+    "col": "June 30, 2026 (RMB)"
+   },
+   "note": "Dec 31, 2025: 160,296,119 thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "S1_ordinary_shares_issued_excl_treasury",
+   "period": "As of 2026-06-30",
+   "value": 3201250981,
+   "raw": "3,201,250,981",
+   "unit": "ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-07-07__tm2619797d1_ex99-1.htm",
+    "table": 1,
+    "row": "Balance at close of the month — Number of issued shares (excluding treasury shares)",
+    "col": "Month ended 30 June 2026"
+   },
+   "note": "HKEX Monthly Return (press release lacks share count). Treasury shares 10,804,675; total issued 3,212,055,656. Excludes 7,508,925 shares reserved for share-incentive awards."
+  },
+  {
+   "id": "S1_ADS_ratio",
+   "period": "",
+   "value": 5,
+   "raw": "“ADSs” American Depositary Shares (each representing five ordinary shares)",
+   "unit": "ordinary shares per ADS",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 37,
+    "row": "“ADSs”",
+    "col": "Definitions"
+   },
+   "note": "1 ADS = 5 ordinary shares."
+  },
+  {
+   "id": "S2",
+   "period": "Q2 2026 (3M ended 2026-06-30)",
+   "value": 3221637.0,
+   "raw": "3,221,637 (thousands of ordinary shares)",
+   "unit": "thousand ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 20,
+    "row": "Weighted average number of ordinary shares used in calculating net income per share — Diluted",
+    "col": "3M ended Jun 30, 2026 (RMB)"
+   },
+   "note": "Release gives ordinary shares, not ADS; ADS-equivalent = /5 = 644,327.4 thousand ADS (derived). Q1 2026: 3,227,325; Q2 2025: 3,214,681."
+  },
+  {
+   "id": "R1_Q2_repurchase",
+   "period": "Q2 2026 (Apr–Jun 2026)",
+   "value": 192.2,
+   "raw": "April 94.9 + May 70.9 + June 26.4 US$m; shares 8,311,605 ordinary (1,662,321 ADS)",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": 36,
+    "row": "April / May / June",
+    "col": "Aggregate consideration paid (US$, in millions); Number of ordinary shares underlying the repurchased ADSs"
+   },
+   "note": "Quarter sum of monthly rows (computed). 8,311,605 ordinary shares = 1,662,321 ADSs. H1 2026 total: 14,035,930 shares, US$324.1m. Cash flow line \"Net amounts paid related to repurchase of NetEase’s ADSs/purchase of subsidiaries’ shares\" Q2 2026 = RMB1,795.6m (includes subsidiaries, not pure NTES buyback)."
+  },
+  {
+   "id": "R1_remaining_authorization",
+   "period": "As of 2026-06-30",
+   "value": null,
+   "raw": "US$5.0 billion program (extended to Jan 9, 2029); cumulative ~24.9 million ADSs for US$2.3 billion as of June 30, 2026",
+   "unit": "US$ millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": null,
+    "row": "Paragraph text (share repurchase program)",
+    "col": ""
+   },
+   "note": "Remaining capacity not stated; implied ~US$2.7 billion (5.0−2.3) only if the US$5.0bn cap is cumulative since program start — not explicitly stated, so not recorded."
+  },
+  {
+   "id": "R2",
+   "period": "Q2 2026 dividend (record date Sep 3, 2026)",
+   "value": 0.48,
+   "raw": "US$0.096 per share (US$0.480 per ADS)",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": null,
+    "row": "Paragraph text: DIVIDEND",
+    "col": ""
+   },
+   "note": "Quarterly (regular) dividend for Q2 2026; Q1 2026 dividend was US$0.720 per ADS. No special dividend mentioned."
+  },
+  {
+   "id": "A1",
+   "period": "FY2025 (year ended 2025-12-31)",
+   "value": 112625.807,
+   "raw": "112,625,807 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__20-F__2026-04-15__ntes-20251231x20f.htm",
+    "table": 426,
+    "row": "Net revenues",
+    "col": "For the year ended December 31, 2025 (RMB)"
+   },
+   "note": "Converted from RMB thousands."
+  },
+  {
+   "id": "A2",
+   "period": "FY2025 (year ended 2025-12-31)",
+   "value": 33759.8,
+   "raw": "33,759,800 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__20-F__2026-04-15__ntes-20251231x20f.htm",
+    "table": 426,
+    "row": "Net income attributable to the Company’s shareholders",
+    "col": "For the year ended December 31, 2025 (RMB)"
+   },
+   "note": "Converted from RMB thousands."
+  },
+  {
+   "id": "A3",
+   "period": "FY2025 (year ended 2025-12-31)",
+   "value": 50739.8,
+   "raw": "50,739,800 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__20-F__2026-04-15__ntes-20251231x20f.htm",
+    "table": 428,
+    "row": "Net cash provided by operating activities",
+    "col": "For the year ended December 31, 2025 (RMB)"
+   },
+   "note": "Converted from RMB thousands."
+  },
+  {
+   "id": "A4",
+   "period": "FY2025 (year ended 2025-12-31)",
+   "value": -1065.376,
+   "raw": "-1,065,376 (RMB thousands)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "NTES__20-F__2026-04-15__ntes-20251231x20f.htm",
+    "table": 428,
+    "row": "Purchase of property, equipment and software",
+    "col": "For the year ended December 31, 2025 (RMB)"
+   },
+   "note": "Separate line \"Purchase of intangible assets, content and licensed copyrights\" FY2025 = (987,089) thousand. Converted from RMB thousands."
+  },
+  {
+   "id": "X1",
+   "period": "2026-06-30",
+   "value": 6.7851,
+   "raw": "US$1.00 = RMB6.7851 on the last trading day of June 2026 (June 30, 2026), H.10",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "NTES__6-K__2026-08-20__tm2623482d1_ex99-1.htm",
+    "table": null,
+    "row": "Paragraph text: EXCHANGE RATE INFORMATION",
+    "col": ""
+   },
+   "note": "20-F FY2025 rate: RMB6.9931 per US$1 (Dec 31, 2025)."
+  }
+ ]
+}

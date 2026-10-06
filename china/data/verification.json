@@ -1,0 +1,980 @@
+{
+ "BABA": [
+  {
+   "id": "Q1",
+   "label": "분기 매출",
+   "a": 268953,
+   "b": 268953,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Revenue",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Consolidated income statement (table = 0-based index of <table> elements in file)"
+  },
+  {
+   "id": "Q3",
+   "label": "영업이익",
+   "a": 15161,
+   "b": 15161,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Income from operations",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4",
+   "label": "조정 영업이익(회사 정의)",
+   "a": 27329,
+   "b": 27329,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 47,
+    "row": "Adjusted EBITA",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Company non-GAAP measure named \"Adjusted EBITA\" (reconciliation from net income)"
+  },
+  {
+   "id": "Q5",
+   "label": "귀속 순이익(GAAP)",
+   "a": 10537,
+   "b": 10537,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "label": "Non-GAAP 귀속 순이익",
+   "a": 20583,
+   "b": 20583,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 50,
+    "row": "Non-GAAP net income attributable to ordinary shareholders for computing non-GAAP diluted earnings per share/ADS",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Attributable-to-ordinary-shareholders non-GAAP figure (used for non-GAAP EPS). Company headline \"Non-GAAP net income\" (before NCI attribution) = see Q6b"
+  },
+  {
+   "id": "Q7g",
+   "label": "ADS당 희석 EPS(GAAP, RMB)",
+   "a": 3.71,
+   "b": 3.71,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB per ADS",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 42,
+    "row": "Diluted",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Earnings per ADS attributable to ordinary shareholders - Diluted; 1 ADS = 8 ordinary shares; US$ col = 0.55"
+  },
+  {
+   "id": "Q7n",
+   "label": "ADS당 희석 EPS(Non-GAAP, RMB)",
+   "a": 8.52,
+   "b": 8.52,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB per ADS",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 50,
+    "row": "Non-GAAP diluted earnings per ADS (2)(4)",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "US$ col = 1.26"
+  },
+  {
+   "id": "Q8",
+   "label": "영업활동 현금흐름",
+   "a": 22945,
+   "b": 22945,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 46,
+    "row": "Net cash provided by operating activities",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9",
+   "label": "회사 제시 FCF",
+   "a": -44670,
+   "b": -44670,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 55,
+    "row": "Free cash flow",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Definition: \"Free cash flow represents net cash provided by operating activities ... less purchases of property and equipment (excluding acquisition of land use"
+  },
+  {
+   "id": "Q10",
+   "label": "설비투자",
+   "a": -67660,
+   "b": -67660,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "3M ended 2026-06-30 (FY2027 Q1)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 55,
+    "row": "Less: Purchase of property and equipment (excluding land use rights and construction in progress relating to office campuses)",
+    "col": "Three months ended June 30, 2026 / RMB"
+   },
+   "note": "Two values for capex in release: FCF-reconciliation row = 67,660 (excl. office-campus land use rights/CIP); text \"Capital Expenditures\" section says \"capital ex"
+  },
+  {
+   "id": "B1",
+   "label": "현금및현금성자산",
+   "a": 142914,
+   "b": 142914,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "as of 2026-06-30",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Cash and cash equivalents",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5",
+   "label": "총자산",
+   "a": 1962109,
+   "b": 1962109,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "as of 2026-06-30",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 44,
+    "row": "Total assets",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "label": "총자본",
+   "a": 1106310,
+   "b": 1106310,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "as of 2026-06-30",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": 45,
+    "row": "Total equity",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "Includes noncontrolling interests; excludes mezzanine equity (7,584)"
+  },
+  {
+   "id": "A1",
+   "label": "연간 매출(20-F)",
+   "a": 1023670,
+   "b": 1023670,
+   "xbrl": 1023670.0,
+   "xtag": "Revenues",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 53,
+    "row": "Revenue",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": "Consolidated income statement"
+  },
+  {
+   "id": "A2",
+   "label": "연간 귀속 순이익(20-F)",
+   "a": 105904,
+   "b": 105904,
+   "xbrl": 105904.0,
+   "xtag": "NetIncomeLossAvailableToCommonStockholdersBasic",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 53,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": "Consolidated income statement"
+  },
+  {
+   "id": "A3",
+   "label": "연간 영업현금흐름(20-F)",
+   "a": 76213,
+   "b": 76213,
+   "xbrl": 76213.0,
+   "xtag": "NetCashProvidedByUsedInOperatingActivities",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 60,
+    "row": "Net cash provided by operating activities",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": "Consolidated statement of cash flows"
+  },
+  {
+   "id": "A4",
+   "label": "연간 설비투자(20-F)",
+   "a": -126063,
+   "b": -126063,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "FY2026 (year ended 2026-03-31)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BABA__20-F__2026-05-20__baba-20260331.htm",
+    "table": 60,
+    "row": "Land use rights, property and equipment",
+    "col": "Year ended March 31, 2026 / RMB"
+   },
+   "note": "Consolidated statement of cash flows; row under \"Acquisitions of:\" - full label \"Acquisitions of: Land use rights, property and equipment\"; outflow shown in par"
+  },
+  {
+   "id": "X1",
+   "label": "편의환산 환율(RMB/US$)",
+   "a": 6.7851,
+   "b": 6.7851,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "as of 2026-06-30",
+   "unit": "RMB per US$1",
+   "src": {
+    "file": "BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+    "table": null,
+    "row": "EXCHANGE RATE INFORMATION",
+    "col": "text"
+   },
+   "note": "Used in June-quarter release. 20-F / March-quarter release use RMB6.8980 as of 2026-03-31 (see X1_20F)"
+  }
+ ],
+ "BIDU": [
+  {
+   "id": "Q1",
+   "label": "분기 매출",
+   "a": 31325.0,
+   "b": 31325,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Revenue",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3",
+   "label": "영업이익",
+   "a": 3024.0,
+   "b": 3024,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Operating income",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": "Row label in release is \"Operating income\" (= income from operations)."
+  },
+  {
+   "id": "Q4",
+   "label": "조정 영업이익(회사 정의)",
+   "a": 3785.0,
+   "b": 3785,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Operating income (loss) (non-GAAP)",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Company-presented name: \"Non-GAAP operating income\" = operating income excl. SBC and amortization/impairment of intangibles from business combinations."
+  },
+  {
+   "id": "Q5",
+   "label": "귀속 순이익(GAAP)",
+   "a": 2319.0,
+   "b": 2319,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Net income attributable to Baidu",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": "GAAP net income attributable to Baidu, Inc. (ordinary shareholders)."
+  },
+  {
+   "id": "Q6",
+   "label": "Non-GAAP 귀속 순이익",
+   "a": 2573.0,
+   "b": 2573,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Net income (loss) attributable to Baidu (non-GAAP)",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Non-GAAP net income attributable to Baidu."
+  },
+  {
+   "id": "Q7g",
+   "label": "ADS당 희석 EPS(GAAP, RMB)",
+   "a": 5.74,
+   "b": 5.74,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB per ADS",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 21,
+    "row": "Earnings per ADS (1 ADS representing 8 Class A ordinary shares): -Diluted",
+    "col": "Three Months Ended June 30, 2026 RMB"
+   },
+   "note": "GAAP diluted earnings per ADS (1 ADS = 8 Class A ordinary shares); currency RMB."
+  },
+  {
+   "id": "Q7n",
+   "label": "ADS당 희석 EPS(Non-GAAP, RMB)",
+   "a": 7.22,
+   "b": 7.22,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB per ADS",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 26,
+    "row": "Diluted earnings per ADS (non-GAAP)",
+    "col": "Three months ended June 30, 2026 (RMB)"
+   },
+   "note": "Non-GAAP diluted EPS per ADS; currency RMB."
+  },
+  {
+   "id": "Q8",
+   "label": "영업활동 현금흐름",
+   "a": 3436.0,
+   "b": 3436,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Net cash provided by (used in) operating activities",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Consolidated Baidu, Inc."
+  },
+  {
+   "id": "Q9",
+   "label": "회사 제시 FCF",
+   "a": -7954.0,
+   "b": -7954,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Free cash flow",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Definition (per reconciliation table structure): Free cash flow = Net cash provided by (used in) operating activities less capital expenditures. The Non-GAAP se"
+  },
+  {
+   "id": "Q10",
+   "label": "설비투자",
+   "a": -11390.0,
+   "b": -11390,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 25,
+    "row": "Less: Capital expenditures",
+    "col": "Three months ended June 30, 2026 (RMB) / Baidu, Inc."
+   },
+   "note": "Row label \"Less: Capital expenditures\"; value shown as negative (cash outflow) as in source."
+  },
+  {
+   "id": "B1",
+   "label": "현금및현금성자산",
+   "a": 24524.0,
+   "b": 24524,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "As of June 30, 2026",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5",
+   "label": "총자산",
+   "a": 469932.0,
+   "b": 469932,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "As of June 30, 2026",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Total assets",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "label": "총자본",
+   "a": 281412.0,
+   "b": 281412,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "As of June 30, 2026",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 23,
+    "row": "Total equity",
+    "col": "June 30, 2026 RMB"
+   },
+   "note": "Includes noncontrolling interests (9,660); excludes redeemable noncontrolling interests (13,685, mezzanine)."
+  },
+  {
+   "id": "A1",
+   "label": "연간 매출(20-F)",
+   "a": 129079.0,
+   "b": 129079,
+   "xbrl": 129079.0,
+   "xtag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 472,
+    "row": "Revenue",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2",
+   "label": "연간 귀속 순이익(20-F)",
+   "a": 5589.0,
+   "b": 5589,
+   "xbrl": 5589.0,
+   "xtag": "NetIncomeLoss",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 472,
+    "row": "Net income attributable to Baidu, Inc.",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3",
+   "label": "연간 영업현금흐름(20-F)",
+   "a": -3013.0,
+   "b": -3013,
+   "xbrl": -3013.0,
+   "xtag": "NetCashProvidedByUsedInOperatingActivities",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 473,
+    "row": "Net cash provided by/ (used in) operating activities",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": "Negative (cash used)."
+  },
+  {
+   "id": "A4",
+   "label": "연간 설비투자(20-F)",
+   "a": -12073.0,
+   "b": -12073,
+   "xbrl": 12073.0,
+   "xtag": "PaymentsToAcquirePropertyPlantAndEquipment",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "BIDU__20-F__2026-03-17__d38065d20f.htm",
+    "table": 473,
+    "row": "Acquisition of fixed assets",
+    "col": "For the Years Ended December 31, 2025 RMB"
+   },
+   "note": "Cash flow statement row \"Acquisition of fixed assets\"; separate row \"Acquisition of intangible assets\" = (1,344) not included."
+  },
+  {
+   "id": "X1",
+   "label": "편의환산 환율(RMB/US$)",
+   "a": 6.7851,
+   "b": 6.7851,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "As of June 30, 2026",
+   "unit": "RMB per US$1",
+   "src": {
+    "file": "BIDU__6-K__2026-08-18__d112854dex991.htm",
+    "table": 22,
+    "row": "footnote (2)",
+    "col": ""
+   },
+   "note": "H.10 rate used in Q2 2026 release convenience translations."
+  }
+ ],
+ "JD": [
+  {
+   "id": "Q1",
+   "label": "분기 매출",
+   "a": 346401,
+   "b": 346401.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Total net revenues",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Statements of Operations; (In millions). Q1 2026 (PREL) = "
+  },
+  {
+   "id": "Q3",
+   "label": "영업이익",
+   "a": 4547,
+   "b": 4547.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "(Loss)/Income from operations (2)(3)",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "GAAP; also same value in segment table 19 \"Total consolidated (loss)/income from operations\"."
+  },
+  {
+   "id": "Q4",
+   "label": "조정 영업이익(회사 정의)",
+   "a": 5483,
+   "b": 5483.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 40,
+    "row": "Non-GAAP income from operations",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Company-presented name: \"Non-GAAP income from operations\" (table also gives Non-GAAP EBITDA 7,933 vs 2,999). Adds back SBC, acquired-intangible amortization, re"
+  },
+  {
+   "id": "Q5",
+   "label": "귀속 순이익(GAAP)",
+   "a": 7129,
+   "b": 7129.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Net income attributable to the Company's ordinary shareholders",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "GAAP."
+  },
+  {
+   "id": "Q6",
+   "label": "Non-GAAP 귀속 순이익",
+   "a": 8930,
+   "b": 8930.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 41,
+    "row": "Non-GAAP net income attributable to the Company's ordinary shareholders",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Also in table 33."
+  },
+  {
+   "id": "Q7g",
+   "label": "ADS당 희석 EPS(GAAP, RMB)",
+   "a": 5.01,
+   "b": 5.01,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB per ADS",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Net income per ADS: Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "US$ column: 0.74 (Q2 2026). 1 ADS = 2 Class A ordinary shares."
+  },
+  {
+   "id": "Q7n",
+   "label": "ADS당 희석 EPS(Non-GAAP, RMB)",
+   "a": 6.29,
+   "b": 6.29,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB per ADS",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Non-GAAP net income per ADS: Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "US$ column: 0.93 (Q2 2026)."
+  },
+  {
+   "id": "Q8",
+   "label": "영업활동 현금흐름",
+   "a": 37718,
+   "b": 37718.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Net cash provided by operating activities",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Also in table 16 (FCF table)."
+  },
+  {
+   "id": "Q9",
+   "label": "회사 제시 FCF",
+   "a": 31835,
+   "b": 31835.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Free cash flow",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Definition: \"The Company defines free cash flow as operating cash flow adjusting the impact from consumer financing receivables included in the operating cash f"
+  },
+  {
+   "id": "Q10",
+   "label": "설비투자",
+   "a": -5520,
+   "b": -5520.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "three months ended June 30, 2026 (Q2 2026)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Less: Capital expenditures, net of related sales proceeds",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "Outflow shown negative. Net of related sales proceeds. Sub-rows: Capital expenditures for development properties (2,517) vs (1,076); Other capital expenditures "
+  },
+  {
+   "id": "B1",
+   "label": "현금및현금성자산",
+   "a": 89068,
+   "b": 89068.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "as of June 30, 2026",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Cash and cash equivalents",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). "
+  },
+  {
+   "id": "B5",
+   "label": "총자산",
+   "a": 725406,
+   "b": 725406.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "as of June 30, 2026",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Total assets",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). "
+  },
+  {
+   "id": "B6",
+   "label": "총자본",
+   "a": 282375,
+   "b": 282375.0,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "as of June 30, 2026",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total shareholders' equity",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Unaudited Interim Condensed Consolidated Balance Sheets (In millions). Includes non-controlling int"
+  },
+  {
+   "id": "A1",
+   "label": "연간 매출(20-F)",
+   "a": 1309085,
+   "b": 1309085.0,
+   "xbrl": 1309085.0,
+   "xtag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2025 (year ended December 31, 2025)",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 444,
+    "row": "Total net revenues",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "table index = 0-based order of <table> elements in the file. Consolidated Statements of Operations and Comprehensive Income (in millions). FY2024: 1,158,819."
+  },
+  {
+   "id": "A2",
+   "label": "연간 귀속 순이익(20-F)",
+   "a": 19631,
+   "b": 19631.0,
+   "xbrl": 19631.0,
+   "xtag": "NetIncomeLossAvailableToCommonStockholdersBasic",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2025",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 444,
+    "row": "Net income attributable to the Company's ordinary shareholders",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "FY2024: 41,359."
+  },
+  {
+   "id": "A3",
+   "label": "연간 영업현금흐름(20-F)",
+   "a": 18991,
+   "b": 18991.0,
+   "xbrl": 18991.0,
+   "xtag": "NetCashProvidedByUsedInOperatingActivities",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2025",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 446,
+    "row": "Net cash provided by operating activities",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "Consolidated Statements of Cash Flows. FY2024: 58,095."
+  },
+  {
+   "id": "A4",
+   "label": "연간 설비투자(20-F)",
+   "a": -7823,
+   "b": -7823.0,
+   "xbrl": 7823.0,
+   "xtag": "PaymentsToAcquireProductiveAssets",
+   "status": "✔ XBRL·재추출 일치",
+   "period": "FY2025",
+   "unit": "RMB millions",
+   "src": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Purchase of property, equipment and software and intangible assets",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "Investing activities; outflow negative. Company capex definition includes PPE/software, CIP, intangibles, land use rights and asset acquisitions. Sales of devel"
+  },
+  {
+   "id": "X1",
+   "label": "편의환산 환율(RMB/US$)",
+   "a": 6.7851,
+   "b": 6.7851,
+   "xbrl": null,
+   "xtag": "",
+   "status": "✔ 이중 추출 일치",
+   "period": "as of June 30, 2026",
+   "unit": "RMB per US$1",
+   "src": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 5,
+    "row": "Footnote 1",
+    "col": "footnote"
+   },
+   "note": "H.10 release as of June 30, 2026; used for Q2 2026 US$ convenience amounts."
+  }
+ ]
+}

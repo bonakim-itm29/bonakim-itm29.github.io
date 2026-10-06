@@ -1,0 +1,1325 @@
+{
+ "ticker": "JD",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 346401.0,
+   "raw": "346,401",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Total net revenues",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 356660.0,
+   "raw": "356,660",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Total net revenues",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 315694.0,
+   "raw": "315,694",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 28,
+    "row": "Total net revenues",
+    "col": "For the three months ended March 31, 2026 / RMB"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q2_JD_Retail",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 295383.0,
+   "raw": "295,383",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "JD Retail",
+    "col": "For the three months ended June 30, 2026 / RMB (Net revenues)"
+   },
+   "note": "세그먼트 정보 표의 Net revenues 부문"
+  },
+  {
+   "id": "Q2_JD_Retail_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 310075.0,
+   "raw": "310,075",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "JD Retail",
+    "col": "For the three months ended June 30, 2025 / RMB (Net revenues)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_JD_Logistics",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 64102.0,
+   "raw": "64,102",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "JD Logistics",
+    "col": "For the three months ended June 30, 2026 / RMB (Net revenues)"
+   },
+   "note": "세그먼트 정보 표의 Net revenues 부문"
+  },
+  {
+   "id": "Q2_JD_Logistics_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 51564.0,
+   "raw": "51,564",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "JD Logistics",
+    "col": "For the three months ended June 30, 2025 / RMB (Net revenues)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_New_Businesses",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 7260.0,
+   "raw": "7,260",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "New Businesses",
+    "col": "For the three months ended June 30, 2026 / RMB (Net revenues)"
+   },
+   "note": "세그먼트 정보 표의 Net revenues 부문"
+  },
+  {
+   "id": "Q2_New_Businesses_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 13852.0,
+   "raw": "13,852",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "New Businesses",
+    "col": "For the three months ended June 30, 2025 / RMB (Net revenues)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_JD_Retail_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 268588.0,
+   "raw": "268,588",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 19,
+    "row": "JD Retail",
+    "col": "For the three months ended March 31, 2026 / RMB (Net revenues)"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q2_JD_Logistics_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 60581.0,
+   "raw": "60,581",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 19,
+    "row": "JD Logistics",
+    "col": "For the three months ended March 31, 2026 / RMB (Net revenues)"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q2_New_Businesses_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 6279.0,
+   "raw": "6,279",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 19,
+    "row": "New Businesses",
+    "col": "For the three months ended March 31, 2026 / RMB (Net revenues)"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q2_Inter-segment_eliminations",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": -20344.0,
+   "raw": "-20,344",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 19,
+    "row": "Inter-segment eliminations*",
+    "col": "For the three months ended June 30, 2026 / RMB (Net revenues)"
+   },
+   "note": "부문 아님; 부문 합계→연결 매출 조정 항목. 참고로 기록"
+  },
+  {
+   "id": "Q3",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 4547.0,
+   "raw": "4,547",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "(Loss)/Income from operations (2)(3)",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": -859.0,
+   "raw": "-859",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "(Loss)/Income from operations (2)(3)",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 3807.0,
+   "raw": "3,807",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 28,
+    "row": "Income from operations (2)(3)",
+    "col": "For the three months ended March 31, 2026 / RMB"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q4",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 5483.0,
+   "raw": "5,483",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 40,
+    "row": "Non-GAAP income from operations",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "회사 명칭: Non-GAAP income from operations. 참고 Non-GAAP EBITDA 7,933"
+  },
+  {
+   "id": "Q4_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 896.0,
+   "raw": "896",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 40,
+    "row": "Non-GAAP income from operations",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 5628.0,
+   "raw": "5,628",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 38,
+    "row": "Non-GAAP income from operations",
+    "col": "For the three months ended March 31, 2026 / RMB"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q5",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 7129.0,
+   "raw": "7,129",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Net income attributable to the Company’s ordinary shareholders",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 6178.0,
+   "raw": "6,178",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Net income attributable to the Company’s ordinary shareholders",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 5102.0,
+   "raw": "5,102",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 28,
+    "row": "Net income attributable to the Company’s ordinary shareholders",
+    "col": "For the three months ended March 31, 2026 / RMB"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q6",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 8930.0,
+   "raw": "8,930",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Non-GAAP net income attributable to the Company’s ordinary shareholders",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 7394.0,
+   "raw": "7,394",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Non-GAAP net income attributable to the Company’s ordinary shareholders",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 7379.0,
+   "raw": "7,379",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 31,
+    "row": "Non-GAAP net income attributable to the Company’s ordinary shareholders",
+    "col": "For the three months ended March 31, 2026 / RMB"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q7_GAAP",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 5.01,
+   "raw": "5.01",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB (Net income per ADS)"
+   },
+   "note": "US$0.74 편의환산"
+  },
+  {
+   "id": "Q7_GAAP_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 4.15,
+   "raw": "4.15",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 30,
+    "row": "Diluted",
+    "col": "For the three months ended June 30, 2025 / RMB (Net income per ADS)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_GAAP_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 3.54,
+   "raw": "3.54",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 28,
+    "row": "Diluted",
+    "col": "For the three months ended March 31, 2026 / RMB (Net income per ADS)"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q7_NonGAAP",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 6.29,
+   "raw": "6.29",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Diluted",
+    "col": "For the three months ended June 30, 2026 / RMB (Non-GAAP net income per ADS)"
+   },
+   "note": "US$0.93 편의환산"
+  },
+  {
+   "id": "Q7_NonGAAP_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 4.97,
+   "raw": "4.97",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Diluted",
+    "col": "For the three months ended June 30, 2025 / RMB (Non-GAAP net income per ADS)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_NonGAAP_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 5.12,
+   "raw": "5.12",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 31,
+    "row": "Diluted",
+    "col": "For the three months ended March 31, 2026 / RMB (Non-GAAP net income per ADS)"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q8",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 37718.0,
+   "raw": "37,718",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Net cash provided by operating activities",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 24409.0,
+   "raw": "24,409",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Net cash provided by operating activities",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 555.0,
+   "raw": "555",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 32,
+    "row": "Net cash (used in)/provided by operating activities",
+    "col": "For the three months ended March 31, 2026 / RMB"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q9",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 31835.0,
+   "raw": "31,835",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Free cash flow",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "정의: \"free cash flow as operating cash flow adjusting the impact from consumer financing receivables included in the operating cash flow and capital expenditures, net of related sales proceeds.\" TTM FCF 31,415(표18)"
+  },
+  {
+   "id": "Q9_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": 22018.0,
+   "raw": "22,018",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Free cash flow",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": -6481.0,
+   "raw": "-6,481",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 32,
+    "row": "Free cash flow",
+    "col": "For the three months ended March 31, 2026 / RMB"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "Q10",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": -5520.0,
+   "raw": "-5,520",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Less: Capital expenditures, net of related sales proceeds",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": "순액(관련 매각대금 차감 후). 정의상 PP&E·소프트웨어, 건설중자산, 무형자산, 토지사용권, 자산인수 포함. 내역: development properties 2,517 + other 3,003"
+  },
+  {
+   "id": "Q10_development_properties",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": -2517.0,
+   "raw": "-2,517",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Capital expenditures for development properties",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q10_other",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": -3003.0,
+   "raw": "-3,003",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Other capital expenditures",
+    "col": "For the three months ended June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q10_YoY",
+   "period": "Q2 2025 (three months ended June 30, 2025)",
+   "value": -3032.0,
+   "raw": "-3,032",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 34,
+    "row": "Less: Capital expenditures, net of related sales proceeds",
+    "col": "For the three months ended June 30, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q10_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": -5063.0,
+   "raw": "-5,063",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 32,
+    "row": "Less: Capital expenditures, net of related sales proceeds",
+    "col": "For the three months ended March 31, 2026 / RMB"
+   },
+   "note": "직전 분기 값은 PREL 실적발표문의 동일 성격 표에서 가져옴(최신 발표문 표에는 직전 분기 열 없음)"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 89068.0,
+   "raw": "89,068",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Cash and cash equivalents",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_Dec2025",
+   "period": "2025-12-31",
+   "value": 137488.0,
+   "raw": "137,488",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Cash and cash equivalents",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Restricted_cash",
+   "period": "2026-06-30",
+   "value": 13396.0,
+   "raw": "13,396",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Restricted cash",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Restricted_cash_Dec2025",
+   "period": "2025-12-31",
+   "value": 12137.0,
+   "raw": "12,137",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Restricted cash",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Short-term_investments",
+   "period": "2026-06-30",
+   "value": 132594.0,
+   "raw": "132,594",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Short-term investments",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Short-term_investments_Dec2025",
+   "period": "2025-12-31",
+   "value": 75744.0,
+   "raw": "75,744",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Short-term investments",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Marketable_securities_and_other_investments",
+   "period": "2026-06-30",
+   "value": 38395.0,
+   "raw": "38,395",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Marketable securities and other investments",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "비유동 투자; 현금성 여부는 판단 보류(참고)"
+  },
+  {
+   "id": "B2_Marketable_securities_and_other_investments_Dec2025",
+   "period": "2025-12-31",
+   "value": 51840.0,
+   "raw": "51,840",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Marketable securities and other investments",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Short-term_debts",
+   "period": "2026-06-30",
+   "value": 3534.0,
+   "raw": "3,534",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Short-term debts",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Short-term_debts_Dec2025",
+   "period": "2025-12-31",
+   "value": 8014.0,
+   "raw": "8,014",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Short-term debts",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Unsecured_senior_notes_current",
+   "period": "2026-06-30",
+   "value": 13555.0,
+   "raw": "13,555",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Unsecured senior notes",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "IFRS 조정표상 전환사채(Convertible senior notes)가 이 항목에 포함됨; 별도 행 없음"
+  },
+  {
+   "id": "B3_Unsecured_senior_notes_current_Dec2025",
+   "period": "2025-12-31",
+   "value": 3511.0,
+   "raw": "3,511",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Unsecured senior notes",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Unsecured_senior_notes_noncurrent",
+   "period": "2026-06-30",
+   "value": 16607.0,
+   "raw": "16,607",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Unsecured senior notes",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "비유동. 전환사채 포함(별도 구분 없음)"
+  },
+  {
+   "id": "B3_Unsecured_senior_notes_noncurrent_Dec2025",
+   "period": "2025-12-31",
+   "value": 20798.0,
+   "raw": "20,798",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Unsecured senior notes",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Long-term_debts",
+   "period": "2026-06-30",
+   "value": 36196.0,
+   "raw": "36,196",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Long-term debts",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Long-term_debts_Dec2025",
+   "period": "2025-12-31",
+   "value": 41675.0,
+   "raw": "41,675",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Long-term debts",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "회사는 순현금을 문장으로 제시하지 않음. 대신 \"cash and cash equivalents, restricted cash and short-term investments totaled RMB235.1 billion (US$34.6 billion), compared to RMB225.4 billion as of December 31, 2025\" 문장 있음(차입 미차감 총액)"
+  },
+  {
+   "id": "B2_stated_total_cash_rst_STI",
+   "period": "2026-06-30",
+   "value": 235100,
+   "raw": "RMB235.1 billion",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "(text paragraph, Financial position)",
+    "col": "as of June 30, 2026"
+   },
+   "note": "본문 문장; 표 합계 89,068+13,396+132,594=235,058과 일치"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 725406.0,
+   "raw": "725,406",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Total assets",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5_Dec2025",
+   "period": "2025-12-31",
+   "value": 695201.0,
+   "raw": "695,201",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 27,
+    "row": "Total assets",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Total_shareholders_equity",
+   "period": "2026-06-30",
+   "value": 282375.0,
+   "raw": "282,375",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total shareholders’ equity",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": "비지배지분 포함"
+  },
+  {
+   "id": "B6_Total_shareholders_equity_Dec2025",
+   "period": "2025-12-31",
+   "value": 293783.0,
+   "raw": "293,783",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total shareholders’ equity",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_JD_shareholders_equity",
+   "period": "2026-06-30",
+   "value": 219118.0,
+   "raw": "219,118",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total JD.com, Inc. shareholders’ equity (US$0.00002 par value, 100,000 million shares authorized, 2,756 million shares issued and 2,688 million shares outstanding as of June 30, 2026)",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_JD_shareholders_equity_Dec2025",
+   "period": "2025-12-31",
+   "value": 225040.0,
+   "raw": "225,040",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total JD.com, Inc. shareholders’ equity (US$0.00002 par value, 100,000 million shares authorized, 2,756 million shares issued and 2,688 million shares outstanding as of June 30, 2026)",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Non-controlling_interests",
+   "period": "2026-06-30",
+   "value": 63257.0,
+   "raw": "63,257",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Non-controlling interests",
+    "col": "As of June 30, 2026 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_Non-controlling_interests_Dec2025",
+   "period": "2025-12-31",
+   "value": 68743.0,
+   "raw": "68,743",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Non-controlling interests",
+    "col": "As of December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_outstanding",
+   "period": "2026-06-30",
+   "value": 2688,
+   "raw": "2,688 million shares outstanding",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total JD.com, Inc. shareholders’ equity (... 2,756 million shares issued and 2,688 million shares outstanding as of June 30, 2026)",
+    "col": "row caption"
+   },
+   "note": "발행(issued) 2,756백만주, 유통(outstanding) 2,688백만주, 기준일 2026-06-30. 참고: 2025-12-31 유통주식 약 2,742백만(각주4), 20-F 기준 2026-03-18 유통 2,731,641,465주"
+  },
+  {
+   "id": "S1_issued",
+   "period": "2026-06-30",
+   "value": 2756,
+   "raw": "2,756 million shares issued",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 28,
+    "row": "Total JD.com, Inc. shareholders’ equity (...)",
+    "col": "row caption"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_ADS_ratio",
+   "period": null,
+   "value": 2,
+   "raw": "each ADS representing two Class A ordinary shares",
+   "unit": "Class A ordinary shares per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 7,
+    "row": "3",
+    "col": "footnote"
+   },
+   "note": ""
+  },
+  {
+   "id": "S2",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": 2816.0,
+   "raw": "2,816",
+   "unit": "million ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 33,
+    "row": "Diluted",
+    "col": "Weighted average number of shares / For the three months ended June 30, 2026"
+   },
+   "note": "원문은 보통주 기준(ADS 수 미제시). ADS 환산 시 1,408백만(=2,816/2, 파생값). 열 머리 해석: 해당 행은 RMB/US$ 구분 없이 4개 값(3M 2025, 3M 2026, 6M 2025, 6M 2026)"
+  },
+  {
+   "id": "R1_H1_amount",
+   "period": "H1 2026 (six months ended June 30, 2026)",
+   "value": 1000,
+   "raw": "US$1.0 billion",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "(text: Updates of Share Repurchase Program)",
+    "col": ""
+   },
+   "note": "약 69.9백만 Class A 보통주(34.9백만 ADS) 매입. US$ 표시만 있어 RMB 환산 안 함"
+  },
+  {
+   "id": "R1_H1_shares",
+   "period": "H1 2026",
+   "value": 69.9,
+   "raw": "approximately 69.9 million Class A ordinary shares (equivalent to 34.9 million ADSs)",
+   "unit": "million Class A ordinary shares",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "(text: Updates of Share Repurchase Program)",
+    "col": ""
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_Q2_quarter",
+   "period": "Q2 2026 (three months ended June 30, 2026)",
+   "value": null,
+   "raw": "",
+   "unit": "US$ millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "(text)",
+    "col": ""
+   },
+   "note": "Q2 단독 매입액·수량은 명시되지 않음. H1(US$1.0bn, 69.9M주) − Q1(US$631M, 44.5M주, PREL) 차감시 약 US$0.37bn·25.4M주이나 H1 금액이 반올림(1.0bn)이라 추정 금지"
+  },
+  {
+   "id": "R1_Q1_prevQ",
+   "period": "Q1 2026 (three months ended March 31, 2026)",
+   "value": 631,
+   "raw": "US$631 million",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": null,
+    "row": "(text: Updates of Share Repurchase Program)",
+    "col": ""
+   },
+   "note": "44.5백만 Class A 보통주(22.3백만 ADS)"
+  },
+  {
+   "id": "R1_remaining",
+   "period": "2026-06-30",
+   "value": 1000,
+   "raw": "US$1.0 billion",
+   "unit": "US$ millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": null,
+    "row": "(text: remaining amount under the share repurchase program)",
+    "col": ""
+   },
+   "note": "US$5.0bn 프로그램(2024.8 채택, 2027.8까지). 2026-03-31 잔여 US$1.4bn"
+  },
+  {
+   "id": "R2",
+   "period": "FY2025 annual dividend (declared March 2026)",
+   "value": 1.0,
+   "raw": "US$0.50 per ordinary share, or US$1.00 per ADS",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": null,
+    "row": "(text: Dividend Policy / financial statement note)",
+    "col": ""
+   },
+   "note": "연간 배당(annual cash dividend), 총액 약 US$1.4bn. 특별배당 아님(최근 특별배당은 2022.5 US$1.26/ADS). PREL: 2026년 4월 지급 완료"
+  },
+  {
+   "id": "A1",
+   "period": "FY2025",
+   "value": 1309085.0,
+   "raw": "1,309,085",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 444,
+    "row": "Total net revenues",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A2",
+   "period": "FY2025",
+   "value": 19631.0,
+   "raw": "19,631",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 444,
+    "row": "Net income attributable to the Company’s ordinary shareholders",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A3",
+   "period": "FY2025",
+   "value": 18991.0,
+   "raw": "18,991",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 446,
+    "row": "Net cash provided by operating activities",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A4",
+   "period": "FY2025",
+   "value": -7823.0,
+   "raw": "-7,823",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Purchase of property, equipment and software and intangible assets",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": "현금흐름표상 설비투자 관련 행이 여러 개: 아래 A4_* 참조(회사 FCF 정의상 capex는 이들 합계에서 매각대금 차감)"
+  },
+  {
+   "id": "A4_Cash_paid_for_construction_in_progress",
+   "period": "FY2025",
+   "value": -5964.0,
+   "raw": "-5,964",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Cash paid for construction in progress",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A4_Purchase_of_land_use_rights",
+   "period": "FY2025",
+   "value": -397.0,
+   "raw": "-397",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Purchase of land use rights",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "A4_Cash_paid_for_asset_acquisitions",
+   "period": "FY2025",
+   "value": -3607.0,
+   "raw": "-3,607",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": 447,
+    "row": "Cash paid for asset acquisitions, net of cash acquired",
+    "col": "For the year ended December 31, 2025 / RMB"
+   },
+   "note": ""
+  },
+  {
+   "id": "X1",
+   "period": "2026-06-30",
+   "value": 6.7851,
+   "raw": "RMB6.7851 to US$1.00",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-08-13__d143720dex991.htm",
+    "table": 5,
+    "row": "1",
+    "col": "footnote"
+   },
+   "note": "H.10 as of June 30, 2026 (최신 실적발표문). 20-F: RMB6.9931 per US$1 as of December 31, 2025 (HK$7.7833)"
+  },
+  {
+   "id": "X1_20F",
+   "period": "2025-12-31",
+   "value": 6.9931,
+   "raw": "RMB6.9931 to US$1.00",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "JD__20-F__2026-04-16__d53690d20f.htm",
+    "table": null,
+    "row": "(text: Conventions / convenience translation)",
+    "col": ""
+   },
+   "note": ""
+  },
+  {
+   "id": "X1_PREL",
+   "period": "2026-03-31",
+   "value": 6.898,
+   "raw": "RMB6.8980 to US$1.00",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "JD__6-K__2026-05-12__d128173dex991.htm",
+    "table": 4,
+    "row": "1",
+    "col": "footnote"
+   },
+   "note": "직전 분기 발표문 편의환산 환율(H.10, March 31, 2026)"
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "ticker": "REI",
+ "top": [
+  {
+   "date": "2026-05-13",
+   "filed": "2026-05-14",
+   "title_ko": "보통주 4,444만 주 인수 공모(유상증자)",
+   "summary_ko": "Ring Energy는 2026-05-12 Mizuho·BofA·Raymond James를 대표 주관사로 44,444,445주 보통주 인수공모 계약을 체결했고(추가 6,666,666주 30일 옵션), 5/14 8-K(Item 8.01)로 공시했다. 반응일 2026-05-13 주가는 -29.2%였으나 매크로 모델 예측은 -0.7%에 그쳐 잔차 -33.9%로, 전 기간 최대 음(-)의 비매크로 급락이다. 공모가·조달액은 이 8-K에 기재되지 않아 모호.",
+   "why_important_ko": "|잔차| 33.9%로 표본 최대급이며, 대규모 신주 발행(희석)으로 자본구조를 바꾼 사건.",
+   "facts": [
+    {
+     "fact_ko": "2026-05-12 인수계약 체결, 대표 주관사 Mizuho·BofA·Raymond James",
+     "quote": "On May 12, 2026, Ring Energy, Inc. ... entered into an underwriting agreement",
+     "file": "REI__8-K__2026-05-14__rei-20260512.htm"
+    },
+    {
+     "fact_ko": "공모 주식수 44,444,445주",
+     "quote": "underwritten offering of 44,444,445 shares of Common Stock",
+     "file": "REI__8-K__2026-05-14__rei-20260512.htm"
+    },
+    {
+     "fact_ko": "추가 6,666,666주 매수 옵션(30일)",
+     "quote": "30-day option to purchase up to 6,666,666 additional shares",
+     "file": "REI__8-K__2026-05-14__rei-20260512.htm"
+    },
+    {
+     "fact_ko": "'이미 발표된' 공모로 기재 — 최초 발표일은 원문에 없음(모호)",
+     "quote": "relating to its previously announced underwritten offering",
+     "file": "REI__8-K__2026-05-14__rei-20260512.htm"
+    },
+    {
+     "fact_ko": "S-3 셸프 등록(2024-12-20 제출) 기반 공모",
+     "quote": "shelf registration statement on Form S-3 (File No. 333-283978)",
+     "file": "REI__8-K__2026-05-14__rei-20260512.htm"
+    }
+   ]
+  },
+  {
+   "date": "2020-06-22",
+   "filed": "2020-06-19",
+   "title_ko": "차입기준액 4.25억→3.75억 달러 감액 + 델라웨어 자산 매각 진행",
+   "summary_ko": "2020-06-17 신용한도 2차 수정으로 차입기준액(borrowing base)이 4.25억에서 3.75억 달러로 축소되고, 초과분 5회 분할상환·현금 2천만 달러 초과 시 의무상환 등 제약이 붙었다. 델라웨어 분지 자산 매각은 7월 말 종결 예상으로 안내됐다. 반응일 2020-06-22 R -4.2%, fit +1.3%, 잔차 -5.6%(8-K 제출 06-19, 보도자료는 06-17로 반응일 매칭은 다소 모호).",
+   "why_important_ko": "잔차는 중간 크기지만 부채 재조정(한도 축소)과 핵심 자산(델라웨어) 매각이 겹쳐 회사 방향을 바꾼 공시.",
+   "facts": [
+    {
+     "fact_ko": "차입기준액 4.25억→3.75억 달러 감액",
+     "quote": "borrowing base under the Credit Facility from $425.0 million to $375.0 million",
+     "file": "REI__000110465920075210__tm2022966d1_8k.htm"
+    },
+    {
+     "fact_ko": "차입기준 부족분 5회 균등 분할상환",
+     "quote": "payment of such deficiency in five equal installments",
+     "file": "REI__000110465920075210__tm2022966d1_8k.htm"
+    },
+    {
+     "fact_ko": "현금잔고 2천만 달러 초과 시 의무상환",
+     "quote": "mandatory prepayment of borrowings to the extent the Consolidated Cash Balance",
+     "file": "REI__000110465920075210__tm2022966d1_8k.htm"
+    },
+    {
+     "fact_ko": "델라웨어 분지 자산 매각 계약, 7월 말 종결 예상",
+     "quote": "projects the sale to close on or before the end of July",
+     "file": "REI__000110465920075210__tm2022966d1_8k.htm"
+    },
+    {
+     "fact_ko": "대출 잔액 3.88억→3.75억 달러로 축소",
+     "quote": "has reduced the current outstanding balance to $375 million",
+     "file": "REI__000110465920075210__tm2022966d1_ex99-1.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2019-12-10",
+   "filed": "2019-12-09",
+   "title_ko": "2019 가을 재산정: 차입기준액 4.25억 달러 재확인 + 2020 헤지 3,500bpd 추가 (보도자료 12/2라 반응일 모호)",
+   "R": 0.0829,
+   "res": 0.0769,
+   "file": "REI__000110465919070878__tm1924674d1_8k.htm"
+  },
+  {
+   "date": "2021-06-15",
+   "filed": "2021-06-16",
+   "title_ko": "2021 봄 재산정: 차입기준액 3.5억 달러 재확인, 2022 의무헤지 4,000→3,100bpd 완화 (보도자료 6/10, 반응일 모호)",
+   "R": 0.1136,
+   "res": 0.0986,
+   "file": "REI__000110465921081810__tm2119725d1_8k.htm"
+  },
+  {
+   "date": "2013-09-04",
+   "filed": "2013-09-05",
+   "title_ko": "8-K Item 4.01(감사인 변경 항목) — 원문 미확보, 내용 미확인",
+   "R": -0.1429,
+   "res": -0.1576,
+   "file": "f8k090413_8k.htm (미확보)"
+  },
+  {
+   "date": "2019-08-08",
+   "filed": "2019-08-07",
+   "title_ko": "8-K Item 2.02(실적 발표 항목) — 원문 미확보, 내용 미확인",
+   "R": 0.164,
+   "res": 0.1181,
+   "file": "tv526989_8k.htm (미확보)"
+  },
+  {
+   "date": "2021-02-24",
+   "filed": "2021-02-25",
+   "title_ko": "8-K Item 2.02(실적 발표 항목) — 원문 미확보, 내용 미확인",
+   "R": 0.3107,
+   "res": 0.246,
+   "file": "tm217976d1_8k.htm (미확보)"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2014-12-01",
+   "R": -0.182,
+   "res": -0.1977
+  },
+  {
+   "date": "2014-12-17",
+   "R": 0.2236,
+   "res": 0.1762
+  },
+  {
+   "date": "2016-01-06",
+   "R": -0.1726,
+   "res": -0.1465
+  },
+  {
+   "date": "2018-10-02",
+   "R": -0.1812,
+   "res": -0.1983
+  },
+  {
+   "date": "2019-11-07",
+   "R": 0.2595,
+   "res": 0.2176
+  },
+  {
+   "date": "2020-01-06",
+   "R": 0.1788,
+   "res": 0.1535
+  },
+  {
+   "date": "2020-04-01",
+   "R": -0.1818,
+   "res": -0.1387
+  },
+  {
+   "date": "2020-06-08",
+   "R": 0.4214,
+   "res": 0.3611
+  },
+  {
+   "date": "2020-08-31",
+   "R": -0.1375,
+   "res": -0.1391
+  },
+  {
+   "date": "2021-02-08",
+   "R": 0.411,
+   "res": 0.3313
+  },
+  {
+   "date": "2021-03-04",
+   "R": 0.1574,
+   "res": 0.1355
+  },
+  {
+   "date": "2021-10-04",
+   "R": 0.1879,
+   "res": 0.161
+  },
+  {
+   "date": "2025-04-08",
+   "R": -0.1383,
+   "res": -0.1269
+  }
+ ]
+}

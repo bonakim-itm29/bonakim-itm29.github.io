@@ -1,0 +1,245 @@
+{
+ "ticker": "BABA",
+ "top": [
+  {
+   "date": "2020-12-24",
+   "filed": "2020-12-28 (6-K 표지일; Ex.99.1 발표일은 2020-12-24)",
+   "title_ko": "SAMR 반독점 조사 착수 통지",
+   "summary_ko": "알리바바는 2020-12-24 중국 국가시장감독관리총국(SAMR)으로부터 반독점법에 따른 조사 착수 통지를 받았다고 발표했다. 당일 주가는 R -13.34%로, 매크로 모델 예측 fit +0.53% 대비 잔차 res -14.85%였다. moves.json에는 공시가 누락되어 있지만 발표일과 반응일이 일치한다.",
+   "why_important_ko": "회사 고유 사건 가운데 |잔차|가 가장 크다(-14.85%). 중국 당국의 플랫폼 규제가 시작된 사건으로, 이후 회사가 나아가는 방향이 달라졌다.",
+   "facts": [
+    {
+     "fact_ko": "2020-12-24 SAMR로부터 조사 통지를 수령했다",
+     "quote": "received a notice of investigation (the “Notice”) from the State Administration for Market Regulations",
+     "file": "raw_events/BABA__000110465920139366__tm2039392d1_ex99-1.htm"
+    },
+    {
+     "fact_ko": "조사 근거는 중국 반독점법이다",
+     "quote": "commenced an investigation pursuant to the Anti-Monopoly Law",
+     "file": "raw_events/BABA__000110465920139366__tm2039392d1_ex99-1.htm"
+    },
+    {
+     "fact_ko": "같은 6-K의 Ex.99.2(2020-12-28자)에서 자사주 매입 한도를 60억에서 100억 달러로 늘렸다. 12-24 반응 이후의 별도 발표다",
+     "quote": "upsize the Company’s share repurchase program from US$6 billion to US$10 billion",
+     "file": "raw_events/BABA__000110465920139366__tm2039392d1_ex99-2.htm"
+    },
+    {
+     "fact_ko": "6-K 표지 날짜는 2020-12-28이다",
+     "quote": "December 28, 2020",
+     "file": "raw_events/BABA__000110465920139366__tm2039392d1_6k.htm"
+    }
+   ]
+  },
+  {
+   "date": "2023-03-28",
+   "filed": "2023-03-28",
+   "title_ko": "6개 사업그룹 체제로 조직 개편(분사·개별 IPO 허용)",
+   "summary_ko": "그룹을 6개 사업그룹으로 나누어 각각 CEO와 이사회가 독립 경영하고, 타오바오·티몰을 제외한 각 그룹이 외부 자금 조달과 개별 IPO를 추진할 수 있도록 했다. 당일 주가는 R +14.26%, fit +0.46%, 잔차 res +12.87%였다.",
+   "why_important_ko": "양(+)의 방향으로 |잔차|가 가장 큰 회사 고유 공시다(+12.87%). 상장 이후 가장 큰 지배구조·구조 개편이다.",
+   "facts": [
+    {
+     "fact_ko": "6개 사업그룹이 각자의 CEO와 이사회로 독립 경영한다",
+     "quote": "six major business groups and other investments, each to be independently managed",
+     "file": "raw_events/BABA__000110465923037408__tm2310734d1_ex99-1.htm"
+    },
+    {
+     "fact_ko": "각 그룹은 외부 자금 조달과 개별 IPO가 가능하다(타오바오·티몰 제외)",
+     "quote": "flexibility to raise outside capital and potentially to seek its own IPO",
+     "file": "raw_events/BABA__000110465923037408__tm2310734d1_ex99-1.htm"
+    },
+    {
+     "fact_ko": "목적은 그룹 각 사업의 가치를 드러내는 것이다",
+     "quote": "thereby unlocking the value of Alibaba Group’s various businesses",
+     "file": "raw_events/BABA__000110465923037408__tm2310734d1_ex99-1.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2021-11-18",
+   "filed": "2021-11-18",
+   "title_ko": "2021년 9월 분기 실적 발표, FY2022 매출 가이던스를 20~23% 성장으로 하향",
+   "R": -0.1113,
+   "res": -0.1217,
+   "file": "raw_events/BABA__000110465921141204__tm2133400d1_ex99-1.htm",
+   "quote": "we are revising our fiscal year 2022 revenue guidance"
+  },
+  {
+   "date": "2021-12-06",
+   "filed": "2021-12-06",
+   "title_ko": "6-K(tm2134644d1) 원문 파일 없음, 내용 미확인",
+   "R": 0.104,
+   "res": 0.0844,
+   "file": "(미보유) tm2134644d1_6k.htm"
+  },
+  {
+   "date": "2022-07-29",
+   "filed": "2022-07-26",
+   "title_ko": "홍콩 1차 상장 전환 신청 발표(뉴욕·홍콩 이중 1차 상장) 및 FY22 홍콩 연차보고서. 공시일(7/26)과 반응일(7/29)이 3거래일 떨어져 있어 인과관계는 모호",
+   "R": -0.1112,
+   "res": -0.1383,
+   "file": "raw_events/BABA__000110465922082563__tm2215966d2_ex99-1.htm",
+   "quote": "apply to change our listing status to a primary listing"
+  },
+  {
+   "date": "2023-11-16",
+   "filed": "2023-11-16",
+   "title_ko": "2023년 9월 분기 실적 발표. 클라우드 완전 분사 철회와 허마 IPO 보류, 첫 연간 배당 발표",
+   "R": -0.0914,
+   "res": -0.0961,
+   "file": "raw_events/BABA__000110465923119081__tm2330915d1_ex99-1.htm",
+   "quote": "we have decided to not proceed with a full spin-off"
+  },
+  {
+   "date": "2025-08-29",
+   "filed": "2025-08-29",
+   "title_ko": "2025년 6월 분기 실적 발표. 클라우드 매출 +26%, CMR +10%",
+   "R": 0.129,
+   "res": 0.1232,
+   "file": "raw_events/BABA__000110465925085638__tm2524743d1_ex99-1.htm",
+   "quote": "revenue from Cloud Intelligence Group grew 26%"
+  },
+  {
+   "date": "2026-07-08",
+   "filed": "2026-07-06, 2026-07-07",
+   "title_ko": "홍콩거래소 정기 신고(자사주 매입 익일 신고, 6월 월간보고)뿐이라 급변동을 설명하는 내용 없음",
+   "R": 0.1105,
+   "res": 0.1091,
+   "file": "raw/BABA__6-K__2026-07-07__tm2619926d1_6k.htm"
+  },
+  {
+   "date": "2026-08-21",
+   "filed": "2026-08-20",
+   "title_ko": "2026년 6월 분기 실적 발표. 순이익 -75%, 조정 EBITA -30%, CMR -7%, 설비투자 +75%로 FCF 유출 확대",
+   "R": -0.0857,
+   "res": -0.1026,
+   "file": "raw/BABA__6-K__2026-08-20__tm2623667d1_ex99-1.htm",
+   "quote": "Net income was RMB10,444 million (US$1,539 million), a decrease of 75%"
+  },
+  {
+   "date": "2026-08-24",
+   "filed": "2026-08-24 (발표일 2026-08-23 일요일)",
+   "title_ko": "HK$800억 신주 배정(7.1억 주, 주당 HK$112.70) 발표·가격 확정. 순조달액 100%를 AI 인프라에 투입. moves.json 급변동 목록에 없음(임계값 8.9% 미만)",
+   "R": -0.0073,
+   "res": null,
+   "file": "raw/BABA__6-K__2026-08-24__baba-ex99_3.htm",
+   "quote": "pricing of its HK$80 billion placing of 710,000,000 newly issued ordinary shares",
+   "note": "R은 prices.pkl의 BABA 종가로 계산. moves.json에 이 날 항목이 없어 fit·res 없음. 8/21 급락보다 뒤에 발표되어 8/21 반응을 설명할 수 없음"
+  },
+  {
+   "date": "2026-08-26",
+   "filed": "2026-08-26",
+   "title_ko": "HK$800억 신주 배정 완료. 용도는 글로벌 컴퓨팅 인프라 약 60%, AI 데이터센터·클라우드 업그레이드 약 40%. 급변동 없음",
+   "R": 0.0033,
+   "res": null,
+   "file": "raw/BABA__6-K__2026-08-26__baba-ex99_1.htm",
+   "quote": "announced the completion of its HK$80 billion placing",
+   "note": "R은 prices.pkl 기준. moves.json 항목 없음"
+  },
+  {
+   "date": "2022-05-26",
+   "filed": "2022-05-26",
+   "title_ko": "[중국 공통 충격] 6-K(tm2217018d1) 원문 파일 없음, 내용 미확인",
+   "R": 0.1479,
+   "res": 0.1061,
+   "file": "(미보유) tm2217018d1_6k.htm"
+  },
+  {
+   "date": "2024-09-26",
+   "filed": "2024-09-27",
+   "title_ko": "[중국 공통 충격] 공시가 반응일 다음 날에 제출됨. 원문 파일 없음",
+   "R": 0.1007,
+   "res": 0.0841,
+   "file": "(미보유) tm2424538d1_6k.htm"
+  },
+  {
+   "date": "2025-02-24",
+   "filed": "2025-02-24, 2025-02-25",
+   "title_ko": "[중국 공통 충격] 원문 파일 없음, 내용 미확인",
+   "R": -0.1023,
+   "res": -0.1021,
+   "file": "(미보유) tm257405d1_6k.htm"
+  },
+  {
+   "date": "2025-04-04",
+   "filed": "2025-04-02, 2025-04-04",
+   "title_ko": "[매크로] 매크로로 설명되는 급변동(share 0.86). 원문 파일 없음",
+   "R": -0.0989,
+   "res": -0.0142,
+   "file": "(미보유) tm2510905d1_6k.htm"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2017-06-08",
+   "R": 0.1329,
+   "res": 0.1238,
+   "type": "비매크로",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2021-12-30",
+   "R": 0.0972,
+   "res": 0.0988,
+   "type": "중국 공통 충격",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2022-03-16",
+   "R": 0.3676,
+   "res": 0.2869,
+   "type": "중국 공통 충격",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2022-06-08",
+   "R": 0.1467,
+   "res": 0.1441,
+   "type": "비매크로",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2022-07-11",
+   "R": -0.0937,
+   "res": -0.0687,
+   "type": "중국 공통 충격",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2022-10-24",
+   "R": -0.1251,
+   "res": -0.151,
+   "type": "중국 공통 충격",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2022-11-15",
+   "R": 0.1117,
+   "res": 0.1077,
+   "type": "중국 공통 충격",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2022-11-30",
+   "R": 0.0964,
+   "res": 0.0571,
+   "type": "중국 공통 충격",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2023-01-04",
+   "R": 0.1298,
+   "res": 0.1133,
+   "type": "중국 공통 충격",
+   "note": "공시 없음"
+  },
+  {
+   "date": "2026-01-12",
+   "R": 0.1017,
+   "res": 0.0897,
+   "type": "비매크로",
+   "note": "공시 없음"
+  }
+ ]
+}

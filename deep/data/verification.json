@@ -1,0 +1,1341 @@
+{
+ "CRGY": {
+  "rows": [
+   {
+    "id": "F1",
+    "label": "2분기 매출",
+    "blind": 1394.954,
+    "prior": null,
+    "xbrl": 1394.954,
+    "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "표 단위 in thousands, ix scale=3. 해당 태그가 Total revenues 행(Oil+Gas+NGL+Midstream and other) 값에 사용됨."
+   },
+   {
+    "id": "F2",
+    "label": "2분기 순이익",
+    "blind": 492.765,
+    "prior": null,
+    "xbrl": 492.765,
+    "tag": "us-gaap:NetIncomeLoss",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "연결 순이익(ProfitLoss) 493,704; 비지배지분 939 차감."
+   },
+   {
+    "id": "F3",
+    "label": "상반기 순이익",
+    "blind": 72.918,
+    "prior": null,
+    "xbrl": 72.918,
+    "tag": "us-gaap:NetIncomeLoss",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "연결 순이익 74,528."
+   },
+   {
+    "id": "F4",
+    "label": "상반기 영업현금흐름",
+    "blind": 1115.979,
+    "prior": 1115.979,
+    "xbrl": 1115.979,
+    "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F5",
+    "label": "현금(6/30)",
+    "blind": 264.882,
+    "prior": 264.882,
+    "xbrl": 264.882,
+    "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "Restricted cash 5,467(천달러) 별도, 미포함."
+   },
+   {
+    "id": "F6",
+    "label": "총자산",
+    "blind": 12008.376,
+    "prior": null,
+    "xbrl": 12008.376,
+    "tag": "us-gaap:Assets",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F7",
+    "label": "총부채",
+    "blind": 6848.787,
+    "prior": null,
+    "xbrl": 6848.787,
+    "tag": "us-gaap:Liabilities",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F8",
+    "label": "자본총계",
+    "blind": 5159.589,
+    "prior": null,
+    "xbrl": 5159.589,
+    "tag": "us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "재무상태표에 회사 주주지분 합계 행이 없음(구성항목 뒤 Noncontrolling interests 7,637 후 바로 Total equity). us-gaap:StockholdersEquity 무차원 fact도 없음 → company_stockholders_equity=null. (차감 계산 5,151.952는 추정이라 미기재)"
+   },
+   {
+    "id": "F9",
+    "label": "장기부채 장부가",
+    "blind": 5166.022,
+    "prior": 5166.022,
+    "xbrl": 5166.022,
+    "tag": "us-gaap:LongTermDebt / us-gaap:LongTermDebtNoncurrent",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "유동 부분 없음(BS에 current debt 행 없음); 부채 주석 합계 행 5,166,022와 일치. 원금 기준 합계는 5,226,327(할인/발행비용 60,305 차감 전). 2029 Notes 258.7M은 2026년 7월 상환 결정."
+   },
+   {
+    "id": "F10",
+    "label": "발행주식 수(표지)",
+    "blind": 330403696,
+    "prior": 330403696,
+    "xbrl": 330403696,
+    "tag": "dei:EntityCommonStockSharesOutstanding",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "shares",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "Class A common stock만 표지에 기재(\"approximately\"). Class B는 표지 수치 없음(BS상 Class B 발행 없음). 참고: BS 기준 2026-06-30 Class A 유통 330,345,624주."
+   },
+   {
+    "id": "O1",
+    "label": "2분기 생산량",
+    "blind": 335,
+    "prior": 335,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MBoe/d",
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "note": "판매(net sales) 기준. 10-Q MD&A 표44(Total (MBoe/d) 335)과 일치. 분기 총량 30,465 MBoe. WI 322 + Minerals 13."
+   },
+   {
+    "id": "O2",
+    "label": "2분기 원유 생산",
+    "blind": 140,
+    "prior": 140,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MBbls/d",
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "note": "판매 기준. 10-Q 표44 Oil 140 MBbls/d(분기 12,699 MBbls)와 일치."
+   },
+   {
+    "id": "O3",
+    "label": "원유 실현가(헤지 전)",
+    "blind": 96.61,
+    "prior": 96.61,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Bbl",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "실적발표문 표1 동일(96.61). 헤지 포함 시 73.33."
+   },
+   {
+    "id": "O4",
+    "label": "LOE/Boe",
+    "blind": null,
+    "prior": 6.8,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 원문 문장 확인",
+    "unit": "USD/Boe",
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "note": "10-Q MD&A 한 문단에 \"…decreased $0.75 per Boe, or 10%, to $6.80 per Boe\"로 명시. 재추출은 표에서만 찾아 모호로 분류했고 원문 문단을 다시 확인해 확정"
+   },
+   {
+    "id": "O5",
+    "label": "조정 EBITDA(X)",
+    "blind": 797.94,
+    "prior": 797.94,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "note": "표 단위 in thousands."
+   },
+   {
+    "id": "O6",
+    "label": "회사 제시 FCF",
+    "blind": 417.678,
+    "prior": 417.678,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "note": "명칭: Levered Free Cash Flow. 10-Q MD&A 표50에서도 417,678 확인."
+   },
+   {
+    "id": "O7",
+    "label": "순부채(회사 제시)",
+    "blind": 4901,
+    "prior": 4901,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "CRGY__8-K__2026-08-03__exhibit991q22026earningsre.htm",
+    "note": "표 단위 in millions. Total debt 5,166 − cash 265."
+   },
+   {
+    "id": "O8",
+    "label": "하반기 원유 헤지",
+    "blind": null,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "⚠ 모호(재추출)",
+    "unit": "Bbl / USD/Bbl",
+    "file": "CRGY__10-Q__2026-08-03__crgy-20260630.htm",
+    "note": "표 기간 라벨이 \"2026\"뿐이고 7~12월로 명시되지 않음(ix context도 DerivativeContractPeriodOneMember, 기간 2026-01-01~06-30로 태그). 6/30 기준 잔여분으로 보이나 확정 불가. 또한 \"총량\"이 스왑만인지 칼라 포함인지 불명. 스왑만: 10,552,000 Bbl @ $64.64."
+   },
+   {
+    "id": "R1",
+    "label": "증명매장량",
+    "blind": 975.518,
+    "prior": 975.518,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MMBoe",
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "note": "원문 MBoe → MMBoe 환산. ix context에 ConsolidatedEntitiesMember 차원 있음. Oil 359,695 MBbls, Gas 2,278,059 MMcf, NGL 236,146 MBbls."
+   },
+   {
+    "id": "R2",
+    "label": "증명개발",
+    "blind": 776.346,
+    "prior": 776.346,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MMBoe",
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "note": "PD 물량. 비중 = 776,346/975,518 = 79.6% (보고 수치의 단순 비율). PUD 199,172 MBoe."
+   },
+   {
+    "id": "R3",
+    "label": "Std. Measure",
+    "blind": 7755.55,
+    "prior": 7756,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "note": "표17에서도 7,756(millions)."
+   },
+   {
+    "id": "R4",
+    "label": "PV-10",
+    "blind": 8633,
+    "prior": 8633,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "note": "회사 제시 non-GAAP. PD PV-10 7,517; PUD 1,116. 표13 운영지역 합계(WI 8,213 + Minerals 420 = 8,633) 일치."
+   },
+   {
+    "id": "R5",
+    "label": "SEC 가격",
+    "blind": 65.34,
+    "prior": 65.34,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Bbl, USD/MMBtu",
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "note": "12개월 월초가격 평균, 조정 전 기준가격."
+   }
+  ],
+  "checks": [
+   {
+    "name": "총자산 = 부채와자본 합계",
+    "lhs": 12008.376,
+    "rhs": 12008.376,
+    "ok": true
+   },
+   {
+    "name": "부채 + 자본 = 총자산",
+    "lhs": 12008.376,
+    "rhs": 12008.376,
+    "ok": true
+   },
+   {
+    "name": "영업+투자+재무 현금흐름 = 현금 증감(상반기)",
+    "lhs": -464.163,
+    "rhs": -464.163,
+    "ok": true
+   },
+   {
+    "name": "고객계약 매출: 1분기 + 2분기 = 상반기",
+    "lhs": 2577.784,
+    "rhs": 2577.784,
+    "ok": true
+   },
+   {
+    "name": "순이익: 1분기 + 2분기 = 상반기",
+    "lhs": 72.918,
+    "rhs": 72.918,
+    "ok": true
+   }
+  ],
+  "sanity": [
+   {
+    "name": "원유 실현가 − WTI 2분기 평균($95.65)",
+    "val": 0.96,
+    "ok": true
+   },
+   {
+    "name": "LOE/Boe 범위(3~30달러)",
+    "val": 6.8,
+    "ok": true
+   },
+   {
+    "name": "원유 비중(원유/총생산)",
+    "val": 0.418,
+    "ok": true
+   },
+   {
+    "name": "매출/판매량($/Boe)",
+    "val": 45.76,
+    "ok": true
+   },
+   {
+    "name": "조정 EBITDA(X)/매출",
+    "val": 0.572,
+    "ok": true
+   }
+  ]
+ },
+ "KOS": {
+  "rows": [
+   {
+    "id": "F1",
+    "label": "2분기 매출",
+    "blind": 607.253,
+    "prior": 607.253,
+    "xbrl": 607.253,
+    "tag": "us-gaap:Revenues",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "Scale=3 (thousands). 'Total revenues and other income' row (kos:RevenueAndOtherIncome) = 617,035 incl. gain on sale of assets 9,421 and other income 361; chose us-gaap:Revenues (oil and gas revenue), "
+   },
+   {
+    "id": "F2",
+    "label": "2분기 순이익",
+    "blind": 184.775,
+    "prior": 184.775,
+    "xbrl": 184.775,
+    "tag": "us-gaap:NetIncomeLoss",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "No noncontrolling interest; Net income (loss) is attributable to Kosmos in full."
+   },
+   {
+    "id": "F3",
+    "label": "상반기 순이익",
+    "blind": -40.799,
+    "prior": -40.799,
+    "xbrl": -40.799,
+    "tag": "us-gaap:NetIncomeLoss",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "ix sign='-'. Q1 -225,574 + Q2 184,775 = -40,799 (matches equity statement)."
+   },
+   {
+    "id": "F4",
+    "label": "상반기 영업현금흐름",
+    "blind": 281.566,
+    "prior": 281.566,
+    "xbrl": 281.566,
+    "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F5",
+    "label": "현금(6/30)",
+    "blind": 102.137,
+    "prior": 102.137,
+    "xbrl": 102.137,
+    "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "Excludes restricted cash (current 23,505; long-term 30,589). Cash+restricted = 156,231."
+   },
+   {
+    "id": "F6",
+    "label": "총자산",
+    "blind": 4310.147,
+    "prior": null,
+    "xbrl": 4310.147,
+    "tag": "us-gaap:Assets",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F7",
+    "label": "총부채",
+    "blind": null,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "자료 없음",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "Balance sheet shows only Total current liabilities 662,796 (us-gaap:LiabilitiesCurrent) and Total long-term liabilities 2,942,454 (us-gaap:LiabilitiesNoncurrent); no us-gaap:Liabilities fact. Their su"
+   },
+   {
+    "id": "F8",
+    "label": "자본총계",
+    "blind": 704.897,
+    "prior": null,
+    "xbrl": 704.897,
+    "tag": "us-gaap:StockholdersEquity",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "No noncontrolling interest and no separate 'Total equity' row; total equity = stockholders' equity attributable to Kosmos = 704,897."
+   },
+   {
+    "id": "F9",
+    "label": "장기부채 장부가",
+    "blind": 2672.175,
+    "prior": null,
+    "xbrl": 2672.175,
+    "tag": "us-gaap:LongTermDebt",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "Debt note: current maturities 145,303 + long-term debt, net 2,526,872 = 2,672,175 (carrying value, net of 47,501 unamortized deferred financing costs/discounts). Principal 'Total long-term debt' = 2,7"
+   },
+   {
+    "id": "F10",
+    "label": "발행주식 수(표지)",
+    "blind": 595487651,
+    "prior": 595487651,
+    "xbrl": 595487651,
+    "tag": "dei:EntityCommonStockSharesOutstanding",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "shares",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "Single class (common shares). Cover page text and dei fact agree."
+   },
+   {
+    "id": "O1",
+    "label": "2분기 생산량",
+    "blind": 71400,
+    "prior": 71400,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "Boe/d",
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "note": "Production basis, company-stated approximation ('approximately 71,400 boepd'); includes EG only through 2026-06-16. Sales basis: 76,982 Boepd (10-Q MD&A table 47; release table 13 76.982 MBoepd)."
+   },
+   {
+    "id": "O2",
+    "label": "2분기 원유 생산",
+    "blind": null,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "⚠ 모호(재추출)",
+    "unit": "Bbl/d",
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "note": "No company-wide net oil production rate disclosed; release gives only boepd by region (Ghana 36,300 boepd incl ~7,000 gas; GoA 14,300 boepd ~83% oil; EG 5,100 bopd net; GTA 15,700 boepd). Only oil SAL"
+   },
+   {
+    "id": "O3",
+    "label": "원유 실현가(헤지 전)",
+    "blind": 108.57,
+    "prior": 108.57,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Bbl",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "Sales price before derivative settlements (derivatives are a separate line). Same in release table 13. Commodity cash settlements Q2 = -105,381k (-15.04/Boe on total Boe basis)."
+   },
+   {
+    "id": "O4",
+    "label": "LOE/Boe",
+    "blind": 25.61,
+    "prior": 25.61,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Boe",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "Kosmos does not use the term 'LOE'; equivalent line is 'Oil and gas production costs' (release: 'Production expense $25.61 per boe'), incl. workovers 0.20 and GTA LNG costs ($65.8M in Q2). Ex-workover"
+   },
+   {
+    "id": "O5",
+    "label": "조정 EBITDA(X)",
+    "blind": 311.656,
+    "prior": 311.656,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "note": "Table header '(In thousands, unaudited)'. Company label is 'EBITDAX' (not 'Adjusted'); includes cash settlements on commodity derivatives (-105,381). 'Pro Forma EBITDAX' (TEN FPSO lease & EG divestitu"
+   },
+   {
+    "id": "O6",
+    "label": "회사 제시 FCF",
+    "blind": 88.891,
+    "prior": 88.891,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "note": "Name: 'Free cash flow' = CFO 175,010 - oil and gas assets 76,430 - finance lease payments 9,689. 6M = 103,138."
+   },
+   {
+    "id": "O7",
+    "label": "순부채(회사 제시)",
+    "blind": 2563.445,
+    "prior": 2563.445,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__8-K__2026-08-03__kos_ex99x1-q2x2026.htm",
+    "note": "Total long-term debt (principal) 2,719,676 - cash 102,137 - total restricted cash 54,094. Excludes $73.2M TEN FPSO finance lease liability. Same figure in 10-Q MD&A (table 52)."
+   },
+   {
+    "id": "O8",
+    "label": "하반기 원유 헤지",
+    "blind": 3250000,
+    "prior": 3250000,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "Bbl",
+    "file": "KOS__10-Q__2026-08-03__kos-20260630.htm",
+    "note": "Total Jul-Dec 2026 oil hedges 3,250 MBbl (three-way collars Brent 1,000 @ 50/60/75.51; swaps 2,250). Swap weighted avg = (500x72.46 + 1,000x69.70 + 750x64.83)/2,250 = 68.69 $/Bbl (computed; mixes Date"
+   },
+   {
+    "id": "R1",
+    "label": "증명매장량",
+    "blind": 249,
+    "prior": 249,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MMBoe",
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "note": "Oil/cond/NGL 120 MMBbl + gas 770 Bcf. Reserves not tagged in iXBRL (table only). Same total in reserve rollforward table 73."
+   },
+   {
+    "id": "R2",
+    "label": "증명개발",
+    "blind": 138,
+    "prior": 138,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MMBoe",
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "note": "PD share = 138/249 = 55.4% (computed). PUD 111 MMBoe."
+   },
+   {
+    "id": "R3",
+    "label": "Std. Measure",
+    "blind": 1890,
+    "prior": 1890,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "note": "Table header '(In millions)'. Not tagged in iXBRL."
+   },
+   {
+    "id": "R4",
+    "label": "PV-10",
+    "blind": null,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "자료 없음",
+    "unit": "USD millions",
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "note": "Company does not present a PV-10 for total proved reserves; 'PV-10' appears only in the GoA term-loan covenant definition."
+   },
+   {
+    "id": "R5",
+    "label": "SEC 가격",
+    "blind": null,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "자료 없음",
+    "unit": "USD/Bbl; USD/MMBtu",
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "note": "10-K states reserves use the 12-month unweighted first-day-of-month average Dated Brent price (adjusted for differentials) but does not disclose the numeric SEC price for oil or gas. Only 2025 Dated B"
+   }
+  ],
+  "checks": [
+   {
+    "name": "총자산 = 부채와자본 합계",
+    "lhs": 4310.147,
+    "rhs": 4310.147,
+    "ok": true
+   },
+   {
+    "name": "영업+투자+재무 현금흐름 = 현금 증감(상반기)",
+    "lhs": 38.487,
+    "rhs": 38.487,
+    "ok": true
+   },
+   {
+    "name": "매출: 1분기 + 2분기 = 상반기",
+    "lhs": 977.981,
+    "rhs": 977.981,
+    "ok": true
+   },
+   {
+    "name": "순이익: 1분기 + 2분기 = 상반기",
+    "lhs": -40.799,
+    "rhs": -40.799,
+    "ok": true
+   }
+  ],
+  "sanity": [
+   {
+    "name": "원유 실현가 − Brent 2분기 평균($102.63)",
+    "val": 5.94,
+    "ok": true
+   },
+   {
+    "name": "LOE/Boe 범위(3~30달러)",
+    "val": 25.61,
+    "ok": true
+   },
+   {
+    "name": "매출/판매량($/Boe)",
+    "val": 93.46,
+    "ok": true
+   },
+   {
+    "name": "조정 EBITDA(X)/매출",
+    "val": 0.513,
+    "ok": true
+   }
+  ]
+ },
+ "REI": {
+  "rows": [
+   {
+    "id": "F1",
+    "label": "2분기 매출",
+    "blind": 104.681,
+    "prior": 104.681489,
+    "xbrl": 104.681489,
+    "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "No 'Total revenues' row; the single revenue line on the statement of operations is used. Financial statements are in whole dollars (no scale). Oil 110.17 + gas -9.18 + NGL 3.69."
+   },
+   {
+    "id": "F2",
+    "label": "2분기 순이익",
+    "blind": 64.793,
+    "prior": 64.79331,
+    "xbrl": 64.79331,
+    "tag": "us-gaap:NetIncomeLoss",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "No noncontrolling interest; Net Income (Loss) used."
+   },
+   {
+    "id": "F3",
+    "label": "상반기 순이익",
+    "blind": -155.798,
+    "prior": null,
+    "xbrl": -155.798172,
+    "tag": "us-gaap:NetIncomeLoss",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "ix sign='-'. Includes a $162.1M ceiling test impairment in Q1."
+   },
+   {
+    "id": "F4",
+    "label": "상반기 영업현금흐름",
+    "blind": 66.684,
+    "prior": 66.683994,
+    "xbrl": 66.683994,
+    "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F5",
+    "label": "현금(6/30)",
+    "blind": 1.137,
+    "prior": 1.13741,
+    "xbrl": 1.13741,
+    "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F6",
+    "label": "총자산",
+    "blind": 1281.557,
+    "prior": null,
+    "xbrl": 1281.557096,
+    "tag": "us-gaap:Assets",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F7",
+    "label": "총부채",
+    "blind": 528.133,
+    "prior": null,
+    "xbrl": 528.133334,
+    "tag": "us-gaap:Liabilities",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F8",
+    "label": "자본총계",
+    "blind": 753.424,
+    "prior": 753.423762,
+    "xbrl": 753.423762,
+    "tag": "us-gaap:StockholdersEquity",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "No noncontrolling interest, so there is no separate total-equity row; the Total Stockholders' Equity row is used for both."
+   },
+   {
+    "id": "F9",
+    "label": "장기부채 장부가",
+    "blind": 360.0,
+    "prior": 360.0,
+    "xbrl": 360.0,
+    "tag": "us-gaap:LineOfCredit",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "Only debt is the revolver (no current portion). NOTE 8 text says $360 million outstanding (ix LineOfCredit scale=6). Excluded: current Notes payable of $1.496M, which is insurance premium financing. C"
+   },
+   {
+    "id": "F10",
+    "label": "발행주식 수(표지)",
+    "blind": 260539607,
+    "prior": 260539607,
+    "xbrl": 260539607,
+    "tag": "dei:EntityCommonStockSharesOutstanding",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "shares",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "Single class of common stock. Balance sheet shares outstanding at 2026-06-30 were 260,520,291."
+   },
+   {
+    "id": "O1",
+    "label": "2분기 생산량",
+    "blind": 19990,
+    "prior": 19989.846153846152,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "Boe/d",
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "note": "SALES basis: the release labels it 'Average Daily Sales Volumes' and the release text says 'Produced ... 19,990 Boe per day'. Cross-check: 10-Q MD&A table 59 'Net production: Total production (Boe)' 1"
+   },
+   {
+    "id": "O2",
+    "label": "2분기 원유 생산",
+    "blind": 12683,
+    "prior": 12682.934065934065,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "Bbl/d",
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "note": "Sales basis. Cross-check: 10-Q table 59 Oil 1,154,147 Bbls / 91 = 12,683."
+   },
+   {
+    "id": "O3",
+    "label": "원유 실현가(헤지 전)",
+    "blind": 95.45,
+    "prior": 95.45,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Bbl",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "Excludes hedges: oil revenue / volume (110,167,205 / 1,154,147). Derivative gains/losses are a separate other income line. Matches 'Realized Price - Crude Oil ($/Bo) $95.45' in the release."
+   },
+   {
+    "id": "O4",
+    "label": "LOE/Boe",
+    "blind": 10.12,
+    "prior": 10.12,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Boe",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "LOE of 18,409,462 / 1,819,076 Boe. The release reports the same $10.12."
+   },
+   {
+    "id": "O5",
+    "label": "조정 EBITDA(X)",
+    "blind": 54.482,
+    "prior": 54.48,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "note": "Company-presented 'Adjusted EBITDA'. There is also a separate covenant 'Consolidated EBITDAX' of $54,595,292 (table 18). It is not Adjusted EBITDAX."
+   },
+   {
+    "id": "O6",
+    "label": "회사 제시 FCF",
+    "blind": 4.375,
+    "prior": 4.375,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "note": "Name as presented: 'Adjusted Free Cash Flow'. Table 15 reconciles to the same figure from Adjusted EBITDA."
+   },
+   {
+    "id": "O7",
+    "label": "순부채(회사 제시)",
+    "blind": null,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "자료 없음",
+    "unit": "USD millions",
+    "file": "REI__8-K__2026-08-06__reiq22026earningsrelease.htm",
+    "note": "No 'Net debt' figure in the release or the presentation (EX-99.2). For reference, the company presents 'Consolidated Total Debt' of $362,722,948 (covenant basis; leverage ratio 2.02x) and cash of $1.1"
+   },
+   {
+    "id": "O8",
+    "label": "하반기 원유 헤지",
+    "blind": 1724085,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "단일 출처",
+    "unit": "Bbl; USD/Bbl",
+    "file": "REI__10-Q__2026-08-05__rei-20260630.htm",
+    "note": "Contracts outstanding as of 2026-06-30. The Q3 2026 and Q4 2026 columns together cover the second half of 2026. The swap price is a volume-weighted average I computed. Collars: put 60.82/65.00, call 7"
+   },
+   {
+    "id": "R1",
+    "label": "증명매장량",
+    "blind": 153.278,
+    "prior": 153.277821,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MMBoe",
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "note": "Not iXBRL-tagged. Matches the Table 7 summary (153,277,821 Boe)."
+   },
+   {
+    "id": "R2",
+    "label": "증명개발",
+    "blind": 103.799,
+    "prior": 103.798946,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MMBoe; %",
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "note": "103,798,946 / 153,277,821 = 67.7%. The table shows a rounded 68%. PUD is 49,478,875 Boe."
+   },
+   {
+    "id": "R3",
+    "label": "Std. Measure",
+    "blind": 1123.493,
+    "prior": 1123.493,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "note": "Not iXBRL-tagged. Matches table 8."
+   },
+   {
+    "id": "R4",
+    "label": "PV-10",
+    "blind": 1318.208,
+    "prior": 1318.208,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "note": "Company-presented pre-tax PV-10 (non-GAAP). PV-10 minus discounted tax of 194,714,796 equals SM."
+   },
+   {
+    "id": "R5",
+    "label": "SEC 가격",
+    "blind": 61.82,
+    "prior": 61.82,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Bbl; USD/MMBtu",
+    "file": "REI__10-K__2026-03-04__rei-20251231.htm",
+    "note": "Source is narrative text, not a table (method listed as table/narrative). These are benchmark prices before differentials."
+   }
+  ],
+  "checks": [
+   {
+    "name": "총자산 = 부채와자본 합계",
+    "lhs": 1281.557,
+    "rhs": 1281.557,
+    "ok": true
+   },
+   {
+    "name": "부채 + 자본 = 총자산",
+    "lhs": 1281.557,
+    "rhs": 1281.557,
+    "ok": true
+   },
+   {
+    "name": "영업+투자+재무 현금흐름 = 현금 증감(상반기)",
+    "lhs": 0.234,
+    "rhs": 0.234,
+    "ok": true
+   },
+   {
+    "name": "고객계약 매출: 1분기 + 2분기 = 상반기",
+    "lhs": 178.353,
+    "rhs": 178.353,
+    "ok": true
+   },
+   {
+    "name": "순이익: 1분기 + 2분기 = 상반기",
+    "lhs": -155.798,
+    "rhs": -155.798,
+    "ok": true
+   }
+  ],
+  "sanity": [
+   {
+    "name": "원유 실현가 − WTI 2분기 평균($95.65)",
+    "val": -0.2,
+    "ok": true
+   },
+   {
+    "name": "LOE/Boe 범위(3~30달러)",
+    "val": 10.12,
+    "ok": true
+   },
+   {
+    "name": "원유 비중(원유/총생산)",
+    "val": 0.634,
+    "ok": true
+   },
+   {
+    "name": "매출/판매량($/Boe)",
+    "val": 57.55,
+    "ok": true
+   },
+   {
+    "name": "조정 EBITDA(X)/매출",
+    "val": 0.52,
+    "ok": true
+   }
+  ]
+ },
+ "SM": {
+  "rows": [
+   {
+    "id": "F1",
+    "label": "2분기 매출",
+    "blind": 2500,
+    "prior": null,
+    "xbrl": 2500.0,
+    "tag": "us-gaap:Revenues",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Header scale=6 (millions). Company total line includes $262M gain on divestiture and $82M other operating income; oil, gas & NGL production revenue alone = 2,156."
+   },
+   {
+    "id": "F2",
+    "label": "2분기 순이익",
+    "blind": 1071,
+    "prior": 1071,
+    "xbrl": 1071.0,
+    "tag": "us-gaap:NetIncomeLoss",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "No noncontrolling interest; Net income = company net income."
+   },
+   {
+    "id": "F3",
+    "label": "상반기 순이익",
+    "blind": 736,
+    "prior": 736,
+    "xbrl": 736.0,
+    "tag": "us-gaap:NetIncomeLoss",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Q1 2026 net loss (335) + Q2 1,071 = 736 (equity statement table 12)."
+   },
+   {
+    "id": "F4",
+    "label": "상반기 영업현금흐름",
+    "blind": 1743,
+    "prior": 1743,
+    "xbrl": 1743.0,
+    "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F5",
+    "label": "현금(6/30)",
+    "blind": 620,
+    "prior": 620,
+    "xbrl": 620.0,
+    "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F6",
+    "label": "총자산",
+    "blind": 18858,
+    "prior": 18858,
+    "xbrl": 18858.0,
+    "tag": "us-gaap:Assets",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": ""
+   },
+   {
+    "id": "F7",
+    "label": "총부채",
+    "blind": null,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "자료 없음",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Balance sheet has no total-liabilities row and no us-gaap:Liabilities fact. Subtotals: Total current liabilities 3,089 (us-gaap:LiabilitiesCurrent) + Total noncurrent liabilities 7,956 (us-gaap:Liabil"
+   },
+   {
+    "id": "F8",
+    "label": "자본총계",
+    "blind": 7813,
+    "prior": 7813,
+    "xbrl": 7813.0,
+    "tag": "us-gaap:StockholdersEquity",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Only one equity total row ('Total stockholders' equity'); no noncontrolling interest line, so total equity = company stockholders' equity = 7,813."
+   },
+   {
+    "id": "F9",
+    "label": "장기부채 장부가",
+    "blind": 7036,
+    "prior": null,
+    "xbrl": 7036.0,
+    "tag": "us-gaap:SeniorNotesCurrent + us-gaap:SeniorLongTermNotes",
+    "status": "✔ XBRL·재추출 일치",
+    "unit": "USD millions",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Carrying value incl. unamortized premium 198 and deferred financing costs (35); principal 6,873. Revolving credit facility balance = 0 (us-gaap:LongTermLineOfCredit)."
+   },
+   {
+    "id": "F10",
+    "label": "발행주식 수(표지)",
+    "blind": 237854068,
+    "prior": 237854068,
+    "xbrl": 237854068,
+    "tag": "dei:EntityCommonStockSharesOutstanding",
+    "status": "✔ XBRL·재추출·1차 일치",
+    "unit": "shares",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Single class common stock ($0.01 par). Balance sheet shows 237,494,374 issued and outstanding at 2026-06-30."
+   },
+   {
+    "id": "O1",
+    "label": "2분기 생산량",
+    "blind": 439.7,
+    "prior": 439.7,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MBoe/d",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Production basis ('Net production volumes' / 'Average net daily production'); same 439.7 in 8-K Ex.99.1 Production Data table. Includes Civitas assets post 2026-01-30 merger."
+   },
+   {
+    "id": "O2",
+    "label": "2분기 원유 생산",
+    "blind": 229.8,
+    "prior": 229.8,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MBbl/d",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Production basis; matches 8-K Ex.99.1."
+   },
+   {
+    "id": "O3",
+    "label": "원유 실현가(헤지 전)",
+    "blind": 96.85,
+    "prior": 96.85,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Bbl",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Before net derivative settlements (effect shown separately: (16.23)); 8-K Ex.99.1 labels it 'Realized sales price (before the effect of net derivative settlements)'. Post-hedge 80.62."
+   },
+   {
+    "id": "O4",
+    "label": "LOE/Boe",
+    "blind": 6.71,
+    "prior": 6.71,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Boe",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Also in table 38 and 8-K Ex.99.1 (6.71)."
+   },
+   {
+    "id": "O5",
+    "label": "조정 EBITDA(X)",
+    "blind": 1406,
+    "prior": 1406,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__8-K__2026-08-05__exhibit99108052026er.htm",
+    "note": "Same figure in 10-Q MD&A reconciliation (table 54)."
+   },
+   {
+    "id": "O6",
+    "label": "회사 제시 FCF",
+    "blind": 467,
+    "prior": 467,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__8-K__2026-08-05__exhibit99108052026er.htm",
+    "note": "Company name: 'Adjusted free cash flow'. = Operating CF before WC 1,184 - capex before accruals 717. Includes ~$42M one-time merger/divestiture cash costs per footnote."
+   },
+   {
+    "id": "O7",
+    "label": "순부채(회사 제시)",
+    "blind": 6253,
+    "prior": 6253,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__8-K__2026-08-05__exhibit99108052026er.htm",
+    "note": "Principal amount of Senior Notes 6,873 + revolver 0 - cash 620 (principal basis, not carrying value)."
+   },
+   {
+    "id": "O8",
+    "label": "하반기 원유 헤지",
+    "blind": 23022000,
+    "prior": null,
+    "xbrl": null,
+    "tag": "",
+    "status": "단일 출처",
+    "unit": "Bbl; USD/Bbl",
+    "file": "SM__10-Q__2026-08-06__sm-20260630.htm",
+    "note": "Table columns are 3Q26 and 4Q26, together = H2 2026 (preamble: 'As of June 30, 2026'). Total = NYMEX WTI swaps + collars; basis swaps (Midland 2,115; MEH 770 MBbl) and roll differential swaps (4,766 M"
+   },
+   {
+    "id": "R1",
+    "label": "증명매장량",
+    "blind": 673.0,
+    "prior": 673.0,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "MMBoe",
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "note": "Not iXBRL-tagged; also table 90 end of year 673.0. Legacy SM only (pre-Civitas merger, closed 2026-01-30)."
+   },
+   {
+    "id": "R2",
+    "label": "증명개발",
+    "blind": 412.3,
+    "prior": 412.3,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "% ; MMBoe",
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "note": "Legacy SM only."
+   },
+   {
+    "id": "R3",
+    "label": "Std. Measure",
+    "blind": 5956,
+    "prior": 5956,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "note": "Also table 9/10. Not iXBRL-tagged."
+   },
+   {
+    "id": "R4",
+    "label": "PV-10",
+    "blind": 6847,
+    "prior": 6847,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD millions",
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "note": "PD PV-10 5,130; PUD PV-10 1,717 (table 9)."
+   },
+   {
+    "id": "R5",
+    "label": "SEC 가격",
+    "blind": 65.34,
+    "prior": 65.34,
+    "xbrl": null,
+    "tag": "",
+    "status": "✔ 재추출·1차 일치",
+    "unit": "USD/Bbl; USD/MMBtu",
+    "file": "SM__10-K__2026-02-26__sm-20251231.htm",
+    "note": "SEC first-day-of-month unweighted average, before quality/location differentials (footnote 1)."
+   }
+  ],
+  "checks": [
+   {
+    "name": "총자산 = 부채와자본 합계",
+    "lhs": 18858.0,
+    "rhs": 18858.0,
+    "ok": true
+   },
+   {
+    "name": "영업+투자+재무 현금흐름 = 현금 증감(상반기)",
+    "lhs": 252.0,
+    "rhs": 252.0,
+    "ok": true
+   },
+   {
+    "name": "매출: 1분기 + 2분기 = 상반기",
+    "lhs": 3979.0,
+    "rhs": 3979.0,
+    "ok": true
+   },
+   {
+    "name": "순이익: 1분기 + 2분기 = 상반기",
+    "lhs": 736.0,
+    "rhs": 736.0,
+    "ok": true
+   }
+  ],
+  "sanity": [
+   {
+    "name": "원유 실현가 − WTI 2분기 평균($95.65)",
+    "val": 1.2,
+    "ok": true
+   },
+   {
+    "name": "LOE/Boe 범위(3~30달러)",
+    "val": 6.71,
+    "ok": true
+   },
+   {
+    "name": "원유 비중(원유/총생산)",
+    "val": 0.523,
+    "ok": true
+   },
+   {
+    "name": "매출/판매량($/Boe)",
+    "val": 62.48,
+    "ok": true
+   },
+   {
+    "name": "조정 EBITDA(X)/매출",
+    "val": 0.562,
+    "ok": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,208 @@
+{
+ "ticker": "KOS",
+ "top": [
+  {
+   "date": "2026-03-11",
+   "filed": "2026-03-10 (424B3, 20:06Z=장마감 후) / 2026-03-12 00:47Z (424B5) / 2026-03-12 (8-K)",
+   "title_ko": "보통주 유상증자(약 1.85억 달러, 주당 $1.90)",
+   "summary_ko": "3/10 장 마감 직후(20:06Z≈16:06 ET) 1.75억 달러 규모 보통주 공모 예비 투자설명서(424B3)를 제출하고, 3/11 장 마감 후 9,750만 주를 주당 $1.90에 확정(424B5)했다. 조달 자금은 대출(Facility) 1억 달러 상환 등 부채 상환에 쓴다. 첫 반응일 3/11 수익률 R=-16.6%로 매크로 예측 fit=+2.5%와 반대 방향이며 잔차 res=-20.7%로 KOS의 비매크로 급변동 중 최대 규모다. 공모가 $1.90은 3/10 종가 $2.41 대비 약 21% 할인.",
+   "why_important_ko": "잔차 -20.7%로 가장 크고, 기존 주주 희석을 감수한 부채 축소(재무구조 재조정) 결정이라 회사 방향을 바꾼 사건.",
+   "facts": [
+    {
+     "fact_ko": "3/10 예비 투자설명서: 1.75억 달러 보통주 공모",
+     "quote": "We are offering $175,000,000 of shares of our common stock",
+     "file": "KOS__000110465926025825__tm268243-1_424b3.htm"
+    },
+    {
+     "fact_ko": "예비 설명서 기준 3/9 종가 $2.56",
+     "quote": "last reported sale price ... on March 9, 2026 was $2.56 per share",
+     "file": "KOS__000110465926025825__tm268243-1_424b3.htm"
+    },
+    {
+     "fact_ko": "확정 설명서: 9,750만 주 발행",
+     "quote": "We are offering 97,500,000 shares of our common stock",
+     "file": "KOS__000110465926026566__tm268243-2_424b5.htm"
+    },
+    {
+     "fact_ko": "공모가 주당 $1.90, 총액 $185,250,000 (표지 표 tr/td)",
+     "quote": "Per Share ... $ 1.90 ... Total ... $ 185,250,000",
+     "file": "KOS__000110465926026566__tm268243-2_424b5.htm"
+    },
+    {
+     "fact_ko": "3/10 종가 $2.41 (공모가 대비 약 21% 할인은 계산값)",
+     "quote": "last reported sale price ... on March 10, 2026 was $2.41 per share",
+     "file": "KOS__000110465926026566__tm268243-2_424b5.htm"
+    },
+    {
+     "fact_ko": "자금 용도: Facility 1억 달러 상환 및 기타 부채 상환",
+     "quote": "repay $100,000,000 of outstanding borrowings under our Facility",
+     "file": "KOS__000110465926026566__tm268243-2_424b5.htm"
+    },
+    {
+     "fact_ko": "순조달 약 1.79억 달러(옵션 전량 행사 시 2.058억)",
+     "quote": "will be approximately $179.0 million (or $205.8 million",
+     "file": "KOS__000110465926026566__tm268243-2_424b5.htm"
+    },
+    {
+     "fact_ko": "공모 후 발행주식 578,524,886주(옵션 행사 시 593,149,886주)",
+     "quote": "578,524,886 shares (593,149,886 shares if the underwriters’ option",
+     "file": "KOS__000110465926026566__tm268243-2_424b5.htm"
+    },
+    {
+     "fact_ko": "3/10 인수계약 체결, 3/11 추가배정옵션(1,462.5만 주) 전량 행사, 3/12 종결",
+     "quote": "On March 11, 2026 the Underwriters exercised the Option in full.",
+     "file": "KOS__000095010326003690__dp243230_8k.htm"
+    },
+    {
+     "fact_ko": "임원·이사 약 370만 주 매입 합의",
+     "quote": "directors and officers have agreed to purchase approximately 3.7 million shares",
+     "file": "KOS__000110465926026566__tm268243-2_424b5.htm"
+    }
+   ]
+  },
+  {
+   "date": "2020-09-15",
+   "filed": "2020-09-14",
+   "title_ko": "Shell에 나미비아·상투메·수리남·남아공 탐사자산 매각",
+   "summary_ko": "2020-09-08 Shell 자회사와 나미비아·상투메프린시페·수리남 자회사 지분 및 남아공 광구 지분을 선불 현금 9,600만 달러+조건부 최대 1억 달러에 매각하는 계약을 체결했다(8-K 9/14 제출). 반응일 9/15 R=+22.8%, fit=+1.4%, res=+19.1%.",
+   "why_important_ko": "잔차 +19.1%로 두 번째로 큰 공시 연계 이벤트이며, 부채 부담기(순부채 20억 달러)에 비핵심 탐사자산을 현금화한 포트폴리오 전환.",
+   "facts": [
+    {
+     "fact_ko": "Shell 자회사와 매각 계약 체결",
+     "quote": "entered into a Portfolio Agreement and Share Sale and Purchase Agreement",
+     "file": "KOS__000095010320017874__dp136479_8k.htm"
+    },
+    {
+     "fact_ko": "선불 현금 9,600만 달러",
+     "quote": "for upfront cash consideration of $96 million",
+     "file": "KOS__000095010320017874__dp136479_8k.htm"
+    },
+    {
+     "fact_ko": "조건부 대가 최대 1억 달러",
+     "quote": "and contingent consideration of up to $100 million",
+     "file": "KOS__000095010320017874__dp136479_8k.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2020-02-24",
+   "filed": "2020-02-24",
+   "title_ko": "원문 미보유 (8-K Items 2.02,7.01,9.01)",
+   "R": -0.1871,
+   "res": -0.1647,
+   "file": "kos8k-q42019.htm (raw_events에 없음)"
+  },
+  {
+   "date": "2020-08-03",
+   "filed": "2020-08-03",
+   "title_ko": "2020년 2분기 실적(순손실 1.99억 달러)",
+   "R": -0.1677,
+   "res": -0.2035,
+   "file": "KOS__000150999120000081__kos_ex99x1-q2x2020.htm"
+  },
+  {
+   "date": "2020-11-09",
+   "filed": "2020-11-09",
+   "title_ko": "원문 미보유 (8-K Items 2.02,7.01,9.01)",
+   "R": 0.2828,
+   "res": 0.1761,
+   "file": "kos-20201109.htm (raw_events에 없음)"
+  },
+  {
+   "date": "2022-05-09",
+   "filed": "2022-05-09",
+   "title_ko": "원문 미보유 (8-K Items 2.02,7.01,9.01)",
+   "R": -0.1707,
+   "res": -0.1232,
+   "file": "kos-20220509.htm (raw_events에 없음)"
+  },
+  {
+   "date": "2025-02-24",
+   "filed": "2025-02-24",
+   "title_ko": "2024년 4분기·연간 실적",
+   "R": -0.0943,
+   "res": -0.0947,
+   "file": "KOS__000150999125000023__kos_ex99x1-q4x2024.htm"
+  },
+  {
+   "date": "2026-01-13",
+   "filed": "2026-01-12",
+   "title_ko": "원문 미보유 (8-K Items 7.01,8.01,9.01)",
+   "R": 0.2039,
+   "res": 0.1565,
+   "file": "kos-20260112.htm (raw_events에 없음)"
+  },
+  {
+   "date": "2026-02-24",
+   "filed": "2026-02-25 (moves.json) / 본문 날짜 2026-02-24 — 모호",
+   "title_ko": "적도기니 Block G 생산자산 Panoro에 1.8억 달러 매각",
+   "R": 0.0825,
+   "res": 0.0776,
+   "file": "KOS__000150999126000013__kos-20260224.htm"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2017-12-12",
+   "R": -0.139,
+   "res": -0.153
+  },
+  {
+   "date": "2018-02-05",
+   "R": -0.1381,
+   "res": -0.0768
+  },
+  {
+   "date": "2019-12-09",
+   "R": -0.1407,
+   "res": -0.1484
+  },
+  {
+   "date": "2020-06-05",
+   "R": 0.2423,
+   "res": 0.1282
+  },
+  {
+   "date": "2020-11-23",
+   "R": 0.2179,
+   "res": 0.1667
+  },
+  {
+   "date": "2020-12-10",
+   "R": 0.2081,
+   "res": 0.2002
+  },
+  {
+   "date": "2021-03-08",
+   "R": -0.1391,
+   "res": -0.1485
+  },
+  {
+   "date": "2021-06-21",
+   "R": 0.1909,
+   "res": 0.1124
+  },
+  {
+   "date": "2024-12-17",
+   "R": 0.1919,
+   "res": 0.1896
+  },
+  {
+   "date": "2025-04-03",
+   "R": -0.2105,
+   "res": -0.1477
+  },
+  {
+   "date": "2026-02-05",
+   "R": -0.1503,
+   "res": -0.1165
+  },
+  {
+   "date": "2026-02-20",
+   "R": 0.2203,
+   "res": 0.1965
+  }
+ ]
+}

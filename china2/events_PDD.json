@@ -1,0 +1,163 @@
+{
+ "ticker": "PDD",
+ "top": [
+  {
+   "date": "2024-08-26",
+   "filed": "2024-08-26",
+   "title_ko": "2024년 2분기 실적 발표 및 매출 성장 둔화·수익성 압박 경고",
+   "summary_ko": "2분기 매출이 전년 대비 86% 증가했으나 경영진이 매출 성장률의 전분기 대비 둔화와 향후 경쟁 심화에 따른 성장 압박, 수익성 악화 가능성을 공식 경고했다. 당일 주가는 -28.5%(R)로 매크로 모델 예측(fit) -0.3% 대비 잔차(res) -33.2%를 기록했다.",
+   "why_important_ko": "분석 기간 중 |잔차|가 가장 큰 회사 고유 사건으로, 경영진의 성장·수익성 가이던스 하향이 촉발한 실적 쇼크.",
+   "facts": [
+    {
+     "fact_ko": "2분기 총매출 RMB97,059.5백만, 전년 대비 86% 증가",
+     "quote": "Total revenues were RMB97,059.5 million (US$13,355.8 million), an increase of 86%",
+     "file": "PDD__000110465924092851__tm2422641d1_ex99-1.htm"
+    },
+    {
+     "fact_ko": "재무 담당 VP가 매출 성장률이 전분기 대비 둔화했다고 언급",
+     "quote": "our revenue growth rate slowed quarter-on-quarter",
+     "file": "PDD__000110465924092851__tm2422641d1_ex99-1.htm"
+    },
+    {
+     "fact_ko": "경쟁 심화와 외부 요인으로 향후 매출 성장 압박 불가피하다고 경고",
+     "quote": "revenue growth will inevitably face pressure due to intensified competition and external challenges",
+     "file": "PDD__000110465924092851__tm2422641d1_ex99-1.htm"
+    },
+    {
+     "fact_ko": "지속 투자로 수익성도 영향받을 가능성 언급",
+     "quote": "Profitability will also likely to be impacted as we continue to invest resolutely.",
+     "file": "PDD__000110465924092851__tm2422641d1_ex99-1.htm"
+    },
+    {
+     "fact_ko": "회장 겸 공동 CEO가 앞으로 많은 도전을 예상한다고 언급",
+     "quote": "we see many challenges ahead",
+     "file": "PDD__000110465924092851__tm2422641d1_ex99-1.htm"
+    }
+   ]
+  },
+  {
+   "date": "2019-11-20",
+   "filed": "2019-11-21",
+   "title_ko": "2019년 3분기 실적 발표: 마케팅 확대로 적자 확대",
+   "summary_ko": "3분기 매출은 123% 증가했으나 판매·마케팅비가 114% 늘며 영업손실이 RMB2,792.0백만으로 전년(RMB1,269.5백만)보다 확대됐다. 주가는 -22.9%(R)로 매크로 예측(fit) -0.7% 대비 잔차(res) -25.3%를 기록했다.",
+   "why_important_ko": "회사 고유 사건 중 |잔차| 2위로, 고성장 대가로 손실이 확대된 실적 쇼크.",
+   "facts": [
+    {
+     "fact_ko": "3분기 총매출 RMB7,513.9백만, 전년 대비 123% 증가",
+     "quote": "Total revenues were RMB7,513.9 million (US$1,051.2 million), an increase of 123%",
+     "file": "PDD__000110465919066034__a19-23587_1ex99d1.htm"
+    },
+    {
+     "fact_ko": "판매·마케팅비 RMB6,908.8백만, 전년 대비 114% 증가",
+     "quote": "Sales and marketing expenses were RMB6,908.8 million (US$966.6 million), an increase of 114%",
+     "file": "PDD__000110465919066034__a19-23587_1ex99d1.htm"
+    },
+    {
+     "fact_ko": "영업손실 RMB2,792.0백만(전년 동기 RMB1,269.5백만)",
+     "quote": "Operating loss was RMB2,792.0 million (US$390.6 million), compared with operating loss of RMB1,269.5 million",
+     "file": "PDD__000110465919066034__a19-23587_1ex99d1.htm"
+    },
+    {
+     "fact_ko": "9월 하반기 기념 세일을 위해 마케팅을 한 단계 강화",
+     "quote": "stepped our marketing up a notch from the second half of September",
+     "file": "PDD__000110465919066034__a19-23587_1ex99d1.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2019-08-21",
+   "filed": "2019-08-22",
+   "title_ko": "2019년 2분기 실적 발표(매출 169% 증가) 및 독립이사 선임",
+   "R": 0.1599,
+   "res": 0.1307,
+   "file": "PDD__000110465919046897__a19-17467_1ex99d1.htm"
+  },
+  {
+   "date": "2020-11-12",
+   "filed": "2020-11-13",
+   "title_ko": "2020년 3분기 실적 발표(매출 89% 증가, Non-GAAP 순이익 흑자 전환, Duo Duo Maicai 언급)",
+   "R": 0.2041,
+   "res": 0.1908,
+   "file": "PDD__000110465920124691__a20-35925_1ex99d1.htm"
+  },
+  {
+   "date": "2021-07-28",
+   "filed": "2021-07-26",
+   "title_ko": "공시 원문 미확보 (중국 공통 충격일)",
+   "R": 0.1554,
+   "res": 0.1411,
+   "file": ""
+  },
+  {
+   "date": "2021-08-24",
+   "filed": "2021-08-25",
+   "title_ko": "공시 원문 미확보 (중국 공통 충격일)",
+   "R": 0.2225,
+   "res": 0.203,
+   "file": ""
+  },
+  {
+   "date": "2023-08-29",
+   "filed": "2023-08-29",
+   "title_ko": "2023년 2분기 실적 발표(매출 66% 증가), 독립이사 선임, 법무·컴플라이언스 위원회 신설",
+   "R": 0.1543,
+   "res": 0.1235,
+   "file": "PDD__000110465923096546__tm2325046d1_ex99-1.htm"
+  },
+  {
+   "date": "2023-11-28",
+   "filed": "2023-11-28",
+   "title_ko": "2023년 3분기 실적 발표(매출 94% 증가)",
+   "R": 0.1808,
+   "res": 0.162,
+   "file": "PDD__000110465923121457__tm2331648d1_ex99-1.htm"
+  },
+  {
+   "date": "2023-11-28",
+   "filed": "2023-11-28",
+   "title_ko": "이사 Qi Lu 사임(회사와 이견 없음)",
+   "R": 0.1808,
+   "res": 0.162,
+   "file": "PDD__000110465923121637__tm2331648d3_6k.htm"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2020-08-21",
+   "R": -0.1352,
+   "res": -0.1425
+  },
+  {
+   "date": "2020-12-29",
+   "R": 0.1557,
+   "res": 0.1521
+  },
+  {
+   "date": "2022-03-16",
+   "R": 0.5606,
+   "res": 0.3975
+  },
+  {
+   "date": "2022-04-04",
+   "R": 0.1559,
+   "res": 0.1413
+  },
+  {
+   "date": "2022-10-24",
+   "R": -0.2461,
+   "res": -0.3022
+  },
+  {
+   "date": "2023-03-20",
+   "R": -0.1417,
+   "res": -0.1778
+  },
+  {
+   "date": "2023-05-26",
+   "R": 0.1899,
+   "res": 0.1589
+  }
+ ]
+}

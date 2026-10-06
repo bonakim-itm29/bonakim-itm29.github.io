@@ -1,0 +1,325 @@
+{
+ "ticker": "KOS",
+ "as_of": "2025-12-31",
+ "items": [
+  {
+   "id": "S1",
+   "value": 12642.0,
+   "raw": "12,642",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 76,
+    "table": "Supplemental Oil and Gas Data (Unaudited) - Standardized Measure for Discounted Future Net Cash Flows",
+    "row_label": "Future cash inflows",
+    "column_header": "Total",
+    "period_section": "At December 31, 2025",
+    "unit_caption": "(In millions)",
+    "ix": null,
+    "method": "table (supplemental tables not iXBRL-tagged; ix:nonFraction count in table = 0)"
+   },
+   "note": "Based on 12-month unweighted avg first-day-of-month Brent price Jan-Dec 2025, adjusted for crude handling, transportation fees, quality and regional differential."
+  },
+  {
+   "id": "S2",
+   "value": -5130.0,
+   "raw": "(5,130)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 76,
+    "table": "Supplemental Oil and Gas Data (Unaudited) - Standardized Measure for Discounted Future Net Cash Flows",
+    "row_label": "Future production costs",
+    "column_header": "Total",
+    "period_section": "At December 31, 2025",
+    "unit_caption": "(In millions)",
+    "ix": null,
+    "method": "table (supplemental tables not iXBRL-tagged; ix:nonFraction count in table = 0)"
+   },
+   "note": "Item 1 'Our Reserves' text: future net revenues are net of production and development costs (including operating expenses and production taxes); production taxes not shown as separate row."
+  },
+  {
+   "id": "S3",
+   "value": -3124.0,
+   "raw": "(3,124)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 76,
+    "table": "Supplemental Oil and Gas Data (Unaudited) - Standardized Measure for Discounted Future Net Cash Flows",
+    "row_label": "Future development and abandonment costs",
+    "column_header": "Total",
+    "period_section": "At December 31, 2025",
+    "unit_caption": "(In millions)",
+    "ix": null,
+    "method": "table (supplemental tables not iXBRL-tagged; ix:nonFraction count in table = 0)"
+   },
+   "note": "Development and abandonment costs combined in one row; abandonment not separately disclosed (see S3b)."
+  },
+  {
+   "id": "S3b",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 76,
+    "table": "Supplemental Oil and Gas Data (Unaudited) - Standardized Measure for Discounted Future Net Cash Flows",
+    "row_label": "Future development and abandonment costs",
+    "column_header": "Total",
+    "period_section": "At December 31, 2025",
+    "unit_caption": "(In millions)",
+    "ix": null,
+    "method": "table (supplemental tables not iXBRL-tagged; ix:nonFraction count in table = 0)"
+   },
+   "note": "No separate abandonment row; included in S3."
+  },
+  {
+   "id": "S4",
+   "value": -1074.0,
+   "raw": "(1,074)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 76,
+    "table": "Supplemental Oil and Gas Data (Unaudited) - Standardized Measure for Discounted Future Net Cash Flows",
+    "row_label": "Future tax expenses",
+    "column_header": "Total",
+    "period_section": "At December 31, 2025",
+    "unit_caption": "(In millions)",
+    "ix": null,
+    "method": "table (supplemental tables not iXBRL-tagged; ix:nonFraction count in table = 0)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S5",
+   "value": 3314.0,
+   "raw": "3,314",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 76,
+    "table": "Supplemental Oil and Gas Data (Unaudited) - Standardized Measure for Discounted Future Net Cash Flows",
+    "row_label": "Future net cash flows",
+    "column_header": "Total",
+    "period_section": "At December 31, 2025",
+    "unit_caption": "(In millions)",
+    "ix": null,
+    "method": "table (supplemental tables not iXBRL-tagged; ix:nonFraction count in table = 0)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S6",
+   "value": -1424.0,
+   "raw": "(1,424)",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 76,
+    "table": "Supplemental Oil and Gas Data (Unaudited) - Standardized Measure for Discounted Future Net Cash Flows",
+    "row_label": "10% annual discount for estimated timing of cash flows",
+    "column_header": "Total",
+    "period_section": "At December 31, 2025",
+    "unit_caption": "(In millions)",
+    "ix": null,
+    "method": "table (supplemental tables not iXBRL-tagged; ix:nonFraction count in table = 0)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S7",
+   "value": 1890.0,
+   "raw": "1,890",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 76,
+    "table": "Supplemental Oil and Gas Data (Unaudited) - Standardized Measure for Discounted Future Net Cash Flows",
+    "row_label": "Standardized measure of discounted future net cash flows",
+    "column_header": "Total",
+    "period_section": "At December 31, 2025",
+    "unit_caption": "(In millions)",
+    "ix": null,
+    "method": "table (supplemental tables not iXBRL-tagged; ix:nonFraction count in table = 0)"
+   },
+   "note": ""
+  },
+  {
+   "id": "S8",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "note": "Item 1 'Our Reserves' and Item 1A mention PV-10 but no PV-10 dollar figure found in any table or paragraph."
+   },
+   "note": "PV-10 referenced in text only; no numeric value disclosed."
+  },
+  {
+   "id": "P1_oil",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Bbl (Brent)",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "paragraph": "Supplemental Oil and Gas Data - Standardized Measure intro: 'based on the twelve month unweighted arithmetic average of the first-day-of-the-month oil price for Brent crude in the period January through December 2025'"
+   },
+   "note": "Benchmark is Brent (confirmed), but the SEC average Brent $/Bbl value is not stated in the 10-K. Dated Brent 2025 range $60.20-$83.06 (Item 7A) is not the SEC price."
+  },
+  {
+   "id": "P1_gas",
+   "value": null,
+   "raw": "",
+   "unit": "USD/MMBtu (Henry Hub)",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm"
+   },
+   "note": "No Henry Hub SEC price disclosed; gas largely priced under contracts (Ghana GSA $2.50/MMBtu from Dec 2025; Tortue LNG SPA oil-linked)."
+  },
+  {
+   "id": "P2_oil",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Bbl",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm"
+   },
+   "note": "Adjusted average reserve prices not disclosed. 2025 historical realized sales prices (T19: oil 66.89, gas 5.28/Mcf, NGL 29.76) are not reserve-pricing inputs and are not used."
+  },
+  {
+   "id": "P2_ngl",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Bbl",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm"
+   },
+   "note": "Adjusted average reserve prices not disclosed. 2025 historical realized sales prices (T19: oil 66.89, gas 5.28/Mcf, NGL 29.76) are not reserve-pricing inputs and are not used."
+  },
+  {
+   "id": "P2_gas",
+   "value": null,
+   "raw": "",
+   "unit": "USD/Mcf",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm"
+   },
+   "note": "Adjusted average reserve prices not disclosed. 2025 historical realized sales prices (T19: oil 66.89, gas 5.28/Mcf, NGL 29.76) are not reserve-pricing inputs and are not used."
+  },
+  {
+   "id": "V1_oil",
+   "value": 120.0,
+   "raw": "120",
+   "unit": "MMBbl",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 13,
+    "table": "Item 1 Summary of Oil and Gas Reserves",
+    "row_label": "Total Kosmos proved reserves",
+    "column_header": "2025 Net Proved Reserves / Oil, Condensate, NGLs(5)",
+    "unit_caption": "(MMBbl)",
+    "ix": null,
+    "method": "table; cross-checked with Supplemental T73 'Net proved developed and undeveloped reserves at December 31, 2025' Total Oil/Total Gas/Kosmos Total"
+   },
+   "note": "Oil + condensate + NGLs combined as disclosed; footnote (5): NGL immaterial, aggregated with crude/condensate."
+  },
+  {
+   "id": "V1_ngl",
+   "value": null,
+   "raw": "",
+   "unit": "MMBbl",
+   "status": "null",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 13,
+    "table": "Item 1 Summary of Oil and Gas Reserves",
+    "row_label": "Total Kosmos proved reserves",
+    "column_header": "2025 Net Proved Reserves / Oil, Condensate, NGLs(5)",
+    "unit_caption": "(MMBbl)",
+    "ix": null,
+    "method": "table; cross-checked with Supplemental T73 'Net proved developed and undeveloped reserves at December 31, 2025' Total Oil/Total Gas/Kosmos Total"
+   },
+   "note": "Not separately disclosed; included in V1_oil."
+  },
+  {
+   "id": "V1_gas",
+   "value": 770.0,
+   "raw": "770",
+   "unit": "Bcf",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 13,
+    "table": "Item 1 Summary of Oil and Gas Reserves",
+    "row_label": "Total Kosmos proved reserves",
+    "column_header": "2025 Net Proved Reserves / Natural Gas(3)",
+    "unit_caption": "(Bcf)",
+    "ix": null,
+    "method": "table; cross-checked with Supplemental T73 'Net proved developed and undeveloped reserves at December 31, 2025' Total Oil/Total Gas/Kosmos Total"
+   },
+   "note": "Includes fuel gas (Ghana ~19.9, Mauritania|Senegal ~50.2, GoA ~0.6 Bcf) and Tortue LNG export gas."
+  },
+  {
+   "id": "V1_total",
+   "value": 249.0,
+   "raw": "249",
+   "unit": "MMBoe",
+   "status": "ok",
+   "source": {
+    "file": "KOS__10-K__2026-03-02__kos-20251231.htm",
+    "table_index": 13,
+    "table": "Item 1 Summary of Oil and Gas Reserves",
+    "row_label": "Total Kosmos proved reserves",
+    "column_header": "2025 Net Proved Reserves / Total",
+    "unit_caption": "(MMBoe)",
+    "ix": null,
+    "method": "table; cross-checked with Supplemental T73 'Net proved developed and undeveloped reserves at December 31, 2025' Total Oil/Total Gas/Kosmos Total"
+   },
+   "note": "6 Mcf = 1 Boe."
+  }
+ ],
+ "checks": [
+  {
+   "name": "S5 = S1+S2+S3+S4",
+   "lhs": 3314.0,
+   "rhs": 3314.0,
+   "ok": true
+  },
+  {
+   "name": "S7 = S5+S6",
+   "lhs": 1890.0,
+   "rhs": 1890.0,
+   "ok": true
+  },
+  {
+   "name": "S1 vs V1xP2",
+   "lhs": 12642.0,
+   "rhs": null,
+   "ok": null,
+   "note": "skipped: P2 not disclosed"
+  },
+  {
+   "name": "V1 T13 total == T73 total (120 MMBbl / 770 Bcf / 249 MMBoe)",
+   "lhs": 120.0,
+   "rhs": 120.0,
+   "ok": true
+  }
+ ]
+}

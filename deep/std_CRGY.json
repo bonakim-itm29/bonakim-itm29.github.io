@@ -1,0 +1,328 @@
+{
+ "ticker": "CRGY",
+ "items": [
+  {
+   "id": "S1",
+   "value": 32852.573,
+   "raw": "32,852,573",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 102,
+    "row_label": "Future cash inflows",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "(in thousands)",
+    "ix_name": "srt:FutureNetCashFlowsRelatingToProvedOilAndGasReservesCashInflows",
+    "contextRef": "c-568 (instant 2025-12-31, us-gaap:ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": ""
+  },
+  {
+   "id": "S2",
+   "value": -15003.036,
+   "raw": "( 15,003,036 )",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 102,
+    "row_label": "Future production costs",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "(in thousands)",
+    "ix_name": "srt:FutureNetCashFlowsRelatingToProvedOilAndGasReservesProductionCosts",
+    "contextRef": "c-568 (instant 2025-12-31, us-gaap:ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": "Filing does not explicitly state whether production/ad valorem taxes are included; table intro says it excludes midstream revenue impact that could reduce future production costs."
+  },
+  {
+   "id": "S3",
+   "value": -3387.941,
+   "raw": "( 3,387,941 )",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 102,
+    "row_label": "Future development costs (1)",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "(in thousands)",
+    "ix_name": "srt:FutureNetCashFlowsRelatingToProvedOilAndGasReservesDevelopmentCosts",
+    "contextRef": "c-568 (instant 2025-12-31, us-gaap:ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": "Footnote (1): Future development costs include future abandonment and salvage costs (no separate S3b row)."
+  },
+  {
+   "id": "S3b",
+   "value": null,
+   "raw": "",
+   "unit": "USD millions",
+   "status": "null",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 102,
+    "row_label": "n/a",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "(in thousands)",
+    "method": "table"
+   },
+   "note": "Abandonment included in S3 per footnote (1); no separate row."
+  },
+  {
+   "id": "S4",
+   "value": -1308.188,
+   "raw": "( 1,308,188 )",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 102,
+    "row_label": "Future income taxes (2)",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "(in thousands)",
+    "ix_name": "srt:FutureNetCashFlowsRelatingToProvedOilAndGasReservesIncomeTaxExpense",
+    "contextRef": "c-568 (instant 2025-12-31, us-gaap:ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": "Footnote (2): based on allocable share of OpCo taxable income; OpCo ownership 100% at 12/31/2025."
+  },
+  {
+   "id": "S5",
+   "value": 13153.408,
+   "raw": "13,153,408",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 102,
+    "row_label": "Future net cash flows",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "(in thousands)",
+    "ix_name": "srt:FutureNetCashFlowsRelatingToProvedOilAndGasReservesNetCashFlows",
+    "contextRef": "c-568 (instant 2025-12-31, us-gaap:ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": ""
+  },
+  {
+   "id": "S6",
+   "value": -5397.858,
+   "raw": "( 5,397,858 )",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 102,
+    "row_label": "Annual discount of 10% for estimated timing",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "(in thousands)",
+    "ix_name": "srt:FutureNetCashFlowsRelatingToProvedOilAndGasReservesTenPercentAnnualDiscountForEstimatedTimingOfCashFlows",
+    "contextRef": "c-568 (instant 2025-12-31, us-gaap:ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": ""
+  },
+  {
+   "id": "S7",
+   "value": 7755.55,
+   "raw": "7,755,550",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 102,
+    "row_label": "Standardized measure of discounted future net cash flows",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "(in thousands)",
+    "ix_name": "srt:StandardizedMeasureOfDiscountedFutureNetCashFlowsRelatingToProvedOilAndGasReserves",
+    "contextRef": "c-568 (instant 2025-12-31, us-gaap:ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": "Also T104 'Balance at end of period' 7,755,550 and T17 'Standardized Measure (millions)' 7,756."
+  },
+  {
+   "id": "S8",
+   "value": 8633,
+   "raw": "8,633",
+   "unit": "USD millions",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 17,
+    "row_label": "PV-10 (millions) (2)",
+    "column_header": "As of December 31, 2025 (1)",
+    "unit_caption": "(millions) in row label",
+    "method": "table"
+   },
+   "note": "Non-GAAP, pre-tax; no ix tag. Footnote (2): PV-10 income tax amount included in Standardized Measure but not in PV-10 = $877.5 million (8,633-877.5=7,755.5 = S7). PV-0 = 14,462."
+  },
+  {
+   "id": "P1_oil",
+   "value": 65.34,
+   "raw": "65.34",
+   "unit": "USD/Bbl (WTI)",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 101,
+    "row_label": "Crude oil (Bbl)",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "Average benchmark price per unit",
+    "ix_name": "srt:AverageSalesPrices",
+    "contextRef": "c-583 (2025 duration, srt:CrudeOilMember)",
+    "method": "both"
+   },
+   "note": "Paragraph footnote (1) under T17 confirms 'average WTI posted price of $65.34 per barrel'."
+  },
+  {
+   "id": "P1_gas",
+   "value": 3.39,
+   "raw": "3.39",
+   "unit": "USD/MMBtu (Henry Hub)",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 101,
+    "row_label": "Natural gas (MMBtu)",
+    "column_header": "Year Ended December 31, 2025",
+    "unit_caption": "Average benchmark price per unit",
+    "ix_name": "srt:AverageSalesPrices",
+    "contextRef": "c-586 (2025 duration, srt:NaturalGasReservesMember)",
+    "method": "both"
+   },
+   "note": "Paragraph confirms 'average Henry Hub Index spot price of $3.39 per MMBtu'."
+  },
+  {
+   "id": "P2_oil",
+   "value": 64.42,
+   "raw": "$64.42 per barrel of oil",
+   "unit": "USD/Bbl",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": "paragraph: footnote (1) to reserves table (T17)",
+    "row_label": "average adjusted realized product prices over the remaining lives of the properties",
+    "column_header": "as of December 31, 2025",
+    "unit_caption": "per barrel",
+    "method": "paragraph"
+   },
+   "note": ""
+  },
+  {
+   "id": "P2_ngl",
+   "value": 19.36,
+   "raw": "$19.36 per barrel of NGLs",
+   "unit": "USD/Bbl",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": "paragraph: footnote (1) to reserves table (T17)",
+    "row_label": "average adjusted realized product prices",
+    "column_header": "as of December 31, 2025",
+    "unit_caption": "per barrel",
+    "method": "paragraph"
+   },
+   "note": ""
+  },
+  {
+   "id": "P2_gas",
+   "value": 2.24,
+   "raw": "$2.24 per Mcf of natural gas",
+   "unit": "USD/Mcf",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": "paragraph: footnote (1) to reserves table (T17)",
+    "row_label": "average adjusted realized product prices",
+    "column_header": "as of December 31, 2025",
+    "unit_caption": "per Mcf",
+    "method": "paragraph"
+   },
+   "note": ""
+  },
+  {
+   "id": "V1_oil",
+   "value": 359.695,
+   "raw": "359,695",
+   "unit": "MMBbl",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 95,
+    "row_label": "Net proved reserves at December 31, 2025",
+    "column_header": "Oil (MBbls)",
+    "unit_caption": "MBbls",
+    "ix_name": "srt:ProvedDevelopedAndUndevelopedReservesNet",
+    "contextRef": "c-565 (2025-12-31, OilReservesMember, ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": "Original 359,695 MBbls; matches T17."
+  },
+  {
+   "id": "V1_ngl",
+   "value": 236.146,
+   "raw": "236,146",
+   "unit": "MMBbl",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 95,
+    "row_label": "Net proved reserves at December 31, 2025",
+    "column_header": "Natural Gas Liquids (MBbls)",
+    "unit_caption": "MBbls",
+    "ix_name": "srt:ProvedDevelopedAndUndevelopedReservesNet",
+    "contextRef": "c-567 (2025-12-31, NaturalGasLiquidsReservesMember, ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": "Original 236,146 MBbls; matches T17."
+  },
+  {
+   "id": "V1_gas",
+   "value": 2278.059,
+   "raw": "2,278,059",
+   "unit": "Bcf",
+   "status": "ok",
+   "source": {
+    "file": "CRGY__10-K__2026-02-25__crgy-20251231.htm",
+    "table": 95,
+    "row_label": "Net proved reserves at December 31, 2025",
+    "column_header": "Natural Gas (MMcf)",
+    "unit_caption": "MMcf",
+    "ix_name": "srt:ProvedDevelopedAndUndevelopedReservesNet",
+    "contextRef": "c-566 (2025-12-31, NaturalGasReservesMember, ConsolidatedEntitiesMember)",
+    "method": "both"
+   },
+   "note": "Original 2,278,059 MMcf; matches T17. Total 975,518 MBoe."
+  }
+ ],
+ "checks": [
+  {
+   "name": "S1 vs V1xP2 (diff %)",
+   "lhs": 32852.573,
+   "rhs": 32846.191,
+   "ok": true,
+   "diff_pct": 0.019
+  },
+  {
+   "name": "S5 = S1+S2+S3+S4",
+   "lhs": 13153.408,
+   "rhs": 13153.408,
+   "ok": true
+  },
+  {
+   "name": "S7 = S5+S6",
+   "lhs": 7755.55,
+   "rhs": 7755.55,
+   "ok": true
+  },
+  {
+   "name": "S8 - PV10 tax effect(877.5) = S7",
+   "lhs": 7755.55,
+   "rhs": 7755.5,
+   "ok": true
+  }
+ ]
+}

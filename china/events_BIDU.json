@@ -1,0 +1,351 @@
+{
+ "ticker": "BIDU",
+ "top": [
+  {
+   "date": "2008-11-17",
+   "filed": "2008-11-18 (회사 IR 보도자료; SEC 공시 없음)",
+   "title_ko": "CCTV 보도: 무허가 의료업체 유료검색 노출 → 해당 광고 삭제",
+   "summary_ko": "CCTV가 바이두가 무허가 의료업체 웹사이트를 유료검색 목록에 포함시켰다고 보도했고, 회사는 익일 IR 보도자료에서 무허가 의료·제약 고객의 유료검색 목록을 삭제했으며 이들 고객이 총매출의 약 10~15%라고 밝혔다. 주가 반응일(11-17) 수익률 R -25.0%, 매크로 예측 fit -3.5%, 잔차 res -25.3%. 11-17 당일 SEC 공시는 없으며 회사 보도자료는 11-18자다(보도 시점과 주가 하락일의 정확한 선후는 원문으로 확인 불가 → 모호).",
+   "why_important_ko": "전 기간 최대 |잔차|(-25.3%)이며, 규제·평판 이슈로 매출의 10~15%를 차지하는 광고주를 즉시 제거해야 했던 회사 고유 사건.",
+   "facts": [
+    {
+     "fact_ko": "CCTV 보도 내용: 무허가 의료업체 웹사이트를 유료검색 목록에 포함",
+     "quote": "websites of medical companies that do not hold proper licenses",
+     "file": "https://ir.baidu.com/news-releases/news-release-details/baidu-takes-immediate-measures-response-recent-cctv-reports/"
+    },
+    {
+     "fact_ko": "바이두 조치: 무허가 의료·제약 고객의 유료검색 목록 삭제",
+     "quote": "removed paid search listings of certain customers, particularly medical and pharmaceutical customers without licenses",
+     "file": "https://ir.baidu.com/news-releases/news-release-details/baidu-takes-immediate-measures-response-recent-cctv-reports/"
+    },
+    {
+     "fact_ko": "해당 고객 비중: 총매출의 약 10~15%",
+     "quote": "These customers account for approximately 10-15% of Baidu's total revenues.",
+     "file": "https://ir.baidu.com/news-releases/news-release-details/baidu-takes-immediate-measures-response-recent-cctv-reports/"
+    }
+   ]
+  },
+  {
+   "date": "2015-07-28",
+   "filed": "2015-07-28",
+   "title_ko": "2015년 2분기 실적: 매출 +38% 속 O2O 투자로 영업이익 감소",
+   "summary_ko": "2015년 2분기 매출은 RMB16.575bn으로 전년비 38.3% 늘었지만, O2O 판촉비 증가로 영업이익은 2.5% 감소했고 O2O & Other가 영업이익률을 25.3%p 낮췄다. 주가 R -15.0%, 매크로 예측 fit +1.2%, 잔차 res -17.4%.",
+   "why_important_ko": "공시가 있는 급변동 중 최대 |잔차|급(-17.4%)이며, 'Next Baidu' O2O 전략 투자로 매출 성장에도 이익이 역성장한 방향 전환 신호.",
+   "facts": [
+    {
+     "fact_ko": "총매출 RMB16.575bn, 전년비 +38.3%",
+     "quote": "were RMB16.575 billion ($2.673 billion), a 38.3% increase",
+     "file": "raw_events/BIDU__000119312515264782__d90717dex991.htm"
+    },
+    {
+     "fact_ko": "영업이익 RMB3.470bn, 전년비 -2.5%",
+     "quote": "Operating profit was RMB3.470 billion ($559.6 million), representing a 2.5% decrease",
+     "file": "raw_events/BIDU__000119312515264782__d90717dex991.htm"
+    },
+    {
+     "fact_ko": "O2O & Other가 영업이익률을 25.3%p 낮춤",
+     "quote": "O2O & Other reduced operating margins by 25.3 percentage points",
+     "file": "raw_events/BIDU__000119312515264782__d90717dex991.htm"
+    },
+    {
+     "fact_ko": "판관비 증가 원인은 O2O 판촉비",
+     "quote": "primarily due to an increase in promotional spending for O2O",
+     "file": "raw_events/BIDU__000119312515264782__d90717dex991.htm"
+    },
+    {
+     "fact_ko": "CEO: O2O로 'Next Baidu' 구축 전략",
+     "quote": "we are ideally positioned to capture the O2O e-commerce opportunity and build the ‘Next Baidu’",
+     "file": "raw_events/BIDU__000119312515264782__d90717dex991.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2007-07-26",
+   "filed": "2007-07-26",
+   "title_ko": "2007년 2분기 실적(매출 +109.4%, 순이익 +142.7%)",
+   "R": 0.141,
+   "res": 0.1633,
+   "type": "비매크로",
+   "file": "raw_events/BIDU__000119312507162473__d6k.htm"
+  },
+  {
+   "date": "2008-04-01",
+   "filed": "2008-04-02",
+   "title_ko": "6-K (0001145549-08-000606) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1403,
+   "res": 0.1155,
+   "type": "중국 공통 충격",
+   "file": ""
+  },
+  {
+   "date": "2008-07-24",
+   "filed": "2008-07-24",
+   "title_ko": "2008년 2분기 실적(매출 +100.0%)·3분기 올림픽 영향 가이던스",
+   "R": 0.1607,
+   "res": 0.1842,
+   "type": "비매크로",
+   "file": "raw_events/BIDU__000114554908001354__h02331exv99w1.htm"
+  },
+  {
+   "date": "2008-09-29",
+   "filed": "2008-09-29",
+   "title_ko": "6-K (0001145549-08-001729) — 원본 파일 미확보, 내용 미확인",
+   "R": -0.1133,
+   "res": 0.0245,
+   "type": "매크로",
+   "file": ""
+  },
+  {
+   "date": "2008-10-23",
+   "filed": "2008-10-23",
+   "title_ko": "2008년 3분기 실적(매출 +85.1%)·4분기 가이던스 RMB1,025~1,055m",
+   "R": -0.1467,
+   "res": -0.1731,
+   "type": "비매크로",
+   "file": "raw_events/BIDU__000114554908001829__h02568exv99w1.htm"
+  },
+  {
+   "date": "2008-11-04",
+   "filed": "2008-11-04",
+   "title_ko": "6-K (0001145549-08-001902) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1461,
+   "res": 0.0672,
+   "type": "매크로",
+   "file": ""
+  },
+  {
+   "date": "2008-12-16",
+   "filed": "2008-12-17",
+   "title_ko": "6-K (0001145549-08-002077) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1178,
+   "res": 0.0365,
+   "type": "매크로",
+   "file": ""
+  },
+  {
+   "date": "2009-10-27",
+   "filed": "2009-10-27",
+   "title_ko": "6-K (0000950123-09-053385) — 원본 파일 미확보, 내용 미확인",
+   "R": -0.1139,
+   "res": -0.1153,
+   "type": "비매크로",
+   "file": ""
+  },
+  {
+   "date": "2010-01-13",
+   "filed": "2010-01-11",
+   "title_ko": "6-K (0000950123-10-001490) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1371,
+   "res": 0.1168,
+   "type": "비매크로",
+   "file": ""
+  },
+  {
+   "date": "2010-04-29",
+   "filed": "2010-04-29",
+   "title_ko": "6-K (0000950123-10-039926) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1424,
+   "res": 0.1193,
+   "type": "비매크로",
+   "file": ""
+  },
+  {
+   "date": "2013-02-05",
+   "filed": "2013-02-05",
+   "title_ko": "6-K (0001193125-13-038598) — 원본 파일 미확보, 내용 미확인",
+   "R": -0.101,
+   "res": -0.1191,
+   "type": "비매크로",
+   "file": ""
+  },
+  {
+   "date": "2013-07-25",
+   "filed": "2013-07-25",
+   "title_ko": "6-K (0001193125-13-302413) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1101,
+   "res": 0.1015,
+   "type": "비매크로",
+   "file": ""
+  },
+  {
+   "date": "2021-03-09",
+   "filed": "2021-03-09",
+   "title_ko": "6-K (0001193125-21-074048) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1358,
+   "res": 0.1169,
+   "type": "중국 공통 충격",
+   "file": ""
+  },
+  {
+   "date": "2022-05-26",
+   "filed": "2022-05-27",
+   "title_ko": "6-K (0001193125-22-161778) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1414,
+   "res": 0.1017,
+   "type": "중국 공통 충격",
+   "file": ""
+  },
+  {
+   "date": "2025-09-17",
+   "filed": "2025-09-15",
+   "title_ko": "6-K (0001193125-25-202905) — 원본 파일 미확보, 내용 미확인",
+   "R": 0.1134,
+   "res": 0.1129,
+   "type": "비매크로",
+   "file": ""
+  },
+  {
+   "date": "2026-08-18",
+   "filed": "2026-08-18",
+   "title_ko": "2026년 2분기 실적(매출 -4% YoY)·홍콩 이중 1차 상장 전환 진행",
+   "R": -0.1273,
+   "res": -0.1216,
+   "type": "비매크로",
+   "file": "raw/BIDU__6-K__2026-08-18__d112854dex991.htm"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2007-04-27",
+   "R": 0.139,
+   "res": 0.1289,
+   "type": "비매크로"
+  },
+  {
+   "date": "2007-10-02",
+   "R": 0.1256,
+   "res": 0.1229,
+   "type": "비매크로"
+  },
+  {
+   "date": "2007-10-11",
+   "R": -0.1002,
+   "res": -0.0918,
+   "type": "비매크로"
+  },
+  {
+   "date": "2007-11-12",
+   "R": -0.1209,
+   "res": -0.1127,
+   "type": "중국 공통 충격"
+  },
+  {
+   "date": "2008-01-24",
+   "R": 0.1369,
+   "res": 0.108,
+   "type": "비매크로"
+  },
+  {
+   "date": "2008-03-19",
+   "R": -0.1068,
+   "res": -0.0643,
+   "type": "중국 공통 충격"
+  },
+  {
+   "date": "2008-09-18",
+   "R": 0.1996,
+   "res": 0.1295,
+   "type": "중국 공통 충격"
+  },
+  {
+   "date": "2008-10-13",
+   "R": 0.2447,
+   "res": 0.0781,
+   "type": "매크로"
+  },
+  {
+   "date": "2008-11-17",
+   "R": -0.2504,
+   "res": -0.2529,
+   "type": "비매크로",
+   "note": "SEC 공시 없음; 익일(11-18) 회사 IR 보도자료로 top에 기재"
+  },
+  {
+   "date": "2008-12-01",
+   "R": -0.144,
+   "res": -0.0563,
+   "type": "매크로"
+  },
+  {
+   "date": "2009-02-09",
+   "R": 0.1281,
+   "res": 0.1199,
+   "type": "비매크로"
+  },
+  {
+   "date": "2011-09-22",
+   "R": -0.1095,
+   "res": -0.0803,
+   "type": "중국 공통 충격"
+  },
+  {
+   "date": "2019-05-17",
+   "R": -0.1652,
+   "res": -0.1721,
+   "type": "비매크로"
+  },
+  {
+   "date": "2019-11-07",
+   "R": 0.1352,
+   "res": 0.1131,
+   "type": "비매크로"
+  },
+  {
+   "date": "2020-03-16",
+   "R": -0.1058,
+   "res": -0.0088,
+   "type": "매크로"
+  },
+  {
+   "date": "2020-12-15",
+   "R": 0.1383,
+   "res": 0.1184,
+   "type": "비매크로"
+  },
+  {
+   "date": "2021-01-08",
+   "R": 0.1557,
+   "res": 0.1415,
+   "type": "비매크로"
+  },
+  {
+   "date": "2021-02-19",
+   "R": 0.1406,
+   "res": 0.1129,
+   "type": "비매크로"
+  },
+  {
+   "date": "2021-03-25",
+   "R": -0.1447,
+   "res": -0.1514,
+   "type": "비매크로"
+  },
+  {
+   "date": "2022-03-16",
+   "R": 0.392,
+   "res": 0.2944,
+   "type": "중국 공통 충격"
+  },
+  {
+   "date": "2022-10-24",
+   "R": -0.1258,
+   "res": -0.1481,
+   "type": "중국 공통 충격"
+  },
+  {
+   "date": "2023-02-01",
+   "R": 0.1305,
+   "res": 0.1148,
+   "type": "비매크로"
+  },
+  {
+   "date": "2026-05-06",
+   "R": 0.1137,
+   "res": 0.0841,
+   "type": "비매크로"
+  }
+ ],
+ "notes_ko": "moves.json의 corp 목록은 비어 있음. 2008-11-17 인용문은 ir.baidu.com 보도자료를 WebFetch로 확인(직접 HTML 다운로드는 프록시 차단)."
+}

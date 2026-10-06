@@ -1,0 +1,743 @@
+{
+ "ticker": "PDD",
+ "run": "B",
+ "method": "pandas.read_html (+BeautifulSoup header/colspan checks)",
+ "table_numbering": "table index = pandas.read_html 0-based order",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "three months ended June 30, 2026",
+   "value": 112358,
+   "raw": "112,358",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 10,
+    "row": "Revenues",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": "(Amounts in millions of RMB and US$); segment table T12 'Total' agrees"
+  },
+  {
+   "id": "Q1_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 103985,
+   "raw": "103,985",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 10,
+    "row": "Revenues",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q2_Online marketing services and others",
+   "period": "three months ended June 30, 2026",
+   "value": 57637,
+   "raw": "57,637",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Online marketing services and others",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": "NOTES TO FINANCIAL INFORMATION, Revenues"
+  },
+  {
+   "id": "Q2_Online marketing services and others_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 55703,
+   "raw": "55,703",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Online marketing services and others",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q2_Transaction services",
+   "period": "three months ended June 30, 2026",
+   "value": 54721,
+   "raw": "54,721",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Transaction services",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Transaction services_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 48282,
+   "raw": "48,282",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 12,
+    "row": "- Transaction services",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q3",
+   "period": "three months ended June 30, 2026",
+   "value": 27764,
+   "raw": "27,764",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 10,
+    "row": "Operating profit",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": "company label 'Operating profit' (= income from operations)"
+  },
+  {
+   "id": "Q3_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 25793,
+   "raw": "25,793",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 10,
+    "row": "Operating profit",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q4",
+   "period": "three months ended June 30, 2026",
+   "value": 29071,
+   "raw": "29,071",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP operating profit",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": "company metric name 'Non-GAAP operating profit' = operating profit + share-based compensation (1,307)"
+  },
+  {
+   "id": "Q4_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 27748,
+   "raw": "27,748",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP operating profit",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q5",
+   "period": "three months ended June 30, 2026",
+   "value": 27182,
+   "raw": "27,182",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 30754,
+   "raw": "30,754",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q6",
+   "period": "three months ended June 30, 2026",
+   "value": 28489,
+   "raw": "28,489",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP net income attributable to ordinary shareholders",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 32709,
+   "raw": "32,709",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP net income attributable to ordinary shareholders",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS",
+   "period": "three months ended June 30, 2026",
+   "value": 18.45,
+   "raw": "18.45",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Earnings per ADS (4 ordinary shares equals 1 ADS): -Diluted",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": "currency RMB; US$ convenience 2.72"
+  },
+  {
+   "id": "Q7_GAAP_diluted_EPS_per_ADS_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 20.75,
+   "raw": "20.75",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Earnings per ADS (4 ordinary shares equals 1 ADS): -Diluted",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS",
+   "period": "three months ended June 30, 2026",
+   "value": 19.33,
+   "raw": "19.33",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP diluted earnings per ADS",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": "currency RMB; US$ convenience 2.85"
+  },
+  {
+   "id": "Q7_NonGAAP_diluted_EPS_per_ADS_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 22.07,
+   "raw": "22.07",
+   "unit": "RMB per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "Non-GAAP diluted earnings per ADS",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q8",
+   "period": "three months ended June 30, 2026",
+   "value": 25670,
+   "raw": "25,670",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 14,
+    "row": "Net cash generated from operating activities",
+    "col": "2026 RMB (three months ended June 30)"
+   },
+   "note": "CAUTION: cash flow table currency header row labels ALL six columns 'RMB' (the US$ column is mislabeled). Under the 2026 header (colspan 6) there are two 'RMB' columns: 25,670 and 3,783. 25,670 chosen because (a) column order matches income statement RMB/RMB/US$ layout, (b) 25,670/6.7851=3,783, (c) text paragraph 'Net cash generated from operating activities was RMB25.7 billion (US$3.8 billion)', (d) Q1 release 16,445 + Q2 25,670 = six-month 42,115 in same table."
+  },
+  {
+   "id": "Q8_prior_year",
+   "period": "three months ended June 30, 2025",
+   "value": 21642,
+   "raw": "21,642",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 14,
+    "row": "Net cash generated from operating activities",
+    "col": "2025 RMB (three months ended June 30)"
+   },
+   "note": "same table, prior-year quarter"
+  },
+  {
+   "id": "Q9",
+   "period": "three months ended June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "no company-defined free cash flow in release (non-GAAP measures listed: operating profit, net income, EPS only)"
+  },
+  {
+   "id": "Q10",
+   "period": "three months ended June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 14,
+    "row": "",
+    "col": ""
+   },
+   "note": "condensed cash flow table shows only operating/investing/financing subtotals; no capex line. (PP&E net rose 1,306 -> 4,752 on balance sheet, but no quarterly purchase figure.)"
+  },
+  {
+   "id": "B1",
+   "period": "As of June 30, 2026",
+   "value": 128918,
+   "raw": "128,918",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Cash and cash equivalents",
+    "col": "As of June 30, 2026 RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_prior",
+   "period": "As of December 31, 2025",
+   "value": 108901,
+   "raw": "108,901",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Cash and cash equivalents",
+    "col": "As of December 31, 2025 RMB"
+   },
+   "note": "same table"
+  },
+  {
+   "id": "B2_Restricted cash",
+   "period": "As of June 30, 2026",
+   "value": 77274,
+   "raw": "77,274",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Restricted cash",
+    "col": "As of June 30, 2026 RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Restricted cash_prior",
+   "period": "As of December 31, 2025",
+   "value": 73831,
+   "raw": "73,831",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Restricted cash",
+    "col": "As of December 31, 2025 RMB"
+   },
+   "note": "same table"
+  },
+  {
+   "id": "B2_Short-term investments",
+   "period": "As of June 30, 2026",
+   "value": 327496,
+   "raw": "327,496",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Short-term investments",
+    "col": "As of June 30, 2026 RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Short-term investments_prior",
+   "period": "As of December 31, 2025",
+   "value": 313408,
+   "raw": "313,408",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Short-term investments",
+    "col": "As of December 31, 2025 RMB"
+   },
+   "note": "same table"
+  },
+  {
+   "id": "B2_Other non-current assets",
+   "period": "As of June 30, 2026",
+   "value": 96383,
+   "raw": "96,383",
+   "unit": "RMB millions",
+   "status": "ambiguous",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Other non-current assets",
+    "col": "As of June 30, 2026 RMB (Unaudited)"
+   },
+   "note": "not a pure cash line: release text says it 'mainly included time deposits, held-to-maturity debt securities, and available-for-sale debt securities' with no breakdown; Dec 31, 2025: 104,708"
+  },
+  {
+   "id": "B3",
+   "period": "As of June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 9,
+    "row": "",
+    "col": ""
+   },
+   "note": "no borrowing / notes / convertible bond line in condensed balance sheet (liabilities are operating items and lease liabilities only); 20-F shows convertible bonds repaid in 2025"
+  },
+  {
+   "id": "B4",
+   "period": "As of June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "no 'net cash' sentence. Text only gives 'Cash, cash equivalents and short-term investments were RMB456.4 billion ... as of June 30, 2026' (gross, not net) = 128,918+327,496"
+  },
+  {
+   "id": "B5",
+   "period": "As of June 30, 2026",
+   "value": 663407,
+   "raw": "663,407",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Total Assets",
+    "col": "As of June 30, 2026 RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5_prior",
+   "period": "As of December 31, 2025",
+   "value": 630045,
+   "raw": "630,045",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 8,
+    "row": "Total Assets",
+    "col": "As of December 31, 2025 RMB"
+   },
+   "note": "same table"
+  },
+  {
+   "id": "B6_total_equity",
+   "period": "As of June 30, 2026",
+   "value": 447787,
+   "raw": "447,787",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 9,
+    "row": "Total Shareholders’ Equity",
+    "col": "As of June 30, 2026 RMB (Unaudited)"
+   },
+   "note": "no non-controlling interest line; total equity = shareholders' equity"
+  },
+  {
+   "id": "B6_total_equity_prior",
+   "period": "As of December 31, 2025",
+   "value": 413385,
+   "raw": "413,385",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 9,
+    "row": "Total Shareholders’ Equity",
+    "col": "As of December 31, 2025 RMB"
+   },
+   "note": "same table"
+  },
+  {
+   "id": "B6_shareholders_equity",
+   "period": "As of June 30, 2026",
+   "value": 447787,
+   "raw": "447,787",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 9,
+    "row": "Total Shareholders’ Equity",
+    "col": "As of June 30, 2026 RMB (Unaudited)"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6_shareholders_equity_prior",
+   "period": "As of December 31, 2025",
+   "value": 413385,
+   "raw": "413,385",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 9,
+    "row": "Total Shareholders’ Equity",
+    "col": "As of December 31, 2025 RMB"
+   },
+   "note": "same table"
+  },
+  {
+   "id": "S1_shares_outstanding",
+   "period": "As of December 31, 2025",
+   "value": 5693585848,
+   "raw": "5,693,585,848 Class A ordinary shares",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": null,
+    "row": "20-F cover page text",
+    "col": "outstanding shares as of close of period"
+   },
+   "note": "release gives no period-end share count; latest sourced count is 20-F cover (Dec 31, 2025); no Class B"
+  },
+  {
+   "id": "S1_ADS_ratio",
+   "period": "three months ended June 30, 2026",
+   "value": 4,
+   "raw": "Earnings per ADS (4 ordinary shares equals 1 ADS)",
+   "unit": "ordinary shares per ADS",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Earnings per ADS (4 ordinary shares equals 1 ADS):",
+    "col": ""
+   },
+   "note": "20-F also: each ADS represents four Class A ordinary shares"
+  },
+  {
+   "id": "S2",
+   "period": "three months ended June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "ADS millions",
+   "status": "null",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 15,
+    "row": "",
+    "col": ""
+   },
+   "note": "diluted weighted-average ADS count not presented; only ordinary shares (see S2_diluted_ordinary_shares)"
+  },
+  {
+   "id": "S2_diluted_ordinary_shares",
+   "period": "three months ended June 30, 2026",
+   "value": 5894,
+   "raw": "5,894",
+   "unit": "ordinary shares, millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": 11,
+    "row": "Weighted-average number of ordinary shares outstanding (in millions): -Diluted",
+    "col": "2026 (three months ended June 30)"
+   },
+   "note": "Non-GAAP diluted count in T15 also 5,894; Q2 2025: 5,928"
+  },
+  {
+   "id": "R1",
+   "period": "three months ended June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB millions",
+   "status": "null",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "no share repurchase disclosed in release; 20-F Item 16E 'Not applicable'; financing cash flow nil (*)"
+  },
+  {
+   "id": "R2",
+   "period": "three months ended June 30, 2026",
+   "value": null,
+   "raw": "",
+   "unit": "RMB per ADS",
+   "status": "null",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": null,
+    "row": "",
+    "col": ""
+   },
+   "note": "20-F: 'has not declared or paid any cash dividends, nor does it have any present plan'; none in release"
+  },
+  {
+   "id": "A1",
+   "period": "year ended December 31, 2025",
+   "value": 431845.713,
+   "raw": "431,845,713",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": 238,
+    "row": "Revenues (including services provided to a related party of RMB4,272, nil and nil ...)",
+    "col": "2025 RMB (For the years ended December 31)"
+   },
+   "note": "source in RMB thousands (caption 'Amounts in thousands of RMB and US$'), converted /1000"
+  },
+  {
+   "id": "A2",
+   "period": "year ended December 31, 2025",
+   "value": 97842.539,
+   "raw": "97,842,539",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": 238,
+    "row": "Net income attributable to ordinary shareholders",
+    "col": "2025 RMB (For the years ended December 31)"
+   },
+   "note": "RMB thousands converted /1000"
+  },
+  {
+   "id": "A3",
+   "period": "year ended December 31, 2025",
+   "value": 106938.69,
+   "raw": "106,938,690",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": 242,
+    "row": "Net cash generated from operating activities",
+    "col": "2025 RMB (For the years ended December 31)"
+   },
+   "note": "RMB thousands converted /1000"
+  },
+  {
+   "id": "A4",
+   "period": "year ended December 31, 2025",
+   "value": -1145.077,
+   "raw": "(1,145,077)",
+   "unit": "RMB millions",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": 242,
+    "row": "Purchase of property, equipment and software and intangible assets",
+    "col": "2025 RMB (For the years ended December 31)"
+   },
+   "note": "RMB thousands converted /1000; outflow"
+  },
+  {
+   "id": "X1_quarter",
+   "period": "June 30, 2026",
+   "value": 6.7851,
+   "raw": "RMB6.7851 to US$1.00",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "PDD__6-K__2026-08-25__tm2623874d1_ex99-1.htm",
+    "table": null,
+    "row": "footnote 1 (text)",
+    "col": ""
+   },
+   "note": "noon buying rate June 30, 2026 (H.10); consistent with table US$ columns"
+  },
+  {
+   "id": "X1_annual",
+   "period": "December 31, 2025",
+   "value": 6.9931,
+   "raw": "US$1.00 to RMB6.9931",
+   "unit": "RMB per US$1",
+   "status": "ok",
+   "source": {
+    "file": "PDD__20-F__2026-04-29__pdd-20251231x20f.htm",
+    "table": null,
+    "row": "Note 2(e) Convenience translation (text)",
+    "col": ""
+   },
+   "note": ""
+  }
+ ]
+}

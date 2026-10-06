@@ -1,0 +1,176 @@
+{
+ "ticker": "SM",
+ "top": [
+  {
+   "date": "2020-04-29",
+   "filed": "2020-04-29",
+   "title_ko": "무담보채 전액 대상 2순위 담보부 신규채 교환제안(부채 재조정) + 1Q20 실적",
+   "summary_ko": "SM은 2021~2027년 만기 무담보·전환사채 전부를 최대 9억달러의 10% 2순위 담보부 신규채로 교환하는 제안(액면 1,000달러당 450~650달러)과 동의 요청을 개시했고, 같은 날 1Q20 실적·자본지출 약 20% 삭감을 발표했다. 주가는 당일 R=+74.6%로, 유가 급반등(+19.3%)을 반영한 매크로 예측 fit=+9.6%를 크게 넘어 잔차 res=+46.1%를 기록했다. 두 공시가 같은 날 나와 잔차를 공시별로 나눌 수는 없다(모호).",
+   "why_important_ko": "SM 표본 전체에서 |잔차|가 가장 크고, 할인 교환으로 부채 구조를 바꾼 재무 재조정의 시작점(6/17 종결로 이어짐).",
+   "facts": [
+    {
+     "fact_ko": "무담보채 전부를 최대 9억달러 신규 담보부채로 교환 제안",
+     "quote": "exchange ... any and all of its outstanding notes ... for up to $900 million",
+     "file": "SM__000089353820000053__exhibit99104292020.htm"
+    },
+    {
+     "fact_ko": "신규채는 신용한도 담보에 대한 2순위 담보권으로 보증",
+     "quote": "secured by second priority security interests in the collateral",
+     "file": "SM__000089353820000053__exhibit99104292020.htm"
+    },
+    {
+     "fact_ko": "표(tr/td): 조기 응모 시 2024~2027년물 액면 1,000달러당 신규채 500달러(2021년물 600, 2022년물 650)",
+     "quote": "Total Consideration prior to the Early Tender Time",
+     "file": "SM__000089353820000053__exhibit99104292020.htm"
+    },
+    {
+     "fact_ko": "기존 사채 약정의 제한 조항 대부분 삭제를 위한 동의 요청",
+     "quote": "eliminate substantially all of the restrictive covenants",
+     "file": "SM__000089353820000053__exhibit99104292020.htm"
+    },
+    {
+     "fact_ko": "같은 날 1Q20 실적: 자본지출 속도 약 20% 감축",
+     "quote": "down by approximately 20% versus earlier guidance",
+     "file": "SM__000089353820000052__exhibit99104292020er.htm"
+    },
+    {
+     "fact_ko": "1Q20 순손실 4.119억달러, 9.898억달러 손상차손 포함",
+     "quote": "The current period included an impairment of $989.8 million",
+     "file": "SM__000089353820000052__exhibit99104292020er.htm"
+    },
+    {
+     "fact_ko": "차입기준액 11억달러로 재산정",
+     "quote": "redetermined at $1.1 billion",
+     "file": "SM__000089353820000052__exhibit99104292020er.htm"
+    }
+   ]
+  },
+  {
+   "date": "2025-11-03",
+   "filed": "2025-11-03",
+   "title_ko": "Civitas Resources와 전액 주식 합병 계약(기업가치 128억달러)",
+   "summary_ko": "SM은 Civitas 1주당 SM 1.45주를 주는 전액 주식 합병 계약을 체결했으며, 합병 후 SM 주주 지분은 약 48%, Civitas 주주는 약 52%가 된다. 주가는 R=-7.4%로, 매크로 예측 fit=+0.3% 대비 잔차 res=-8.0%였다.",
+   "why_important_ko": "회사 규모·지배구조(이사회 11명 중 5명 Civitas 측)를 바꾼 합병으로, 기존 주주가 소수 지분(약 48%)이 되는 방향 전환 사건.",
+   "facts": [
+    {
+     "fact_ko": "Civitas 1주당 SM 1.45주 교환",
+     "quote": "each common share of Civitas will be exchanged for 1.45 shares",
+     "file": "SM__000089353825000134__exhibit99111032025mergerpr.htm"
+    },
+    {
+     "fact_ko": "합병 기업가치 약 128억달러(순부채 포함)",
+     "quote": "enterprise value of approximately $12.8 billion is inclusive of each company’s net debt",
+     "file": "SM__000089353825000134__exhibit99111032025mergerpr.htm"
+    },
+    {
+     "fact_ko": "합병 후 SM 주주 약 48%, Civitas 주주 약 52% 보유",
+     "quote": "SM Energy stockholders will own approximately 48% of the combined company",
+     "file": "SM__000089353825000134__exhibit99111032025mergerpr.htm"
+    },
+    {
+     "fact_ko": "연간 시너지 약 2억달러, 최대 3억달러 가능",
+     "quote": "annual synergies totaling $200 million, with upside potential to $300 million",
+     "file": "SM__000089353825000134__exhibit99111032025mergerpr.htm"
+    },
+    {
+     "fact_ko": "합병 후 이사회 11명(SM 6명, Civitas 5명)",
+     "quote": "the SM Energy Board (the “New Board”) will have 11 members",
+     "file": "SM__000089353825000144__sm-20251102.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2020-06-17",
+   "filed": "2020-06-18",
+   "title_ko": "교환제안 종결: 구채 7.19억달러를 2순위 담보부채 4.47억달러로 교환, 백스톱 그룹에 워런트 594만주 발행",
+   "R": -0.0915,
+   "res": -0.0974,
+   "file": "SM__000089353820000094__sm-20200617.htm"
+  },
+  {
+   "date": "2020-11-17",
+   "filed": "2020-11-16",
+   "title_ko": "차입기준액 11억달러 재확인, 2순위 부채 한도 연장, South Texas 6개 유정 완결비 제3자 자금 조달(모호: 잔차 21.7% 대비 공시 내용은 소규모)",
+   "R": 0.2184,
+   "res": 0.2169,
+   "file": "SM__000089353820000143__sm-20201113.htm; SM__000089353820000143__exhibit99111162020.htm"
+  },
+  {
+   "date": "2020-04-29",
+   "filed": "2020-04-29",
+   "title_ko": "1Q20 실적 및 2020 운영계획 수정(교환제안과 동일일; top 1에 포함)",
+   "R": 0.746,
+   "res": 0.4612,
+   "file": "SM__000089353820000052__form8-k04292020er.htm"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "1999-12-15",
+   "R": 0.2034,
+   "res": 0.1705
+  },
+  {
+   "date": "2001-02-22",
+   "R": -0.1683,
+   "res": -0.1789
+  },
+  {
+   "date": "2001-06-29",
+   "R": 0.1616,
+   "res": 0.1449
+  },
+  {
+   "date": "2016-01-06",
+   "R": -0.1629,
+   "res": -0.1162
+  },
+  {
+   "date": "2016-02-08",
+   "R": -0.1515,
+   "res": -0.121
+  },
+  {
+   "date": "2016-03-03",
+   "R": 0.3176,
+   "res": 0.2702
+  },
+  {
+   "date": "2020-04-01",
+   "R": -0.1557,
+   "res": -0.0973
+  },
+  {
+   "date": "2020-06-05",
+   "R": 0.3071,
+   "res": 0.1724
+  },
+  {
+   "date": "2020-07-21",
+   "R": 0.1884,
+   "res": 0.1829
+  },
+  {
+   "date": "2020-10-08",
+   "R": 0.2092,
+   "res": 0.179
+  },
+  {
+   "date": "2020-12-10",
+   "R": 0.1598,
+   "res": 0.1523
+  },
+  {
+   "date": "2021-01-05",
+   "R": 0.2013,
+   "res": 0.151
+  },
+  {
+   "date": "2021-03-18",
+   "R": -0.1429,
+   "res": -0.1238
+  }
+ ]
+}
