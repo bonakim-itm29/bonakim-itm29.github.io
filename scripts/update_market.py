@@ -80,6 +80,7 @@ COMP = [  # 관심기업 주가: slug(페이지 폴더), 야후 심볼, 통화
     ("alibaba", "BABA", "USD"), ("baidu", "BIDU", "USD"), ("jd", "JD", "USD"),
     ("pdd", "PDD", "USD"), ("netease", "NTES", "USD"), ("trip-com", "TCOM", "USD"),
     ("tencent", "0700.HK", "HKD"), ("meituan", "3690.HK", "HKD"),
+    ("lenovo", "0992.HK", "HKD"), ("xiaomi", "1810.HK", "HKD"), ("byd", "1211.HK", "HKD"),
     ("samsung-electronics", "005930.KS", "KRW"), ("sk-hynix", "000660.KS", "KRW"),
 ]
 PRICES = OUT.parent.parent / "companies" / "prices.json"

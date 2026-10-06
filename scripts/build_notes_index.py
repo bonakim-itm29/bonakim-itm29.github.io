@@ -17,6 +17,10 @@ SECTORS = [
     ("tencent", "Tencent", "HKEX 0700 · 게임·광고·AI 설비투자와 주주환원"),
     ("baidu", "Baidu", "NASDAQ BIDU · 순현금이 시총의 90%"),
     ("netease", "NetEase", "NASDAQ NTES · 게임·순현금·배당")]),
+  ("중국 하드웨어·전기차", "AI 서버·스마트폰·전기차 제조", [
+    ("lenovo", "Lenovo Group", "HKEX 0992 · AI 서버 매출 2배·워런트 희석"),
+    ("xiaomi", "Xiaomi", "HKEX 1810 · 순현금 시총의 34%·EV 손실 축소"),
+    ("byd", "BYD Company", "HKEX 1211 · 판매 반등·공급망 신용")]),
   ("한국 반도체", "메모리 사이클", [
     ("samsung-electronics", "Samsung Electronics", "KOSPI 005930 · AI 메모리 호황과 사이클 정점 논쟁"),
     ("sk-hynix", "SK hynix", "KOSPI 000660 · HBM 이익률 76%·원화 민감도")]),

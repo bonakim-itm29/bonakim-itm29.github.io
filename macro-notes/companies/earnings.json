@@ -1,6 +1,6 @@
 {
  "_note": "다음 실적발표 일정. status: 확정(회사 공지) / 예상(작년 같은 분기 일정 기준). 날짜는 현지 기준. 매일 자동 점검 작업이 확정되면 고칩니다. reflected_period: 페이지 분석에 이미 반영된 최근 실적 분기.",
- "updated": "2026-10-06",
+ "updated": "2026-10-07",
  "companies": {
   "samsung-electronics": {
    "period": "2026년 3분기",
@@ -87,6 +87,24 @@
    "date": "2026-11-27",
    "status": "예상",
    "reflected_period": "2026년 2분기"
+  },
+  "lenovo": {
+   "period": "FY2026/27 2분기(2026년 7~9월)",
+   "date": "2026-11-19",
+   "status": "예상",
+   "reflected_period": "FY2026/27 1분기(2026년 4~6월)"
+  },
+  "xiaomi": {
+   "period": "2026년 3분기",
+   "date": "2026-11-18",
+   "status": "예상",
+   "reflected_period": "2026년 2분기"
+  },
+  "byd": {
+   "period": "2026년 3분기",
+   "date": "2026-10-29",
+   "status": "예상",
+   "reflected_period": "2026년 상반기(2분기)"
   }
  }
 }
