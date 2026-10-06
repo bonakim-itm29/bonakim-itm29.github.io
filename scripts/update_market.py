@@ -87,7 +87,7 @@ PRICES = OUT.parent.parent / "companies" / "prices.json"
 LONG = {"CL=F", "SI=F", "GC=F"}  # 오일/실버 비율의 장기 비교용
 
 
-def yahoo(sym):
+def yahoo(sym, closed_only=False):
     url = f"https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(sym)}?{'period1=1262304000&period2=' + str(int(dt.datetime.utcnow().timestamp())) if sym in LONG else 'range=2y'}&interval=1d"
     j = json.loads(get(url))["chart"]["result"][0]
     ts = j["timestamp"]; close = j["indicators"]["quote"][0]["close"]
@@ -107,6 +107,11 @@ def yahoo(sym):
         md = dt.datetime.utcfromtimestamp(mt + int(meta.get("gmtoffset") or 0)).date().isoformat()
         if not pts or md > pts[-1][0]:
             pts.append([md, round(float(mp), 2)])
+    if closed_only and mt and reg_end and mt < reg_end - 60 and pts:
+        # 장중이면 오늘의 미완성 일봉은 빼고 직전 종가까지만 쓴다
+        today = dt.datetime.utcfromtimestamp(mt + int(meta.get("gmtoffset") or 0)).date().isoformat()
+        if pts[-1][0] == today:
+            pts.pop()
     # 같은 날짜 중복 시 마지막 값
     return [[d, v] for d, v in dict(pts).items()]
 
@@ -234,7 +239,7 @@ def write_prices():
     out, errs = {}, []
     for slug, sym, cur in COMP:
         try:
-            pts = yahoo(sym)
+            pts = yahoo(sym, closed_only=True)
             if not pts:
                 raise ValueError("빈 데이터")
             out[slug] = dict(symbol=sym, currency=cur, points=pts, ok=True,
