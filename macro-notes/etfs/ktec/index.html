@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KraneShares Hang Seng TECH Index ETF (KTEC) · 매크로 투자노트</title>
+<meta name="description" content="KTEC 구성, 칼럼 언급 이후 수익률, 매크로 민감도">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>
+:root{
+  --ink-2:#4d524e; --ink-3:#7c817d; --rule:#dcdfdb; --rule-2:#eceeeb; --neu-bg:#f0f1ee;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#8a5cd1; --muted-mark:#a9ada9;
+  --good:#0f7a3a; --good-bg:#e4f3e9; --warn:#9a6400; --warn-bg:#fbf1dc; --bad:#b3261e; --bad-bg:#fbe7e5;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --ink-2:#c3c6c1; --ink-3:#8f948f; --rule:#343633; --rule-2:#262826; --neu-bg:#242624;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#9d74e0; --muted-mark:#6b6f6b;
+  --good:#5cc486; --good-bg:#16291d; --warn:#e0b04a; --warn-bg:#2d2412; --bad:#ef7f76; --bad-bg:#331b19;}}
+.wrap{max-width:980px}
+section h2{font-size:1.35rem;text-transform:none;letter-spacing:-.02em;color:var(--text);font-weight:800;margin-bottom:12px}
+section h2 small{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+h3{font-size:1.02rem;margin:0 0 6px}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem;margin-top:16px}
+.toc a{color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--line)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:12px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.tile .l{display:block;font-size:.76rem;color:var(--muted)}
+.tile .v{display:block;font-size:1.25rem;font-weight:700;font-variant-numeric:tabular-nums}
+.tile .d{display:block;font-size:.76rem;color:var(--ink-2)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-top:12px}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--rule-2);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:.8rem;background:var(--neu-bg);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.p-good{background:var(--good-bg);color:var(--good)} .p-warn{background:var(--warn-bg);color:var(--warn)} .p-bad{background:var(--bad-bg);color:var(--bad)} .p-neu{background:var(--neu-bg);color:var(--ink-2)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.82rem;color:var(--ink-2);margin-bottom:6px}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.legend i.sq{width:11px;height:11px;border-radius:3px}
+.legend i.dot{width:9px;height:9px;border-radius:50%}
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{fill:var(--ink-3);font-family:var(--mono);font-size:11px}
+.chart .lab{fill:var(--ink-2);font-family:"Pretendard",system-ui,sans-serif;font-size:12px}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.12);min-width:150px;max-width:280px;z-index:20}
+.tip .t{color:var(--muted);margin-bottom:4px}
+.tip .r{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.tip[hidden]{display:none!important}
+.callout{border-left:3px solid var(--accent);background:var(--accent-soft);padding:12px 16px;border-radius:0 10px 10px 0;font-size:.93rem;margin-top:12px}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-bg)}
+ul.tight{margin:0;padding-left:20px;display:grid;gap:5px;font-size:.93rem}
+.small{font-size:.8rem;color:var(--muted)}
+.el{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px}
+.el .panel{margin-top:0}
+.el h3 .n{display:inline-block;min-width:22px;height:22px;line-height:22px;text-align:center;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:.78rem;margin-right:6px}
+.ev{display:grid;gap:12px;margin-top:12px}
+.ev .panel h3{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.ev .date{font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+.ev blockquote{margin:6px 0 0;padding-left:10px;border-left:2px solid var(--line);font-size:.82rem;color:var(--ink-2)}
+.nums{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.grid2>*,.el>*,.tiles>*{min-width:0}
+.panel p,.panel li{overflow-wrap:anywhere}
+.mon{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:12px}
+.mon div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.88rem}
+.mon b{display:block;font-size:.9rem;margin-bottom:2px}
+details.fold{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:12px}
+details.fold>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:600}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold .more{font-size:.8rem;color:var(--accent);font-weight:600;white-space:nowrap}
+details.fold .more::after{content:" ▾"} details.fold[open] .more::after{content:" ▴"}
+details.fold.mini{padding:8px 14px;font-size:.9rem}
+.acc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:12px;align-items:start}
+.acc-grid>*{min-width:0}
+details.acc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+details.acc[open]{border-color:var(--accent)}
+details.acc>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:center}
+details.acc>summary::-webkit-details-marker{display:none}
+details.acc .n{display:inline-block;min-width:24px;height:24px;line-height:24px;text-align:center;border-radius:6px;background:var(--accent-soft);color:var(--accent);font-size:.8rem;font-weight:700;grid-row:span 2}
+details.acc b{font-size:.95rem}
+details.acc .hl{grid-column:2;font-size:.85rem;color:var(--ink-2)}
+details.acc .chev{grid-row:1/span 2;grid-column:3;color:var(--muted);font-size:.8rem}
+details.acc .chev::after{content:"▾"} details.acc[open] .chev::after{content:"▴"}
+details.acc ul{margin-top:10px}
+.linkbtn{font:inherit;font-size:.82rem;background:none;border:0;color:var(--accent);cursor:pointer;padding:0;text-decoration:underline}
+.term{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:help;border-bottom:1px dotted var(--accent);text-align:inherit}
+.term:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.pop{position:absolute;z-index:30;max-width:300px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.84rem;line-height:1.55;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.pop b{display:block;margin-bottom:2px}
+.pop[hidden]{display:none}
+dl.gloss{display:grid;grid-template-columns:minmax(110px,160px) 1fr;gap:8px 14px;margin-top:12px;font-size:.9rem}
+dl.gloss dt{font-weight:700} dl.gloss dd{margin:0;color:var(--ink-2)}
+@media (max-width:520px){dl.gloss{grid-template-columns:1fr} dl.gloss dd{margin-bottom:6px}}
+.scorewrap{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:12px;margin-top:12px}
+.scorewrap>*{min-width:0;margin-top:0}
+@media (max-width:640px){.scorewrap{grid-template-columns:1fr}}
+.scorebox .big{font-size:3rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.scorebox .big small{font-size:1rem;color:var(--muted);font-weight:600;margin-left:4px}
+.gauge{height:10px;border-radius:999px;background:var(--neu-bg);margin:12px 0 14px;overflow:hidden}
+.gauge i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.peers{display:grid;gap:6px;font-size:.82rem}
+.peers .row{display:grid;grid-template-columns:62px 1fr 32px;gap:8px;align-items:center}
+.peers .row i{display:block;height:6px;border-radius:999px;background:var(--muted-mark)}
+.peers .row.me i{background:var(--accent)} .peers .row.me{font-weight:700}
+.pil{margin-bottom:12px} .pil:last-child{margin-bottom:0}
+.pil .top{display:flex;justify-content:space-between;font-size:.92rem;font-weight:600}
+.pil .bar{height:8px;border-radius:999px;background:var(--neu-bg);margin:5px 0 6px;overflow:hidden}
+.pil .bar i{display:block;height:100%;background:var(--s1)}
+.pil ul{list-style:none;padding:0;margin:0;display:grid;gap:2px;font-size:.82rem;color:var(--ink-2)}
+.pil li{display:flex;justify-content:space-between;gap:10px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:8px}
+.seg button{font:inherit;font-size:.8rem;padding:4px 10px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--accent-soft);color:var(--accent);font-weight:700}
+.panel,.panel li,.panel p,.panel blockquote{min-width:0;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+<main class="wrap">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">매크로 투자노트</a> / ETF / KTEC</p>
+<header class="page">
+  <span class="eyebrow">칼럼 언급 ETF · NYSE Arca: KTEC</span>
+  <h1>KraneShares Hang Seng TECH Index ETF</h1>
+  <p class="lead">항셍테크 지수(홍콩 상장 기술주 30종목)를 추종합니다. 인터넷 플랫폼 외에 BYD·샤오미·레노버 같은 하드웨어·전기차 비중이 KWEB보다 큽니다. 순자산이 작아 거래량이 적습니다.</p>
+  <div class="tiles"><div class="tile" id="pxTile"><span class="l">가격 (10/05)</span><span class="v">$11.79</span><span class="d">배당 반영 수정가</span></div><div class="tile"><span class="l">1년 수익률</span><span class="v">-37.1%</span><span class="d">올해 -24.7%</span></div><div class="tile"><span class="l">고점 대비</span><span class="v">-52%</span><span class="d">고점 2021-06-28</span></div><div class="tile"><span class="l">저자 입장</span><span class="v">강세 (KWEB 다음)</span><span class="d">중국/홍콩 주식 적중률 69%</span></div></div>
+</header>
+<section id="view"><h2><small>01</small>저자는 어떻게 봤나</h2>
+  <p class="small">칼럼에서 이 ETF(또는 같은 대상)를 언급한 날짜와 그때부터 지금까지의 수익률입니다. 중국/홍콩 주식 강세 신호의 과거 6개월 적중률 69% (무작위 49%).</p>
+  <div class="panel"><div class="ev"><div class="date">2026-10-06</div><p>최근 칼럼: 미국 실질금리 하락에 거는 방법으로 중국 플랫폼·빅테크 ETF(KWEB, KTEC)를 함께 꼽았습니다.</p><p class="small">그날 가격 $11.79 → 10/5 $11.79 · <b style="color:var(--good)">+0.0%</b> (배당 포함)</p></div><div class="ev"><div class="date">2026-07-07</div><p>강세로 보는 대상은 항셍지수 전체가 아니라 KWEB·KTEC에 속한 홍콩 온라인 플랫폼이라고 했습니다.</p><p class="small">그날 가격 $12.56 → 10/5 $11.79 · <b style="color:var(--bad)">-6.1%</b> (배당 포함)</p></div><div class="ev"><div class="date">2025-12-09</div><p>중국은 KTEC이나 KWEB을 베타 포지션으로 꼭 일부 보유하라고 했습니다.</p><p class="small">그날 가격 $15.89 → 10/5 $11.79 · <b style="color:var(--bad)">-25.8%</b> (배당 포함)</p></div><div class="ev"><div class="date">2022-08-28</div><p>항셍테크 지수와 이를 추종하는 KTEC도 나쁘지 않지만, 담긴 기술주의 밸류에이션과 건전성이 인터넷 기반 기술주(KWEB)보다 떨어진다고 구분했습니다.</p><p class="small">그날 가격 $12.71 → 10/5 $11.79 · <b style="color:var(--bad)">-7.2%</b> (배당 포함)</p></div></div>
+</section>
+<section id="hold"><h2><small>02</small>무엇을 담고 있나</h2>
+  <p class="small">상위 10종목 · 기준일 2026-08-13 · 보유 약 30종목 · 순자산 약 US$0.5억 · 보수 연 0.69% · 2021년 6월 상장</p>
+  <div class="tbl"><table><tr><th>#</th><th>종목</th><th class="num">비중</th><th class="num">종합 매력도</th></tr><tr><td>1</td><td><a href="../../companies/meituan/index.html">Meituan</a></td><td class="num">9.97%</td><td class="num">4.7</td></tr><tr><td>2</td><td><a href="../../companies/netease/index.html">NetEase</a></td><td class="num">9.06%</td><td class="num">6.9</td></tr><tr><td>3</td><td><a href="../../companies/alibaba/index.html">Alibaba</a></td><td class="num">8.70%</td><td class="num">5.3</td></tr><tr><td>4</td><td><a href="../../companies/tencent/index.html">Tencent</a></td><td class="num">8.55%</td><td class="num">6.4</td></tr><tr><td>5</td><td><a href="../../companies/byd/index.html">BYD</a></td><td class="num">8.53%</td><td class="num">4.5</td></tr><tr><td>6</td><td><a href="../../companies/xiaomi/index.html">Xiaomi</a></td><td class="num">8.16%</td><td class="num">6.1</td></tr><tr><td>7</td><td><a href="../../companies/lenovo/index.html">Lenovo</a></td><td class="num">7.14%</td><td class="num">5.9</td></tr><tr><td>8</td><td><a href="../../companies/jd/index.html">JD.com</a></td><td class="num">5.89%</td><td class="num">8.7</td></tr><tr><td>9</td><td><a href="../../companies/baidu/index.html">Baidu</a></td><td class="num">4.68%</td><td class="num">7.0</td></tr><tr><td>10</td><td>Kuaishou</td><td class="num">3.74%</td><td class="num">–</td></tr></table></div>
+  <p class="small" style="margin-top:8px">상위 10종목 중 이 노트에 분석 페이지가 있는 기업은 비중 70.7%이고, 이들의 비중 가중 평균 종합 매력도는 <b>6.0점</b>입니다.</p>
+</section>
+<section id="px"><h2><small>03</small>가격 추이</h2>
+  <div class="panel"><div class="chart" id="pxChart"></div><p class="small">주간 수정가(배당 반영), 2018년 이후, 로그 눈금. 주황 점 = 칼럼 언급일.</p></div>
+</section>
+<section id="macro"><h2><small>04</small>어떤 매크로에 반응하나</h2>
+  <p class="small">2021년 이후 4주 단위(겹치지 않게) 수익률을 각 지표 변화에 단순 회귀한 평균 반응입니다. 상관이 0에 가까우면 관계가 약하다는 뜻입니다.</p>
+  <div class="tbl"><table><tr><th>이런 변화가 있을 때</th><th class="num">ETF 평균 반응</th><th class="num">상관</th></tr><tr><td>미국 10년 실질금리 1%p 상승</td><td class="num"><b>-16.4%</b></td><td class="num">-0.38</td></tr><tr><td>달러지수 1% 상승</td><td class="num"><b>-1.9%</b></td><td class="num">-0.35</td></tr><tr><td>위안화 1% 약세(USD/CNY)</td><td class="num"><b>-2.5%</b></td><td class="num">-0.32</td></tr><tr><td>구리 10% 상승</td><td class="num"><b>+5.7%</b></td><td class="num">+0.40</td></tr><tr><td>S&P 500 10% 상승</td><td class="num"><b>+8.9%</b></td><td class="num">+0.39</td></tr><tr><td>항셍지수 10% 상승</td><td class="num"><b>+14.2%</b></td><td class="num">+0.92</td></tr><tr><td>WTI 10% 상승</td><td class="num"><b>-1.2%</b></td><td class="num">-0.12</td></tr></table></div>
+  <div class="callout" style="margin-top:12px"><b>해석.</b> 다섯 ETF 가운데 미국 실질금리 민감도가 가장 큽니다(1%p 상승 시 평균 약 −16%, 상관 −0.38). 항셍지수와의 상관은 0.92입니다. 하드웨어·전기차 비중이 커 구리·S&amp;P 500과도 함께 움직입니다.</div>
+</section>
+<section id="method"><h2><small>05</small>방법·출처</h2>
+  <ul class="tight">
+    <li>가격: Yahoo Finance(배당 반영 수정가, 10/5 종가). 맨 위 가격 칸은 매일 시장 지표와 함께 갱신됩니다(종가 기준, 배당 미반영).</li>
+    <li>매크로: FRED(미 10년 실질금리 DFII10), Yahoo(달러지수, USD/BRL·USD/CNY, 구리·WTI 선물, S&P 500, 항셍지수).</li>
+    <li>구성 종목: stockanalysis.com 공개 자료(기준일은 표 위). 구성은 수시로 바뀝니다.</li>
+    <li>칼럼 언급은 저장된 칼럼에서 찾은 내용을 요약했습니다. 최근 칼럼은 결론만 적었습니다.</li>
+    <li>개인 학습 기록이며 투자 권유가 아닙니다.</li>
+  </ul>
+  <p class="small" style="margin-top:10px"><a href="../../index.html">← 투자노트로</a></p>
+</section>
+</main>
+<script>
+const P={"t":"KTEC","slug":"ktec","price":11.789999961853027,"last":"2026-10-05","weekly":{"d":["2021-06-11","2021-06-18","2021-06-25","2021-07-02","2021-07-09","2021-07-16","2021-07-23","2021-07-30","2021-08-06","2021-08-13","2021-08-20","2021-08-27","2021-09-03","2021-09-10","2021-09-17","2021-09-24","2021-10-01","2021-10-08","2021-10-15","2021-10-22","2021-10-29","2021-11-05","2021-11-12","2021-11-19","2021-11-26","2021-12-03","2021-12-10","2021-12-17","2021-12-24","2021-12-31","2022-01-07","2022-01-14","2022-01-21","2022-01-28","2022-02-04","2022-02-11","2022-02-18","2022-02-25","2022-03-04","2022-03-11","2022-03-18","2022-03-25","2022-04-01","2022-04-08","2022-04-15","2022-04-22","2022-04-29","2022-05-06","2022-05-13","2022-05-20","2022-05-27","2022-06-03","2022-06-10","2022-06-17","2022-06-24","2022-07-01","2022-07-08","2022-07-15","2022-07-22","2022-07-29","2022-08-05","2022-08-12","2022-08-19","2022-08-26","2022-09-02","2022-09-09","2022-09-16","2022-09-23","2022-09-30","2022-10-07","2022-10-14","2022-10-21","2022-10-28","2022-11-04","2022-11-11","2022-11-18","2022-11-25","2022-12-02","2022-12-09","2022-12-16","2022-12-23","2022-12-30","2023-01-06","2023-01-13","2023-01-20","2023-01-27","2023-02-03","2023-02-10","2023-02-17","2023-02-24","2023-03-03","2023-03-10","2023-03-17","2023-03-24","2023-03-31","2023-04-07","2023-04-14","2023-04-21","2023-04-28","2023-05-05","2023-05-12","2023-05-19","2023-05-26","2023-06-02","2023-06-09","2023-06-16","2023-06-23","2023-06-30","2023-07-07","2023-07-14","2023-07-21","2023-07-28","2023-08-04","2023-08-11","2023-08-18","2023-08-25","2023-09-01","2023-09-08","2023-09-15","2023-09-22","2023-09-29","2023-10-06","2023-10-13","2023-10-20","2023-10-27","2023-11-03","2023-11-10","2023-11-17","2023-11-24","2023-12-01","2023-12-08","2023-12-15","2023-12-22","2023-12-29","2024-01-05","2024-01-12","2024-01-19","2024-01-26","2024-02-02","2024-02-09","2024-02-16","2024-02-23","2024-03-01","2024-03-08","2024-03-15","2024-03-22","2024-03-29","2024-04-05","2024-04-12","2024-04-19","2024-04-26","2024-05-03","2024-05-10","2024-05-17","2024-05-24","2024-05-31","2024-06-07","2024-06-14","2024-06-21","2024-06-28","2024-07-05","2024-07-12","2024-07-19","2024-07-26","2024-08-02","2024-08-09","2024-08-16","2024-08-23","2024-08-30","2024-09-06","2024-09-13","2024-09-20","2024-09-27","2024-10-04","2024-10-11","2024-10-18","2024-10-25","2024-11-01","2024-11-08","2024-11-15","2024-11-22","2024-11-29","2024-12-06","2024-12-13","2024-12-20","2024-12-27","2025-01-03","2025-01-10","2025-01-17","2025-01-24","2025-01-31","2025-02-07","2025-02-14","2025-02-21","2025-02-28","2025-03-07","2025-03-14","2025-03-21","2025-03-28","2025-04-04","2025-04-11","2025-04-18","2025-04-25","2025-05-02","2025-05-09","2025-05-16","2025-05-23","2025-05-30","2025-06-06","2025-06-13","2025-06-20","2025-06-27","2025-07-04","2025-07-11","2025-07-18","2025-07-25","2025-08-01","2025-08-08","2025-08-15","2025-08-22","2025-08-29","2025-09-05","2025-09-12","2025-09-19","2025-09-26","2025-10-03","2025-10-10","2025-10-17","2025-10-24","2025-10-31","2025-11-07","2025-11-14","2025-11-21","2025-11-28","2025-12-05","2025-12-12","2025-12-19","2025-12-26","2026-01-02","2026-01-09","2026-01-16","2026-01-23","2026-01-30","2026-02-06","2026-02-13","2026-02-20","2026-02-27","2026-03-06","2026-03-13","2026-03-20","2026-03-27","2026-04-03","2026-04-10","2026-04-17","2026-04-24","2026-05-01","2026-05-08","2026-05-15","2026-05-22","2026-05-29","2026-06-05","2026-06-12","2026-06-19","2026-06-26","2026-07-03","2026-07-10","2026-07-17","2026-07-24","2026-07-31","2026-08-07","2026-08-14","2026-08-21","2026-08-28","2026-09-04","2026-09-11","2026-09-18","2026-09-25","2026-10-02","2026-10-09"],"p":[23.839,23.807,24.788,23.638,22.523,22.471,21.178,19.925,19.266,19.309,17.631,18.558,19.926,19.607,18.909,17.989,17.918,18.72,18.841,19.706,18.484,18.113,19.409,18.831,18.001,16.728,17.841,16.873,16.789,16.837,16.455,17.114,16.78,15.594,16.513,16.091,15.852,15.298,13.529,11.521,13.961,13.014,13.385,12.826,12.41,11.598,12.599,11.48,12.028,12.319,12.334,13.003,13.696,13.618,14.322,14.376,14.118,13.111,13.325,12.745,12.856,12.917,12.148,12.707,12.058,11.872,11.072,10.393,9.982,10.039,9.237,9.323,8.395,9.858,10.556,11.11,10.326,12.334,12.877,12.449,12.21,12.439,13.569,13.761,13.742,14.316,13.579,12.784,12.484,11.645,12.612,11.421,11.606,12.46,12.616,12.529,11.97,11.562,11.478,11.486,11.247,11.218,10.912,11.309,11.491,12.294,11.219,11.573,11.768,12.368,12.017,13.63,13.224,12.432,11.675,12.037,12.734,11.761,11.909,11.692,11.455,11.393,11.348,10.607,10.931,11.654,11.497,11.913,11.97,11.223,10.797,11.058,10.629,11.144,10.578,10.223,9.48,9.586,9.0,9.471,9.953,10.135,10.402,10.193,10.623,10.349,10.535,10.375,10.197,9.946,11.195,12.222,12.029,12.664,11.53,11.218,11.168,11.044,11.1,10.648,10.86,11.335,10.653,10.373,10.168,10.318,10.576,10.494,10.619,10.344,10.481,11.07,13.834,15.562,14.21,13.425,13.319,13.274,13.39,12.849,12.588,13.013,13.197,13.313,13.171,13.324,13.009,12.287,13.146,13.559,14.032,14.887,16.049,16.998,16.184,17.433,17.259,16.378,15.662,14.084,14.5,13.997,14.713,15.536,15.197,15.468,15.275,14.858,15.633,15.323,14.945,15.604,15.342,15.323,16.378,16.523,15.517,15.971,16.194,16.736,16.746,16.455,17.452,18.217,17.907,18.73,16.91,17.133,17.443,17.056,16.697,16.514,15.642,16.184,16.262,15.971,15.865,16.01,16.52,16.37,16.41,16.46,16.02,15.53,15.19,15.16,14.44,13.86,14.19,13.58,13.37,13.49,13.92,14.62,14.0,13.94,14.29,13.72,13.37,13.6,13.37,13.13,12.78,11.994,12.4,13.04,12.99,12.89,13.69,13.78,13.26,13.16,12.82,12.75,11.98,12.25,11.97,11.47,11.79]},"marks":["2022-08-28","2025-12-09","2026-07-07","2026-10-06"]};
+(function(){const host=document.getElementById('pxChart');const css=k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+ function draw(){const W=host.clientWidth||800,H=260,m={l:44,r:12,t:10,b:24};const d=P.weekly.d,p=P.weekly.p;const lo=Math.log(Math.min(...p)),hi=Math.log(Math.max(...p));
+  const X=i=>m.l+i/(d.length-1)*(W-m.l-m.r),Y=v=>m.t+(1-(Math.log(v)-lo)/(hi-lo))*(H-m.t-m.b);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="${P.t} 주간 가격">`;
+  const tk=[];for(let k=0;k<5;k++){const v=Math.exp(lo+(hi-lo)*k/4);tk.push(v)}
+  tk.forEach(v=>{s+=`<line x1="${m.l}" x2="${W-m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="${css('--line')||'#ddd'}"/><text x="${m.l-6}" y="${Y(v)+4}" font-size="11" text-anchor="end" fill="${css('--muted')}">$${v.toFixed(0)}</text>`});
+  let yr='';d.forEach((x,i)=>{if(x.slice(0,4)!==yr){yr=x.slice(0,4);s+=`<text x="${X(i)}" y="${H-6}" font-size="11" text-anchor="middle" fill="${css('--muted')}">${yr}</text>`}});
+  s+=`<path d="${p.map((v,i)=>(i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1)).join('')}" fill="none" stroke="${css('--s1')}" stroke-width="1.8"/>`;
+  P.marks.forEach(md=>{const i=d.findIndex(x=>x>=md);if(i>=0)s+=`<circle cx="${X(i)}" cy="${Y(p[i])}" r="4.5" fill="${css('--s2')}"><title>${md} 칼럼 언급</title></circle>`});
+  host.innerHTML=s+'</svg>'}
+ draw();addEventListener('resize',()=>{clearTimeout(window._rt);window._rt=setTimeout(draw,150)});
+ fetch('../../companies/prices.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{const q=j&&j.prices&&j.prices[P.slug];if(!q||!q.points.length)return;const lp=q.points[q.points.length-1];
+  const el=document.getElementById('pxTile');if(!el)return;el.querySelector('.l').textContent='가격 ('+(+lp[0].slice(5,7))+'/'+(+lp[0].slice(8))+' 종가)';el.querySelector('.v').textContent='$'+lp[1].toFixed(2);
+  el.querySelector('.d').innerHTML='매일 갱신 · <a href="'+q.link+'" target="_blank" rel="noopener">출처</a>'}).catch(()=>{});
+})();
+</script>
+</body>
+</html>

@@ -50,10 +50,21 @@ for name, sub, items in SECTORS:
         t, lab = tier(v)
         out.append(f'    <a class="card" href="companies/{s}/index.html">\n      <h3>{html.escape(n)} <span class="scb {t}" title="종합 매력도 {v:.1f} ({lab})">{v:.1f}</span></h3>\n      <p>{d}</p>\n      <div class="meta"><span class="tag live">심층 분석</span><span class="tag">{name}</span></div>\n    </a>')
     out.append('  </div>')
+ETFS = [("ewz", "EWZ · 브라질", "iShares MSCI Brazil · 원자재·금융, 헤알화 연동", "강세"),
+        ("kweb", "KWEB · 중국 인터넷", "KraneShares CSI China Internet · 저자가 가장 자주 쓰는 중국 ETF", "강세(가장 선호)"),
+        ("ktec", "KTEC · 항셍테크", "KraneShares Hang Seng TECH · 실질금리 민감도 가장 큼", "강세"),
+        ("fxi", "FXI · 중국 대형주", "iShares China Large-Cap · 국유 은행 비중 큼", "강세"),
+        ("kba", "KBA · 중국 본토 A주", "KraneShares MSCI China A 50 · 상해 증시 대용", "장기 강세")]
+out.append('  <h3 class="sector">칼럼에 나온 ETF <span>브라질·중국 · 점수 대신 저자 입장 표시</span></h3>')
+out.append('  <div class="grid2">')
+for s, n, d, st in ETFS:
+    if (ROOT / "etfs" / s / "index.html").exists():
+        out.append(f'    <a class="card" href="etfs/{s}/index.html">\n      <h3>{html.escape(n)} <span class="scb n" title="저자 입장">{st}</span></h3>\n      <p>{d}</p>\n      <div class="meta"><span class="tag live">ETF</span><span class="tag">칼럼 언급</span></div>\n    </a>')
+out.append('  </div>')
 out.append('</section>')
 STYLE = '''<style id="sc-style">
 .scb{display:inline-block;min-width:2.6em;text-align:center;font-size:13px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:2px;color:#fff}
-.scb.g{background:#2e7d4f}.scb.y{background:#b8860b}.scb.r{background:#c0392b}
+.scb.g{background:#2e7d4f}.scb.y{background:#b8860b}.scb.r{background:#c0392b}.scb.n{background:#5b6b7a;min-width:0}
 @media (prefers-color-scheme: dark){.scb.g{background:#3f9e66}.scb.y{background:#c99a1e}.scb.r{background:#d0574a}}
 .sc-legend{font-size:13px;color:var(--muted)}
 .sc-legend .scb{margin:0 2px 0 0;min-width:0}
