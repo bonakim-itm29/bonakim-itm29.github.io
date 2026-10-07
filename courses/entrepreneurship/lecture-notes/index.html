@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>주차별 핵심 · 기업가정신</title>
+<title>주차별 핵심 · 기업가 정신</title>
 <meta name="description" content="기업가정신(ITM502) 주차별 핵심 키워드와 시각화 슬라이드">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -220,6 +220,23 @@ footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--mut
 }
 @media (prefers-reduced-motion:no-preference){.deck.paged .slide.cur{animation:sl .22s ease}}
 @keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="hub">
@@ -232,46 +249,47 @@ footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--mut
 <header class="page">
   <span class="eyebrow">ITM502 · 2024 가을</span>
   <h1>기업가정신 주차별 핵심</h1>
-  <p class="lead">주차마다 핵심 키워드를 먼저 보고, 카드를 누르면 그 주 강의를 도식과 표로 다시 짠 슬라이드(279장)로 넘어갑니다.</p>
+  <p class="lead">주차마다 핵심 키워드를 먼저 보고, 카드를 누르면 그 주 강의를 도식과 표로 다시 짠 슬라이드(237장)로 넘어갑니다. 강의 내용만 담았습니다.</p>
 </header>
-<ol class="flow"><li><b>1–2주</b><span>기회를 찾고 가치를 정의</span></li><li><b>3–4주</b><span>비즈니스모델과 회사 설계</span></li><li><b>5–8주</b><span>좋은 회사를 숫자로 판별</span></li><li><b>11주</b><span>가설을 빠르게 검증</span></li></ol>
+<ol class="flow" style="grid-template-columns:repeat(4,1fr)"><li><b>1–2주</b><span>기회를 찾고 가치를 정의</span></li><li><b>3–4주</b><span>비즈니스모델과 회사 설계</span></li><li><b>5–8주</b><span>좋은 회사를 숫자로 판별</span></li><li><b>11주</b><span>가설을 빠르게 검증</span></li></ol>
 <div class="wk-grid"><a class="wk-card" href="week-01.html">
   <span class="wc-no num">01</span>
   <div class="wc-body"><h3>기업가정신의 이해</h3><p class="wc-one">열정·역량을 기회와 맞춰 새 기업을 만든다</p><div class="kws"><span class="kw">Entrepreneurship</span><span class="kw">Opportunity</span><span class="kw">Intellectual Capital</span><span class="kw">가설 검증</span><span class="kw">Stakeholders</span><span class="kw">Spirit &amp; Skills</span></div>
-  <p class="wc-meta num">강의 1.1 · 1.2 · 1.3 · 1.4 · 슬라이드 25장</p></div>
+  <p class="wc-meta num">강의 1.1 · 1.2 · 1.3 · 1.4 · 슬라이드 21장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-02.html">
   <span class="wc-no num">02</span>
   <div class="wc-body"><h3>기회·비전·가치제안</h3><p class="wc-one">좋은 기회를 골라 비전과 가치로 만든다</p><div class="kws"><span class="kw">Creative Destruction</span><span class="kw">TSIPC</span><span class="kw">CNRRC</span><span class="kw">Vision &amp; Mission</span><span class="kw">PPASE</span><span class="kw">Value&gt;Price&gt;Cost</span></div>
-  <p class="wc-meta num">강의 2.1 · 2.2 · 2.3 · 2.4 · 2.5 · 2.6 · 슬라이드 39장</p></div>
+  <p class="wc-meta num">강의 2.1 · 2.2 · 2.3 · 2.4 · 2.5 · 2.6 · 슬라이드 33장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-03.html">
   <span class="wc-no num">03</span>
   <div class="wc-body"><h3>비즈니스모델·경쟁전략</h3><p class="wc-one">가치를 어떻게 만들고, 어떻게 지키는가</p><div class="kws"><span class="kw">BM Canvas</span><span class="kw">Value Capture</span><span class="kw">핵심역량</span><span class="kw">Five Forces</span><span class="kw">SWOT</span><span class="kw">Double S-Curve</span></div>
-  <p class="wc-meta num">강의 3.1 · 3.2 · 3.3 · 3.4 · 3.5 · 3.6 · 슬라이드 39장</p></div>
+  <p class="wc-meta num">강의 3.1 · 3.2 · 3.3 · 3.4 · 3.5 · 3.6 · 슬라이드 33장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-04.html">
   <span class="wc-no num">04</span>
   <div class="wc-body"><h3>벤처 설립·주식회사</h3><p class="wc-one">주식회사의 원리: 소유·경영·공개</p><div class="kws"><span class="kw">주식회사</span><span class="kw">유한책임</span><span class="kw">정관·설립등기</span><span class="kw">주주총회·이사회</span><span class="kw">IPO</span><span class="kw">재무정보 니즈</span></div>
-  <p class="wc-meta num">강의 4.1 · 4.2 · 4.3 · 슬라이드 19장</p></div>
+  <p class="wc-meta num">강의 4.1 · 4.2 · 4.3 · 슬라이드 16장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-05.html">
   <span class="wc-no num">05</span>
   <div class="wc-body"><h3>재무분석 기초</h3><p class="wc-one">숫자로 수익성·안정성·성장성을 읽는다</p><div class="kws"><span class="kw">회계 항등식</span><span class="kw">재무제표</span><span class="kw">안정성 비율</span><span class="kw">CAGR</span><span class="kw">PER·PBR</span><span class="kw">ROE</span></div>
-  <p class="wc-meta num">강의 5.1 · 5.2 · 5.3 · 5.4 · 5.5 · 5.6 · 5.7 · 슬라이드 49장</p></div>
+  <p class="wc-meta num">강의 5.1 · 5.2 · 5.3 · 5.4 · 5.5 · 5.6 · 5.7 · 슬라이드 42장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-06.html">
   <span class="wc-no num">06</span>
   <div class="wc-body"><h3>KOSPI 사례 분석</h3><p class="wc-one">성장률로 실적을 비교하되 주가 타이밍은 별개</p><div class="kws"><span class="kw">네이버 금융</span><span class="kw">3년 CAGR</span><span class="kw">기업실적분석</span><span class="kw">실적-주가 괴리</span><span class="kw">ROE와 경쟁</span><span class="kw">해외 재무정보</span></div>
-  <p class="wc-meta num">강의 6.1 · 슬라이드 7장</p></div>
+  <p class="wc-meta num">강의 6.1 · 슬라이드 6장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-07.html">
   <span class="wc-no num">07</span>
   <div class="wc-body"><h3>버핏 사례·소비자 독점</h3><p class="wc-one">오래 갈 독점 기업을 알아보는 눈</p><div class="kws"><span class="kw">Consumer Monopoly</span><span class="kw">복리효과</span><span class="kw">ROE</span><span class="kw">72의 법칙</span><span class="kw">8가지 판별 질문</span><span class="kw">초기수익률</span></div>
-  <p class="wc-meta num">강의 6.2 · 7.1 · 7.2 · 7.3+4 · 7.5+6 · 7.7+8 · 슬라이드 41장</p></div>
+  <p class="wc-meta num">강의 6.2 · 7.1 · 7.2 · 7.3+4 · 7.5+6 · 7.7+8 · 슬라이드 35장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-08.html">
   <span class="wc-no num">08</span>
   <div class="wc-body"><h3>버핏 정량분석·CR#3</h3><p class="wc-one">지금 가격에 사면 10년 뒤 몇 %인가</p><div class="kws"><span class="kw">ACRR</span><span class="kw">ROE</span><span class="kw">Equity/Bond</span><span class="kw">EPS 추정</span><span class="kw">자사주 매입</span><span class="kw">R²</span></div>
-  <p class="wc-meta num">강의 9.1 · 9.2 · 9.3 · 9.4 · 9.5 · 9.6 · 슬라이드 39장</p></div>
+  <p class="wc-meta num">강의 9.1 · 9.2 · 9.3 · 9.4 · 9.5 · 9.6 · 슬라이드 33장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-11.html">
   <span class="wc-no num">11</span>
   <div class="wc-body"><h3>Lean Startup</h3><p class="wc-one">계획을 실행하지 말고, 가설을 검증하라</p><div class="kws"><span class="kw">Customer Development</span><span class="kw">Build-Measure-Learn</span><span class="kw">MVP</span><span class="kw">Leap of Faith</span><span class="kw">Product-Market Fit</span><span class="kw">Lean Canvas</span></div>
-  <p class="wc-meta num">강의 12.1 · 12.2 · 12.3 · 슬라이드 21장</p></div>
+  <p class="wc-meta num">강의 12.1 · 12.2 · 12.3 · 슬라이드 18장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a></div>
+
 </main>
 <footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: ITM502 기업가정신 2024-3 (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
 </body>

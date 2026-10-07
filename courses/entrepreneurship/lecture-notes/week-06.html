@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>6주차 KOSPI 사례 분석 · 기업가정신</title>
+<title>6주차 KOSPI 사례 분석 · 기업가 정신</title>
 <meta name="description" content="성장률로 실적을 비교하되 주가 타이밍은 별개">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -220,6 +220,23 @@ footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--mut
 }
 @media (prefers-reduced-motion:no-preference){.deck.paged .slide.cur{animation:sl .22s ease}}
 @keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body class="deckpage">
@@ -234,18 +251,19 @@ footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--mut
   <h1>KOSPI 사례 분석</h1>
   <p class="lead">성장률로 실적을 비교하되 주가 타이밍은 별개</p>
   <div class="kws"><span class="kw">네이버 금융</span><span class="kw">3년 CAGR</span><span class="kw">기업실적분석</span><span class="kw">실적-주가 괴리</span><span class="kw">ROE와 경쟁</span><span class="kw">해외 재무정보</span></div>
+  
 </header>
 <div class="dk-bar">
-  <div class="tabs" role="navigation" aria-label="강의"><a href="#s1" class="tab" data-lec="6.1"><b>6.1</b><span>KOSPI·KOSDAQ 사례 분석 (2C)</span></a></div>
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="6.1"><b>6.1</b><span>KOSPI·KOSDAQ 사례 분석 (2C)</span></a></div>
   <div class="ctl">
     <button type="button" id="mode" aria-pressed="false">전체 보기</button>
     <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
-    <span id="pos" class="num">1 / 7</span>
+    <span id="pos" class="num">1 / 6</span>
     <button type="button" id="next" aria-label="다음 슬라이드">→</button>
   </div>
 </div>
 <div class="deck" id="deck">
-<article class="slide ty-title" id="s1" data-lec="6.1" aria-label="1 / 7"><div class="sl-in"><div class="t-wrap"><p class="t-wk">6주차 · KOSPI 사례 분석</p><p class="t-no">6.1</p><h2 class="t-title">KOSPI·KOSDAQ 사례 분석 (2C)</h2><p class="t-thesis">매출 성장이 이익 성장으로 이어지는지 확인하라</p></div></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">1 / 7</span></footer></article><article class="slide ty-steps" id="s2" data-lec="6.1" aria-label="2 / 7"><div class="sl-in"><h3 class="sh">네이버 금융 사례 분석</h3><ol class="steps n5"><li><span class="sn">1</span><b>종목 조회</b><p>네이버 금융에서 기업 검색</p></li><li><span class="sn">2</span><b>기업실적분석</b><p>연간 매출·영업이익·순이익 확인</p></li><li><span class="sn">3</span><b>3년 CAGR</b><p>세 지표의 연평균 성장률 계산</p></li><li><span class="sn">4</span><b>지표 간 비교</b><p>매출 성장이 이익 성장으로 갔는가</p></li><li><span class="sn">5</span><b>주가와 대조</b><p>실적과 주가 흐름의 시차 확인</p></li></ol></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">2 / 7</span></footer></article><article class="slide ty-cases" id="s3" data-lec="6.1" aria-label="3 / 7"><div class="sl-in"><h3 class="sh">매출↑ 이익↓ 사례 (3년 CAGR)</h3><div class="css n3"><div class="cs"><b>삼성전자</b><p>매출 +3.3%, 영업익 −8.2%, 순익 −2.6%</p></div><div class="cs"><b>LG화학</b><p>매출 +5.6%, 영업익 −27.3%, 순익 −30.9%</p></div><div class="cs"><b>NAVER</b><p>매출 +15.8%, 영업익 +14.4%, 순익 −53.7%</p></div></div></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">3 / 7</span></footer></article><article class="slide ty-cases" id="s4" data-lec="6.1" aria-label="4 / 7"><div class="sl-in"><h3 class="sh">고른 성장 사례 (3년 CAGR)</h3><div class="css n3"><div class="cs"><b>현대차</b><p>매출 +13.7%, 영업익 +32.8%, 순익 +35.9%</p></div><div class="cs"><b>대한항공</b><p>매출 +25.9%, 영업익 +12.8%, 순익 +34.1%</p></div><div class="cs"><b>코웨이</b><p>매출 +5.4%, 영업익 +8.1%, 순익 +7.2%</p></div></div></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">4 / 7</span></footer></article><article class="slide ty-compare" id="s5" data-lec="6.1" aria-label="5 / 7"><div class="sl-in"><h3 class="sh">실적과 주가는 다르게 움직인다</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">실적 (기업실적분석)</b><ul><li>CAGR로 성장성 판단 가능</li><li>지표별 방향이 다를 수 있음</li></ul></div><div class="cp-col"><b class="cp-h">주가</b><ul><li>실적과 시점이 어긋남 (2022·2023)</li><li>주가 타이밍 맞추기 어려움</li></ul></div></div><p class="cp-note">코웨이: ROE 하락 원인은 렌탈 시장 경쟁 심화</p></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">5 / 7</span></footer></article><article class="slide ty-tree" id="s6" data-lec="6.1" aria-label="6 / 7"><div class="sl-in"><h3 class="sh">해외 기업 재무·주식 정보</h3><div class="tree"><div class="tr-r">해외 재무정보</div><div class="tr-cs n3"><div class="tr-c"><b>EIKON</b><p>Refinitiv, BTM 통계실습실에서 이용</p></div><div class="tr-c"><b>stockrow</b><p>stockrow.com</p></div><div class="tr-c"><b>macrotrends</b><p>macrotrends.net</p></div></div></div></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">6 / 7</span></footer></article><article class="slide ty-apply" id="s7" data-lec="6.1" aria-label="7 / 7"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>탄소감축·ESG 상장사의 매출·영업익·순익 3년 CAGR을 나란히 비교</li><li>대형 컨설팅펌 진입 시 ROE 하락 대비, 경쟁사 ROE 추세로 경쟁 강도 감시</li><li>해외 탄소회계 피어는 stockrow·macrotrends로 지표 수집해 벤치마크</li></ul></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">7 / 7</span></footer></article>
+<article class="slide ty-title" id="s1" data-lec="6.1" aria-label="1 / 6"><div class="sl-in"><div class="t-wrap"><p class="t-wk">6주차 · KOSPI 사례 분석</p><p class="t-no">6.1</p><h2 class="t-title">KOSPI·KOSDAQ 사례 분석 (2C)</h2><p class="t-thesis">매출 성장이 이익 성장으로 이어지는지 확인하라</p></div></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">1 / 6</span></footer></article><article class="slide ty-steps" id="s2" data-lec="6.1" aria-label="2 / 6"><div class="sl-in"><h3 class="sh">네이버 금융 사례 분석</h3><ol class="steps n5"><li><span class="sn">1</span><b>종목 조회</b><p>네이버 금융에서 기업 검색</p></li><li><span class="sn">2</span><b>기업실적분석</b><p>연간 매출·영업이익·순이익 확인</p></li><li><span class="sn">3</span><b>3년 CAGR</b><p>세 지표의 연평균 성장률 계산</p></li><li><span class="sn">4</span><b>지표 간 비교</b><p>매출 성장이 이익 성장으로 갔는가</p></li><li><span class="sn">5</span><b>주가와 대조</b><p>실적과 주가 흐름의 시차 확인</p></li></ol></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">2 / 6</span></footer></article><article class="slide ty-cases" id="s3" data-lec="6.1" aria-label="3 / 6"><div class="sl-in"><h3 class="sh">매출↑ 이익↓ 사례 (3년 CAGR)</h3><div class="css n3"><div class="cs"><b>삼성전자</b><p>매출 +3.3%, 영업익 −8.2%, 순익 −2.6%</p></div><div class="cs"><b>LG화학</b><p>매출 +5.6%, 영업익 −27.3%, 순익 −30.9%</p></div><div class="cs"><b>NAVER</b><p>매출 +15.8%, 영업익 +14.4%, 순익 −53.7%</p></div></div></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">3 / 6</span></footer></article><article class="slide ty-cases" id="s4" data-lec="6.1" aria-label="4 / 6"><div class="sl-in"><h3 class="sh">고른 성장 사례 (3년 CAGR)</h3><div class="css n3"><div class="cs"><b>현대차</b><p>매출 +13.7%, 영업익 +32.8%, 순익 +35.9%</p></div><div class="cs"><b>대한항공</b><p>매출 +25.9%, 영업익 +12.8%, 순익 +34.1%</p></div><div class="cs"><b>코웨이</b><p>매출 +5.4%, 영업익 +8.1%, 순익 +7.2%</p></div></div></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">4 / 6</span></footer></article><article class="slide ty-compare" id="s5" data-lec="6.1" aria-label="5 / 6"><div class="sl-in"><h3 class="sh">실적과 주가는 다르게 움직인다</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">실적 (기업실적분석)</b><ul><li>CAGR로 성장성 판단 가능</li><li>지표별 방향이 다를 수 있음</li></ul></div><div class="cp-col"><b class="cp-h">주가</b><ul><li>실적과 시점이 어긋남 (2022·2023)</li><li>주가 타이밍 맞추기 어려움</li></ul></div></div><p class="cp-note">코웨이: ROE 하락 원인은 렌탈 시장 경쟁 심화</p></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">5 / 6</span></footer></article><article class="slide ty-tree" id="s6" data-lec="6.1" aria-label="6 / 6"><div class="sl-in"><h3 class="sh">해외 기업 재무·주식 정보</h3><div class="tree"><div class="tr-r">해외 재무정보</div><div class="tr-cs n3"><div class="tr-c"><b>EIKON</b><p>Refinitiv, BTM 통계실습실에서 이용</p></div><div class="tr-c"><b>stockrow</b><p>stockrow.com</p></div><div class="tr-c"><b>macrotrends</b><p>macrotrends.net</p></div></div></div></div><footer class="sl-f"><span>6.1 KOSPI·KOSDAQ 사례 분석 (2C)</span><span class="num">6 / 6</span></footer></article>
 </div>
 <p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
 <div class="wk-pn"><a class="wk-nav" href="week-05.html">← 5주차 재무분석 기초</a><a class="wk-nav" href="week-07.html">7주차 버핏 사례·소비자 독점 →</a></div>
