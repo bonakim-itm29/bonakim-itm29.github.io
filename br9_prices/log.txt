@@ -1,0 +1,10 @@
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/ERJ?period1=0&period2=1791339600&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/ERJ?period1=0&period2=1791339600&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/ERJ?period1=0&period2=1791339600&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/ERJ?period1=0&period2=1791339600&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail ERJ: failed https://query1.finance.yahoo.com/v8/finance/chart/ERJ?period1=0&period2=1791339600&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/EBR?period1=0&period2=1791339600&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/EBR?period1=0&period2=1791339600&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/EBR?period1=0&period2=1791339600&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/EBR?period1=0&period2=1791339600&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail EBR: failed https://query1.finance.yahoo.com/v8/finance/chart/EBR?period1=0&period2=1791339600&interval=1d&events=div,splits
