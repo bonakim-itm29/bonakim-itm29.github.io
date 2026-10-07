@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13강 SWOT·AHP · R&amp;D 기획과 기술로드맵</title>
+<meta name="description" content="분석을 전략으로 잇고, 과제에 순위를 매긴다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">R&amp;D 기획과 기술로드맵</a> / <a href="index.html">강의별 핵심</a> / 13강</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 13</p>
+  <h1>SWOT·AHP</h1>
+  <p class="lead">분석을 전략으로 잇고, 과제에 순위를 매긴다</p>
+  <div class="kws"><span class="kw">SWOT</span><span class="kw">TOWS 전략</span><span class="kw">AHP</span><span class="kw">쌍대비교</span><span class="kw">일관성비율(CR)</span><span class="kw">R&amp;D 과제 선정</span></div>
+  <details class="plist"><summary>이 강의의 논문 2편</summary><ol><li><b>Poh, Ang &amp; Bai (2001)</b> Poh, K. L., Ang, B. W., &amp; Bai, F. (2001). A comparative analysis of R&amp;D project evaluation methods. R&amp;D Management, 31(1), 63–75.</li><li><b>Saaty (2008)</b> Saaty, T. L. (2008). Relative measurement and its generalization in decision making: Why pairwise comparisons are central in mathematics for the measurement of intangible factors. The analytic hierarchy/network process. RACSAM, 102(2), 251–318.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="13-1"><b>13-1</b><span>SWOT: 분석과 전략의 연결고리</span></a><a href="#s8" class="tab" data-lec="13-2"><b>13-2</b><span>TOWS 전략과 R&amp;D 과제 도출</span></a><a href="#s16" class="tab" data-lec="13-3"><b>13-3</b><span>AHP의 원리</span></a><a href="#s25" class="tab" data-lec="13-4"><b>13-4</b><span>AHP 예제: 자동차 선택</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 33</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="13-1"><article class="slide ty-title" aria-label="1 / 33"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · SWOT·AHP</p><p class="t-no">13-1</p><h2 class="t-title">SWOT: 분석과 전략의 연결고리</h2><p class="t-thesis">SWOT은 환경분석과 전략 서술을 잇는 연결고리다</p></div></div><footer class="sl-f"><span>13-1 SWOT: 분석과 전략의 연결고리</span><span class="num">1 / 33</span></footer></article></div><div class="slot" id="s2" data-lec="13-1"><article class="slide ty-steps" aria-label="2 / 33"><div class="sl-in"><h3 class="sh">연구기획에서 SWOT의 자리</h3><ol class="steps n5"><li><span class="sn">1</span><b>외부 분석</b><p>메가트렌드·PEST·5 forces</p></li><li><span class="sn">2</span><b>기술 전망·TRM</b><p>필요 제품·기술과 실현 시기</p></li><li><span class="sn">3</span><b>역량 분석</b><p>특허지표·네트워크·핵심역량</p></li><li><span class="sn">4</span><b>SWOT·AHP</b><p>전략 도출과 과제 우선순위</p></li><li><span class="sn">5</span><b>R&amp;D 기획</b><p>목표·획득방법·예산 배분</p></li></ol></div><footer class="sl-f"><span>13-1 SWOT: 분석과 전략의 연결고리</span><span class="num">2 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>많은 기획보고서가 문제 분석에서 갑자기 해결책으로 건너뛰며 끊긴다. SWOT은 앞서 한 외부환경 분석(기회·위협)과 내부역량 분석(강점·약점)을 모아 전략 문장으로 바꿔 주는 다리다. 그다음 AHP로 그 전략에서 나온 R&amp;D 과제들의 순위를 정하면 기획이 R&amp;D 수준까지 자연스럽게 내려온다.</p></div></div><div class="slot" id="s3" data-lec="13-1"><article class="slide ty-tree" aria-label="3 / 33"><div class="sl-in"><h3 class="sh">환경분석 체계</h3><div class="tree"><div class="tr-r">SWOT 입력</div><div class="tr-cs n4"><div class="tr-c"><b>거시 외부</b><p>PEST(STEEP): 정치·경제·사회·기술</p></div><div class="tr-c"><b>미시 외부</b><p>산업·경쟁자(5 forces)·이해관계자</p></div><div class="tr-c"><b>내부 역량</b><p>사업구조·가치사슬·경영자원</p></div><div class="tr-c"><b>결과</b><p>외부→기회·위협, 내부→강점·약점</p></div></div></div></div><footer class="sl-f"><span>13-1 SWOT: 분석과 전략의 연결고리</span><span class="num">3 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>기회·위협은 산업 분석 결과에서, 강점·약점은 내부역량 분석 결과에서 온다. 내부역량은 사업구조, 가치사슬, 재무·생산·R&amp;D·인적자원 같은 경영자원으로 나눠 본다. 이 표의 칸을 미리 채워 두면 SWOT 각 칸의 근거가 분명해지고, 심사자가 &#x27;이 강점의 근거는?&#x27;이라고 물을 때 답할 수 있다.</p></div></div><div class="slot" id="s4" data-lec="13-1"><article class="slide ty-matrix" aria-label="4 / 33"><div class="sl-in"><h3 class="sh">SWOT 네 요소</h3><div class="mx"><span class="mx-y1">내부(통제 가능)</span><span class="mx-y2">외부(통제 불가)</span><div class="mx-c tl"><b>S 강점</b><p>자사·제품에 좋은 내부 요소</p></div><div class="mx-c tr"><b>W 약점</b><p>자사·제품에 악영향인 내부 요소</p></div><div class="mx-c bl"><b>O 기회</b><p>자사에 좋은 외부 환경 요소</p></div><div class="mx-c br"><b>T 위협</b><p>자사에 악영향인 외부 환경 요소</p></div><span class="mx-x1">좋은 영향</span><span class="mx-x2">나쁜 영향</span></div></div><footer class="sl-f"><span>13-1 SWOT: 분석과 전략의 연결고리</span><span class="num">4 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>구분 기준은 두 가지뿐이다. 내 것(내부)인가 바깥(외부)인가, 좋은가 나쁜가. 예: &#x27;국내 시장 연 10% 성장&#x27;은 외부·긍정이니 기회, &#x27;경쟁사 대비 낮은 자금력&#x27;은 내부·부정이니 약점이다. 강점·약점은 &#x27;나&#x27;에 대한 이야기, 기회·위협은 &#x27;외부&#x27;에 대한 이야기라는 원칙만 지켜도 흔한 오류 대부분을 피한다.</p></div></div><div class="slot" id="s5" data-lec="13-1"><article class="slide ty-checklist" aria-label="5 / 33"><div class="sl-in"><h3 class="sh">SWOT 작성 시 주의점</h3><ol class="chk two"><li><span class="ck">1</span>무엇을 위해, 어떤 목표로 분석하는지 정했는가?</li><li><span class="ck">2</span>구성원 모두 목적을 같게 이해하고 있는가?</li><li><span class="ck">3</span>시장 트렌드(기회)를 우리 강점으로 착각하지 않았나?</li><li><span class="ck">4</span>강점은 자사의 주체적 특성으로만 적었는가?</li><li><span class="ck">5</span>충분한 사전 환경분석 위에서 SWOT을 쓰는가?</li><li><span class="ck">6</span>SWOT을 결론이 아닌 전략 도출의 연결고리로 쓰는가?</li></ol></div><footer class="sl-f"><span>13-1 SWOT: 분석과 전략의 연결고리</span><span class="num">5 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>가장 흔한 실수는 기회와 강점의 혼동이다. 우리 제품이 시장 트렌드에 맞는 것은 시장이 그렇게 움직이기 때문이지 우리의 강점이 아니다. 또 SWOT은 만능 분석법이 아니라, 사전 환경분석 없이 SWOT만 단독으로 쓰면 근거 없는 목록이 된다. 목적이 모호하면 칸만 채운 표가 나온다.</p></div></div><div class="slot" id="s6" data-lec="13-1"><article class="slide ty-compare" aria-label="6 / 33"><div class="sl-in"><h3 class="sh">STEEP 시트 → SWOT</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">요인별 시트</b><ul><li>요인 1개(예: Social)당 1장</li><li>현재 데이터·미래 전망 정리</li><li>기회·위협으로 분류</li><li>환경 → 시사점 도출</li></ul></div><div class="cp-col"><b class="cp-h">SWOT 표</b><ul><li>시트의 기회·위협을 O·T 칸으로</li><li>내부 분석으로 S·W 채움</li><li>칸마다 근거 자료 연결</li></ul></div></div><p class="cp-note">STEEP을 이렇게 정리해 두면 SWOT이 쉬워진다</p></div><footer class="sl-f"><span>13-1 SWOT: 분석과 전략의 연결고리</span><span class="num">6 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 예시 틀은 STEEP 요인마다 한 장을 만들어 &#x27;현재(수치)–미래(전망)–기회–위협&#x27;, 또는 &#x27;환경–시사점&#x27;을 적게 한다. 예: Social 시트에 투자 건수 102건, 투자 금액 298억 달러 같은 현재 수치를 넣고 그 의미를 기회·위협으로 나눈다. 이 시트들이 쌓이면 SWOT의 O·T 칸은 옮겨 적기만 하면 된다.</p></div></div><div class="slot" id="s7" data-lec="13-1"><article class="slide ty-takeaway" aria-label="7 / 33"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>SWOT은 환경분석과 전략 서술 사이의 다리다</li><li>강점·약점은 &#x27;나&#x27;, 기회·위협은 &#x27;외부&#x27;에 관한 내용이다</li><li>목적·목표를 먼저 정하고 사전 환경분석 위에서 쓴다</li><li>STEEP 요인별 시트를 만들어 O·T 칸의 근거로 쓴다</li></ul></div><footer class="sl-f"><span>13-1 SWOT: 분석과 전략의 연결고리</span><span class="num">7 / 33</span></footer></article></div><div class="slot" id="s8" data-lec="13-2"><article class="slide ty-title" aria-label="8 / 33"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · SWOT·AHP</p><p class="t-no">13-2</p><h2 class="t-title">TOWS 전략과 R&amp;D 과제 도출</h2><p class="t-thesis">S·W·O·T를 교차시켜 전략을 만들고, 전략에서 기술을 뽑는다</p></div></div><footer class="sl-f"><span>13-2 TOWS 전략과 R&amp;D 과제 도출</span><span class="num">8 / 33</span></footer></article></div><div class="slot" id="s9" data-lec="13-2"><article class="slide ty-matrix" aria-label="9 / 33"><div class="sl-in"><h3 class="sh">TOWS 교차 전략</h3><div class="mx"><span class="mx-y1">강점(S)</span><span class="mx-y2">약점(W)</span><div class="mx-c tl"><b>SO 공격전략</b><p>강점으로 외부 기회를 최대한 활용</p></div><div class="mx-c tr"><b>ST 만회전략</b><p>강점으로 외부의 불리함을 최소화</p></div><div class="mx-c bl"><b>WO 우회전략</b><p>기회를 살리려 내부 약점을 보완</p></div><div class="mx-c br"><b>WT 생존전략</b><p>외부 불리함과 내부 약점을 극복</p></div><span class="mx-x1">기회(O)</span><span class="mx-x2">위협(T)</span></div></div><footer class="sl-f"><span>13-2 TOWS 전략과 R&amp;D 과제 도출</span><span class="num">9 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>SWOT 네 칸을 나열하는 데서 멈추면 안 된다. 내부(S·W)와 외부(O·T)를 짝지어 네 가지 전략을 만든다. SO는 투자·시장 확대·신제품, ST는 원가우위·차별화 강화, WO는 재무구조 개선·제휴, WT는 선별적 철수·구조조정 같은 방향이 강의 예시다. 한 칸에 2~4개 전략이면 충분하다.</p></div></div><div class="slot" id="s10" data-lec="13-2"><article class="slide ty-case" aria-label="10 / 33"><div class="sl-in"><p class="ca-k">사례 · SWOT → 전략 서술</p><h3 class="sh">헬스케어 SWOT 예시</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>국내 시장 성장, 한미 FTA로 해외 개방 확대(기회), 글로벌 기업 진입·독과점(위협)이 있는 의료기술 기업이다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>기술 우수성·가격경쟁력(강점)과 자금력·해외 개척역량 부족(약점)을 정리해 네 칸에 교차 전략을 적었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>SO는 투자·시장 확대와 신제품, ST는 원가우위·제품 차별화, WO는 재무구조 개선·제휴, WT는 선별적 철수로 정리됐다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>각 전략은 &#x27;S/W 하나 + O/T 하나&#x27;의 조합에서 나와야 근거가 선다.</p></div></div></div><footer class="sl-f"><span>13-2 TOWS 전략과 R&amp;D 과제 도출</span><span class="num">10 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>이 예시에서 &#x27;가격수준이 경쟁제품 대비 10% 경쟁력&#x27;은 내부 특성이므로 강점, &#x27;해외시장 개방 확대&#x27;는 외부라서 기회다. 전략 칸은 &#x27;강점을 가지고 기회를 살리는 개발 전략&#x27;처럼 두 요소를 이어 쓰는 문장으로 작성한다. 그래야 다음 단계에서 어떤 기술이 왜 필요한지 설명할 수 있다.</p></div></div><div class="slot" id="s11" data-lec="13-2"><article class="slide ty-points" aria-label="11 / 33"><div class="sl-in"><h3 class="sh">SWOT 항목 간 연관성 평가</h3><div class="pts n4"><div class="pt"><b>T×S ①</b><p>경쟁사 증가 × 기술경쟁력 → 핵심기술 차별화</p></div><div class="pt"><b>T×S ②</b><p>경쟁사 증가 × 제조기술력 → 원가경쟁력 확보</p></div><div class="pt"><b>T×S ③</b><p>IP분쟁 증가 × 기술경쟁력 → 특허출원·IP전략</p></div><div class="pt"><b>다음 단계</b><p>더 계량적 우선순위가 필요하면 AHP</p></div></div></div><footer class="sl-f"><span>13-2 TOWS 전략과 R&amp;D 과제 도출</span><span class="num">11 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>핵심 추진전략은 SWOT 항목을 한 쌍씩 짝지어 &#x27;이 위협에 이 강점으로 대응하면 이런 과제가 나온다&#x27;는 식으로 도출한다. 이렇게 연결 근거를 보여주면 이미 정해진 과제라도 설득력이 커진다. 연관성을 점수로 매기고 우선순위까지 정하려면 다음 절의 AHP를 쓴다.</p></div></div><div class="slot" id="s12" data-lec="13-2"><article class="slide ty-case" aria-label="12 / 33"><div class="sl-in"><p class="ca-k">사례 · 전략 → 타깃 제품·기술</p><h3 class="sh">UAM 사업 SWOT</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>유·무인 항공기 개발·운항관제 경험(강점)과 기술 안전성 검증 부족(약점), 국가 정책 지원(기회)과 선진국 기술 혁신(위협)이 있다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>SO에서 UAM 기체·운용 플랫폼을 타깃 제품으로, WO에서 항공-지상 연계 서비스를 타깃 서비스로 정했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>ST에서 하이브리드 엔진·자율비행·군집비행·운항통제 기술을 특화기술로, WT에서 UAM 핵심역량 강화를 정해 로드맵에 반영했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>SWOT 전략 칸에서 타깃 제품·서비스와 기술을 뽑아 TRM에 다시 넣는다.</p></div></div></div><footer class="sl-f"><span>13-2 TOWS 전략과 R&amp;D 과제 도출</span><span class="num">12 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>이 사례가 보여주는 스토리 구조가 중요하다. &#x27;SWOT 분석 결과 이런 이유로 TRM에서 도출한 이 기술들이 필요하다&#x27;고 이어야 한다. 예를 들어 TRM에서 10개 기술이 나왔다면 6~7개는 자체 R&amp;D, 나머지는 오픈이노베이션으로 나누고, 예산이 부족하면 시급성·중요성으로 가중치를 매겨 고른다.</p></div></div><div class="slot" id="s13" data-lec="13-2"><article class="slide ty-tree" aria-label="13 / 33"><div class="sl-in"><h3 class="sh">SWOT 결과의 피드백</h3><div class="tree"><div class="tr-r">SWOT 전략</div><div class="tr-cs n4"><div class="tr-c"><b>조직 전략</b><p>인사·조직 설계</p></div><div class="tr-c"><b>재무 전략</b><p>투자·자금 조달</p></div><div class="tr-c"><b>ESG</b><p>지속가능성 대응</p></div><div class="tr-c"><b>기술 전략</b><p>제품·기술 → R&amp;D 기획</p></div></div></div></div><footer class="sl-f"><span>13-2 TOWS 전략과 R&amp;D 과제 도출</span><span class="num">13 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>SWOT에서 나온 전략은 R&amp;D만의 것이 아니다. 조직·인사, 재무, ESG 전략으로도 되먹임되고, 제품·기술 축은 기술전략과 R&amp;D 기획으로 이어진다. 기술 보고서에서는 기술전략 줄기를 중심으로 쓰되, 약점 보완에 조직·재무 조치가 필요하면 함께 적어야 실행 가능성이 높아진다.</p></div></div><div class="slot" id="s14" data-lec="13-2"><article class="slide ty-lab" aria-label="14 / 33"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">SWOT→TOWS로 R&amp;D 전략 도출</h3><p class="lb-p">환경·역량 분석 결과를 SWOT 네 칸으로 정리하고 교차해 SO·ST·WO·WT 전략과 타깃 제품·기술을 뽑아, TRM 기술의 필요성을 논리로 잇는다.</p><ol class="lb-s"><li>목적 정하기</li><li>O·T 채우기</li><li>S·W 채우기</li><li>오분류 점검</li><li>교차 전략 쓰기</li><li>타깃 정하기</li><li>과제 후보화</li></ol><p class="lb-go"><a href="labs/13-tows.html">실습 페이지 열기 →</a> <span class="lb-w">인터랙티브 도구 포함</span></p></div><footer class="sl-f"><span>13-2 TOWS 전략과 R&amp;D 과제 도출</span><span class="num">14 / 33</span></footer></article></div><div class="slot" id="s15" data-lec="13-2"><article class="slide ty-takeaway" aria-label="15 / 33"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>SO·ST·WO·WT는 내부 한 요소와 외부 한 요소의 조합이다</li><li>전략 칸에서 타깃 제품·서비스와 필요 기술을 뽑는다</li><li>&#x27;SWOT 결과 → TRM 기술 필요&#x27;로 스토리를 잇는다</li><li>과제가 많으면 시급성·중요성으로 가중치를 매긴다</li></ul></div><footer class="sl-f"><span>13-2 TOWS 전략과 R&amp;D 과제 도출</span><span class="num">15 / 33</span></footer></article></div><div class="slot" id="s16" data-lec="13-3"><article class="slide ty-title" aria-label="16 / 33"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · SWOT·AHP</p><p class="t-no">13-3</p><h2 class="t-title">AHP의 원리</h2><p class="t-thesis">쌍대비교로 가중치를 내고, 일관성으로 판단을 검증한다</p></div></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">16 / 33</span></footer></article></div><div class="slot" id="s17" data-lec="13-3"><article class="slide ty-tree" aria-label="17 / 33"><div class="sl-in"><h3 class="sh">R&amp;D 평가방법 분류</h3><div class="tree"><div class="tr-r">R&amp;D 평가방법</div><div class="tr-cs n2"><div class="tr-c"><b>가중·순위형</b><p>Scoring, AHP, Comparative</p></div><div class="tr-c"><b>편익기여형</b><p>비용편익, 경제성, 의사결정나무</p></div></div></div></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">17 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>Poh 외(2001)는 R&amp;D 평가방법을 기준별 가중치로 순위를 매기는 방법과 비용·편익을 금액으로 따지는 방법으로 나눈다. AHP는 정성적 판단을 쓰지만 계량적 수단을 많이 담은 가중·순위형으로, 점수법과 비교법을 합친 성격이다. 가성비·핵심역량 연관성·수익성처럼 여러 기준으로 여러 과제의 순위를 정할 때 쓴다.</p></div></div><div class="slot" id="s18" data-lec="13-3"><article class="slide ty-paper" aria-label="18 / 33"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Poh, Ang &amp; Bai (2001)</h3><p class="pp-q">여러 R&amp;D 과제 평가방법 중 어떤 것이 적합한가?</p><div class="pp-g"><div><b>핵심 주장</b><p>R&amp;D 평가방법을 가중·순위형과 편익기여형으로 나누고, 7개 기준으로 AHP를 적용해 6개 방법을 비교했다. 상황에 따라 적합한 방법이 다르다.</p><div class="pp-cs"><span class="pp-c">가중·순위 방법</span><span class="pp-c">편익기여 방법</span><span class="pp-c">AHP 계층</span></div></div><div><b>강의와의 연결</b><p>13-3: R&amp;D 평가방법 분류(p.18)와 평가방법 비교 계층도(p.19)의 출처</p><b>보충 설명</b><p>평가방법을 고르는 문제 자체를 AHP로 푼 메타 분석이다. 다기준·불확실성·데이터 가용성·비용 같은 기준을 명시해, 실무자가 평가 도구를 고를 때의 체크포인트를 준다.</p></div></div><p class="pp-cite">Poh, K. L., Ang, B. W., &amp; Bai, F. (2001). A comparative analysis of R&amp;D project evaluation methods. R&amp;D Management, 31(1), 63–75. </p></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">18 / 33</span></footer></article></div><div class="slot" id="s19" data-lec="13-3"><article class="slide ty-points" aria-label="19 / 33"><div class="sl-in"><h3 class="sh">점수법(Scoring)과 그 한계</h3><div class="pts n4"><div class="pt"><b>방식</b><p>기준별 가중치 × 평가자 점수(1~10) 합산</p></div><div class="pt"><b>기준 예</b><p>전략 적합성·제품 우위·시장 매력·위험</p></div><div class="pt"><b>장점</b><p>단순하고 여러 평가자 점수를 쉽게 모음</p></div><div class="pt"><b>한계</b><p>가중치 자체를 어떻게 정할지 근거 약함</p></div></div></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">19 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>강의의 PD-Trak 점수표는 전략 정렬, 제품 우위, 시장 매력, 기술 실현성, 위험, 수익 등 기준별로 평가자 점수를 평균하고 가중치를 곱해 합계를 낸다. 예: 시장 매력 평균 8점×가중치 0.2 = 1.6점. 문제는 가중치 0.2를 누가 어떻게 정했느냐다. AHP는 이 가중치를 쌍대비교로 체계적으로 구한다.</p></div></div><div class="slot" id="s20" data-lec="13-3"><article class="slide ty-concepts" aria-label="20 / 33"><div class="sl-in"><h3 class="sh">AHP 3대 원칙</h3><div class="ccs n4"><div class="cc"><b>계층 구조</b><p>맨 위 목표, 가운데 판단기준, 맨 아래 대안</p></div><div class="cc"><b>상대적 중요도</b><p>요소를 1:1 쌍대비교해 가중치 도출</p></div><div class="cc"><b>논리적 일관성</b><p>비일관성 비율이 0.1보다 크면 일관성 없음</p></div><div class="cc"><b>정성+정량</b><p>판단과 수치 자료를 한 틀에서 비교</p></div></div></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">20 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>AHP는 복잡한 결정을 &#x27;목표–기준–대안&#x27; 계층으로 쪼개고, 한 번에 두 요소만 비교하게 해 판단 부담을 줄인다. 사람은 다섯 가지를 한꺼번에 순위 매기기는 어렵지만 두 개 중 어느 쪽이 얼마나 중요한지는 비교적 잘 답한다. 대신 판단이 서로 모순되지 않는지 일관성을 반드시 검증한다.</p></div></div><div class="slot" id="s21" data-lec="13-3"><article class="slide ty-steps" aria-label="21 / 33"><div class="sl-in"><h3 class="sh">AHP 수행 절차</h3><ol class="steps n6"><li><span class="sn">1</span><b>문제 정의</b><p>결정할 문제와 개념적 틀 설정</p></li><li><span class="sn">2</span><b>계층 구조</b><p>목표–기준–(하위기준)–대안</p></li><li><span class="sn">3</span><b>데이터 수집</b><p>전문가 쌍대비교 설문</p></li><li><span class="sn">4</span><b>가중치 계산</b><p>비교행렬에서 상대적 가중치 추정</p></li><li><span class="sn">5</span><b>CR 검증</b><p>CR ≤ 0.1이 아니면 비교 재입력</p></li><li><span class="sn">6</span><b>종합</b><p>가중치를 합쳐 대안 종합 중요도</p></li></ol></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">21 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 흐름도의 핵심은 CR 검증에서 되돌아가는 고리다. CR이 0.1을 넘으면 해당 응답자의 쌍대비교를 다시 받거나 수정한 뒤 가중치를 재계산한다. 설문 전에 계층 구조를 확정하고, 기준은 서로 겹치지 않게(예: &#x27;수익성&#x27;과 &#x27;매출 규모&#x27; 중복 피하기) 3~7개로 두는 것이 좋다.</p></div></div><div class="slot" id="s22" data-lec="13-3"><article class="slide ty-equation" aria-label="22 / 33"><div class="sl-in"><h3 class="sh">일관성 비율(CR)</h3><p class="eq">CR = CI ÷ RI, CI = (λmax − n)/(n − 1)</p><div class="eq-ts"><div class="eq-t"><b>λmax</b><p>비교행렬의 최대 고유값</p></div><div class="eq-t"><b>n</b><p>비교 기준(요소)의 수</p></div><div class="eq-t"><b>RI</b><p>무작위 행렬의 평균 CI(n=3: 0.52)</p></div></div><p class="eq-rule">CR ≤ 0.1 일관, ≤ 0.2 용납, &gt; 0.2 재조사</p></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">22 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>완벽히 일관된 판단이면 λmax = n이라 CI = 0이다. 강의 RI 표(Saaty)는 n=3 0.52, 4 0.89, 5 1.11, 6 1.25, 7 1.35다. 예: 기준 3개 행렬의 λmax가 3.054면 CI = 0.054÷2 = 0.027, CR = 0.027÷0.52 ≈ 0.05로 0.1 이하라 통과다. λmax 계산은 보통 엑셀 등으로 한다.</p></div></div><div class="slot" id="s23" data-lec="13-3"><article class="slide ty-paper" aria-label="23 / 33"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Saaty (2008)</h3><p class="pp-q">무형 요인을 어떻게 수치로 측정할 수 있는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>쌍대비교로 상대적 척도를 만들면 무형 요인도 측정할 수 있으며, 고유벡터로 가중치를, CI/RI로 일관성을 검증한다고 체계화했다.</p><div class="pp-cs"><span class="pp-c">쌍대비교</span><span class="pp-c">고유벡터 가중치</span><span class="pp-c">Random Index</span></div></div><div><b>강의와의 연결</b><p>13-3: CI·CR 공식과 RI 표(p.38)의 출처</p><b>보충 설명</b><p>AHP 창시자가 이론을 종합한 논문으로 1~9 척도, 역수 행렬, λmax 기반 일관성 검증, 계층 대신 네트워크를 쓰는 ANP까지 다룬다. RI 값 표는 행렬 크기별 기준으로 널리 인용된다.</p></div></div><p class="pp-cite">Saaty, T. L. (2008). Relative measurement and its generalization in decision making: Why pairwise comparisons are central in mathematics for the measurement of intangible factors. The analytic hierarchy/network process. RACSAM, 102(2), 251–318. </p></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">23 / 33</span></footer></article></div><div class="slot" id="s24" data-lec="13-3"><article class="slide ty-takeaway" aria-label="24 / 33"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>AHP는 점수법의 가중치 문제를 쌍대비교로 푼다</li><li>목표–기준–대안 계층을 먼저 확정한다</li><li>CR = CI/RI, 0.1 이하면 일관, 0.2 초과면 재조사</li><li>정성 판단과 정량 자료를 한 계층에서 함께 다룬다</li></ul></div><footer class="sl-f"><span>13-3 AHP의 원리</span><span class="num">24 / 33</span></footer></article></div><div class="slot" id="s25" data-lec="13-4"><article class="slide ty-title" aria-label="25 / 33"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · SWOT·AHP</p><p class="t-no">13-4</p><h2 class="t-title">AHP 예제: 자동차 선택</h2><p class="t-thesis">기준 가중치 × 대안 점수 = 종합 순위</p></div></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">25 / 33</span></footer></article></div><div class="slot" id="s26" data-lec="13-4"><article class="slide ty-tree" aria-label="26 / 33"><div class="sl-in"><h3 class="sh">의사결정 계층</h3><div class="tree"><div class="tr-r">새 차 선택</div><div class="tr-cs n4"><div class="tr-c"><b>기준 1</b><p>Style(스타일)</p></div><div class="tr-c"><b>기준 2</b><p>Reliability(신뢰성)</p></div><div class="tr-c"><b>기준 3</b><p>Fuel Economy(연비)</p></div><div class="tr-c"><b>대안</b><p>Civic·Saturn·Escort·Miata</p></div></div></div></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">26 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 예제는 목표 &#x27;새 차 선택&#x27;, 기준 세 가지, 대안 네 가지로 된 계층이다. R&amp;D 기획에 옮기면 목표는 &#x27;무엇을 연구개발할 것인가&#x27;, 기준은 선정기준, 대안은 우리가 가진 과제 옵션이다. 설문은 두 종류로 받는다. 기준끼리 비교(스타일 vs 신뢰성)와, 기준별 대안끼리 비교(스타일 면에서 Civic vs Saturn)다.</p></div></div><div class="slot" id="s27" data-lec="13-4"><article class="slide ty-concepts" aria-label="27 / 33"><div class="sl-in"><h3 class="sh">쌍대비교 척도</h3><div class="ccs n5"><div class="cc"><b>a_ij</b><p>행 i 기준 가중치 ÷ 열 j 기준 가중치</p></div><div class="cc"><b>1</b><p>Equal: 두 요소가 같은 중요도</p></div><div class="cc"><b>3 / 5</b><p>Moderate / Strong: 약간 / 강하게 중요</p></div><div class="cc"><b>7 / 9</b><p>Very strong / Extreme: 매우 / 극히 중요</p></div><div class="cc"><b>역수</b><p>a_ji = 1/a_ij, 대각선은 모두 1</p></div></div></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">27 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>행 요소가 열 요소보다 중요하면 1보다 큰 수, 덜 중요하면 역수를 적는다. 예: 신뢰성이 스타일보다 약간 더 중요하면 a(신뢰성,스타일)=2, 그 반대 칸은 1/2이다. 그래서 n개 기준이면 n(n−1)/2번만 물으면 된다. 기준 3개는 3번, 5개는 10번이다.</p></div></div><div class="slot" id="s28" data-lec="13-4"><article class="slide ty-stat" aria-label="28 / 33"><div class="sl-in"><h3 class="sh">기준 가중치 결과</h3><div class="stat"><p class="st-v">0.535</p><p class="st-l">Reliability 가중치(1위)</p><p class="st-t">Style 0.344, Fuel Economy 0.121. 행 합 ÷ 전체 합으로 정규화</p></div></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">28 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>비교행렬은 Style 행 [1, 1/2, 3], Reliability 행 [2, 1, 4], Fuel 행 [1/3, 1/4, 1]이다. 행 합은 4.5, 7, 1.583이고 전체 13.083으로 나누면 0.344, 0.535, 0.121이다. 강의는 행렬을 제곱한 뒤 행 합을 정규화하는 방법도 보여주는데, 이것이 고유벡터에 더 가까운 값을 준다. 이 행렬의 CR은 약 0.02로 일관하다.</p></div></div><div class="slot" id="s29" data-lec="13-4"><article class="slide ty-compare" aria-label="29 / 33"><div class="sl-in"><h3 class="sh">기준별 대안 점수</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">Style(쌍대비교)</b><ul><li>Miata 0.494</li><li>Saturn 0.286</li><li>Civic 0.167</li><li>Escort 0.053</li></ul></div><div class="cp-col"><b class="cp-h">Reliability</b><ul><li>Civic 0.378</li><li>Saturn 0.273</li><li>Miata 0.273</li><li>Escort 0.075</li></ul></div><div class="cp-col"><b class="cp-h">Fuel(정량자료)</b><ul><li>Civic 34mpg 0.301</li><li>Miata 28mpg 0.248</li><li>Saturn 27mpg 0.239</li><li>Escort 24mpg 0.212</li></ul></div></div><p class="cp-note">정량 자료는 쌍대비교 없이 값 ÷ 합계로 정규화</p></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">29 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>스타일과 신뢰성은 주관 판단이라 쌍대비교로 점수를 냈다. 연비는 객관 수치가 있으므로 mpg를 합계(113)로 나눠 바로 점수로 쓴다. 예: Civic 34÷113 = 0.301. 이처럼 AHP는 정성 기준과 정량 기준을 한 계층에 섞을 수 있다. 단, 비용처럼 작을수록 좋은 수치는 역수를 취해 정규화해야 한다.</p></div></div><div class="slot" id="s30" data-lec="13-4"><article class="slide ty-equation" aria-label="30 / 33"><div class="sl-in"><h3 class="sh">가중치 종합</h3><p class="eq">종합점수 = Σ (기준 가중치 × 대안 점수)</p><div class="eq-ts"><div class="eq-t"><b>Miata</b><p>.494×.344+.273×.535+.248×.121=.346</p></div><div class="eq-t"><b>Civic</b><p>0.296 (2위)</p></div><div class="eq-t"><b>Saturn</b><p>0.273 (3위), Escort 0.084 (4위)</p></div></div><p class="eq-rule">종합점수가 가장 큰 대안(Miata)을 선택</p></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">30 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>대안×기준 점수 행렬에 기준 가중치 벡터를 곱하면 종합 점수가 나온다. 신뢰성 가중치가 가장 크지만 Miata가 1위인 이유는 스타일 점수(0.494)가 압도적이고 신뢰성도 공동 2위이기 때문이다. Civic과의 차이는 0.05로 크지 않으니, 실무에서는 가중치를 조금 바꿔 순위가 뒤집히는지 민감도도 확인한다.</p></div></div><div class="slot" id="s31" data-lec="13-4"><article class="slide ty-case" aria-label="31 / 33"><div class="sl-in"><p class="ca-k">사례 · 강의 AHP 실습</p><h3 class="sh">신성장 R&amp;D 과제 선정</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>목표는 2025년 우리 회사의 신성장 동력 R&amp;D 개발과제 선정이다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>기준은 사업성·실현가능성·R&amp;D비용, 대안은 배터리·반도체·신재생에너지·우주항공기술로 계층을 세운다.</p></div><div class="ca-b ca-result"><i>결과</i><p>기준 3번, 기준별 대안 6번씩 쌍대비교해 가중치와 CR을 구하고 종합 순위를 낸다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>SWOT에서 나온 후보 과제를 AHP로 줄 세우면 예산 배분의 근거가 된다.</p></div></div></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">31 / 33</span></footer></article><div class="sl-ex"><b>설명</b><p>이 실습은 자동차 예제와 구조가 같다. 기준 3개면 쌍대비교 3번, 대안 4개면 기준마다 6번, 모두 21번을 묻는다. R&amp;D비용은 낮을수록 좋은 기준이므로 &#x27;비용 면에서 어느 과제가 더 유리한가&#x27;로 질문해야 방향이 뒤집히지 않는다. 응답자별 CR을 확인하고, 통과한 응답만 기하평균으로 합친다.</p></div></div><div class="slot" id="s32" data-lec="13-4"><article class="slide ty-lab" aria-label="32 / 33"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">AHP로 R&amp;D 과제 우선순위 정하기</h3><p class="lb-p">후보 R&amp;D 과제를 목표–기준–대안 계층으로 놓고 쌍대비교해 기준 가중치, 대안 점수, 일관성 비율(CR)을 구한 뒤 종합 순위로 과제를 선정한다.</p><ol class="lb-s"><li>계층 세우기</li><li>설문 만들기</li><li>비교행렬 작성</li><li>가중치 계산</li><li>CR 검증</li><li>대안 점수 구하기</li><li>종합 순위</li><li>여러 응답 합치기</li></ol><p class="lb-go"><a href="labs/13-ahp.html">실습 페이지 열기 →</a> <span class="lb-w">인터랙티브 도구 포함</span></p></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">32 / 33</span></footer></article></div><div class="slot" id="s33" data-lec="13-4"><article class="slide ty-takeaway" aria-label="33 / 33"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>기준 쌍대비교 → 가중치, 기준별 대안 비교 → 점수</li><li>정량 자료는 합계로 나눠 바로 점수로 쓸 수 있다</li><li>종합점수 = 가중치 벡터 × 대안 점수 행렬</li><li>1위와 2위 차이가 작으면 민감도 분석으로 확인한다</li></ul></div><footer class="sl-f"><span>13-4 AHP 예제: 자동차 선택</span><span class="num">33 / 33</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-12.html">← 12강 특허지표·네트워크분석</a><a class="wk-nav" href="lecture-15.html">15강 R&amp;D 성과평가·활용 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: R&amp;D planning and TRM (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

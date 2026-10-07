@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3강 외부환경·5 Forces · R&amp;D 기획과 기술로드맵</title>
+<meta name="description" content="산업의 힘과 사슬을 알아야 기술을 고른다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">R&amp;D 기획과 기술로드맵</a> / <a href="index.html">강의별 핵심</a> / 3강</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 03</p>
+  <h1>외부환경·5 Forces</h1>
+  <p class="lead">산업의 힘과 사슬을 알아야 기술을 고른다</p>
+  <div class="kws"><span class="kw">Five Forces</span><span class="kw">Value Chain</span><span class="kw">STEEP/PESTEL</span><span class="kw">본원적 경쟁전략</span><span class="kw">이해관계자 분석</span><span class="kw">Pavitt 분류</span></div>
+  <details class="plist"><summary>이 강의의 논문 4편</summary><ol><li><b>Ramos et al. (2022)</b> Ramos, A. G., Daim, T., Gaats, L., Hutmacher, D. W., &amp; Hackenberger, D. (2022). Technology roadmap for the development of a 3D cell culture workstation for a biomedical industry startup. Technological Forecasting and Social Change, 174, 121213.</li><li><b>Porter (1980)</b> Porter, M. E. (1980). Competitive strategy: Techniques for analyzing industries and competitors. New York: Free Press.</li><li><b>Porter (1985)</b> Porter, M. E. (1985). Competitive advantage: Creating and sustaining superior performance. New York: Free Press.</li><li><b>Pavitt (1984)</b> Pavitt, K. (1984). Sectoral patterns of technical change: Towards a taxonomy and a theory. Research Policy, 13(6), 343–373.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="03-1"><b>03-1</b><span>연구기획 프로세스와 환경분석 체계</span></a><a href="#s10" class="tab" data-lec="03-2"><b>03-2</b><span>거시환경과 이해관계자 분석</span></a><a href="#s18" class="tab" data-lec="03-3"><b>03-3</b><span>Five Forces로 본 산업 구조</span></a><a href="#s27" class="tab" data-lec="03-4"><b>03-4</b><span>경쟁전략과 가치사슬</span></a><a href="#s38" class="tab" data-lec="03-5"><b>03-5</b><span>산업 구조·생태계와 동적 분석</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 48</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="03-1"><article class="slide ty-title" aria-label="1 / 48"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 외부환경·5 Forces</p><p class="t-no">03-1</p><h2 class="t-title">연구기획 프로세스와 환경분석 체계</h2><p class="t-thesis">외부를 읽고 내부를 맞춰 R&amp;D를 정한다</p></div></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">1 / 48</span></footer></article></div><div class="slot" id="s2" data-lec="03-1"><article class="slide ty-steps" aria-label="2 / 48"><div class="sl-in"><h3 class="sh">연구기획 Process: 외부</h3><ol class="steps n6"><li><span class="sn">1</span><b>메가트렌드·이슈</b><p>자료수집, 빅데이터, 트렌드 분석</p></li><li><span class="sn">2</span><b>외부 환경분석</b><p>STEEP, 시장 크기·구조, 산업·5forces</p></li><li><span class="sn">3</span><b>기술전망·예측</b><p>델파이(1~3차)로 중요도·실현시기</p></li><li><span class="sn">4</span><b>Market 예측</b><p>미래 시장과 필요 Product 도출</p></li><li><span class="sn">5</span><b>Tech tree</b><p>제품/기술 매칭</p></li><li><span class="sn">6</span><b>TRM 도식화</b><p>시간축 위에 시장·제품·기술 연결</p></li></ol></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">2 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>연구기획의 앞부분은 외부를 읽는 과정이다. 메가트렌드와 핵심 이슈에서 출발해 환경·시장·산업을 분석하고, 델파이로 &#x27;예상되는 미래에 무슨 시장·제품·기술이 필요한가, 우선순위와 세부사항은 무엇인가&#x27;를 묻는다. 그 결과를 Tech tree로 매칭해 TRM으로 그린다. Market 예측에서 TRM 도식화까지가 가장 판단이 어려운 구간이다.</p></div></div><div class="slot" id="s3" data-lec="03-1"><article class="slide ty-steps" aria-label="3 / 48"><div class="sl-in"><h3 class="sh">연구기획 Process: 내부</h3><ol class="steps n6"><li><span class="sn">1</span><b>역량분석</b><p>핵심역량·자원, 특허 포트폴리오·지표</p></li><li><span class="sn">2</span><b>개발·획득 기술</b><p>SWOT, AHP로 우선순위 도출</p></li><li><span class="sn">3</span><b>R&amp;D 기획</b><p>목표·획득방법·시기, 예산·자원 배분</p></li><li><span class="sn">4</span><b>R&amp;D 수행 관리</b><p>획득기술 포트폴리오, 사업화 연계</p></li><li><span class="sn">5</span><b>결과 평가</b><p>평가 시스템, 가치평가</p></li><li><span class="sn">6</span><b>결과 활용</b><p>기술활용, 사업화, 기획 피드백</p></li></ol></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">3 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>뒷부분은 산업 내 우리 역량을 보는 과정이다. TRM에서 도출된 기술을 기준으로 특허 포트폴리오·네트워크·특허지표로 역량을 분석하면, 어떤 기술에 역량을 집중할지가 드러난다. 이를 SWOT·AHP로 우선순위화해 R&amp;D 투자를 결정하고, 수행·평가·활용 결과를 다시 기획에 되먹인다. 외부와 내부가 만나는 지점이 SWOT이다.</p></div></div><div class="slot" id="s4" data-lec="03-1"><article class="slide ty-tree" aria-label="4 / 48"><div class="sl-in"><h3 class="sh">TRM 양식(강의 예)</h3><div class="tree"><div class="tr-r">TRM 6개 층</div><div class="tr-cs n4"><div class="tr-c"><b>환경·이슈</b><p>① 미래환경 ② 주요 이슈</p></div><div class="tr-c"><b>사업</b><p>③ Biz 전개</p></div><div class="tr-c"><b>서비스·제품</b><p>④ Service/Product</p></div><div class="tr-c"><b>기술·R&amp;D</b><p>⑤ 필요 Tech ⑥ 필요 R&amp;D</p></div></div></div></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">4 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>교수가 손으로 그린 TRM 양식은 2025·2030·2035년 시간축 위에 미래환경, 주요 이슈, 사업 전개, 서비스·제품, 필요 기술, 필요 R&amp;D 여섯 층을 두고 위아래를 화살표로 잇는다. 그룹 과제의 최종 산출물이 이 그림이다. 각 R&amp;D 상자에서 위로 따라 올라가면 어떤 이슈와 미래환경에 대응하는지 설명할 수 있어야 한다.</p></div></div><div class="slot" id="s5" data-lec="03-1"><article class="slide ty-case" aria-label="5 / 48"><div class="sl-in"><p class="ca-k">사례 · 로드맵 실제 예</p><h3 class="sh">3D 세포배양 스타트업 TRM</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>바이오메디컬 스타트업이 3D 세포배양 워크스테이션을 개발하려 했지만 자원이 제한적이었다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>사업·시장·제품·기술·자원 5개 층을 2022~2025년 축에 놓고 시장 요구(자동화·재현성·처리량)를 제품·요소기술·자금 단계와 연결했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>MVP(2022)→첫 제품·시장 진입(2023)→얼리어답터(2024)→캐즘 돌파(2025)의 경로와 필요 기술·투자 단계가 한 장에 정리됐다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>로드맵은 기술 목록이 아니라 시장 요구에서 자원까지 이어지는 인과의 지도다.</p></div></div></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">5 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>Ramos et al.(2022)의 로드맵이다. 기술 층에는 액체 분주장치, 프린트헤드, 하이드로겔, 모델 알고리즘 등이 있고, 각각 위쪽의 제품 기능(정확도, 속도, 세포 생존율)과 시장 요구로 화살표가 이어진다. 자원 층에는 프리시드→시드→시리즈A 투자와 대학·기업 파트너가 배치된다. 스타트업에게 로드맵은 투자자 설득 도구이기도 하다.</p></div></div><div class="slot" id="s6" data-lec="03-1"><article class="slide ty-paper" aria-label="6 / 48"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Ramos et al. (2022)</h3><p class="pp-q">바이오 스타트업은 기술 개발과 사업화를 어떻게 한 로드맵에 묶는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>3D 세포배양 워크스테이션 개발을 Business·Market·Product·Technology·Resources 레이어로 연결해, 시장 진입 단계와 자금 조달이 기술 개발 순서를 결정함을 보인다.</p><div class="pp-cs"><span class="pp-c">레이어형 TRM</span><span class="pp-c">MVP→Cross the Chasm</span><span class="pp-c">자금조달 단계</span><span class="pp-c">스타트업 TRM</span></div></div><div><b>강의와의 연결</b><p>04-1: p.4 로드맵 예시. 2022~2025 시간축에 5개 레이어와 연결선, 자금(Pre-seed~Series B/C) 표시</p><b>보충 설명</b><p>대기업용으로 발달한 TRM을 자원이 적은 스타트업에 맞게 단순화한 사례. 기술 항목마다 어떤 시장 요구(정확도·재현성 등)에 답하는지 화살표로 추적하게 해 &#x27;왜 이 기술을 지금 개발하나&#x27;를 설명하게 한다.</p></div></div><p class="pp-cite">Ramos, A. G., Daim, T., Gaats, L., Hutmacher, D. W., &amp; Hackenberger, D. (2022). Technology roadmap for the development of a 3D cell culture workstation for a biomedical industry startup. Technological Forecasting and Social Change, 174, 121213. </p></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">6 / 48</span></footer></article></div><div class="slot" id="s7" data-lec="03-1"><article class="slide ty-compare" aria-label="7 / 48"><div class="sl-in"><h3 class="sh">환경분석 체계</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">거시 외부환경</b><ul><li>PEST(STEEP): 산업 둘러싼 전체 환경</li><li>정치법률·경제·사회·기술 현황</li><li>→ 기회·위협</li></ul></div><div class="cp-col"><b class="cp-h">미시 외부환경</b><ul><li>산업 분석(가치사슬)</li><li>경쟁자 분석(5 forces)</li><li>이해관계자·고객 니즈 분석</li><li>→ 기회·위협</li></ul></div><div class="cp-col"><b class="cp-h">내부 역량</b><ul><li>사업구조·경영자원 분석</li><li>재무·인적·생산·R&amp;D 역량</li><li>Value Chain 분석</li><li>→ 강점·약점</li></ul></div></div><p class="cp-note">세 분석 결과가 SWOT으로 모인다</p></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">7 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>거시 분석은 산업 전체를 둘러싼 환경을, 미시 분석은 산업 안에서 기업과 경쟁자의 위치를, 내부 분석은 기업이 가진 역량을 본다. 앞의 두 결과는 기회·위협으로, 내부 결과는 강점·약점으로 SWOT에 들어간다. 이번 주는 거시·미시 외부분석이 중심이고, 내부 역량분석은 이후 특허 분석 주차에서 다룬다.</p></div></div><div class="slot" id="s8" data-lec="03-1"><article class="slide ty-concepts" aria-label="8 / 48"><div class="sl-in"><h3 class="sh">환경분석 도구 상자</h3><div class="ccs n6"><div class="cc"><b>4C 분석</b><p>Customer, Channel, Competitor, Company</p></div><div class="cc"><b>CSF 분석</b><p>경쟁우위를 위한 핵심성공요인 도출</p></div><div class="cc"><b>5 forces</b><p>기존 경쟁·신규진입·대체재·구매자·판매자</p></div><div class="cc"><b>7S 분석</b><p>공유가치·전략·구조·시스템·기술·직원·문화</p></div><div class="cc"><b>가치사슬 분석</b><p>주활동·지원활동별 가치 흐름 분석</p></div><div class="cc"><b>차이분석·벤치마킹</b><p>목표와의 차이, 우수사례 비교</p></div></div></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">8 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>외부 분석에는 일반환경·산업구조·고객·경쟁사 분석(3C, PPM, 시나리오 플래닝)이, 내부 분석에는 성장성·재무역량·7S·기능 분석(핵심역량, Value Chain, SWOT)이 쓰인다. 도구가 많지만 목적은 같다. 기획 보고서에서는 모든 도구를 쓰기보다, 대상 산업에서 결론을 가장 잘 뒷받침하는 2~3개를 골라 깊게 쓰는 편이 설득력이 높다.</p></div></div><div class="slot" id="s9" data-lec="03-1"><article class="slide ty-takeaway" aria-label="9 / 48"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>외부(메가트렌드·환경·산업) 분석으로 필요한 제품·기술을 찾는다</li><li>내부 역량분석으로 집중할 기술과 R&amp;D 투자를 정한다</li><li>최종 산출물은 시장·제품·기술·자원을 잇는 TRM 도식</li><li>거시·미시 외부분석은 기회·위협, 내부분석은 강점·약점으로 모인다</li></ul></div><footer class="sl-f"><span>03-1 연구기획 프로세스와 환경분석 체계</span><span class="num">9 / 48</span></footer></article></div><div class="slot" id="s10" data-lec="03-2"><article class="slide ty-title" aria-label="10 / 48"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 외부환경·5 Forces</p><p class="t-no">03-2</p><h2 class="t-title">거시환경과 이해관계자 분석</h2><p class="t-thesis">거시환경과 이해관계자가 기회·위협을 만든다</p></div></div><footer class="sl-f"><span>03-2 거시환경과 이해관계자 분석</span><span class="num">10 / 48</span></footer></article></div><div class="slot" id="s11" data-lec="03-2"><article class="slide ty-concepts" aria-label="11 / 48"><div class="sl-in"><h3 class="sh">PEST의 변형들</h3><div class="ccs n5"><div class="cc"><b>PEST</b><p>Political, Economic, Social, Technological</p></div><div class="cc"><b>SLEPT</b><p>PEST + 법적(Legal) 특성</p></div><div class="cc"><b>PESTEL</b><p>PEST + 환경(Environmental) + 법(Legal)</p></div><div class="cc"><b>STEEP</b><p>사회·기술·생태·경제·정치법률</p></div><div class="cc"><b>STEEPI</b><p>STEEP + 인프라(Infrastructural), Phaal</p></div></div></div><footer class="sl-f"><span>03-2 거시환경과 이해관계자 분석</span><span class="num">11 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>이름은 달라도 모두 거시환경을 빠짐없이 훑기 위한 체크리스트다. 규제 산업(금융, 바이오)이면 법(Legal)을 따로 떼어 보는 SLEPT·PESTEL이, 자원·환경 영향이 큰 산업이면 생태 요인을 포함한 STEEP이 유용하다. 틀을 고를 때는 대상 산업에서 가장 큰 변수가 빠지지 않는지를 기준으로 삼으면 된다.</p></div></div><div class="slot" id="s12" data-lec="03-2"><article class="slide ty-points" aria-label="12 / 48"><div class="sl-in"><h3 class="sh">환경분석의 새 흐름</h3><div class="pts n4"><div class="pt"><b>ESG</b><p>지속가능성을 환경분석의 기본 항목으로</p></div><div class="pt"><b>이해관계자</b><p>누가 영향을 주고받는지 분석</p></div><div class="pt"><b>윤리 강조</b><p>기술·사업의 윤리적 수용성 점검</p></div><div class="pt"><b>Infographics</b><p>분석 결과를 한눈에 보이게 시각화</p></div></div></div><footer class="sl-f"><span>03-2 거시환경과 이해관계자 분석</span><span class="num">12 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 환경분석에 ESG·지속가능성, 이해관계자 분석과 윤리, 인포그래픽을 더하는 것이 최근 흐름이라고 정리한다. 기업 지속가능경영보고서가 이해관계자별 소통 채널을 공개하는 것도 같은 맥락이다. 기획서에서도 같은 내용이라면 표보다 연결망·대시보드형 인포그래픽으로 보여줄 때 의사결정자가 빨리 이해한다.</p></div></div><div class="slot" id="s13" data-lec="03-2"><article class="slide ty-cases" aria-label="13 / 48"><div class="sl-in"><h3 class="sh">환경분석 인포그래픽 예</h3><div class="css n3"><div class="cs"><b>한반도 미래지도</b><p>2018 남북정상회담 이후 이슈를 STEEP 연결망으로</p></div><div class="cs"><b>메가라운드 투자</b><p>2019 4분기 102건·298억 달러, 분야별 비교</p></div><div class="cs"><b>SK하이닉스</b><p>이해관계자 6그룹별 소통 채널을 한 장에</p></div></div></div><footer class="sl-f"><span>03-2 거시환경과 이해관계자 분석</span><span class="num">13 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>첫 예는 남북정상회담을 중심에 두고 사회·기술·경제·환경·정치 영역의 파급 이슈를 연결망으로 그렸다. 둘째 예는 투자 건수·금액 비중과 상위 카테고리(커머스 등)를 차트로 보여준다. 셋째는 고객·구성원·주주·협력사·지역사회·정부/NGO별 채널을 반원형으로 배치했다. 모두 &#x27;분석 결과를 한 장으로&#x27;라는 원칙을 따른다.</p></div></div><div class="slot" id="s14" data-lec="03-2"><article class="slide ty-tree" aria-label="14 / 48"><div class="sl-in"><h3 class="sh">이해관계자 4유형</h3><div class="tree"><div class="tr-r">가치 흐름</div><div class="tr-cs n4"><div class="tr-c"><b>Value-Origin</b><p>소유·투자(국민·정부), 감시(국회·언론)</p></div><div class="tr-c"><b>Value-Creation</b><p>내부 구성원: 임직원, 노동조합</p></div><div class="tr-c"><b>Value-Collab.</b><p>1차 고객(정부·기업), 협력업체</p></div><div class="tr-c"><b>Value-Sharing</b><p>최종 고객: 국민, 지역사회</p></div></div></div></div><footer class="sl-f"><span>03-2 거시환경과 이해관계자 분석</span><span class="num">14 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>이해관계자를 가치가 어디서 오고(본원), 누가 만들고(창출), 누구와 협력하며(협력), 누구에게 나누는가(나눔)로 정의한다. 유형마다 요구가치가 다르다. 감시·견제 주체는 공익 목표 공유와 능동적 소통을, 구성원은 신뢰와 합리적 보상을, 협력업체는 원활한 소통과 상생을, 최종 고객은 제품 만족과 사회적 가치 실현을 원한다.</p></div></div><div class="slot" id="s15" data-lec="03-2"><article class="slide ty-matrix" aria-label="15 / 48"><div class="sl-in"><h3 class="sh">이해관계자 소통전략</h3><div class="mx"><span class="mx-y1">연관도 높음</span><span class="mx-y2">연관도 낮음</span><div class="mx-c tl"><b>협력</b><p>가치 창출에 적극 협력, 이해 충돌 최소화</p></div><div class="mx-c tr"><b>적극</b><p>시작부터 결과까지 정보 제공·참여 유도</p></div><div class="mx-c bl"><b>관심</b><p>종합적 브랜드 이미지 전달에 주력</p></div><div class="mx-c br"><b>만족</b><p>Output 중심 고객만족 활동에 집중</p></div><span class="mx-x1">Output 중요도↓</span><span class="mx-x2">Output 중요도↑</span></div></div><footer class="sl-f"><span>03-2 거시환경과 이해관계자 분석</span><span class="num">15 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>Process 연관도는 가치를 만들고 전달하는 과정에 얼마나 관여하는지, Output 중요도는 최종 제품·서비스의 영향이 얼마나 큰지를 뜻한다. 예: R&amp;D 과제에서 공동연구기관은 연관도가 높아 &#x27;협력&#x27;, 최종 수요기업은 둘 다 높아 &#x27;적극&#x27;, 일반 소비자는 결과만 중요해 &#x27;만족&#x27; 대상이다. 칸마다 소통 강도와 채널을 다르게 설계한다.</p></div></div><div class="slot" id="s16" data-lec="03-2"><article class="slide ty-lab" aria-label="16 / 48"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">이해관계자 지도 그리기</h3><p class="lb-p">이해관계자를 가치 흐름별로 정의하고 프로세스 연관도×Output 중요도로 나눠, 그룹별 소통·협력 전략과 채널을 정한다.</p><ol class="lb-s"><li>후보 나열</li><li>4유형 분류</li><li>요구가치 적기</li><li>두 축 평가</li><li>4분면 전략</li><li>채널 설계</li></ol><p class="lb-go"><a href="labs/03-stakeholder.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>03-2 거시환경과 이해관계자 분석</span><span class="num">16 / 48</span></footer></article></div><div class="slot" id="s17" data-lec="03-2"><article class="slide ty-takeaway" aria-label="17 / 48"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>PEST에 법(Legal)을 더하면 SLEPT, 환경을 더하면 PESTEL</li><li>최근 환경분석은 ESG·이해관계자·윤리와 인포그래픽을 강조한다</li><li>이해관계자는 가치의 본원·창출·협력·나눔 4유형으로 정의한다</li><li>연관도×중요도로 적극·협력·만족·관심 전략을 나눈다</li></ul></div><footer class="sl-f"><span>03-2 거시환경과 이해관계자 분석</span><span class="num">17 / 48</span></footer></article></div><div class="slot" id="s18" data-lec="03-3"><article class="slide ty-title" aria-label="18 / 48"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 외부환경·5 Forces</p><p class="t-no">03-3</p><h2 class="t-title">Five Forces로 본 산업 구조</h2><p class="t-thesis">산업 구조가 수익성을 결정한다</p></div></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">18 / 48</span></footer></article></div><div class="slot" id="s19" data-lec="03-3"><article class="slide ty-forces" aria-label="19 / 48"><div class="sl-in"><h3 class="sh">Five Forces</h3><div class="fos"><div class="fo fo-t"><b>신규 진입자</b><p>장벽 낮으면 점유율 쟁탈 심화</p></div><div class="fo fo-l"><b>공급자 교섭력</b><p>독점·수요 과다면 원가 상승</p></div><div class="fo-c">산업 내 경쟁</div><div class="fo fo-r"><b>구매자 교섭력</b><p>공급 과다·비인기면 가격 압박</p></div><div class="fo fo-b"><b>대체재 위협</b><p>대체품 등장 시 가격 압박</p></div></div></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">19 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>Five Forces는 자사가 속한 시장 구조에서 자사에 가해지는 힘을 가장 중요한 경쟁요인으로 보고, 그 시장이 이익을 낼 수 있는지 판단하는 분석법이다. 다섯 힘 모두 결국 &#x27;자사의 수익을 압박할 가능성&#x27;으로 표현된다. 예: 핵심 부품 공급자가 한 곳뿐이면 공급자가 값을 올릴 때 완제품 가격도 따라 올려야 해 마진이 줄어든다.</p></div></div><div class="slot" id="s20" data-lec="03-3"><article class="slide ty-paper" aria-label="20 / 48"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Porter (1980)</h3><p class="pp-q">산업의 수익성은 무엇이 결정하며 기업은 어떻게 대응해야 하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>산업 수익성은 진입자·대체재·공급자·구매자·기존 경쟁의 다섯 힘이 결정한다. 기업은 원가우위·차별화·집중화 중 하나로 이 힘을 방어해야 한다.</p><div class="pp-cs"><span class="pp-c">Five Forces</span><span class="pp-c">본원적 경쟁전략</span><span class="pp-c">진입장벽</span></div></div><div><b>강의와의 연결</b><p>03-3·03-4 p.23-31: 다섯 힘의 정의와 결정요인, 자동차·Tesla 사례, 원가우위·차별화·집중화 전략</p><b>보충 설명</b><p>다섯 힘 개념은 Porter(1979, HBR)에서 먼저 제시되었다. 이후 보완재(complementors)를 6번째 힘으로 더하자는 논의, 산업 경계가 흐려지는 플랫폼 경쟁에서의 한계 지적이 이어졌다.</p></div></div><p class="pp-cite">Porter, M. E. (1980). Competitive strategy: Techniques for analyzing industries and competitors. New York: Free Press. </p></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">20 / 48</span></footer></article></div><div class="slot" id="s21" data-lec="03-3"><article class="slide ty-concepts" aria-label="21 / 48"><div class="sl-in"><h3 class="sh">힘별 결정요인</h3><div class="ccs n5"><div class="cc"><b>진입장벽</b><p>규모의 경제, 차별화, 소요자본, 교체비용, 유통</p></div><div class="cc"><b>경쟁강도</b><p>성장률, 고정비, 초과설비, 차별화, 철수장벽</p></div><div class="cc"><b>공급자 교섭력</b><p>투입물 차별화·교체비용, 공급자 집중, 전방통합</p></div><div class="cc"><b>구매자 교섭력</b><p>구매자 집중·물량·정보, 후방통합, 가격 민감도</p></div><div class="cc"><b>대체재 위협</b><p>대체재의 상대가격, 교체비용, 구매자 성향</p></div></div></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">21 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>각 힘에는 강도를 정하는 결정요인 목록이 있다. 분석할 때 흔한 실수는 근거를 엉뚱한 힘에 넣는 것이다. 예를 들어 &#x27;고객사가 3곳뿐&#x27;은 구매자 집중이므로 구매자 교섭력 칸에 들어가야 한다. 결정요인표를 체크리스트로 쓰고, 해당하는 요인마다 데이터 한 줄씩 근거를 붙이면 분석이 주관적 인상에서 벗어난다.</p></div></div><div class="slot" id="s22" data-lec="03-3"><article class="slide ty-compare" aria-label="22 / 48"><div class="sl-in"><h3 class="sh">경쟁의 축 vs 협상의 축</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">경쟁의 축(세로)</b><ul><li>잠재적 진입자: 규모·원가·기술 차별화</li><li>대체재: 대체 속도·원가·성능 우위</li><li>현 산업 내 경쟁의 강도를 바꾼다</li></ul></div><div class="cp-col"><b class="cp-h">협상의 축(가로)</b><ul><li>공급자: 원료 차별성·공급자 지위</li><li>구매자: 구매 비중·정보·후방통합</li><li>산업이 얻는 몫의 배분을 바꾼다</li></ul></div></div><p class="cp-note">5 forces를 조합하며 전략을 만드는 것이 중요</p></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">22 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>다섯 힘을 두 축으로 묶으면 해석이 쉬워진다. 세로 축(진입자·대체재)은 시장을 누가 차지하느냐의 경쟁 문제이고, 가로 축(공급자·구매자)은 만들어진 가치를 누가 가져가느냐의 협상 문제다. 예: 진입장벽은 높은데 구매자가 소수 대기업이면 경쟁보다 협상력 확보(예: 독자 기술, 고객 다변화)가 R&amp;D 기획의 초점이 된다.</p></div></div><div class="slot" id="s23" data-lec="03-3"><article class="slide ty-case" aria-label="23 / 48"><div class="sl-in"><p class="ca-k">사례 · 힘별 강도 판정</p><h3 class="sh">Tesla의 Five Forces(2013)</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>2013년 전기차 시장에서 Tesla가 놓인 산업 구조를 다섯 힘으로 분석했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>진입자 Low(작은 시장), 공급자: 배터리 셀 외부 구매·팩은 자체, 구매자 B2C·B2B 모두 교섭력 Low, 대체재 High, 경쟁 보통으로 판정했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>대체재(하이브리드·수소차 등)가 가장 큰 위협이고, 경쟁은 틈새(niche)여서 아직 완만한 것으로 나타났다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>힘마다 Low·보통·High로 판정하고 근거를 붙이면 가장 큰 위협이 바로 보인다.</p></div></div></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">23 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 든 &#x27;Tesla strategic analysis 2013&#x27; 사례다. 수요가 매우 높고 대안이 적어 구매자 힘은 약했지만, 기존 완성차의 하이브리드·수소차가 대체재로 강한 위협이었다. 초기 Roadster 차체는 Lotus와 협력했다. 이 판정에서 &#x27;대체재를 이길 성능·원가 R&amp;D&#x27;가 핵심 과제라는 결론이 자연스럽게 나온다.</p></div></div><div class="slot" id="s24" data-lec="03-3"><article class="slide ty-forces" aria-label="24 / 48"><div class="sl-in"><h3 class="sh">자동차 산업의 Five Forces</h3><div class="fos"><div class="fo fo-t"><b>공급자</b><p>Tier 1 역할 증대, 우수 공급사 경쟁</p></div><div class="fo fo-l"><b>잠재적 진입</b><p>신흥국 로컬 메이커 성장</p></div><div class="fo-c">가격경쟁 심화</div><div class="fo fo-r"><b>대체재</b><p>환경 친화·대체연료, 신개념 자동차</p></div><div class="fo fo-b"><b>구매자</b><p>소비자 니즈 고도화, 딜러 주도권 강화</p></div><div class="fo fo-x"><b>거시환경</b><p>주요 시장 포화, FTA, 안전 규제</p></div></div></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">24 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>자동차 산업 사례는 다섯 힘에 거시환경(지역·규제)을 여섯 번째 요소로 붙였다. 산업 내 경쟁은 가격경쟁 심화, 품질 상향 평준화, 프리미엄 브랜드 대중화, 지역 특화 모델 중심의 신흥시장 공략으로 요약된다. 거시환경이 다섯 힘 전체를 흔드는 산업이라면 이렇게 STEEP 결과를 Five Forces 그림에 직접 연결해 두면 좋다.</p></div></div><div class="slot" id="s25" data-lec="03-3"><article class="slide ty-lab" aria-label="25 / 48"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">Five Forces로 산업 매력도 평가</h3><p class="lb-p">다섯 경쟁요인을 결정요인별 근거로 평가해 대상 산업이 &#x27;이익을 낼 수 있는 시장&#x27;인지 판단하고 경쟁전략 방향을 정한다.</p><ol class="lb-s"><li>산업 경계 정하기</li><li>결정요인 체크리스트</li><li>근거 수집</li><li>힘별 강도 평가</li><li>매력도 판정</li><li>두 축으로 묶기</li><li>경쟁전략 연결</li><li>Pavitt 교차검증</li></ol><p class="lb-go"><a href="labs/03-five-forces.html">실습 페이지 열기 →</a> <span class="lb-w">인터랙티브 도구 포함</span></p></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">25 / 48</span></footer></article></div><div class="slot" id="s26" data-lec="03-3"><article class="slide ty-takeaway" aria-label="26 / 48"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>Five Forces: 자사에 가해지는 다섯 힘으로 &#x27;이익 나는 시장&#x27;인지 판단</li><li>힘마다 결정요인이 있으니 근거를 해당 힘 칸에 정확히 둔다</li><li>경쟁의 축(진입·대체)과 협상의 축(공급·구매)을 조합해 전략을 만든다</li><li>거시환경이 큰 산업은 STEEP 결과를 6번째 요소로 붙인다</li></ul></div><footer class="sl-f"><span>03-3 Five Forces로 본 산업 구조</span><span class="num">26 / 48</span></footer></article></div><div class="slot" id="s27" data-lec="03-4"><article class="slide ty-title" aria-label="27 / 48"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 외부환경·5 Forces</p><p class="t-no">03-4</p><h2 class="t-title">경쟁전략과 가치사슬</h2><p class="t-thesis">어떤 활동으로 다섯 힘을 이길지 정한다</p></div></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">27 / 48</span></footer></article></div><div class="slot" id="s28" data-lec="03-4"><article class="slide ty-compare" aria-label="28 / 48"><div class="sl-in"><h3 class="sh">본원적 경쟁전략(Porter)</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">원가우위</b><ul><li>규모의 경제·저비용이 진입장벽</li><li>가격인하 공격에도 버팀</li><li>생산성으로 원재료 비용 대응</li></ul></div><div class="cp-col"><b class="cp-h">차별화</b><ul><li>브랜드가 진입장벽 역할</li><li>충성 고객, 대체 구매 불가</li><li>높은 마진으로 공급자에 대항</li></ul></div><div class="cp-col"><b class="cp-h">집중화</b><ul><li>좁은 시장에 집중</li><li>그 안에서 원가 또는 차별화</li><li>방어력도 그 범위에서 발휘</li></ul></div></div></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">28 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>세 전략은 다섯 힘에 대한 서로 다른 방어 방식이다. 원가우위는 낮은 비용으로 평균 이상의 이익을 내 가격 공격과 원재료 상승을 견딘다. 차별화는 브랜드와 고객 충성으로 진입자와 대체재를 막고 높은 마진으로 공급자 압력을 흡수한다. R&amp;D로 보면 원가우위는 공정혁신, 차별화는 제품혁신에 무게를 두게 된다.</p></div></div><div class="slot" id="s29" data-lec="03-4"><article class="slide ty-concepts" aria-label="29 / 48"><div class="sl-in"><h3 class="sh">Pavitt의 산업 유형</h3><div class="ccs n4"><div class="cc"><b>공급자 주도형</b><p>비용절감, 기술원천은 공급자, 가격 민감</p></div><div class="cc"><b>규모집약형</b><p>비용절감, 생산기술부서·공급자, 공정 노하우</p></div><div class="cc"><b>전문공급자형</b><p>제품디자인, 사용자 협업, 성능 민감, 설계 노하우</p></div><div class="cc"><b>과학기반형</b><p>비용·디자인, R&amp;D부서·공공과학, 특허·학습</p></div></div></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">29 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>Pavitt(1984)은 산업마다 기술궤적, 기술원천, 소비자 성향, 전유체계(혁신 이익을 지키는 수단)가 다르다고 했다. 예: 공급자 주도형(섬유 등)은 상표·마케팅 같은 비기술적 수단으로, 과학기반형(제약·전자)은 특허와 R&amp;D 노하우로 이익을 지킨다. 내 산업이 어느 유형인지 먼저 정하면 어떤 힘과 결정요인을 중점적으로 볼지 빨리 정해진다.</p></div></div><div class="slot" id="s30" data-lec="03-4"><article class="slide ty-paper" aria-label="30 / 48"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Pavitt (1984)</h3><p class="pp-q">산업마다 기술혁신의 원천과 방식은 왜 다른가?</p><div class="pp-g"><div><b>핵심 주장</b><p>산업을 공급자 주도형·규모집약형·전문공급자형·과학기반형으로 나누고, 유형별로 기술궤적·기술 원천·전유 수단이 체계적으로 다름을 보였다.</p><div class="pp-cs"><span class="pp-c">Pavitt 분류</span><span class="pp-c">기술궤적</span><span class="pp-c">기술 원천</span><span class="pp-c">전유체계</span></div></div><div><b>강의와의 연결</b><p>04-2: p.23 &#x27;산업 분석(5 Forces 참조 이론)&#x27; 표. 산업 유형별 기술궤적·기술원천·소비자 성향·전유체계</p><b>보충 설명</b><p>영국 혁신 약 2,000건의 데이터에서 귀납한 분류. 산업 유형을 알면 R&amp;D를 내부에서 할지, 공급자·사용자·대학에서 들여올지, 특허와 노하우 중 무엇으로 보호할지 판단하는 출발점이 된다. 이후 정보집약형 등을 추가한 확장판이 나왔다.</p></div></div><p class="pp-cite">Pavitt, K. (1984). Sectoral patterns of technical change: Towards a taxonomy and a theory. Research Policy, 13(6), 343–373. </p></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">30 / 48</span></footer></article></div><div class="slot" id="s31" data-lec="03-4"><article class="slide ty-tree" aria-label="31 / 48"><div class="sl-in"><h3 class="sh">가치사슬의 구성</h3><div class="tree"><div class="tr-r">가치사슬→이윤</div><div class="tr-cs n3"><div class="tr-c"><b>지원 활동</b><p>기업전반관리·인적자원·연구개발·구매</p></div><div class="tr-c"><b>본원적(전반)</b><p>물류투입, 생산운영</p></div><div class="tr-c"><b>본원적(후반)</b><p>물류산출, 마케팅·판매, 서비스</p></div></div></div></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">31 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>가치사슬은 고객에게 가치를 전달하는 활동을 본원적 활동과 지원 활동으로 나눠, 어느 활동이 경쟁력을 만드는지 분석하는 모델이다. 연구개발은 지원 활동에 속하며 주활동과 관련된 신제품·서비스 개발과 각종 테스트를 담당한다. 모든 활동을 가치 단위로 나눠 보면 어디가 비효율적인지 드러난다.</p></div></div><div class="slot" id="s32" data-lec="03-4"><article class="slide ty-compare" aria-label="32 / 48"><div class="sl-in"><h3 class="sh">활동별 비용 비교(예)</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">우리 회사</b><ul><li>당기순이익 100</li><li>간접비 250(교육 100)</li><li>마케팅 250</li><li>원자재·부품 100</li></ul></div><div class="cp-col"><b class="cp-h">경쟁사 A</b><ul><li>당기순이익 80</li><li>간접비 230(교육 140)</li><li>마케팅 300</li><li>원자재·부품 110</li></ul></div></div><p class="cp-note">이익 우위 뒤에 교육·마케팅 투자 부족이 숨어 있다</p></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">32 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>겉으로는 우리 회사가 경쟁사보다 이익을 20% 넘게 더 낸다(100 대 80). 하지만 활동별로 보면 구매조달은 약 10% 유리(100 대 110)한 반면, 간접비는 더 쓰고(250 대 230), 미래 경쟁력과 직결된 교육(100 대 140)과 마케팅(250 대 300)에는 덜 투자하고 있다. 지금의 이익이 미래 투자를 줄여 만든 것일 수 있다는 경고다.</p></div></div><div class="slot" id="s33" data-lec="03-4"><article class="slide ty-equation" aria-label="33 / 48"><div class="sl-in"><h3 class="sh">CSF 가중점수 비교</h3><p class="eq">점수 = Σ (가중치 × 평점)</p><div class="eq-ts"><div class="eq-t"><b>CSF</b><p>영역별 핵심성공요인(생산·마케팅·서비스·지원)</p></div><div class="eq-t"><b>가중치</b><p>영역 내 합 6.0, 예: 품질 2, R&amp;D 1.5, 납기 1</p></div><div class="eq-t"><b>평점</b><p>자사·경쟁사 A·B·C를 같은 척도로 평가</p></div></div><p class="eq-rule">경쟁사 평균보다 낮은 고가중치 CSF가 우선 개선 대상</p></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">33 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 표는 생산(R&amp;D·납기·품질·설비 유연성), 마케팅, 서비스, 지원 영역별 CSF에 가중치를 주고 자사와 경쟁사를 평가한다. 예(가상 평점): 생산에서 R&amp;D 1.5×4 + 납기 1×3 + 품질 2×3 + 유연성 1.5×2 = 18점, 경쟁사 A가 21점이면 생산 영역이 열위다. 가중치는 설문으로 정하는 경우가 많고, 직관적이라 편향될 수 있음에 주의한다.</p></div></div><div class="slot" id="s34" data-lec="03-4"><article class="slide ty-matrix" aria-label="34 / 48"><div class="sl-in"><h3 class="sh">가치사슬 최적화 전략</h3><div class="mx"><span class="mx-y1">부가가치 높다</span><span class="mx-y2">부가가치 낮다</span><div class="mx-c tl"><b>유지·강화</b><p>강점 활동(A·E): 계속 투자</p></div><div class="mx-c tr"><b>비용절감</b><p>가치는 높지만 비싼 활동(D·H)</p></div><div class="mx-c bl"><b>아웃소싱</b><p>저가치·저비용(C): 제휴업체로 이전</p></div><div class="mx-c br"><b>효율화</b><p>저가치·고비용 병목(B·G) 개선</p></div><span class="mx-x1">비용 작다</span><span class="mx-x2">비용 크다</span></div></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">34 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>각 활동을 비용과 부가가치 평면에 놓으면 처방이 달라진다. 부가가치가 높고 비용이 낮은 활동은 강점이니 유지·강화하고, 높은 가치에 비용도 큰 활동은 비용을 줄인다. 가치가 낮은데 비용이 큰 병목 활동은 효율화하고, 가치·비용 모두 낮은 활동은 제휴업체에 아웃소싱한다. 이 평면은 R&amp;D 외주·협력 결정에도 그대로 쓸 수 있다.</p></div></div><div class="slot" id="s35" data-lec="03-4"><article class="slide ty-paper" aria-label="35 / 48"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Porter (1985)</h3><p class="pp-q">기업의 경쟁우위는 어떤 활동에서 만들어지는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>기업을 본원적 활동과 지원 활동의 가치사슬로 분해하면, 각 활동의 원가와 차별화 기여를 비교해 경쟁우위의 원천을 찾을 수 있다.</p><div class="pp-cs"><span class="pp-c">Value Chain</span><span class="pp-c">본원적 활동</span><span class="pp-c">지원 활동</span></div></div><div><b>강의와의 연결</b><p>03-4 p.34-38: 가치사슬의 정의, 주활동·지원활동 구성, 경쟁사 비용 비교, 가치사슬 최적화 전략</p><b>보충 설명</b><p>가치사슬은 공급자·유통·고객의 사슬과 이어진 &#x27;가치 시스템&#x27;의 일부다. 활동 간 연결(linkage)을 조정하는 것 자체가 경쟁우위가 될 수 있다는 점이 핵심이다.</p></div></div><p class="pp-cite">Porter, M. E. (1985). Competitive advantage: Creating and sustaining superior performance. New York: Free Press. </p></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">35 / 48</span></footer></article></div><div class="slot" id="s36" data-lec="03-4"><article class="slide ty-lab" aria-label="36 / 48"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">가치사슬로 경쟁력 진단하기</h3><p class="lb-p">활동별 비용·부가가치와 CSF 점수를 경쟁사와 비교해 숨은 약점을 찾고 유지·비용절감·효율화·아웃소싱 전략을 정한다.</p><ol class="lb-s"><li>활동 나누기</li><li>활동별 비용 비교</li><li>숨은 약점 찾기</li><li>CSF 가중 평가</li><li>2x2 배치</li><li>활동별 전략</li><li>산업 수준 확장</li></ol><p class="lb-go"><a href="labs/03-value-chain.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">36 / 48</span></footer></article></div><div class="slot" id="s37" data-lec="03-4"><article class="slide ty-takeaway" aria-label="37 / 48"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>원가우위·차별화·집중화는 각각 다른 방식으로 다섯 힘을 방어한다</li><li>Pavitt 분류로 산업 유형을 먼저 알면 5 forces 분석이 빨라진다</li><li>가치사슬을 활동별로 쪼개면 이익 뒤에 숨은 약점이 보인다</li><li>비용×부가가치 평면에서 유지·비용절감·효율화·아웃소싱을 정한다</li></ul></div><footer class="sl-f"><span>03-4 경쟁전략과 가치사슬</span><span class="num">37 / 48</span></footer></article></div><div class="slot" id="s38" data-lec="03-5"><article class="slide ty-title" aria-label="38 / 48"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 외부환경·5 Forces</p><p class="t-no">03-5</p><h2 class="t-title">산업 구조·생태계와 동적 분석</h2><p class="t-thesis">산업과 기업의 위치는 시간에 따라 움직인다</p></div></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">38 / 48</span></footer></article></div><div class="slot" id="s39" data-lec="03-5"><article class="slide ty-equation" aria-label="39 / 48"><div class="sl-in"><h3 class="sh">시장 성장률(CAGR)</h3><p class="eq">CAGR = (끝값 ÷ 시작값)^(1/n) − 1</p><div class="eq-ts"><div class="eq-t"><b>끝값</b><p>마지막 연도 시장 규모(예: 2020E 209)</p></div><div class="eq-t"><b>시작값</b><p>첫 연도 시장 규모(예: 2015년 172)</p></div><div class="eq-t"><b>n</b><p>두 시점 사이의 연수(예: 5년)</p></div></div><p class="eq-rule">추정치(E)와 실적을 구분하고 출처를 단다</p></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">39 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>강의의 산업분석 예시에서 글로벌 시장은 148(2011)→172(2015)→209(2020E)로 연 4%씩 성장한다. 계산해 보면 (209÷172)^(1/5)−1 ≈ 0.04, 즉 약 4%다. 반면 같은 예시의 국내 사업량은 990(&#x27;09)→440(&#x27;19)으로 절반 이하가 됐다. 글로벌은 크는데 국내는 줄어든다면 수출·해외 진출형 기획이 필요하다는 시사점이 나온다.</p></div></div><div class="slot" id="s40" data-lec="03-5"><article class="slide ty-points" aria-label="40 / 48"><div class="sl-in"><h3 class="sh">산업분석 4칸 요약(예)</h3><div class="pts n4"><div class="pt"><b>시장 특성</b><p>신뢰 구축에 장시간, 소재 기술 접근 장벽</p></div><div class="pt"><b>투자 구조</b><p>장비 투자 부담 큼, 소재 공급은 독과점</p></div><div class="pt"><b>플레이어</b><p>100년 넘은 시장 지배 기업이 주도</p></div><div class="pt"><b>기술·정책</b><p>기술 발전 동향과 국가 정책 특성 정리</p></div></div></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">40 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 예시는 진입장벽이 높은 소재형 산업이다. 고객 신뢰를 얻는 데 오래 걸리고, 소재 기술 접근이 어렵고, 장비 투자가 크며, 소재 공급이 독과점이다. 이런 산업에 신규 R&amp;D로 들어가려면 기술 하나가 아니라 신뢰·공급망 문제까지 풀어야 한다. 이 4칸 요약은 바로 다음 Five Forces 분석의 근거 자료가 된다.</p></div></div><div class="slot" id="s41" data-lec="03-5"><article class="slide ty-steps" aria-label="41 / 48"><div class="sl-in"><h3 class="sh">자동차 산업 가치사슬</h3><ol class="steps n4"><li><span class="sn">1</span><b>반도체 IP</b><p>ARM, Synopsys, Cadence 등</p></li><li><span class="sn">2</span><b>SoC·하드웨어</b><p>NXP, Renesas, Intel, NVIDIA 등</p></li><li><span class="sn">3</span><b>Tier-1 공급자</b><p>Bosch, Denso, Continental 등</p></li><li><span class="sn">4</span><b>완성차(OEM)</b><p>기존 OEM + Cruise·Lyft·Uber 등</p></li></ol></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">41 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>산업 수준의 가치사슬은 기업 하나가 아니라 산업 전체의 연결을 그린다. 자동차는 반도체 IP에서 시작해 칩, Tier-1 부품, 완성차로 이어지고, 끝단에는 모빌리티 서비스 기업까지 붙는다. 같은 슬라이드의 순환 사슬(공급→생산→유통→소비→수거→재사용·재제조·재활용)처럼 분야별 가치사슬을 직접 그려보는 것이 과제다.</p></div></div><div class="slot" id="s42" data-lec="03-5"><article class="slide ty-compare" aria-label="42 / 48"><div class="sl-in"><h3 class="sh">기존 vs 재구성된 가치사슬</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">기존 가치사슬</b><ul><li>산업 A·B·C가 각자 사슬 보유</li><li>단계별 전문 기업이 순서대로 연결</li></ul></div><div class="cp-col"><b class="cp-h">융합 후 재구성</b><ul><li>다른 산업의 고리가 끼어듦</li><li>일부 단계 통합·생략·대체</li><li>새 플레이어가 핵심 고리 장악</li></ul></div></div><p class="cp-note">융합(Convergence)이 사슬을 다시 엮는다</p></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">42 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>융합이 일어나면 산업 A의 사슬에 산업 B·C의 단계가 끼어들거나 일부 단계가 사라진다. 자동차에 반도체·소프트웨어 기업이 깊이 들어온 것이 예다. 사슬이 견고하게 짜인 생산방식도 한 고리에 문제가 생기면 전체가 흔들릴 수 있다. 기획에서는 우리 산업 사슬에 어떤 외부 고리가 들어오는지 보는 것이 기회·위협 발견의 지름길이다.</p></div></div><div class="slot" id="s43" data-lec="03-5"><article class="slide ty-concepts" aria-label="43 / 48"><div class="sl-in"><h3 class="sh">산업 메타버스 생태계</h3><div class="ccs n6"><div class="cc"><b>Real data exchange</b><p>Siemens, ABB, PTC, Bosch, SAP 등</p></div><div class="cc"><b>Computing</b><p>NVIDIA, Intel, Microsoft, Oracle 등</p></div><div class="cc"><b>Modeling·Simulation</b><p>Siemens, Dassault, Altair, PTC 등</p></div><div class="cc"><b>AI</b><p>Siemens, IBM, Intel, Google 등</p></div><div class="cc"><b>Data visualization</b><p>Unity, Qlik, Tableau 등</p></div><div class="cc"><b>Collaboration</b><p>Microsoft, Cisco, Zoom, Slack 등</p></div></div></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">43 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>Arthur D. Little이 정리한 산업 메타버스 생태계로, 실데이터 교환·컴퓨팅·복합시스템 모델링·AI·시각화·협업 기술의 6개 층에 플레이어를 배치했다. Siemens처럼 여러 층에 걸친 기업은 생태계 주도자 후보다. 지식서비스 분야도 이렇게 &#x27;층×플레이어&#x27; 표를 만들면 우리가 들어갈 빈 층이나 협력할 파트너가 보인다.</p></div></div><div class="slot" id="s44" data-lec="03-5"><article class="slide ty-stat" aria-label="44 / 48"><div class="sl-in"><h3 class="sh">국가별 특허 추이(인쇄전자)</h3><div class="stat"><p class="st-v">≈680건</p><p class="st-l">일본 연간 특허 정점(1999년경)</p><p class="st-t">이후 감소; 한국은 1990년대 후반부터 급증해 2000년대 후반 미국과 비슷</p></div></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">44 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>동적 분석은 같은 지표를 시기별로 끊어 보는 것이다. 인쇄전자 특허에서 일본은 1999년 무렵 연 680건 안팎으로 정점을 찍고 줄었고, 한국은 1990년대 후반부터 늘어 2000년대 후반 미국과 비슷해졌다. 국가 간 인용 네트워크도 1980년대 일본-미국 중심에서 2000년대 다국 연결로 촘촘해졌다. 한 시점의 순위로는 놓치는 추격과 퇴조가 시계열에서 드러난다.</p></div></div><div class="slot" id="s45" data-lec="03-5"><article class="slide ty-cases" aria-label="45 / 48"><div class="sl-in"><h3 class="sh">기업 순위의 궤적</h3><div class="css n4"><div class="cs"><b>Samsung</b><p>지식원천 다양성 9위(85-89)→1위(2000년대)</p></div><div class="cs"><b>Canon</b><p>2위→7위→3위→1위(95-99)→7위로 등락</p></div><div class="cs"><b>Kodak</b><p>1위(80-84)에서 10위(95-99)까지 하락</p></div><div class="cs"><b>E Ink·Toppan</b><p>기술집약도 E Ink 1위(2000년대), Toppan 상위권 유지</p></div></div></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">45 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>인쇄전자 분야에서 기업별 지식원천 다양성(Knowledge Source Diversity)과 기술집약도 순위를 5년 단위로 추적한 표다. 삼성은 다양한 지식을 흡수하며 1위로 올라섰고, 코닥은 한때 1위였다가 밀려났다. 기술집약도에서는 전문기업 E Ink와 Toppan·DNP가 강했다. 한 장의 순위표보다 순위의 이동 경로가 전략을 더 잘 말해준다.</p></div></div><div class="slot" id="s46" data-lec="03-5"><article class="slide ty-matrix" aria-label="46 / 48"><div class="sl-in"><h3 class="sh">기업 역할 4유형</h3><div class="mx"><span class="mx-y1">기술집약도 높음</span><span class="mx-y2">기술집약도 낮음</span><div class="mx-c tl"><b>Core function</b><p>기술 챔피언·장인, 높은 핵심기술 역량</p></div><div class="mx-c tr"><b>Full line-up</b><p>요소기술 통합자, 이종기술 조정·통제</p></div><div class="mx-c bl"><b>Basic platform</b><p>기반 요소기술 제공자, 공정의 시작단계</p></div><div class="mx-c br"><b>Application</b><p>융합제품 완성자, 상업화 역할</p></div><span class="mx-x1">지식다양성 낮음</span><span class="mx-x2">지식다양성 높음</span></div></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">46 / 48</span></footer></article><div class="sl-ex"><b>설명</b><p>기술집약도와 지식원천 다양성 두 지표로 기업의 역할을 나눈다. 기초 소재·요소기술을 가진 기반 제공자는 다양성 또는 집약도를 키워 통합자로 이동하고, 통합자는 다시 융합제품 상업화로 나아가는 궤적이 관찰된다. 내 조직이 지금 어느 칸에 있고 다음에 어느 칸으로 갈지 정하면 필요한 R&amp;D(심화 대 다각화)가 결정된다.</p></div></div><div class="slot" id="s47" data-lec="03-5"><article class="slide ty-lab" aria-label="47 / 48"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">산업·시장 구조 분석하기</h3><p class="lb-p">시장 규모·성장률, 세그먼트 변화, 플레이어, 특허 통계, 생태계 사슬을 정리해 대상 산업의 구조와 진입 조건을 숫자로 파악한다.</p><ol class="lb-s"><li>시장 규모 시계열</li><li>CAGR 계산</li><li>세그먼트 변화</li><li>플레이어 정리</li><li>특허 1차 통계</li><li>생태계 사슬</li><li>4칸 요약</li></ol><p class="lb-go"><a href="labs/03-industry.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">47 / 48</span></footer></article></div><div class="slot" id="s48" data-lec="03-5"><article class="slide ty-takeaway" aria-label="48 / 48"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>산업분석: 시장 규모·CAGR, 시장 특성, 플레이어, 기술·정책을 숫자로 본다</li><li>산업 가치사슬은 IP→부품→Tier-1→완성차처럼 기업을 넘어 이어지고 융합으로 재편된다</li><li>동적 분석: 특허·순위를 시기별로 보면 추격·퇴조의 궤적이 보인다</li><li>지식원천 다양성×기술집약도로 기업의 역할(4유형)을 구분한다</li></ul></div><footer class="sl-f"><span>03-5 산업 구조·생태계와 동적 분석</span><span class="num">48 / 48</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-02.html">← 2강 메가트렌드 분석</a><a class="wk-nav" href="lecture-04.html">4강 기술예측과 델파이 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: R&amp;D planning and TRM (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

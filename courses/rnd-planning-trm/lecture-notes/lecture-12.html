@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12강 특허지표·네트워크분석 · R&amp;D 기획과 기술로드맵</title>
+<meta name="description" content="특허 데이터로 기술 경쟁구도를 읽는다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">R&amp;D 기획과 기술로드맵</a> / <a href="index.html">강의별 핵심</a> / 12강</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 12</p>
+  <h1>특허지표·네트워크분석</h1>
+  <p class="lead">특허 데이터로 기술 경쟁구도를 읽는다</p>
+  <div class="kws"><span class="kw">특허지표</span><span class="kw">인용 네트워크</span><span class="kw">중심성</span><span class="kw">CPP·PII·TS·PFS</span><span class="kw">기술수명주기</span><span class="kw">Gephi</span></div>
+  <details class="plist"><summary>이 강의의 논문 3편</summary><ol><li><b>Brown &amp; Svenson (1988)</b> Brown, M. G., &amp; Svenson, R. A. (1988). Measuring R&amp;D productivity. Research-Technology Management, 31(4), 11–15.</li><li><b>Trajtenberg et al. (1997)</b> Trajtenberg, M., Henderson, R., &amp; Jaffe, A. (1997). University versus corporate patents: A window on the basicness of invention. Economics of Innovation and New Technology, 5(1), 19–50.</li><li><b>Farahani et al. (2019)</b> Farahani, F. V., Karwowski, W., &amp; Lighthall, N. R. (2019). Application of graph theory for identifying connectivity patterns in human brain networks: A systematic review. Frontiers in Neuroscience, 13, 585.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="12-1"><b>12-1</b><span>왜 특허를 분석하는가</span></a><a href="#s9" class="tab" data-lec="12-2"><b>12-2</b><span>특허지표로 기술 위치 읽기</span></a><a href="#s20" class="tab" data-lec="12-3"><b>12-3</b><span>인용 네트워크와 중심성</span></a><a href="#s29" class="tab" data-lec="12-4"><b>12-4</b><span>실습: 특허 인용 네트워크 만들기</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 37</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="12-1"><article class="slide ty-title" aria-label="1 / 37"><div class="sl-in"><div class="t-wrap"><p class="t-wk">12주차 · 특허지표·네트워크분석</p><p class="t-no">12-1</p><h2 class="t-title">왜 특허를 분석하는가</h2><p class="t-thesis">특허는 기술전략을 짜기 위한 가장 정밀한 기술정보다</p></div></div><footer class="sl-f"><span>12-1 왜 특허를 분석하는가</span><span class="num">1 / 37</span></footer></article></div><div class="slot" id="s2" data-lec="12-1"><article class="slide ty-steps" aria-label="2 / 37"><div class="sl-in"><h3 class="sh">연구기획 프로세스 속 위치</h3><ol class="steps n5"><li><span class="sn">1</span><b>외부환경 분석</b><p>메가트렌드·PEST·5 forces</p></li><li><span class="sn">2</span><b>기술전망·TRM</b><p>델파이, Tech tree, 로드맵 도식화</p></li><li><span class="sn">3</span><b>내부 역량분석</b><p>특허지표·네트워크분석·SWOT·AHP</p></li><li><span class="sn">4</span><b>R&amp;D 기획·수행</b><p>목표·획득방법·시기, 예산 배분</p></li><li><span class="sn">5</span><b>평가·활용</b><p>획득기술 평가, 사업화 연계</p></li></ol></div><footer class="sl-f"><span>12-1 왜 특허를 분석하는가</span><span class="num">2 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>이번 주 특허분석은 TRM으로 도출한 기술을 &#x27;우리 회사 관점&#x27;에서 다시 보는 내부 역량분석 단계에 속한다. 외부 분석이 &#x27;무엇이 유망한가&#x27;를 답했다면, 특허분석은 &#x27;누가 이미 강하고 우리는 어디에 서 있나&#x27;를 답한다. 그래서 다음 주 SWOT·AHP의 강점·약점 근거 자료가 된다.</p></div></div><div class="slot" id="s3" data-lec="12-1"><article class="slide ty-tree" aria-label="3 / 37"><div class="sl-in"><h3 class="sh">R&amp;D 측정 프레임워크</h3><div class="tree"><div class="tr-r">R&amp;D 시스템</div><div class="tr-cs n4"><div class="tr-c"><b>투입</b><p>인력·아이디어·장비·자금·정보</p></div><div class="tr-c"><b>처리(R&amp;D Lab)</b><p>연구·개발·시험·결과 보고</p></div><div class="tr-c"><b>산출</b><p>특허·제품·공정·논문·지식</p></div><div class="tr-c"><b>성과</b><p>원가절감·매출증대·제품개선</p></div></div></div></div><footer class="sl-f"><span>12-1 왜 특허를 분석하는가</span><span class="num">3 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>Brown &amp; Svenson(1988)의 틀에서 특허는 R&amp;D 연구소가 내놓는 대표 산출물이다. 산출은 마케팅·생산 등 수용 시스템을 거쳐야 원가절감·매출 같은 성과가 된다. 특허는 셀 수 있고 공개되어 있어 산출을 비교하는 가장 손쉬운 데이터지만, 특허 수가 곧 성과는 아니라는 점을 함께 기억해야 한다.</p></div></div><div class="slot" id="s4" data-lec="12-1"><article class="slide ty-paper" aria-label="4 / 37"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Brown &amp; Svenson (1988)</h3><p class="pp-q">R&amp;D 생산성은 어떤 구조로 측정해야 하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>R&amp;D 조직을 투입→처리→산출→수용→성과의 시스템으로 보고, 활동량이 아니라 산출과 성과를 중심으로 측정·피드백해야 한다.</p><div class="pp-cs"><span class="pp-c">투입-산출-성과</span><span class="pp-c">수용 시스템</span><span class="pp-c">측정 피드백</span></div></div><div><b>강의와의 연결</b><p>12-1: R&amp;D measurement framework 그림(p.6). 특허는 R&amp;D Lab의 산출물(Outputs) 중 하나로 위치함</p><b>보충 설명</b><p>산출(특허·논문)이 실제 성과(원가절감·매출)로 이어지려면 마케팅·생산 등 수용 시스템을 거쳐야 함을 강조한다. 특허 수만 세는 평가의 한계를 짚는 근거로 자주 인용된다.</p></div></div><p class="pp-cite">Brown, M. G., &amp; Svenson, R. A. (1988). Measuring R&amp;D productivity. Research-Technology Management, 31(4), 11–15. <span class="pp-unv">서지 확인 필요</span></p></div><footer class="sl-f"><span>12-1 왜 특허를 분석하는가</span><span class="num">4 / 37</span></footer></article></div><div class="slot" id="s5" data-lec="12-1"><article class="slide ty-concepts" aria-label="5 / 37"><div class="sl-in"><h3 class="sh">특허문서와 IPC 분류</h3><div class="ccs n5"><div class="cc"><b>서지정보</b><p>번호·출원인·발명자·출원일·청구항 등</p></div><div class="cc"><b>인용정보</b><p>References Cited: 선행 특허·문헌 목록</p></div><div class="cc"><b>IPC 섹션</b><p>A 생활필수품 ~ H 전기, 8개 섹션</p></div><div class="cc"><b>IPC 예</b><p>G 물리학, H 전기, C 화학·야금</p></div><div class="cc"><b>USPTO 특허</b><p>강의 실습의 기본 데이터(미국 등록특허)</p></div></div></div><footer class="sl-f"><span>12-1 왜 특허를 분석하는가</span><span class="num">5 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>미국 등록특허 한 건에는 출원인·발명자·청구항 같은 서지정보와 함께 참고한 선행특허 목록(References Cited)이 붙어 있다. IPC는 기술 분야를 A~H 섹션 아래 클래스·그룹으로 나눈 국제 분류다. 한 특허에 여러 섹션 코드가 붙으면 여러 분야가 섞인 융합기술로 볼 수 있어, 분류코드 자체가 융합 정도를 재는 재료가 된다.</p></div></div><div class="slot" id="s6" data-lec="12-1"><article class="slide ty-points" aria-label="6 / 37"><div class="sl-in"><h3 class="sh">특허정보의 가치</h3><div class="pts n4"><div class="pt"><b>기술전략</b><p>전략 수립에 필요한 기술정보를 제공</p></div><div class="pt"><b>정책·산업분석</b><p>산업 분석과 기술정책 수립에 활용</p></div><div class="pt"><b>정밀한 방법</b><p>대량 서지정보+연계구조 분석 필요</p></div><div class="pt"><b>네트워크 분석</b><p>기술·주체 간 복잡한 연계구조 규명</p></div></div></div><footer class="sl-f"><span>12-1 왜 특허를 분석하는가</span><span class="num">6 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>특허는 전 세계 기술개발 결과가 같은 형식으로 공개된 거의 유일한 자료다. 다만 건수만 세면 착시가 생기므로, 많은 서지정보를 쓰고 특허 간 연결(인용) 구조까지 보는 정밀한 방법이 필요하다고 강의는 강조한다. 최근에는 같은 방법으로 기업 간 연계구조를 파악하는 연구도 늘고 있다.</p></div></div><div class="slot" id="s7" data-lec="12-1"><article class="slide ty-checklist" aria-label="7 / 37"><div class="sl-in"><h3 class="sh">특허로 풀 수 있는 질문</h3><ol class="chk two"><li><span class="ck">1</span>기업 간 기술 협력관계는 어떻게 짜여 있나?</li><li><span class="ck">2</span>분야별 핵심 기업과 핵심 기술은 무엇인가?</li><li><span class="ck">3</span>기술 진보의 속도와 확산 패턴은 어떤가?</li><li><span class="ck">4</span>특정 분야에서 우리나라(기관)의 취약 부문은?</li><li><span class="ck">5</span>특정 기술의 수명은 어느 단계인가?</li><li><span class="ck">6</span>국가·기관·분야별 융합의 정도는?</li></ol></div><footer class="sl-f"><span>12-1 왜 특허를 분석하는가</span><span class="num">7 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>특허분석은 질문에서 출발해야 한다. 경쟁사 강약을 보려면 기업별 건수·인용 지표를, 협력관계나 지식 흐름을 보려면 인용 네트워크를, 기술 수명을 보려면 연도별 건수와 출원인 수 추이를 쓴다. 보고서를 쓸 때 &#x27;이 그림으로 어떤 질문에 답하는가&#x27;를 먼저 적어 두면 분석이 산으로 가지 않는다.</p></div></div><div class="slot" id="s8" data-lec="12-1"><article class="slide ty-takeaway" aria-label="8 / 37"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>특허분석은 TRM 이후 내부 역량분석 단계의 핵심 도구다</li><li>특허는 R&amp;D 산출물이지 성과 그 자체가 아니다</li><li>건수만 보지 말고 인용·분류 등 연계구조를 함께 본다</li><li>분석 전에 답하려는 질문(경쟁·협력·수명·융합)을 정한다</li></ul></div><footer class="sl-f"><span>12-1 왜 특허를 분석하는가</span><span class="num">8 / 37</span></footer></article></div><div class="slot" id="s9" data-lec="12-2"><article class="slide ty-title" aria-label="9 / 37"><div class="sl-in"><div class="t-wrap"><p class="t-wk">12주차 · 특허지표·네트워크분석</p><p class="t-no">12-2</p><h2 class="t-title">특허지표로 기술 위치 읽기</h2><p class="t-thesis">점유율·성장률·인용으로 우리의 기술 위치를 지도에 찍는다</p></div></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">9 / 37</span></footer></article></div><div class="slot" id="s10" data-lec="12-2"><article class="slide ty-matrix" aria-label="10 / 37"><div class="sl-in"><h3 class="sh">국가 기술 포지션 맵</h3><div class="mx"><span class="mx-y1">상대 성장률 높음</span><span class="mx-y2">상대 성장률 낮음</span><div class="mx-c tl"><b>약하지만 성장</b><p>추격 중인 분야, 투자 확대 검토</p></div><div class="mx-c tr"><b>강하고 성장</b><p>주력 분야, 우위 유지·확장</p></div><div class="mx-c bl"><b>약하고 쇠퇴</b><p>BT 일부 등, 협력·획득으로 보완</p></div><div class="mx-c br"><b>강하지만 쇠퇴</b><p>반도체·통신 등, 차세대 준비</p></div><span class="mx-x1">상대 특허비중 낮음</span><span class="mx-x2">상대 특허비중 높음</span></div></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">10 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>가로축은 &#x27;한국 특허비율 ÷ 주요국 특허비율&#x27;(상대 비중), 세로축은 &#x27;한국 특허 성장률 ÷ 주요국 특허 성장률&#x27;(상대 성장률)이다. 강의 예시에서 반도체·통신·컴퓨터는 오른쪽(강함)에, BT 분야는 왼쪽(약함)에 모여 있다. 예: 상대 비중 2.5, 상대 성장률 0.5면 &#x27;강하지만 성장이 둔화된 분야&#x27;로 읽는다.</p></div></div><div class="slot" id="s11" data-lec="12-2"><article class="slide ty-compare" aria-label="11 / 37"><div class="sl-in"><h3 class="sh">기초과학형 vs 응용기술형</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">논문인용 많음</b><ul><li>특허가 과학 논문을 많이 인용</li><li>기초과학 연계가 강함</li><li>예: 캐나다, 러시아</li></ul></div><div class="cp-col"><b class="cp-h">특허인용 많음</b><ul><li>특허가 선행특허를 많이 인용</li><li>응용기술 지향</li><li>예: 미국, 이스라엘</li></ul></div></div><p class="cp-note">한국은 두 축 모두 평균 아래(논문 8.7·특허 15.1)</p></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">11 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>특허 한 건이 평균 몇 편의 논문을, 몇 건의 특허를 인용하는지로 국가의 기술개발 방향을 본다. 논문 인용이 많으면 과학에 기댄 기초형, 특허 인용이 많으면 기존 기술을 쌓는 응용형이다. 강의 그래프에서 한국은 독일·일본·호주와 함께 왼쪽 아래에 있어, 두 축 모두 평균보다 낮다.</p></div></div><div class="slot" id="s12" data-lec="12-2"><article class="slide ty-points" aria-label="12 / 37"><div class="sl-in"><h3 class="sh">기술혁신주기(TCT)</h3><div class="pts n4"><div class="pt"><b>정의</b><p>인용한 선행특허들의 나이(년), 짧을수록 빠름</p></div><div class="pt"><b>축 해석</b><p>세로 빠름↔느림, 가로 응용기술↔기초과학</p></div><div class="pt"><b>한국(BT)</b><p>응용기술 쪽에서 주기가 빨라지는 궤적</p></div><div class="pt"><b>미국·캐나다</b><p>기초과학 쪽으로 크게 이동, 주기도 빠른 편</p></div></div></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">12 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>기술혁신주기는 특허가 인용한 선행특허들이 평균 몇 년 전 것인지로 잰다(일반적 정의). 주기가 짧으면 기술 교체가 빠른 분야다. 생명공학 특허 추이에서 한국은 응용기술 영역에 머물며 주기만 빨라졌고, 미국·캐나다·영국은 기초과학 연계를 키우는 방향으로 움직였다. 어느 방향으로 이동하는지가 전략을 보여준다.</p></div></div><div class="slot" id="s13" data-lec="12-2"><article class="slide ty-cycle" aria-label="13 / 37"><div class="sl-in"><h3 class="sh">기술수명주기 기본모델</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="성장기 → 발전기 → 성숙기 → 퇴조기"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,86.6) rotate(45.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,263.4) rotate(135.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,263.4) rotate(225.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,86.6) rotate(315.0)"/><g><rect x="258.0" y="29.0" width="84" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">성장기</text></g><g><rect x="383.0" y="154.0" width="84" height="42" rx="21" class="cy-node"/><text x="425.0" y="181.0" text-anchor="middle" class="cy-t">발전기</text></g><g><rect x="258.0" y="279.0" width="84" height="42" rx="21" class="cy-node"/><text x="300.0" y="306.0" text-anchor="middle" class="cy-t">성숙기</text></g><g><rect x="133.0" y="154.0" width="84" height="42" rx="21" class="cy-node"/><text x="175.0" y="181.0" text-anchor="middle" class="cy-t">퇴조기</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">건수×출원인수</text></svg></div></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">13 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>가로축은 특허 건수 증가율, 세로축은 출원인 수 증가율이다. 성장기에는 둘 다 늘고, 발전기에 정점, 성숙기에는 건수는 늘지만 새 출원인 증가가 멈추며, 퇴조기에는 둘 다 줄어든다. 강의의 NT(나노) 분야는 91~2003년 네 구간 모두 미국·일본·한국·대만·스위스가 성장기 선 위에 있다. 예: 건수 +40%, 출원인 +45%면 성장기다.</p></div></div><div class="slot" id="s14" data-lec="12-2"><article class="slide ty-case" aria-label="14 / 37"><div class="sl-in"><p class="ca-k">사례 · 기업 기술 포지셔닝</p><h3 class="sh">국내 다출원 5개 기업</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>특허청 자료(2003)로 삼성전자·LG전자·하이닉스·현대자동차·대우전자의 출원을 비교했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>가로축 특허출원 점유율, 세로축 출원건수 지표, 원 크기는 출원건수로 한 장의 버블차트를 그렸다.</p></div><div class="ca-b ca-result"><i>결과</i><p>삼성전자는 건수(51,751건)가 가장 크고, LG전자는 점유율·세로축 모두 높게, 대우전자는 낮게 위치했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>건수, 점유율, 추세를 한 그림에 겹치면 경쟁사 간 상대 위치가 한눈에 보인다.</p></div></div></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">14 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>보고서에서 경쟁사 비교를 할 때 표보다 버블차트가 설득력이 크다. 축은 질문에 맞게 고른다: 시장 지배력이면 점유율, 기세면 증가율, 질이면 PII. 원 크기는 규모(건수)로 두는 것이 일반적이다. 출처와 기준 연도를 그림 아래 반드시 적는다.</p></div></div><div class="slot" id="s15" data-lec="12-2"><article class="slide ty-points" aria-label="15 / 37"><div class="sl-in"><h3 class="sh">기술 발전도(인용 흐름도)</h3><div class="pts n4"><div class="pt"><b>무엇</b><p>핵심 특허를 연도순 인용관계로 연결한 지도</p></div><div class="pt"><b>예1</b><p>나노 플라즈마 공정: 1990~2002 특허 흐름</p></div><div class="pt"><b>예2</b><p>지문인식 기술의 갈래별 발전 경로</p></div><div class="pt"><b>활용</b><p>원천특허·주요 출원인·분기점 파악</p></div></div></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">15 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>인용관계를 따라 특허를 연도순으로 이으면 한 기술이 어디서 시작해 어떤 갈래로 발전했는지 보인다. 나노 플라즈마 공정 예에서는 3M, Motorola, Lucent, 대학 등 출원인이 연도별로 이어진다. 많이 인용되는 출발점이 원천특허이고, 그 권리자가 협상·회피설계의 대상이 된다.</p></div></div><div class="slot" id="s16" data-lec="12-2"><article class="slide ty-equation" aria-label="16 / 37"><div class="sl-in"><h3 class="sh">CPP·PII: 특허의 질</h3><p class="eq">PII = 주체 CPP ÷ 전체 CPP</p><div class="eq-ts"><div class="eq-t"><b>CPP</b><p>피인용 횟수 합 ÷ 특허 건수</p></div><div class="eq-t"><b>전체 CPP</b><p>분석 대상 전체 특허의 평균 피인용</p></div><div class="eq-t"><b>PII</b><p>1보다 크면 평균보다 영향력 큼</p></div></div><p class="eq-rule">PII &gt; 1이면 평균 이상 질적 영향력(표준 정의)</p></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">16 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 슬라이드는 지표 공식을 따로 주지 않아 널리 쓰이는 표준 정의를 쓴다. CPP는 특허 1건당 평균 피인용 수, PII는 그것을 전체 평균으로 나눈 상대값이다. 예: 전체 1,000건이 5,000회 인용되면 전체 CPP 5. A사 200건이 1,600회 인용되면 CPP 8, PII 8÷5=1.6이다.</p></div></div><div class="slot" id="s17" data-lec="12-2"><article class="slide ty-equation" aria-label="17 / 37"><div class="sl-in"><h3 class="sh">TS·PFS: 기술력과 시장</h3><p class="eq">TS = 특허 건수 × PII</p><div class="eq-ts"><div class="eq-t"><b>TS</b><p>양(건수)과 질(PII)을 합친 기술력</p></div><div class="eq-t"><b>PFS</b><p>주체 평균 패밀리국 수 ÷ 전체 평균</p></div><div class="eq-t"><b>패밀리</b><p>같은 발명을 여러 나라에 낸 특허 묶음</p></div></div><p class="eq-rule">TS 큰 순이 기술력 순위, PFS &gt; 1이면 시장확보력 큼</p></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">17 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>TS는 건수에 질을 곱해 &#x27;많이, 그리고 잘&#x27; 낸 주체를 찾는다(표준 정의). 위 예에서 A사 TS = 200×1.6 = 320이고, 건수 400건·PII 0.5인 B사는 TS 200이라 A사보다 낮다. PFS는 해외 출원 범위로 시장 확보 의지를 본다. 예: A사 평균 4개국, 전체 평균 2.5개국이면 PFS 1.6.</p></div></div><div class="slot" id="s18" data-lec="12-2"><article class="slide ty-lab" aria-label="18 / 37"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">특허지표로 경쟁사 기술력 비교</h3><p class="lb-p">출원인별 특허 건수·인용·패밀리로 CPP, PII, TS, PFS를 계산해 경쟁사의 기술 양·질·시장력을 비교하고 강점·약점 근거를 만든다.</p><ol class="lb-s"><li>검색식 만들기</li><li>데이터 내려받기</li><li>출원인 정리</li><li>점유율·성장률</li><li>CPP·PII 계산</li><li>TS·PFS 계산</li><li>포지셔닝 차트</li><li>해석 문장 쓰기</li></ol><p class="lb-go"><a href="labs/12-patent-index.html">실습 페이지 열기 →</a> <span class="lb-w">인터랙티브 도구 포함</span></p></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">18 / 37</span></footer></article></div><div class="slot" id="s19" data-lec="12-2"><article class="slide ty-takeaway" aria-label="19 / 37"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>상대 비중×상대 성장률 맵으로 강·약·성장·쇠퇴 분야를 가른다</li><li>논문인용·특허인용, 혁신주기로 기술개발 방향을 읽는다</li><li>건수·출원인 수 증가율로 기술수명주기 단계를 판단한다</li><li>CPP·PII(질), TS(양×질), PFS(시장)를 함께 본다</li></ul></div><footer class="sl-f"><span>12-2 특허지표로 기술 위치 읽기</span><span class="num">19 / 37</span></footer></article></div><div class="slot" id="s20" data-lec="12-3"><article class="slide ty-title" aria-label="20 / 37"><div class="sl-in"><div class="t-wrap"><p class="t-wk">12주차 · 특허지표·네트워크분석</p><p class="t-no">12-3</p><h2 class="t-title">인용 네트워크와 중심성</h2><p class="t-thesis">인용은 지식의 흐름이고, 네트워크는 산업의 주도권을 보여준다</p></div></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">20 / 37</span></footer></article></div><div class="slot" id="s21" data-lec="12-3"><article class="slide ty-compare" aria-label="21 / 37"><div class="sl-in"><h3 class="sh">후방인용 vs 전방인용</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">후방인용(backward)</b><ul><li>내 특허가 인용한 선행기술</li><li>지식의 원천·기반을 보여줌</li><li>예: 2005 특허 → 1991·1999 특허</li></ul></div><div class="cp-col"><b class="cp-h">전방인용(forward)</b><ul><li>나를 인용한 후속 특허</li><li>영향력·파급력을 보여줌</li><li>예: 2005 특허 ← 2009·2014 특허</li></ul></div></div><p class="cp-note">선후관계가 있어 다양성과 동태(dynamics)를 볼 수 있다</p></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">21 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>한 특허를 기준(Source Item)으로 두면 과거 방향의 후방인용과 미래 방향의 전방인용이 생긴다. 후방인용이 다양하면 여러 분야 지식을 섞은 융합형 발명이고, 전방인용이 많으면 후속 기술에 큰 영향을 준 핵심특허다. 인용에는 시간 순서가 있어 지식이 어디서 어디로 흘렀는지 동태를 추적할 수 있다.</p></div></div><div class="slot" id="s22" data-lec="12-3"><article class="slide ty-concepts" aria-label="22 / 37"><div class="sl-in"><h3 class="sh">네트워크의 구성요소</h3><div class="ccs n4"><div class="cc"><b>노드(node)</b><p>특허, 또는 특허를 합친 기업(출원인)</p></div><div class="cc"><b>링크(link)</b><p>인용·피인용 = 기업 간 지식 흐름</p></div><div class="cc"><b>네트워크 구조</b><p>전체 인용관계가 만든 연결 패턴</p></div><div class="cc"><b>대표출원인</b><p>특허를 기업 단위로 묶는 기준</p></div></div></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">22 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>특허 단위 네트워크는 노드가 수천 개라 해석이 어렵다. 노드를 대표출원인(기업)으로 바꾸면 &#x27;어느 기업이 어느 기업의 지식을 흡수하는가&#x27;라는 기업 간 기술 협력·의존 관계가 된다(Trajtenberg et al., 1997의 지식 전수 관점). 출원인 이름 표기가 제각각이므로 대표명으로 통일하는 작업이 먼저다.</p></div></div><div class="slot" id="s23" data-lec="12-3"><article class="slide ty-paper" aria-label="23 / 37"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Trajtenberg et al. (1997)</h3><p class="pp-q">특허 인용으로 발명의 기초성·파급력을 잴 수 있는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>전방·후방 인용 정보로 발명의 기초성(basicness)과 일반성·독창성을 측정하는 지표를 제안하고, 대학 특허가 기업 특허보다 더 기초적임을 보였다.</p><div class="pp-cs"><span class="pp-c">전방·후방 인용</span><span class="pp-c">Generality</span><span class="pp-c">Originality</span></div></div><div><b>강의와의 연결</b><p>12-3: 특허인용 네트워크를 기업 간 지식 흡수·방출(지식 전수) 관계로 해석하는 근거(p.14)</p><b>보충 설명</b><p>인용을 &#x27;지식 흐름&#x27;의 흔적으로 보는 관점을 정립한 연구다. 이후 특허 인용 기반 지표(일반성·독창성)와 네트워크 분석의 이론적 토대가 되었다.</p></div></div><p class="pp-cite">Trajtenberg, M., Henderson, R., &amp; Jaffe, A. (1997). University versus corporate patents: A window on the basicness of invention. Economics of Innovation and New Technology, 5(1), 19–50. </p></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">23 / 37</span></footer></article></div><div class="slot" id="s24" data-lec="12-3"><article class="slide ty-equation" aria-label="24 / 37"><div class="sl-in"><h3 class="sh">근접·매개 중심성</h3><p class="eq">Cc(i)=[Σ d(i,j)]⁻¹, Cb(i)=Σ g_jk(i)/g_jk</p><div class="eq-ts"><div class="eq-t"><b>d(i,j)</b><p>노드 i에서 j까지 최단거리</p></div><div class="eq-t"><b>g_jk</b><p>j와 k 사이 최단경로의 수</p></div><div class="eq-t"><b>g_jk(i)</b><p>그중 i를 지나는 최단경로 수</p></div></div><p class="eq-rule">근접 높음=지식 접근 빠름, 매개 높음=지식 중개자</p></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">24 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 제시한 두 지표다. 근접중심성은 다른 모든 노드까지 거리 합의 역수라 네트워크 중심에 가까울수록 크다. 매개중심성은 남들 사이 최단경로를 얼마나 많이 지나가는지로, 두 집단을 잇는 다리 역할을 잡아낸다. 예: 거리 합이 10이면 Cc=0.1, 20이면 0.05로 앞 노드가 더 중심적이다.</p></div></div><div class="slot" id="s25" data-lec="12-3"><article class="slide ty-concepts" aria-label="25 / 37"><div class="sl-in"><h3 class="sh">그 밖의 중심성 지표</h3><div class="ccs n5"><div class="cc"><b>연결중심성</b><p>직접 연결된 링크 수가 많은 노드</p></div><div class="cc"><b>고유벡터 중심성</b><p>중요한 노드와 연결될수록 높음</p></div><div class="cc"><b>참여계수</b><p>여러 모듈(집단)에 고르게 연결된 정도</p></div><div class="cc"><b>PageRank</b><p>들어오는 링크의 질까지 반영한 순위</p></div><div class="cc"><b>허브</b><p>모듈 내부 허브 vs 모듈을 잇는 연결 허브</p></div></div></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">25 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>Farahani et al.(2019)의 그림처럼 &#x27;중요한 노드&#x27;의 뜻은 지표마다 다르다. 인용을 많이 받는 기업을 찾으려면 연결(내향) 중심성, 영향력 있는 기업에게 인용받는 기업은 고유벡터·PageRank, 서로 다른 기술군을 잇는 기업은 매개중심성이나 참여계수를 쓴다. 보고서에는 지표를 고른 이유를 한 줄 적는다.</p></div></div><div class="slot" id="s26" data-lec="12-3"><article class="slide ty-paper" aria-label="26 / 37"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Farahani et al. (2019)</h3><p class="pp-q">그래프 이론 지표로 네트워크 연결 패턴을 어떻게 읽는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>뇌 네트워크 연구를 체계적으로 검토하며 연결중심·매개·근접·고유벡터 중심성, 참여계수, PageRank 등 허브 식별 지표를 정리했다.</p><div class="pp-cs"><span class="pp-c">허브</span><span class="pp-c">중심성 지표</span><span class="pp-c">참여계수</span></div></div><div><b>강의와의 연결</b><p>12-3: 여러 중심성 지표를 그림으로 비교한 슬라이드(p.15)의 출처</p><b>보충 설명</b><p>분야는 뇌과학이지만 지표 정의는 특허·기업 네트워크에도 그대로 쓰인다. 지표마다 &#x27;중요하다&#x27;의 의미가 달라 목적에 맞는 지표를 골라야 함을 보여준다.</p></div></div><p class="pp-cite">Farahani, F. V., Karwowski, W., &amp; Lighthall, N. R. (2019). Application of graph theory for identifying connectivity patterns in human brain networks: A systematic review. Frontiers in Neuroscience, 13, 585. </p></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">26 / 37</span></footer></article></div><div class="slot" id="s27" data-lec="12-3"><article class="slide ty-case" aria-label="27 / 37"><div class="sl-in"><p class="ca-k">사례 · 기술 네트워크 분석 사례</p><h3 class="sh">글로벌 50개 기업 인용망</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>1976~2012년 글로벌 50개 기업의 미국 특허 20,710건, 인용 22,063건을 모았다(USPTO, WINTELIPS, WIPSON).</p></div><div class="ca-b ca-action"><i>한 일</i><p>1단계 기술별 특허 인용 네트워크를 그리고, 2단계 근접·매개 중심성을 계산해 기술분야별로 비교했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>Samsung·Canon·Xerox 등이 큰 노드로 중심에 위치했고, 중심성 추이로 기업별 위상 변화를 추적했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>기업 단위 인용망과 중심성 추이로 산업 주도권의 이동을 정량적으로 볼 수 있다.</p></div></div></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">27 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>이 사례는 강의가 보여준 분석 설계의 모범이다. 데이터 범위(기간·기업·DB)를 먼저 고정하고, 시각화와 지표 계산을 분리했으며, 한 시점이 아닌 기간별 중심성 변화를 봤다. 노드 크기를 중심성으로, 색을 기술분야로 두면 한 장의 그림에 여러 정보를 담을 수 있다.</p></div></div><div class="slot" id="s28" data-lec="12-3"><article class="slide ty-takeaway" aria-label="28 / 37"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>후방인용은 지식의 원천, 전방인용은 영향력을 보여준다</li><li>노드를 대표출원인으로 묶어야 기업 간 관계가 보인다</li><li>근접중심성은 접근성, 매개중심성은 중개 역할을 뜻한다</li><li>목적에 맞는 중심성 지표를 고르고 이유를 밝힌다</li></ul></div><footer class="sl-f"><span>12-3 인용 네트워크와 중심성</span><span class="num">28 / 37</span></footer></article></div><div class="slot" id="s29" data-lec="12-4"><article class="slide ty-title" aria-label="29 / 37"><div class="sl-in"><div class="t-wrap"><p class="t-wk">12주차 · 특허지표·네트워크분석</p><p class="t-no">12-4</p><h2 class="t-title">실습: 특허 인용 네트워크 만들기</h2><p class="t-thesis">데이터 수집부터 Gephi 시각화까지 직접 따라 한다</p></div></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">29 / 37</span></footer></article></div><div class="slot" id="s30" data-lec="12-4"><article class="slide ty-steps" aria-label="30 / 37"><div class="sl-in"><h3 class="sh">실습 전체 흐름</h3><ol class="steps n6"><li><span class="sn">1</span><b>특허 검색</b><p>위즈도메인, 미국 등록특허, 기간 지정</p></li><li><span class="sn">2</span><b>다운로드</b><p>등록번호·인용·피인용·출원인 항목</p></li><li><span class="sn">3</span><b>전처리</b><p>엣지 파일·노드 파일로 정리</p></li><li><span class="sn">4</span><b>엣지리스트</b><p>Python 또는 생성형 AI로 From–To 변환</p></li><li><span class="sn">5</span><b>Gephi 분석</b><p>불러오기→통계→레이아웃→외관</p></li><li><span class="sn">6</span><b>해석</b><p>핵심 기업·중개자·협력 구조 읽기</p></li></ol></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">30 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 실습은 다섯 단계로 끝까지 따라 할 수 있게 짜여 있다. 핵심은 특허 고유값인 &#x27;등록번호&#x27;를 키로 삼아 노드 파일과 엣지 파일에서 같은 특허를 같은 ID로 맞추는 것이다. 이 키가 어긋나면 Gephi에서 노드가 중복되거나 링크가 사라진다.</p></div></div><div class="slot" id="s31" data-lec="12-4"><article class="slide ty-case" aria-label="31 / 37"><div class="sl-in"><p class="ca-k">사례 · 특허 단위 네트워크</p><h3 class="sh">네이버 미국특허 실습</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>2024.11.21 기준 네이버의 USPTO 등록특허 355건을 위즈도메인에서 받았다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>등록번호를 키로, 자국인용·자국피인용 항목을 풀어 From–To 엣지리스트를 만들었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>355건에서 3,358쌍의 엣지가 나왔고, Gephi로 인용 구조를 시각화했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>작은 기업 하나로도 인용망을 만들면 지식의 원천과 영향 범위를 볼 수 있다.</p></div></div></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">31 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>특허 수(355)보다 엣지(3,358)가 훨씬 많은 이유는 한 특허가 여러 선행특허를 인용하고 여러 후속특허에 인용되기 때문이다. 처음 연습할 때는 이처럼 한 기업, 수백 건 규모로 시작해 전처리 오류를 잡고, 이후 경쟁사들을 추가해 기업 단위 네트워크로 넓히는 것이 좋다.</p></div></div><div class="slot" id="s32" data-lec="12-4"><article class="slide ty-points" aria-label="32 / 37"><div class="sl-in"><h3 class="sh">데이터 수집 요령</h3><div class="pts n4"><div class="pt"><b>검색식</b><p>nano* AND PA=(삼성전자 OR KAIST …)</p></div><div class="pt"><b>범위</b><p>미국특허, 등록만, 2015~2023</p></div><div class="pt"><b>필터</b><p>출원인대표 상위 16기관 → 4,842건</p></div><div class="pt"><b>항목</b><p>원문이미지·도면 등 큰 항목은 제외</p></div></div></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">32 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>공개특허 대신 등록특허만 쓰는 이유는 권리가 확정된 기술만 비교하기 위해서다. 다만 등록까지 약 3년이 걸려 최근 2~3년은 건수가 줄어 보일 수 있으니 추세 해석에 주의한다. 인용 정보는 자국(USPTO)과 외국 특허를 구분해 받는데, 이 구분을 제공하는 DB를 쓰면 외국지식 의존도도 볼 수 있다.</p></div></div><div class="slot" id="s33" data-lec="12-4"><article class="slide ty-compare" aria-label="33 / 37"><div class="sl-in"><h3 class="sh">엣지 파일 vs 노드 파일</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Edge 파일</b><ul><li>특허 간 연결관계 정보</li><li>From(인용당한)–To(인용한)</li><li>US/USD+숫자 형식 ID만 추출</li></ul></div><div class="cp-col"><b class="cp-h">Node 파일</b><ul><li>각 특허의 고유 속성</li><li>등록번호, 출원인대표명, 연도</li><li>원본 시트는 &#x27;origin&#x27;으로 보존</li></ul></div></div><p class="cp-note">&#x27;/&#x27;가 들어간 값은 제외, 구분자는 &#x27;,&#x27;</p></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">33 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>다운받은 시트는 &#x27;origin&#x27;, 변환 결과용 빈 시트는 &#x27;trans&#x27;로 이름을 바꿔 원본을 보존한다. 인용·피인용 칸에는 여러 특허번호가 쉼표로 이어져 있으므로 한 쌍씩 행으로 펼쳐야 한다. 강의는 이 규칙을 그대로 생성형 AI에 지시해 엣지리스트를 만드는 프롬프트 예시도 보여준다. 기업 단위로 바꾸려면 번호 대신 출원인대표명을 넣는다.</p></div></div><div class="slot" id="s34" data-lec="12-4"><article class="slide ty-steps" aria-label="34 / 37"><div class="sl-in"><h3 class="sh">Python으로 엣지리스트 만들기</h3><ol class="steps n5"><li><span class="sn">1</span><b>아나콘다 설치</b><p>Jupyter Notebook 실행</p></li><li><span class="sn">2</span><b>코드 업로드</b><p>소스코드를 노트북 창에 올리기</p></li><li><span class="sn">3</span><b>경로 수정</b><p>load_workbook의 엑셀 경로 개인화</p></li><li><span class="sn">4</span><b>열 지정</b><p>From=등록번호 열, To=피인용 열</p></li><li><span class="sn">5</span><b>실행</b><p>위부터 Run, result.csv 생성</p></li></ol></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">34 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 코드는 openpyxl로 엑셀을 읽어 등록번호 열(예: H)과 피인용번호 열(예: Q)을 짝지어 result.csv로 저장한다. 내 파일에서 해당 열 문자가 다르면 반드시 바꿔야 한다. 셀 왼쪽에 *가 보이면 아직 실행 중이라는 뜻이다. 결과 CSV를 엑셀로 열어 행 수와 ID 형식을 먼저 확인한다.</p></div></div><div class="slot" id="s35" data-lec="12-4"><article class="slide ty-steps" aria-label="35 / 37"><div class="sl-in"><h3 class="sh">Gephi 분석 절차</h3><ol class="steps n6"><li><span class="sn">1</span><b>불러오기</b><p>Import spreadsheet, comma, mixed</p></li><li><span class="sn">2</span><b>Statistics</b><p>중심성 등 네트워크 지표 계산</p></li><li><span class="sn">3</span><b>Layout</b><p>ForceAtlas2, Scaling·Gravity 조정</p></li><li><span class="sn">4</span><b>겹침 방지</b><p>Prevent Overlap, Dissuade Hubs</p></li><li><span class="sn">5</span><b>Appearance</b><p>Ranking: 지표별 노드 크기·색</p></li><li><span class="sn">6</span><b>Preview</b><p>라벨 표시 후 그림 내보내기</p></li></ol></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">35 / 37</span></footer></article><div class="sl-ex"><b>설명</b><p>시간 정보가 없으므로 interval, 그래프 유형은 mixed로 불러온다. 레이아웃 전에 Statistics에서 중심성을 계산해야 Appearance의 Ranking에서 그 값으로 노드 크기를 바꿀 수 있다. Scaling은 노드를 퍼뜨리고 Gravity는 중심으로 모은다. 화면 이동은 마우스 오른쪽 버튼이다.</p></div></div><div class="slot" id="s36" data-lec="12-4"><article class="slide ty-lab" aria-label="36 / 37"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">특허 인용 네트워크 그리기</h3><p class="lb-p">특허 인용 데이터를 엣지리스트로 바꿔 Gephi 또는 Python으로 기업 간 지식 흐름을 그리고, 중심성으로 핵심 기업과 중개자를 찾는다.</p><ol class="lb-s"><li>데이터 받기</li><li>ID 정제</li><li>엣지리스트 작성</li><li>Gephi 불러오기</li><li>중심성 계산</li><li>레이아웃 다듬기</li><li>크기·색 입히기</li><li>해석하기</li></ol><p class="lb-go"><a href="labs/12-patent-network.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">36 / 37</span></footer></article></div><div class="slot" id="s37" data-lec="12-4"><article class="slide ty-takeaway" aria-label="37 / 37"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>등록번호를 키로 노드·엣지 파일의 ID를 일치시킨다</li><li>등록특허는 최근 2~3년 건수가 과소 집계될 수 있다</li><li>중심성을 먼저 계산하고 노드 크기·색에 반영한다</li><li>기업 단위 분석은 출원인대표명으로 엣지를 바꾼다</li></ul></div><footer class="sl-f"><span>12-4 실습: 특허 인용 네트워크 만들기</span><span class="num">37 / 37</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-10.html">← 10강 TRM 점검과 사례</a><a class="wk-nav" href="lecture-13.html">13강 SWOT·AHP →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: R&amp;D planning and TRM (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

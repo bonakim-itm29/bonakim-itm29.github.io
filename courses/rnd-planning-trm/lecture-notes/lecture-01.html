@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1강 R&amp;D 기획 입문 · R&amp;D 기획과 기술로드맵</title>
+<meta name="description" content="아이디어 3천 개 중 하나만 살아남는다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">R&amp;D 기획과 기술로드맵</a> / <a href="index.html">강의별 핵심</a> / 1강</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 01</p>
+  <h1>R&amp;D 기획 입문</h1>
+  <p class="lead">아이디어 3천 개 중 하나만 살아남는다</p>
+  <div class="kws"><span class="kw">R&amp;D 기획</span><span class="kw">Plan-Do-See</span><span class="kw">R&amp;D 세대론</span><span class="kw">Chain-linked Model</span><span class="kw">기술로드맵</span><span class="kw">공공 vs 기업 R&amp;D</span></div>
+  <details class="plist"><summary>이 강의의 논문 4편</summary><ol><li><b>Nobelius (2004)</b> Nobelius, D. (2004). Towards the sixth generation of R&amp;D management. International Journal of Project Management, 22(5), 369–375.</li><li><b>Kline &amp; Rosenberg (1986)</b> Kline, S. J., &amp; Rosenberg, N. (1986). An overview of innovation. In R. Landau &amp; N. Rosenberg (Eds.), The positive sum strategy: Harnessing technology for economic growth (pp. 275–305). Washington, DC: National Academy Press.</li><li><b>Phaal et al. (2004)</b> Phaal, R., Farrukh, C. J. P., &amp; Probert, D. R. (2004). Technology roadmapping—A planning framework for evolution and revolution. Technological Forecasting and Social Change, 71(1–2), 5–26.</li><li><b>Willyard &amp; McClees (1987)</b> Willyard, C. H., &amp; McClees, C. W. (1987). Motorola&#x27;s technology roadmap process. Research Management, 30(5), 13–19.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="01-1"><b>01-1</b><span>왜 R&amp;D 기획인가</span></a><a href="#s8" class="tab" data-lec="01-2"><b>01-2</b><span>R&amp;D의 주체와 성격</span></a><a href="#s15" class="tab" data-lec="01-3"><b>01-3</b><span>R&amp;D 프로세스의 진화</span></a><a href="#s26" class="tab" data-lec="01-4"><b>01-4</b><span>R&amp;D 기획 체계와 과목 로드맵</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 36</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="01-1"><article class="slide ty-title" aria-label="1 / 36"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · R&amp;D 기획 입문</p><p class="t-no">01-1</p><h2 class="t-title">왜 R&amp;D 기획인가</h2><p class="t-thesis">기획은 R&amp;D 생산성을 높이는 조준 장치다</p></div></div><footer class="sl-f"><span>01-1 왜 R&amp;D 기획인가</span><span class="num">1 / 36</span></footer></article></div><div class="slot" id="s2" data-lec="01-1"><article class="slide ty-stat" aria-label="2 / 36"><div class="sl-in"><h3 class="sh">기업 수명이 짧아진다</h3><div class="stat"><p class="st-v">15년</p><p class="st-l">2015년 기업 평균수명(1935년 90년)</p><p class="st-t">90년→45년→30년→22년→15년. 기업 간 차이를 만드는 것은 혁신 역량이다</p></div></div><footer class="sl-f"><span>01-1 왜 R&amp;D 기획인가</span><span class="num">2 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 &#x27;왜 기업마다 성과가 다른가&#x27;라는 질문을 기업 평균수명 그래프로 시작한다. 1935년 90년이던 평균수명이 2015년 15년으로 줄었다. 시장과 기술이 빨리 바뀌는 환경에서 R&amp;D로 다음 먹거리를 계속 만들지 못하면 오래 살아남기 어렵다는 뜻이다. R&amp;D 기획은 이 생존 문제에 대한 체계적인 답이다.</p></div></div><div class="slot" id="s3" data-lec="01-1"><article class="slide ty-steps" aria-label="3 / 36"><div class="sl-in"><h3 class="sh">아이디어 깔때기</h3><ol class="steps n6"><li><span class="sn">1</span><b>원시 아이디어 3,000</b><p>적히지도 않은 아이디어까지 포함</p></li><li><span class="sn">2</span><b>제출 300</b><p>검토 가능한 형태로 제안된 것</p></li><li><span class="sn">3</span><b>소규모 과제 125</b><p>작은 실험·탐색 과제로 착수</p></li><li><span class="sn">4</span><b>개발 9 → 4</b><p>의미 있는 개발 9, 주요 개발 4</p></li><li><span class="sn">5</span><b>출시 1.7</b><p>시장에 나가는 제품</p></li><li><span class="sn">6</span><b>성공 1</b><p>상업적으로 성공하는 단 하나</p></li></ol></div><footer class="sl-f"><span>01-1 왜 R&amp;D 기획인가</span><span class="num">3 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>아이디어 3,000개가 상업적 성공 1개로 줄어드는 깔때기다. 제약사는 보통 6천~8천 개 아이디어로 시작하고, 특허도 1% 미만만 &#x27;왕관의 보석&#x27;이 된다. 별도 자료에서는 진지한 아이디어 11개 중 3개가 개발, 1.3개가 출시, 1개가 성공한다. 기획의 역할은 깔때기 앞단에서 버릴 것을 빨리 버려 자원을 살릴 과제에 모으는 것이다.</p></div></div><div class="slot" id="s4" data-lec="01-1"><article class="slide ty-steps" aria-label="4 / 36"><div class="sl-in"><h3 class="sh">기획이 생산성을 만드는 논리</h3><ol class="steps n3"><li><span class="sn">1</span><b>미래 궤적 예측</b><p>환경·행위자의 변하는 요구를 미리 읽기</p></li><li><span class="sn">2</span><b>목표·전략 맞춤</b><p>움직이는 표적에 맞춘 맞춤형 연구 설계</p></li><li><span class="sn">3</span><b>생산성 향상</b><p>같은 투자로 더 많은 성과를 내기</p></li></ol></div><footer class="sl-f"><span>01-1 왜 R&amp;D 기획인가</span><span class="num">4 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드는 연구 대상을 &#x27;Moving Target&#x27;으로, 기획을 움직이는 표적을 쫓는 패트리어트 미사일에 비유한다. 현재 기준으로 목표를 정하면 개발이 끝날 즈음 표적은 이미 다른 곳에 있다. 그래서 미래 궤적을 먼저 예측하고 그 지점에 목표와 전략을 맞춰야 R&amp;D 투자 생산성이 오른다. 예측은 기획의 선택이 아니라 출발점이다.</p></div></div><div class="slot" id="s5" data-lec="01-1"><article class="slide ty-tree" aria-label="5 / 36"><div class="sl-in"><h3 class="sh">맞춤형 연구의 세 기반</h3><div class="tree"><div class="tr-r">맞춤형 R&amp;D 기획</div><div class="tr-cs n3"><div class="tr-c"><b>전문가 기반</b><p>연구자·변리사·기술이전·PM·기획전문가</p></div><div class="tr-c"><b>정보 기반</b><p>전략정보를 지속 모니터링</p></div><div class="tr-c"><b>Tool 기반</b><p>3P 분석 도구, 정보분석 DB 시스템</p></div></div></div></div><footer class="sl-f"><span>01-1 왜 R&amp;D 기획인가</span><span class="num">5 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>현병환 박사(생명공학연구원)의 그림을 수정한 슬라이드로, 기획은 사람·정보·도구가 함께 받쳐야 한다는 뜻이다. 전문가 한 사람의 직관만으로는 편향되고, 정보만 쌓으면 해석이 없으며, 도구만 돌리면 맥락을 놓친다. 이 과목에서 배우는 특허분석, 델파이, AHP 같은 방법은 Tool 기반에, 매주 과제 공유는 전문가 기반의 집단지성에 해당한다.</p></div></div><div class="slot" id="s6" data-lec="01-1"><article class="slide ty-points" aria-label="6 / 36"><div class="sl-in"><h3 class="sh">이 과목의 목표 역량</h3><div class="pts n4"><div class="pt"><b>미래 통찰력</b><p>맥락(context)이 보이고 이해되는 눈</p></div><div class="pt"><b>R&amp;D·획득 통찰</b><p>무엇을 개발하고 어떻게 획득할지 판단</p></div><div class="pt"><b>과학적 소통</b><p>숫자로 말하고 역할을 분명히 나누기</p></div><div class="pt"><b>요약력</b><p>핵심을 1페이지 보고로 압축</p></div></div></div><footer class="sl-f"><span>01-1 왜 R&amp;D 기획인가</span><span class="num">6 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>과목을 마치면 기술·연구전략 기획, 대외환경 분석, 기술수준 분석, 로드맵 작성, R&amp;D 기획 프로세스를 경험하게 된다. 그 결과 남아야 할 역량은 통찰력과 소통역량 두 가지다. 기획서는 의사결정자를 설득하는 문서이므로 근거를 숫자로 보이고, 결론을 1페이지에 담는 훈련이 방법론 지식만큼 중요하다.</p></div></div><div class="slot" id="s7" data-lec="01-1"><article class="slide ty-takeaway" aria-label="7 / 36"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>원시 아이디어 3,000개 중 상업적 성공은 1개 수준이다</li><li>연구 대상은 움직이는 표적이라 미래 궤적 예측이 기획의 출발점</li><li>기획은 전문가·정보·도구 세 기반 위에서 맞춤형 연구를 설계한다</li><li>목표 역량은 통찰력과 숫자로 말하는 소통력, 1페이지 요약</li></ul></div><footer class="sl-f"><span>01-1 왜 R&amp;D 기획인가</span><span class="num">7 / 36</span></footer></article></div><div class="slot" id="s8" data-lec="01-2"><article class="slide ty-title" aria-label="8 / 36"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · R&amp;D 기획 입문</p><p class="t-no">01-2</p><h2 class="t-title">R&amp;D의 주체와 성격</h2><p class="t-thesis">누가 무엇을 위해 연구하느냐가 기획을 바꾼다</p></div></div><footer class="sl-f"><span>01-2 R&amp;D의 주체와 성격</span><span class="num">8 / 36</span></footer></article></div><div class="slot" id="s9" data-lec="01-2"><article class="slide ty-compare" aria-label="9 / 36"><div class="sl-in"><h3 class="sh">공공 R&amp;D vs 기업 R&amp;D</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">공공 R&amp;D</b><ul><li>목표: 공공의 이익</li><li>파급효과(긍정적 외부효과) 극대화</li><li>지속가능성 등 사회적 편익</li></ul></div><div class="cp-col"><b class="cp-h">기업 R&amp;D</b><ul><li>목표: 수익 창출</li><li>효율성 극대화</li><li>사적 편익 = 돈</li></ul></div></div><p class="cp-note">평가 기준이 다르면 기획 논리도 달라진다</p></div><footer class="sl-f"><span>01-2 R&amp;D의 주체와 성격</span><span class="num">9 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>같은 기술 과제라도 공공 R&amp;D는 사회 전체에 퍼지는 파급효과로, 기업 R&amp;D는 회사가 회수할 수 있는 수익으로 정당화한다. 공공 과제 기획서에서 시장점유율만 강조하거나, 기업 과제에서 공익만 내세우면 설득력이 떨어진다. 기획을 시작할 때 &#x27;이 R&amp;D의 편익은 누구에게 돌아가는가&#x27;를 먼저 정해야 지표와 우선순위가 맞게 선다.</p></div></div><div class="slot" id="s10" data-lec="01-2"><article class="slide ty-steps" aria-label="10 / 36"><div class="sl-in"><h3 class="sh">연구 단계와 주체의 무게중심</h3><ol class="steps n3"><li><span class="sn">1</span><b>기초·근본 연구</b><p>새 지식 창출, 대학의 비중이 큼</p></li><li><span class="sn">2</span><b>응용연구</b><p>지식을 특정 용도로, 대학·산업 공존</p></li><li><span class="sn">3</span><b>제품개발</b><p>상업화 직결, 산업의 비중이 큼</p></li></ol></div><footer class="sl-f"><span>01-2 R&amp;D의 주체와 성격</span><span class="num">10 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드의 사선 도식은 기초연구에서 제품개발로 갈수록 대학의 몫이 줄고 산업의 몫이 커짐을 보여준다. 기업이 기초 단계 지식이 필요하면 직접 하기보다 대학과의 공동연구나 위탁을 검토하는 것이 합리적이다. 반대로 대학 연구를 사업화하려면 제품개발 역량을 가진 산업 파트너가 필요하다. 단계별로 누가 잘하는지를 알면 획득 전략이 보인다.</p></div></div><div class="slot" id="s11" data-lec="01-2"><article class="slide ty-stat" aria-label="11 / 36"><div class="sl-in"><h3 class="sh">업종별 R&amp;D 집약도</h3><div class="stat"><p class="st-v">15.8%</p><p class="st-l">제약·바이오 매출 대비 R&amp;D(2010)</p><p class="st-t">소프트웨어 7.4%, 자동차 4.1%, 식품 1.7%, 은행 1.5%, 석유·가스 0.5%</p></div></div><footer class="sl-f"><span>01-2 R&amp;D의 주체와 성격</span><span class="num">11 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>R&amp;D 집약도 = 연구개발비÷매출액이다. 영국 R&amp;D Scoreboard(2010)에서 제약·바이오는 15.8%로 석유·가스(0.5%)의 30배가 넘는다. 예: 매출 1,000억 원 기업이 연구개발비 40억 원을 쓰면 4%로 자동차 평균 수준이다. 집약도는 업종의 기술 의존도를 반영하므로 비교는 같은 업종 안에서 해야 의미가 있다.</p></div></div><div class="slot" id="s12" data-lec="01-2"><article class="slide ty-compare" aria-label="12 / 36"><div class="sl-in"><h3 class="sh">R&amp;D 투자 vs 생산성</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">미국 제약 R&amp;D 지출</b><ul><li>1970년대 수십억 달러 수준</li><li>2002년 약 300억 달러로 급증</li></ul></div><div class="cp-col"><b class="cp-h">신약(NME) 승인 수</b><ul><li>대체로 연 10~30개에서 등락</li><li>1990년대 후반 정점 후 다시 감소</li></ul></div></div><p class="cp-note">투자 증가 ≠ 신제품 증가</p></div><footer class="sl-f"><span>01-2 R&amp;D의 주체와 성격</span><span class="num">12 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>1970~2002년 미국 제약산업은 R&amp;D 지출이 꾸준히 늘었지만 신약 수는 같은 속도로 늘지 않았다. 슬라이드 문구처럼 &#x27;과학적 성취에도 신제품을 만드는 속도는 줄어드는 것처럼 보인다.&#x27; 돈을 더 쓰는 것만으로는 성과가 보장되지 않으므로, 무엇에 쓸지 고르는 기획과 우선순위 결정이 R&amp;D 생산성의 핵심 변수가 된다.</p></div></div><div class="slot" id="s13" data-lec="01-2"><article class="slide ty-tree" aria-label="13 / 36"><div class="sl-in"><h3 class="sh">전략 계층 속 R&amp;D</h3><div class="tree"><div class="tr-r">다각화 기업</div><div class="tr-cs n4"><div class="tr-c"><b>기업 전략</b><p>전사 경영진: 사업 포트폴리오</p></div><div class="tr-c"><b>사업 전략</b><p>사업부장: 사업별 경쟁 방식</p></div><div class="tr-c"><b>기능 전략</b><p>R&amp;D·제조·마케팅·재무·인사</p></div><div class="tr-c"><b>운영 전략</b><p>지역·공장·부서 단위 실행</p></div></div></div></div><footer class="sl-f"><span>01-2 R&amp;D의 주체와 성격</span><span class="num">13 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>R&amp;D 전략은 기능 전략의 하나로, 위의 사업·기업 전략과 아래의 운영 전략 사이에서 &#x27;양방향 영향&#x27;을 주고받는다. 그래서 좋은 R&amp;D 기획은 기업 전략에서 내려온 방향과 맞아야 하고, 동시에 기술 기회를 위로 올려 사업 전략을 바꾸기도 한다. 과제 기획서에 상위 전략과의 연결 고리를 한 줄이라도 밝혀야 하는 이유다.</p></div></div><div class="slot" id="s14" data-lec="01-2"><article class="slide ty-takeaway" aria-label="14 / 36"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>공공 R&amp;D는 파급효과, 기업 R&amp;D는 수익·효율을 극대화한다</li><li>대학은 기초연구, 산업은 제품개발 쪽에 무게가 실린다</li><li>R&amp;D 집약도는 업종마다 크게 달라 같은 잣대로 비교하면 안 된다</li><li>투자를 늘려도 산출이 비례하지 않아 기획의 질이 중요하다</li></ul></div><footer class="sl-f"><span>01-2 R&amp;D의 주체와 성격</span><span class="num">14 / 36</span></footer></article></div><div class="slot" id="s15" data-lec="01-3"><article class="slide ty-title" aria-label="15 / 36"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · R&amp;D 기획 입문</p><p class="t-no">01-3</p><h2 class="t-title">R&amp;D 프로세스의 진화</h2><p class="t-thesis">R&amp;D는 상아탑에서 네트워크로 진화했다</p></div></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">15 / 36</span></footer></article></div><div class="slot" id="s16" data-lec="01-3"><article class="slide ty-steps" aria-label="16 / 36"><div class="sl-in"><h3 class="sh">R&amp;D 5세대(Nobelius)</h3><ol class="steps n5"><li><span class="sn">1</span><b>1세대 상아탑</b><p>1950~60년대 중반, 기술추동·간접비 취급</p></li><li><span class="sn">2</span><b>2세대 비즈니스</b><p>~70년대 초, 시장견인·과제관리</p></li><li><span class="sn">3</span><b>3세대 포트폴리오</b><p>~80년대 중반, 사업·전사전략 연계</p></li><li><span class="sn">4</span><b>4세대 통합 활동</b><p>~90년대 중반, 고객과 학습·병렬 개발</p></li><li><span class="sn">5</span><b>5세대 네트워크</b><p>90년대 중반~, 경쟁·공급자와 협업</p></li></ol></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">16 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>각 세대는 시대의 경쟁 조건에 대한 응답이다. 수요가 넘치던 시절(1세대)에는 과학적 돌파만 노렸고, 점유율 경쟁(2세대)에서는 사업부가 과제를 주도했다. 합리화 시기(3세대)에는 위험-수익으로 포트폴리오를 짰고, 시간 경쟁(4세대)에서는 교차기능팀이 병렬로 일했다. 5세대는 외부와의 네트워크와 개발 속도 통제가 관건이다.</p></div></div><div class="slot" id="s17" data-lec="01-3"><article class="slide ty-paper" aria-label="17 / 36"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Nobelius (2004)</h3><p class="pp-q">R&amp;D 관리 방식은 시대에 따라 어떻게 진화했고 다음 세대는 무엇인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>R&amp;D 관리는 상아탑(1세대)→비즈니스(2)→포트폴리오(3)→통합 활동(4)→네트워크(5)로 진화했고, 다음은 과학·기술의 탐색과 네트워크를 더 강조하는 6세대가 될 것이라 제안.</p><div class="pp-cs"><span class="pp-c">R&amp;D 세대론</span><span class="pp-c">Technology Push</span><span class="pp-c">R&amp;D as network</span></div></div><div><b>강의와의 연결</b><p>01-3 p.22: 5세대 R&amp;D 프로세스 표(시대 맥락과 프로세스 특성)의 출처로 인용</p><b>보충 설명</b><p>각 세대는 앞 세대를 대체하기보다 덧붙여진다. 저자는 5세대의 &#x27;연구(R)와 개발(D)의 분리, 개발 속도 통제&#x27;를 넘어 6세대에서는 연구 탐색과 외부 과학 네트워크가 다시 중요해진다고 본다.</p></div></div><p class="pp-cite">Nobelius, D. (2004). Towards the sixth generation of R&amp;D management. International Journal of Project Management, 22(5), 369–375. </p></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">17 / 36</span></footer></article></div><div class="slot" id="s18" data-lec="01-3"><article class="slide ty-compare" aria-label="18 / 36"><div class="sl-in"><h3 class="sh">Tech Push vs Market Pull</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Technology Push</b><ul><li>1950년대~60년대 중반</li><li>기초과학→설계→제조→판매</li><li>연구가 혁신의 출발점</li></ul></div><div class="cp-col"><b class="cp-h">Market Pull</b><ul><li>60년대 중반~70년대 초</li><li>시장 니즈→개발→제조→판매</li><li>니즈가 혁신의 출발점</li></ul></div></div><p class="cp-note">둘 다 피드백 없는 한 방향 선형모델</p></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">18 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>1·2세대에 대응하는 두 혁신 모델이다. 기술추동은 &#x27;좋은 기술을 만들면 팔린다&#x27;는 가정이라 시장과 동떨어진 연구가 생기기 쉽고, 시장견인은 고객이 말하는 니즈만 좇다가 점진적 개선에 갇히기 쉽다. 실제 기획에서는 기술 기회와 시장 니즈를 둘 다 확인하는 다음 세대 모델이 필요해졌다.</p></div></div><div class="slot" id="s19" data-lec="01-3"><article class="slide ty-cycle" aria-label="19 / 36"><div class="sl-in"><h3 class="sh">Coupling 모델(3세대)</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="아이디어 창출 → R&amp;D·설계 → 시제품 생산 → 제조 → 마케팅·판매"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(373.5,73.9) rotate(36.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(418.9,213.6) rotate(108.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(300.0,300.0) rotate(180.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(181.1,213.6) rotate(252.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(226.5,73.9) rotate(324.0)"/><g><rect x="235.5" y="29.0" width="129" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">아이디어 창출</text></g><g><rect x="361.9" y="115.4" width="114" height="42" rx="21" class="cy-node"/><text x="418.9" y="142.4" text-anchor="middle" class="cy-t">R&amp;D·설계</text></g><g><rect x="316.5" y="255.1" width="114" height="42" rx="21" class="cy-node"/><text x="373.5" y="282.1" text-anchor="middle" class="cy-t">시제품 생산</text></g><g><rect x="184.5" y="255.1" width="84" height="42" rx="21" class="cy-node"/><text x="226.5" y="282.1" text-anchor="middle" class="cy-t">제조</text></g><g><rect x="124.1" y="115.4" width="114" height="42" rx="21" class="cy-node"/><text x="181.1" y="142.4" text-anchor="middle" class="cy-t">마케팅·판매</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">니즈×기술 수준</text></svg></div></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">19 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>1970년대 초~80년대 중반의 결합(Coupling) 모델이다. 아이디어에서 시장까지 이어지는 각 단계가 위로는 &#x27;사회·시장의 니즈&#x27;, 아래로는 &#x27;기술·생산의 최신 수준&#x27;과 양방향으로 연결된다. 즉 단계마다 시장과 기술을 동시에 확인하며 진행한다. 과제 단계 검토(stage review) 때 두 축을 모두 점검하는 관행이 여기서 나온다.</p></div></div><div class="slot" id="s20" data-lec="01-3"><article class="slide ty-concepts" aria-label="20 / 36"><div class="sl-in"><h3 class="sh">Chain-linked 모델의 기호</h3><div class="ccs n5"><div class="cc"><b>C 핵심사슬</b><p>시장 발견→설계→시험·생산→유통·판매</p></div><div class="cc"><b>f / F 피드백</b><p>단계 간 피드백, F는 특히 중요한 피드백</p></div><div class="cc"><b>K-R 연계</b><p>막히면 지식을 찾고 없으면 연구로 회귀</p></div><div class="cc"><b>D 직접 연계</b><p>연구와 설계가 직접 연결되는 경로</p></div><div class="cc"><b>I · S</b><p>도구·기계(I)와 연구 지원(S)의 상호작용</p></div></div></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">20 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>Kline &amp; Rosenberg(1986)의 연쇄모델은 1990년대 초 OECD 과학기술정책국이 정식 채택했고 국가혁신체제(NIS) 이론의 기본 시각이 되었다. 핵심은 연구가 혁신의 출발점이 아니라, 설계·생산 중 문제가 생기면 먼저 기존 지식(K)을 찾고 그래도 없을 때 연구(R)로 가는 &#x27;필요할 때 쓰는 자원&#x27;이라는 점이다.</p></div></div><div class="slot" id="s21" data-lec="01-3"><article class="slide ty-paper" aria-label="21 / 36"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Kline &amp; Rosenberg (1986)</h3><p class="pp-q">혁신은 연구에서 시장으로 한 방향으로 흐르는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>혁신은 시장 발견에서 출발해 설계·생산·판매로 이어지는 핵심사슬 위에서, 단계 간 피드백과 지식·연구와의 상호작용을 반복하는 연쇄(chain-linked) 과정이다.</p><div class="pp-cs"><span class="pp-c">Chain-linked Model</span><span class="pp-c">피드백 고리</span><span class="pp-c">지식-연구 연계</span></div></div><div><b>강의와의 연결</b><p>01-3 p.25: 기술혁신의 연쇄모델 도식(C, f, F, K-R, D, I, S)으로 소개, OECD 채택·NIS 이론의 기본 시각</p><b>보충 설명</b><p>연구는 혁신의 출발점이 아니라 막힐 때 꺼내 쓰는 수단이며, 먼저 기존 지식을 찾고 없을 때 연구한다는 점을 강조한다. 선형모델 비판의 대표 문헌으로 이후 혁신체제(NIS) 연구의 토대가 되었다.</p></div></div><p class="pp-cite">Kline, S. J., &amp; Rosenberg, N. (1986). An overview of innovation. In R. Landau &amp; N. Rosenberg (Eds.), The positive sum strategy: Harnessing technology for economic growth (pp. 275–305). Washington, DC: National Academy Press. </p></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">21 / 36</span></footer></article></div><div class="slot" id="s22" data-lec="01-3"><article class="slide ty-case" aria-label="22 / 36"><div class="sl-in"><p class="ca-k">사례 · 1세대 연구형 R&amp;D</p><h3 class="sh">DuPont 나일론</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>20세기 초 DuPont은 과학자가 운영하는 중앙연구소에서 사업과 거리를 둔 기초연구를 지원했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>Wallace Carothers 팀이 고분자 기초연구를 하던 중 1935년 나일론을 합성했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>나일론은 1930년대 말 스타킹 등으로 상업화되어 큰 성공을 거두고 &#x27;돌파형 연구&#x27; 모델의 상징이 되었다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>돌파는 가능하지만 소수 성공에 기대는 방식이라 이후 관리·연계형으로 진화했다.</p></div></div></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">22 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>강의의 국내식 세대 구분에서 1세대(연구형 R&amp;D)의 성공사례로 든 것이 DuPont 연구소의 나일론 발명이다. 과학자에게 자율을 주고 획기적 발견을 기다리는 방식은 큰 성공을 낳기도 하지만, 어떤 연구가 언제 돈이 될지 예측하기 어렵다. 그래서 2세대부터는 사업 니즈와 과제관리를 강조하게 된다.</p></div></div><div class="slot" id="s23" data-lec="01-3"><article class="slide ty-compare" aria-label="23 / 36"><div class="sl-in"><h3 class="sh">국내식 R&amp;D 세대 구분</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">1·2세대</b><ul><li>1세대 연구형: 과학자 관리, 돌파 지향</li><li>2세대 관리형: 과제관리, 사업 니즈 집중</li></ul></div><div class="cp-col"><b class="cp-h">3·4세대</b><ul><li>3세대 가치창출형: 니즈×기술역량 연계</li><li>포트폴리오로 고·저위험 과제 균형</li><li>4세대 전략형: 전략기획·로드맵 전사 통합</li><li>비연속 혁신의 리더로 역할 확대</li></ul></div></div></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">23 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>Nobelius의 5세대와 비슷하지만 국내 교재는 4단계로 묶는다. 3세대부터 &#x27;포트폴리오&#x27;가 등장하는데, 고위험·고수익 과제와 저위험 과제를 섞어 전체 위험을 관리하는 개념이다. 4세대는 전략 기획과 기술로드맵으로 R&amp;D를 전사 차원에서 통합 관리한다. 이 과목에서 배우는 방법들은 대부분 4세대형 기획 도구다.</p></div></div><div class="slot" id="s24" data-lec="01-3"><article class="slide ty-concepts" aria-label="24 / 36"><div class="sl-in"><h3 class="sh">4세대 R&amp;D의 핵심 개념</h3><div class="ccs n4"><div class="cc"><b>비연속적 혁신</b><p>위기 대응으로 혁신 모색, 연속성을 가정 말 것</p></div><div class="cc"><b>융합적 혁신</b><p>R&amp;D+전략+조직+마케팅+재무의 결합(코다마)</p></div><div class="cc"><b>아키텍처</b><p>조직 특성과 기술 특성을 함께 보는 시스템 관점</p></div><div class="cc"><b>제품 플랫폼</b><p>표준 요소·인터페이스의 집합, 플랫폼 경쟁이 먼저</p></div></div></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">24 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>4세대론은 기존 기술의 연장선을 가정하지 말라고 경고한다. 융합적 혁신(일본 코다마 후미오)은 단순한 획기적 발명과 달리 R&amp;D와 경영 기능을 결합해 조직역량을 키우는 것이다. 아키텍처와 플랫폼 개념은 제품이 나오기 전에 표준과 구조를 둘러싼 &#x27;플랫폼 리더십&#x27; 경쟁이 먼저 벌어진다는 점을 강조한다.</p></div></div><div class="slot" id="s25" data-lec="01-3"><article class="slide ty-takeaway" aria-label="25 / 36"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>R&amp;D는 상아탑→비즈니스→포트폴리오→통합→네트워크로 진화했다</li><li>Coupling·Chain-linked 모델: 혁신은 니즈와 기술의 상호작용</li><li>4세대 R&amp;D는 전략기획·로드맵으로 전사 통합 관리한다</li><li>비연속 혁신, 융합 혁신, 아키텍처, 플랫폼이 4세대 핵심 개념</li></ul></div><footer class="sl-f"><span>01-3 R&amp;D 프로세스의 진화</span><span class="num">25 / 36</span></footer></article></div><div class="slot" id="s26" data-lec="01-4"><article class="slide ty-title" aria-label="26 / 36"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · R&amp;D 기획 입문</p><p class="t-no">01-4</p><h2 class="t-title">R&amp;D 기획 체계와 과목 로드맵</h2><p class="t-thesis">Plan-Do-See로 R&amp;D 전 과정을 관리한다</p></div></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">26 / 36</span></footer></article></div><div class="slot" id="s27" data-lec="01-4"><article class="slide ty-compare" aria-label="27 / 36"><div class="sl-in"><h3 class="sh">R&amp;D의 Plan-Do-See</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">Plan: 과제선정·기획</b><ul><li>니즈·경영전략·환경분석</li><li>기술예측(델파이)·기술수준 분석</li><li>우선순위·예산 배분</li></ul></div><div class="cp-col"><b class="cp-h">Do: 수행·관리</b><ul><li>연구인력 채용·관리</li><li>실시간 과제 모니터링</li><li>자체·공동·위탁 수행 방식 설정</li></ul></div><div class="cp-col"><b class="cp-h">See: 결과 평가</b><ul><li>결과 형식지화·DB화·지재권화</li><li>성과 평가와 보상</li><li>기술이전·사업화</li></ul></div></div><p class="cp-note">올바른 것(효과성)·분명하게(책임성)·최적화(효율성)</p></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">27 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>R&amp;D 관리는 경영의 PDS 사이클과 같다. Plan에서 올바른 과제를 고르고(효과성), Do에서 책임을 분명히 하며(책임성), 전 과정을 최적화한다(효율성). 기획 과목이지만 Do와 See까지 보는 이유는, 평가와 활용 결과가 다음 기획의 입력으로 돌아와야 사이클이 닫히기 때문이다.</p></div></div><div class="slot" id="s28" data-lec="01-4"><article class="slide ty-case" aria-label="28 / 36"><div class="sl-in"><p class="ca-k">사례 · PDS 체계 구축</p><h3 class="sh">보안기술 공기업의 R&amp;D 개편</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>보안용지·주화·전자ID 등을 다루는 한 공기업 연구원은 자체 역량 중심, 문헌 위주 조사, 단기 지시과제 위주로 기획했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>거시환경·경쟁사 비교 분석, 대외 네트워크 조사, 기술별 우선순위와 기술위원회 심사, 전직원 과제 공모, 공공성 검토를 도입했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>산학연 공동연구(ETRI, KAIST 등)와 기술 확산으로 이어졌고, R&amp;D 시스템 우수사례로 2년 연속 기술혁신 관련 상을 받았다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>환경분석·우선순위·평가를 하나의 체계로 묶으면 공공성과 사업성을 함께 높일 수 있다.</p></div></div></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">28 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 p.13-15의 사례다. &#x27;종전&#x27;과 &#x27;개선&#x27;을 비교하면 핵심 변화는 세 가지다. 내부 역량만 보던 분석을 경쟁사·거시환경까지 넓혔고, 총괄적 자원분배를 기술별 우선순위로 바꿨으며, 단기 지시과제를 전략 정합성 검토와 공모로 대체했다. 자기 조직의 기획 체계를 진단할 때 이 비교표를 체크리스트처럼 쓸 수 있다.</p></div></div><div class="slot" id="s29" data-lec="01-4"><article class="slide ty-tree" aria-label="29 / 36"><div class="sl-in"><h3 class="sh">MOT의 큰 그림</h3><div class="tree"><div class="tr-r">기술경영(MOT)</div><div class="tr-cs n3"><div class="tr-c"><b>기술획득</b><p>Make(자체), Buy·Ally(도입·M&amp;A)</p></div><div class="tr-c"><b>기술관리</b><p>R&amp;D 전략·조직, 기획-수행-평가</p></div><div class="tr-c"><b>기술활용</b><p>사업화, 라이선스, 사내벤처, 신사업</p></div></div></div></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">29 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>김봉균(2005)의 동적 기술로드맵 연구에 나온 MOT 체계도다. R&amp;D 기획은 기술관리의 일부지만, 앞에서는 &#x27;만들 것인가, 살 것인가, 손잡을 것인가&#x27;라는 획득 결정과, 뒤에서는 사업화·라이선스 같은 활용과 맞물린다. 로드맵 데이터는 모니터링→식별→포지셔닝→매핑의 순서로 만들어진다.</p></div></div><div class="slot" id="s30" data-lec="01-4"><article class="slide ty-steps" aria-label="30 / 36"><div class="sl-in"><h3 class="sh">과목의 기획 흐름과 도구</h3><ol class="steps n6"><li><span class="sn">1</span><b>메가트렌드</b><p>자료수집, 빅데이터, 트렌드 분석</p></li><li><span class="sn">2</span><b>산업 동향</b><p>특허분석, 워드클라우드 등</p></li><li><span class="sn">3</span><b>기술변화 예측</b><p>델파이 분석</p></li><li><span class="sn">4</span><b>역량분석·전략방향</b><p>특허 포트폴리오, 네트워크, 특허지표</p></li><li><span class="sn">5</span><b>유망기술 도출</b><p>SWOT, AHP</p></li><li><span class="sn">6</span><b>획득 전략</b><p>특허 포트폴리오로 R&amp;D 여부 판단</p></li></ol></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">30 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>한 학기 동안 그룹 과제(지식서비스 산업 분야별 연구기획 보고서)를 이 순서로 완성한다. 각 단계는 앞 단계의 결과를 입력으로 쓴다. 예를 들어 메가트렌드에서 뽑은 이슈가 델파이 설문 문항이 되고, 델파이로 추린 기술 후보를 SWOT·AHP로 평가해 유망기술을 고른다. 단계별 도구를 실제로 돌려 보는 것이 과목의 핵심이다.</p></div></div><div class="slot" id="s31" data-lec="01-4"><article class="slide ty-lab" aria-label="31 / 36"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">R&amp;D 기획 프로세스 진단하기</h3><p class="lb-p">자사 또는 벤치마킹 기업의 R&amp;D 체계를 PDS와 R&amp;D 세대론으로 진단해, 기획·수행·평가 단계의 공백과 개선 과제를 찾는다.</p><ol class="lb-s"><li>대상 정하기</li><li>R&amp;D 집약도 계산</li><li>PDS 표 채우기</li><li>R&amp;D 세대 판정</li><li>지식 획득 방식</li><li>세 기준 점검</li><li>개선안 1페이지</li></ol><p class="lb-go"><a href="labs/01-rnd-process.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">31 / 36</span></footer></article></div><div class="slot" id="s32" data-lec="01-4"><article class="slide ty-tree" aria-label="32 / 36"><div class="sl-in"><h3 class="sh">로드맵의 계층</h3><div class="tree"><div class="tr-r">기술로드맵</div><div class="tr-cs n4"><div class="tr-c"><b>Market</b><p>시장 M1, M2를 먼저 정한다</p></div><div class="tr-c"><b>Product</b><p>시장에 맞는 제품 P1~P4</p></div><div class="tr-c"><b>Technology</b><p>제품에 필요한 기술 T1~T4</p></div><div class="tr-c"><b>R&amp;D·자원</b><p>R&amp;D 프로그램, 투자·공급망·인력</p></div></div></div></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">32 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>로드맵은 시간축 위에 시장→제품→기술→R&amp;D 프로그램→자원을 층으로 쌓고 화살표로 연결한 그림이다. 순서가 중요하다. 시장과 제품을 먼저 정하고 그에 필요한 기술을 고른다. 기술부터 그리면 &#x27;할 수 있는 것&#x27;만 나열되고 &#x27;왜 필요한가&#x27;가 빠진다. 각 기술 상자에서 위쪽 제품·시장까지 화살표가 이어지는지가 좋은 로드맵의 기준이다.</p></div></div><div class="slot" id="s33" data-lec="01-4"><article class="slide ty-paper" aria-label="33 / 36"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Phaal et al. (2004)</h3><p class="pp-q">기술 계획을 제품·사업 계획과 어떻게 한 틀로 정렬하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>시장·제품·기술·자원 층을 시간 축에 겹친 다층 로드맵은 전략과 혁신 계획을 통합하는 범용 틀이며, 점진적 진화와 급진적 변화 모두를 다룰 수 있다.</p><div class="pp-cs"><span class="pp-c">다층 로드맵</span><span class="pp-c">Know-why/what/how</span><span class="pp-c">Pull·Push 정렬</span><span class="pp-c">T-Plan</span></div></div><div><b>강의와의 연결</b><p>10-1: &#x27;Now then… TRM&#x27; 로드맵 프레임워크 그림(p.4)과 STEEPI·SWOT 등 도구 연결도(p.5)</p><b>보충 설명</b><p>로드맵을 목적(제품·역량·전략·장기·지식·프로그램·공정·통합 계획)과 형식(다층·바·표·그래프·그림·플로차트 등)으로 분류하고, 산업 사례로 T-Plan 같은 빠른 워크숍 절차를 소개한다.</p></div></div><p class="pp-cite">Phaal, R., Farrukh, C. J. P., &amp; Probert, D. R. (2004). Technology roadmapping—A planning framework for evolution and revolution. Technological Forecasting and Social Change, 71(1–2), 5–26. </p></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">33 / 36</span></footer></article></div><div class="slot" id="s34" data-lec="01-4"><article class="slide ty-concepts" aria-label="34 / 36"><div class="sl-in"><h3 class="sh">과목 전체 도구 지도</h3><div class="ccs n5"><div class="cc"><b>STEEPI·Five Forces</b><p>거시·산업 환경의 트렌드와 동인 파악</p></div><div class="cc"><b>SWOT·Scenario</b><p>외부 기회·위협과 내부 강·약점 결합</p></div><div class="cc"><b>Taxonomy·Hierarchy</b><p>시장·제품·기술·자원 구조를 계층화</p></div><div class="cc"><b>Portfolio·Patent</b><p>기술 가치평가와 우선순위 판단</p></div><div class="cc"><b>BSC·Value Chain</b><p>예상 성과지표와 가치사슬 분석</p></div></div></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">34 / 36</span></footer></article><div class="sl-ex"><b>설명</b><p>Phaal(2005, 캠브리지대 기술경영센터)의 그림을 바탕으로 이 과목의 도구가 로드맵의 어느 층과 연결되는지 보여준다. 환경분석 도구는 시장·사업 층의 근거가 되고, 특허·포트폴리오 분석은 기술·자원 층의 판단 근거가 된다. 각 주차 도구를 따로 외우기보다 &#x27;로드맵의 어느 칸을 채우는 도구인가&#x27;로 기억하면 연결이 쉽다.</p></div></div><div class="slot" id="s35" data-lec="01-4"><article class="slide ty-paper" aria-label="35 / 36"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Willyard &amp; McClees (1987)</h3><p class="pp-q">기업은 기술로드맵을 어떻게 경영 프로세스로 운영하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>모토로라는 제품·기술의 미래 진화를 문서화한 로드맵을 사업부별로 작성·검토해, 기술 투자와 제품 계획을 연결하고 경영진과 소통했다.</p><div class="pp-cs"><span class="pp-c">Technology Roadmap</span><span class="pp-c">Motorola</span><span class="pp-c">기술-제품 연계</span></div></div><div><b>강의와의 연결</b><p>01-4 p.30: R&amp;D 기획방법론 대표 문헌 목록의 첫 번째(모토로라 로드맵 프로세스)</p><b>보충 설명</b><p>기업 TRM의 원조 사례로 자주 인용된다. 로드맵에 기술 예측, 경쟁 분석, 품질·특허 현황을 함께 담아 &#x27;어떤 기술을 언제 확보할지&#x27;를 정기적으로 점검하게 했다.</p></div></div><p class="pp-cite">Willyard, C. H., &amp; McClees, C. W. (1987). Motorola&#x27;s technology roadmap process. Research Management, 30(5), 13–19. </p></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">35 / 36</span></footer></article></div><div class="slot" id="s36" data-lec="01-4"><article class="slide ty-takeaway" aria-label="36 / 36"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>R&amp;D는 Plan-Do-See로 관리하고 효과성·책임성·효율성을 본다</li><li>MOT 관점: 기술획득(Make·Buy·Ally)–관리–활용의 흐름</li><li>과목 흐름: 메가트렌드→산업동향→기술예측→역량분석→유망기술→획득전략</li><li>로드맵은 시장·제품을 먼저 정하고 기술·R&amp;D를 고른다</li></ul></div><footer class="sl-f"><span>01-4 R&amp;D 기획 체계와 과목 로드맵</span><span class="num">36 / 36</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><span></span><a class="wk-nav" href="lecture-02.html">2강 메가트렌드 분석 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: R&amp;D planning and TRM (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

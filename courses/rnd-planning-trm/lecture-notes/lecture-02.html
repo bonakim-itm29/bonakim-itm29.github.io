@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2강 메가트렌드 분석 · R&amp;D 기획과 기술로드맵</title>
+<meta name="description" content="유행이 아닌 흐름을 읽어야 기획이 선다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">R&amp;D 기획과 기술로드맵</a> / <a href="index.html">강의별 핵심</a> / 2강</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 02</p>
+  <h1>메가트렌드 분석</h1>
+  <p class="lead">유행이 아닌 흐름을 읽어야 기획이 선다</p>
+  <div class="kws"><span class="kw">Megatrend</span><span class="kw">Trend vs Fad</span><span class="kw">STEEP/PEST</span><span class="kw">디지털 전환</span><span class="kw">Post COVID-19</span><span class="kw">빅카인즈</span></div>
+  <details class="plist"><summary>이 강의의 논문 3편</summary><ol><li><b>Perez (2002)</b> Perez, C. (2002). Technological revolutions and financial capital: The dynamics of bubbles and golden ages. Cheltenham, UK: Edward Elgar.</li><li><b>김석관 외 (2017)</b> 김석관, 최병삼, 양희태, 장필성, 손수정, 장병열, … 송성수 (2017). 4차 산업혁명의 기술 동인과 산업 파급 전망. 정책연구, 1–414. 과학기술정책연구원.</li><li><b>Frey &amp; Osborne (2013/2017)</b> Frey, C. B., &amp; Osborne, M. A. (2017). The future of employment: How susceptible are jobs to computerisation? Technological Forecasting and Social Change, 114, 254–280. (Working paper 2013)</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="02-1"><b>02-1</b><span>R&amp;D 기획 프로세스와 미래연구</span></a><a href="#s9" class="tab" data-lec="02-2"><b>02-2</b><span>트렌드와 메가트렌드</span></a><a href="#s19" class="tab" data-lec="02-3"><b>02-3</b><span>4차 산업혁명과 Post COVID-19</span></a><a href="#s30" class="tab" data-lec="02-4"><b>02-4</b><span>메가트렌드 영향 분석과 STEEP</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 40</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="02-1"><article class="slide ty-title" aria-label="1 / 40"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 메가트렌드 분석</p><p class="t-no">02-1</p><h2 class="t-title">R&amp;D 기획 프로세스와 미래연구</h2><p class="t-thesis">기획은 넓게 보고 좁혀가는 깔때기다</p></div></div><footer class="sl-f"><span>02-1 R&amp;D 기획 프로세스와 미래연구</span><span class="num">1 / 40</span></footer></article></div><div class="slot" id="s2" data-lec="02-1"><article class="slide ty-steps" aria-label="2 / 40"><div class="sl-in"><h3 class="sh">R&amp;D 기획 Process funnel</h3><ol class="steps n6"><li><span class="sn">1</span><b>거시환경 분석</b><p>사회·경제·기술 등 큰 흐름 파악</p></li><li><span class="sn">2</span><b>시장·경쟁 분석</b><p>글로벌 시장 구조와 경쟁 구도</p></li><li><span class="sn">3</span><b>Vision·Top Brand</b><p>목표, 대표 제품군, 역량·전략 도출</p></li><li><span class="sn">4</span><b>System Tech Tree</b><p>제품을 구성 기술로 분해 설계</p></li><li><span class="sn">5</span><b>Target 제품·기술</b><p>개발할 제품과 기술 확정</p></li><li><span class="sn">6</span><b>기술획득 전략</b><p>개발·도입·협력 방식 결정</p></li></ol></div><footer class="sl-f"><span>02-1 R&amp;D 기획 프로세스와 미래연구</span><span class="num">2 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>기획은 넓은 환경분석에서 시작해 단계마다 걸러내며(filtering) 목표 제품과 기술로 좁혀간다(targeting). 앞단을 대충 하면 뒤에서 고른 기술의 근거가 약해진다. 예를 들어 Tech Tree는 Top Brand(대표 제품군)가 정해져야 그릴 수 있고, 획득 전략은 Target 기술이 정해져야 세울 수 있다. 각 단계 산출물이 다음 단계의 입력이 된다.</p></div></div><div class="slot" id="s3" data-lec="02-1"><article class="slide ty-concepts" aria-label="3 / 40"><div class="sl-in"><h3 class="sh">깔때기를 받치는 분석</h3><div class="ccs n5"><div class="cc"><b>Future Study</b><p>미래 전망 연구·조사, 가장 중요한 두 축 중 하나</p></div><div class="cc"><b>Concept Shaping</b><p>목표·제품 개념을 구체화하는 다른 한 축</p></div><div class="cc"><b>산업·밸류체인 분석</b><p>산업·시장 구조를 넓게, 반복 적용</p></div><div class="cc"><b>기술·특허 분석</b><p>기술 동향과 경쟁 위치를 특허로 확인</p></div><div class="cc"><b>Priority·Portfolio</b><p>후보 간 우선순위와 균형을 판단</p></div></div></div><footer class="sl-f"><span>02-1 R&amp;D 기획 프로세스와 미래연구</span><span class="num">3 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드는 깔때기 아래에 &#x27;가장 중요한 2가지&#x27;로 Future Study와 Concept Shaping을, 그 밑에 넓게·반복·적용할 세 분석을 둔다. 즉 미래를 보는 연구와 개념을 다듬는 작업이 기획의 두 기둥이고, 산업·특허·우선순위 분석은 모든 단계에서 되풀이해 쓰는 공통 도구다. 이번 주 메가트렌드 분석은 Future Study의 첫 단추다.</p></div></div><div class="slot" id="s4" data-lec="02-1"><article class="slide ty-steps" aria-label="4 / 40"><div class="sl-in"><h3 class="sh">기획 전반부 Process</h3><ol class="steps n5"><li><span class="sn">1</span><b>Future Study</b><p>Mega Trend, Industry Trend 조사</p></li><li><span class="sn">2</span><b>Impact Analysis</b><p>트렌드가 산업에 주는 영향 평가</p></li><li><span class="sn">3</span><b>SWOT·Key Driver</b><p>핵심 동인 도출, 시나리오 구성</p></li><li><span class="sn">4</span><b>Vision Creation</b><p>실현 목표 모습, Top Brand 1·2·3</p></li><li><span class="sn">5</span><b>개념화</b><p>제품·서비스 개념으로 구체화</p></li></ol></div><footer class="sl-f"><span>02-1 R&amp;D 기획 프로세스와 미래연구</span><span class="num">4 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>기획 전반부는 미래 전망에서 출발해 비전과 대표 제품군(Top Brand)을 정하는 과정이다. 메가트렌드와 산업 트렌드를 조사한 뒤, 그 영향이 큰 것을 골라 SWOT·핵심 동인·시나리오로 정리하고, 여기서 &#x27;우리가 실현할 미래 모습&#x27;을 그린다. 트렌드 조사로 끝나지 않고 영향분석과 개념화까지 가야 기획으로 이어진다.</p></div></div><div class="slot" id="s5" data-lec="02-1"><article class="slide ty-steps" aria-label="5 / 40"><div class="sl-in"><h3 class="sh">KIAT 중장기 표준 프로세스</h3><ol class="steps n5"><li><span class="sn">1</span><b>기본계획 수립</b><p>추진계획·기획위원회 구성</p></li><li><span class="sn">2</span><b>산업환경 분석</b><p>거시환경(STEEP)·산업동향·가치사슬</p></li><li><span class="sn">3</span><b>산업발전전략</b><p>SWOT 분석, 비전과 목표 설정</p></li><li><span class="sn">4</span><b>사업화·R&amp;D 전략</b><p>유망제품·핵심기술 선정</p></li><li><span class="sn">5</span><b>산업기술 구성도</b><p>기술개발 전략과 로드맵 전개</p></li></ol></div><footer class="sl-f"><span>02-1 R&amp;D 기획 프로세스와 미래연구</span><span class="num">5 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>산업통상자원부 산하 한국산업기술진흥원(KIAT)의 중장기 기획 표준 프로세스로, 이 과목의 그룹 과제도 크게 3단계(환경 분석→유망제품·기술 도출→세부 개발전략·보고서)로 같은 흐름을 따른다. 공공 R&amp;D 기획서를 쓸 때 이 구조를 따르면 심사자가 익숙한 논리로 읽을 수 있어 설득에 유리하다.</p></div></div><div class="slot" id="s6" data-lec="02-1"><article class="slide ty-quote" aria-label="6 / 40"><div class="sl-in"><figure class="qt"><blockquote>정보를 수집하라 [X] 정보에 민감하라 [O]</blockquote><figcaption>02-1 슬라이드 p.16</figcaption></figure></div><footer class="sl-f"><span>02-1 R&amp;D 기획 프로세스와 미래연구</span><span class="num">6 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 트렌드를 읽는 태도를 이 한 줄로 요약한다. 자료를 많이 모으는 것 자체는 기획이 아니다. 같은 기사를 보고도 &#x27;이 변화가 우리 분야에 무슨 의미인가&#x27;를 먼저 묻는 사람이 기회를 본다. 실무에서는 자료를 모을 때마다 한 줄 시사점을 함께 적고, 기획 중에도 정보를 계속 업데이트하는 습관이 필요하다.</p></div></div><div class="slot" id="s7" data-lec="02-1"><article class="slide ty-compare" aria-label="7 / 40"><div class="sl-in"><h3 class="sh">트렌드 정보의 출처</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">정부 정책</b><ul><li>과학기술 미래전략·기본계획</li><li>과학기술예측조사</li><li>정부 R&amp;D 중장기 투자전략</li><li>산업융합발전 기본계획</li></ul></div><div class="cp-col"><b class="cp-h">국책기관</b><ul><li>KISTI·STEPI</li><li>지능정보사회진흥원(NIA)</li><li>정보통신정책연구원(KISDI)</li><li>정보통신기획평가원</li></ul></div><div class="cp-col"><b class="cp-h">민간 기관</b><ul><li>딜로이트·가트너·IBM</li><li>CES·MWC 전시회</li><li>MIT 등 대학</li></ul></div></div><p class="cp-note">세 유형을 교차 확인해야 편향이 줄어든다</p></div><footer class="sl-f"><span>02-1 R&amp;D 기획 프로세스와 미래연구</span><span class="num">7 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 제시한 정보원 지도다. 정부 계획은 정책·예산 방향을, 국책기관 보고서는 분석 근거와 통계를, 민간 기관과 전시회는 시장·기술의 최신 흐름을 보여준다. 한 유형만 보면 정부 자료는 낙관적이고, 컨설팅 자료는 자사 서비스 쪽으로 치우칠 수 있다. 같은 트렌드가 세 유형에서 모두 언급되면 신뢰도가 높다고 볼 수 있다.</p></div></div><div class="slot" id="s8" data-lec="02-1"><article class="slide ty-takeaway" aria-label="8 / 40"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>기획은 넓게 보고 좁혀가는 깔때기(Process funnel)다</li><li>가장 중요한 두 가지는 Future Study와 Concept Shaping</li><li>산업·밸류체인, 기술·특허, 우선순위 분석을 반복 적용한다</li><li>정보는 모으는 것보다 민감하게 해석하는 것이 중요하다</li></ul></div><footer class="sl-f"><span>02-1 R&amp;D 기획 프로세스와 미래연구</span><span class="num">8 / 40</span></footer></article></div><div class="slot" id="s9" data-lec="02-2"><article class="slide ty-title" aria-label="9 / 40"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 메가트렌드 분석</p><p class="t-no">02-2</p><h2 class="t-title">트렌드와 메가트렌드</h2><p class="t-thesis">지속성과 범위가 트렌드의 등급을 정한다</p></div></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">9 / 40</span></footer></article></div><div class="slot" id="s10" data-lec="02-2"><article class="slide ty-compare" aria-label="10 / 40"><div class="sl-in"><h3 class="sh">트렌드 vs 유행</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">트렌드(Trend)</b><ul><li>기존과 구분되는 생각·의식의 변화</li><li>지속적, 방향이 있는 흐름</li><li>점들이 이어져 선을 이룸</li></ul></div><div class="cp-col"><b class="cp-h">유행(Fad)</b><ul><li>일시적으로 스쳐 지나감</li><li>단발적, 방향이 없음</li><li>흩어진 점처럼 나타났다 사라짐</li></ul></div></div></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">10 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드 그래프에서 유행은 흩어진 점, 트렌드는 점들을 이은 우상향 선이다. 기획자가 조심할 것은 눈에 띄는 점 하나를 선으로 착각하는 일이다. 예를 들어 특정 앱이 한 해 폭발적으로 뜬 것은 유행일 수 있지만, 그 밑에 깔린 &#x27;비대면 서비스 이용 증가&#x27;는 여러 해 이어지는 트렌드다. R&amp;D는 몇 년이 걸리므로 선에 투자해야 한다.</p></div></div><div class="slot" id="s11" data-lec="02-2"><article class="slide ty-steps" aria-label="11 / 40"><div class="sl-in"><h3 class="sh">트렌드의 등급</h3><ol class="steps n4"><li><span class="sn">1</span><b>Fad</b><p>소수가 1년 정도 지속</p></li><li><span class="sn">2</span><b>Trend</b><p>상당히 많은 사람이 5년 이상 지속</p></li><li><span class="sn">3</span><b>Megatrend</b><p>그것이 10년 동안 지속</p></li><li><span class="sn">4</span><b>Culture</b><p>30년 이상 지속되면 문화</p></li></ol></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">11 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>범위(얼마나 많은 사람)와 기간(얼마나 오래)으로 트렌드 등급을 나눈다. R&amp;D 기획에서 메가트렌드를 보는 이유는 기술 개발과 사업화에 보통 5~10년이 걸리기 때문이다. 판정할 때는 기사량이나 검색량을 10년 이상 시계열로 그려, 한 번 튀고 꺼지는지(Fad) 꾸준히 오르는지(Trend 이상) 확인하면 된다.</p></div></div><div class="slot" id="s12" data-lec="02-2"><article class="slide ty-tree" aria-label="12 / 40"><div class="sl-in"><h3 class="sh">EY 메가트렌드 프레임워크</h3><div class="tree"><div class="tr-r">EY Megatrends</div><div class="tr-cs n4"><div class="tr-c"><b>Primary forces</b><p>기술·세계화·인구·환경, 근본 원인</p></div><div class="tr-c"><b>Megatrends</b><p>3~10년, 산업을 가로지르는 교란</p></div><div class="tr-c"><b>Future worlds</b><p>10년+, 새 게임의 규칙 4개 영역</p></div><div class="tr-c"><b>Weak signals</b><p>아직 약하지만 커질 수 있는 신호</p></div></div></div></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">12 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>EY는 기술·세계화·인구·환경 같은 근본 동인이 파도처럼 겹치며 3~10년짜리 메가트렌드(탈세계화, 기술 냉전, 합성생물학 등)를 만들고, 10년 이후에는 국제질서·사회경제·기업시장·가계개인 네 영역의 새 규칙이 된다고 본다. 코로나19는 환경 쪽 근본 동인에서 온 큰 파도로 해석된다. 트렌드를 원인-결과의 층으로 정리하는 틀로 쓰면 좋다.</p></div></div><div class="slot" id="s13" data-lec="02-2"><article class="slide ty-points" aria-label="13 / 40"><div class="sl-in"><h3 class="sh">딜로이트 7대 메가트렌드</h3><div class="pts n4"><div class="pt"><b>국제질서</b><p>미중 긴장 지속, 국제질서 변화 가속</p></div><div class="pt"><b>지속가능성</b><p>친환경 기조 강화, 기업의 ESG 경영 도입</p></div><div class="pt"><b>금융</b><p>기술이 불러온 금융산업 재편, 금융 안정</p></div><div class="pt"><b>산업·소비</b><p>변곡점에 선 제조업, 코로나19발 소비 변화</p></div></div></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">13 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>딜로이트가 포스트 팬데믹 시대에 제시한 7대 메가트렌드를 네 묶음으로 정리했다. 컨설팅사의 메가트렌드는 기업 고객의 관심사(공급망, 규제, 금융, 소비)를 중심으로 짜여 있다는 점을 염두에 두고 읽어야 한다. 기획에서는 이런 목록을 그대로 쓰기보다 우리 산업에 직접 닿는 항목을 골라 근거를 덧붙여 쓴다.</p></div></div><div class="slot" id="s14" data-lec="02-2"><article class="slide ty-cases" aria-label="14 / 40"><div class="sl-in"><h3 class="sh">CES로 본 기술 트렌드</h3><div class="css n4"><div class="cs"><b>스마트 기기</b><p>PC·스마트폰→태블릿→웨어러블·스마트 TV</p></div><div class="cs"><b>AI·로봇</b><p>로봇·드론→음성인식→AI 탑재 로봇</p></div><div class="cs"><b>연결성</b><p>스마트카·IoT→초연결·스마트시티→플랫폼</p></div><div class="cs"><b>ESG</b><p>사회적 책임·지속가능성·개인정보보호</p></div></div></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">14 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>한국경제연구원(2022)이 정리한 2010~2022년 CES 주요 트렌드다. 개별 제품은 해마다 바뀌지만 스마트 기기, AI·로봇, 연결성이라는 큰 줄기는 10년 넘게 이어져 메가트렌드 조건을 충족한다. 최근에는 ESG가 새 줄기로 등장했다. 전시회 자료는 매년 바뀌는 &#x27;점&#x27;이므로 여러 해를 겹쳐 &#x27;선&#x27;을 찾는 방식으로 읽어야 한다.</p></div></div><div class="slot" id="s15" data-lec="02-2"><article class="slide ty-case" aria-label="15 / 40"><div class="sl-in"><p class="ca-k">사례 · 트렌드×기술 교차</p><h3 class="sh">NIA 디지털 10대 이슈</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>한국지능정보사회진흥원은 다음 해 디지털 정책의 방향을 정할 근거가 필요했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>사회·산업·경제·글로벌 이슈 키워드를 군집으로 묶고 ICT 7대 기술(AI, 데이터, 클라우드·보안, 차세대통신 등)과 매칭했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>2021년 디지털 분야 10대 이슈와 정책 방향을 도출했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>메가트렌드 목록만으로는 부족하다. 이슈와 기술을 교차해야 기획 과제가 된다.</p></div></div></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">15 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>이 사례의 핵심은 &#x27;이슈 군집 + 기술 요소&#x27;의 결합이다. 예를 들어 &#x27;비대면 일상&#x27;이라는 사회 이슈와 &#x27;디지털 경험&#x27; 기술을 겹치면 원격 교육·의료 서비스라는 정책 과제가 나온다. 그룹 과제에서도 메가트렌드 키워드를 뽑은 뒤, 대상 분야의 기술 요소와 2차원 표로 교차해 보면 5대 이슈를 고르기 쉬워진다.</p></div></div><div class="slot" id="s16" data-lec="02-2"><article class="slide ty-steps" aria-label="16 / 40"><div class="sl-in"><h3 class="sh">빅카인즈로 과제 분석하기</h3><ol class="steps n4"><li><span class="sn">1</span><b>키워드 검색</b><p>분야 키워드로 기간·언론사 지정 검색</p></li><li><span class="sn">2</span><b>워드클라우드</b><p>함께 많이 나온 단어로 이슈 파악</p></li><li><span class="sn">3</span><b>관계도</b><p>키워드 간 연결망으로 이슈 구조 보기</p></li><li><span class="sn">4</span><b>시계열 추이</b><p>기사량 변화로 지속성·급등 확인</p></li></ol></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">16 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 빅카인즈, 공공데이터포털, 구글트렌드, 네이버랩스 같은 도구를 쓰고 AI를 어떻게 접목할지 고민하라고 한다. 예시 화면에서 &#x27;디지털&#x27; 관련 기사량은 수년간 낮게 유지되다 최근 급격히 늘었다. 이처럼 추이 그래프는 트렌드의 시작 시점과 가속을 보여준다. 매주 결과물을 공유해 집단지식을 고도화하는 것도 과목 운영 원칙이다.</p></div></div><div class="slot" id="s17" data-lec="02-2"><article class="slide ty-lab" aria-label="17 / 40"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">빅데이터로 메가트렌드 스캐닝</h3><p class="lb-p">뉴스·검색 빅데이터와 기관 보고서로 트렌드 후보를 모으고, 지속성으로 유행과 메가트렌드를 걸러 기획에 쓸 5대 핵심 이슈를 정한다.</p><ol class="lb-s"><li>범위·키워드 정하기</li><li>기관 보고서 스캔</li><li>빅카인즈 분석</li><li>검색 관심도 비교</li><li>지속성 판정</li><li>군집·명명</li><li>영향 사슬 그리기</li><li>5대 이슈 선정</li></ol><p class="lb-go"><a href="labs/02-megatrend.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">17 / 40</span></footer></article></div><div class="slot" id="s18" data-lec="02-2"><article class="slide ty-takeaway" aria-label="18 / 40"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>유행(Fad)은 단발적, 트렌드는 지속적인 의식·행동 변화다</li><li>1년 Fad, 5년+ Trend, 10년 Megatrend, 30년+ Culture</li><li>EY: 근본 동인이 메가트렌드를 만들고 새 게임의 규칙으로 이어진다</li><li>빅카인즈·구글트렌드 같은 데이터로 지속성을 확인한다</li></ul></div><footer class="sl-f"><span>02-2 트렌드와 메가트렌드</span><span class="num">18 / 40</span></footer></article></div><div class="slot" id="s19" data-lec="02-3"><article class="slide ty-title" aria-label="19 / 40"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 메가트렌드 분석</p><p class="t-no">02-3</p><h2 class="t-title">4차 산업혁명과 Post COVID-19</h2><p class="t-thesis">4차 산업혁명과 코로나19는 결국 디지털 전환이다</p></div></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">19 / 40</span></footer></article></div><div class="slot" id="s20" data-lec="02-3"><article class="slide ty-compare" aria-label="20 / 40"><div class="sl-in"><h3 class="sh">4차 산업혁명 논의의 두 기원</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">독일 Industrie 4.0</b><ul><li>2011년 시작</li><li>ICT로 독일 제조업 업그레이드</li><li>CPS로 자동화·맞춤화·리쇼어링</li></ul></div><div class="cp-col"><b class="cp-h">AI·로봇과 일자리</b><ul><li>Frey &amp; Osborne(2013): 고위험 47%</li><li>브린욜프슨·맥아피(2014)</li><li>마틴 포드(2015) &#x27;로봇의 부상&#x27;</li></ul></div></div><p class="cp-note">WEF(2016.1)가 합쳐 확장, 알파고(2016.3)로 확산</p></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">20 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>4차 산업혁명이라는 말은 두 줄기의 논의가 합쳐진 것이다. 독일의 제조업 혁신 전략과, AI·로봇이 일자리를 대체한다는 논의다. 다보스포럼(WEF)이 2016년 1월 이를 전 산업으로 확장해 &#x27;혁명&#x27;이라 불렀고, 같은 해 3월 알파고 충격으로 한국에서 용어가 급속히 퍼졌다. 용어의 기원을 알면 과장된 담론과 실체를 구분할 수 있다.</p></div></div><div class="slot" id="s21" data-lec="02-3"><article class="slide ty-paper" aria-label="21 / 40"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Frey &amp; Osborne (2013/2017)</h3><p class="pp-q">현재 직업은 컴퓨터화(자동화)에 얼마나 취약한가?</p><div class="pp-g"><div><b>핵심 주장</b><p>미국 702개 직업의 자동화 확률을 추정한 결과 고용의 약 47%가 고위험군에 속한다. 운송·사무·생산직이 특히 취약하다.</p><div class="pp-cs"><span class="pp-c">컴퓨터화 확률</span><span class="pp-c">고위험군 47%</span><span class="pp-c">일자리 대체</span></div></div><div><b>강의와의 연결</b><p>02-3 p.21: 4차 산업혁명 논의의 두 번째 줄기(AI·로봇과 일자리 소멸)의 대표 근거로 &#x27;고위험군 47%&#x27; 인용</p><b>보충 설명</b><p>2013년 옥스퍼드 워킹페이퍼로 먼저 공개되어 큰 반향을 일으켰다. 이후 직업이 아닌 &#x27;업무(task)&#x27; 단위로 보면 위험 비율이 훨씬 낮다는 반박(OECD 연구 등)이 이어졌다.</p></div></div><p class="pp-cite">Frey, C. B., &amp; Osborne, M. A. (2017). The future of employment: How susceptible are jobs to computerisation? Technological Forecasting and Social Change, 114, 254–280. (Working paper 2013) </p></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">21 / 40</span></footer></article></div><div class="slot" id="s22" data-lec="02-3"><article class="slide ty-points" aria-label="22 / 40"><div class="sl-in"><h3 class="sh">혁명인가, 연장인가</h3><div class="pts n4"><div class="pt"><b>WEF 주장</b><p>26개 유망기술, 속도·범위·시스템 충격</p></div><div class="pt"><b>리프킨 반론</b><p>3차 산업혁명의 연장일 뿐(기술적 연속성)</p></div><div class="pt"><b>고든 반론</b><p>생산성 변화 없음, 2차 혁명 대발명 못 미침</p></div><div class="pt"><b>강의 시각</b><p>과장 대신 기술 동인과 파급을 구체적으로</p></div></div></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">22 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>WEF는 변화의 속도, 범위와 깊이, 시스템 충격을 근거로 혁명이 진행 중이라 봤다. 반면 리프킨은 정보화의 연장이라 했고, 경제학자 고든은 생산성 통계에 뚜렷한 변화가 없다는 점을 들어 전기·내연기관 같은 2차 산업혁명의 대발명에 못 미친다고 했다. 기획서에서 이런 거대 담론을 쓸 때는 반론까지 알고 근거를 구체화해야 한다.</p></div></div><div class="slot" id="s23" data-lec="02-3"><article class="slide ty-concepts" aria-label="23 / 40"><div class="sl-in"><h3 class="sh">산업화 요소의 변화(1~4차)</h3><div class="ccs n5"><div class="cc"><b>소재</b><p>1차 철 → 2차 강철·인공염료·합성수지</p></div><div class="cc"><b>동력·에너지</b><p>증기·석탄 → 전기·석유 → 4차 신재생·스마트그리드</p></div><div class="cc"><b>생산수단</b><p>기계 → 대량생산 → 컴퓨터·자동화 → AI·자동화</p></div><div class="cc"><b>교통·통신</b><p>기관차 → 자동차·전화 → 인터넷 → 자율주행·IoT</p></div><div class="cc"><b>바이오</b><p>3차 유전자재조합 → 4차 유전자편집·합성생물학</p></div></div></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">23 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>산업혁명을 소재, 동력·에너지, 생산수단, 교통·통신 네 요소(+바이오)로 비교한 표다. 3차(정보화)는 컴퓨터·인터넷이 주된 변화였고, 4차는 AI, 자율주행, 모바일·사물인터넷, 유전자편집 등 여러 요소가 동시에 바뀐다는 점이 다르다. 기술 기획에서 &#x27;우리 분야의 어떤 요소가 바뀌는가&#x27;를 이 틀로 점검할 수 있다.</p></div></div><div class="slot" id="s24" data-lec="02-3"><article class="slide ty-tree" aria-label="24 / 40"><div class="sl-in"><h3 class="sh">3개 층위의 기술 동인</h3><div class="tree"><div class="tr-r">4차 산업혁명</div><div class="tr-cs n3"><div class="tr-c"><b>미시: 요소기술</b><p>IoT·클라우드·빅데이터·AI·로봇</p></div><div class="tr-c"><b>중간: 시스템</b><p>데이터 기반 가치창출 시스템</p></div><div class="tr-c"><b>거시: 트렌드</b><p>디지털 전환의 심화</p></div></div></div></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">24 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>김석관 외(2017)는 4차 산업혁명을 세 층으로 정리한다. 5대 핵심기술이 서로 연결되어 데이터 기반 가치창출 시스템을 만들고, 이것이 1970년대부터 이어진 디지털 전환을 한층 심화시킨다. 기획에서는 개별 기술(미시)만 보지 말고, 그 기술이 어떤 시스템의 부품이 되어 어떤 산업 변화(거시)를 만드는지까지 연결해야 한다.</p></div></div><div class="slot" id="s25" data-lec="02-3"><article class="slide ty-paper" aria-label="25 / 40"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">김석관 외 (2017)</h3><p class="pp-q">4차 산업혁명의 실체와 기술 동인은 무엇이며 산업에 어떻게 퍼지는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>4차 산업혁명은 1970년대 시작된 디지털 전환이 IoT·클라우드·빅데이터·AI·로봇 5대 기술로 심화되는 것이며, 데이터 기반 가치창출 시스템이 그 중심이다.</p><div class="pp-cs"><span class="pp-c">디지털 전환 심화</span><span class="pp-c">5대 핵심기술</span><span class="pp-c">데이터 가치창출</span></div></div><div><b>강의와의 연결</b><p>02-3 p.21-25: 논의의 기원, 산업화 4대 요소 변화, 3개 층위의 기술 동인, 데이터 기반 가치창출 시스템, 요약</p><b>보충 설명</b><p>&#x27;혁명&#x27; 여부에 대한 반론(리프킨, 고든)을 함께 검토하고, 과장된 담론 대신 미시(기술)–중간(시스템)–거시(트렌드) 층위로 나눠 실체를 정리했다는 점이 특징이다. 서지는 슬라이드 표기를 따름.</p></div></div><p class="pp-cite">김석관, 최병삼, 양희태, 장필성, 손수정, 장병열, … 송성수 (2017). 4차 산업혁명의 기술 동인과 산업 파급 전망. 정책연구, 1–414. 과학기술정책연구원. <span class="pp-unv">서지 확인 필요</span></p></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">25 / 40</span></footer></article></div><div class="slot" id="s26" data-lec="02-3"><article class="slide ty-cycle" aria-label="26 / 40"><div class="sl-in"><h3 class="sh">데이터 기반 가치창출</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="① 데이터 확보 → ② 데이터 분석 → ③ 현실에 적용"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(408.3,112.5) rotate(60.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(300.0,300.0) rotate(180.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(191.7,112.5) rotate(300.0)"/><g><rect x="228.0" y="29.0" width="144" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">① 데이터 확보</text></g><g><rect x="336.3" y="216.5" width="144" height="42" rx="21" class="cy-node"/><text x="408.3" y="243.5" text-anchor="middle" class="cy-t">② 데이터 분석</text></g><g><rect x="119.7" y="216.5" width="144" height="42" rx="21" class="cy-node"/><text x="191.7" y="243.5" text-anchor="middle" class="cy-t">③ 현실에 적용</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">데이터 중심 사업모델</text></svg></div></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">26 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>현실세계(개인·산업·사회)에서 센서·사용자 인터페이스로 데이터를 확보하고(Acquire), 가상세계에서 클라우드·빅데이터·AI로 분석한 뒤(Analyze), 로봇·액추에이터 등으로 현실에 적용(Act)한다. 이 순환이 공정·제품·서비스·사업모델을 혁신한다. 예: 물류센터가 재고 데이터를 모아 수요를 예측하고 로봇 피킹 순서를 바꾸는 것.</p></div></div><div class="slot" id="s27" data-lec="02-3"><article class="slide ty-stat" aria-label="27 / 40"><div class="sl-in"><h3 class="sh">대형 사건과 경제 충격</h3><div class="stat"><p class="st-v">-29.5%</p><p class="st-l">코로나19 주가지수 폭락(19일)</p><p class="st-t">금융위기 -56.8%(356일 하락, 1,022일 회복), 9·11 -11.6%(15일 회복)</p></div></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">27 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>1970년 이후 대형 사건의 지수 폭락 규모와 회복 기간을 비교한 표(Visual Capitalist, 2020.3.18.)다. 코로나19는 19일 만에 29.5% 떨어져 속도 면에서 이례적이었다. 충격의 크기와 회복 기간이 사건마다 크게 다르므로, 기획에서 외부 충격을 다룰 때는 &#x27;얼마나 깊고 얼마나 오래 가는가&#x27; 두 숫자로 시나리오를 나눠 보는 것이 좋다.</p></div></div><div class="slot" id="s28" data-lec="02-3"><article class="slide ty-concepts" aria-label="28 / 40"><div class="sl-in"><h3 class="sh">코로나 이후 6대 글로벌 트렌드</h3><div class="ccs n6"><div class="cc"><b>비대면 사회</b><p>거리의 탄생: 무인화, 원격·플랫폼 노동 증가</p></div><div class="cc"><b>분열의 공동체</b><p>큰 정부의 귀환, 불평등·혐오·정보 편향</p></div><div class="cc"><b>미지·예견된 위험</b><p>블랙스완·회색 코뿔소 대비 미래연구 필요</p></div><div class="cc"><b>세계화의 반작용</b><p>GVC 재편: 지역화, 자국 생산, 디지털화</p></div><div class="cc"><b>충돌과 협력</b><p>미중 충돌, 유럽 퇴조·아시아 부상</p></div><div class="cc"><b>모든 것의 디지털</b><p>기술의 역할·속도·방향, 데이터 주권</p></div></div></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">28 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>ETRI 경제사회연구실(2020)이 정리한 코로나 이후 6대 트렌드와 21개 이슈다. 결론은 대부분 디지털로 수렴한다. 비대면 사회는 플랫폼을, 공급망 재편은 공급망 디지털화를, 위험 대비는 디지털 기술 기반 미래연구를 요구한다. 그래서 강의는 4차 산업혁명과 Post COVID-19를 요약하면 둘 다 &#x27;디지털 전환&#x27;이라고 정리한다.</p></div></div><div class="slot" id="s29" data-lec="02-3"><article class="slide ty-takeaway" aria-label="29 / 40"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>4차 산업혁명은 독일 Industrie 4.0과 AI·일자리 논의에서 시작됐다</li><li>실체는 5대 기술로 심화된 디지털 전환, 중심은 데이터 가치창출</li><li>데이터 확보→분석→현실 적용의 순환이 새 사업모델을 만든다</li><li>코로나19도 디지털 전환을 가속했다: 두 흐름의 결론은 같다</li></ul></div><footer class="sl-f"><span>02-3 4차 산업혁명과 Post COVID-19</span><span class="num">29 / 40</span></footer></article></div><div class="slot" id="s30" data-lec="02-4"><article class="slide ty-title" aria-label="30 / 40"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 메가트렌드 분석</p><p class="t-no">02-4</p><h2 class="t-title">메가트렌드 영향 분석과 STEEP</h2><p class="t-thesis">메가트렌드를 산업 영향과 기회·위협으로 번역한다</p></div></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">30 / 40</span></footer></article></div><div class="slot" id="s31" data-lec="02-4"><article class="slide ty-concepts" aria-label="31 / 40"><div class="sl-in"><h3 class="sh">지금 보이는 메가트렌드</h3><div class="ccs n6"><div class="cc"><b>장기침체·제로금리</b><p>잠재성장률 하락, 유효수요 부족, 유동성 함정</p></div><div class="cc"><b>글로벌 뉴딜</b><p>각국 대규모 재정, 통화정책 프레임 전환·CBDC</p></div><div class="cc"><b>탈세계화·새 밸류체인</b><p>보호무역, 미중 분쟁, 글로벌 가치사슬 재편</p></div><div class="cc"><b>디지털 경제</b><p>플랫폼 부상, 공유경제, 네트워크 가치</p></div><div class="cc"><b>MZ세대·디지털 금융</b><p>긱 경제, 핀테크·빅테크, 블록체인·암호자산</p></div><div class="cc"><b>ESG 투자</b><p>그린스완 리스크, 지배구조와 수탁자 책임</p></div></div></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">31 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 &#x27;지금 보이는 메가트렌드&#x27;로 든 7개 주제(장기침체, 글로벌 뉴딜, 탈세계화, 디지털 경제, MZ세대 금융, ESG 투자, 블록체인·암호자산)를 6개로 묶었다. 경제·금융 쪽 시각이 강한 목록이다. 기획자는 이런 거시 흐름이 자기 분야의 수요, 투자 여건, 규제에 어떤 영향을 줄지 번역해야 하며 그 도구가 다음의 영향 사슬과 STEEP이다.</p></div></div><div class="slot" id="s32" data-lec="02-4"><article class="slide ty-steps" aria-label="32 / 40"><div class="sl-in"><h3 class="sh">메가트렌드→산업 영향 사슬</h3><ol class="steps n5"><li><span class="sn">1</span><b>메가트렌드</b><p>환경오염 증가, 글로벌 규제, 유가 상승</p></li><li><span class="sn">2</span><b>직접 영향 산업</b><p>자동차: 배출 저감 요구</p></li><li><span class="sn">3</span><b>대응 제품·기술</b><p>전기차, 하이브리드, 연비 개선, 경량화</p></li><li><span class="sn">4</span><b>간접 영향 산업</b><p>소재: 고강도강판, 비철금속, 복합소재</p></li><li><span class="sn">5</span><b>세부 기술 기회</b><p>엔진블록 소재 변경, 알루미늄 캐스팅</p></li></ol></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">32 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>메가트렌드는 직접 영향을 받는 산업(자동차)을 거쳐, 그 산업의 수요를 통해 간접 영향을 받는 산업(금속·화학 소재)으로 번진다. 자동차가 배출을 줄이려 경량화하면 외장재·엔진블록 소재가 바뀌고 소재 산업에 고강도강판, 알루미늄 캐스팅 같은 기회가 생긴다. 자기 분야가 간접 영향 산업이라면 이 사슬을 거꾸로 따라가 동인을 찾으면 된다.</p></div></div><div class="slot" id="s33" data-lec="02-4"><article class="slide ty-steps" aria-label="33 / 40"><div class="sl-in"><h3 class="sh">산업혁명의 수명주기</h3><ol class="steps n6"><li><span class="sn">1</span><b>기술혁명</b><p>기존 성장 정체, 새 기술·기업 등장</p></li><li><span class="sn">2</span><b>금융거품</b><p>신산업에 투자 폭발, 새 백만장자</p></li><li><span class="sn">3</span><b>붕괴</b><p>양극화, 금융시장 붕괴, 새 제도 시작</p></li><li><span class="sn">4</span><b>황금기</b><p>중견기업 성장, 새 라이프스타일·소비</p></li><li><span class="sn">5</span><b>사회불안</b><p>성장 미충족, 좌절·정치적 불안</p></li><li><span class="sn">6</span><b>다음 기술혁명</b><p>새로운 사이클의 시작</p></li></ol></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">33 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>Perez의 틀을 수정한 그림이다. 거품 단계에서는 &#x27;GPT(범용기술) 확산 인프라를 누가 빨리 깔 것인가&#x27;, 붕괴 후에는 &#x27;누가 적절한 제도적 틀을 빨리 만드는가&#x27;가 승부를 가른다. 제도 보완에 실패하면 황금기 없이 사회불안으로 간다. 지금의 기술(예: AI)이 어느 단계에 있는지 판단하면 투자·규제 리스크를 읽는 데 도움이 된다.</p></div></div><div class="slot" id="s34" data-lec="02-4"><article class="slide ty-paper" aria-label="34 / 40"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Perez (2002)</h3><p class="pp-q">기술혁명은 어떤 경제·사회적 주기를 거쳐 확산되는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>기술혁명은 금융자본이 몰리는 설치기(거품)와 붕괴, 제도 재정비 후 생산자본이 주도하는 전개기(황금기)를 거친다. 약 50년 주기로 다섯 차례 반복되었다.</p><div class="pp-cs"><span class="pp-c">기술-경제 패러다임</span><span class="pp-c">금융거품</span><span class="pp-c">황금기</span></div></div><div><b>강의와의 연결</b><p>02-4 p.36: 산업혁명의 수명주기(기술혁명→금융거품→붕괴→황금기→사회불안→다음 혁명), Perez(2003)에서 수정</p><b>보충 설명</b><p>슬라이드의 &#x27;Perez(2003)&#x27;는 이 책을 바탕으로 한 그림으로 보인다. 핵심은 붕괴 뒤 새 제도를 얼마나 빨리 만드느냐가 황금기를 좌우한다는 점이며, 닷컴 붕괴와 금융위기를 이 틀로 해석하는 논의가 이어졌다.</p></div></div><p class="pp-cite">Perez, C. (2002). Technological revolutions and financial capital: The dynamics of bubbles and golden ages. Cheltenham, UK: Edward Elgar. </p></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">34 / 40</span></footer></article></div><div class="slot" id="s35" data-lec="02-4"><article class="slide ty-concepts" aria-label="35 / 40"><div class="sl-in"><h3 class="sh">STEEP 5대 요인</h3><div class="ccs n5"><div class="cc"><b>Social</b><p>인구통계, 문화, 라이프스타일, 고령화</p></div><div class="cc"><b>Technological</b><p>기술인력·R&amp;D 예산, 신기술, 특허</p></div><div class="cc"><b>Ecological</b><p>천연자원, 재해, 환경규제·오염</p></div><div class="cc"><b>Economic</b><p>환율·금리·무역, 취업·인플레, GDP</p></div><div class="cc"><b>Political/Legal</b><p>탈규제·민영화, 산업·경쟁 정책, 여론</p></div></div></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">35 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>STEEP은 산업 내 기업의 경쟁력에 영향을 줄 수 있는 거시 환경요인을 다섯 범주로 나눈 틀이다(Armstrong, 2006). PEST에 생태(Ecological)를 더한 형태로, 범주는 빠짐없이 훑기 위한 체크리스트 역할을 한다. 중요한 것은 범주를 채우는 것이 아니라 각 요인이 &#x27;우리 산업&#x27;의 경쟁력에 어떻게 작용하는지 연결하는 것이다.</p></div></div><div class="slot" id="s36" data-lec="02-4"><article class="slide ty-case" aria-label="36 / 40"><div class="sl-in"><p class="ca-k">사례 · 기회·위협 분류</p><h3 class="sh">바이오산업 STEEP 예시</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>바이오산업의 거시환경을 STEEP 5요인으로 점검해 기회와 위협을 정리했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>요인별 분석 대상(인구·문화, R&amp;D 예산·특허, 환경규제, 환율·GDP, 규제·정책)을 정하고 기회·위협 칸에 나눴다.</p></div><div class="ca-b ca-result"><i>결과</i><p>기회: 고령화·수명연장·웰빙, 정부 R&amp;D 지원 확대. 위협: 윤리적 가치관 대립, 기술의 불완전성, 긴 투자기간.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>같은 정책 요인도 지원은 기회, 윤리·안전성 규제 불확실성은 위협이 될 수 있다.</p></div></div></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">36 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>강의의 STEEP 예시표다. 사회 요인의 고령화는 바이오 수요를 키우는 기회지만, 생명윤리 논쟁은 위협이다. 경제 요인에서는 장기 투자가 필요하다는 점과 경기 침체 시 투자 위축이 위협이 된다. 이처럼 각 칸을 기회와 위협 양쪽으로 따져 보면 R&amp;D 과제를 고를 때 &#x27;기회를 잡으면서 위협을 피하는&#x27; 조건이 보인다.</p></div></div><div class="slot" id="s37" data-lec="02-4"><article class="slide ty-matrix" aria-label="37 / 40"><div class="sl-in"><h3 class="sh">STEEP 요인 카드 작성법</h3><div class="mx"><span class="mx-y1">사실</span><span class="mx-y2">해석</span><div class="mx-c tl"><b>현재</b><p>출산율 1.1명, 스마트폰 사용률 75%</p></div><div class="mx-c tr"><b>미래</b><p>10년 후 출산율 0.9명, 사용률 90%</p></div><div class="mx-c bl"><b>기회</b><p>디지털 익숙 세대 증가 → 모바일 서비스 확대</p></div><div class="mx-c br"><b>위협</b><p>인구 감소·규제 등 산업에 불리한 변화</p></div><span class="mx-x1">진단</span><span class="mx-x2">전망</span></div></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">37 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 템플릿은 요인마다 현재·미래·기회·위협 네 칸을 채우게 한다. 예시는 인터넷은행 같은 금융 서비스로, 스마트폰 사용률이 75%에서 90%로 오르고 디지털 세대 300만 명이 사회에 진출하면 모바일 금융 수요가 커진다. 정치 요인에서는 은산분리 규제가 완화되거나 예외가 인정될지가 핵심 변수였다. 숫자와 출처가 있어야 카드가 근거가 된다.</p></div></div><div class="slot" id="s38" data-lec="02-4"><article class="slide ty-steps" aria-label="38 / 40"><div class="sl-in"><h3 class="sh">STEEP에서 SWOT으로</h3><ol class="steps n4"><li><span class="sn">1</span><b>요인별 환경</b><p>현재·미래 수치와 변화 방향 정리</p></li><li><span class="sn">2</span><b>시사점</b><p>그래서 우리 산업에 무슨 의미인가</p></li><li><span class="sn">3</span><b>기회·위협</b><p>SWOT의 O·T 칸으로 이동</p></li><li><span class="sn">4</span><b>내부와 결합</b><p>강점·약점과 묶어 전략 방향 도출</p></li></ol></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">38 / 40</span></footer></article><div class="sl-ex"><b>설명</b><p>STEEP의 마지막 템플릿은 &#x27;환경&#x27;과 &#x27;시사점&#x27; 두 칸이고, 화살표가 SWOT 표로 이어진다. 환경 칸이 사실이라면 시사점 칸은 해석이다. 예: &#x27;평균수명 98세 전망&#x27;(환경) → &#x27;고령자용 디지털 서비스 수요 확대, 접근성 기술 필요&#x27;(시사점). 이번 주 과제는 메가트렌드 보완, STEEP 분석, 시장 규모·상황·플레이어 분석이다.</p></div></div><div class="slot" id="s39" data-lec="02-4"><article class="slide ty-lab" aria-label="39 / 40"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">STEEP으로 거시환경 분석하기</h3><p class="lb-p">사회·기술·생태·경제·정치법률 요인을 현재와 미래로 진단하고 기회·위협과 시사점으로 번역해 SWOT과 R&amp;D 방향의 근거를 만든다.</p><ol class="lb-s"><li>분석표 만들기</li><li>고려사항 고르기</li><li>현재값 채우기</li><li>미래 전망 쓰기</li><li>기회·위협 분류</li><li>영향×불확실성 평가</li><li>시사점 도출</li></ol><p class="lb-go"><a href="labs/02-steep.html">실습 페이지 열기 →</a> <span class="lb-w">인터랙티브 도구 포함</span></p></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">39 / 40</span></footer></article></div><div class="slot" id="s40" data-lec="02-4"><article class="slide ty-takeaway" aria-label="40 / 40"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>메가트렌드는 직접 영향 산업을 거쳐 소재 등 수요산업까지 번진다</li><li>기술혁명은 거품·붕괴·황금기를 거치며, 제도 대응 속도가 관건</li><li>STEEP: 사회·기술·생태·경제·정치법률의 거시 환경요인</li><li>현재→미래→기회·위협→시사점 순서로 써서 SWOT으로 넘긴다</li></ul></div><footer class="sl-f"><span>02-4 메가트렌드 영향 분석과 STEEP</span><span class="num">40 / 40</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-01.html">← 1강 R&amp;D 기획 입문</a><a class="wk-nav" href="lecture-03.html">3강 외부환경·5 Forces →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: R&amp;D planning and TRM (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>델파이로 미래 제품·기술 합의 · 실습</title><meta name="description" content="전문가 패널의 3차 반복 설문으로 미래의 중요 제품·서비스·기술을 도출하고, CVR·합의도·수렴도·안정도로 합의 수준을 숫자로 보인다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../../assets/style.css"><style>.wrap.wide{max-width:1040px}
+.num{font-variant-numeric:tabular-nums;font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ok:#2e6b3a;--bad:#a3362b}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ok:#8dd39a;--bad:#ee8b7e}}
+.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lab-box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px;min-width:0}
+.lab-box h3{font-size:.95rem;margin-bottom:6px}
+.lab-box ul{padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:.92rem}
+ol.lab-steps{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;counter-reset:s}
+ol.lab-steps li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;counter-increment:s}
+ol.lab-steps input{width:20px;height:20px;margin-top:3px;accent-color:var(--accent)}
+ol.lab-steps b::before{content:counter(s) ". ";color:var(--accent);font-family:"IBM Plex Mono",monospace}
+ol.lab-steps p{grid-column:2;margin:0;font-size:.95rem}
+ol.lab-steps .tip{font-size:.85rem;color:var(--amber)}
+#progress{font-size:.85rem;color:var(--accent);font-weight:600}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.tools a{display:flex;flex-direction:column;gap:2px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.tools a:hover{border-color:var(--accent)} .tools b{color:var(--accent)} .tools span{font-size:.85rem;color:var(--muted)} .tools small{font-size:.72rem;color:var(--muted);word-break:break-all}
+.widget{background:var(--surface);border:1px solid var(--accent);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.w-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:.9rem}
+.w-in,.w-sel,.w-ta{font:inherit;font-size:.9rem;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:4px;padding:6px 8px;min-width:0;width:100%}
+.w-row .w-in{flex:1;width:auto;min-width:200px}
+.w-sm{width:84px!important;flex:none!important}
+.w-btn,.w-x{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:4px;padding:6px 12px;cursor:pointer;align-self:flex-start}
+.w-btn:hover{border-color:var(--accent)} .w-x{color:var(--muted)}
+.w-t{border-collapse:collapse;width:100%;font-size:.88rem}
+.w-t th,.w-t td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.w-t th{font-size:.76rem;color:var(--muted);font-weight:500}
+.w-scroll{overflow-x:auto}
+.w-bar{display:block;height:10px;background:var(--line);border-radius:2px;min-width:80px}.w-bar i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.w-stat{padding:10px 12px;border-radius:6px;background:var(--accent-soft);font-size:.92rem;margin:0}
+.w-stat.warn{background:var(--amber-soft)} .w-stat.bad{background:color-mix(in srgb,var(--bad) 15%,transparent)}
+td.ok{color:var(--ok);font-weight:600} td.bad{color:var(--bad)}
+.w-note{font-size:.8rem;color:var(--muted);margin:0}
+.w-grid2{display:grid;grid-template-columns:1fr 1.4fr auto;gap:8px;margin-bottom:6px}
+.w-grid4{display:grid;grid-template-columns:1.2fr auto auto 2fr auto;gap:8px;margin-bottom:6px;align-items:center}
+.w-head span{font-size:.75rem;color:var(--muted)}
+.w-swot,.w-tows{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.w-cell{display:flex;flex-direction:column;gap:4px;font-size:.85rem}
+.w-cell b{color:var(--accent)}
+.w-tows .w-cell{background:var(--accent-soft);padding:10px;border-radius:6px}
+.w-ff{display:grid;grid-template-columns:170px 160px 2em 1fr;gap:10px;align-items:center;font-size:.9rem}
+.w-ff input[type=range]{accent-color:var(--accent)}
+.w-quad{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.w-quad>div{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:.88rem}
+.w-quad b{color:var(--accent);font-size:.85rem} .w-quad ul{padding-left:18px;margin-top:4px}
+.w-rm{display:grid;gap:3px;min-width:640px;font-size:.82rem}
+.w-rm-h{font-size:.75rem;color:var(--muted);text-align:center;padding:4px}
+.w-rm-l{grid-column:1;font-weight:600;padding:8px;background:var(--accent-soft);border-radius:4px;display:flex;align-items:center}
+.w-rm-c{border-left:1px dashed var(--line);min-height:44px}
+.w-rm-i{align-self:center;margin:4px 2px;padding:6px 10px;border-radius:999px;color:#fff;font-weight:600;font-size:.8rem;z-index:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.w-L0{background:#2f5d50}.w-L1{background:#3f7a8c}.w-L2{background:#a8620f}.w-L3{background:#6b5a9c}
+@media (max-width:720px){.lab-grid,.w-swot,.w-tows,.w-quad{grid-template-columns:1fr}.w-grid4{grid-template-columns:1fr 1fr}.w-grid4 .w-in:not(.w-sm){grid-column:1/-1}.w-ff{grid-template-columns:1fr auto;}.w-ff .w-in{grid-column:1/-1}.w-grid2{grid-template-columns:1fr}}
+</style></head><body>
+<nav><div class="wrap"><a href="../../../../index.html" class="logo">김보나</a><ul><li><a href="../../../../index.html#direction">연구방향</a></li><li><a href="../../../../courses/index.html">대학원 과목</a></li><li><a href="../../../../macro-notes/index.html">투자노트</a></li></ul></div></nav>
+<main class="wrap wide">
+<p class="crumb"><a href="../../../../index.html">홈</a> / <a href="../../../index.html">대학원 과목</a> / <a href="../../index.html">R&amp;D 기획과 기술로드맵</a> / <a href="../index.html">강의별 핵심</a> / 실습</p>
+<header class="page"><span class="eyebrow">실습 · 4강 기술예측과 델파이</span><h1>델파이로 미래 제품·기술 합의</h1><p class="lead">전문가 패널의 3차 반복 설문으로 미래의 중요 제품·서비스·기술을 도출하고, CVR·합의도·수렴도·안정도로 합의 수준을 숫자로 보인다.</p>
+<p class="note"><a href="../lecture-04.html#s64">← 이 방법을 다룬 슬라이드로 돌아가기</a></p></header>
+<section><div class="lab-grid"><div class="lab-box"><h3>언제 쓰나</h3><p>데이터가 부족한 미래 전망, 기술수준·실현시기 판단, TRM 필요 기술 후보를 객관화할 때</p></div><div class="lab-box"><h3>시작 전에 준비할 것</h3><ul><li>예측 주제와 시간축(예: 근미래 2030·먼미래 2050)</li><li>응답 13명 이상 확보 가능한 전문가 명단</li><li>설문 도구(Google Forms 등)와 집계 시트</li><li>회수 기간·사례(보수) 계획</li></ul></div></div></section>
+<section><h2>단계별 따라하기 <span id="progress"></span></h2><ol class="lab-steps" data-steps="04-delphi"><li><input type="checkbox" aria-label="패널 구성 완료"><b>패널 구성</b><p>분야·경력별로 전문가를 배치해 최소 13명 응답을 확보한다. 회수율을 감안해 필요 인원보다 많이 섭외하고, 반복 응답 방식을 미리 설명한다.</p></li><li><input type="checkbox" aria-label="1차: 개방형 질문 완료"><b>1차: 개방형 질문</b><p>&#x27;미래 ○○ 분야에서 중요해질 제품·서비스(기술)는?&#x27;처럼 묻는다. 실습 기준: 중요 제품·서비스 10개를 고르고 분야별 세부질문 3개를 도출한다.</p></li><li><input type="checkbox" aria-label="2차: 구조화 설문 완료"><b>2차: 구조화 설문</b><p>1차 답을 묶어 문항화한다(실습: 10개×3=30문항). 변화가능성 5단계, 중립 없는 희망 4단계 같은 척도로 강도를 묻는다.</p><p class="tip">팁: 사례처럼 3명 이상이 같은 답을 한 내용만 문항화하면 잡음이 줄어든다</p></li><li><input type="checkbox" aria-label="CVR로 거르기 완료"><b>CVR로 거르기</b><p>문항별 CVR=(ne−N/2)/(N/2)를 구한다. Lawshe 최소값(13명 .54, 15명 .49, 20명 .42) 미만 문항은 빼고 3차로 넘긴다.</p></li><li><input type="checkbox" aria-label="합의 지표 계산 완료"><b>합의 지표 계산</b><p>문항별 평균·표준편차, 중앙값, Q1·Q3를 구해 합의도=1−(Q3−Q1)/Mdn, 수렴도=(Q3−Q1)/2, 변이계수=SD/평균을 계산한다.</p></li><li><input type="checkbox" aria-label="3차: 피드백 설문 완료"><b>3차: 피드백 설문</b><p>2차 결과(평균·표준편차·합의도)와 본인 2차 응답을 함께 보여주고 수정·유지를 받는다. 합의가 안 된 문항은 한 번 더 반복한다.</p></li><li><input type="checkbox" aria-label="결과 종합 완료"><b>결과 종합</b><p>합의도 0.75 이상, 수렴도 0.5 이하, 변이계수 0.5 이하를 기준으로 판정하고 CVR·합의도 높은 순으로 정렬해 보고한다.</p></li></ol></section>
+<section><h2>직접 해보기 · 델파이 집계기: 라운드별 응답 → 합의도·수렴도·CVR</h2><div class="widget" data-widget="delphi" data-key="04-delphi"></div><p class="w-note">입력한 내용은 이 브라우저에만 저장됩니다. 결과는 "결과를 표로 복사"로 엑셀이나 문서에 붙여 넣을 수 있습니다.</p></section>
+<section><h2>도구와 데이터</h2><div class="tools"><a href="https://workspace.google.com/products/forms/" target="_blank" rel="noopener"><b>Google Forms ↗</b><span>1~3차 설문 배포, 응답을 시트로 자동 수집</span><small>https://workspace.google.com/products/forms/</small></a><a href="https://www.google.com/sheets/about/" target="_blank" rel="noopener"><b>Google Sheets ↗</b><span>무료 스프레드시트: 점수표·가중합·연도별 계산 시트 작성</span><small>https://www.google.com/sheets/about/</small></a><a href="https://www.kistep.re.kr/" target="_blank" rel="noopener"><b>KISTEP ↗</b><span>기술수준평가 등 국가 델파이 보고서로 문항·결과 양식 참고</span><small>https://www.kistep.re.kr/</small></a></div></section>
+<section><div class="lab-grid"><div class="lab-box"><h3>결과물과 판단 기준</h3><p>문항별 평균·SD·CVR·합의도·수렴도·변이계수 표와 우선순위 목록. 기준 충족 여부가 문항마다 표시되고 제외 사유가 남아 있으면 좋다.</p></div><div class="lab-box"><h3>흔한 실수</h3><ul><li>응답이 13명 미만이라 CVR 판정이 불가능</li><li>설문이 길어 응답 품질·회수율이 떨어짐</li><li>총괄자가 자기 의견을 문항·피드백에 섞음</li><li>합의를 만장일치로 오해해 무리하게 반복</li></ul></div></div>
+<div class="lab-box" style="margin-top:14px"><h3>스스로 점검하기</h3><ul><li>패널 구성이 분야·경력별로 고른가?</li><li>제외된 문항마다 CVR 값과 기준이 적혀 있는가?</li><li>3차 설문에 본인 2차 응답이 함께 제시됐는가?</li><li>합의도·수렴도·안정도 기준을 모두 보고했는가?</li></ul></div></section>
+</main><footer><div class="wrap">© 2026 김보나 · 강의 원자료: R&amp;D planning and TRM (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer><script>/* Interactive practice widgets for method labs. Each widget mounts on <div data-widget="name">. Drafts are kept in this browser only (localStorage). */
+(function(){
+  var store={get:function(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+  function el(t,a,c){var e=document.createElement(t);if(a)for(var k in a){if(k==='class')e.className=a[k];else if(k==='text')e.textContent=a[k];else if(k==='html')e.innerHTML=a[k];else e.setAttribute(k,a[k])}(c||[]).forEach(function(x){if(x)e.appendChild(typeof x==='string'?document.createTextNode(x):x)});return e}
+  function num(v){var x=parseFloat(String(v).replace(',','.'));return isNaN(x)?null:x}
+  function r3(x){return x==null||!isFinite(x)?'–':(Math.round(x*1000)/1000).toString()}
+  function quant(a,p){var s=a.slice().sort(function(x,y){return x-y}),n=s.length;if(!n)return null;var h=(n-1)*p,lo=Math.floor(h);return s[lo]+(h-lo)*((s[lo+1]!==undefined?s[lo+1]:s[lo])-s[lo])}
+  function mean(a){return a.reduce(function(x,y){return x+y},0)/a.length}
+  function sd(a){var m=mean(a);return Math.sqrt(a.reduce(function(s,x){return s+(x-m)*(x-m)},0)/(a.length-1||1))}
+  function copyBtn(getText){var b=el('button',{type:'button',class:'w-btn',text:'결과를 표로 복사'});b.onclick=function(){var t=getText();var done=function(){b.textContent='복사했습니다';setTimeout(function(){b.textContent='결과를 표로 복사'},1500)};try{navigator.clipboard.writeText(t).then(done,function(){prompt('복사할 내용',t)})}catch(e){prompt('복사할 내용',t)}};return b}
+  function bar(v,max){var w=Math.max(0,Math.min(1,v/max))*100;return el('span',{class:'w-bar'},[el('i',{style:'width:'+w.toFixed(1)+'%'})])}
+  var W={};
+
+  /* ---------- AHP ---------- */
+  var RI={1:0,2:0,3:0.52,4:0.89,5:1.11,6:1.25,7:1.35,8:1.40,9:1.45};
+  var SC=[9,8,7,6,5,4,3,2,1,1/2,1/3,1/4,1/5,1/6,1/7,1/8,1/9];
+  function lab(v){return v>=1?String(v):'1/'+Math.round(1/v)}
+  W.ahp=function(root,key){
+    var st=store.get(key,{items:['신뢰성','스타일','연비'],m:{'0-1':2,'0-2':1/2,'1-2':1/8}});
+    // default reproduces nothing in particular; user edits freely
+    function render(){
+      root.innerHTML='';
+      var n=st.items.length;
+      var names=el('div',{class:'w-row'},[el('label',{text:'비교 항목 (쉼표로 구분, 2~9개)'}),(function(){var i=el('input',{type:'text',class:'w-in',value:st.items.join(', ')});i.onchange=function(){st.items=i.value.split(',').map(function(s){return s.trim()}).filter(Boolean).slice(0,9);st.m={};save();render()};return i})()]);
+      root.appendChild(names);
+      var tbl=el('table',{class:'w-t'});var tb=el('tbody');
+      for(var i=0;i<n;i++)for(var j=i+1;j<n;j++){(function(i,j){
+        var k=i+'-'+j,cur=st.m[k]||1;
+        var sel=el('select',{class:'w-sel','aria-label':st.items[i]+' 대 '+st.items[j]});
+        SC.forEach(function(v){var o=el('option',{value:v,text:v>1?st.items[i]+' '+lab(v)+'배 중요':v<1?st.items[j]+' '+Math.round(1/v)+'배 중요':'같다'});if(Math.abs(v-cur)<1e-6)o.selected=true;sel.appendChild(o)});
+        sel.onchange=function(){st.m[k]=parseFloat(sel.value);save();calc()};
+        tb.appendChild(el('tr',{},[el('td',{text:st.items[i]}),el('td',{},[sel]),el('td',{text:st.items[j]})]));
+      })(i,j)}
+      tbl.appendChild(tb);root.appendChild(el('div',{class:'w-scroll'},[tbl]));
+      var out=el('div',{class:'w-out'});root.appendChild(out);
+      function calc(){
+        var A=[];for(var i=0;i<n;i++){A.push([]);for(var j=0;j<n;j++){A[i][j]=i===j?1:i<j?(st.m[i+'-'+j]||1):1/(st.m[j+'-'+i]||1)}}
+        var w=A.map(function(){return 1/n});
+        for(var it=0;it<100;it++){var v=A.map(function(r){return r.reduce(function(s,a,j){return s+a*w[j]},0)});var s=v.reduce(function(a,b){return a+b},0);w=v.map(function(x){return x/s})}
+        var Aw=A.map(function(r){return r.reduce(function(s,a,j){return s+a*w[j]},0)});
+        var lmax=mean(Aw.map(function(x,i){return x/w[i]}));var CI=n>2?(lmax-n)/(n-1):0;var CR=n>2?CI/RI[n]:0;
+        out.innerHTML='';
+        var t=el('table',{class:'w-t'});t.appendChild(el('thead',{},[el('tr',{},[el('th',{text:'항목'}),el('th',{text:'가중치'}),el('th',{text:''})])]));
+        var b=el('tbody');var mx=Math.max.apply(null,w);
+        w.map(function(x,i){return[i,x]}).sort(function(a,b){return b[1]-a[1]}).forEach(function(p){b.appendChild(el('tr',{},[el('td',{text:st.items[p[0]]}),el('td',{class:'num',text:r3(p[1])}),el('td',{},[bar(p[1],mx)])]))});
+        t.appendChild(b);out.appendChild(t);
+        var cls=CR<=0.1?'ok':CR<=0.2?'warn':'bad',msg=CR<=0.1?'일관성 통과 (CR ≤ 0.1)':CR<=0.2?'용납 가능 (0.1 < CR ≤ 0.2)':'재조사 필요 (CR > 0.2)';
+        out.appendChild(el('p',{class:'w-stat '+cls,html:'λmax <b>'+r3(lmax)+'</b> · CI <b>'+r3(CI)+'</b> · RI <b>'+r3(RI[n])+'</b> · CR <b>'+r3(CR)+'</b> → '+msg}));
+        out.appendChild(el('p',{class:'w-note',text:'가중치는 쌍대비교 행렬의 주고유벡터(거듭제곱법)로 계산합니다. 강의의 행 합 정규화 방식과 소수점 아래에서 조금 다를 수 있습니다.'}));
+        out.appendChild(copyBtn(function(){return '항목\t가중치\n'+st.items.map(function(s,i){return s+'\t'+r3(w[i])}).join('\n')+'\nCR\t'+r3(CR)}));
+      }
+      calc();
+    }
+    function save(){store.set(key,st)}
+    render();
+  };
+
+  /* ---------- Delphi ---------- */
+  var LAWSHE={5:.99,6:.99,7:.99,8:.75,9:.78,10:.62,11:.59,12:.56,13:.54,14:.51,15:.49,20:.42,25:.37,30:.33,35:.31,40:.29};
+  function lawshe(n){var ks=Object.keys(LAWSHE).map(Number).sort(function(a,b){return a-b});var r=null;ks.forEach(function(k){if(k<=n)r=LAWSHE[k]});return r}
+  W.delphi=function(root,key){
+    var st=store.get(key,{rows:[['인공지능 기반 설계 자동화 확산','4,5,4,3,5,4,4,5,3,4,4,5,4'],['데이터 거래 플랫폼 활성화','3,2,4,5,3,2,4,3,5,2,3,4,3']]});
+    root.innerHTML='';
+    root.appendChild(el('p',{class:'w-note',text:'항목마다 전문가 응답(예: 5점 척도)을 쉼표로 입력하세요. 예시 값은 연습용입니다.'}));
+    var box=el('div');root.appendChild(box);
+    var add=el('button',{type:'button',class:'w-btn',text:'항목 추가'});add.onclick=function(){st.rows.push(['새 항목','']);save();draw()};
+    root.appendChild(add);
+    var out=el('div',{class:'w-out'});root.appendChild(out);
+    function save(){store.set(key,st)}
+    function draw(){
+      box.innerHTML='';
+      st.rows.forEach(function(r,i){
+        var a=el('input',{type:'text',class:'w-in',value:r[0],'aria-label':'항목 이름'});a.oninput=function(){r[0]=a.value;save();calc()};
+        var b=el('input',{type:'text',class:'w-in',value:r[1],'aria-label':'응답 값'});b.oninput=function(){r[1]=b.value;save();calc()};
+        var x=el('button',{type:'button',class:'w-x',text:'삭제'});x.onclick=function(){st.rows.splice(i,1);save();draw()};
+        box.appendChild(el('div',{class:'w-grid2'},[a,b,x]));
+      });calc();
+    }
+    function calc(){
+      out.innerHTML='';var t=el('table',{class:'w-t'});
+      t.appendChild(el('thead',{},[el('tr',{},['항목','N','평균','중앙값','Q1–Q3','합의도','수렴도','변이계수','CVR','판정'].map(function(h){return el('th',{text:h})}))]));
+      var tb=el('tbody'),lines=['항목\tN\t평균\t중앙값\tQ1\tQ3\t합의도\t수렴도\t변이계수\tCVR'];
+      st.rows.forEach(function(r){
+        var v=r[1].split(/[,\s]+/).map(num).filter(function(x){return x!=null});if(!v.length)return;
+        var N=v.length,m=mean(v),md=quant(v,.5),q1=quant(v,.25),q3=quant(v,.75),agr=md?1-(q3-q1)/md:null,conv=(q3-q1)/2,cv=m?sd(v)/m:null,ne=v.filter(function(x){return x>=3}).length,cvr=(ne-N/2)/(N/2),lim=lawshe(N);
+        var okA=agr!=null&&agr>=0.75,okC=conv<=0.5,okV=cv!=null&&cv<=0.5,okR=lim==null?null:cvr>=lim;
+        var pass=okA&&okC&&okV&&(okR!==false);
+        tb.appendChild(el('tr',{},[el('td',{text:r[0]}),el('td',{class:'num',text:N}),el('td',{class:'num',text:r3(m)}),el('td',{class:'num',text:r3(md)}),el('td',{class:'num',text:r3(q1)+'–'+r3(q3)}),
+          el('td',{class:'num '+(okA?'ok':'bad'),text:r3(agr)}),el('td',{class:'num '+(okC?'ok':'bad'),text:r3(conv)}),el('td',{class:'num '+(okV?'ok':'bad'),text:r3(cv)}),
+          el('td',{class:'num '+(okR==null?'':okR?'ok':'bad'),text:r3(cvr)+(lim!=null?' (기준 '+lim+')':'')}),el('td',{text:pass?'합의':'다음 라운드'})]));
+        lines.push([r[0],N,r3(m),r3(md),r3(q1),r3(q3),r3(agr),r3(conv),r3(cv),r3(cvr)].join('\t'));
+      });
+      t.appendChild(tb);out.appendChild(el('div',{class:'w-scroll'},[t]));
+      out.appendChild(el('p',{class:'w-note',text:'기준(강의 슬라이드): 합의도 = 1−(Q3−Q1)/중앙값 ≥ 0.75, 수렴도 = (Q3−Q1)/2 ≤ 0.5, 변이계수 = 표준편차/평균 ≤ 0.5, CVR = (중립 이상 응답 수 − N/2)/(N/2) ≥ Lawshe 최소값. 사분위수는 엑셀 QUARTILE.INC와 같은 방식입니다.'}));
+      out.appendChild(copyBtn(function(){return lines.join('\n')}));
+    }
+    draw();
+  };
+
+  /* ---------- TOWS ---------- */
+  W.tows=function(root,key){
+    var st=store.get(key,{S:'',W:'',O:'',T:'',SO:'',WO:'',ST:'',WT:''});
+    root.innerHTML='';
+    function ta(k,label,ph){var t=el('textarea',{class:'w-ta',rows:'4',placeholder:ph,'aria-label':label});t.value=st[k];t.oninput=function(){st[k]=t.value;store.set(key,st)};return el('label',{class:'w-cell w-'+k},[el('b',{text:label}),t])}
+    root.appendChild(el('div',{class:'w-swot'},[ta('S','강점 S','한 줄에 하나씩'),ta('W','약점 W',''),ta('O','기회 O',''),ta('T','위협 T','')]));
+    root.appendChild(el('p',{class:'w-note',text:'아래 네 칸에서 내부 요인(S·W)과 외부 요인(O·T)을 짝지어 전략과 R&D 과제를 적습니다.'}));
+    root.appendChild(el('div',{class:'w-tows'},[ta('SO','SO 전략: 강점으로 기회를 잡는다','예: S1×O2 → …'),ta('WO','WO 전략: 기회를 살려 약점을 보완한다',''),ta('ST','ST 전략: 강점으로 위협을 막는다',''),ta('WT','WT 전략: 약점과 위협을 함께 줄인다','')]));
+    root.appendChild(copyBtn(function(){return ['S','W','O','T','SO','WO','ST','WT'].map(function(k){return k+'\t'+st[k].replace(/\n/g,' / ')}).join('\n')}));
+  };
+
+  /* ---------- Roadmap ---------- */
+  W.roadmap=function(root,key){
+    var y0=new Date().getFullYear();
+    var st=store.get(key,{start:y0,years:6,layers:['시장·고객 니즈','제품·서비스','기술','R&D·자원'],items:[[0,y0+1,y0+3,'예: 목표 시장 진입'],[1,y0,y0+2,'예: 1세대 제품'],[2,y0,y0+1,'예: 핵심기술 A 확보'],[3,y0,y0+2,'예: 공동연구 과제']]});
+    root.innerHTML='';
+    var ctl=el('div',{class:'w-row'});
+    var s=el('input',{type:'number',class:'w-in w-sm',value:st.start,'aria-label':'시작 연도'}),n=el('input',{type:'number',class:'w-in w-sm',value:st.years,min:'2',max:'15','aria-label':'기간(년)'});
+    s.onchange=function(){st.start=+s.value;save();draw()};n.onchange=function(){st.years=Math.max(2,Math.min(15,+n.value));save();draw()};
+    ctl.appendChild(el('label',{},['시작 연도 ',s]));ctl.appendChild(el('label',{},['기간(년) ',n]));root.appendChild(ctl);
+    var list=el('div');root.appendChild(list);
+    var add=el('button',{type:'button',class:'w-btn',text:'항목 추가'});add.onclick=function(){st.items.push([2,st.start,st.start+1,'새 항목']);save();draw()};root.appendChild(add);
+    var view=el('div',{class:'w-scroll'});root.appendChild(view);
+    function save(){store.set(key,st)}
+    function draw(){
+      list.innerHTML='';
+      st.items.forEach(function(it,i){
+        var l=el('select',{class:'w-sel','aria-label':'층'});st.layers.forEach(function(x,k){var o=el('option',{value:k,text:x});if(k===it[0])o.selected=true;l.appendChild(o)});l.onchange=function(){it[0]=+l.value;save();paint()};
+        var a=el('input',{type:'number',class:'w-in w-sm',value:it[1],'aria-label':'시작'}),b=el('input',{type:'number',class:'w-in w-sm',value:it[2],'aria-label':'끝'}),c=el('input',{type:'text',class:'w-in',value:it[3],'aria-label':'내용'});
+        a.oninput=function(){it[1]=+a.value;save();paint()};b.oninput=function(){it[2]=+b.value;save();paint()};c.oninput=function(){it[3]=c.value;save();paint()};
+        var x=el('button',{type:'button',class:'w-x',text:'삭제'});x.onclick=function(){st.items.splice(i,1);save();draw()};
+        list.appendChild(el('div',{class:'w-grid4'},[l,a,b,c,x]));
+      });paint();
+    }
+    function paint(){
+      view.innerHTML='';var g=el('div',{class:'w-rm',style:'grid-template-columns:150px repeat('+st.years+',minmax(70px,1fr))'});
+      g.appendChild(el('div',{class:'w-rm-h'}));for(var y=0;y<st.years;y++)g.appendChild(el('div',{class:'w-rm-h num',text:String(st.start+y)}));
+      st.layers.forEach(function(L,k){
+        var row=k+2;g.appendChild(el('div',{class:'w-rm-l',style:'grid-row:'+row,text:L}));
+        for(var y=0;y<st.years;y++)g.appendChild(el('div',{class:'w-rm-c',style:'grid-row:'+row+';grid-column:'+(y+2)}));
+      });
+      var lane={};
+      st.items.forEach(function(it){var a=Math.max(it[1],st.start),b=Math.min(it[2],st.start+st.years-1);if(b<a)return;
+        g.appendChild(el('div',{class:'w-rm-i w-L'+it[0],style:'grid-row:'+(it[0]+2)+';grid-column:'+(a-st.start+2)+' / '+(b-st.start+3),text:it[3]}))});
+      view.appendChild(g);
+    }
+    draw();
+  };
+
+  /* ---------- Patent indicators ---------- */
+  W['patent-index']=function(root,key){
+    var st=store.get(key,{rows:[['A사',120,840,3.2],['B사',60,180,2.1],['C사',30,300,4.0]]});
+    root.innerHTML='';root.appendChild(el('p',{class:'w-note',text:'출원인별 특허 수, 피인용 합계, 평균 패밀리 국가 수를 입력하세요. 예시 값은 연습용입니다.'}));
+    var box=el('div');root.appendChild(box);var add=el('button',{type:'button',class:'w-btn',text:'출원인 추가'});add.onclick=function(){st.rows.push(['새 출원인',0,0,1]);save();draw()};root.appendChild(add);
+    var out=el('div',{class:'w-out'});root.appendChild(out);
+    function save(){store.set(key,st)}
+    function draw(){box.innerHTML='';box.appendChild(el('div',{class:'w-grid4 w-head'},['출원인','특허 수','피인용 합','평균 패밀리국','',].map(function(h){return el('span',{text:h})})));
+      st.rows.forEach(function(r,i){var f=r.map(function(v,k){var x=el('input',{type:k?'number':'text',class:'w-in'+(k?' w-sm':''),value:v});x.oninput=function(){r[k]=k?num(x.value)||0:x.value;save();calc()};return x});
+        var x=el('button',{type:'button',class:'w-x',text:'삭제'});x.onclick=function(){st.rows.splice(i,1);save();draw()};box.appendChild(el('div',{class:'w-grid4'},f.concat([x])))});calc()}
+    function calc(){out.innerHTML='';var P=0,C=0,Fw=0;st.rows.forEach(function(r){P+=r[1];C+=r[2];Fw+=r[3]*r[1]});var cppAll=P?C/P:0,fAll=P?Fw/P:0;
+      var t=el('table',{class:'w-t'});t.appendChild(el('thead',{},[el('tr',{},['출원인','CPP','PII','TS','PFS'].map(function(h){return el('th',{text:h})}))]));var tb=el('tbody'),lines=['출원인\tCPP\tPII\tTS\tPFS'];
+      st.rows.forEach(function(r){var cpp=r[1]?r[2]/r[1]:0,pii=cppAll?cpp/cppAll:0,ts=r[1]*pii,pfs=fAll?r[3]/fAll:0;
+        tb.appendChild(el('tr',{},[el('td',{text:r[0]}),el('td',{class:'num',text:r3(cpp)}),el('td',{class:'num '+(pii>=1?'ok':''),text:r3(pii)}),el('td',{class:'num',text:r3(ts)}),el('td',{class:'num '+(pfs>=1?'ok':''),text:r3(pfs)})]));lines.push([r[0],r3(cpp),r3(pii),r3(ts),r3(pfs)].join('\t'))});
+      t.appendChild(tb);out.appendChild(el('div',{class:'w-scroll'},[t]));
+      out.appendChild(el('p',{class:'w-note',text:'CPP = 피인용 합 ÷ 특허 수, PII = 출원인 CPP ÷ 전체 CPP (1보다 크면 평균보다 영향력이 큼), TS = 특허 수 × PII, PFS = 출원인 평균 패밀리국 수 ÷ 전체 평균. 강의 슬라이드에 식이 없어 표준 정의를 사용했습니다.'}));
+      out.appendChild(copyBtn(function(){return lines.join('\n')}))}
+    draw();
+  };
+
+  /* ---------- Five forces ---------- */
+  W['five-forces']=function(root,key){
+    var F=['기존 경쟁자 간 경쟁','신규 진입 위협','대체재 위협','구매자 교섭력','공급자 교섭력'];
+    var st=store.get(key,{v:[3,3,3,3,3],n:['','','','','']});root.innerHTML='';
+    root.appendChild(el('p',{class:'w-note',text:'각 힘의 세기를 1(약함)~5(강함)로 매기고 근거를 적으세요. 힘이 약할수록 산업이 매력적입니다.'}));
+    var out=el('p',{class:'w-stat'});
+    F.forEach(function(f,i){var r=el('input',{type:'range',min:'1',max:'5',step:'1',value:st.v[i],'aria-label':f}),o=el('b',{class:'num',text:st.v[i]}),t=el('input',{type:'text',class:'w-in',value:st.n[i],placeholder:'근거 (예: 상위 3사 점유율 70%)'});
+      r.oninput=function(){st.v[i]=+r.value;o.textContent=r.value;store.set(key,st);calc()};t.oninput=function(){st.n[i]=t.value;store.set(key,st)};
+      root.appendChild(el('div',{class:'w-ff'},[el('span',{text:f}),r,o,t]))});
+    root.appendChild(out);
+    function calc(){var a=mean(st.v),att=6-a;out.className='w-stat '+(att>=3.5?'ok':att>=2.5?'warn':'bad');out.innerHTML='평균 위협 강도 <b>'+r3(a)+'</b> · 산업 매력도(6−평균) <b>'+r3(att)+'</b> / 5 → '+(att>=3.5?'매력적':att>=2.5?'보통':'매력 낮음')+' <span class="w-note">(가중 없는 단순 평균, 연습용 지표)</span>'}
+    calc();root.appendChild(copyBtn(function(){return F.map(function(f,i){return f+'\t'+st.v[i]+'\t'+st.n[i]}).join('\n')}));
+  };
+
+  /* ---------- PEST / STEEP ---------- */
+  W.pest=function(root,key){
+    var C=['S 사회','T 기술','E 경제','E 환경','P 정치·제도'];
+    var st=store.get(key,{rows:[['고령화와 1인 가구 증가',0,5,2],['생성형 AI 확산',1,5,3],['고금리 장기화',2,3,4]]});
+    root.innerHTML='';root.appendChild(el('p',{class:'w-note',text:'트렌드를 STEEP으로 분류하고 영향도와 불확실성을 1~5로 매기세요. 예시 값은 연습용입니다.'}));
+    var box=el('div');root.appendChild(box);var add=el('button',{type:'button',class:'w-btn',text:'트렌드 추가'});add.onclick=function(){st.rows.push(['새 트렌드',1,3,3]);save();draw()};root.appendChild(add);
+    var out=el('div',{class:'w-out'});root.appendChild(out);
+    function save(){store.set(key,st)}
+    function draw(){box.innerHTML='';st.rows.forEach(function(r,i){var a=el('input',{type:'text',class:'w-in',value:r[0]});a.oninput=function(){r[0]=a.value;save();calc()};
+      var c=el('select',{class:'w-sel'});C.forEach(function(x,k){var o=el('option',{value:k,text:x});if(k===r[1])o.selected=true;c.appendChild(o)});c.onchange=function(){r[1]=+c.value;save();calc()};
+      var im=el('input',{type:'number',min:'1',max:'5',class:'w-in w-sm',value:r[2],'aria-label':'영향도'});im.oninput=function(){r[2]=+im.value;save();calc()};
+      var un=el('input',{type:'number',min:'1',max:'5',class:'w-in w-sm',value:r[3],'aria-label':'불확실성'});un.oninput=function(){r[3]=+un.value;save();calc()};
+      var x=el('button',{type:'button',class:'w-x',text:'삭제'});x.onclick=function(){st.rows.splice(i,1);save();draw()};box.appendChild(el('div',{class:'w-grid4'},[a,c,im,un,x]))});calc()}
+    function calc(){out.innerHTML='';var q={'핵심 불확실성 (시나리오로 다룸)':[],'핵심 트렌드 (계획에 반영)':[],'모니터링':[],'낮은 우선순위':[]};
+      st.rows.forEach(function(r){var hi=r[2]>=4,hu=r[3]>=3;q[hi&&hu?'핵심 불확실성 (시나리오로 다룸)':hi?'핵심 트렌드 (계획에 반영)':hu?'모니터링':'낮은 우선순위'].push(r[0]+' ('+C[r[1]][0]+')')});
+      var g=el('div',{class:'w-quad'});Object.keys(q).forEach(function(k){g.appendChild(el('div',{},[el('b',{text:k}),el('ul',{},q[k].map(function(t){return el('li',{text:t})}))]))});out.appendChild(g);
+      out.appendChild(el('p',{class:'w-note',text:'분류 기준: 영향도 4 이상을 높음, 불확실성 3 이상을 높음으로 봅니다. 영향도×불확실성 평가는 강의에 없는 보조 단계입니다.'}));
+      out.appendChild(copyBtn(function(){return st.rows.map(function(r){return r[0]+'\t'+C[r[1]]+'\t'+r[2]+'\t'+r[3]}).join('\n')}))}
+    draw();
+  };
+
+  /* ---------- step checklist on lab pages ---------- */
+  document.querySelectorAll('[data-steps]').forEach(function(ol){var key='steps:'+ol.getAttribute('data-steps'),st=store.get(key,{});
+    ol.querySelectorAll('input[type=checkbox]').forEach(function(c,i){c.checked=!!st[i];c.onchange=function(){st[i]=c.checked;store.set(key,st);upd()}});
+    var pr=document.getElementById('progress');function upd(){if(!pr)return;var all=ol.querySelectorAll('input[type=checkbox]'),d=0;all.forEach(function(c){if(c.checked)d++});pr.textContent=d+' / '+all.length+' 단계 완료'}upd()});
+  document.querySelectorAll('[data-widget]').forEach(function(d){var f=W[d.getAttribute('data-widget')];if(f)f(d,'w:'+d.getAttribute('data-key'))});
+})();
+</script></body></html>

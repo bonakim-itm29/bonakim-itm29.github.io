@@ -11,6 +11,8 @@ courses/                   대학원 과목 (KAIST I&TM)
   index.html               과목 목록
   <과목>/index.html        과목 소개 + 과제 목록
   <과목>/<과제>/index.html 과제 페이지
+venture-plan/               사업기획 (과목 내용을 사업에 적용)
+  climate-tech/            기후테크 사업기획
 macro-notes/               매크로 투자노트
   index.html
   companies/<기업>/index.html
@@ -26,6 +28,7 @@ macro-notes/               매크로 투자노트
 | finance-accounting-for-tm | 기술경영을 위한 재무와 회계 |
 | entrepreneurship | 기업가 정신 |
 | climate-tech-net-zero | 기후기술과 탄소중립경영 |
+| rnd-planning-trm | R&D 기획과 기술로드맵 (R&D planning and TRM) |
 | innovation-management | 이노베이션 경영 |
 | semiconductor-innovation | 첨단기술 특수논제 · 반도체산업혁신론 |
 

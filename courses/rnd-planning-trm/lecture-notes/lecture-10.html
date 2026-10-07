@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10강 TRM 점검과 사례 · R&amp;D 기획과 기술로드맵</title>
+<meta name="description" content="좋은 로드맵은 합의되고 실행되고 갱신된다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">R&amp;D 기획과 기술로드맵</a> / <a href="index.html">강의별 핵심</a> / 10강</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 10</p>
+  <h1>TRM 점검과 사례</h1>
+  <p class="lead">좋은 로드맵은 합의되고 실행되고 갱신된다</p>
+  <div class="kws"><span class="kw">TRM 점검 7항목</span><span class="kw">Multi-layer TRM</span><span class="kw">중소기업 전략기술로드맵</span><span class="kw">ICT R&amp;D 기술로드맵</span><span class="kw">개발·실현 시기</span><span class="kw">TRM 워크숍</span></div>
+  <details class="plist"><summary>이 강의의 논문 1편</summary><ol><li><b>Phaal et al. (2004)</b> Phaal, R., Farrukh, C. J. P., &amp; Probert, D. R. (2004). Technology roadmapping—A planning framework for evolution and revolution. Technological Forecasting and Social Change, 71(1–2), 5–26.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="10-1"><b>10-1</b><span>TRM 다시 보기: 흐름과 구조</span></a><a href="#s9" class="tab" data-lec="10-2"><b>10-2</b><span>좋은 TRM의 7가지 조건</span></a><a href="#s18" class="tab" data-lec="10-3"><b>10-3</b><span>공개 로드맵 사례 읽기</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 25</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="10-1"><article class="slide ty-title" aria-label="1 / 25"><div class="sl-in"><div class="t-wrap"><p class="t-wk">10주차 · TRM 점검과 사례</p><p class="t-no">10-1</p><h2 class="t-title">TRM 다시 보기: 흐름과 구조</h2><p class="t-thesis">TRM은 외부 분석과 내부 기획을 잇는 경첩이다</p></div></div><footer class="sl-f"><span>10-1 TRM 다시 보기: 흐름과 구조</span><span class="num">1 / 25</span></footer></article></div><div class="slot" id="s2" data-lec="10-1"><article class="slide ty-steps" aria-label="2 / 25"><div class="sl-in"><h3 class="sh">TRM까지: 외부 분석</h3><ol class="steps n6"><li><span class="sn">1</span><b>메가트렌드</b><p>자료수집·빅데이터·트렌드, 핵심 이슈</p></li><li><span class="sn">2</span><b>환경·시장·산업</b><p>STEEP, 시장 크기·구조, 생태계, 5 Forces</p></li><li><span class="sn">3</span><b>기술전망</b><p>델파이 1~3차: 중요도·필요/실현시기</p></li><li><span class="sn">4</span><b>Market 예측</b><p>필요 Product 도출</p></li><li><span class="sn">5</span><b>Tech tree</b><p>제품/기술 매칭</p></li><li><span class="sn">6</span><b>TRM 도식화</b><p>시장·제품·기술·R&amp;D를 시간 축에</p></li></ol></div><footer class="sl-f"><span>10-1 TRM 다시 보기: 흐름과 구조</span><span class="num">2 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>연구기획 Process의 윗줄이다. 델파이에서 묻는 것은 세 가지다. 예상되는 미래 환경에서 어떤 시장·제품·기술이 필요한가, 그 우선순위는, 그리고 세부사항(필요시기·실현시기)이다. 이 답이 Market 예측과 Tech tree의 재료가 되고 TRM으로 그려진다. 앞 단계를 건너뛰면 로드맵 박스의 근거가 사라진다.</p></div></div><div class="slot" id="s3" data-lec="10-1"><article class="slide ty-steps" aria-label="3 / 25"><div class="sl-in"><h3 class="sh">TRM 이후: 내부 기획</h3><ol class="steps n6"><li><span class="sn">1</span><b>역량분석</b><p>TRM 기술 기준 특허 포트폴리오·지표·네트워크</p></li><li><span class="sn">2</span><b>개발/획득 기술</b><p>SWOT, AHP로 도출</p></li><li><span class="sn">3</span><b>R&amp;D 기획</b><p>목표·획득방법·시기, 예산·자원 배분</p></li><li><span class="sn">4</span><b>R&amp;D 수행관리</b><p>획득기술 포트폴리오, 사업화 연계</p></li><li><span class="sn">5</span><b>결과평가</b><p>평가 시스템, 가치평가</p></li><li><span class="sn">6</span><b>결과활용</b><p>기술활용·사업화 연계·기획 피드백</p></li></ol></div><footer class="sl-f"><span>10-1 TRM 다시 보기: 흐름과 구조</span><span class="num">3 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>TRM이 그려지면 내부 시선으로 바뀐다. &#x27;이 기술들을 우리가 할 수 있는가&#x27;를 특허 포트폴리오·지표·네트워크 분석으로 확인하고, SWOT·AHP로 개발·획득할 기술을 고른다. 이후 예산을 배분하고 수행·평가·활용까지 간다. 결과활용 단계의 피드백이 다음 해 TRM 갱신의 입력이 되어 순환이 완성된다.</p></div></div><div class="slot" id="s4" data-lec="10-1"><article class="slide ty-compare" aria-label="4 / 25"><div class="sl-in"><h3 class="sh">프레임워크: Why·What·How</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">Why? 시장·사업</b><ul><li>동인·전략·니즈</li><li>Pull: 시장이 끌어당김</li></ul></div><div class="cp-col"><b class="cp-h">What? 제품</b><ul><li>형태·기능·성능</li><li>제품·서비스·시스템</li></ul></div><div class="cp-col"><b class="cp-h">How? 기술·자원</b><ul><li>해법·역량·자원</li><li>Push: 기술이 밀어올림</li></ul></div></div><p class="cp-note">질문 순서: 가려는 곳 → 현재 위치 → 가는 경로</p></div><footer class="sl-f"><span>10-1 TRM 다시 보기: 흐름과 구조</span><span class="num">4 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>Phaal 등(2004)의 틀을 다시 정리하면, 위층은 왜(시장 동인), 가운데는 무엇을(제품), 아래층은 어떻게(기술·자원)에 답한다. STEEPI·Five Forces는 위층에, 특허·가치사슬 분석은 아래층에, 시나리오·Foresight는 시간축 끝에 들어간다. 이 대응을 알면 앞에서 한 분석을 로드맵 어디에 놓을지 헷갈리지 않는다.</p></div></div><div class="slot" id="s5" data-lec="10-1"><article class="slide ty-paper" aria-label="5 / 25"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Phaal et al. (2004)</h3><p class="pp-q">기술 계획을 제품·사업 계획과 어떻게 한 틀로 정렬하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>시장·제품·기술·자원 층을 시간 축에 겹친 다층 로드맵은 전략과 혁신 계획을 통합하는 범용 틀이며, 점진적 진화와 급진적 변화 모두를 다룰 수 있다.</p><div class="pp-cs"><span class="pp-c">다층 로드맵</span><span class="pp-c">Know-why/what/how</span><span class="pp-c">Pull·Push 정렬</span><span class="pp-c">T-Plan</span></div></div><div><b>강의와의 연결</b><p>10-1: &#x27;Now then… TRM&#x27; 로드맵 프레임워크 그림(p.4)과 STEEPI·SWOT 등 도구 연결도(p.5)</p><b>보충 설명</b><p>로드맵을 목적(제품·역량·전략·장기·지식·프로그램·공정·통합 계획)과 형식(다층·바·표·그래프·그림·플로차트 등)으로 분류하고, 산업 사례로 T-Plan 같은 빠른 워크숍 절차를 소개한다.</p></div></div><p class="pp-cite">Phaal, R., Farrukh, C. J. P., &amp; Probert, D. R. (2004). Technology roadmapping—A planning framework for evolution and revolution. Technological Forecasting and Social Change, 71(1–2), 5–26. </p></div><footer class="sl-f"><span>10-1 TRM 다시 보기: 흐름과 구조</span><span class="num">5 / 25</span></footer></article></div><div class="slot" id="s6" data-lec="10-1"><article class="slide ty-steps" aria-label="6 / 25"><div class="sl-in"><h3 class="sh">층별 기획 순서</h3><ol class="steps n5"><li><span class="sn">1</span><b>Market</b><p>니즈 분석·수요예측으로 미래 시장</p></li><li><span class="sn">2</span><b>Product</b><p>주력 핵심제품, 핵심시스템 구성·기능</p></li><li><span class="sn">3</span><b>Technology</b><p>제품을 구현할 기술 선정</p></li><li><span class="sn">4</span><b>R&amp;D programmes</b><p>기술을 만드는 과제</p></li><li><span class="sn">5</span><b>Resources</b><p>자본·공급망·인력</p></li></ol></div><footer class="sl-f"><span>10-1 TRM 다시 보기: 흐름과 구조</span><span class="num">6 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>TRM은 미래 시장 예측에 기반한 중장기 기술전략이다. 시장과 제품을 먼저 정하고 기술을 선정하며, 실행 화살표는 반대(R&amp;D → 기술 → 제품 → 시장)로 흐른다. C-Plan 형식처럼 Service 층과 Segment·Family·Field 하위 행을 더하면, 한 기술이 여러 제품·서비스에 기여하는 다대다 관계를 볼 수 있다.</p></div></div><div class="slot" id="s7" data-lec="10-1"><article class="slide ty-points" aria-label="7 / 25"><div class="sl-in"><h3 class="sh">Tech Tree의 역할</h3><div class="pts n3"><div class="pt"><b>핵심 질문</b><p>Target 제품/서비스 구현에 어떤 기술이 필요한가?</p></div><div class="pt"><b>전환</b><p>제품/서비스 언어를 기술 언어로 바꾸는 단계</p></div><div class="pt"><b>순서</b><p>제품 → 필요기능 → 요소기술(make or buy) → 핵심기술</p></div></div></div><footer class="sl-f"><span>10-1 TRM 다시 보기: 흐름과 구조</span><span class="num">7 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>로드맵의 제품 층과 기술 층 사이를 잇는 것이 Tech Tree다. 시장·제품은 고객의 언어(편리함, 가격)로, 기술은 엔지니어의 언어(전도도, 공정)로 쓰인다. 기능 전개가 그 번역기 역할을 한다. 예: &#x27;하루 종일 쓰는 스마트워치&#x27;(제품) → &#x27;전력 소모를 줄인다&#x27;(기능) → &#x27;저전력 디스플레이 구동&#x27;(요소기술).</p></div></div><div class="slot" id="s8" data-lec="10-1"><article class="slide ty-takeaway" aria-label="8 / 25"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>외부 분석(트렌드·환경·델파이)이 TRM으로 모이고, TRM이 내부 기획을 연다</li><li>Why(시장)·What(제품)·How(기술) 층에 앞선 분석을 배치</li><li>Tech Tree는 제품 언어를 기술 언어로 바꾸는 번역기</li><li>결과활용 피드백이 다음 TRM 갱신의 입력</li></ul></div><footer class="sl-f"><span>10-1 TRM 다시 보기: 흐름과 구조</span><span class="num">8 / 25</span></footer></article></div><div class="slot" id="s9" data-lec="10-2"><article class="slide ty-title" aria-label="9 / 25"><div class="sl-in"><div class="t-wrap"><p class="t-wk">10주차 · TRM 점검과 사례</p><p class="t-no">10-2</p><h2 class="t-title">좋은 TRM의 7가지 조건</h2><p class="t-thesis">좋은 로드맵은 합의되고, 실행되고, 갱신된다</p></div></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">9 / 25</span></footer></article></div><div class="slot" id="s10" data-lec="10-2"><article class="slide ty-checklist" aria-label="10 / 25"><div class="sl-in"><h3 class="sh">Technology Road Map 점검</h3><ol class="chk two"><li><span class="ck">1</span>1. 목적과 독자를 고려해 깊이·넓이를 정했는가?</li><li><span class="ck">2</span>2. 단기·장기 목표와 사업 전략 연계가 명확한가?</li><li><span class="ck">3</span>3. 이벤트·타임라인, 개발·실현 시기가 보이는가?</li><li><span class="ck">4</span>4. 기술 간 연관·의존성과 리소스 계획이 있는가?</li><li><span class="ck">5</span>5. 시장 변화에 대응할 유연한 구조인가?</li><li><span class="ck">6</span>6. 그래픽으로 한눈에 파악되는가?</li><li><span class="ck">7</span>7. 정기 검토·업데이트 프로세스가 있는가?</li></ol></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">10 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 제시한 TRM 점검 7항목이다. 발표나 보고서 제출 전 체크리스트로 그대로 쓸 수 있다. 1~4번은 내용(누구를 위해, 무엇을, 언제, 무엇에 의존해)을, 5~7번은 운영(바뀔 때, 보여줄 때, 다시 볼 때)을 본다. 한 항목이라도 빠지면 로드맵은 그림으로만 남기 쉽다.</p></div></div><div class="slot" id="s11" data-lec="10-2"><article class="slide ty-points" aria-label="11 / 25"><div class="sl-in"><h3 class="sh">내용: 목적·목표</h3><div class="pts n4"><div class="pt"><b>목적·독자</b><p>TRM 목적과 타겟 독자에 맞춘 깊이와 넓이</p></div><div class="pt"><b>집단지식</b><p>실행이 목표면 공감대·동의를 위해 집단지식 포함</p></div><div class="pt"><b>목표 제시</b><p>단기·장기 목표를 명확히 설정</p></div><div class="pt"><b>전략 연계</b><p>기술 개발이 사업 전략과 어떻게 이어지는지 표시</p></div></div></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">11 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>같은 기술이라도 경영진용 로드맵은 사업 목표와 투자 규모 중심으로 넓게, 연구팀용은 성능 목표와 과제 중심으로 깊게 그린다. 로드맵의 최종 목표는 실행이므로, 혼자 그린 정답보다 관련자들이 함께 만든 합의안이 더 가치 있다. 각 기술 박스 옆에 &#x27;이 기술이 기여하는 사업 목표&#x27;를 적어 두면 전략 연계가 자동으로 보인다.</p></div></div><div class="slot" id="s12" data-lec="10-2"><article class="slide ty-compare" aria-label="12 / 25"><div class="sl-in"><h3 class="sh">시간대: 개발 vs 실현 시기</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">개발 시기</b><ul><li>기술 개발이 완료되는 때</li><li>R&amp;D 층의 일정 기준</li></ul></div><div class="cp-col"><b class="cp-h">실현 시기</b><ul><li>제품·시장에 적용되는 때</li><li>시장·제품 층의 일정 기준</li></ul></div></div><p class="cp-note">이벤트·타임라인을 시각화하고 두 시기를 구분해 표시</p></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">12 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>델파이에서도 두 시기를 따로 묻는다. 기술이 실험실에서 완성되는 시기와 제품에 실제 적용되는 시기 사이에는 양산·인증·시장 준비 기간이 있다. 예: 기술 개발 완료 2027년, 인증 1년이면 실현은 2028년이다. 둘을 섞으면 제품 출시 일정이 비현실적으로 앞당겨지거나 R&amp;D 착수가 늦어진다.</p></div></div><div class="slot" id="s13" data-lec="10-2"><article class="slide ty-points" aria-label="13 / 25"><div class="sl-in"><h3 class="sh">의존성·유연성</h3><div class="pts n3"><div class="pt"><b>상호의존성</b><p>기술 간 연관관계와 의존성을 화살표로 표시</p></div><div class="pt"><b>리소스</b><p>자원(예산·인력·공급망) 계획을 함께 포함</p></div><div class="pt"><b>유연성</b><p>시장 변화에 대응할 수 있는 유연한 구조 설계</p></div></div></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">13 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>의존성을 그려야 위험이 보인다. T1이 늦으면 T2와 제품 P2가 함께 밀린다는 것을 화살표가 알려준다. 유연성은 불확실한 지점에 대안 경로나 결정점을 미리 그리는 방식으로 확보한다. NASA CFD 2030 로드맵이 YES/NO 결정점을 두어 기술 성패에 따라 경로를 바꾸도록 한 것이 좋은 예다.</p></div></div><div class="slot" id="s14" data-lec="10-2"><article class="slide ty-points" aria-label="14 / 25"><div class="sl-in"><h3 class="sh">시각화·주기적 업데이트</h3><div class="pts n3"><div class="pt"><b>시각화</b><p>그래픽 요소로 한눈에 파악하도록 구성</p></div><div class="pt"><b>범례</b><p>색(성숙도·TRL)과 기호(마일스톤·결정점) 통일</p></div><div class="pt"><b>업데이트</b><p>정기적으로 검토·갱신하는 프로세스 포함</p></div></div></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">14 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>로드맵은 소통 도구이므로 5분 안에 핵심 경로가 읽혀야 한다. 색과 기호의 의미를 범례로 고정하고, 핵심 경로는 굵은 선으로 강조한다. 또 로드맵은 한 번 그리고 끝나는 문서가 아니다. 시장·기술이 바뀌면 박스의 위치와 연결이 바뀌므로, 반기·연 단위 검토 일정과 담당자를 정해 둔다.</p></div></div><div class="slot" id="s15" data-lec="10-2"><article class="slide ty-compare" aria-label="15 / 25"><div class="sl-in"><h3 class="sh">점검 전후 비교</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">흔한 초안</b><ul><li>기술 박스 나열, 연결선 없음</li><li>시기 하나만 표기</li><li>작성자 1인의 의견</li><li>갱신 계획 없음</li></ul></div><div class="cp-col"><b class="cp-h">점검 후</b><ul><li>T→P→M 연결과 의존선</li><li>개발·실현 시기 구분</li><li>워크숍 합의 반영</li><li>검토 주기·담당자 명시</li></ul></div></div></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">15 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>7항목을 적용하면 초안이 어떻게 바뀌는지 보여주는 예시다. 흔한 실수는 기술 박스를 연도별로 늘어놓기만 하는 것이다. 이러면 &#x27;왜 이 기술을 이때 하는가&#x27;에 답할 수 없다. 점검 후에는 모든 박스가 위층 목표와 연결되고, 일정이 두 종류로 나뉘며, 다음 갱신 시점이 적힌다.</p></div></div><div class="slot" id="s16" data-lec="10-2"><article class="slide ty-lab" aria-label="16 / 25"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">7원칙으로 TRM 점검·개선하기</h3><p class="lb-p">작성한 TRM 초안을 강의의 7가지 점검 기준으로 채점하고, 약한 항목을 고쳐 실행·합의 가능한 로드맵으로 다듬는다.</p><ol class="lb-s"><li>목적·독자 확인</li><li>목표·전략 연계</li><li>시간대 점검</li><li>의존성·자원 표시</li><li>유연성 넣기</li><li>시각화 정리</li><li>갱신 주기 명시</li><li>채점·개선</li></ol><p class="lb-go"><a href="labs/10-trm-review.html">실습 페이지 열기 →</a> <span class="lb-w">인터랙티브 도구 포함</span></p></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">16 / 25</span></footer></article></div><div class="slot" id="s17" data-lec="10-2"><article class="slide ty-takeaway" aria-label="17 / 25"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>점검 7항목: 목적·독자, 목표·전략, 시간대, 의존성, 유연성, 시각화, 업데이트</li><li>실행이 목표라면 집단지식과 공감대를 담아야 한다</li><li>개발 시기와 실현 시기를 구분해 표시</li><li>로드맵은 정기적으로 갱신하는 살아 있는 문서</li></ul></div><footer class="sl-f"><span>10-2 좋은 TRM의 7가지 조건</span><span class="num">17 / 25</span></footer></article></div><div class="slot" id="s18" data-lec="10-3"><article class="slide ty-title" aria-label="18 / 25"><div class="sl-in"><div class="t-wrap"><p class="t-wk">10주차 · TRM 점검과 사례</p><p class="t-no">10-3</p><h2 class="t-title">공개 로드맵 사례 읽기</h2><p class="t-thesis">잘 만든 로드맵을 읽으면 형식과 후보 풀을 얻는다</p></div></div><footer class="sl-f"><span>10-3 공개 로드맵 사례 읽기</span><span class="num">18 / 25</span></footer></article></div><div class="slot" id="s19" data-lec="10-3"><article class="slide ty-compare" aria-label="19 / 25"><div class="sl-in"><h3 class="sh">사례별 로드맵 형식</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">NASA CFD 2030</b><ul><li>기술 층 중심 바형</li><li>TRL 색·결정점 표기</li></ul></div><div class="cp-col"><b class="cp-h">기업 전환 로드맵</b><ul><li>멀티레이어 6개 층</li><li>층마다 Vision 문장</li></ul></div><div class="cp-col"><b class="cp-h">정부 로드맵</b><ul><li>표(테이블)형</li><li>핵심기술×연차 목표</li></ul></div></div><p class="cp-note">같은 TRM도 목적·독자에 따라 형식이 달라진다</p></div><footer class="sl-f"><span>10-3 공개 로드맵 사례 읽기</span><span class="num">19 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>강의에서 본 세 가지 형식이다. NASA는 기술 성숙도와 결정점을 관리하려고 바형을, 서비스 전환 기업은 시장부터 조직까지 정렬하려고 멀티레이어를, 정부 로드맵은 많은 분야를 같은 틀로 비교하려고 표 형식을 썼다. 내 로드맵도 &#x27;누가 무엇을 결정하는 데 쓰나&#x27;를 먼저 정하고 형식을 고르면 된다.</p></div></div><div class="slot" id="s20" data-lec="10-3"><article class="slide ty-case" aria-label="20 / 25"><div class="sl-in"><p class="ca-k">사례 · 정부 공개 표형 로드맵</p><h3 class="sh">중소기업 전략기술로드맵</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>중소기업은 자체 로드맵을 만들 인력·정보가 부족하다. 정부는 분야별 전략기술로드맵을 공개 사이트로 제공한다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>예: &#x27;사용후 배터리 재사용 시스템&#x27;을 개발방향·전략품목·핵심기술 3개로 나누고, 1~3차년도 단계별 목표와 최종 목표를 표로 정리했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>핵심기술마다 연차 목표가 한 줄로 이어져, 중소기업이 과제 제안서의 목표와 일정을 바로 잡을 수 있다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>표형 로드맵은 핵심기술×연차 목표를 비교하기 쉬워 과제 기획의 출발점으로 좋다.</p></div></div></div><footer class="sl-f"><span>10-3 공개 로드맵 사례 읽기</span><span class="num">20 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>smroadmap.smtech.go.kr에서 분야를 검색해 볼 수 있다. 2026년 현재 사이트는 13개 전략 분야와 2026~2028 기간의 로드맵을 제공한다. 활용 팁: 내 Target 제품과 같은 전략품목을 찾아 핵심기술 목록을 내 Tech Tree와 대조하면 빠진 기술을 찾을 수 있다. 다만 연차 목표는 평균적 기준이므로 자사 역량에 맞게 조정해야 한다.</p></div></div><div class="slot" id="s21" data-lec="10-3"><article class="slide ty-case" aria-label="21 / 25"><div class="sl-in"><p class="ca-k">사례 · 제품·기술 2단 표</p><h3 class="sh">IITP 양자정보통신 로드맵</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>IITP는 &#x27;ICT R&amp;D 기술로드맵 2025&#x27;(2020)에서 양자정보통신의 장기 개발 경로를 제시했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>위쪽엔 2020~2035+ 달성목표 제품(원자 중력계, 소형 유선 QKD, 무인기 QKD, 20큐비트 양자컴퓨터, 위성 QKD 탑재체)을, 아래엔 부품·소재와 기술을 배치했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>유선·무선 QKD 시스템마다 기초원천(송·수신부 집적화칩)과 응용개발(QKD 네트워크, 장거리 무선 QKD)의 시기를 막대로 보였다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>제품 목표 아래에 기초원천→응용개발 기술 막대를 두면 &#x27;어떤 기술이 어떤 제품을 여는지&#x27; 읽힌다.</p></div></div></div><footer class="sl-f"><span>10-3 공개 로드맵 사례 읽기</span><span class="num">21 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>이 로드맵은 제품 층(사진 포함)과 기술 층을 연도 축으로 맞춘 형식이다. 예를 들어 유선 송신부 집적화칩 → 수신부 집적화칩 → 양자중계기 기반 장거리 QKD로 이어지는 기초원천 막대가, 응용개발의 QKD 네트워크와 소형·저가 시스템을 받쳐 준다. 보고서는 IITP 홈페이지 공개자료실에서 찾을 수 있다고 강의에서 안내했다.</p></div></div><div class="slot" id="s22" data-lec="10-3"><article class="slide ty-case" aria-label="22 / 25"><div class="sl-in"><p class="ca-k">사례 · 로드맵 통합 DB</p><h3 class="sh">KIAT MAE</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>한국산업기술진흥원(KIAT)은 산업기술 로드맵 정보를 &#x27;MAE(Maps for Advanced Era)&#x27;라는 통합 시스템으로 제공했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>관련 R&amp;D 과제(한·미·EU·일 과제 수, 지원금), 산업간 분석(공급·수요·상호필요 기술 네트워크), 기술간 분석(예: LED 기판 기술의 연도별 R&amp;D 목표치)을 묶었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>메가트렌드·핵심기술맵·국내외 과제를 한 번에 검색하고, 기술체계도 작성과 타산업 기술 연계까지 로드맵 기획을 지원했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>로드맵은 그림 한 장이 아니라 트렌드·기술·과제 데이터가 연결된 DB로 관리될 수 있다.</p></div></div></div><footer class="sl-f"><span>10-3 공개 로드맵 사례 읽기</span><span class="num">22 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>LED 예에서는 &#x27;HVPE 성장법을 이용한 GaN 기판&#x27;의 연도별 성장 목표치와 관련 국내 R&amp;D 과제가 함께 표시되었다. 기획자는 이를 통해 목표 수준과 이미 진행 중인 과제를 확인해 중복을 피한다. 현재 mae.or.kr 주소는 접속이 확인되지 않으므로, 같은 용도로는 중소기업 전략기술로드맵이나 IITP 보고서를 쓰면 된다.</p></div></div><div class="slot" id="s23" data-lec="10-3"><article class="slide ty-cases" aria-label="23 / 25"><div class="sl-in"><h3 class="sh">TRM은 워크숍으로 만든다</h3><div class="css n4"><div class="cs"><b>영국</b><p>벽면 차트에 층별 포스트잇 배치</p></div><div class="cs"><b>독일</b><p>Smart Services: 협회10·노조3·기업50·연구소30</p></div><div class="cs"><b>일본</b><p>화이트보드 앞 소그룹 토의</p></div><div class="cs"><b>싱가포르</b><p>테이블별 작업 후 대형 차트로 통합</p></div></div></div><footer class="sl-f"><span>10-3 공개 로드맵 사례 읽기</span><span class="num">23 / 25</span></footer></article><div class="sl-ex"><b>설명</b><p>각국 사례 사진의 공통점은 여러 사람이 큰 벽면 차트 앞에서 함께 작업한다는 것이다. 한 예로 벽 차트 상단에 연도(2017~2040)를 길게 깔고 국가·기관·제품 층을 나눠 포스트잇을 붙인다. 이렇게 만든 초안을 연구기획 Process의 단계(메가트렌드→환경분석→델파이)와 대조해 근거를 보강한 뒤 정식 TRM으로 옮긴다.</p></div></div><div class="slot" id="s24" data-lec="10-3"><article class="slide ty-lab" aria-label="24 / 25"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">공개 로드맵으로 벤치마킹하기</h3><p class="lb-p">정부·기관이 공개한 로드맵에서 전략품목·핵심기술·연차 목표를 추출해, 내 로드맵의 후보 풀과 형식을 빠르게 만든다.</p><ol class="lb-s"><li>자료 찾기</li><li>형식 파악</li><li>요소 추출</li><li>내 Tech Tree와 대조</li><li>공개 범위 감안</li><li>내 TRM에 반영</li></ol><p class="lb-go"><a href="labs/10-roadmap-benchmark.html">실습 페이지 열기 →</a> <span class="lb-w">인터랙티브 도구 포함</span></p></div><footer class="sl-f"><span>10-3 공개 로드맵 사례 읽기</span><span class="num">24 / 25</span></footer></article></div><div class="slot" id="s25" data-lec="10-3"><article class="slide ty-takeaway" aria-label="25 / 25"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>형식은 목적에 따라: 바형(성숙도 관리), 멀티레이어(정렬), 표형(비교)</li><li>중소기업 전략기술로드맵은 바로 참고할 수 있는 공개 표형 로드맵</li><li>공개 로드맵은 후보 풀과 형식을 주지만 Target 선정은 직접</li><li>TRM은 벽면 차트 앞 집단 워크숍으로 만든다</li></ul></div><footer class="sl-f"><span>10-3 공개 로드맵 사례 읽기</span><span class="num">25 / 25</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-09.html">← 9강 TRM과 Tech Tree</a><a class="wk-nav" href="lecture-12.html">12강 특허지표·네트워크분석 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: R&amp;D planning and TRM (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>
