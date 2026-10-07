@@ -304,6 +304,7 @@ function chains(){const dbei=d1m('bei10'),dtp=d1m('tp10_acm'),du=d1m('ust10'),s2
 /* ---------- 시작 ---------- */
 fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;S=d.series;
  $('stamp').textContent='마지막 갱신: '+new Date(d.updated_utc).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'})+' (한국 시간)';
+ {const st=d.stale||[];$('stamp').textContent+=st.length?' · ⚠ 늦어진 지표 '+st.length+'개: '+st.map(x=>x.name+'('+x.last+')').join(', '):' · 모든 지표가 발표 주기대로 최신';}
  try{scenarios()}catch(e){console.error(e)}try{signals()}catch(e){console.error(e)}try{chains()}catch(e){console.error(e)}
  $('groups').innerHTML=GROUPS.map(([g,t])=>`<h3 class="grp">${t}</h3><div class="rows">${ORDER[g].map(rowHtml).join('')}</div>`).join('');
  document.querySelectorAll('details.row').forEach(el=>el.addEventListener('toggle',()=>{if(el.open)fillMore(el)}));

@@ -44,3 +44,23 @@ jobs:
                       '개인 설정 기준에 따른 자동 알림이며 투자 권유가 아닙니다.')
               subprocess.run(["gh", "issue", "create", "--title", title, "--body", body], check=False)
           PY
+      - name: Health (open one issue when a series fails or goes stale)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, subprocess, datetime
+          try:
+              h = json.load(open("health.json"))
+          except Exception:
+              h = {"errors": [], "stale": []}
+          if not h["errors"] and not h["stale"]:
+              raise SystemExit
+          day = datetime.date.today().isoformat()
+          title = f"[갱신 점검] 시장지표 {len(h['stale'])}개 지연·{len(h['errors'])}개 오류 ({day})"
+          have = subprocess.run(["gh", "issue", "list", "--state", "open", "--search", f"in:title [갱신 점검] {day}"], capture_output=True, text=True).stdout
+          if have.strip():
+              raise SystemExit
+          body = "@bonakim-itm29\n\n" + "\n".join(f"- 지연: {s['name']} 마지막 {s['last']} ({s['age']}일, 허용 {s['allow']}일){' · 받기 실패' if s['failed'] else ''}" for s in h["stale"]) + "\n" + "\n".join(f"- 오류: {e}" for e in h["errors"])
+          subprocess.run(["gh", "issue", "create", "--title", title, "--body", body], check=False)
+          PY

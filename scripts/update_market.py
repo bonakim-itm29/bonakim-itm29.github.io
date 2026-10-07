@@ -175,6 +175,27 @@ def fill_latest(series, errors):
             errors.append(f"{key} treasury: {e}")
 
 
+AUDIT_ALLOW = {"wti_spot": 14, "brent_spot": 14}  # 일간 값이지만 EIA가 주 1회(수요일) 몰아서 공개
+
+
+def audit(series, errors):
+    """지표별 발표 주기(최근 관측 간격)로 허용 지연을 정하고, 그보다 오래된 지표를 stale로 표시한다."""
+    today = dt.date.today()
+    out = []
+    for k, sr in series.items():
+        pts = sr.get("points") or []
+        if len(pts) < 6:
+            continue
+        ds = [dt.date.fromisoformat(p[0][:10]) for p in pts[-6:]]
+        gap = sorted((b - a).days for a, b in zip(ds, ds[1:]))[2]
+        allow = 5 if gap <= 3 else 12 if gap <= 8 else 80 if gap <= 35 else 300  # 일간·주간·월간·분기(관측일 = 분기 시작일, 발표 지연 포함)
+        allow = AUDIT_ALLOW.get(k, allow)
+        age = (today - ds[-1]).days
+        if age > allow or sr.get("ok") is False:
+            out.append(dict(key=k, name=sr.get("name", k), last=pts[-1][0], age=age, allow=allow, failed=sr.get("ok") is False))
+    return out
+
+
 _ACM = {}
 
 
@@ -269,8 +290,10 @@ def main():
                 series[key] = prev
     fill_latest(series, errors)
     signals = compute_signals(series, old.get("signals", {}))
+    stale = audit(series, errors)
     out = dict(signals=signals, updated_utc=dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
-               series=series, errors=errors)
+               series=series, errors=errors, stale=stale)
+    (OUT.parent.parent.parent / "health.json").write_text(json.dumps(dict(errors=errors, stale=stale), ensure_ascii=False))
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")))
     newly = [s for s in signals.values() if s.get("changed")]
