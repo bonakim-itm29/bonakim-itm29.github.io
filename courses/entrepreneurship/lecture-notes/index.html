@@ -56,7 +56,8 @@ footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--mut
 
 /* ---------- slides ---------- */
 .deck{display:grid;gap:22px}
-.deck.paged .slide{display:none} .deck.paged .slide.cur{display:flex}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
 .deck.paged{cursor:default}
 .slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
 .sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
@@ -218,7 +219,7 @@ footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--mut
   .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .dk-bar{top:56px}
 }
-@media (prefers-reduced-motion:no-preference){.deck.paged .slide.cur{animation:sl .22s ease}}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
 @keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
 
 /* paper card + paper list */
@@ -237,6 +238,47 @@ details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
 details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
 details.plist b{color:var(--text)}
 @media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
 </style>
 </head>
 <body class="hub">
@@ -249,47 +291,61 @@ details.plist b{color:var(--text)}
 <header class="page">
   <span class="eyebrow">ITM502 · 2024 가을</span>
   <h1>기업가정신 주차별 핵심</h1>
-  <p class="lead">주차마다 핵심 키워드를 먼저 보고, 카드를 누르면 그 주 강의를 도식과 표로 다시 짠 슬라이드(237장)로 넘어갑니다. 강의 내용만 담았습니다.</p>
+  <p class="lead">주차마다 핵심 키워드를 먼저 보고, 카드를 누르면 그 주 강의를 도식·사례·설명으로 다시 짠 슬라이드(363장)로 넘어갑니다. 강의 내용만 담았고, 맨 아래에 강의자료 EDA를 붙였습니다.</p>
 </header>
 <ol class="flow" style="grid-template-columns:repeat(4,1fr)"><li><b>1–2주</b><span>기회를 찾고 가치를 정의</span></li><li><b>3–4주</b><span>비즈니스모델과 회사 설계</span></li><li><b>5–8주</b><span>좋은 회사를 숫자로 판별</span></li><li><b>11주</b><span>가설을 빠르게 검증</span></li></ol>
 <div class="wk-grid"><a class="wk-card" href="week-01.html">
   <span class="wc-no num">01</span>
   <div class="wc-body"><h3>기업가정신의 이해</h3><p class="wc-one">열정·역량을 기회와 맞춰 새 기업을 만든다</p><div class="kws"><span class="kw">Entrepreneurship</span><span class="kw">Opportunity</span><span class="kw">Intellectual Capital</span><span class="kw">가설 검증</span><span class="kw">Stakeholders</span><span class="kw">Spirit &amp; Skills</span></div>
-  <p class="wc-meta num">강의 1.1 · 1.2 · 1.3 · 1.4 · 슬라이드 21장</p></div>
+  <p class="wc-meta num">강의 1.1 · 1.2 · 1.3 · 1.4 · 슬라이드 34장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-02.html">
   <span class="wc-no num">02</span>
   <div class="wc-body"><h3>기회·비전·가치제안</h3><p class="wc-one">좋은 기회를 골라 비전과 가치로 만든다</p><div class="kws"><span class="kw">Creative Destruction</span><span class="kw">TSIPC</span><span class="kw">CNRRC</span><span class="kw">Vision &amp; Mission</span><span class="kw">PPASE</span><span class="kw">Value&gt;Price&gt;Cost</span></div>
-  <p class="wc-meta num">강의 2.1 · 2.2 · 2.3 · 2.4 · 2.5 · 2.6 · 슬라이드 33장</p></div>
+  <p class="wc-meta num">강의 2.1 · 2.2 · 2.3 · 2.4 · 2.5 · 2.6 · 슬라이드 52장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-03.html">
   <span class="wc-no num">03</span>
   <div class="wc-body"><h3>비즈니스모델·경쟁전략</h3><p class="wc-one">가치를 어떻게 만들고, 어떻게 지키는가</p><div class="kws"><span class="kw">BM Canvas</span><span class="kw">Value Capture</span><span class="kw">핵심역량</span><span class="kw">Five Forces</span><span class="kw">SWOT</span><span class="kw">Double S-Curve</span></div>
-  <p class="wc-meta num">강의 3.1 · 3.2 · 3.3 · 3.4 · 3.5 · 3.6 · 슬라이드 33장</p></div>
+  <p class="wc-meta num">강의 3.1 · 3.2 · 3.3 · 3.4 · 3.5 · 3.6 · 슬라이드 50장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-04.html">
   <span class="wc-no num">04</span>
   <div class="wc-body"><h3>벤처 설립·주식회사</h3><p class="wc-one">주식회사의 원리: 소유·경영·공개</p><div class="kws"><span class="kw">주식회사</span><span class="kw">유한책임</span><span class="kw">정관·설립등기</span><span class="kw">주주총회·이사회</span><span class="kw">IPO</span><span class="kw">재무정보 니즈</span></div>
-  <p class="wc-meta num">강의 4.1 · 4.2 · 4.3 · 슬라이드 16장</p></div>
+  <p class="wc-meta num">강의 4.1 · 4.2 · 4.3 · 슬라이드 25장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-05.html">
   <span class="wc-no num">05</span>
-  <div class="wc-body"><h3>재무분석 기초</h3><p class="wc-one">숫자로 수익성·안정성·성장성을 읽는다</p><div class="kws"><span class="kw">회계 항등식</span><span class="kw">재무제표</span><span class="kw">안정성 비율</span><span class="kw">CAGR</span><span class="kw">PER·PBR</span><span class="kw">ROE</span></div>
-  <p class="wc-meta num">강의 5.1 · 5.2 · 5.3 · 5.4 · 5.5 · 5.6 · 5.7 · 슬라이드 42장</p></div>
+  <div class="wc-body"><h3>재무분석 기초</h3><p class="wc-one">숫자로 수익성·안정성·성장성을 읽는다</p><div class="kws"><span class="kw">회계 항등식</span><span class="kw">재무제표</span><span class="kw">안정성 비율</span><span class="kw">연결·지배주주 이익</span><span class="kw">CAGR</span><span class="kw">PER·PBR·ROE</span></div>
+  <p class="wc-meta num">강의 5.1 · 5.2 · 5.3 · 5.4 · 5.5 · 5.6 · 5.7 · 슬라이드 59장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-06.html">
   <span class="wc-no num">06</span>
-  <div class="wc-body"><h3>KOSPI 사례 분석</h3><p class="wc-one">성장률로 실적을 비교하되 주가 타이밍은 별개</p><div class="kws"><span class="kw">네이버 금융</span><span class="kw">3년 CAGR</span><span class="kw">기업실적분석</span><span class="kw">실적-주가 괴리</span><span class="kw">ROE와 경쟁</span><span class="kw">해외 재무정보</span></div>
-  <p class="wc-meta num">강의 6.1 · 슬라이드 6장</p></div>
+  <div class="wc-body"><h3>KOSPI 사례 분석</h3><p class="wc-one">매출 성장이 이익 성장으로 이어지는가</p><div class="kws"><span class="kw">네이버 금융</span><span class="kw">3년 CAGR</span><span class="kw">매출 vs 이익 성장</span><span class="kw">실적-주가 괴리</span><span class="kw">경쟁과 ROE</span><span class="kw">해외 재무정보</span></div>
+  <p class="wc-meta num">강의 6.1 · 슬라이드 11장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-07.html">
   <span class="wc-no num">07</span>
-  <div class="wc-body"><h3>버핏 사례·소비자 독점</h3><p class="wc-one">오래 갈 독점 기업을 알아보는 눈</p><div class="kws"><span class="kw">Consumer Monopoly</span><span class="kw">복리효과</span><span class="kw">ROE</span><span class="kw">72의 법칙</span><span class="kw">8가지 판별 질문</span><span class="kw">초기수익률</span></div>
-  <p class="wc-meta num">강의 6.2 · 7.1 · 7.2 · 7.3+4 · 7.5+6 · 7.7+8 · 슬라이드 35장</p></div>
+  <div class="wc-body"><h3>버핏 사례·소비자 독점</h3><p class="wc-one">오래 갈 독점 기업을 알아보는 눈</p><div class="kws"><span class="kw">Consumer Monopoly</span><span class="kw">8가지 판별 질문</span><span class="kw">ROE</span><span class="kw">복리효과</span><span class="kw">72의 법칙</span><span class="kw">초기수익률</span></div>
+  <p class="wc-meta num">강의 6.2 · 7.1 · 7.2 · 7.3+4 · 7.5+6 · 7.7+8 · 슬라이드 50장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-08.html">
   <span class="wc-no num">08</span>
-  <div class="wc-body"><h3>버핏 정량분석·CR#3</h3><p class="wc-one">지금 가격에 사면 10년 뒤 몇 %인가</p><div class="kws"><span class="kw">ACRR</span><span class="kw">ROE</span><span class="kw">Equity/Bond</span><span class="kw">EPS 추정</span><span class="kw">자사주 매입</span><span class="kw">R²</span></div>
-  <p class="wc-meta num">강의 9.1 · 9.2 · 9.3 · 9.4 · 9.5 · 9.6 · 슬라이드 33장</p></div>
+  <div class="wc-body"><h3>버핏 정량분석·CR#3</h3><p class="wc-one">지금 가격에 사면 10년 뒤 몇 %인가</p><div class="kws"><span class="kw">ACRR</span><span class="kw">Equity/Bond</span><span class="kw">R²</span><span class="kw">Median PER</span><span class="kw">TSR</span><span class="kw">자사주 매입</span></div>
+  <p class="wc-meta num">강의 9.1 · 9.2 · 9.3 · 9.4 · 9.5 · 9.6 · 슬라이드 52장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a><a class="wk-card" href="week-11.html">
   <span class="wc-no num">11</span>
   <div class="wc-body"><h3>Lean Startup</h3><p class="wc-one">계획을 실행하지 말고, 가설을 검증하라</p><div class="kws"><span class="kw">Customer Development</span><span class="kw">Build-Measure-Learn</span><span class="kw">MVP</span><span class="kw">Leap of Faith</span><span class="kw">Product-Market Fit</span><span class="kw">Lean Canvas</span></div>
-  <p class="wc-meta num">강의 12.1 · 12.2 · 12.3 · 슬라이드 18장</p></div>
+  <p class="wc-meta num">강의 12.1 · 12.2 · 12.3 · 슬라이드 30장</p></div>
   <span class="wc-go" aria-hidden="true">→</span></a></div>
-
+<section class="eda" id="eda">
+<h2>부록 · 강의자료 EDA</h2>
+<p>강의자료 원문(슬라이드 텍스트)을 대상으로 한 탐색적 분석입니다. 총 523쪽, 슬라이드 본문 152,486자, ※·중요·핵심 같은 강조 표시가 붙은 문장 144개를 분석했습니다. 1~4주차는 창업 설계, 5~8주차는 재무·버핏 사례(전체 분량의 약 47%), 11주차는 린 스타트업입니다.</p>
+<h3>주차별 분량과 강조 표시 문장</h3>
+<div class="ed-bars"><div class="ed-row ed-h"><span></span><span>슬라이드 분량</span><span></span><span>강조 문장</span><span></span></div><div class="ed-row"><span class="ed-l"><b class="num">1주</b> 기업가정신 개론·기업의 경제학</span><span class="ed-t"><i style="width:54.5%"></i></span><span class="num ed-v">61쪽 · 13.3k자</span><span class="ed-t ed-t2"><i style="width:29.4%"></i></span><span class="num ed-v">10</span></div><div class="ed-row"><span class="ed-l"><b class="num">2주</b> 창조적 파괴·기회평가·비전/미션·가치제안</span><span class="ed-t"><i style="width:70.5%"></i></span><span class="num ed-v">73쪽 · 17.2k자</span><span class="ed-t ed-t2"><i style="width:38.2%"></i></span><span class="num ed-v">13</span></div><div class="ed-row"><span class="ed-l"><b class="num">3주</b> 비즈니스모델·경쟁전략</span><span class="ed-t"><i style="width:70.3%"></i></span><span class="num ed-v">69쪽 · 17.2k자</span><span class="ed-t ed-t2"><i style="width:100.0%"></i></span><span class="num ed-v">34</span></div><div class="ed-row"><span class="ed-l"><b class="num">4주</b> 벤처 설립(주식회사·IPO)</span><span class="ed-t"><i style="width:37.5%"></i></span><span class="num ed-v">38쪽 · 9.2k자</span><span class="ed-t ed-t2"><i style="width:67.6%"></i></span><span class="num ed-v">23</span></div><div class="ed-row"><span class="ed-l"><b class="num">5주</b> 재무제표 분석 기초</span><span class="ed-t"><i style="width:100.0%"></i></span><span class="num ed-v">56쪽 · 24.4k자</span><span class="ed-t ed-t2"><i style="width:29.4%"></i></span><span class="num ed-v">10</span></div><div class="ed-row"><span class="ed-l"><b class="num">6주</b> KOSPI 사례 재무분석</span><span class="ed-t"><i style="width:4.7%"></i></span><span class="num ed-v">11쪽 · 1.2k자</span><span class="ed-t ed-t2"><i style="width:0.0%"></i></span><span class="num ed-v">0</span></div><div class="ed-row"><span class="ed-l"><b class="num">7주</b> 버핏 사례(정성→정량)</span><span class="ed-t"><i style="width:92.3%"></i></span><span class="num ed-v">77쪽 · 22.5k자</span><span class="ed-t ed-t2"><i style="width:38.2%"></i></span><span class="num ed-v">13</span></div><div class="ed-row"><span class="ed-l"><b class="num">8주</b> 버핏 사례(정량)·CR#3 가이드</span><span class="ed-t"><i style="width:99.7%"></i></span><span class="num ed-v">62쪽 · 24.3k자</span><span class="ed-t ed-t2"><i style="width:70.6%"></i></span><span class="num ed-v">24</span></div><div class="ed-row"><span class="ed-l"><b class="num">11주</b> 린 스타트업</span><span class="ed-t"><i style="width:94.7%"></i></span><span class="num ed-v">76쪽 · 23.1k자</span><span class="ed-t ed-t2"><i style="width:79.4%"></i></span><span class="num ed-v">27</span></div></div>
+<h3>개념이 어느 주차에 걸쳐 나오나</h3>
+<p class="note">각 칸은 해당 개념을 언급한 슬라이드 쪽수입니다. 여러 주차에 퍼진 개념일수록 과목 전체를 묶는 축입니다.</p>
+<div class="scroll"><table class="heat"><thead><tr><th></th><th>1주</th><th>2주</th><th>3주</th><th>4주</th><th>5주</th><th>6주</th><th>7주</th><th>8주</th><th>11주</th><th>합</th></tr></thead><tbody><tr><th scope="row">기업가정신·창조적 파괴</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.38">5</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="num tot">5</td></tr><tr><th scope="row">기회평가 (TSIPC·CNRRC)</th><td class="hm hi" style="--a:0.56">12</td><td class="hm hi" style="--a:0.56">12</td><td class="hm" style="--a:0.41">6</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="num tot">31</td></tr><tr><th scope="row">비전·미션</th><td class="hm" style="--a:0.22">1</td><td class="hm hi" style="--a:0.60">14</td><td class="hm" style="--a:0.38">5</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.41">6</td><td class="num tot">27</td></tr><tr><th scope="row">가치제안 (PPASE)</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.41">6</td><td class="hm" style="--a:0.44">7</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.22">1</td><td class="num tot">15</td></tr><tr><th scope="row">비즈니스모델 캔버스</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.47">8</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm hi" style="--a:0.58">13</td><td class="num tot">23</td></tr><tr><th scope="row">Value&gt;Price&gt;Cost</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.44">7</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="num tot">10</td></tr><tr><th scope="row">핵심역량</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.27">2</td><td class="hm hi" style="--a:0.58">13</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="num tot">16</td></tr><tr><th scope="row">5 Forces·산업분석</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.31">3</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="num tot">5</td></tr><tr><th scope="row">SWOT</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.35">4</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="num tot">4</td></tr><tr><th scope="row">진입장벽·경쟁우위</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.41">6</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.22">1</td><td class="num tot">9</td></tr><tr><th scope="row">S-Curve 혁신</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="num tot">3</td></tr><tr><th scope="row">주식회사·지배구조</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.31">3</td><td class="hm" style="--a:0.00"></td><td class="hm hi" style="--a:0.75">22</td><td class="hm" style="--a:0.27">2</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.27">2</td><td class="num tot">30</td></tr><tr><th scope="row">재무제표 읽기</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm hi" style="--a:0.70">19</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.22">1</td><td class="num tot">21</td></tr><tr><th scope="row">ROE·수익성</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.41">6</td><td class="hm" style="--a:0.49">9</td><td class="hm" style="--a:0.00"></td><td class="num tot">16</td></tr><tr><th scope="row">EPS·PER·성장(CAGR)</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.47">8</td><td class="hm" style="--a:0.41">6</td><td class="hm hi" style="--a:0.64">16</td><td class="hm hi" style="--a:0.80">25</td><td class="hm" style="--a:0.00"></td><td class="num tot">57</td></tr><tr><th scope="row">소비자 독점·Moat</th><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm hi" style="--a:0.79">24</td><td class="hm" style="--a:0.41">6</td><td class="hm" style="--a:0.00"></td><td class="num tot">30</td></tr><tr><th scope="row">린 스타트업·MVP</th><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm hi" style="--a:0.94">34</td><td class="num tot">36</td></tr><tr><th scope="row">知彼知己·고객이해</th><td class="hm" style="--a:0.44">7</td><td class="hm hi" style="--a:0.58">13</td><td class="hm hi" style="--a:0.64">16</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.27">2</td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.00"></td><td class="hm" style="--a:0.22">1</td><td class="hm hi" style="--a:1.00">38</td><td class="num tot">77</td></tr></tbody></table></div>
+<h3>주차별 특징어 (TF-IDF 상위)</h3>
+<div class="ed-terms"><div class="ed-tt"><b class="num">1주</b><span>명단 · 개인정보 · 수강생 · skills · smith · 삭제 · professor · firm</span></div><div class="ed-tt"><b class="num">2주</b><span>music · vision · ipod · apple · creative · statement · customer · norm</span></div><div class="ed-tt"><b class="num">3주</b><span>competencies · strategy · firm · design · swot · describe · activities · 전략</span></div><div class="ed-tt"><b class="num">4주</b><span>상법 · 주식회사의 · 때에는 · 한다 · 개정 · 니즈 · 이를 · 정한</span></div><div class="ed-tt"><b class="num">5주</b><span>손실 · 당기순이익 · 자산 · 백만원 · 부채 · 단위 · 유동부채 · 이익잉여금</span></div><div class="ed-tt"><b class="num">6주</b><span>평균성장률 · 순이익성장률 · 매출액성장률 · 영업이익성장률 · 기업실적분석 · 제공 · 금융 · 네이버</span></div><div class="ed-tt"><b class="num">7주</b><span>type · commodity · warren · earnings · inventory · monopoly · question · 하락</span></div><div class="ed-tt"><b class="num">8주</b><span>ttm- · bond · 지수식 · 추정치 · 최근 · eps · 추세선 · 차식</span></div><div class="ed-tt"><b class="num">11주</b><span>개발 · 고객이 · lean · 원칙 · 스타트업은 · 한다 · build-measure-learn · 고객을</span></div></div>
+<h3>슬라이드에 직접 표시된 강조 문장</h3><ul class='ed-q'><li><span class="num">1.4 p.8</span> ※ [전략] 知彼知己 百戰不殆</li><li><span class="num">2.6 p.5</span> a value score of 5, 4, 3, 3, 3 … dominant, differentiating, norm, norm, norm</li><li><span class="num">3.1 p.13</span> … and earning a profit from that activity. ※ 음미!!</li><li><span class="num">3.6 p.4</span> ※ [주의] Competitive Advantage (경쟁우위) ≠ Core Competencies (핵심역량)</li><li><span class="num">7.2 p.15</span> ※ 핵심: ①Price 선택의 자유도, ②지속적인 Cost 경쟁력 → ③Profitability</li><li><span class="num">9.5 p.2</span> Professional 이 되는 길! (~하더라 뉴스(X), Fact를 분별할 수 있는 눈)</li><li><span class="num">12.3 p.17</span> 학습하는 일이 중요.</li></ul>
+<h3>쪽 단위 주제 군집</h3>
+<p class="note">본문 80자 이상인 374쪽을 TF-IDF → SVD → K-means로 묶었습니다. 어휘가 뚜렷한 주제는 잘 갈라지고, 한·영 혼용 개념 슬라이드는 큰 군집 하나로 뭉칩니다.</p>
+<div class="scroll"><table class="ed-cl"><thead><tr><th>쪽수</th><th>대표어</th><th>분포</th></tr></thead><tbody><tr><td class="num">122</td><td>firm, business, opportunity, team, core, industry</td><td class="num">1주:38, 2주:39, 3주:27, 5주:7, 6주:1, 7주:5, 8주:1, 11주:4</td></tr><tr><td class="num">60</td><td>lean, 가지, startup, 사업, product, 한다</td><td class="num">1주:1, 3주:1, 4주:4, 7주:1, 8주:5, 11주:48</td></tr><tr><td class="num">51</td><td>earnings, return, company, rate, equity, share</td><td class="num">2주:1, 5주:6, 7주:20, 8주:24</td></tr><tr><td class="num">36</td><td>손실, 단위, 사례, 평균성장률, 금융, 순이익성장률</td><td class="num">1주:1, 5주:23, 6주:8, 8주:4</td></tr><tr><td class="num">35</td><td>value, customer, proposition, model, business, canvas</td><td class="num">2주:9, 3주:16, 5주:2, 7주:1, 8주:1, 11주:6</td></tr><tr><td class="num">22</td><td>분석, analysis, 정량적, calculation, quantitative, financial</td><td class="num">3주:1, 5주:1, 7주:7, 8주:13</td></tr><tr><td class="num">20</td><td>monopoly, consumer, warren, company, product, type</td><td class="num">2주:1, 3주:2, 7주:17</td></tr><tr><td class="num">15</td><td>상법, 한다, 회사의, 주식의, 개정, 이를</td><td class="num">4주:15</td></tr><tr><td class="num">13</td><td>원리, buffet, 기업경영의, studies, 투자자와, 이해</td><td class="num">1주:2, 5주:1, 7주:7, 8주:3</td></tr></tbody></table></div>
+</section>
 </main>
 <footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: ITM502 기업가정신 2024-3 (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
 </body>
