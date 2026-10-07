@@ -174,6 +174,9 @@ const IND={
  tga:{n:'재무부 일반계정(TGA)',g:'liq',u:'억 달러',dec:0,f:p=>scale(p,1e-2),why:'재무부의 연준 예금(주간).',read:'TGA가 늘면 시중 유동성을 흡수(약세 요인)한다고 봅니다.',rule:'TGA 목표 상향 = 유동성 흡수.'},
  reserves:{n:'은행 지급준비금',g:'liq',u:'조 달러',dec:2,f:p=>scale(p,1e-6),why:'은행이 연준에 둔 준비금(주간).',read:'GDP 대비 지준 비율로 QT 종료 시점을 판단합니다.',rule:''},
  m2y:{n:'M2 증가율 (전년비)',g:'liq',u:'%',dec:1,f:()=>yoy(pts('m2')),why:'시중 통화량 증가율(월간).',read:'M2 증가율은 1~3년 시차를 두고 CPI를 선행한다고 봅니다.',rule:'M2가 정점을 찍은 뒤에도 최소 3년은 인플레이션 정점이 오지 않는다고 봅니다.'},
+ m1y:{n:'M1 증가율 (전년비)',g:'liq',u:'%',dec:1,base:'m1',f:()=>yoy(pts('m1')),why:'현금 + 요구불예금(바로 쓸 수 있는 돈)의 증가율(월간). 2020년 5월부터 저축예금이 M1에 포함돼 그 전후 수치는 바로 비교하기 어렵습니다(2021년 급증은 대부분 정의 변경 때문).',read:'',rule:''},
+ mbase:{n:'본원통화 (MB)',g:'liq',u:'조 달러',dec:2,base:'mbase',f:p=>{const l=p.length?p[p.length-1][1]:0;return scale(p,l>1e5?1e-6:1e-3)},why:'현금 + 은행 지급준비금. 연준이 직접 늘리고 줄이는 돈(월간). QE 때 늘고 QT 때 줄어듭니다.',read:'본원통화가 늘어나는 것만으로는 물가가 오르지 않고, 늘어난 돈이 개인에게 전달돼 실제로 돌아야(M2·유통속도) 인플레이션이 된다고 봅니다. 과거 QE는 본원통화만 크게 늘렸고, 재정정책이 결합된 뒤에야 M2가 늘었다는 해석입니다.',rule:''},
+ mbasey:{n:'본원통화 증가율 (전년비)',g:'liq',u:'%',dec:1,base:'mbase',f:()=>yoy(pts('mbase')),why:'본원통화의 전년 대비 증가율(월간).',read:'',rule:''},
  m2v:{n:'M2 유통속도',g:'liq',u:'',dec:3,why:'명목 GDP ÷ M2(분기).',read:'유통속도를 곱한 실질 통화량으로 디스인플레이션 해석을 경계합니다.',rule:''},
  debt_gdp:{n:'연방정부 부채/GDP',g:'liq',u:'%',dec:1,why:'분기.',read:'이 비율이 2차대전 수준이라 연준이 진짜 긴축을 할 수 없다는 주장의 뿌리입니다.',rule:'부채가 클수록 긴축은 짧고 불완전하며 인플레이션 용인 쪽으로 기운다고 봅니다.'},
  interest:{n:'연방정부 이자비용',g:'liq',u:'조$/년',dec:2,f:p=>scale(p,1e-3),why:'분기, 연율 환산.',read:'실질금리를 크게 플러스로 유지하면 이자비용이 재정을 무너뜨린다고 봅니다.',rule:''},
@@ -196,7 +199,7 @@ const IND={
 };
 const GROUPS=[['eq','미국 주식·변동성'],['oil','원유·원자재'],['rate','금리 (10년물 분해 포함)'],['liq','재정·유동성'],['px','물가·고용'],['fx','달러·중국']];
 const ORDER={eq:['spx','ndx','dji','move'],oil:['wti_front','brent_front','wti_spot','brent_spot','wti_sec','brent_sec','wti_dec27','wti_dec28','brent_dec27','brent_dec28','crude_comm','crude_spr','crude_cushing','osr','gor','cgr','gold_front','silver_front','copper_front'],
- rate:['ust10','real10','bei10','rny10_acm','tp10_acm','tp10_kw','t10y3m','t10y2y'],liq:['fed_assets','rrp','tga','reserves','m2y','m2v','debt_gdp','interest'],
+ rate:['ust10','real10','bei10','rny10_acm','tp10_acm','tp10_kw','t10y3m','t10y2y'],liq:['fed_assets','rrp','tga','reserves','mbase','mbasey','m1y','m2y','m2v','debt_gdp','interest'],
  px:['cpiy','corecpi','corecpi3','corepce','expx','nfp','unrate','jolts','claims'],fx:['dxy','usdcny','usdjpy','usdkrw','hsi','hstech','hsindx']};
 const SRC={};
 function series(k){const c=IND[k];let p;if(c.f&&!S[k])p=c.f(pts(c.base||k));else if(c.f)p=c.f(pts(k));else p=pts(k);
@@ -283,8 +286,9 @@ function chains(){const dbei=d1m('bei10'),dtp=d1m('tp10_acm'),du=d1m('ust10'),s2
  // 3. 재정·유동성 → 물가
  let r3=[];const rrp=v('rrp');if(rrp!=null)r3.push(rrp<500?`RRP 잔고가 ${fmt(rrp,0)}억 달러로 사실상 바닥입니다. T-bill 발행으로 유동성을 메우던 완충이 소진된 상태입니다.`:`RRP 잔고 ${fmt(rrp,0)}억 달러.`);
  const dtga=d1m('tga');if(dtga!=null)r3.push(`TGA는 직전 대비 ${dtga>0?'증가(유동성 흡수)':'감소(유동성 공급)'}했습니다.`);
+ const mb=v('mbasey'),m1=v('m1y');if(mb!=null&&m1!=null)r3.push(`본원통화는 전년비 ${fmt(mb,1)}%, M1은 ${fmt(m1,1)}% ${mb<0&&m1>0?'— 연준이 돈을 줄이는 중에도 시중의 바로 쓸 수 있는 돈은 늘고 있습니다':mb>0&&m1>0?'— 연준의 돈과 시중의 돈이 함께 늘고 있습니다':mb>0&&m1<=0?'— 연준이 돈을 늘려도 시중으로 잘 전달되지 않고 있습니다':'— 둘 다 줄어 유동성이 마르는 쪽입니다'}.`);
  const m2=v('m2y');if(m2!=null)r3.push(`M2는 전년비 ${fmt(m2,1)}% ${m2>0?'증가':'감소'} — 대표는 M2가 1~3년 시차로 물가를 끌어올린다고 봅니다. 부채/GDP ${fmt(v('debt_gdp'),0)}%는 연준이 끝까지 긴축하기 어렵다는 논리의 뿌리입니다.`);
- R.push(['③ 재정·유동성 → 통화량 → 물가','정부 부채와 유동성 배관이 물가의 바닥을 받치는 구조',[ ['debt_gdp','부채/GDP'],['interest','이자비용'],['tga','TGA'],['rrp','RRP'],['reserves','지준'],['m2y','M2 증가율'],['corecpi3','근원 CPI 3개월'] ],r3]);
+ R.push(['③ 재정·유동성 → 통화량 → 물가','정부 부채와 유동성 배관이 물가의 바닥을 받치는 구조',[ ['debt_gdp','부채/GDP'],['interest','이자비용'],['tga','TGA'],['rrp','RRP'],['reserves','지준'],['mbasey','본원통화 증가율'],['m1y','M1 증가율'],['m2y','M2 증가율'],['corecpi3','근원 CPI 3개월'] ],r3]);
  // 4. 달러·원자재 → 중국
  let r4=[];const dx=v('dxy'),cny=v('usdcny');if(dx!=null)r4.push(`달러 인덱스 ${fmt(dx,1)}${dx>=110?'로 대표가 말한 변곡점 110 위':', 변곡점 110 아래'}, 달러/위안 ${fmt(cny,3)}${cny>=7.5?'(경고선 7.5 이상)':'(경고선 7.5 아래)'}입니다.`);
  const dcg=d1m('cgr');if(dcg!=null&&du!=null)r4.push(`구리/금 비율은 1개월 ${dcg>0?'상승':'하락'}, 10년물은 ${du>0?'상승':'하락'} — ${Math.sign(dcg)===Math.sign(du)?'같은 방향이라 장기금리 선행 관계가 유지되고 있습니다':'방향이 엇갈려, 대표가 쓰는 선행 관계가 지금은 흔들립니다'}.`);

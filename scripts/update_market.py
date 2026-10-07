@@ -47,6 +47,8 @@ FRED = [
     ("rrp", "역레포(RRP) 잔고", "RRPONTSYD", "$B"),
     ("tga", "재무부 일반계정(TGA)", "WTREGEN", "$M"),
     ("reserves", "은행 지급준비금", "WRESBAL", "$M"),
+    ("m1", "M1 통화량", "M1SL", "$B"),
+    ("mbase", "본원통화(MB)", "BOGMBASE", "$B"),
     ("m2", "M2 통화량", "M2SL", "$B"),
     ("m2v", "M2 유통속도", "M2V", "배"),
     ("debt_gdp", "연방정부 부채/GDP", "GFDEGDQ188S", "%"),
@@ -61,7 +63,7 @@ FRED = [
     ("jolts", "JOLTS 구인", "JTSJOL", "천건"),
     ("claims", "신규 실업수당 청구", "ICSA", "건"),
 ]
-LONG_FRED = {"DCOILWTICO", "DCOILBRENTEU", "M2SL", "M2V", "GFDEGDQ188S", "A091RC1Q027SBEA", "CPIAUCSL", "CPILFESL", "PCEPI", "PCEPILFE", "IQ", "PAYEMS", "UNRATE", "JTSJOL"}
+LONG_FRED = {"M1SL", "BOGMBASE", "DCOILWTICO", "DCOILBRENTEU", "M2SL", "M2V", "GFDEGDQ188S", "A091RC1Q027SBEA", "CPIAUCSL", "CPILFESL", "PCEPI", "PCEPILFE", "IQ", "PAYEMS", "UNRATE", "JTSJOL"}
 EIA = [  # EIA 주간 원유 재고 (천 배럴)
     ("crude_comm", "미국 상업 원유재고 (SPR 제외)", "WCESTUS1"),
     ("crude_spr", "전략비축유(SPR)", "WCSSTUS1"),
