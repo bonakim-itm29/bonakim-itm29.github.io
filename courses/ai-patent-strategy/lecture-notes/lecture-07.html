@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7부 상담·수수료·지원제도 · 인공지능 특허전략</title>
+<meta name="description" content="혼자 하지 말고 공적 지원을 쓰자">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">인공지능 특허전략</a> / <a href="index.html">BM 특허 길라잡이 핵심</a> / 7부</p>
+<header class="dk-h">
+  <p class="dk-wk num">PART 07</p>
+  <h1>상담·수수료·지원제도</h1>
+  <p class="lead">혼자 하지 말고 공적 지원을 쓰자</p>
+  <div class="kws"><span class="kw">특허상담</span><span class="kw">수수료 감면</span><span class="kw">공익변리사</span><span class="kw">지역지식재산센터</span><span class="kw">분쟁조정</span><span class="kw">IP 디딤돌</span></div>
+  
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="7-1"><b>7-1</b><span>특허상담 창구와 참고자료</span></a><a href="#s8" class="tab" data-lec="7-2"><b>7-2</b><span>수수료와 감면제도</span></a><a href="#s16" class="tab" data-lec="7-3"><b>7-3</b><span>특허청 지원제도 활용</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 24</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="7-1"><article class="slide ty-title" aria-label="1 / 24"><div class="sl-in"><div class="t-wrap"><p class="t-wk">7주차 · 상담·수수료·지원제도</p><p class="t-no">7-1</p><h2 class="t-title">특허상담 창구와 참고자료</h2><p class="t-thesis">혼자 고민하기 전에 공식 창구와 무료 자료부터</p></div></div><footer class="sl-f"><span>7-1 특허상담 창구와 참고자료</span><span class="num">1 / 24</span></footer></article></div><div class="slot" id="s2" data-lec="7-1"><article class="slide ty-tree" aria-label="2 / 24"><div class="sl-in"><h3 class="sh">특허상담 창구</h3><div class="tree"><div class="tr-r">특허상담</div><div class="tr-cs n4"><div class="tr-c"><b>고객상담센터</b><p>1544-8080, 평일 9~18시, 콜백</p></div><div class="tr-c"><b>고객서비스센터</b><p>정부대전청사, 서류 접수·상담</p></div><div class="tr-c"><b>서울사무소 상담실</b><p>강남 테헤란로, 검색·전자출원 지원</p></div><div class="tr-c"><b>지역지식재산센터</b><p>지역별 원스톱 서비스(ripc.org)</p></div></div></div></div><footer class="sl-f"><span>7-1 특허상담 창구와 참고자료</span><span class="num">2 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>특허고객상담센터는 특허청 업무 전반을 전화와 인터넷으로 상담하며, 야간·휴일에 예약하면 콜백을 받을 수 있다. 특허고객서비스센터(042-481-5217)는 출원·등록서류 접수와 제증명 발급을, 서울사무소 고객상담실(02-3458-2200)은 출원 안내와 검색·전자출원을 돕는다. 제도에 대한 민원은 특허청 홈페이지의 고충민원창구를 쓴다.</p></div></div><div class="slot" id="s3" data-lec="7-1"><article class="slide ty-concepts" aria-label="3 / 24"><div class="sl-in"><h3 class="sh">BM 출원자가 볼 참고자료</h3><div class="ccs n6"><div class="cc"><b>컴퓨터 관련 발명 심사기준</b><p>명세서 기재요건과 특허요건별 심사기준·사례</p></div><div class="cc"><b>영업방법 발명 심사사례집</b><p>BM 심사에서 자주 나오는 요건별 위배 사례</p></div><div class="cc"><b>영업방법 발명 판례집</b><p>쟁점별 특허법원·대법원 BM 판례</p></div><div class="cc"><b>거절이유별 대응사례</b><p>심사 절차와 거절이유별 대응 방법·사례</p></div><div class="cc"><b>우선심사 심사지침서</b><p>우선심사 대상·신청 절차와 판단 기준</p></div><div class="cc"><b>PCT 출원가이드</b><p>국제출원 절차와 서류 작성 방법</p></div></div></div><footer class="sl-f"><span>7-1 특허상담 창구와 참고자료</span><span class="num">3 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>부록은 특허청이 발간한 자료 10종을 소개한다. BM 출원자에게 가장 직접적인 것은 컴퓨터 관련 발명 심사기준, 영업방법 발명 심사사례집과 판례집, 거절이유별 대응사례 분석집이다. 의견제출통지를 받았을 때 비슷한 거절 사례를 찾아보면 심사관의 논리와 통하는 대응 방식을 미리 알 수 있다.</p></div></div><div class="slot" id="s4" data-lec="7-1"><article class="slide ty-points" aria-label="4 / 24"><div class="sl-in"><h3 class="sh">자료를 받는 곳</h3><div class="pts n4"><div class="pt"><b>특허청 홈페이지</b><p>정보마당 &gt; 간행물 코너에서 내려받기</p></div><div class="pt"><b>전자상거래 연구회</b><p>자료실에서 BM 심사사례집·판례집 제공</p></div><div class="pt"><b>특허고객서비스 편람</b><p>권리별 출원·등록·심판 절차와 서식 작성례</p></div><div class="pt"><b>출원가이드 북</b><p>출원절차·온라인 출원·통계·FAQ 정리</p></div></div></div><footer class="sl-f"><span>7-1 특허상담 창구와 참고자료</span><span class="num">4 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>대부분의 자료는 특허청 홈페이지의 정보마당 간행물 코너에서 무료로 받을 수 있고, 영업방법 발명 심사사례집과 판례집은 전자상거래 연구회 홈페이지 자료실에 있다. 처음 출원하는 사람은 &#x27;누구나 이해하기 쉬운 출원가이드 북&#x27;과 &#x27;산업재산권의 손쉬운 이용&#x27;으로 전체 절차를 익힌 뒤, 서식이 필요할 때 특허고객서비스 편람을 참고하면 된다.</p></div></div><div class="slot" id="s5" data-lec="7-1"><article class="slide ty-compare" aria-label="5 / 24"><div class="sl-in"><h3 class="sh">관련 사이트 용도별 정리</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">출원·검색</b><ul><li>특허청 kipo.go.kr</li><li>특허로 patent.go.kr</li><li>KIPRIS kipris.or.kr</li><li>특허전자도서관</li></ul></div><div class="cp-col"><b class="cp-h">교육·지원</b><ul><li>국가지식재산교육포털 ipacademy.net</li><li>한국발명진흥회 kipa.org</li><li>지역지식재산센터 ripc.org</li><li>국제지식재산연수원</li></ul></div><div class="cp-col"><b class="cp-h">정보·전략</b><ul><li>한국특허정보원 kipi.or.kr</li><li>한국지식재산전략원 rndip.re.kr</li><li>한국지식재산연구원 kiip.re.kr</li></ul></div></div></div><footer class="sl-f"><span>7-1 특허상담 창구와 참고자료</span><span class="num">5 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>부록의 관련 사이트 표를 용도별로 묶었다. 출원과 선행기술조사에는 특허로와 KIPRIS(특허정보 무료검색 서비스)가 기본이고, 교육은 국가지식재산교육포털에서 온라인으로 들을 수 있다. 특허청 전자상거래 연구회(kipo.go.kr/club/bm/)는 BM 심사 자료를 모아 둔 곳이라 BM 출원자에게 특히 유용하다.</p></div></div><div class="slot" id="s6" data-lec="7-1"><article class="slide ty-checklist" aria-label="6 / 24"><div class="sl-in"><h3 class="sh">상담 전에 준비할 것</h3><ol class="chk two"><li><span class="ck">1</span>아이디어를 한 문단과 흐름도로 정리했는가?</li><li><span class="ck">2</span>KIPRIS로 비슷한 선행특허를 찾아봤는가?</li><li><span class="ck">3</span>질문을 절차·비용·권리범위로 나눠 적었는가?</li><li><span class="ck">4</span>받은 통지서·서류의 번호와 기한을 챙겼는가?</li><li><span class="ck">5</span>개인·중소기업 등 내 신분(감면 대상)을 확인했는가?</li></ol></div><footer class="sl-f"><span>7-1 특허상담 창구와 참고자료</span><span class="num">6 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>상담 창구는 많지만 상담 시간은 짧다. 아이디어를 서비스 흐름도와 함께 정리하고, KIPRIS로 찾은 유사 특허를 들고 가면 &#x27;특허가 될까요?&#x27; 같은 막연한 질문 대신 &#x27;이 선행특허와 어떻게 달리 청구할까요?&#x27;처럼 구체적인 답을 얻을 수 있다. 통지서를 받은 경우에는 출원번호와 제출기일을 꼭 알려야 한다.</p></div></div><div class="slot" id="s7" data-lec="7-1"><article class="slide ty-takeaway" aria-label="7 / 24"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>절차 문의는 특허고객상담센터 1544-8080(평일 9~18시)</li><li>지역지식재산센터는 정보·상담·교육을 한곳에서 제공한다</li><li>BM 출원 전 컴퓨터 관련 발명 심사기준과 BM 사례집을 읽자</li><li>출원은 특허로, 선행조사는 KIPRIS가 기본 사이트다</li></ul></div><footer class="sl-f"><span>7-1 특허상담 창구와 참고자료</span><span class="num">7 / 24</span></footer></article></div><div class="slot" id="s8" data-lec="7-2"><article class="slide ty-title" aria-label="8 / 24"><div class="sl-in"><div class="t-wrap"><p class="t-wk">7주차 · 상담·수수료·지원제도</p><p class="t-no">7-2</p><h2 class="t-title">수수료와 감면제도</h2><p class="t-thesis">출원부터 등록까지 비용을 미리 계산하라</p></div></div><footer class="sl-f"><span>7-2 수수료와 감면제도</span><span class="num">8 / 24</span></footer></article></div><div class="slot" id="s9" data-lec="7-2"><article class="slide ty-compare" aria-label="9 / 24"><div class="sl-in"><h3 class="sh">출원·심사 관련 수수료</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">출원료</b><ul><li>전자 국어 46,000원</li><li>전자 외국어 73,000원</li><li>서면 66,000원(20면 초과 시 가산)</li></ul></div><div class="cp-col"><b class="cp-h">심사 관련</b><ul><li>심사청구 기본 143,000원</li><li>청구항 1항당 44,000원 가산</li><li>우선심사 신청료 200,000원</li></ul></div><div class="cp-col"><b class="cp-h">대응 단계</b><ul><li>보정료 전자 4,000원</li><li>재심사 100,000원+항당 10,000원</li><li>우선권 주장 1건 18,000원(온라인)</li></ul></div></div><p class="cp-note">책 발간 시점(2020) 기준, 납부 전 특허로에서 최신액 확인</p></div><footer class="sl-f"><span>7-2 수수료와 감면제도</span><span class="num">9 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>부록의 수수료 표를 단계별로 묶었다. 서면 출원은 명세서·도면·요약서 합이 20면을 넘으면 1면마다 1,000원이 더 붙고, 우선권 주장료는 서면 기준 20,000원이다. 보정료는 서면이면 14,000원이다. 수수료는 개정될 수 있으므로 실제 납부 전에는 특허로의 수수료 안내에서 현행 금액을 다시 확인해야 한다.</p></div></div><div class="slot" id="s10" data-lec="7-2"><article class="slide ty-equation" aria-label="10 / 24"><div class="sl-in"><h3 class="sh">출원~심사청구 비용 계산</h3><p class="eq">비용 = 46,000 + 143,000 + 44,000 × 청구항 수</p><div class="eq-ts"><div class="eq-t"><b>46,000원</b><p>전자출원 국어 출원료</p></div><div class="eq-t"><b>143,000원</b><p>심사청구료 기본료</p></div><div class="eq-t"><b>44,000원</b><p>청구항 1항당 심사청구 가산료</p></div></div><p class="eq-rule">청구항 수가 비용을 좌우하므로 꼭 필요한 항만</p></div><footer class="sl-f"><span>7-2 수수료와 감면제도</span><span class="num">10 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>예: 청구항 10개로 전자출원하며 심사청구까지 하면 46,000+143,000+440,000=629,000원이다. 감면 대상이 70% 감면을 받으면 약 188,700원이 된다. 우선심사를 원하면 200,000원이 더 든다. 청구항을 무작정 늘리기보다 독립항(시스템·방법·기록매체)과 핵심 종속항 위주로 설계하는 것이 비용과 심사 대응 모두에 유리하다.</p></div></div><div class="slot" id="s11" data-lec="7-2"><article class="slide ty-steps" aria-label="11 / 24"><div class="sl-in"><h3 class="sh">지정기간 연장 신청료</h3><ol class="steps n5"><li><span class="sn">1</span><b>1회</b><p>20,000원</p></li><li><span class="sn">2</span><b>2회</b><p>30,000원</p></li><li><span class="sn">3</span><b>3회</b><p>60,000원</p></li><li><span class="sn">4</span><b>4회</b><p>120,000원</p></li><li><span class="sn">5</span><b>5회 이상</b><p>240,000원</p></li></ol></div><footer class="sl-f"><span>7-2 수수료와 감면제도</span><span class="num">11 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>의견제출통지의 제출기일은 1개월 단위로 연장할 수 있지만, 횟수가 늘수록 신청료가 가파르게 오른다. 1회 2만 원이던 것이 4회째에는 12만 원, 5회 이상은 24만 원이다. 연장을 네 번 하면 누적 23만 원이 드는 셈이다. 통지서를 받자마자 대응을 시작해 연장을 최소화하는 것이 비용을 아끼는 방법이다.</p></div></div><div class="slot" id="s12" data-lec="7-2"><article class="slide ty-compare" aria-label="12 / 24"><div class="sl-in"><h3 class="sh">특허 연차등록료(매년)</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">기본료</b><ul><li>1~3년 15,000원(설정등록 시 3년분)</li><li>4~6년 40,000원</li><li>7~9년 100,000원 · 10~12년 240,000원</li><li>13~25년 360,000원</li></ul></div><div class="cp-col"><b class="cp-h">청구항 1항당 가산</b><ul><li>1~3년 13,000원</li><li>4~6년 22,000원</li><li>7~9년 38,000원</li><li>10~25년 55,000원</li></ul></div></div><p class="cp-note">실용신안은 기본료·가산료가 더 낮다</p></div><footer class="sl-f"><span>7-2 수수료와 감면제도</span><span class="num">12 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>특허결정 후 설정등록 때 1~3년분을 한꺼번에 내고, 4년차부터는 매년 연차등록료를 낸다. 예: 청구항 5개 특허의 4년차 등록료는 40,000+22,000×5=150,000원이다. 시간이 갈수록 금액이 커지므로, 사업에 쓰지 않는 특허는 포기하거나 청구항을 정리하는 등 포트폴리오를 주기적으로 점검해야 한다.</p></div></div><div class="slot" id="s13" data-lec="7-2"><article class="slide ty-equation" aria-label="13 / 24"><div class="sl-in"><h3 class="sh">수수료 감면제도</h3><p class="eq">감면 후 금액 = 수수료 × (1 − 감면율)</p><div class="eq-ts"><div class="eq-t"><b>70% 감면</b><p>출원료·심사청구료·최초 3년분 등록료</p></div><div class="eq-t"><b>50% 감면</b><p>4년차부터 존속기간까지 등록료</p></div><div class="eq-t"><b>대상 권리</b><p>특허·실용신안·디자인</p></div></div><p class="eq-rule">대상 여부와 신청 방법은 특허로 감면 안내에서 확인</p></div><footer class="sl-f"><span>7-2 수수료와 감면제도</span><span class="num">13 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>부록의 수수료 감면제도는 특허·실용신안·디자인의 출원료, 심사청구료, 최초 3년분 등록료를 70%, 4년차부터 존속기간까지의 등록료를 50% 감면한다. 예: 4년차 등록료 150,000원은 50% 감면 시 75,000원이다. 감면은 대상자가 요건을 갖춰 신청해야 적용되므로 출원 단계부터 감면 신청을 함께 하자. 담당은 정보고객정책과다.</p></div></div><div class="slot" id="s14" data-lec="7-2"><article class="slide ty-checklist" aria-label="14 / 24"><div class="sl-in"><h3 class="sh">비용을 줄이는 방법</h3><ol class="chk two"><li><span class="ck">1</span>서면 대신 전자출원(특허로)으로 냈는가?</li><li><span class="ck">2</span>감면 대상 여부를 확인하고 신청했는가?</li><li><span class="ck">3</span>청구항 수를 핵심 위주로 설계했는가?</li><li><span class="ck">4</span>기간연장 없이 제출기일 안에 대응하는가?</li><li><span class="ck">5</span>보정은 한 번에 완성본으로 내는가?</li><li><span class="ck">6</span>쓰지 않는 등록특허의 연차료를 점검하는가?</li></ol></div><footer class="sl-f"><span>7-2 수수료와 감면제도</span><span class="num">14 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 수수료 표만 잘 읽어도 줄일 수 있는 비용이 꽤 많다. 전자출원은 서면보다 출원료가 20,000원 싸고, 감면은 출원·심사·초기 등록 비용을 70%까지 줄여 준다. 청구항 하나가 심사청구 때 44,000원, 등록 후 매년 가산료를 부르므로 청구항 설계는 비용 설계이기도 하다.</p></div></div><div class="slot" id="s15" data-lec="7-2"><article class="slide ty-takeaway" aria-label="15 / 24"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>전자출원 출원료는 46,000원으로 서면(66,000원)보다 싸다</li><li>심사청구료는 기본 143,000원에 청구항 1항당 44,000원이 붙는다</li><li>등록 후에는 연차등록료를 매년 내야 권리가 유지된다</li><li>감면 대상은 출원료·심사청구료·최초 3년 등록료 70% 감면</li></ul></div><footer class="sl-f"><span>7-2 수수료와 감면제도</span><span class="num">15 / 24</span></footer></article></div><div class="slot" id="s16" data-lec="7-3"><article class="slide ty-title" aria-label="16 / 24"><div class="sl-in"><div class="t-wrap"><p class="t-wk">7주차 · 상담·수수료·지원제도</p><p class="t-no">7-3</p><h2 class="t-title">특허청 지원제도 활용</h2><p class="t-thesis">창출·활용·보호 단계마다 공적 지원이 있다</p></div></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">16 / 24</span></footer></article></div><div class="slot" id="s17" data-lec="7-3"><article class="slide ty-tree" aria-label="17 / 24"><div class="sl-in"><h3 class="sh">특허청 지원제도 지도</h3><div class="tree"><div class="tr-r">지원제도</div><div class="tr-cs n4"><div class="tr-c"><b>창출 지원</b><p>창업 연계, IP 컨설팅, 특허전략</p></div><div class="tr-c"><b>활용 지원</b><p>거래 중개, 사업화 평가, 벤처투자</p></div><div class="tr-c"><b>보호 지원</b><p>분쟁조정, 해외 IP-DESK, 영업비밀</p></div><div class="tr-c"><b>금융·교육·기타</b><p>IP 담보대출, 교육, 수수료 감면</p></div></div></div></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">17 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>부록 5장은 지식재산권 창출, 활용, 보호, 금융, 교육, 기타 지원으로 나눠 특허청 지원시책과 담당 기관·연락처를 표로 정리한다. 대부분 한국발명진흥회, 한국특허전략개발원, 한국지식재산보호원, 지역지식재산센터가 실제 운영을 맡는다. 먼저 내 사업 단계가 어디인지 정하면 봐야 할 표가 좁혀진다.</p></div></div><div class="slot" id="s18" data-lec="7-3"><article class="slide ty-cases" aria-label="18 / 24"><div class="sl-in"><h3 class="sh">창업자가 먼저 볼 창출 지원</h3><div class="css n4"><div class="cs"><b>IP 디딤돌</b><p>개인·예비창업자 아이디어를 창업까지 연계</p></div><div class="cs"><b>IP 나래</b><p>창업기업 IP 역량 강화 전문 컨설팅</p></div><div class="cs"><b>스타트업 IP 바우처</b><p>바우처로 필요한 IP 서비스·기관 선택</p></div><div class="cs"><b>중소기업 IP 바로지원</b><p>지역센터가 IP 애로를 수시 상담·해결</p></div></div></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">18 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>IP 디딤돌은 개인과 예비창업자의 우수 아이디어가 사업 아이템으로 구체화되어 창업까지 이어지도록 돕는 맞춤형 프로그램이고, IP 나래는 창업기업과 전환창업 기업에 지식재산 전문 컨설팅을 제공한다. 두 사업 모두 지역지식재산센터(1661-1900)가 창구다. BM 아이디어를 가진 예비창업자에게 가장 먼저 권할 만한 제도다.</p></div></div><div class="slot" id="s19" data-lec="7-3"><article class="slide ty-cases" aria-label="19 / 24"><div class="sl-in"><h3 class="sh">활용·금융 지원</h3><div class="css n4"><div class="cs"><b>지식재산 거래 지원</b><p>특허거래전문관이 기술 도입·거래 중개</p></div><div class="cs"><b>사업화 연계 평가</b><p>사업타당성·가치평가 비용 지원</p></div><div class="cs"><b>IP 담보대출</b><p>IP 가치평가로 보증·담보대출·투자 유치</p></div><div class="cs"><b>특허공제</b><p>공제로 중소·중견기업 IP 비용 부담 분산</p></div></div></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">19 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>특허는 등록 후에 돈이 되도록 써야 한다. 거래 지원은 지식재산 거래정보 검색과 특허거래전문관 상담을, 사업화 연계 평가지원은 현물출자 등에 필요한 가치평가 비용을 돕는다. IP 금융은 지식재산권의 가치평가를 근거로 보증·담보대출·투자를 받을 수 있게 하며, 특허공제는 기업 간 상호부조로 지식재산 부담을 분산·완화한다.</p></div></div><div class="slot" id="s20" data-lec="7-3"><article class="slide ty-cases" aria-label="20 / 24"><div class="sl-in"><h3 class="sh">보호·분쟁 지원</h3><div class="css n4"><div class="cs"><b>분쟁조정제도</b><p>소송 대신 조정위원회에서 합의 유도</p></div><div class="cs"><b>해외지식재산센터</b><p>9개국 16개소 IP-DESK로 현지 대응</p></div><div class="cs"><b>특허심판 국선대리인</b><p>약자에게 심판 대리인 선임 지원</p></div><div class="cs"><b>특별사법경찰</b><p>위조상품·특허 등 침해 범죄 수사</p></div></div></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">20 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>산업재산권 분쟁조정제도는 소송이나 심판에 드는 비용과 시간을 아끼도록 특허청이 설치한 분쟁조정위원회가 당사자 합의를 이끄는 제도다(1670-9779). 해외 진출 기업은 코트라의 IP-DESK를 통해 현지 법률자문을 받을 수 있다. 6주차의 NPE 소송 사례처럼 분쟁은 갑자기 오므로 미리 연락처를 알아 두자.</p></div></div><div class="slot" id="s21" data-lec="7-3"><article class="slide ty-points" aria-label="21 / 24"><div class="sl-in"><h3 class="sh">공익변리사 특허상담센터</h3><div class="pts n4"><div class="pt"><b>대상</b><p>사회적 취약계층 등 대리인 선임이 어려운 출원인</p></div><div class="pt"><b>서비스</b><p>권리 확보부터 분쟁 대응까지 무료 변리서비스</p></div><div class="pt"><b>연락처</b><p>02-6006-4300, pcc.or.kr</p></div><div class="pt"><b>담당</b><p>특허청 산업재산보호지원과(042-481-8227)</p></div></div></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">21 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>공익변리사 특허상담센터는 출원·심판·소송에 필요한 변리 서비스를 무료로 제공해 대리인 선임이 어려운 사람이 권리를 확보하고 분쟁에 대응하도록 돕는다. 센터 홈페이지는 상담, 서류 작성, 심판·소송 대리, 지역 순회 상담 등을 안내한다. 지원 대상 요건이 있으므로 신청 전에 홈페이지에서 해당 여부를 확인해야 한다.</p></div></div><div class="slot" id="s22" data-lec="7-3"><article class="slide ty-lab" aria-label="22 / 24"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">특허청 지원제도·공익변리사 활용</h3><p class="lb-p">내 상황(예비창업·창업기업·분쟁 등)에 맞는 특허청 지원제도와 무료 상담 창구를 찾아 신청 계획을 세우고, 출원 비용을 감면까지 반영해 계산한다.</p><ol class="lb-s"><li>단계 진단</li><li>상담 창구 고르기</li><li>지원사업 찾기</li><li>공익변리사 상담 신청</li><li>비용 계산</li><li>분쟁 대비 경로 확인</li><li>실행 계획 1페이지</li></ol><p class="lb-go"><a href="labs/07-support-programs.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">22 / 24</span></footer></article></div><div class="slot" id="s23" data-lec="7-3"><article class="slide ty-checklist" aria-label="23 / 24"><div class="sl-in"><h3 class="sh">내게 맞는 지원 찾기</h3><ol class="chk two"><li><span class="ck">1</span>예비창업자인가, 창업기업인가, 중소기업인가?</li><li><span class="ck">2</span>지금 필요한 것은 출원·사업화·분쟁 중 무엇인가?</li><li><span class="ck">3</span>지역지식재산센터의 올해 모집 공고를 확인했는가?</li><li><span class="ck">4</span>무료 상담 대상 요건을 충족하는가?</li><li><span class="ck">5</span>해외 진출 계획이 있다면 IP-DESK를 확인했는가?</li></ol></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">23 / 24</span></footer></article><div class="sl-ex"><b>설명</b><p>지원제도는 종류가 많아 표만 보면 막막하지만, 신분과 사업 단계 두 가지만 정하면 대상이 크게 줄어든다. 책의 지원시책 목록은 2020년 기준이라 이름이나 내용이 바뀌었을 수 있으므로, 실제 신청 전에는 담당 기관 홈페이지의 최신 공고를 꼭 확인하자. 이 강의 랩에서 1페이지 실행표로 정리해 보자.</p></div></div><div class="slot" id="s24" data-lec="7-3"><article class="slide ty-takeaway" aria-label="24 / 24"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>지원제도는 창출·활용·보호·금융·교육·기타로 나뉜다</li><li>예비창업자는 IP 디딤돌, 창업기업은 IP 나래·스타트업 바우처를 보자</li><li>공익변리사 특허상담센터는 취약계층에 무료 변리서비스를 제공한다</li><li>분쟁은 소송 전에 산업재산권 분쟁조정제도를 검토한다</li></ul></div><footer class="sl-f"><span>7-3 특허청 지원제도 활용</span><span class="num">24 / 24</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-06.html">← 6부 BM 특허 활용·분쟁 사례</a><span></span></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: 특허청 「BM 특허 길라잡이」(2020 개정판), 인공지능 특허전략 수업자료. 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

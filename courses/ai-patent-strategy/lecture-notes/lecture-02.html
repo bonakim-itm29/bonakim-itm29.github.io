@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2부 출원에서 등록까지 · 인공지능 특허전략</title>
+<meta name="description" content="조사하고, 출원하고, 고른 트랙으로 심사받는다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">인공지능 특허전략</a> / <a href="index.html">BM 특허 길라잡이 핵심</a> / 2부</p>
+<header class="dk-h">
+  <p class="dk-wk num">PART 02</p>
+  <h1>출원에서 등록까지</h1>
+  <p class="lead">조사하고, 출원하고, 고른 트랙으로 심사받는다</p>
+  <div class="kws"><span class="kw">선행기술조사</span><span class="kw">전자출원</span><span class="kw">출원공개</span><span class="kw">3트랙 심사</span><span class="kw">의견제출통지</span><span class="kw">거절결정 불복</span></div>
+  
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="2-1"><b>2-1</b><span>출원 전 선행기술조사</span></a><a href="#s9" class="tab" data-lec="2-2"><b>2-2</b><span>특허출원과 출원공개</span></a><a href="#s20" class="tab" data-lec="2-3"><b>2-3</b><span>심사청구와 3트랙 심사</span></a><a href="#s30" class="tab" data-lec="2-4"><b>2-4</b><span>실체심사와 거절이유 대응</span></a><a href="#s39" class="tab" data-lec="2-5"><b>2-5</b><span>특허여부 결정과 불복</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 45</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="2-1"><article class="slide ty-title" aria-label="1 / 45"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 출원에서 등록까지</p><p class="t-no">2-1</p><h2 class="t-title">출원 전 선행기술조사</h2><p class="t-thesis">출원 전 검색이 헛수고와 분쟁을 막는다</p></div></div><footer class="sl-f"><span>2-1 출원 전 선행기술조사</span><span class="num">1 / 45</span></footer></article></div><div class="slot" id="s2" data-lec="2-1"><article class="slide ty-steps" aria-label="2 / 45"><div class="sl-in"><h3 class="sh">출원에서 등록까지 한눈에</h3><ol class="steps n6"><li><span class="sn">1</span><b>선행기술조사</b><p>동일·유사 기술 조사·분석·평가</p></li><li><span class="sn">2</span><b>출원·방식심사</b><p>출원서 제출·수수료 납부, 형식 점검</p></li><li><span class="sn">3</span><b>심사청구</b><p>출원 후 3년 내, 빠른·일반·늦은 심사</p></li><li><span class="sn">4</span><b>실체심사</b><p>특허요건 충족 여부 심사</p></li><li><span class="sn">5</span><b>보정서·의견서</b><p>의견제출통지의 거절이유 극복</p></li><li><span class="sn">6</span><b>등록·거절 결정</b><p>거절이유 해소 여부로 최종 결정</p></li></ol></div><footer class="sl-f"><span>2-1 출원 전 선행기술조사</span><span class="num">2 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 &#x27;한 장으로 보기&#x27;를 여섯 단계로 묶었다. 출원 뒤 방식심사는 서류 흠결과 수수료를 확인하는 형식 심사이고, 실체심사는 신규성·진보성 같은 내용 심사다. 심사는 심사청구가 있어야 시작된다. 이 흐름을 알면 각 단계의 기한(심사청구 3년, 공개 1년 6월 등)을 미리 일정표에 넣어 관리할 수 있다.</p></div></div><div class="slot" id="s3" data-lec="2-1"><article class="slide ty-points" aria-label="3 / 45"><div class="sl-in"><h3 class="sh">선행기술조사가 필요한 이유</h3><div class="pts n4"><div class="pt"><b>특허요건</b><p>선행기술이 있으면 신규성·진보성 부정</p></div><div class="pt"><b>침해 위험</b><p>타인 특허 존재 시 허락 없는 실시는 침해</p></div><div class="pt"><b>BM 특성</b><p>BM 특허는 중복출원 빈도가 높음</p></div><div class="pt"><b>전 단계</b><p>착상·출원·권리화 이후 모두 중요</p></div></div></div><footer class="sl-f"><span>2-1 출원 전 선행기술조사</span><span class="num">3 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>출원 전에 같은 발명이 먼저 출원돼 있으면 특허를 받을 수 없고, 출원 비용과 시간이 그대로 사라진다. 또 타인의 특허권이 있는데 그 발명을 생산·판매하면 특허침해로 분쟁에 휘말린다. 예를 들어 결제 앱을 출시하기 전에 같은 결제 흐름의 등록 특허를 찾았다면, 설계를 바꾸거나 라이선스를 검토할 시간을 벌 수 있다.</p></div></div><div class="slot" id="s4" data-lec="2-1"><article class="slide ty-compare" aria-label="4 / 45"><div class="sl-in"><h3 class="sh">국내 검색 서비스: 무료 vs 유료</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">무료</b><ul><li>KIPRIS(한국특허정보원)</li><li>국내·미·유럽·일·중·PCT 열람</li><li>ScienceON: 논문·특허·보고서</li></ul></div><div class="cp-col"><b class="cp-h">유료</b><ul><li>윕스(WIPS) 특허검색</li><li>특허정보진흥센터(PIPC) 조사·분석</li><li>디비피아(DBpia) 논문 검색</li></ul></div></div><p class="cp-note">먼저 무료 DB로 넓게 보고, 필요하면 유료 분석을 쓴다</p></div><footer class="sl-f"><span>2-1 출원 전 선행기술조사</span><span class="num">4 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>KIPRIS는 특허청이 보유한 국내와 해외 지식재산권 정보를 무료로 검색·열람하게 해 준다. ScienceON(구 NDSL)은 논문과 보고서까지 찾을 수 있어 비특허문헌 조사에 좋다. 유료 서비스는 분석 기능이나 전문가 조사를 제공한다. 창업 초기라면 무료 DB로 스스로 조사한 뒤 핵심 출원만 전문기관에 맡기는 방식이 비용 대비 효율적이다.</p></div></div><div class="slot" id="s5" data-lec="2-1"><article class="slide ty-tree" aria-label="5 / 45"><div class="sl-in"><h3 class="sh">해외 특허청 무료 DB</h3><div class="tree"><div class="tr-r">해외 무료 검색</div><div class="tr-cs n4"><div class="tr-c"><b>WIPO</b><p>PATENTSCOPE, PCT 국제출원 검색</p></div><div class="tr-c"><b>USPTO</b><p>미국 특허 검색</p></div><div class="tr-c"><b>EPO</b><p>Espacenet, 전 세계 특허 검색</p></div><div class="tr-c"><b>JPO</b><p>J-PlatPat, 일본 특허 검색</p></div></div></div></div><footer class="sl-f"><span>2-1 출원 전 선행기술조사</span><span class="num">5 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>책은 이 밖에 중국(CNIPA), 영국(IPO), 호주(IP Australia) 특허청 DB도 무료로 소개한다. 신규성은 국내뿐 아니라 국외에서 공지된 기술도 기준이므로, BM처럼 해외 서비스가 먼저 나오는 분야는 해외 검색이 필수다. Espacenet은 CPC 분류 브라우저를 함께 제공해 G06Q 코드 정의를 확인하기도 편하다.</p></div></div><div class="slot" id="s6" data-lec="2-1"><article class="slide ty-points" aria-label="6 / 45"><div class="sl-in"><h3 class="sh">방문·전화로 받는 검색 서비스</h3><div class="pts n4"><div class="pt"><b>특허전자도서관</b><p>특허청(대전) 열람·복사·검색 서비스</p></div><div class="pt"><b>지역지식재산센터</b><p>서울·부산 등 전국 상공회의소 등에서 운영</p></div><div class="pt"><b>이용 방법</b><p>방문, 전화, 팩스, 우편으로 요청</p></div><div class="pt"><b>활용 팁</b><p>검색이 어려우면 가까운 센터 상담부터</p></div></div></div><footer class="sl-f"><span>2-1 출원 전 선행기술조사</span><span class="num">6 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>인터넷 검색이 익숙하지 않으면 특허청 특허전자도서관(library.kipo.go.kr)이나 지역지식재산센터(www.ripc.org)를 이용할 수 있다. 지역센터는 서울산업진흥원, 각 지역 테크노파크·상공회의소, 한국발명진흥회 지부 등이 맡고 있다. 처음 출원하는 개인·초기 창업자라면 가까운 센터에서 조사 방법을 안내받는 것이 빠르다.</p></div></div><div class="slot" id="s7" data-lec="2-1"><article class="slide ty-lab" aria-label="7 / 45"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">KIPRIS로 BM 선행기술 조사하기</h3><p class="lb-p">아이디어와 같거나 비슷한 기술이 이미 출원·등록됐는지 찾아, 출원할지·청구항을 어떻게 차별화할지 결정한다. 키워드와 CPC G06Q 분류를 함께 쓰는 검색을 연습한다.</p><ol class="lb-s"><li>구성요소로 쪼개기</li><li>키워드·동의어 표</li><li>CPC 코드 확정</li><li>KIPRIS 검색식 작성</li><li>해외·비특허 확장</li><li>유사 문헌 선별</li><li>대비표 작성</li><li>결론 내리기</li></ol><p class="lb-go"><a href="labs/02-prior-art.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>2-1 출원 전 선행기술조사</span><span class="num">7 / 45</span></footer></article></div><div class="slot" id="s8" data-lec="2-1"><article class="slide ty-takeaway" aria-label="8 / 45"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>출원~등록은 조사, 출원, 방식심사, 심사청구, 실체심사, 대응, 결정 순서다</li><li>선행기술이 있으면 신규성·진보성이 없어 거절되고 침해 분쟁 위험도 있다</li><li>BM은 중복출원이 많아 착상·출원·등록 후 모든 단계에서 조사한다</li><li>KIPRIS·ScienceON과 해외 특허청 DB는 무료로 쓸 수 있다</li></ul></div><footer class="sl-f"><span>2-1 출원 전 선행기술조사</span><span class="num">8 / 45</span></footer></article></div><div class="slot" id="s9" data-lec="2-2"><article class="slide ty-title" aria-label="9 / 45"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 출원에서 등록까지</p><p class="t-no">2-2</p><h2 class="t-title">특허출원과 출원공개</h2><p class="t-thesis">서류를 갖춰 내면 1년 6월 뒤 공개된다</p></div></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">9 / 45</span></footer></article></div><div class="slot" id="s10" data-lec="2-2"><article class="slide ty-tree" aria-label="10 / 45"><div class="sl-in"><h3 class="sh">특허 출원은 이렇게</h3><div class="tree"><div class="tr-r">특허출원</div><div class="tr-cs n3"><div class="tr-c"><b>출원인이</b><p>발명자 또는 승계인, 공동 발명은 권리 공유</p></div><div class="tr-c"><b>필요 서류를</b><p>출원서(요약서·명세서·도면), 대리권·감면 증명</p></div><div class="tr-c"><b>특허청에 제출</b><p>온라인(특허로) 또는 방문·우편</p></div></div></div></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">10 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>출원인은 발명을 한 사람이나 그 권리를 넘겨받은 승계인이다. 두 사람 이상이 함께 발명했다면 특허받을 권리를 공유하고 전원이 함께 출원해야 한다. BM 특허와 일반 특허는 출원 절차, 서식, 수수료, 기간이 모두 같다. 서식은 특허로 초기화면 &gt; 민원서식 다운로드에서 받을 수 있다.</p></div></div><div class="slot" id="s11" data-lec="2-2"><article class="slide ty-steps" aria-label="11 / 45"><div class="sl-in"><h3 class="sh">온라인 출원 5단계(특허로)</h3><ol class="steps n5"><li><span class="sn">1</span><b>특허고객번호</b><p>출원 전 고유번호 부여, 모든 서류에 기재</p></li><li><span class="sn">2</span><b>인증서 등록</b><p>공인인증서를 특허로에 사용등록</p></li><li><span class="sn">3</span><b>전자출원 SW</b><p>문서작성 SW 내려받아 PC에 설치</p></li><li><span class="sn">4</span><b>출원서 작성</b><p>NK-Editor로 명세서, KEAPS로 서식</p></li><li><span class="sn">5</span><b>온라인 제출</b><p>접수증·출원번호통지서 발급</p></li></ol></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">11 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>메뉴 경로는 모두 특허로 &gt; 신청/제출 &gt; 국내출원 아래에 있다. 특허고객등록, 인증서 사용등록, 전자출원SW 설치, 명세서/서식 작성, 온라인제출 순이다. 온라인 출원은 서면 출원의 전자화·송달 비용을 줄이고, 송달 기간 없이 실시간으로 처리되며, 제출서류를 자동 점검해 오류를 고칠 기회를 준다.</p></div></div><div class="slot" id="s12" data-lec="2-2"><article class="slide ty-compare" aria-label="12 / 45"><div class="sl-in"><h3 class="sh">온라인 출원 vs 서면 출원</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">온라인(특허로)</b><ul><li>월~토 0~24시, 일·공휴일 9~21시</li><li>접수 즉시 접수증·출원번호</li><li>수수료 절감, 자동 오류 점검</li></ul></div><div class="cp-col"><b class="cp-h">서면(방문·우편)</b><ul><li>고객서비스센터(대전)·서울사무소</li><li>방문: 평일 9~18시 접수</li><li>우편: 소인일이 출원일, 통상환 첨부</li></ul></div></div><p class="cp-note">PCT 국제출원은 우편이라도 특허청 도달일이 출원일</p></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">12 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>서면 출원은 비치 서식이나 내려받은 서식으로 작성하고, 특허고객번호부여신청서도 따로 낸다. 우편 출원은 우체국 소인일자가 출원일이지만, 접수증과 출원번호통지서는 접수 후 10일 안에 우편으로 온다. 수수료는 우체국에서 통상환으로 바꿔 동봉한다. 하루라도 빨리 출원일을 잡아야 하는 선출원주의에서는 온라인 출원이 유리하다.</p></div></div><div class="slot" id="s13" data-lec="2-2"><article class="slide ty-concepts" aria-label="13 / 45"><div class="sl-in"><h3 class="sh">청구범위 제출 유예제도</h3><div class="ccs n4"><div class="cc"><b>의미</b><p>명세서에 청구범위 없이 먼저 출원하는 제도</p></div><div class="cc"><b>보정 기한</b><p>출원일부터 1년 6개월이 되는 날까지</p></div><div class="cc"><b>예외 기한</b><p>제3자 심사청구 통지 시 통지일부터 3개월</p></div><div class="cc"><b>미제출 효과</b><p>기한 내 보정서 없으면 출원 취하 간주</p></div></div></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">13 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>보호받는 범위는 청구범위로 정해지므로 청구범위 작성에 특히 유의해야 한다. 그런데 경쟁자보다 먼저 출원일을 확보해야 할 때는 발명 설명만 담아 출원하고 청구범위는 나중에 낼 수 있다. 예: 2026년 1월 10일 출원이면 2027년 7월 10일까지 청구범위를 담은 보정서를 내야 한다. 놓치면 출원 자체가 사라진다.</p></div></div><div class="slot" id="s14" data-lec="2-2"><article class="slide ty-concepts" aria-label="14 / 45"><div class="sl-in"><h3 class="sh">수수료 납부와 감면</h3><div class="ccs n6"><div class="cc"><b>납부 방법</b><p>온라인(카드·휴대폰·이체), 지로, 자동, 은행</p></div><div class="cc"><b>감면 대상 수수료</b><p>출원료, 심사청구료, 최초 3년분 특허료·등록료</p></div><div class="cc"><b>전액(100%) 면제</b><p>기초생활 의료급여 수급자, 유공자, 학생 등</p></div><div class="cc"><b>85% / 70% 감면</b><p>만19~30세 미만·65세 이상 / 개인·중소기업</p></div><div class="cc"><b>50% / 30% 감면</b><p>공공연구기관·전담조직 등 / 중견기업</p></div><div class="cc"><b>반환</b><p>과·오납 등, 사유 발생일부터 3년 안에 청구</p></div></div></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">14 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>수수료를 내지 않으면 그 절차는 무효가 된다. 감면은 출원인 기준이며, 개인은 발명자와 출원인이 같아야 한다. 예시로 감면 전 수수료가 10만 원이면 개인·중소기업은 70% 감면으로 3만 원, 만 25세 개인 발명자는 85% 감면으로 1만 5천 원을 낸다(금액은 예시). 출원 후 1개월 안에 취하·포기하면 출원료·심사청구료를 돌려받을 수 있다.</p></div></div><div class="slot" id="s15" data-lec="2-2"><article class="slide ty-compare" aria-label="15 / 45"><div class="sl-in"><h3 class="sh">방식심사: 흠결 처리와 대응</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">보정할 수 있는 흠결</b><ul><li>1개월 내 기간 정해 보정요구서</li><li>기간 내 보정서로 치유 → 수리</li><li>미제출·미치유 → 서류 무효</li></ul></div><div class="cp-col"><b class="cp-h">보정할 수 없는 흠결</b><ul><li>1개월 내 기간 정해 반려이유통지</li><li>소명서로 치유 → 직권 수리</li><li>미치유 → 반려 처리</li></ul></div></div></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">15 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>방식심사는 서류 기재방식, 출원인·대리인의 절차능력, 수수료 납부, 첨부서류 제출 등 형식 요건을 점검한다. 고칠 수 있는 흠결이면 보정요구서가, 고칠 수 없는 흠결이면 반려이유통지서가 온다. 반려이유통지를 받고 소명서 제출기일 전에 서류를 돌려받고 싶으면 반려요청서를 낸다. 기한 1개월은 짧으니 특허보관함을 자주 확인하자.</p></div></div><div class="slot" id="s16" data-lec="2-2"><article class="slide ty-compare" aria-label="16 / 45"><div class="sl-in"><h3 class="sh">출원공개의 효과</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">출원인</b><ul><li>업으로 실시하는 자에게 서면 경고</li><li>경고·인지 후 실시분 보상금 청구권</li><li>보상금 청구는 설정등록 후 행사</li></ul></div><div class="cp-col"><b class="cp-h">제3자</b><ul><li>공개 기술로 중복투자·연구 방지</li><li>공개 기술을 이용한 개량 기술 개발</li></ul></div></div><p class="cp-note">출원 후 1년 6월 경과 시 공개, 신청하면 조기공개</p></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">16 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>출원공개는 출원 후 1년 6월이 지나면 발명 내용을 일반에 알리는 제도다. 공개 전에 무단 실시하는 제3자가 있으면 조기공개를 신청해 경고와 보상금 청구의 근거를 빨리 만들 수 있다. 다만 조기공개한 뒤 개량 발명을 새로 출원하면, 먼저 공개된 내 출원 때문에 신규성·진보성이 부정될 수 있어 주의해야 한다.</p></div></div><div class="slot" id="s17" data-lec="2-2"><article class="slide ty-points" aria-label="17 / 45"><div class="sl-in"><h3 class="sh">정보제공 제도</h3><div class="pts n4"><div class="pt"><b>의미</b><p>특허받을 수 없다는 정보를 증거와 함께 제공</p></div><div class="pt"><b>누가</b><p>자연인 또는 법인 누구나</p></div><div class="pt"><b>언제</b><p>출원이 특허청에 계속 중이면 언제든지</p></div><div class="pt"><b>제외 사유</b><p>배경기술 기재(42조3항2호)·청구범위 기재방법·1발명1출원</p></div></div></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">17 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>경쟁사의 공개된 BM 출원이 내 사업을 막을 것 같다면, 그 출원보다 앞선 선행문헌을 증거로 특허청에 낼 수 있다. 심사관은 심사를 끝내면 심사 결과와 제공된 정보의 활용 여부를 정보제공자에게 알려 준다. 반대로 내 출원에도 경쟁자가 정보제공을 할 수 있으므로, 출원 전 선행기술조사를 충분히 해 두는 것이 최선의 방어다.</p></div></div><div class="slot" id="s18" data-lec="2-2"><article class="slide ty-lab" aria-label="18 / 45"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">특허로로 전자출원하기</h3><p class="lb-p">특허고객번호 신청부터 온라인 제출, 수수료 납부, 처리상황 조회까지 전자출원 전 과정을 순서대로 해 보며 출원일을 확보하는 절차를 익힌다.</p><ol class="lb-s"><li>특허고객번호 신청</li><li>인증서 등록</li><li>전자출원 SW 설치</li><li>명세서·서식 작성</li><li>감면·첨부 확인</li><li>온라인 제출</li><li>수수료 납부</li><li>제출·처리 조회</li></ol><p class="lb-go"><a href="labs/02-e-filing.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">18 / 45</span></footer></article></div><div class="slot" id="s19" data-lec="2-2"><article class="slide ty-takeaway" aria-label="19 / 45"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>출원인·서류·제출 경로(온라인 특허로/서면)가 출원의 세 요소</li><li>청구범위는 출원공개 전(1년 6월)까지 제출을 유예할 수 있다</li><li>개인·중소기업은 출원료 등 70% 감면, 만19~30세 미만은 85%</li><li>출원 1년 6월 뒤 공개되며, 누구나 정보제공으로 거절 근거를 낼 수 있다</li></ul></div><footer class="sl-f"><span>2-2 특허출원과 출원공개</span><span class="num">19 / 45</span></footer></article></div><div class="slot" id="s20" data-lec="2-3"><article class="slide ty-title" aria-label="20 / 45"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 출원에서 등록까지</p><p class="t-no">2-3</p><h2 class="t-title">심사청구와 3트랙 심사</h2><p class="t-thesis">언제 심사받을지도 특허 전략이다</p></div></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">20 / 45</span></footer></article></div><div class="slot" id="s21" data-lec="2-3"><article class="slide ty-points" aria-label="21 / 45"><div class="sl-in"><h3 class="sh">심사청구의 기본 규칙</h3><div class="pts n4"><div class="pt"><b>심사 개시</b><p>심사청구가 있어야만 심사관이 심사</p></div><div class="pt"><b>기한</b><p>특허출원 후 3년 이내</p></div><div class="pt"><b>청구인</b><p>출원인은 물론 제3자도 누구든지</p></div><div class="pt"><b>주의</b><p>취하 불가, 기한 내 미청구 시 취하 간주</p></div></div></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">21 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>출원만 하고 심사청구를 잊으면 3년이 지나는 순간 출원은 취하된 것으로 본다. 예를 들어 2026년 3월 2일 출원이면 2029년 3월 2일까지 청구해야 한다. 경쟁자가 내 출원의 등록 여부를 빨리 확정하려고 제3자 심사청구를 할 수도 있다. 심사청구는 취하할 수 없으므로 비용과 시점을 따져 결정한다.</p></div></div><div class="slot" id="s22" data-lec="2-3"><article class="slide ty-compare" aria-label="22 / 45"><div class="sl-in"><h3 class="sh">맞춤형 3트랙 특허심사</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">빠른: 우선심사</b><ul><li>신청 후 약 2~4개월 내 결과</li><li>초고속 심사는 약 1개월 내</li></ul></div><div class="cp-col"><b class="cp-h">일반심사</b><ul><li>심사청구 순서에 따라 심사</li><li>우선·유예 신청이 없으면 적용</li></ul></div><div class="cp-col"><b class="cp-h">늦은: 심사유예</b><ul><li>유예 희망시점부터 3개월 내</li><li>획득 시기를 사업에 맞춤</li></ul></div></div><p class="cp-note">BM은 기술 주기가 짧아 우선심사로 조기 권리화 유리</p></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">22 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>출원인은 빠른·일반·늦은 심사 가운데 하나를 골라 원하는 시기에 심사받을 수 있다. 책은 BM 특허 분야가 기술 주기가 짧으므로 우선심사로 일찍 권리화할 수 있다고 조언한다. 반대로 사업 모델이 아직 바뀌는 중이라면 심사유예로 시간을 벌고, 시장에서 검증된 형태에 맞춰 청구범위를 다듬는 전략도 가능하다.</p></div></div><div class="slot" id="s23" data-lec="2-3"><article class="slide ty-tree" aria-label="23 / 45"><div class="sl-in"><h3 class="sh">BM에서 주로 쓰는 우선심사 사유</h3><div class="tree"><div class="tr-r">BM 우선심사</div><div class="tr-cs n4"><div class="tr-c"><b>벤처기업</b><p>벤처기업 관련 출원</p></div><div class="tr-c"><b>실시·준비 중</b><p>출원인이 업으로 실시 중이거나 준비 중</p></div><div class="tr-c"><b>4차 산업혁명</b><p>신특허분류가 부여된 출원</p></div><div class="tr-c"><b>전문기관 조사</b><p>전문기관에 선행기술조사를 의뢰한 출원</p></div></div></div></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">23 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>우선심사는 산업 정책상 일찍 권리를 줄 필요가 있는 출원을 심사청구 순서와 관계없이 먼저 심사하는 제도다. 대상은 제3자 실시, 방위산업, 녹색기술, 수출촉진 등 여러 가지인데 책은 BM에서 주로 쓰는 사유로 이 네 가지를 표시했다. 예: 앱 서비스를 이미 운영 중인 스타트업은 &#x27;실시 중&#x27; 사유로 신청을 검토할 수 있다.</p></div></div><div class="slot" id="s24" data-lec="2-3"><article class="slide ty-concepts" aria-label="24 / 45"><div class="sl-in"><h3 class="sh">4차 산업혁명 신특허분류</h3><div class="ccs n4"><div class="cc"><b>부여 대상</b><p>AI·빅데이터·클라우드·IoT 등 핵심 기술요소</p></div><div class="cc"><b>부여 안 됨</b><p>ICT 기반기술의 단순 서비스·응용</p></div><div class="cc"><b>증빙</b><p>별도 증빙서류 제출 불필요</p></div><div class="cc"><b>신청 방법</b><p>우선심사신청설명서에 해당 기술분야 기재</p></div></div></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">24 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>해당 분야는 인공지능, 사물인터넷, 3D 프린팅, 자율주행, 빅데이터, 클라우드, 지능형 로봇, 스마트시티, 가상·증강현실, 맞춤형 헬스케어, 드론, 차세대 통신, 지능형 반도체 등이다. 중요한 점은 AI를 단순히 &#x27;이용&#x27;한 서비스는 대상이 아니라는 것이다. 예: AI 모델 구조를 개선한 추천 시스템은 해당 가능성이 있지만, 기존 AI를 쓴 쇼핑몰 운영 방법은 어렵다.</p></div></div><div class="slot" id="s25" data-lec="2-3"><article class="slide ty-steps" aria-label="25 / 45"><div class="sl-in"><h3 class="sh">초고속 심사의 3가지 요건</h3><ol class="steps n3"><li><span class="sn">1</span><b>녹색기술</b><p>녹색기술 우선심사 대상 출원일 것</p></li><li><span class="sn">2</span><b>전문기관 조사</b><p>전문기관에 선행기술조사 의뢰</p></li><li><span class="sn">3</span><b>전자 신청</b><p>신청서에 취지 표시, 전자출원 제출</p></li></ol></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">25 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>초고속 심사는 녹색 기술의 조기 권리화를 위해 다른 우선심사 출원보다 더 빨리 심사에 착수하는 제도로, 신청 후 약 1개월 안에 결과가 나온다. 세 요건을 모두 갖춰야 하며, 서면으로 내거나 대상이 아니면 통상의 우선심사로 처리된다. 우선심사 세부 지침은 특허·실용신안 심사기준에서 확인할 수 있다.</p></div></div><div class="slot" id="s26" data-lec="2-3"><article class="slide ty-steps" aria-label="26 / 45"><div class="sl-in"><h3 class="sh">심사유예 신청 일정</h3><ol class="steps n3"><li><span class="sn">1</span><b>신청 시점</b><p>심사청구 시 또는 청구일부터 9개월 내</p></li><li><span class="sn">2</span><b>희망시점 기재</b><p>청구 후 18개월~출원 후 5년 사이</p></li><li><span class="sn">3</span><b>심사 착수</b><p>유예 희망시점부터 3개월 내 결과</p></li></ol></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">26 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>예를 들어 2026년 1월 출원과 동시에 심사청구를 했다면 그때 바로, 또는 2026년 10월까지 유예를 신청할 수 있다. 유예 희망시점은 2027년 7월(청구 후 18개월)부터 2031년 1월(출원 후 5년) 사이에서 고른다. 2029년 1월을 적었다면 그로부터 3개월 안에 심사 결과를 받는다.</p></div></div><div class="slot" id="s27" data-lec="2-3"><article class="slide ty-points" aria-label="27 / 45"><div class="sl-in"><h3 class="sh">심사유예 제도의 활용</h3><div class="pts n4"><div class="pt"><b>시기 조절</b><p>사업화 시기·시장 상황에 맞춰 획득</p></div><div class="pt"><b>비용 절감</b><p>등록을 늦춰 특허 유지비 절감</p></div><div class="pt"><b>청구료 유예</b><p>심사청구료 납부를 늦출 수 있음</p></div><div class="pt"><b>무료·5년</b><p>신청 무료, 출원 후 5년까지 유예 가능</p></div></div></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">27 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>심사청구 기간이 5년에서 3년으로 줄었지만(2017.3.1. 이후 출원), 심사유예를 쓰면 여전히 출원 후 5년까지 심사 시점을 늦출 수 있다. 신청도 무료다. 사업 모델이 확정되지 않은 초기 창업자에게 유용하다. 단, 늦게 등록되는 만큼 권리 행사도 늦어지므로 모방자가 이미 있다면 우선심사가 낫다.</p></div></div><div class="slot" id="s28" data-lec="2-3"><article class="slide ty-lab" aria-label="28 / 45"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">심사 트랙(우선·일반·유예) 고르기</h3><p class="lb-p">사업화 일정, 자금, 경쟁 상황에 맞춰 우선심사·일반심사·심사유예 중 하나를 고르고 신청 시점을 정한다. 특허 획득 시기를 사업 전략과 맞추는 판단을 연습한다.</p><ol class="lb-s"><li>기한 계산</li><li>권리 필요 시점 정하기</li><li>우선심사 사유 점검</li><li>초고속 심사 검토</li><li>심사유예 검토</li><li>트랙 결정·신청</li><li>대응 준비</li></ol><p class="lb-go"><a href="labs/02-exam-track.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">28 / 45</span></footer></article></div><div class="slot" id="s29" data-lec="2-3"><article class="slide ty-takeaway" aria-label="29 / 45"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>심사청구는 출원 후 3년 안에 누구나 할 수 있고 취하할 수 없다</li><li>우선심사는 신청 후 약 2~4개월, 초고속 심사는 약 1개월 안에 결과</li><li>BM 우선심사 주 사유: 벤처기업, 실시(준비) 중, 4차 산업혁명, 전문기관 조사</li><li>심사유예는 무료로 특허 획득 시기를 출원 후 5년까지 늦출 수 있다</li></ul></div><footer class="sl-f"><span>2-3 심사청구와 3트랙 심사</span><span class="num">29 / 45</span></footer></article></div><div class="slot" id="s30" data-lec="2-4"><article class="slide ty-title" aria-label="30 / 45"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 출원에서 등록까지</p><p class="t-no">2-4</p><h2 class="t-title">실체심사와 거절이유 대응</h2><p class="t-thesis">거절이유는 의견서·보정서로 넘는다</p></div></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">30 / 45</span></footer></article></div><div class="slot" id="s31" data-lec="2-4"><article class="slide ty-steps" aria-label="31 / 45"><div class="sl-in"><h3 class="sh">실체심사 절차</h3><ol class="steps n6"><li><span class="sn">1</span><b>실체심사 착수</b><p>거절이유 없으면 바로 특허결정</p></li><li><span class="sn">2</span><b>거절이유통지</b><p>의견제출통지서로 거절이유 통보</p></li><li><span class="sn">3</span><b>의견서·보정서</b><p>기한 내 제출, 해소되면 특허결정</p></li><li><span class="sn">4</span><b>거절결정</b><p>거절이유 미해소 시</p></li><li><span class="sn">5</span><b>재심사 청구</b><p>보정하며 재심사, 해소되면 특허결정</p></li><li><span class="sn">6</span><b>불복심판</b><p>재거절결정 등에 특허심판원 심판 청구</p></li></ol></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">31 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>실체심사는 출원 발명이 특허요건을 만족하는지 보는 내용 심사다. 거절이유가 없으면 곧바로 특허결정이 나지만, BM 출원은 의견제출통지를 한 번 이상 받는 경우가 흔하다. 통지를 받으면 끝난 것이 아니라 대응 기회가 시작된 것이다. 의견서·보정서, 재심사, 불복심판으로 이어지는 여러 번의 기회가 있다.</p></div></div><div class="slot" id="s32" data-lec="2-4"><article class="slide ty-concepts" aria-label="32 / 45"><div class="sl-in"><h3 class="sh">특허요건(특허법 제29조 등)</h3><div class="ccs n6"><div class="cc"><b>성립성(29①본문)</b><p>자연법칙 이용 기술사상 창작·산업상 이용 가능</p></div><div class="cc"><b>신규성(29①1·2호)</b><p>출원 전 국내외 공지·공연 실시·간행물 게재 아님</p></div><div class="cc"><b>진보성(29②)</b><p>통상의 기술자가 쉽게 발명할 수 없을 것</p></div><div class="cc"><b>확대된 선출원(29③~⑦)</b><p>먼저 출원돼 뒤에 공개된 명세서에 없을 것</p></div><div class="cc"><b>선출원(36조)</b><p>같은 발명은 먼저 출원한 자만, 같은 날은 협의</p></div><div class="cc"><b>공서양속(32조)</b><p>공공질서·선량한 풍속·공중위생 해치지 않을 것</p></div></div></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">32 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 법규 표 중 내용 요건만 모았다. BM에서 가장 중요한 것은 성립성과 진보성이다. 영업 아이디어가 새롭더라도 그것을 구현하는 컴퓨터 기술이 통상의 기술자에게 쉬운 수준이면 진보성이 부정된다. 같은 날 같은 발명이 두 건 출원되면 협의로 한 건만 특허받고, 협의가 안 되면 모두 받지 못한다.</p></div></div><div class="slot" id="s33" data-lec="2-4"><article class="slide ty-concepts" aria-label="33 / 45"><div class="sl-in"><h3 class="sh">기재요건과 절차 요건</h3><div class="ccs n6"><div class="cc"><b>발명의 설명(42③)</b><p>통상의 기술자가 쉽게 실시하게 명확·상세히, 배경기술</p></div><div class="cc"><b>청구범위(42④)</b><p>설명에 뒷받침되고 명확·간결하게</p></div><div class="cc"><b>기재방법(42⑧)</b><p>시행령 제5조 청구범위 기재방법 준수</p></div><div class="cc"><b>공동출원(44조)</b><p>권리 공유 시 공유자 전원이 공동 출원</p></div><div class="cc"><b>1특허출원(45조)</b><p>1발명 1특허출원 원칙</p></div><div class="cc"><b>신규사항 추가(47②)</b><p>최초 명세서·도면 범위를 벗어난 보정 금지</p></div></div></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">33 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>이 밖에 외국인의 권리능력(25조), 무권리자 출원(33조), 분할·변경출원의 범위(52·53조), 조약 위반도 거절이유다. BM 출원에서 기재요건이 자주 문제 되는 이유는 &#x27;서버가 최적의 상품을 추천한다&#x27;처럼 결과만 쓰고 어떻게 처리하는지 쓰지 않기 때문이다. 처리 단계와 데이터를 구체적으로 적어야 실시 가능성이 인정된다.</p></div></div><div class="slot" id="s34" data-lec="2-4"><article class="slide ty-points" aria-label="34 / 45"><div class="sl-in"><h3 class="sh">BM 출원의 단골 거절이유</h3><div class="pts n4"><div class="pt"><b>성립성</b><p>법 제29조 제1항 본문, 발명 아님</p></div><div class="pt"><b>발명의 설명</b><p>법 제42조 제3항, 실시 불가·불명확</p></div><div class="pt"><b>청구범위</b><p>법 제42조 제4항, 뒷받침·명확성 부족</p></div><div class="pt"><b>진보성</b><p>법 제29조 제2항, 쉽게 발명 가능</p></div></div></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">34 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>책이 꼽은 BM 출원 거절이유의 &#x27;빅4&#x27;다. 출원 전에 이 네 가지를 스스로 점검하면 거절 가능성을 크게 줄일 수 있다. 성립성은 하드웨어 연계, 발명의 설명은 처리 과정의 구체성, 청구범위는 설명과의 일치, 진보성은 선행기술 대비 기술적 차이로 점검한다. 3장(명세서 작성과 거절이유 대응)에서 사례로 자세히 다룬다.</p></div></div><div class="slot" id="s35" data-lec="2-4"><article class="slide ty-compare" aria-label="35 / 45"><div class="sl-in"><h3 class="sh">의견제출통지서를 받았을 때</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">거절이유가 타당하면</b><ul><li>명세서 등 보정서로 거절이유 해소</li><li>보정과 동시에 해소 취지 의견서</li></ul></div><div class="cp-col"><b class="cp-h">거절이유가 부당하면</b><ul><li>부당한 이유를 구체적으로 쓴 의견서</li><li>필요 시 자진 보정으로 명확화</li></ul></div></div><p class="cp-note">먼저 거절이유·법 적용·증거자료가 적법한지 판단</p></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">35 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>통지를 받으면 심사관이 든 거절이유, 적용 법조, 인용 문헌이 맞는지부터 따진다. 예: 진보성 거절에서 인용발명에 내 청구항의 &#x27;가입 여부 판단 후 분기&#x27; 구성이 없다면, 그 차이와 효과를 들어 의견서로 반박한다. 반박이 어렵다면 명세서에 이미 적힌 세부 구성을 청구항에 더해 범위를 좁히는 보정이 현실적이다. 특허결정 등본 송달 전까지 보정할 수 있다.</p></div></div><div class="slot" id="s36" data-lec="2-4"><article class="slide ty-compare" aria-label="36 / 45"><div class="sl-in"><h3 class="sh">보정의 범위 제한</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">신규사항 추가 금지</b><ul><li>최초 명세서·도면 범위 안에서만</li><li>통상의 기술자에게 자명한 사항은 허용</li></ul></div><div class="cp-col"><b class="cp-h">최후거절이유통지 이후</b><ul><li>청구항 한정·삭제·부가로 감축</li><li>오기 정정, 불명확 사항 명확화</li><li>부적법 보정 전 청구범위로 복귀</li></ul></div></div><p class="cp-note">선출원주의: 미완성 발명 선출원 후 내용 추가 방지</p></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">36 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>특허법은 먼저 출원한 사람에게 권리를 주므로, 일단 불완전하게 출원한 뒤 새 내용을 덧붙이면 뒤 출원자나 제3자의 이익을 해친다. 그래서 보정은 최초 명세서 범위 안에서만 된다. 최후거절이유통지는 보정으로 신규사항이 추가되거나 새 거절이유가 생겼을 때 나오며, 이후에는 보정 범위가 더 좁아진다. 처음부터 명세서에 변형 예를 넉넉히 써 두어야 하는 이유다.</p></div></div><div class="slot" id="s37" data-lec="2-4"><article class="slide ty-compare" aria-label="37 / 45"><div class="sl-in"><h3 class="sh">지정기간 연장 vs 단축</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">연장</b><ul><li>의견서 기일 1월 단위로 4개월까지</li><li>4개월 초과는 소명서+연장신청서</li></ul></div><div class="cp-col"><b class="cp-h">단축</b><ul><li>보정서에 단축 취지 기재 또는 신고서</li><li>단축 신청은 취소 불가</li><li>수리 후 추가 보정서 제출 불가</li></ul></div></div></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">37 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>선행기술 분석이나 실험 자료 준비에 시간이 필요하면 의견서 제출기일을 1개월씩 최대 4개월까지 늘릴 수 있다. 반대로 투자 일정 때문에 빨리 등록받고 싶으면 기간 단축을 신청해 절차를 앞당긴다. 다만 단축이 수리되면 이후 보정서를 낼 수 없으므로, 보정할 내용을 모두 반영했는지 확인한 뒤 신청해야 한다.</p></div></div><div class="slot" id="s38" data-lec="2-4"><article class="slide ty-takeaway" aria-label="38 / 45"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>실체심사 대상은 청구항에 관련된 발명이다</li><li>BM 단골 거절이유: 성립성, 발명의 설명, 청구범위 기재요건, 진보성</li><li>거절이유가 타당하면 보정서+의견서, 부당하면 구체적 반박 의견서</li><li>보정은 최초 명세서 범위 안에서만, 신규사항 추가는 금지</li></ul></div><footer class="sl-f"><span>2-4 실체심사와 거절이유 대응</span><span class="num">38 / 45</span></footer></article></div><div class="slot" id="s39" data-lec="2-5"><article class="slide ty-title" aria-label="39 / 45"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 출원에서 등록까지</p><p class="t-no">2-5</p><h2 class="t-title">특허여부 결정과 불복</h2><p class="t-thesis">결정 후 기한을 놓치면 권리도 놓친다</p></div></div><footer class="sl-f"><span>2-5 특허여부 결정과 불복</span><span class="num">39 / 45</span></footer></article></div><div class="slot" id="s40" data-lec="2-5"><article class="slide ty-steps" aria-label="40 / 45"><div class="sl-in"><h3 class="sh">특허결정에서 설정등록까지</h3><ol class="steps n4"><li><span class="sn">1</span><b>특허결정</b><p>특허요건 충족 시 특허결정서 송부</p></li><li><span class="sn">2</span><b>납입고지서</b><p>결정서와 함께 등록료 고지서 송부</p></li><li><span class="sn">3</span><b>등록료 납부</b><p>등록료와 등록세 납부</p></li><li><span class="sn">4</span><b>설정등록</b><p>특허권 설정등록, 효력 발생</p></li></ol></div><footer class="sl-f"><span>2-5 특허여부 결정과 불복</span><span class="num">40 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>특허결정을 받았다고 바로 권리가 생기는 것은 아니다. 함께 온 납입고지서로 등록료와 등록세를 내야 특허권이 설정등록되고 효력이 생긴다. 출원공개 뒤 경고한 상대에게 보상금을 청구하는 것도 설정등록 뒤에야 가능하다. 최초 3년분 등록료는 개인·중소기업 감면 대상이니 감면 적용 여부를 확인하고 납부하자.</p></div></div><div class="slot" id="s41" data-lec="2-5"><article class="slide ty-stat" aria-label="41 / 45"><div class="sl-in"><h3 class="sh">등록료 납부 기한</h3><div class="stat"><p class="st-v">3개월</p><p class="st-l">특허결정·등록심결 등본을 받은 날부터 정상 납부</p><p class="st-t">정상 납부기간이 지나면 그 뒤 6개월 이내 추가 납부 가능</p></div></div><footer class="sl-f"><span>2-5 특허여부 결정과 불복</span><span class="num">41 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>예: 2027년 4월 10일에 특허결정 등본을 받았다면 7월 10일까지가 정상 납부기간이다. 이를 넘기면 2028년 1월 10일까지 추가 납부할 수 있다. 추가 납부까지 놓치면 등록을 받을 수 없으니, 특허결정 통지를 받는 즉시 납부 일정을 달력에 넣는 것이 안전하다.</p></div></div><div class="slot" id="s42" data-lec="2-5"><article class="slide ty-compare" aria-label="42 / 45"><div class="sl-in"><h3 class="sh">재심사 청구 vs 거절결정 불복심판</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">재심사 청구</b><ul><li>송달 후 30일 내, 보정하며 청구</li><li>2009.7.1. 이후 출원에 적용</li><li>청구 후 취하할 수 없음</li></ul></div><div class="cp-col"><b class="cp-h">거절결정 불복심판</b><ul><li>송달 후 30일 내 특허심판원 청구</li><li>청구기간 1회 30일 연장 가능</li></ul></div></div><p class="cp-note">둘 다 청구하지 않으면 거절결정 확정</p></div><footer class="sl-f"><span>2-5 특허여부 결정과 불복</span><span class="num">42 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>거절결정서를 받았다고 끝이 아니다. 명세서를 고쳐 다시 보면 해결될 문제라면 재심사가, 심사관의 판단 자체가 틀렸다고 보면 불복심판이 맞다. 예: 진보성 거절인데 명세서에 차별 구성이 적혀 있다면 그 구성을 청구항에 넣고 재심사를 청구한다. 30일은 짧으므로 거절결정 전 단계부터 대응안을 준비해 두자.</p></div></div><div class="slot" id="s43" data-lec="2-5"><article class="slide ty-checklist" aria-label="43 / 45"><div class="sl-in"><h3 class="sh">재심사 청구 전 점검</h3><ol class="chk two"><li><span class="ck">1</span>특허 거절결정된 출원인가?</li><li><span class="ck">2</span>그 거절결정에 대해 불복심판을 청구하지 않았는가?</li><li><span class="ck">3</span>재심사 청구와 동시에 명세서·도면을 보정하는가?</li><li><span class="ck">4</span>거절결정 등본을 받은 날부터 30일 이내인가?</li><li><span class="ck">5</span>보정 내용이 최초 명세서 범위 안인가?</li></ol></div><footer class="sl-f"><span>2-5 특허여부 결정과 불복</span><span class="num">43 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>재심사는 세 요건(거절결정된 출원, 불복심판 미청구, 동시 보정)을 모두 갖춰야 한다. 보정 없이 같은 청구항으로 재심사를 청구할 수는 없다. 또 재심사에서 다시 거절되면 재심사를 또 청구할 수 없고 불복심판으로만 다툴 수 있으므로, 재심사 보정은 거절이유를 확실히 해소하는 방향으로 한 번에 해야 한다.</p></div></div><div class="slot" id="s44" data-lec="2-5"><article class="slide ty-steps" aria-label="44 / 45"><div class="sl-in"><h3 class="sh">거절결정 이후의 경로</h3><ol class="steps n4"><li><span class="sn">1</span><b>거절결정</b><p>의견서·보정서로도 요건 불충족</p></li><li><span class="sn">2</span><b>재심사</b><p>보정과 함께 청구, 해소 시 특허결정</p></li><li><span class="sn">3</span><b>재거절결정</b><p>재심사에서도 해소 안 되면</p></li><li><span class="sn">4</span><b>불복심판</b><p>특허심판원 심판으로 판단받기</p></li></ol></div><footer class="sl-f"><span>2-5 특허여부 결정과 불복</span><span class="num">44 / 45</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 실체심사 흐름도에서 거절결정 뒤 경로만 뽑았다. 거절결정 후 곧바로 불복심판으로 갈 수도 있고, 재심사를 거친 뒤 재거절결정에 대해 불복심판을 청구할 수도 있다. 비용과 시간은 심판이 더 들므로, 보정으로 해결 가능한 거절이유라면 재심사를 먼저 쓰는 것이 일반적이다.</p></div></div><div class="slot" id="s45" data-lec="2-5"><article class="slide ty-takeaway" aria-label="45 / 45"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>특허결정 후 등록료·등록세를 내야 설정등록되고 효력이 생긴다</li><li>등록료 정상 납부는 3개월 이내, 추가 납부는 그 뒤 6개월 이내</li><li>거절결정 등본 송달 후 30일 안에 재심사 또는 불복심판을 청구한다</li><li>재심사 후 다시 거절되면 재심사는 불가, 불복심판으로만 다툰다</li></ul></div><footer class="sl-f"><span>2-5 특허여부 결정과 불복</span><span class="num">45 / 45</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-01.html">← 1부 BM 특허 일반</a><a class="wk-nav" href="lecture-03.html">3부 명세서 작성과 발명의 성립요건 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: 특허청 「BM 특허 길라잡이」(2020 개정판), 인공지능 특허전략 수업자료. 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

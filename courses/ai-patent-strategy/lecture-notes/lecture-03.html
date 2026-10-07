@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3부 명세서 작성과 발명의 성립요건 · 인공지능 특허전략</title>
+<meta name="description" content="청구항에 하드웨어와 소프트웨어가 보여야 한다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">인공지능 특허전략</a> / <a href="index.html">BM 특허 길라잡이 핵심</a> / 3부</p>
+<header class="dk-h">
+  <p class="dk-wk num">PART 03</p>
+  <h1>명세서 작성과 발명의 성립요건</h1>
+  <p class="lead">청구항에 하드웨어와 소프트웨어가 보여야 한다</p>
+  <div class="kws"><span class="kw">명세서</span><span class="kw">청구범위</span><span class="kw">발명의 성립요건</span><span class="kw">SW·HW 협동</span><span class="kw">실시가능 요건</span><span class="kw">보정·신규사항</span></div>
+  
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="3-1"><b>3-1</b><span>특허출원 서류와 명세서 예시</span></a><a href="#s10" class="tab" data-lec="3-2"><b>3-2</b><span>명세서 양식과 작성 요령</span></a><a href="#s20" class="tab" data-lec="3-3"><b>3-3</b><span>발명의 성립요건: 판단기준</span></a><a href="#s28" class="tab" data-lec="3-4"><b>3-4</b><span>성립성 위반 사례와 대응 ①</span></a><a href="#s36" class="tab" data-lec="3-5"><b>3-5</b><span>성립성 위반 사례와 대응 ②</span></a><a href="#s45" class="tab" data-lec="3-6"><b>3-6</b><span>발명의 설명 기재요건</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 54</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="3-1"><article class="slide ty-title" aria-label="1 / 54"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 명세서 작성과 발명의 성립요건</p><p class="t-no">3-1</p><h2 class="t-title">특허출원 서류와 명세서 예시</h2><p class="t-thesis">특허는 서류로 받는다: 출원서·명세서·요약서·도면</p></div></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">1 / 54</span></footer></article></div><div class="slot" id="s2" data-lec="3-1"><article class="slide ty-tree" aria-label="2 / 54"><div class="sl-in"><h3 class="sh">특허출원에 필요한 서류</h3><div class="tree"><div class="tr-r">제출서류</div><div class="tr-cs n4"><div class="tr-c"><b>특허출원서</b><p>명칭, 출원인·대리인·발명자 성명·주소</p></div><div class="tr-c"><b>명세서</b><p>명칭, 발명의 설명, 청구범위, 도면 설명</p></div><div class="tr-c"><b>요약서</b><p>기술정보 용도로 제출 의무화</p></div><div class="tr-c"><b>도면(선택)</b><p>실시예를 구체적으로 보여주는 보조수단</p></div></div></div></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">2 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>책은 제출서류를 특허출원서와 첨부서류(요약서·명세서·도면)로 나눈다. 출원서는 &#x27;특허를 받겠다&#x27;는 의사표시이고, 권리 내용은 명세서가 정한다. 도면은 선택사항이지만 BM 발명은 시스템 구성도와 흐름도가 있어야 하드웨어·소프트웨어 협동을 설명하기 쉬우므로 사실상 넣는 것이 좋다.</p></div></div><div class="slot" id="s3" data-lec="3-1"><article class="slide ty-concepts" aria-label="3 / 54"><div class="sl-in"><h3 class="sh">서류별 역할</h3><div class="ccs n4"><div class="cc"><b>특허출원서</b><p>출원의 본체. 특허를 받고자 하는 의사표시 서면</p></div><div class="cc"><b>요약서</b><p>기술정보 제공용. 권리범위 해석에는 쓰지 않음</p></div><div class="cc"><b>명세서</b><p>발명의 내용을 명확하고 상세하게 적은 서면</p></div><div class="cc"><b>도면</b><p>발명의 요점을 이해시키는 명세서의 보조수단</p></div></div></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">3 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>네 서류는 역할이 다르다. 심사관과 법원이 권리범위를 판단할 때 보는 것은 명세서, 특히 청구범위다. 요약서는 검색·기술정보용이라 잘 써도 권리가 넓어지지 않는다. 그래서 초보 출원인은 요약서보다 명세서의 발명의 설명과 청구범위에 시간을 써야 한다.</p></div></div><div class="slot" id="s4" data-lec="3-1"><article class="slide ty-points" aria-label="4 / 54"><div class="sl-in"><h3 class="sh">특허출원서 예시 읽기</h3><div class="pts n4"><div class="pt"><b>서지사항</b><p>서류명, 출원구분, 출원인·특허고객번호, 대리인 코드</p></div><div class="pt"><b>발명의 명칭</b><p>국문·영문 병기: 모바일 금융 서비스 시스템 및 방법</p></div><div class="pt"><b>심사청구</b><p>출원과 함께 &#x27;청구&#x27;로 표시하면 바로 심사 대상</p></div><div class="pt"><b>수수료</b><p>출원료·가산출원료·심사청구료 합계, 개인 70% 감면</p></div></div></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">4 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 예시 출원서는 모바일 금융 서비스 발명을 대리인이 제출한 경우다. 출원인은 특허고객번호로 식별되고, 심사청구료는 청구항 수(예시는 2항)에 따라 붙는다. 예시에서 개인 출원인은 70% 감면을 받아 감면 후 수수료가 74,400원으로 표시된다. 청구항을 늘리면 심사청구료가 늘어난다는 점도 기억하자.</p></div></div><div class="slot" id="s5" data-lec="3-1"><article class="slide ty-steps" aria-label="5 / 54"><div class="sl-in"><h3 class="sh">명세서 예시의 흐름</h3><ol class="steps n5"><li><span class="sn">1</span><b>기술분야</b><p>스크립트로 전송 데이터를 최소화하는 모바일 금융</p></li><li><span class="sn">2</span><b>배경기술</b><p>모바일 금융 확산, 은행별 솔루션 중복투자 문제</p></li><li><span class="sn">3</span><b>해결과제</b><p>모듈 재사용성을 높이고 유지보수를 쉽게</p></li><li><span class="sn">4</span><b>해결수단</b><p>금융서버·모바일금융서버·업데이트서버·단말</p></li><li><span class="sn">5</span><b>효과</b><p>중복투자 방지, 신속한 변경, 송수신 데이터 감소</p></li></ol></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">5 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>좋은 명세서는 배경기술의 문제점이 해결과제로, 해결과제가 해결수단으로, 해결수단이 효과로 그대로 이어진다. 예시에서 &#x27;은행별로 솔루션을 따로 만들어 중복투자가 생긴다&#x27;는 문제는 &#x27;재사용성 향상&#x27;이라는 과제가 되고, 스크립트와 데이터를 병합해 보내는 서버 구조가 해결수단이 된다. 효과는 이 구조에서 나오는 결과만 적었다.</p></div></div><div class="slot" id="s6" data-lec="3-1"><article class="slide ty-case" aria-label="6 / 54"><div class="sl-in"><p class="ca-k">사례 · BM 명세서 모범</p><h3 class="sh">모바일 금융 서비스 명세서</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>은행마다 모바일 금융 솔루션을 따로 구축해 코드·모듈을 재사용하지 못하고 중복투자가 컸다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>금융 데이터와 UI 구동 스크립트를 병합해 보내는 모바일 금융 서버, 업데이트 서버, 무선망, 스크립트 엔진을 탑재한 단말로 시스템을 구성했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>청구항 1은 시스템, 청구항 2는 단말에 미리 내려받은 스크립트 엔진을 이용하는 방법으로 작성했고, 요약서와 도 1·도 2를 붙였다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>영업 아이디어(금융 서비스)를 서버·망·단말이라는 하드웨어 구성과 그 처리로 풀어 쓴 것이 BM 명세서의 기본형이다.</p></div></div></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">6 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>이 예시는 이후 성립요건 위반 사례와 대비해 보면 좋다. 각 구성요소의 주체(금융 서버, 모바일 금융 서버, 업데이트 서버, 무선 단말)가 분명하고 각 주체가 무엇을 수신·병합·전송·파싱하는지 적혀 있다. 그래서 &#x27;소프트웨어 정보처리가 하드웨어로 구체적으로 실현&#x27;된다는 요건을 자연스럽게 충족한다.</p></div></div><div class="slot" id="s7" data-lec="3-1"><article class="slide ty-compare" aria-label="7 / 54"><div class="sl-in"><h3 class="sh">청구항 1과 청구항 2</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">청구항 1: 시스템</b><ul><li>금융 서버 + 모바일 금융 서버</li><li>업데이트 서버 + 무선망</li><li>스크립트 엔진 탑재 무선 단말</li><li>구성요소 간 데이터 흐름 기재</li></ul></div><div class="cp-col"><b class="cp-h">청구항 2: 방법</b><ul><li>서버가 금융 데이터 수신</li><li>데이터와 스크립트 병합·전송</li><li>단말이 분리·파싱해 UI 구성</li><li>금융 데이터 처리 후 표출</li></ul></div></div><p class="cp-note">같은 발명을 물건(시스템)과 방법 두 범주로 청구</p></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">7 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>BM 발명은 같은 아이디어를 시스템(물건)·방법·기록매체 등 여러 범주로 청구할 수 있다. 시스템 청구항은 구성요소와 결합관계를, 방법 청구항은 누가 어떤 단계를 수행하는지를 적는다. 침해자가 서버만 운영하든 방법만 실시하든 잡을 수 있도록 범주를 나눠 두는 것이 실무 요령이다.</p></div></div><div class="slot" id="s8" data-lec="3-1"><article class="slide ty-steps" aria-label="8 / 54"><div class="sl-in"><h3 class="sh">도 2 흐름도(S400~S460)</h3><ol class="steps n6"><li><span class="sn">1</span><b>S400 수신</b><p>단말이 병합된 전송 데이터 수신</p></li><li><span class="sn">2</span><b>S410 분석</b><p>수신 데이터 분석</p></li><li><span class="sn">3</span><b>S420 분리</b><p>스크립트와 금융 데이터 분리</p></li><li><span class="sn">4</span><b>S430/S440</b><p>스크립트 파싱, 금융 데이터 구분</p></li><li><span class="sn">5</span><b>S450 처리</b><p>UI 구성 및 금융 데이터 처리</p></li><li><span class="sn">6</span><b>S460 표출</b><p>처리 결과를 화면에 표출</p></li></ol></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">8 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>방법 청구항 2의 각 단계는 도 2 흐름도의 단계 번호와 그대로 대응한다. 도면 부호(S400 등)를 붙여 발명의 설명에서 단계별로 설명하면, 청구항이 발명의 설명에 의해 뒷받침되는지 심사관이 쉽게 확인할 수 있다. 직접 쓸 때도 흐름도를 먼저 그리고 그 단계를 청구항 문장으로 옮기면 누락이 줄어든다.</p></div></div><div class="slot" id="s9" data-lec="3-1"><article class="slide ty-takeaway" aria-label="9 / 54"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>필수 서류는 특허출원서·명세서·요약서이고 도면은 선택이다</li><li>명세서 = 발명의 명칭·발명의 설명·청구범위·도면의 간단한 설명</li><li>과제→해결수단→효과가 한 줄로 이어지게 쓰고, 청구항은 해결수단을 옮긴다</li><li>시스템 청구항과 방법 청구항을 함께 두면 보호 범위가 넓어진다</li></ul></div><footer class="sl-f"><span>3-1 특허출원 서류와 명세서 예시</span><span class="num">9 / 54</span></footer></article></div><div class="slot" id="s10" data-lec="3-2"><article class="slide ty-title" aria-label="10 / 54"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 명세서 작성과 발명의 성립요건</p><p class="t-no">3-2</p><h2 class="t-title">명세서 양식과 작성 요령</h2><p class="t-thesis">명세서는 칸마다 쓰는 법이 정해져 있다</p></div></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">10 / 54</span></footer></article></div><div class="slot" id="s11" data-lec="3-2"><article class="slide ty-steps" aria-label="11 / 54"><div class="sl-in"><h3 class="sh">발명의 설명 구성 순서</h3><ol class="steps n6"><li><span class="sn">1</span><b>기술분야</b><p>발명이 속한 분야를 명확·간결하게</p></li><li><span class="sn">2</span><b>배경기술</b><p>종래기술과 그 문헌정보</p></li><li><span class="sn">3</span><b>발명의 내용</b><p>해결과제·해결수단·효과</p></li><li><span class="sn">4</span><b>도면 설명</b><p>각 도면이 무엇을 표시하는지</p></li><li><span class="sn">5</span><b>실시 내용</b><p>실시예와 도면을 들어 구체적으로</p></li><li><span class="sn">6</span><b>산업상 이용</b><p>필요 시 산업상 이용가능성</p></li></ol></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">11 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>명세서는 발명의 명칭, 도면의 간단한 설명, 발명의 설명, 청구범위로 구성되고, 발명의 설명은 원칙적으로 이 순서의 란으로 나누어 쓴다. 칸을 채우는 순서와 쓰는 순서가 꼭 같을 필요는 없다. 실무에서는 해결수단과 실시예(도면)를 먼저 확정하고, 그에 맞춰 과제와 효과를 다듬는 경우가 많다.</p></div></div><div class="slot" id="s12" data-lec="3-2"><article class="slide ty-compare" aria-label="12 / 54"><div class="sl-in"><h3 class="sh">발명의 명칭: 잘못 vs 바르게</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">부적당한 명칭</b><ul><li>전자상거래 시스템(너무 막연)</li><li>시간·경비를 줄이고…시스템(장황)</li><li>XX(주), 개량된, 최신식, 문명식</li><li>&#x27;특허&#x27;라는 용어 포함</li></ul></div><div class="cp-col"><b class="cp-h">적절한 명칭</b><ul><li>산업재 유통을 위한 전자상거래 시스템</li><li>호텔에만 쓰면 &#x27;호텔 예약시스템&#x27;</li><li>복수 범주: 시스템, 방법 및 기록매체</li><li>보정으로 청구대상 바뀌면 명칭도 보정</li></ul></div></div><p class="cp-note">명칭만 보고 무엇을 청구하는지 알 수 있어야 한다</p></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">12 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>발명의 명칭은 내용에 따라 간명하게 쓴다. 너무 넓으면 무엇을 청구하는지 모르고, 효과를 늘어놓으면 장황해진다. 개인명·상표명·애칭이나 &#x27;개량된&#x27; 같은 추상적 성능 표현은 넣지 않는다. 시스템·방법·기록매체를 함께 청구하면 책의 예처럼 &#x27;공동구매 결제 시스템, 결제 방법 및 … 기록매체&#x27;로 모든 범주를 담는다.</p></div></div><div class="slot" id="s13" data-lec="3-2"><article class="slide ty-points" aria-label="13 / 54"><div class="sl-in"><h3 class="sh">기술분야·배경기술 쓰는 법</h3><div class="pts n4"><div class="pt"><b>기술분야</b><p>특허받을 발명의 기술분야를 명확하고 간결하게</p></div><div class="pt"><b>배경기술</b><p>이해·선행기술조사·심사에 유용한 종래기술</p></div><div class="pt"><b>선행기술문헌</b><p>선택 기재. 예) [문헌1] US 57XXXX3 A</p></div><div class="pt"><b>연결</b><p>배경기술의 한계가 다음 칸의 해결과제가 됨</p></div></div></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">13 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>배경기술은 &#x27;우리 발명이 왜 필요한가&#x27;를 심사관에게 보여주는 칸이다. 일반론만 쓰지 말고 종래기술이 구체적으로 어떻게 동작하고 어디서 막히는지 적은 뒤, 그 기술이 실린 문헌번호를 함께 적는다. 선행기술조사에서 찾은 가장 가까운 특허를 여기에 쓰면 심사관과의 논점도 미리 정리된다.</p></div></div><div class="slot" id="s14" data-lec="3-2"><article class="slide ty-concepts" aria-label="14 / 54"><div class="sl-in"><h3 class="sh">발명의 내용과 실시 내용</h3><div class="ccs n5"><div class="cc"><b>해결하고자 하는 과제</b><p>발명이 과제로 삼는 종래기술의 문제점</p></div><div class="cc"><b>과제의 해결 수단</b><p>어떤 수단으로 과제를 해결했는가, 곧 발명 자체</p></div><div class="cc"><b>효과</b><p>종래기술 대비 우수하다고 인정되는 사항</p></div><div class="cc"><b>도면의 간단한 설명</b><p>도면마다 무엇을 표시하는지 한 줄씩</p></div><div class="cc"><b>실시를 위한 구체적 내용</b><p>통상의 기술자가 쉽게 실시하도록, 가급적 여러 형태</p></div></div></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">14 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>해결수단은 대개 청구항과 같은 내용이 된다. 효과는 해결수단에서 실제로 나오는 것만 적어야 진보성 주장에도 쓸 수 있다. 실시 내용은 가장 중요한 칸이다. 나중에 보정할 수 있는 범위가 여기서 정해지므로, 서버·단말·DB가 각각 무엇을 어떻게 처리하는지 실시예를 여러 개 넣어 두어야 한다.</p></div></div><div class="slot" id="s15" data-lec="3-2"><article class="slide ty-checklist" aria-label="15 / 54"><div class="sl-in"><h3 class="sh">청구항이 BM 발명이 안 되는 경우</h3><ol class="chk two"><li><span class="ck">1</span>청구항에 인간의 행위나 정신활동에 근거한 처리를 적었는가?</li><li><span class="ck">2</span>청구항에 인위적인 결정 자체를 적었는가?</li><li><span class="ck">3</span>순수한 영업방법 자체만 적었는가?</li><li><span class="ck">4</span>기술적 효과를 달성할 합리적인 수단이 빠졌는가?</li><li><span class="ck">5</span>추상적 아이디어 자체만 적었는가?</li></ol></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">15 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>특허요건 심사 대상은 &#x27;청구항에 관련된 발명&#x27;이다. 청구항은 자연법칙을 이용한 기술적 사상의 창작이어야 하고, BM 특허는 소프트웨어 정보처리가 하드웨어로 구체적으로 실현되어야 한다. 위 다섯 질문 중 하나라도 &#x27;예&#x27;라면 성립요건 거절을 예상하고 청구항을 고쳐야 한다. 구체적 사례는 3-4, 3-5에서 본다.</p></div></div><div class="slot" id="s16" data-lec="3-2"><article class="slide ty-compare" aria-label="16 / 54"><div class="sl-in"><h3 class="sh">청구범위 기재 불비의 예</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">뒷받침 안 됨</b><ul><li>설명과 청구항의 용어 불일치</li><li>수단·공정만 있고 구체 구성 없음</li></ul></div><div class="cp-col"><b class="cp-h">명확·간결하지 않음</b><ul><li>각 단계의 동작 주체 불명확</li><li>매체에 저장 안 된 &#x27;프로그램&#x27;으로 끝남</li><li>구성요소 나열, 결합관계 없음</li><li>장황하거나 지시대상 불명확</li></ul></div></div><p class="cp-note">매체 결합 컴퓨터프로그램은 2014.7.1. 출원부터 청구 가능</p></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">16 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>청구항은 발명의 설명에 공개된 것만 청구할 수 있다. 공개하지 않은 것에 권리를 줄 수 없기 때문이다. 또 청구항이 불명확하면 권리서 역할을 못 한다. BM 청구항에서 특히 흔한 것은 단계의 동작 주체(서버인지 사람인지)가 빠진 경우와 &#x27;프로그램&#x27;으로 끝나는 경우다. &#x27;하드웨어와 결합되어 특정과제를 해결하기 위해 매체에 저장된 컴퓨터프로그램&#x27;은 2014년 7월 1일 이후 출원부터 청구할 수 있다.</p></div></div><div class="slot" id="s17" data-lec="3-2"><article class="slide ty-compare" aria-label="17 / 54"><div class="sl-in"><h3 class="sh">다중 인용 청구항: 잘못 vs 바르게</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">잘못된 예</b><ul><li>청구항 3: 청구항 1, 2에 있어서</li><li>다중인용항이 다중인용항을 인용</li><li>한 청구항에 범주가 다른 둘 이상 발명</li><li>동일 청구항 중복 기재</li></ul></div><div class="cp-col"><b class="cp-h">바른 예</b><ul><li>청구항 1 또는 청구항 2에 있어서</li><li>청구항 1 내지 3 중 어느 한 항에 있어서</li><li>청구항 4는 단일 인용항만 인용</li><li>범주별로 청구항을 나눔</li></ul></div></div><p class="cp-note">둘 이상의 항 인용은 택일적으로, 인용항 번호를 명시</p></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">17 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>청구항은 발명의 성질에 따라 적정한 수로 쓴다. 둘 이상의 항을 인용할 때는 &#x27;또는&#x27;, &#x27;중 어느 한 항&#x27;처럼 택일적으로 쓰고 번호를 적는다. 책의 예에서 청구항 4가 다중인용항인 청구항 3을 다시 2 이상 인용하면 안 된다. 심사청구료가 항 수에 비례하므로 불필요한 중복 청구항도 비용 낭비다.</p></div></div><div class="slot" id="s18" data-lec="3-2"><article class="slide ty-lab" aria-label="18 / 54"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">BM 명세서 초안 쓰기</h3><p class="lb-p">자기 BM 아이디어를 기술분야·배경기술·해결과제·해결수단·효과·도면 설명·실시예 순서로 써서, 거절 없이 보정 여지가 넉넉한 명세서 초안을 만든다.</p><ol class="lb-s"><li>발명의 명칭 정하기</li><li>기술분야 한 단락</li><li>배경기술과 문헌정보</li><li>해결과제</li><li>과제의 해결수단</li><li>효과</li><li>도면과 도면의 간단한 설명</li><li>실시예(구체적인 내용)</li></ol><p class="lb-go"><a href="labs/03-spec-draft.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">18 / 54</span></footer></article></div><div class="slot" id="s19" data-lec="3-2"><article class="slide ty-takeaway" aria-label="19 / 54"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>발명의 명칭은 간명하게, 상표명·&#x27;개량된&#x27; 같은 표현은 넣지 않는다</li><li>발명의 설명은 기술분야→배경기술→과제→해결수단→효과→실시 내용 순</li><li>실시 내용은 통상의 기술자가 쉽게 실시할 수 있게 적어도 하나, 가급적 여러 형태로</li><li>청구항은 발명의 설명에 뒷받침되고, 명확·간결하며, 인용은 택일적으로</li></ul></div><footer class="sl-f"><span>3-2 명세서 양식과 작성 요령</span><span class="num">19 / 54</span></footer></article></div><div class="slot" id="s20" data-lec="3-3"><article class="slide ty-title" aria-label="20 / 54"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 명세서 작성과 발명의 성립요건</p><p class="t-no">3-3</p><h2 class="t-title">발명의 성립요건: 판단기준</h2><p class="t-thesis">청구항 안에 하드웨어와 소프트웨어의 협동이 보여야 한다</p></div></div><footer class="sl-f"><span>3-3 발명의 성립요건: 판단기준</span><span class="num">20 / 54</span></footer></article></div><div class="slot" id="s21" data-lec="3-3"><article class="slide ty-quote" aria-label="21 / 54"><div class="sl-in"><figure class="qt"><blockquote>발명이라 함은 자연법칙을 이용한 기술적 사상의 창작으로서 고도한 것을 말한다.</blockquote><figcaption>3-3 슬라이드 p.67</figcaption></figure></div><footer class="sl-f"><span>3-3 발명의 성립요건: 판단기준</span><span class="num">21 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>특허법 제2조 제1호의 정의다. 제29조 제1항은 산업상 이용할 수 있는 발명만 특허를 받을 수 있다고 정한다. 책은 &#x27;고도한 것&#x27;은 실용신안의 고안과 구분하기 위한 상대적 개념이어서 실무상 성립요건 판단에서는 고려하지 않는다고 설명한다. 결국 BM 출원에서 문제되는 것은 &#x27;자연법칙 이용&#x27;과 &#x27;기술적 사상&#x27;이다.</p></div></div><div class="slot" id="s22" data-lec="3-3"><article class="slide ty-concepts" aria-label="22 / 54"><div class="sl-in"><h3 class="sh">발명에 해당하지 않는 유형</h3><div class="ccs n5"><div class="cc"><b>자연법칙 자체·단순 발견</b><p>창작이 아님</p></div><div class="cc"><b>자연법칙 위배·비이용</b><p>영구기관, 경제법칙·수학공식 등</p></div><div class="cc"><b>단순한 기능·정보 제시</b><p>정보 내용에만 특징이 있는 것</p></div><div class="cc"><b>미적 창조물</b><p>기술적 사상이 아님</p></div><div class="cc"><b>반복 불가·미완성 발명</b><p>같은 효과를 반복해 얻을 수 없음</p></div></div></div><footer class="sl-f"><span>3-3 발명의 성립요건: 판단기준</span><span class="num">22 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>BM 출원이 걸리는 유형은 주로 &#x27;자연법칙을 이용하지 아니한 것&#x27;이다. 영업방법, 게임 규칙, 교수방법, 금융보험제도, 과세제도 그 자체는 인간이 정한 약속이나 정신활동이라 자연법칙이 아니다. 아이디어가 아무리 새로워도 이 상태로 청구하면 신규성·진보성 이전에 성립요건에서 거절된다.</p></div></div><div class="slot" id="s23" data-lec="3-3"><article class="slide ty-points" aria-label="23 / 54"><div class="sl-in"><h3 class="sh">BM 발명의 기본 판단기준</h3><div class="pts n4"><div class="pt"><b>전제</b><p>SW 정보처리가 HW를 이용해 구체적으로 실현</p></div><div class="pt"><b>장치</b><p>그 SW와 협동해 동작하는 정보처리 장치(기계)</p></div><div class="pt"><b>방법</b><p>그 장치의 동작 방법</p></div><div class="pt"><b>매체</b><p>그 SW를 기록한 컴퓨터로 읽을 수 있는 매체</p></div></div></div><footer class="sl-f"><span>3-3 발명의 성립요건: 판단기준</span><span class="num">23 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>이 조건을 만족하면 장치·방법·매체 모두 자연법칙을 이용한 기술적 사상의 창작으로 본다. &#x27;구체적으로 실현&#x27;이란 사용 목적에 따른 특유의 정보 연산·가공을 하는 장치나 방법이 SW와 HW의 협동으로 구축된 상태를 말한다. 단순히 &#x27;컴퓨터를 이용하여&#x27;라는 말을 붙이는 것만으로는 부족하고, 어느 HW가 어떤 데이터를 어떻게 처리하는지 보여야 한다.</p></div></div><div class="slot" id="s24" data-lec="3-3"><article class="slide ty-steps" aria-label="24 / 54"><div class="sl-in"><h3 class="sh">성립요건 판단 절차</h3><ol class="steps n5"><li><span class="sn">1</span><b>청구항 파악</b><p>청구항 기재에 근거해 발명을 특정</p></li><li><span class="sn">2</span><b>비창작 예 해당?</b><p>다른 법칙·인위적 결정·정신활동·정보 제시</p></li><li><span class="sn">3</span><b>창작 예 해당?</b><p>기기 제어, 기술적 성질에 근거한 정보처리</p></li><li><span class="sn">4</span><b>SW·HW 협동?</b><p>목적 특유 정보처리 장치가 구축되었는가</p></li><li><span class="sn">5</span><b>결론</b><p>구축되면 발명, 아니면 발명에 해당 안 됨</p></li></ol></div><footer class="sl-f"><span>3-3 발명의 성립요건: 판단기준</span><span class="num">24 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 흐름도 그대로다. 비창작 예에 해당하면 바로 &#x27;발명 아님&#x27;, 기기 제어나 대상의 기술적 성질에 근거한 정보처리면 바로 &#x27;발명&#x27;이다. 둘 다 아니면 SW 정보처리가 HW로 구체적으로 실현되었는지 본다. 중요한 점은 모든 판단이 청구항 기준이라는 것이다. 설명·도면에만 HW 구현이 있고 청구항에 없으면 발명이 아니다.</p></div></div><div class="slot" id="s25" data-lec="3-3"><article class="slide ty-compare" aria-label="25 / 54"><div class="sl-in"><h3 class="sh">창작이 아닌 예 vs 창작인 예</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">창작이 아닌 예</b><ul><li>자연법칙 이외의 법칙</li><li>인위적 결정</li><li>인간의 정신활동</li><li>단순한 정보의 제시</li></ul></div><div class="cp-col"><b class="cp-h">창작인 예</b><ul><li>기기의 제어</li><li>대상의 기술적 성질에 근거한 정보처리</li><li>SW·HW 협동으로 구축된 정보처리 장치</li></ul></div></div></div><footer class="sl-f"><span>3-3 발명의 성립요건: 판단기준</span><span class="num">25 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>판단 절차의 두 갈래를 나란히 둔 것이다. 예를 들어 &#x27;할인율을 정하는 규칙&#x27;은 인위적 결정이지만, &#x27;센서 값에 따라 기기를 제어&#x27;하거나 &#x27;이미지 데이터의 기술적 성질을 이용해 처리&#x27;하면 창작인 예가 된다. 대부분의 BM 발명은 셋째 줄, 즉 서버·단말·DB가 목적에 맞는 연산을 수행하도록 구축된 장치로 성립성을 확보한다.</p></div></div><div class="slot" id="s26" data-lec="3-3"><article class="slide ty-cases" aria-label="26 / 54"><div class="sl-in"><h3 class="sh">참조 판례</h3><div class="css n3"><div class="cs"><b>대법원 2001후3149</b><p>BM은 SW 처리가 HW로 구체적 실현되어야 하고 청구항 전체로 판단</p></div><div class="cs"><b>대법원 2007후265</b><p>경제법칙·인위적 약속·정신활동 이용 시 발명 아님</p></div><div class="cs"><b>대법원 2007후494</b><p>영업계획·교수방법·금융보험제도 그 자체는 발명 아님</p></div></div></div><footer class="sl-f"><span>3-3 발명의 성립요건: 판단기준</span><span class="num">26 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>2001후3149는 두 가지 원칙을 세웠다. 첫째, BM 발명은 컴퓨터상 SW 정보처리가 HW로 구체적으로 실현되어야 한다. 둘째, 청구항 일부에 자연법칙 이용 부분이 있어도 전체로 보아 자연법칙을 이용하지 않으면 발명이 아니다. 2007후265·494는 자연법칙 이외의 법칙(경제법칙, 수학공식, 작도법), 게임 규칙, 영업계획·과세제도 그 자체를 비발명의 예로 들었다.</p></div></div><div class="slot" id="s27" data-lec="3-3"><article class="slide ty-takeaway" aria-label="27 / 54"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>특허법상 발명 = 자연법칙을 이용한 기술적 사상의 창작</li><li>BM 발명은 SW 정보처리가 HW를 이용해 구체적으로 실현되어야 한다</li><li>판단은 청구항 기준: 설명·도면에만 HW가 있고 청구항에 없으면 비발명</li><li>일부에 자연법칙을 이용해도 청구항 전체로 보아 아니면 발명이 아니다</li></ul></div><footer class="sl-f"><span>3-3 발명의 성립요건: 판단기준</span><span class="num">27 / 54</span></footer></article></div><div class="slot" id="s28" data-lec="3-4"><article class="slide ty-title" aria-label="28 / 54"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 명세서 작성과 발명의 성립요건</p><p class="t-no">3-4</p><h2 class="t-title">성립성 위반 사례와 대응 ①</h2><p class="t-thesis">사람이 하던 일을 단계로 적으면 발명이 아니다</p></div></div><footer class="sl-f"><span>3-4 성립성 위반 사례와 대응 ①</span><span class="num">28 / 54</span></footer></article></div><div class="slot" id="s29" data-lec="3-4"><article class="slide ty-case" aria-label="29 / 54"><div class="sl-in"><p class="ca-k">사례 · 순수 영업방법</p><h3 class="sh">보너스 포인트 쿠폰 제휴</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>제휴 업체 제품에 쿠폰을 부착하고, 모은 쿠폰을 상품권으로 유통·현금 교환하며 참여 업체를 선정하는 오프라인 통합 포인트 마케팅 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>심사관은 모든 단계가 오프라인에서 일어나는 인간의 경제활동이고 컴퓨터상 SW 처리 과정이 전혀 없다고 보았다.</p></div><div class="ca-b ca-result"><i>결과</i><p>순수한 영업방법으로 특허법상 발명에 해당하지 않아 거절이유가 통지되었다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>각 단계가 컴퓨터상에서 SW로 처리되도록 보정해야 하며, 출원 시 명세서에 없던 내용은 추가할 수 없다.</p></div></div></div><footer class="sl-f"><span>3-4 성립성 위반 사례와 대응 ①</span><span class="num">29 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>쿠폰 발매·상품권 유통·결제·업체 선정·중개라는 단계 이름만 보면 시스템 같지만, 실제로 수행하는 주체가 사람과 업체다. 대응은 예를 들어 포인트 적립 서버, 상품권 결제 서버가 각 단계를 처리하도록 바꾸는 것이다. 단, 그런 서버 구성이 최초 명세서에 없었다면 신규사항 추가가 되어 보정할 수 없다.</p></div></div><div class="slot" id="s30" data-lec="3-4"><article class="slide ty-compare" aria-label="30 / 54"><div class="sl-in"><h3 class="sh">여성 전용택시 운영방법</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">거절된 청구항</b><ul><li>택시회사·여성 기사·여성 승객이 구성원</li><li>오후 8시 이후 운행, 5~10% 할증</li><li>&#x27;여성 전용택시&#x27; 표지판 부착</li><li>요금 체계를 포함한 운영 방법</li></ul></div><div class="cp-col"><b class="cp-h">대응 방향</b><ul><li>컴퓨터상 SW 처리로 청구범위 보정</li><li>배차·요금 산정 주체를 서버·단말로</li><li>출원 시 HW 구현 실시예가 있어야 함</li><li>처음부터 설명을 풍부하게 작성</li></ul></div></div><p class="cp-note">요금 체계·운영 규칙 자체는 순수 영업방법</p></div><footer class="sl-f"><span>3-4 성립성 위반 사례와 대응 ①</span><span class="num">30 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>요금 할증과 운행 시간, 표지판은 모두 사업자가 정한 규칙이다. 컴퓨터상에서 SW로 처리되도록 청구범위를 보정하면 특허요건을 맞출 수 있지만, 그러려면 발명의 설명에 SW 정보처리가 HW로 구체적으로 실현되는 실시예가 이미 있어야 한다. 책은 그래서 최초 출원 때 발명의 설명을 최대한 풍부하고 세부적으로 쓰라고 강조한다.</p></div></div><div class="slot" id="s31" data-lec="3-4"><article class="slide ty-case" aria-label="31 / 54"><div class="sl-in"><p class="ca-k">사례 · 오프라인 인간 행위</p><h3 class="sh">모바일 현장 민원업무 처리</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>민원인이 기관을 방문해 서류를 접수하면 민원실→검토팀→실사팀으로 이양하고, 현장 검사 후 결과를 PDA로 구청 DB에 입력해 필증을 발급하는 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>접수·이양·실사·입력 단계가 인간의 행위나 정신활동이 개입되어야만 처리되는 것으로 판단되었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>발명에 해당하지 않는다는 거절이유를 받았다. PDA·DB가 등장해도 전체 흐름은 사람의 업무 절차였다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>단계의 행위 주체를 민원인 단말·민원실 담당자 단말·실사팀 단말로 정정하거나, 사람이 개입하는 구성요소를 삭제하면 극복할 수 있다.</p></div></div></div><footer class="sl-f"><span>3-4 성립성 위반 사례와 대응 ①</span><span class="num">31 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>&#x27;PDA 등의 모바일을 통하여 DB에 입력&#x27;이라는 한 줄만으로는 SW·HW 협동이 구체적이라고 보지 않는다. 핵심은 각 단계의 주어다. &#x27;검토팀이 검토한다&#x27;가 아니라 &#x27;담당자 단말이 서버로부터 서류 데이터를 수신해 검토 결과를 전송한다&#x27;처럼 장치의 동작으로 바꾸어야 한다.</p></div></div><div class="slot" id="s32" data-lec="3-4"><article class="slide ty-compare" aria-label="32 / 54"><div class="sl-in"><h3 class="sh">기술적 수단이 전혀 없는 청구항</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">거절된 청구항</b><ul><li>플래시 프로그램을 이용한</li><li>글쓰기와 그림 그리기의 자동 기술 방법</li><li>(이것이 청구항 전체)</li></ul></div><div class="cp-col"><b class="cp-h">대응 방향</b><ul><li>자동 기술을 위한 구체적 HW 수단 기재</li><li>SW 처리 단계와 데이터 흐름 기재</li><li>보정 시 새로운 사항 추가 금지</li></ul></div></div><p class="cp-note">제목 같은 한 줄 청구항은 구체적 수단이 없어 비발명</p></div><footer class="sl-f"><span>3-4 성립성 위반 사례와 대응 ①</span><span class="num">32 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>청구항이 사실상 발명의 명칭만으로 되어 있어, 무엇이 어떻게 자동으로 글과 그림을 그리는지 하드웨어·소프트웨어 수단이 하나도 없다. 대응은 입력 장치, 처리부, 저장부 등의 구성과 처리 단계를 청구항에 넣는 것이다. 이 역시 발명의 설명에 이미 적힌 범위 안에서만 가능하다.</p></div></div><div class="slot" id="s33" data-lec="3-4"><article class="slide ty-case" aria-label="33 / 54"><div class="sl-in"><p class="ca-k">사례 · 인위적 결정</p><h3 class="sh">생활쓰레기 재활용 종합관리</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>관청이 바코드 스티커와 달력지를 배포하고, 배출자가 규정대로 분리 배출, 수거자가 요일별 수거·선별, 잘못 분류된 봉투는 바코드로 시정명령하는 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>법령에 의한 규칙과 관청·배출자·수거자 간 약속, 즉 인위적인 인간의 결정에 근거한 처리에 불과하다고 보았다.</p></div><div class="ca-b ca-result"><i>결과</i><p>발명에 해당하지 않는다는 거절이유를 받았다. 바코드가 있어도 처리 주체가 사람과 제도였다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>관할 관청 등의 정신적 판단·인위적 결정에 근거한 처리를 청구범위 구성요소에서 삭제하면 극복할 수 있다.</p></div></div></div><footer class="sl-f"><span>3-4 성립성 위반 사례와 대응 ①</span><span class="num">33 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>이 사례의 대응은 사람의 결정을 장치로 바꾸는 대신 삭제하는 방법이다. 예를 들어 바코드 판독기와 서버가 배출 정보를 수집·통계 처리하는 부분만 남기고, &#x27;규정에 의해 정확하게 분리한다&#x27; 같은 사람의 판단 단계는 뺀다. 삭제 후에도 남은 구성만으로 발명이 완성되는지 확인해야 한다.</p></div></div><div class="slot" id="s34" data-lec="3-4"><article class="slide ty-case" aria-label="34 / 54"><div class="sl-in"><p class="ca-k">사례 · 정신적 판단 개입</p><h3 class="sh">한옥 건축 방법(2012허2258)</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>원목에 이력관리 태그를 달고, 부재 치수·조립 정보를 서버에 기록, 리더기로 코드를 인식해 NC가공장치로 가공하고 모듈번호로 한옥을 짓는 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>법원은 태그 판독·서버 기록·NC가공은 자연법칙 이용이라 볼 수 있으나, 원목 선별·설계·조립 등 필수 작업이 정신활동이나 사실행위라고 보았다.</p></div><div class="ca-b ca-result"><i>결과</i><p>일부에 자연법칙을 이용해도 전체로는 자연법칙을 이용한 기술적 사상의 창작이 아니라고 판단되었다(2012후3114).</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>각 단계의 동작 주체가 HW와 SW의 협동에 의한 구체적 처리과정으로 기재되어야 거절이유를 극복할 수 있다.</p></div></div></div><footer class="sl-f"><span>3-4 성립성 위반 사례와 대응 ①</span><span class="num">34 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>RFID 태그, 리더기, 서버, NC가공장치까지 나오는데도 거절된 점이 핵심이다. 태그에 어떤 정보가 담기는지 한정이 없고, 모듈번호로 한옥을 짓는 핵심 단계는 사람이 조립정보를 보고 판단해야 한다. 2001후3149의 &#x27;청구항 전체로 판단&#x27; 원칙이 그대로 적용된 사례다.</p></div></div><div class="slot" id="s35" data-lec="3-4"><article class="slide ty-takeaway" aria-label="35 / 54"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>오프라인 영업방법을 단계로 나열하면 HW가 없어 비발명이 된다</li><li>대응의 기본: 각 단계의 주체를 서버·단말 등 HW로 바꾸고 처리 과정을 적는다</li><li>사람의 판단·인위적 결정 단계는 삭제하거나 장치의 처리로 대체한다</li><li>보정은 최초 명세서 범위 안에서만 된다: 출원 때 실시예를 풍부하게</li></ul></div><footer class="sl-f"><span>3-4 성립성 위반 사례와 대응 ①</span><span class="num">35 / 54</span></footer></article></div><div class="slot" id="s36" data-lec="3-5"><article class="slide ty-title" aria-label="36 / 54"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 명세서 작성과 발명의 성립요건</p><p class="t-no">3-5</p><h2 class="t-title">성립성 위반 사례와 대응 ②</h2><p class="t-thesis">구성요소는 장치로, 처리는 방법까지 구체적으로</p></div></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">36 / 54</span></footer></article></div><div class="slot" id="s37" data-lec="3-5"><article class="slide ty-compare" aria-label="37 / 54"><div class="sl-in"><h3 class="sh">후원기금 마련 시스템</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">거절된 청구항</b><ul><li>소비자, 인쇄업체, 발송업체</li><li>은행, 후원기관이 구성요소</li><li>명함 제작·주문·송금·이체 행위</li><li>SW·HW 구체적 실현 없음</li></ul></div><div class="cp-col"><b class="cp-h">보정한 청구항</b><ul><li>소비자 단말, 인쇄업체 단말</li><li>발송업체 단말, 은행 단말</li><li>후원기관 단말로 구성요소 기재</li><li>단말 간 데이터 처리로 서술</li></ul></div></div><p class="cp-note">비기술적 구성요소(사람·조직)를 기술적 구성(단말)으로</p></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">37 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>시스템 청구항인데 구성요소가 소비자·업체·은행·후원기관이라는 사람과 조직이다. 이는 기술적 구성요소가 아니고, 명함 제작·송금 같은 오프라인 행위가 섞여 있다. 책의 대응은 각 구성요소를 &#x27;○○ 단말&#x27;로 기재하는 것이다. 실무에서는 여기에 단말 간 주고받는 데이터와 서버의 처리까지 적으면 진보성 대응에도 유리하다.</p></div></div><div class="slot" id="s38" data-lec="3-5"><article class="slide ty-case" aria-label="38 / 54"><div class="sl-in"><p class="ca-k">사례 · 추상적 아이디어</p><h3 class="sh">학습자 중심 교육방법</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>영상강의는 과목별 최고 강사가, 복습·스터디·예습은 담임교사가 지휘·감독하고 생활지도를 하는 학습자 중심 교육방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>일반적인 학습방법을 추상적 아이디어로만 청구했을 뿐, 이를 실현할 구체적 방법이 없다고 판단되었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>특허법상 발명에 해당하지 않는다는 거절이유를 받았다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>명세서에 SW·HW 실시예가 없었다면 보정이 불가하므로, 공개 전이면 출원을 취하하고 재출원을 고려한다.</p></div></div></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">38 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>교수방법 그 자체는 판례(2007후494)가 든 비발명의 대표 예다. 컴퓨터상 SW로 처리되도록 보정하면 치유할 수 있지만, 그러려면 출원 당시 명세서에 그런 구현이 적혀 있어야 한다. 없다면 보정은 신규사항 추가가 된다. 이때 출원이 아직 공개되지 않았다면 취하 후 제대로 쓴 명세서로 다시 출원하는 것이 현실적인 방법이다.</p></div></div><div class="slot" id="s39" data-lec="3-5"><article class="slide ty-case" aria-label="39 / 54"><div class="sl-in"><p class="ca-k">사례 · HW 구현 불명확</p><h3 class="sh">미니룸 생성·관리(2005허11094)</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>온라인 커뮤니티에서 회원의 미니룸을 자동 생성하고, 전시된 가구를 구매·저장한 뒤 원하는 위치에 배치하는 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>미니룸 생성 확인 방법, &#x27;전시&#x27;된 가구가 DB에서 어떻게 보이고 선택되는지, 가구 위치 지정 방식이 명확하지 않다고 보았다.</p></div><div class="ca-b ca-result"><i>결과</i><p>SW 정보처리가 HW로 구체적으로 실현되지 않아 산업상 이용할 수 있는 발명이 아니라고 판단되었다(2007후494).</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>각 단계의 동작 주체와, 목적에 따른 정보의 연산·가공이 HW·SW 협동으로 어떻게 실현되는지 적어야 한다.</p></div></div></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">39 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>&#x27;저장공간에 자동 생성&#x27;, &#x27;전시된 가구&#x27;, &#x27;원하는 위치에 지정되면&#x27;은 결과만 말하는 표현이다. 서버가 어떤 요청을 받아 어떤 데이터 구조로 미니룸을 만들고, 단말에 가구 목록을 어떻게 표시하며, 좌표 입력을 어떻게 저장하는지가 빠졌다. 결과가 아니라 처리 방식을 쓰는 것이 핵심이다.</p></div></div><div class="slot" id="s40" data-lec="3-5"><article class="slide ty-case" aria-label="40 / 54"><div class="sl-in"><p class="ca-k">사례 · 미완성·정신적 판단</p><h3 class="sh">생활설계 컨설팅(2006허1742)</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>상품 구매 정보와 가상 아이템 정보로 생활 설계 기초 정보를 도출·분석·비교해 결과를 산출하고 사용자에게 전송하는 컨설팅 제공 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>기초정보를 분석·비교해 결과를 산출하는 구성이 청구항과 설명 어디에도 구체적이지 않았다. &#x27;미리 정해진 산출 방법&#x27;, &#x27;평균치와 비교&#x27;만 있었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>핵심 부분이 사람의 판단 과정으로 해석되어 비발명, 방법 일부를 결여한 미완성 발명으로 판단되었다(2007후265).</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>설명·도면에 실시 가능한 구체적 실시예가 있고, 청구항 각 단계의 주체가 HW·SW 협동 처리로 적혀야 한다.</p></div></div></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">40 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>단계 수가 많고 &#x27;데이터베이스로부터 추출&#x27; 같은 표현이 있어도, 가장 중요한 분석·비교·산출이 어떤 기준과 연산으로 이루어지는지 없으면 사람이 판단하는 과정으로 읽힌다. 발명의 설명이나 도면을 참작해도 마찬가지였다. 알고리즘(비교 기준, 가중치, 산출식)을 실시예에 적어 두어야 한다.</p></div></div><div class="slot" id="s41" data-lec="3-5"><article class="slide ty-steps" aria-label="41 / 54"><div class="sl-in"><h3 class="sh">성립성 거절 대응 순서</h3><ol class="steps n6"><li><span class="sn">1</span><b>주체 확인</b><p>단계마다 누가 수행하는지 표시</p></li><li><span class="sn">2</span><b>사람 → 장치</b><p>사람·조직을 단말·서버로 바꿔 기재</p></li><li><span class="sn">3</span><b>판단 단계 정리</b><p>인위적 결정은 삭제하거나 장치 처리로</p></li><li><span class="sn">4</span><b>처리 구체화</b><p>데이터 수신·연산·저장·전송을 적음</p></li><li><span class="sn">5</span><b>근거 확인</b><p>최초 명세서에 근거 있는지 확인</p></li><li><span class="sn">6</span><b>안 되면</b><p>공개 전이면 취하 후 재출원 검토</p></li></ol></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">41 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>3-4와 3-5의 일곱 유형에서 책이 제시한 대응을 순서로 묶었다. 가장 먼저 청구항 단계마다 주어에 밑줄을 그어 보면 사람이 주체인 단계가 바로 드러난다. 보정할 내용은 반드시 최초 명세서·도면에서 찾아 근거 단락 번호를 의견서에 적는다. 근거가 없으면 보정이 신규사항 추가로 다시 거절된다.</p></div></div><div class="slot" id="s42" data-lec="3-5"><article class="slide ty-checklist" aria-label="42 / 54"><div class="sl-in"><h3 class="sh">성립요건 셀프 체크</h3><ol class="chk two"><li><span class="ck">1</span>청구항의 모든 단계에 HW 주체(서버·단말·DB)가 있는가?</li><li><span class="ck">2</span>사람·업체·기관이 구성요소로 들어가 있지 않은가?</li><li><span class="ck">3</span>인위적 규칙·정신적 판단 단계가 남아 있지 않은가?</li><li><span class="ck">4</span>각 단계의 데이터 입력·연산·출력이 구체적인가?</li><li><span class="ck">5</span>&#x27;자동&#x27;, &#x27;분석&#x27;, &#x27;산출&#x27;의 처리 방식이 설명에 있는가?</li><li><span class="ck">6</span>구성요소 간 결합관계(데이터 흐름)가 적혀 있는가?</li><li><span class="ck">7</span>청구항 전체로 보아도 자연법칙을 이용하는가?</li></ol></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">42 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>출원 전에 청구항 1을 놓고 이 일곱 질문에 답해 보자. 앞의 세 질문은 비창작 예에 걸리는지, 뒤의 네 질문은 SW·HW 협동이 구체적인지를 본다. 한옥 사례처럼 일부만 HW가 있어도 전체로 판단되므로 마지막 질문이 결정적이다. 아래 실습에서 이 체크리스트로 자기 청구항을 점검한다.</p></div></div><div class="slot" id="s43" data-lec="3-5"><article class="slide ty-lab" aria-label="43 / 54"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">성립요건 체크로 청구항 고치기</h3><p class="lb-p">청구항 1을 책의 성립요건 판단 절차와 7가지 위반 유형으로 점검해, 하드웨어와 소프트웨어의 협동이 드러나는 구체적 수단의 청구항으로 고쳐 쓴다.</p><ol class="lb-s"><li>단계·구성요소로 쪼개기</li><li>주체 표시</li><li>비창작 예 걸러내기</li><li>사람 → 장치로 바꾸기</li><li>판단 단계 삭제 또는 대체</li><li>구체적 수단 채우기</li><li>근거 단락 확인</li><li>전체로 다시 판단</li></ol><p class="lb-go"><a href="labs/03-eligibility-check.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">43 / 54</span></footer></article></div><div class="slot" id="s44" data-lec="3-5"><article class="slide ty-takeaway" aria-label="44 / 54"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>소비자·업체·은행 같은 사람·조직은 &#x27;단말&#x27;로 바꿔 써야 구성요소가 된다</li><li>추상적 아이디어만 있으면, 공개 전 취하 후 재출원도 고려한다</li><li>&#x27;자동 생성&#x27;, &#x27;전시&#x27;처럼 결과만 적지 말고 데이터 처리 방식을 적는다</li><li>분석·비교·산출의 구체적 방법이 없으면 사람의 판단으로 해석된다</li></ul></div><footer class="sl-f"><span>3-5 성립성 위반 사례와 대응 ②</span><span class="num">44 / 54</span></footer></article></div><div class="slot" id="s45" data-lec="3-6"><article class="slide ty-title" aria-label="45 / 54"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 명세서 작성과 발명의 성립요건</p><p class="t-no">3-6</p><h2 class="t-title">발명의 설명 기재요건</h2><p class="t-thesis">통상의 기술자가 그대로 따라 만들 수 있게 써라</p></div></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">45 / 54</span></footer></article></div><div class="slot" id="s46" data-lec="3-6"><article class="slide ty-concepts" aria-label="46 / 54"><div class="sl-in"><h3 class="sh">제42조 제3항의 판단기준</h3><div class="ccs n4"><div class="cc"><b>통상의 기술자</b><p>그 분야 보통 수준의 기술 이해력을 가진 평균적 기술자</p></div><div class="cc"><b>실시할 수 있을 정도</b><p>물건은 제조·사용, 방법은 사용할 수 있는 정도</p></div><div class="cc"><b>쉽게 실시할 수 있을 정도</b><p>과도한 시행착오·반복 실험 없이 이해·재현</p></div><div class="cc"><b>배경이 되는 기술</b><p>이해·조사·심사에 유용한 종래기술과 문헌정보</p></div></div></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">46 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>특허법 제42조 제3항은 발명의 설명이 ① 통상의 기술자가 쉽게 실시할 수 있도록 명확·상세하고 ② 발명의 배경기술을 적을 것을 요구한다. 청구항과 관련 없이 설명에만 있는 발명은 실시 가능하게 쓰여 있지 않아도 위반이 아니다. 즉 검사 대상은 &#x27;청구항에 관련된 발명&#x27;을 실시할 수 있느냐다.</p></div></div><div class="slot" id="s47" data-lec="3-6"><article class="slide ty-checklist" aria-label="47 / 54"><div class="sl-in"><h3 class="sh">BM 실시가능 요건 위반 유형</h3><ol class="chk"><li><span class="ck">1</span>일반적이지 않은 용어·약호·기호를 정의 없이 썼는가?</li><li><span class="ck">2</span>단계·기능을 추상적으로만 쓰고 HW·SW 실행 방법이 없는가?</li><li><span class="ck">3</span>기능 블록도·개략 흐름도뿐이라 구성 방법이 불명확한가?</li><li><span class="ck">4</span>청구항 기능과 설명의 흐름도가 어떻게 대응하는지 불명확한가?</li></ol></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">47 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>책이 BM 발명의 구체적 판단방법으로 든 네 유형이다. 특히 둘째와 셋째가 흔하다. 블록 하나에 &#x27;분석부&#x27;라고만 쓰고 무엇을 입력받아 어떤 규칙으로 분석하는지 없으면 실시할 수 없다. 넷째는 청구항을 기능으로 썼는데 설명은 흐름도로만 되어 대응관계가 안 보이는 경우로, 청구항 용어를 흐름도 단계 설명에 그대로 써서 막는다.</p></div></div><div class="slot" id="s48" data-lec="3-6"><article class="slide ty-cases" aria-label="48 / 54"><div class="sl-in"><h3 class="sh">참조 판례: 대법원 2004후2260</h3><div class="css n3"><div class="cs"><b>명세서 전체 해석</b><p>청구범위만으로 불명확하면 설명·도면으로 보충</p></div><div class="cs"><b>용어의 통일</b><p>보통 의미로, 명세서 전체에서 통일되게 사용</p></div><div class="cs"><b>용어의 정의</b><p>특정 의미로 쓰려면 정의하고, 정의대로 해석</p></div></div></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">48 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>이 판례는 용어 사용의 원칙을 정리했다. 명세서 용어는 보통의 의미로 쓰고 전체에서 통일해야 하지만, 특정 의미로 쓰고 싶으면 정의하면 된다. 실무에서는 &#x27;포인트&#x27;, &#x27;아이템&#x27;, &#x27;이벤트&#x27;처럼 BM에서 뜻이 넓은 용어를 처음 등장할 때 정의하고, 청구항과 설명에서 같은 단어를 끝까지 쓰는 것이 안전하다.</p></div></div><div class="slot" id="s49" data-lec="3-6"><article class="slide ty-case" aria-label="49 / 54"><div class="sl-in"><p class="ca-k">사례 · 구체적 구성·실시예 없음</p><h3 class="sh">인터넷 쇼핑몰 상품정보 제공</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>구매자가 구매 도우미와 접촉하고, 컴퓨터 대화 지원 시스템이 질문·답변 가공 후 성향에 맞는 상품정보를 DB에서 가져와 웹페이지를 만들어 URL을 보내는 6단계 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>설명에는 시스템이 답변을 분석해 &#x27;패턴 분석을 수행한다&#x27;고만 있고, 어떤 기준으로 어떻게 가장 근접한 상품을 찾는지 없었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>반복 재현할 수 있을 만큼 명확하지 않아 쉽게 실시할 수 없다는 거절이유를 받았다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>분석 기준과 수행 방법을 설명에 구체적으로 보정해야 하나, 도면이나 실시예를 추가하는 보정은 인정되지 않는다.</p></div></div></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">49 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>추천·매칭형 BM에서 가장 흔한 거절이다. &#x27;분석하여 가장 근접한 상품을 찾는다&#x27;는 결과일 뿐 방법이 아니다. 출원 때부터 질문 항목, 답변을 점수화하는 규칙, 상품 속성과의 유사도 계산 방식 같은 것을 실시예로 적어 두어야 한다. 출원 후에는 새 실시예를 넣을 수 없다.</p></div></div><div class="slot" id="s50" data-lec="3-6"><article class="slide ty-case" aria-label="50 / 54"><div class="sl-in"><p class="ca-k">사례 · 구체적 기술수단 없음</p><h3 class="sh">인터넷 경조사 참여 방법</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>회원 가입·정보이용료 결제 후 친구 생일을 DB에 저장하면, 생일에 웹서버 제어로 상품 공급자를 통해 선물을 배달하고 추첨으로 기념품을 주는 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>웹서버 내부 어떤 구성요소가 어떻게 동작해 친구와 공급자를 연결하고 배달하는지, 승인 시스템이 선물비를 어떻게 지불하는지 기재가 없었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>통상의 기술자가 쉽게 반복 실시할 수 있을 정도로 기재되지 않았다고 판단되었다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>선물 배달을 이루는 기술수단과 선물비 지불 과정을 발명의 설명에 구체적으로 적어야 한다.</p></div></div></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">50 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>&#x27;웹서버의 제어에 의해&#x27;와 &#x27;승인 시스템을 통하여&#x27;는 블랙박스다. 어떤 모듈이 생일을 판단하고, 공급자 시스템에 어떤 주문 데이터를 보내며, 결제 승인 요청과 응답이 어떻게 오가는지를 써야 한다. 성립요건에서 본 &#x27;HW 주체와 처리&#x27;를 설명 쪽에서도 똑같이 요구하는 셈이다.</p></div></div><div class="slot" id="s51" data-lec="3-6"><article class="slide ty-case" aria-label="51 / 54"><div class="sl-in"><p class="ca-k">사례 · 결합관계 불명료</p><h3 class="sh">이메일 주소 부여 방법</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>웹메일 제공 사이트가 웹메일을 안 하는 사이트를 모집해 DB에 저장하고, 아이디가 겹치면 다른 사이트 도메인과 결합해 주소를 부여하는 방법을 청구했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>설명은 웹서버가 URL을 기억했다가 추적해 연결된다고만 하여, 접속 후 그 아이디로 메일 서비스가 어떻게 가능한지 불명료했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>아이디와 웹사이트 연결 간 상호관계, 메일 송수신 확인 과정이 불명료하다는 거절이유를 받았다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>웹서버가 타 사이트와 접속한 뒤 메일 서비스를 가능하게 하는 방법과 구성 간 상호관계를 명확히 적어야 한다.</p></div></div></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">51 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>구성요소(제1·제2 DB, 웹서버, 타 사이트)는 다 있지만 이들이 어떻게 연결되어 메일이 실제로 오가는지가 빠졌다. 도메인 위임·메일 라우팅처럼 연결을 실현하는 기술이 핵심인데 &#x27;연결된다&#x27;로 끝난 것이다. 구성요소 목록만큼 중요한 것이 구성 간 데이터 흐름이다.</p></div></div><div class="slot" id="s52" data-lec="3-6"><article class="slide ty-compare" aria-label="52 / 54"><div class="sl-in"><h3 class="sh">배경기술 불명료(지옥철 사례)</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">거절된 기재</b><ul><li>&#x27;지옥철·지옥 버스&#x27; 신조어 소개</li><li>출퇴근 혼잡·불쾌지수 등 불편만</li><li>배경기술 설명·문헌정보 전혀 없음</li></ul></div><div class="cp-col"><b class="cp-h">대응</b><ul><li>종래기술을 구체적으로 기재</li><li>선행기술문헌 정보 추가(신규사항 아님)</li><li>배경기술이 없으면 의견서로 취지 설명</li><li>설명 추가는 최초 명세서에서 자명할 때만</li></ul></div></div><p class="cp-note">문헌정보 추가는 허용, 새로운 기술 설명 추가는 신규사항 위험</p></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">52 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>배경기술 칸에 사회적 문제만 쓰고 종래 기술을 쓰지 않은 사례다. 대응은 종래 기술을 구체적으로 쓰고 선행기술문헌 정보를 추가하는 보정이다. 문헌정보만 추가하는 것은 신규사항이 아니지만, 배경기술 설명을 새로 쓰면 최초 명세서에서 자명하게 도출되지 않는 한 신규사항이 될 수 있다. 정말 새로운 발상이라 적절한 배경기술이 없으면 의견서로 그 취지를 설명한다.</p></div></div><div class="slot" id="s53" data-lec="3-6"><article class="slide ty-compare" aria-label="53 / 54"><div class="sl-in"><h3 class="sh">기재요건 대응: 보정 가능 범위</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">할 수 있는 것</b><ul><li>최초 명세서 범위 안에서 설명 보정</li><li>구성 간 관계를 명확히 하는 기재</li><li>선행기술문헌 정보 추가</li><li>의견서로 취지 설명</li></ul></div><div class="cp-col"><b class="cp-h">할 수 없는 것</b><ul><li>도면 추가·보정으로 구체화</li><li>새로운 실시예 추가</li><li>최초 명세서에 없던 기재 추가</li></ul></div></div><p class="cp-note">그래서 승부는 최초 출원 때의 발명의 설명에서 난다</p></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">53 / 54</span></footer></article><div class="sl-ex"><b>설명</b><p>성립요건과 기재요건 사례 모두 같은 결론으로 모인다. 거절이유를 받은 뒤에는 최초 명세서에 있던 것만 쓸 수 있다. 따라서 출원 전에 서버·단말·DB의 처리, 분석 기준, 구성 간 데이터 흐름을 실시예와 도면으로 넉넉히 넣어야 한다. 3-2의 명세서 초안 실습에서 이 점을 실천한다.</p></div></div><div class="slot" id="s54" data-lec="3-6"><article class="slide ty-takeaway" aria-label="54 / 54"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>통상의 기술자가 과도한 시행착오 없이 이해·재현할 정도로 쓴다</li><li>기능 블록도·개략 흐름도만으로는 실시가능 요건 위반이 될 수 있다</li><li>&#x27;분석한다&#x27;, &#x27;제어한다&#x27;에는 기준과 방법을, 구성 간에는 결합관계를 적는다</li><li>도면·실시예 추가 보정은 안 되고, 선행문헌 정보 추가는 신규사항이 아니다</li></ul></div><footer class="sl-f"><span>3-6 발명의 설명 기재요건</span><span class="num">54 / 54</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-02.html">← 2부 출원에서 등록까지</a><a class="wk-nav" href="lecture-04.html">4부 청구범위 기재요건과 진보성 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: 특허청 「BM 특허 길라잡이」(2020 개정판), 인공지능 특허전략 수업자료. 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

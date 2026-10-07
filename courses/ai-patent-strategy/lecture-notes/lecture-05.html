@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5부 의견제출통지 대응과 결정 · 인공지능 특허전략</title>
+<meta name="description" content="거절이유는 보정과 의견서로 넘는다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+
+/* lab slides */
+.ty-lab{background:var(--paper)}
+.lb-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--accent);letter-spacing:.06em}
+.lb-p{color:var(--muted);max-width:52em}
+.lb-s{margin:0;padding-left:1.4em;display:grid;grid-template-columns:1fr 1fr;gap:.4cqw 3cqw}
+.lb-s li{font-size:clamp(13px,1.55cqw,18px)!important}
+.lb-go a{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:700;padding:.6cqw 1.6cqw;border-radius:4px;font-size:clamp(13px,1.5cqw,18px)}
+.lb-w{font-size:clamp(11px,1.2cqw,14px);color:var(--amber);margin-left:8px;font-weight:600}
+@media (max-width:720px){.lb-s{grid-template-columns:1fr}}
+.labsec{padding:40px 0 10px;border-top:1px solid var(--line)}
+.labsec .card h3{font-size:1rem}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">인공지능 특허전략</a> / <a href="index.html">BM 특허 길라잡이 핵심</a> / 5부</p>
+<header class="dk-h">
+  <p class="dk-wk num">PART 05</p>
+  <h1>의견제출통지 대응과 결정</h1>
+  <p class="lead">거절이유는 보정과 의견서로 넘는다</p>
+  <div class="kws"><span class="kw">의견제출통지</span><span class="kw">보정서</span><span class="kw">의견서</span><span class="kw">진보성</span><span class="kw">거절결정</span><span class="kw">특허결정</span></div>
+  
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="5-1"><b>5-1</b><span>의견제출통지서 읽기</span></a><a href="#s9" class="tab" data-lec="5-2"><b>5-2</b><span>의견서·보정서 작성</span></a><a href="#s18" class="tab" data-lec="5-3"><b>5-3</b><span>거절결정과 특허결정</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 26</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="5-1"><article class="slide ty-title" aria-label="1 / 26"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 의견제출통지 대응과 결정</p><p class="t-no">5-1</p><h2 class="t-title">의견제출통지서 읽기</h2><p class="t-thesis">거절이유 통지는 끝이 아니라 대응 기회다</p></div></div><footer class="sl-f"><span>5-1 의견제출통지서 읽기</span><span class="num">1 / 26</span></footer></article></div><div class="slot" id="s2" data-lec="5-1"><article class="slide ty-steps" aria-label="2 / 26"><div class="sl-in"><h3 class="sh">통지에서 결정까지</h3><ol class="steps n5"><li><span class="sn">1</span><b>심사</b><p>심사관이 청구항별로 특허요건 검토</p></li><li><span class="sn">2</span><b>의견제출통지</b><p>거절이유와 법조항, 제출기일 통지</p></li><li><span class="sn">3</span><b>의견서·보정서</b><p>기일 안에 반박하거나 청구항 보정</p></li><li><span class="sn">4</span><b>재심사</b><p>보정된 청구항으로 다시 판단</p></li><li><span class="sn">5</span><b>결정</b><p>해소되면 특허결정, 아니면 거절결정</p></li></ol></div><footer class="sl-f"><span>5-1 의견제출통지서 읽기</span><span class="num">2 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>심사관은 거절이유를 발견하면 바로 거절하지 않고 특허법 제63조에 따라 출원인에게 이를 알리고 의견을 낼 기회를 준다. 출원인은 제출기일까지 의견서(별지 제24호서식)나 보정서(별지 제9호서식)를 낼 수 있다. 실무에서는 첫 통지가 오는 것이 오히려 일반적이므로, 통지를 받으면 당황하지 말고 거절이유별로 대응 계획을 세우는 것이 출발점이다.</p></div></div><div class="slot" id="s3" data-lec="5-1"><article class="slide ty-concepts" aria-label="3 / 26"><div class="sl-in"><h3 class="sh">예시 통지서의 거절이유 3종</h3><div class="ccs n3"><div class="cc"><b>제29조1항 본문(성립성)</b><p>주문·배송 단계가 인간 행위라 HW로 구체적 실현 안 됨</p></div><div class="cc"><b>제42조4항2호(기재불비)</b><p>상품등록·연결신호 중개 단계의 행위 주체가 불명확</p></div><div class="cc"><b>제29조2항(진보성)</b><p>인용발명에서 통상의 기술자가 쉽게 발명 가능</p></div></div></div><footer class="sl-f"><span>5-1 의견제출통지서 읽기</span><span class="num">3 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 의견제출통지서 예시는 &#x27;인터폰을 이용한 전자상거래 영업방법&#x27; 출원의 청구항 1~3에 세 가지 거절이유를 한꺼번에 지적한다. 통지서 상단 표에서 &#x27;거절이유가 있는 부분&#x27;과 &#x27;관련 법조항&#x27;을 먼저 읽으면 어떤 청구항이 무엇 때문에 막혔는지 한눈에 보인다. 세 이유는 대응 방식이 다르므로 각각 따로 정리해야 한다.</p></div></div><div class="slot" id="s4" data-lec="5-1"><article class="slide ty-case" aria-label="4 / 26"><div class="sl-in"><p class="ca-k">사례 · 세 가지 거절이유</p><h3 class="sh">인터폰 전자상거래 출원</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>회원이 인터폰으로 상품을 주문하고 업체가 배송하는 전자상거래 영업방법을 청구항 1~3(방법·기록매체)으로 출원했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>심사관은 청구항 전부에 성립성(제29조1항 본문), 기재불비(제42조4항2호), 진보성(제29조2항) 거절이유를 담은 의견제출통지를 보냈다.</p></div><div class="ca-b ca-result"><i>결과</i><p>주문·배송 단계는 인간 행위에 불과하고, 등록·중개 단계는 주체가 없으며, 일본 공개공보와 비교해 쉽게 발명할 수 있다고 판단되었다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>단계마다 서버·단말 같은 수행 주체를 적고 SW 처리가 HW로 구체 실현되게 써야 세 거절이유를 함께 피한다.</p></div></div></div><footer class="sl-f"><span>5-1 의견제출통지서 읽기</span><span class="num">4 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>이 예시는 BM 출원이 흔히 빠지는 함정을 한 번에 보여준다. 영업 절차를 사람의 행위처럼 적으면 성립성이, 처리 주체를 빠뜨리면 기재불비가, 기존 서비스를 온라인으로 옮긴 수준이면 진보성이 문제된다. 출원 전에 청구항의 각 단계를 &#x27;무엇이(주체) 어떤 데이터를 처리하는가&#x27;로 다시 읽어보는 습관이 가장 싼 예방책이다.</p></div></div><div class="slot" id="s5" data-lec="5-1"><article class="slide ty-compare" aria-label="5 / 26"><div class="sl-in"><h3 class="sh">진보성 거절의 논리</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">인용발명과 같은 점</b><ul><li>상품등록·주문·배송 단계가 유사</li><li>구성들을 결합하는 데 곤란성 없음</li></ul></div><div class="cp-col"><b class="cp-h">차이점에 대한 판단</b><ul><li>연결신호 중개: 인터폰 주문에서 유추</li><li>검색·상담수단(청2): 인용발명에 기재</li><li>기록매체(청3): 범주만 달라 동일</li></ul></div></div><p class="cp-note">차이가 &#x27;단순 기술·설계변경&#x27;이면 진보성이 부정된다</p></div><footer class="sl-f"><span>5-1 의견제출통지서 읽기</span><span class="num">5 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>심사관은 청구항 1의 구성을 인용발명과 하나씩 대비한 뒤, 같은 부분은 결합이 쉽다고 보고 다른 부분은 인용발명에서 당연히 유추되는 단순 기술이라고 판단했다. 청구항 3처럼 같은 내용을 기록매체로 바꾼 청구항은 카테고리만 다를 뿐 실질이 같아 함께 거절된다. 반박하려면 이 대비표의 &#x27;차이점&#x27; 칸을 정면으로 다퉈야 한다.</p></div></div><div class="slot" id="s6" data-lec="5-1"><article class="slide ty-points" aria-label="6 / 26"><div class="sl-in"><h3 class="sh">제출기일과 보정 규칙</h3><div class="pts n4"><div class="pt"><b>제출 서식</b><p>의견서 별지 제24호, 보정서 별지 제9호 서식</p></div><div class="pt"><b>기간 연장</b><p>1개월 단위 최대 4개월, 초과 시 불가피 사유 소명서</p></div><div class="pt"><b>보정 범위</b><p>최초 명세서·도면 범위 안에서만(제47조2항)</p></div><div class="pt"><b>보정 횟수</b><p>기간 내 여러 번 내면 마지막 보정서만 유효</p></div></div></div><footer class="sl-f"><span>5-1 의견제출통지서 읽기</span><span class="num">6 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>제출기일 연장은 1개월씩 신청하되 2개월 이상을 한꺼번에 신청할 수도 있다. 2013년 7월 1일 이후 출원은 지정기간 안에 보정서를 2회 이상 내면 마지막 것을 뺀 나머지가 취하간주된다. 보정료는 전자문서 4,000원(서면 14,000원)이며 다음 날까지 납부해야 한다. 특허로에서 심사관과 온라인 영상면담이나 보정안 리뷰를 신청할 수도 있다.</p></div></div><div class="slot" id="s7" data-lec="5-1"><article class="slide ty-checklist" aria-label="7 / 26"><div class="sl-in"><h3 class="sh">통지서를 받으면 확인할 것</h3><ol class="chk two"><li><span class="ck">1</span>제출기일은 언제이고 연장이 필요한가?</li><li><span class="ck">2</span>어떤 청구항이 어떤 법조항으로 거절되었는가?</li><li><span class="ck">3</span>거절되지 않은 청구항이 있는가?</li><li><span class="ck">4</span>인용발명 공보를 모두 내려받아 읽었는가?</li><li><span class="ck">5</span>심사관의 차이점 판단 중 반박할 부분은 어디인가?</li><li><span class="ck">6</span>보정에 쓸 구성이 최초 명세서에 적혀 있는가?</li></ol></div><footer class="sl-f"><span>5-1 의견제출통지서 읽기</span><span class="num">7 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>통지서를 받은 직후 이 질문들에 답하면 대응의 뼈대가 나온다. 특히 거절되지 않은 청구항이 있다면 그 특징을 독립항에 넣는 보정이 가장 빠른 등록 경로가 될 수 있다. 반대로 모든 청구항이 거절되었다면 명세서 실시예에서 인용발명에 없는 구체 구성을 찾아야 한다. 막히면 특허고객상담센터(1544-8080)에 절차를 문의할 수 있다.</p></div></div><div class="slot" id="s8" data-lec="5-1"><article class="slide ty-takeaway" aria-label="8 / 26"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>의견제출통지는 거절 전 의견·보정 기회를 주는 절차다(제63조)</li><li>BM 출원의 단골 거절이유는 성립성·기재불비·진보성 세 가지다</li><li>제출기일은 1개월 단위로 최대 4개월까지 연장할 수 있다</li><li>보정은 최초 명세서 범위 안에서만, 마지막 보정서만 유효하다</li></ul></div><footer class="sl-f"><span>5-1 의견제출통지서 읽기</span><span class="num">8 / 26</span></footer></article></div><div class="slot" id="s9" data-lec="5-2"><article class="slide ty-title" aria-label="9 / 26"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 의견제출통지 대응과 결정</p><p class="t-no">5-2</p><h2 class="t-title">의견서·보정서 작성</h2><p class="t-thesis">보정으로 범위를 좁히고, 의견서로 차이를 입증한다</p></div></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">9 / 26</span></footer></article></div><div class="slot" id="s10" data-lec="5-2"><article class="slide ty-steps" aria-label="10 / 26"><div class="sl-in"><h3 class="sh">대응 문서 작성 순서</h3><ol class="steps n6"><li><span class="sn">1</span><b>거절이유 파악</b><p>통지서의 거절이유를 세부 항목으로 분해</p></li><li><span class="sn">2</span><b>타당성 검토</b><p>인용발명 대비가 적절한지 검토</p></li><li><span class="sn">3</span><b>방향 결정</b><p>보정으로 해소할지, 의견으로 반박할지</p></li><li><span class="sn">4</span><b>보정서 작성</b><p>특허문서작성기로 보정 전·후 대조</p></li><li><span class="sn">5</span><b>의견서 작성</b><p>보정 이유와 차이점을 논리적으로 서술</p></li><li><span class="sn">6</span><b>제출</b><p>특허로로 함께 제출, 보정료 납부</p></li></ol></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">10 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>책은 의견서·보정서 작성의 첫 단계로 거절이유를 세부적으로 파악하고, 심사관의 판단과 인용발명 대비가 타당한지 검토하라고 한다. 그 결과에 따라 보정서와 의견서를 쓴다. 특허로의 특허문서작성기는 왼쪽에 보정 전, 오른쪽에 보정 후 화면을 띄워 주므로 어디를 바꿨는지 스스로 확인하며 작성할 수 있다.</p></div></div><div class="slot" id="s11" data-lec="5-2"><article class="slide ty-concepts" aria-label="11 / 26"><div class="sl-in"><h3 class="sh">의견서 서지 항목</h3><div class="ccs n6"><div class="cc"><b>서류구분</b><p>거절이유 등 통지에 따른 의견</p></div><div class="cc"><b>제출인</b><p>명칭·특허고객번호, 사건과의 관계(출원인)</p></div><div class="cc"><b>대리인</b><p>성명·대리인코드·포괄위임등록번호</p></div><div class="cc"><b>사건의 표시</b><p>출원번호</p></div><div class="cc"><b>제출원인 서류</b><p>의견제출통지서의 발송번호</p></div><div class="cc"><b>의견내용</b><p>별지로 첨부, 마지막에 취지 기재</p></div></div></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">11 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>의견서 앞부분은 어느 사건의 어떤 통지에 대한 답변인지 특정하는 서지 사항이다. 수신처는 특허청장이고, 제출원인이 된 서류의 발송번호를 통지서에서 그대로 옮겨 적어야 한다. 대리인 없이 직접 내는 개인 출원인은 대리인 항목을 비워 두고 특허고객번호만 정확히 쓰면 된다. 서지가 틀리면 엉뚱한 사건에 접수될 수 있다.</p></div></div><div class="slot" id="s12" data-lec="5-2"><article class="slide ty-tree" aria-label="12 / 26"><div class="sl-in"><h3 class="sh">의견서 본문 구조</h3><div class="tree"><div class="tr-r">의견내용</div><div class="tr-cs n4"><div class="tr-c"><b>서두</b><p>구성·효과가 달라 진보성 있다고 결론부터</p></div><div class="tr-c"><b>1. 보정사항</b><p>청2·3을 청1에 병합, 권리범위 감축</p></div><div class="tr-c"><b>2·3. 대비</b><p>목적·효과 대비 후 구성 대비로 차이 입증</p></div><div class="tr-c"><b>4. 결어</b><p>유기적 결합의 차이, 재심사 요청</p></div></div></div></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">12 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 의견서 예시는 결론을 먼저 밝히고, 어떻게 보정했는지 설명한 뒤, 목적·효과와 구성을 차례로 대비하고 결어로 마무리한다. 결어의 핵심 논리는 &#x27;일부 구성이 공지되었더라도 여러 구성을 유기적으로 결합하는 것은 쉽지 않다&#x27;는 것이다. 그리고 같은 날 제출한 보정서를 근거로 재심사를 요청한다. 이 순서를 템플릿으로 쓰면 된다.</p></div></div><div class="slot" id="s13" data-lec="5-2"><article class="slide ty-case" aria-label="13 / 26"><div class="sl-in"><p class="ca-k">사례 · 종속항 병합 보정</p><h3 class="sh">온라인 맞춤형 채용정보</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>회사서버·중앙서버·구직자 단말이 채용정보를 주고받는 7단계 방법을 청구항 1로, 수집 방식(청2)과 화면 항목(청3)을 종속항으로 출원했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>진보성 거절이유에 대응해 청2(중앙서버의 별도 검색엔진으로 회사 상세정보 수집)와 청3(화면 항목)을 청1에 넣고 청2·3은 삭제했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>보정 후 청구항 1은 세 청구항의 구성을 모두 갖춘 하나의 항이 되어, 의견서에서 인용발명과의 구성 차이를 주장할 근거가 생겼다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>명세서에 근거가 있는 구체 구성을 독립항에 넣어 범위를 줄이는 것이 가장 기본적인 보정 전략이다.</p></div></div></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">13 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>이 예시의 발명은 구직자에게 필요한 회사 정보만 일목요연하게 보여줘 가독성과 접근성을 높인다는 효과를 내세운다. 보정은 권리범위를 좁히는 대가로 선행기술과 거리를 벌리는 작업이다. 너무 좁히면 경쟁사가 쉽게 회피하므로, 사업에 꼭 필요한 구성만 추가하고 나머지는 남겨 두는 균형 감각이 필요하다.</p></div></div><div class="slot" id="s14" data-lec="5-2"><article class="slide ty-compare" aria-label="14 / 26"><div class="sl-in"><h3 class="sh">보정 전 vs 보정 후 청구항 1</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">보정 전</b><ul><li>등록요청·채용정보 요청·접수</li><li>상세정보 수집, 단말 요청</li><li>조합해 화면 구성·웹페이지 제공</li><li>청2·3은 별도 종속항</li></ul></div><div class="cp-col"><b class="cp-h">보정 후</b><ul><li>7단계 구성은 그대로 유지</li><li>+ 중앙서버의 별도 검색엔진 수집</li><li>+ 화면 항목 한정(회사소개 등)</li><li>청2·3 삭제(청1에 병합)</li></ul></div></div><p class="cp-note">추가 구성은 최초 명세서에 있던 내용이어야 한다(제47조2항)</p></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">14 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>보정 후 화면은 회사소개, 채용정보, 인사제도, 복리후생, 인재상, 채용절차 중 하나 이상으로 구성된다고 한정되었다. 이렇게 병합하면 심사관은 새 청구항 1 전체를 인용발명과 다시 대비해야 한다. 보정서에는 바꾼 청구항 전문을 다시 적고, 삭제한 청구항은 &#x27;삭제&#x27;로 표시한다. 도면 부호(구직자 단말 10, 중앙서버 30 등)도 명세서와 일치시켜야 한다.</p></div></div><div class="slot" id="s15" data-lec="5-2"><article class="slide ty-checklist" aria-label="15 / 26"><div class="sl-in"><h3 class="sh">제출 전 최종 점검</h3><ol class="chk two"><li><span class="ck">1</span>모든 거절이유에 대한 답이 의견서에 있는가?</li><li><span class="ck">2</span>보정한 구성의 명세서 근거 단락을 밝혔는가?</li><li><span class="ck">3</span>각 단계의 수행 주체(서버·단말)가 적혀 있는가?</li><li><span class="ck">4</span>목적·효과뿐 아니라 구성 차이를 대비했는가?</li><li><span class="ck">5</span>보정서와 의견서를 같은 날 함께 내는가?</li><li><span class="ck">6</span>보정료 납부와 제출기일을 확인했는가?</li></ol></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">15 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>의견서가 아무리 설득력 있어도 보정서가 빠지거나 기재불비가 남아 있으면 재심사에서 다시 거절된다. 특히 성립성 거절을 받았다면 의견서 논리보다 청구항에 하드웨어와 소프트웨어의 협동 관계를 구체적으로 써 넣는 보정이 결정적이다. 제출 전에 이 목록으로 빠진 것이 없는지 확인하자.</p></div></div><div class="slot" id="s16" data-lec="5-2"><article class="slide ty-lab" aria-label="16 / 26"><div class="sl-in"><p class="lb-k">실습 · Lab</p><h3 class="sh">의견서·보정서 작성하기</h3><p class="lb-p">의견제출통지서의 거절이유를 항목별로 분해하고, 보정서로 청구항을 고치며 의견서로 인용발명과의 차이를 논증하는 실제 대응 문서를 만들어 본다.</p><ol class="lb-s"><li>거절이유 표 만들기</li><li>인용발명과 구성 대비</li><li>타당성 판단</li><li>보정 범위 확인</li><li>보정서 작성</li><li>의견서 작성</li><li>제출과 보정료 납부</li></ol><p class="lb-go"><a href="labs/05-opinion-amendment.html">실습 페이지 열기 →</a> </p></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">16 / 26</span></footer></article></div><div class="slot" id="s17" data-lec="5-2"><article class="slide ty-takeaway" aria-label="17 / 26"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>보정서로 권리범위를 줄여 인용발명과 거리를 만든다</li><li>의견서는 결론→보정사항→목적·효과→구성 대비→결어 순서</li><li>핵심 논리는 구성들의 &#x27;유기적 결합&#x27;이 만든 차이다</li><li>보정서와 의견서는 같은 날 함께 내고 재심사를 요청한다</li></ul></div><footer class="sl-f"><span>5-2 의견서·보정서 작성</span><span class="num">17 / 26</span></footer></article></div><div class="slot" id="s18" data-lec="5-3"><article class="slide ty-title" aria-label="18 / 26"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 의견제출통지 대응과 결정</p><p class="t-no">5-3</p><h2 class="t-title">거절결정과 특허결정</h2><p class="t-thesis">재심사에서도 못 넘으면 거절, 넘으면 등록료로 권리 발생</p></div></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">18 / 26</span></footer></article></div><div class="slot" id="s19" data-lec="5-3"><article class="slide ty-case" aria-label="19 / 26"><div class="sl-in"><p class="ca-k">사례 · 실패한 보정</p><h3 class="sh">개인 건강검진 방법</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>건강검진 결과를 지수화해 투자상품과 연계하는 BM을 출원했고, 한국 공개특허를 인용한 진보성 결여 통지를 받았다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>청2를 청1에 병합하고 청3에 &#x27;검진 지수&#x27;를 추가했다. 의견서로 단일 건강지수, 투자기간 전후 2회 검진 등 목적의 특이성을 주장했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>심사관은 단순 병합은 기존 거절이유가 그대로이고 지수 추가도 곤란하지 않다고 보아 청1·3에 제62조 거절결정을 했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>이미 거절된 구성끼리 합치거나 관용적 요소를 더하면 소용없다. 인용발명에 없는 기술적 구성을 찾아야 한다.</p></div></div></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">19 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>거절결정서 예시는 출원인이 의견서와 보정서를 내 재심사를 받았지만 거절이유를 해소하지 못한 경우다. 심사관은 보정된 구성에 구성의 곤란성도, 효과의 현저성도 없다고 봤다. 사업 아이디어의 목적이 독특하다는 주장만으로는 부족하고, 그 목적을 달성하는 처리 구성이 달라야 진보성이 인정된다는 점을 보여준다.</p></div></div><div class="slot" id="s20" data-lec="5-3"><article class="slide ty-compare" aria-label="20 / 26"><div class="sl-in"><h3 class="sh">통하는 보정 vs 안 통하는 보정</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">안 통하는 보정</b><ul><li>거절된 종속항끼리 단순 병합</li><li>목적·용도의 특이성만 강조</li><li>지수화 같은 관용 수단 추가</li></ul></div><div class="cp-col"><b class="cp-h">통할 수 있는 보정</b><ul><li>인용발명에 없는 구성 추가</li><li>구성들의 유기적 결합을 제시</li><li>효과 차이를 구체적으로 입증</li></ul></div></div><p class="cp-note">판단 기준은 구성의 곤란성과 효과의 현저성</p></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">20 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>두 예시를 나란히 보면 차이가 분명하다. 채용정보 예시는 독립항에 구체적 처리 구성을 더하고 결합 효과를 논증했지만, 건강검진 예시는 이미 거절된 요소를 합치고 목적을 강조하는 데 그쳤다. 보정 전에 &#x27;이 구성이 인용발명 어디에도 없는가&#x27;를 대비표로 확인하면 실패한 보정을 피할 수 있다.</p></div></div><div class="slot" id="s21" data-lec="5-3"><article class="slide ty-steps" aria-label="21 / 26"><div class="sl-in"><h3 class="sh">거절결정 후 선택지</h3><ol class="steps n5"><li><span class="sn">1</span><b>결정등본 송달</b><p>거절결정서와 거절이유 확인</p></li><li><span class="sn">2</span><b>재심사청구</b><p>30일 안에 보정서 내며 재심사청구란 체크</p></li><li><span class="sn">3</span><b>불복심판</b><p>보정 없이 거절결정불복심판 청구</p></li><li><span class="sn">4</span><b>분할출원</b><p>심판청구기간 안에 일부를 분할출원</p></li><li><span class="sn">5</span><b>기간 연장</b><p>필요하면 청구기간 연장(제15조1항)</p></li></ol></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">21 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>거절결정을 받아도 끝이 아니다. 결정등본 송달일부터 30일 안에 청구항을 보정하면서 재심사를 청구하거나(보정서 별지 제9호서식의 재심사청구 란에 표시), 보정 없이 거절결정불복심판을 청구할 수 있다. 일부 청구항만 살리고 싶다면 이 기간 안에 분할출원을 해 두는 것도 방법이다.</p></div></div><div class="slot" id="s22" data-lec="5-3"><article class="slide ty-compare" aria-label="22 / 26"><div class="sl-in"><h3 class="sh">재심사청구 vs 불복심판</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">재심사청구</b><ul><li>청구항 보정이 함께 필요</li><li>심사관이 다시 심사</li><li>새 구성 추가로 해소할 때</li></ul></div><div class="cp-col"><b class="cp-h">거절결정불복심판</b><ul><li>보정 없이 청구</li><li>심판에서 심사관 판단을 다툼</li><li>심사관 판단이 틀렸다고 볼 때</li></ul></div></div></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">22 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>보정으로 거절이유를 해소할 자신이 있다면 재심사청구가 빠르고 비용도 적다. 반대로 청구항은 그대로 두고 심사관의 진보성 판단 자체가 잘못되었다고 다투려면 불복심판으로 간다. 어느 쪽이든 기한이 짧으므로 거절결정을 받은 날 바로 방향을 정해야 한다. 사회·경제적 약자는 심판 국선대리인 제도도 활용할 수 있다.</p></div></div><div class="slot" id="s23" data-lec="5-3"><article class="slide ty-steps" aria-label="23 / 26"><div class="sl-in"><h3 class="sh">특허결정 이후 절차</h3><ol class="steps n4"><li><span class="sn">1</span><b>특허결정서</b><p>청구항 수·참고문헌과 함께 송달(제66조)</p></li><li><span class="sn">2</span><b>등록료 납부</b><p>결정 후 3개월 안에 1~3년차분 납부</p></li><li><span class="sn">3</span><b>설정등록</b><p>등록되어야 권리 발생(제87조)</p></li><li><span class="sn">4</span><b>등록증·공보</b><p>전자등록증 발급, 공보는 7일 전후 게재</p></li></ol></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">23 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>책의 특허결정서 예시는 &#x27;가격비교사이트 운영 방법 및 시스템&#x27;으로 청구항 9개가 특허결정되었다. 특허결정만으로는 권리가 생기지 않고, 설정등록료를 내고 설정등록되어야 특허권이 발생한다. 2018년 7월 1일부터는 등록증이 전자등록증으로 발급되며, 등록공보는 등록료 납부 후 7일 전후로 발행된다.</p></div></div><div class="slot" id="s24" data-lec="5-3"><article class="slide ty-equation" aria-label="24 / 26"><div class="sl-in"><h3 class="sh">설정등록료 감면 계산</h3><p class="eq">납부액 = 318,000원 × (1 − 감면율)</p><div class="eq-ts"><div class="eq-t"><b>318,000원</b><p>예시 특허결정서의 1~3년차 등록료</p></div><div class="eq-t"><b>50% 감면</b><p>159,000원</p></div><div class="eq-t"><b>70% 감면</b><p>95,400원</p></div></div><p class="eq-rule">감면 대상이면 신청해야 적용된다</p></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">24 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>특허결정서에는 납부할 등록료와 감면 시 금액이 함께 안내된다. 예시에서 1~3년차 등록료는 318,000원이고, 50% 감면이면 159,000원, 70% 감면이면 95,400원이다(318,000×0.3). 부록의 감면제도에 따르면 대상자는 최초 3년분 등록료가 70% 감면되므로, 예비창업자나 중소기업은 납부 전에 감면 요건을 반드시 확인하자.</p></div></div><div class="slot" id="s25" data-lec="5-3"><article class="slide ty-points" aria-label="25 / 26"><div class="sl-in"><h3 class="sh">결정 후 놓치기 쉬운 기회</h3><div class="pts n4"><div class="pt"><b>분할출원</b><p>결정 후 3개월 안, 설정등록 전까지 가능(제79조)</p></div><div class="pt"><b>존속기간 연장</b><p>심사 지연 시 설정등록일부터 3개월 안에 신청</p></div><div class="pt"><b>전자등록증</b><p>2018.7.1부터 전자 형태로 발급</p></div><div class="pt"><b>등록공보</b><p>등록료 납부 후 7일 전후 공개</p></div></div></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">25 / 26</span></footer></article><div class="sl-ex"><b>설명</b><p>특허결정 뒤에도 명세서에 적었지만 청구하지 않은 내용이 있다면 설정등록 전까지 분할출원으로 별도 권리를 노릴 수 있다. 또 출원일부터 4년과 심사청구일부터 3년 중 늦은 날보다 등록이 지연되었다면 그 기간만큼 존속기간 연장등록출원을 할 수 있다. 사업 전략상 중요한 BM이라면 이 두 기회를 꼭 검토하자.</p></div></div><div class="slot" id="s26" data-lec="5-3"><article class="slide ty-takeaway" aria-label="26 / 26"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>거절된 종속항의 단순 병합이나 관용 요소 추가로는 거절을 못 넘는다</li><li>거절결정 후 30일 안에 재심사청구 또는 불복심판을 고른다</li><li>특허결정 후 3개월 안에 설정등록료를 내야 권리가 생긴다</li><li>개인·중소기업은 등록료 감면 대상인지 먼저 확인한다</li></ul></div><footer class="sl-f"><span>5-3 거절결정과 특허결정</span><span class="num">26 / 26</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-04.html">← 4부 청구범위 기재요건과 진보성</a><a class="wk-nav" href="lecture-06.html">6부 BM 특허 활용·분쟁 사례 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: 특허청 「BM 특허 길라잡이」(2020 개정판), 인공지능 특허전략 수업자료. 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>
