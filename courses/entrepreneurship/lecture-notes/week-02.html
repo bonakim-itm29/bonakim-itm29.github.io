@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2주차 기회·비전·가치제안 · 기업가정신</title>
+<meta name="description" content="좋은 기회를 골라 비전과 가치로 만든다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slide{display:none} .deck.paged .slide.cur{display:flex}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slide.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">기업가 정신</a> / <a href="index.html">주차별 핵심</a> / 2주차</p>
+<header class="dk-h">
+  <p class="dk-wk num">WEEK 02</p>
+  <h1>기회·비전·가치제안</h1>
+  <p class="lead">좋은 기회를 골라 비전과 가치로 만든다</p>
+  <div class="kws"><span class="kw">Creative Destruction</span><span class="kw">TSIPC</span><span class="kw">CNRRC</span><span class="kw">Vision &amp; Mission</span><span class="kw">PPASE</span><span class="kw">Value&gt;Price&gt;Cost</span></div>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="강의"><a href="#s1" class="tab" data-lec="2.1"><b>2.1</b><span>Creative Destruction</span></a><a href="#s8" class="tab" data-lec="2.2"><b>2.2</b><span>Opportunity Evaluation (1)</span></a><a href="#s14" class="tab" data-lec="2.3"><b>2.3</b><span>Opportunity Evaluation (2)</span></a><a href="#s21" class="tab" data-lec="2.4"><b>2.4</b><span>Vision</span></a><a href="#s27" class="tab" data-lec="2.5"><b>2.5</b><span>Mission</span></a><a href="#s33" class="tab" data-lec="2.6"><b>2.6</b><span>Value Proposition</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 39</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<article class="slide ty-title" id="s1" data-lec="2.1" aria-label="1 / 39"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 기회·비전·가치제안</p><p class="t-no">2.1</p><h2 class="t-title">Creative Destruction</h2><p class="t-thesis">창조적 파괴가 부와 경제성장을 만든다</p></div></div><footer class="sl-f"><span>2.1 Creative Destruction</span><span class="num">1 / 39</span></footer></article><article class="slide ty-cycle" id="s2" data-lec="2.1" aria-label="2 / 39"><div class="sl-in"><h3 class="sh">창조적 파괴 (Schumpeter)</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="신생기업 진입 → 기존 시장 붕괴 → 적응 또는 소멸 → 새 구조 창출"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,86.6) rotate(45.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,263.4) rotate(135.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,263.4) rotate(225.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,86.6) rotate(315.0)"/><g><rect x="235.5" y="29.0" width="129" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">신생기업 진입</text></g><g><rect x="353.0" y="154.0" width="144" height="42" rx="21" class="cy-node"/><text x="425.0" y="181.0" text-anchor="middle" class="cy-t">기존 시장 붕괴</text></g><g><rect x="228.0" y="279.0" width="144" height="42" rx="21" class="cy-node"/><text x="300.0" y="306.0" text-anchor="middle" class="cy-t">적응 또는 소멸</text></g><g><rect x="110.5" y="154.0" width="129" height="42" rx="21" class="cy-node"/><text x="175.0" y="181.0" text-anchor="middle" class="cy-t">새 구조 창출</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">동적 불균형</text></svg></div></div><footer class="sl-f"><span>2.1 Creative Destruction</span><span class="num">2 / 39</span></footer></article><article class="slide ty-steps" id="s3" data-lec="2.1" aria-label="3 / 39"><div class="sl-in"><h3 class="sh">음반산업 변화의 물결</h3><ol class="steps n5"><li><span class="sn">1</span><b>LP (~1980)</b><p>비닐 음반으로 음악 감상</p></li><li><span class="sn">2</span><b>카세트 테이프</b><p>작은 크기·녹음 기능으로 대이동</p></li><li><span class="sn">3</span><b>CD (1980s 후반)</b><p>음질·즉시 트랙 접근, 1995년 정점</p></li><li><span class="sn">4</span><b>P2P 파일 공유</b><p>인터넷 확산, 불법복제 시작</p></li><li><span class="sn">5</span><b>iPod·iTunes</b><p>2001년 이후 음악 유통·판매 장악</p></li></ol></div><footer class="sl-f"><span>2.1 Creative Destruction</span><span class="num">3 / 39</span></footer></article><article class="slide ty-stat" id="s4" data-lec="2.1" aria-label="4 / 39"><div class="sl-in"><h3 class="sh">짧아지는 기업 수명</h3><div class="stat"><p class="st-v">35→&lt;20년</p><p class="st-l">S&amp;P 500 기업 평균 수명</p><p class="st-t">1975년 35년에서 20년 미만으로; 30년 전 상위 25 기술기업 중 리더는 4곳 미만</p></div></div><footer class="sl-f"><span>2.1 Creative Destruction</span><span class="num">4 / 39</span></footer></article><article class="slide ty-points" id="s5" data-lec="2.1" aria-label="5 / 39"><div class="sl-in"><h3 class="sh">기업가가 포착하는 변화</h3><div class="pts n3"><div class="pt"><b>투입원</b><p>더 좋거나 더 싼 공급원 채택</p></div><div class="pt"><b>신시장</b><p>새로운 시장의 개척</p></div><div class="pt"><b>조직 형태</b><p>더 수익성 높은 사업조직 도입</p></div></div></div><footer class="sl-f"><span>2.1 Creative Destruction</span><span class="num">5 / 39</span></footer></article><article class="slide ty-compare" id="s6" data-lec="2.1" aria-label="6 / 39"><div class="sl-in"><h3 class="sh">혁신자가 이익을 얻는 길</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">우월한 제품</b><ul><li>모방 전까지 일시적 독점력</li><li>타사보다 높은 가격 책정 가능</li></ul></div><div class="cp-col"><b class="cp-h">낮은 원가</b><ul><li>경쟁사보다 높은 이익</li><li>경쟁사는 고비용·고가격 유지</li></ul></div></div><p class="cp-note">신생기업의 이익이 경제성장과 진보의 핵심</p></div><footer class="sl-f"><span>2.1 Creative Destruction</span><span class="num">6 / 39</span></footer></article><article class="slide ty-apply" id="s7" data-lec="2.1" aria-label="7 / 39"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>탄소규제 강화가 만드는 시장 불균형을 신규 진입 기회로 포착</li><li>기존 에너지·환경 컨설팅 대비 어떤 창조적 파괴를 일으킬지 정의</li><li>BM은 매출이 아닌 이익 기준으로, 특허 독점 vs 원가우위 선택</li></ul></div><footer class="sl-f"><span>2.1 Creative Destruction</span><span class="num">7 / 39</span></footer></article><article class="slide ty-title" id="s8" data-lec="2.2" aria-label="8 / 39"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 기회·비전·가치제안</p><p class="t-no">2.2</p><h2 class="t-title">Opportunity Evaluation (1)</h2><p class="t-thesis">매력적 기회를 고르고, 아닌 것은 빠르게 거른다</p></div></div><footer class="sl-f"><span>2.2 Opportunity Evaluation (1)</span><span class="num">8 / 39</span></footer></article><article class="slide ty-concepts" id="s9" data-lec="2.2" aria-label="9 / 39"><div class="sl-in"><h3 class="sh">매력적 기회의 5특성 TSIPC</h3><div class="ccs n5"><div class="cc"><b>Timely</b><p>지금 존재하는 필요나 문제</p></div><div class="cc"><b>Solvable</b><p>가까운 미래, 가용 자원으로 해결 가능</p></div><div class="cc"><b>Important</b><p>고객이 중요하다고 여기는 문제</p></div><div class="cc"><b>Profitable</b><p>고객이 돈을 내고 기업이 이익을 냄</p></div><div class="cc"><b>Context</b><p>유리한 규제·산업 상황 (순풍에 돛)</p></div></div></div><footer class="sl-f"><span>2.2 Opportunity Evaluation (1)</span><span class="num">9 / 39</span></footer></article><article class="slide ty-equation" id="s10" data-lec="2.2" aria-label="10 / 39"><div class="sl-in"><h3 class="sh">기회 선택 = 투자 결정</h3><p class="eq">기회비용 = 포기한 대안의 가치</p><div class="eq-ts"><div class="eq-t"><b>시장성</b><p>시장 평가로 본 기회의 크기</p></div><div class="eq-t"><b>실행가능성</b><p>실제로 구현할 수 있는가</p></div><div class="eq-t"><b>차별화</b><p>제품이 얼마나 다른가</p></div></div><p class="eq-rule">하나를 고르면 다른 것을 포기: 주식 투자처럼 신중히</p></div><footer class="sl-f"><span>2.2 Opportunity Evaluation (1)</span><span class="num">10 / 39</span></footer></article><article class="slide ty-cases" id="s11" data-lec="2.2" aria-label="11 / 39"><div class="sl-in"><h3 class="sh">Staples (Tom Stemberg)</h3><div class="css n3"><div class="cs"><b>구상</b><p>1980년대 중반, 사무용품 슈퍼마켓</p></div><div class="cs"><b>시장 분석</b><p>$100B 시장, 연 15% 성장, 높은 이익률</p></div><div class="cs"><b>성장</b><p>단일 매장에서 1,500개 매장으로</p></div></div></div><footer class="sl-f"><span>2.2 Opportunity Evaluation (1)</span><span class="num">11 / 39</span></footer></article><article class="slide ty-steps" id="s12" data-lec="2.2" aria-label="12 / 39"><div class="sl-in"><h3 class="sh">5단계 기회 스크리닝 CNRRC</h3><ol class="steps n5"><li><span class="sn">1</span><b>Capabilities</b><p>팀의 역량·지식·경험과 맞는가?</p></li><li><span class="sn">2</span><b>Novelty</b><p>차별적이고 고객 가치를 크게 만드는가?</p></li><li><span class="sn">3</span><b>Resources</b><p>자금·물적·인적 자원을 끌어올 수 있나?</p></li><li><span class="sn">4</span><b>Return</b><p>이익이 나고, 위험에 맞는 수익인가?</p></li><li><span class="sn">5</span><b>Commitment</b><p>팀이 열정적으로 헌신하고 싶은가?</p></li></ol></div><footer class="sl-f"><span>2.2 Opportunity Evaluation (1)</span><span class="num">12 / 39</span></footer></article><article class="slide ty-apply" id="s13" data-lec="2.2" aria-label="13 / 39"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>BM 후보(컨설팅·해외제품 현지화·군 배출권)를 TSIPC로 1차 평가</li><li>CNRRC로 Novelty·Return 미달 BM을 제거하고 기회비용을 명시</li><li>Staples처럼 국내 탄소감축 컨설팅 시장규모·성장률·마진을 산정</li></ul></div><footer class="sl-f"><span>2.2 Opportunity Evaluation (1)</span><span class="num">13 / 39</span></footer></article><article class="slide ty-title" id="s14" data-lec="2.3" aria-label="14 / 39"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 기회·비전·가치제안</p><p class="t-no">2.3</p><h2 class="t-title">Opportunity Evaluation (2)</h2><p class="t-thesis">불확실성 속에서 행동하고 작은 실패로 배운다</p></div></div><footer class="sl-f"><span>2.3 Opportunity Evaluation (2)</span><span class="num">14 / 39</span></footer></article><article class="slide ty-cases" id="s15" data-lec="2.3" aria-label="15 / 39"><div class="sl-in"><h3 class="sh">기회와 불확실성</h3><div class="css n2"><div class="cs"><b>iPod (Fadell)</b><p>자금조달 실패 후 Apple 합류, CNRRC 모두 충족</p></div><div class="cs"><b>IBM PC (1981)</b><p>OS 권리를 MS에 남겨 MS 독점: 예측 불가</p></div></div></div><footer class="sl-f"><span>2.3 Opportunity Evaluation (2)</span><span class="num">15 / 39</span></footer></article><article class="slide ty-compare" id="s16" data-lec="2.3" aria-label="16 / 39"><div class="sl-in"><h3 class="sh">두 가지 교훈: 미래 인재상</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Core Competences</b><ul><li>World Best 역량</li><li>魂·Faith·Vision·Mission</li></ul></div><div class="cp-col"><b class="cp-h">Partnership</b><ul><li>관계·배려</li><li>신의/정직, 通(소통)</li></ul></div></div></div><footer class="sl-f"><span>2.3 Opportunity Evaluation (2)</span><span class="num">16 / 39</span></footer></article><article class="slide ty-matrix" id="s17" data-lec="2.3" aria-label="17 / 39"><div class="sl-in"><h3 class="sh">Decision Matrix</h3><div class="mx"><span class="mx-y1">판단 옳음</span><span class="mx-y2">판단 틀림</span><div class="mx-c tl"><b>최선의 경우</b><p>행동했고 결과도 옳았다</p></div><div class="mx-c tr"><b>실행 부재</b><p>판단은 옳았지만 행동하지 않음</p></div><div class="mx-c bl"><b>작은 실패</b><p>행동했지만 틀림: 배우고 수정</p></div><div class="mx-c br"><b>무행동·오판</b><p>행동도 안 했고 판단도 틀림</p></div><span class="mx-x1">행동함</span><span class="mx-x2">행동 안 함</span></div></div><footer class="sl-f"><span>2.3 Opportunity Evaluation (2)</span><span class="num">17 / 39</span></footer></article><article class="slide ty-cycle" id="s18" data-lec="2.3" aria-label="18 / 39"><div class="sl-in"><h3 class="sh">Act-Learn-Fix Cycle</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="Act 실행 → Learn 학습 → Fix 수정"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(408.3,112.5) rotate(60.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(300.0,300.0) rotate(180.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(191.7,112.5) rotate(300.0)"/><g><rect x="243.0" y="29.0" width="114" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">Act 실행</text></g><g><rect x="336.3" y="216.5" width="144" height="42" rx="21" class="cy-node"/><text x="408.3" y="243.5" text-anchor="middle" class="cy-t">Learn 학습</text></g><g><rect x="134.7" y="216.5" width="114" height="42" rx="21" class="cy-node"/><text x="191.7" y="243.5" text-anchor="middle" class="cy-t">Fix 수정</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">작은 실패→성장</text></svg></div></div><footer class="sl-f"><span>2.3 Opportunity Evaluation (2)</span><span class="num">18 / 39</span></footer></article><article class="slide ty-checklist" id="s19" data-lec="2.3" aria-label="19 / 39"><div class="sl-in"><h3 class="sh">기회 평가 요약 점검</h3><ol class="chk two"><li><span class="ck">1</span>시장과 지속적으로 교류하며 기회를 검증하는가?</li><li><span class="ck">2</span>기회가 TSIPC 다섯 특성을 갖췄는가?</li><li><span class="ck">3</span>기회·맥락·팀·자원이 서로 맞물리는가?</li><li><span class="ck">4</span>팀이 필요한 역량을 누적적으로 모두 갖췄는가?</li><li><span class="ck">5</span>유리한 기회에 적시에 행동하는가?</li></ol></div><footer class="sl-f"><span>2.3 Opportunity Evaluation (2)</span><span class="num">19 / 39</span></footer></article><article class="slide ty-apply" id="s20" data-lec="2.3" aria-label="20 / 39"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>적합성 점검으로 군 배출권 사업의 팀 역량 공백을 파트너로 보완</li><li>현지화 제품은 소규모 파일럿→고객 피드백→사양·가격 수정 반복</li><li>실패 두려움을 버리고 작은 실험부터 빠르게 실행한다</li></ul></div><footer class="sl-f"><span>2.3 Opportunity Evaluation (2)</span><span class="num">20 / 39</span></footer></article><article class="slide ty-title" id="s21" data-lec="2.4" aria-label="21 / 39"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 기회·비전·가치제안</p><p class="t-no">2.4</p><h2 class="t-title">Vision</h2><p class="t-thesis">비전은 기업의 장기적 운명을 정의하는 목적 진술</p></div></div><footer class="sl-f"><span>2.4 Vision</span><span class="num">21 / 39</span></footer></article><article class="slide ty-tree" id="s22" data-lec="2.4" aria-label="22 / 39"><div class="sl-in"><h3 class="sh">좋은 비전의 4요소</h3><div class="tree"><div class="tr-r">Good Vision</div><div class="tr-cs n4"><div class="tr-c"><b>Clarity</b><p>쉽게 이해되고 초점이 분명</p></div><div class="tr-c"><b>Consistency</b><p>오래 유지되나 상황 따라 조정</p></div><div class="tr-c"><b>Uniqueness</b><p>이 기업만의 특별함</p></div><div class="tr-c"><b>Purposeful</b><p>존재 이유와 관심 가질 이유 제공</p></div></div></div></div><footer class="sl-f"><span>2.4 Vision</span><span class="num">22 / 39</span></footer></article><article class="slide ty-quote" id="s23" data-lec="2.4" aria-label="23 / 39"><div class="sl-in"><figure class="qt"><blockquote>A good vision is clear, consistent, unique, and purposeful.</blockquote><figcaption>2.4 슬라이드 p.6</figcaption></figure></div><footer class="sl-f"><span>2.4 Vision</span><span class="num">23 / 39</span></footer></article><article class="slide ty-cases" id="s24" data-lec="2.4" aria-label="24 / 39"><div class="sl-in"><h3 class="sh">비전의 예시</h3><div class="css n3"><div class="cs"><b>Google</b><p>빠르고 관련성 높은 결과를 주는 온라인 검색</p></div><div class="cs"><b>Hewlett-Packard</b><p>혁신에 대한 헌신과 사회 봉사의 약속</p></div><div class="cs"><b>Merck</b><p>질병과 싸워 이기고 인류를 돕는다</p></div></div></div><footer class="sl-f"><span>2.4 Vision</span><span class="num">24 / 39</span></footer></article><article class="slide ty-points" id="s25" data-lec="2.4" aria-label="25 / 39"><div class="sl-in"><h3 class="sh">비전을 스토리로 전달</h3><div class="pts n4"><div class="pt"><b>Story</b><p>비전을 매력적으로 풀어낸 서사</p></div><div class="pt"><b>팀·벤처</b><p>우리 팀과 사업을 이야기로 말하기</p></div><div class="pt"><b>문제 해결</b><p>제품이 어떤 문제를 푸는지 설명</p></div><div class="pt"><b>효과</b><p>투자자와 팀원의 관심을 사로잡음</p></div></div></div><footer class="sl-f"><span>2.4 Vision</span><span class="num">25 / 39</span></footer></article><article class="slide ty-apply" id="s26" data-lec="2.4" aria-label="26 / 39"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>&#x27;모든 조직이 측정가능한 탄소감축을 실현하도록 돕는다&#x27; 비전 검증</li><li>명확·일관·고유·목적 4요소로 비전 문장을 점검한다</li><li>군 배출권 사업과 해외기술 현지화를 하나의 스토리로 피칭</li></ul></div><footer class="sl-f"><span>2.4 Vision</span><span class="num">26 / 39</span></footer></article><article class="slide ty-title" id="s27" data-lec="2.5" aria-label="27 / 39"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 기회·비전·가치제안</p><p class="t-no">2.5</p><h2 class="t-title">Mission</h2><p class="t-thesis">미션은 비전을 실현하는 행동 경로다</p></div></div><footer class="sl-f"><span>2.5 Mission</span><span class="num">27 / 39</span></footer></article><article class="slide ty-compare" id="s28" data-lec="2.5" aria-label="28 / 39"><div class="sl-in"><h3 class="sh">Vision vs Mission</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Vision (To-Be)</b><ul><li>미래의 상상적 그림</li><li>기업의 장기적 운명</li><li>통찰·야망·목적</li></ul></div><div class="cp-col"><b class="cp-h">Mission (To-Do)</b><ul><li>비전을 실행하는 행동 경로</li><li>목표와 고객을 더 구체적으로</li><li>원대·대담, 변화의 이론 제시</li></ul></div></div><p class="cp-note">미션은 비전의 기본 원칙을 담는다</p></div><footer class="sl-f"><span>2.5 Mission</span><span class="num">28 / 39</span></footer></article><article class="slide ty-checklist" id="s29" data-lec="2.5" aria-label="29 / 39"><div class="sl-in"><h3 class="sh">미션 선언문의 요소</h3><ol class="chk two"><li><span class="ck">1</span>핵심가치(Core values)는 무엇인가?</li><li><span class="ck">2</span>고객·이해관계자는 누구인가?</li><li><span class="ck">3</span>어떤 제품을 제공하는가?</li><li><span class="ck">4</span>경쟁우위는 무엇인가?</li><li><span class="ck">5</span>고객에게 어떤 가치를 주는가?</li><li><span class="ck">6</span>어떤 시장·산업에서 활동하는가?</li></ol></div><footer class="sl-f"><span>2.5 Mission</span><span class="num">29 / 39</span></footer></article><article class="slide ty-points" id="s30" data-lec="2.5" aria-label="30 / 39"><div class="sl-in"><h3 class="sh">좋은 미션의 역할</h3><div class="pts n4"><div class="pt"><b>정렬</b><p>모든 이해관계자를 한 방향으로</p></div><div class="pt"><b>자원배분</b><p>자원을 어디에 쓸지 근거 제공</p></div><div class="pt"><b>함께 작성</b><p>창업팀이 직원들과 함께 만든다</p></div><div class="pt"><b>예시</b><p>항공우주용 전자기기를 적시·합리적 가격에</p></div></div></div><footer class="sl-f"><span>2.5 Mission</span><span class="num">30 / 39</span></footer></article><article class="slide ty-quote" id="s31" data-lec="2.5" aria-label="31 / 39"><div class="sl-in"><figure class="qt"><blockquote>What will be Your Firm&#x27;s Vision? What will be Your Firm&#x27;s Mission?</blockquote><figcaption>2.5 슬라이드 p.13</figcaption></figure></div><footer class="sl-f"><span>2.5 Mission</span><span class="num">31 / 39</span></footer></article><article class="slide ty-apply" id="s32" data-lec="2.5" aria-label="32 / 39"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>6요소로 미션 작성: 고객(중소 제조사·군), 경쟁우위(특허·방법론)</li><li>고객가치(규제 대응·비용 절감), 시장(탄소배출권·ESG) 명시</li><li>미션을 근거로 군 배출권 vs 민간 컨설팅 우선순위 결정</li></ul></div><footer class="sl-f"><span>2.5 Mission</span><span class="num">32 / 39</span></footer></article><article class="slide ty-title" id="s33" data-lec="2.6" aria-label="33 / 39"><div class="sl-in"><div class="t-wrap"><p class="t-wk">2주차 · 기회·비전·가치제안</p><p class="t-no">2.6</p><h2 class="t-title">Value Proposition</h2><p class="t-thesis">하나로 압도하고, 하나로 차별화하라</p></div></div><footer class="sl-f"><span>2.6 Value Proposition</span><span class="num">33 / 39</span></footer></article><article class="slide ty-concepts" id="s34" data-lec="2.6" aria-label="34 / 39"><div class="sl-in"><h3 class="sh">고객에게 주는 5가치 PPASE</h3><div class="ccs n5"><div class="cc"><b>Product</b><p>성능·품질·기능·브랜드·사용 편의</p></div><div class="cc"><b>Price</b><p>공정하고 일관되며 합리적인 가격</p></div><div class="cc"><b>Access</b><p>편리·근접·찾기 쉬움 (예: Amazon)</p></div><div class="cc"><b>Service</b><p>주문·배송·반품·결제</p></div><div class="cc"><b>Experience</b><p>감성·재미·관계·공동체 (예: Zappos)</p></div></div></div><footer class="sl-f"><span>2.6 Value Proposition</span><span class="num">34 / 39</span></footer></article><article class="slide ty-scores" id="s35" data-lec="2.6" aria-label="35 / 39"><div class="sl-in"><h3 class="sh">Crawford &amp; Matthews 법칙</h3><div class="scs" style="--mx:5"><div class="sc"><b>지배 가치</b><span class="sc-bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="sc-n">5</span><p>World-class로 가치제안을 지배</p></div><div class="sc"><b>차별화 가치</b><span class="sc-bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="sc-n">4</span><p>경쟁사와 구분되는 두 번째 강점</p></div><div class="sc"><b>표준 가치 1</b><span class="sc-bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="sc-n">3</span><p>업계 평균(industry par) 충족</p></div><div class="sc"><b>표준 가치 2</b><span class="sc-bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="sc-n">3</span><p>업계 평균 충족</p></div><div class="sc"><b>표준 가치 3</b><span class="sc-bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="sc-n">3</span><p>업계 평균 충족</p></div></div></div><footer class="sl-f"><span>2.6 Value Proposition</span><span class="num">35 / 39</span></footer></article><article class="slide ty-cases" id="s36" data-lec="2.6" aria-label="36 / 39"><div class="sl-in"><h3 class="sh">주 가치 · 부 가치 사례</h3><div class="css n4"><div class="cs"><b>Wal-Mart</b><p>Price 지배(5), Product(선택·품질) 차별화</p></div><div class="cs"><b>Target</b><p>Product 지배, Price로 차별화</p></div><div class="cs"><b>Honda</b><p>Service 지배, Product로 차별화</p></div><div class="cs"><b>Google</b><p>Product(빠르고 정확한 결과) 주, Access 부</p></div></div></div><footer class="sl-f"><span>2.6 Value Proposition</span><span class="num">36 / 39</span></footer></article><article class="slide ty-equation" id="s37" data-lec="2.6" aria-label="37 / 39"><div class="sl-in"><h3 class="sh">사업의 생존 법칙</h3><p class="eq">Value &gt; Price &gt; Cost</p><div class="eq-ts"><div class="eq-t"><b>Value</b><p>고객이 느끼는 가치·중요성·유용성</p></div><div class="eq-t"><b>Net Value</b><p>Value − Price: 고객이 가져가는 몫</p></div><div class="eq-t"><b>Profit</b><p>Price − Cost: 기업이 가져가는 몫</p></div></div><p class="eq-rule">가치 &gt; 가격 &gt; 원가가 성립해야 고객과 기업 모두 이득</p></div><footer class="sl-f"><span>2.6 Value Proposition</span><span class="num">37 / 39</span></footer></article><article class="slide ty-quote" id="s38" data-lec="2.6" aria-label="38 / 39"><div class="sl-in"><figure class="qt"><blockquote>Positively, absolutely overnight</blockquote><figcaption>2.6 슬라이드 p.13</figcaption></figure></div><footer class="sl-f"><span>2.6 Value Proposition</span><span class="num">38 / 39</span></footer></article><article class="slide ty-apply" id="s39" data-lec="2.6" aria-label="39 / 39"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>BM별 PPASE 점수표 작성(예: 컨설팅 Service 5·Product 4)</li><li>현지화 제품은 Value&gt;Price&gt;Cost로 현지 원가·가격 구조 검증</li><li>&#x27;측정 가능한 감축, 검증된 배출권&#x27; 같은 USP로 차별점 한 문장화</li></ul></div><footer class="sl-f"><span>2.6 Value Proposition</span><span class="num">39 / 39</span></footer></article>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="week-01.html">← 1주차 기업가정신의 이해</a><a class="wk-nav" href="week-03.html">3주차 비즈니스모델·경쟁전략 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: ITM502 기업가정신 2024-3 (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slide'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

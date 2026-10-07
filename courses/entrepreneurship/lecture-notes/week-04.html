@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4주차 벤처 설립·주식회사 · 기업가정신</title>
+<meta name="description" content="주식회사의 원리: 소유·경영·공개">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slide{display:none} .deck.paged .slide.cur{display:flex}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slide.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">기업가 정신</a> / <a href="index.html">주차별 핵심</a> / 4주차</p>
+<header class="dk-h">
+  <p class="dk-wk num">WEEK 04</p>
+  <h1>벤처 설립·주식회사</h1>
+  <p class="lead">주식회사의 원리: 소유·경영·공개</p>
+  <div class="kws"><span class="kw">주식회사</span><span class="kw">유한책임</span><span class="kw">정관·설립등기</span><span class="kw">주주총회·이사회</span><span class="kw">IPO</span><span class="kw">재무정보 니즈</span></div>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="강의"><a href="#s1" class="tab" data-lec="4.1"><b>4.1</b><span>주식회사의 설립과 운영 원리</span></a><a href="#s7" class="tab" data-lec="4.2"><b>4.2</b><span>주식과 주권, 회사의 기관</span></a><a href="#s14" class="tab" data-lec="4.3"><b>4.3</b><span>기업공개와 재무정보의 니즈</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 19</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<article class="slide ty-title" id="s1" data-lec="4.1" aria-label="1 / 19"><div class="sl-in"><div class="t-wrap"><p class="t-wk">4주차 · 벤처 설립·주식회사</p><p class="t-no">4.1</p><h2 class="t-title">주식회사의 설립과 운영 원리</h2><p class="t-thesis">주식회사: 주식으로 자본을 모으고, 주주가 주인이다</p></div></div><footer class="sl-f"><span>4.1 주식회사의 설립과 운영 원리</span><span class="num">1 / 19</span></footer></article><article class="slide ty-concepts" id="s2" data-lec="4.1" aria-label="2 / 19"><div class="sl-in"><h3 class="sh">주식회사의 특징</h3><div class="ccs n6"><div class="cc"><b>주식 발행</b><p>주식으로 대규모 자본을 쉽게 조달</p></div><div class="cc"><b>주주 = 소유주</b><p>주식을 사는 것 = 회사를 사는 것</p></div><div class="cc"><b>유한책임</b><p>주주 책임은 주식 인수가액이 한도</p></div><div class="cc"><b>소유·경영 분리</b><p>주식 매매 자유, 소유와 경영이 분리</p></div><div class="cc"><b>법인</b><p>법인격 가진 독립 실체: 회사돈 ≠ 주주돈</p></div><div class="cc"><b>기관</b><p>주주총회·이사회·감사로 구성</p></div></div></div><footer class="sl-f"><span>4.1 주식회사의 설립과 운영 원리</span><span class="num">2 / 19</span></footer></article><article class="slide ty-steps" id="s3" data-lec="4.1" aria-label="3 / 19"><div class="sl-in"><h3 class="sh">주식회사 설립 절차 (상법)</h3><ol class="steps n5"><li><span class="sn">1</span><b>정관 작성</b><p>발기인이 작성·기명날인 (제288·289조)</p></li><li><span class="sn">2</span><b>주식 납입</b><p>인수가액 전액 납입 (제305조)</p></li><li><span class="sn">3</span><b>창립총회</b><p>발기인이 소집·창립 사항 보고 (제308조)</p></li><li><span class="sn">4</span><b>임원 선임</b><p>창립총회에서 이사·감사 선임 (제312조)</p></li><li><span class="sn">5</span><b>설립등기</b><p>절차 종료 후 2주 내 등기 (제317조)</p></li></ol></div><footer class="sl-f"><span>4.1 주식회사의 설립과 운영 원리</span><span class="num">3 / 19</span></footer></article><article class="slide ty-checklist" id="s4" data-lec="4.1" aria-label="4 / 19"><div class="sl-in"><h3 class="sh">정관 절대적 기재사항</h3><ol class="chk two"><li><span class="ck">1</span>목적</li><li><span class="ck">2</span>상호</li><li><span class="ck">3</span>회사가 발행할 주식의 총수</li><li><span class="ck">4</span>액면주식 1주의 금액</li><li><span class="ck">5</span>설립 시 발행하는 주식의 총수</li><li><span class="ck">6</span>본점 소재지</li><li><span class="ck">7</span>공고 방법</li><li><span class="ck">8</span>발기인 인적사항</li></ol></div><footer class="sl-f"><span>4.1 주식회사의 설립과 운영 원리</span><span class="num">4 / 19</span></footer></article><article class="slide ty-compare" id="s5" data-lec="4.1" aria-label="5 / 19"><div class="sl-in"><h3 class="sh">법인등기부등본 vs 사업자등록증</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">법인등기부등본</b><ul><li>법원(등기소)에서 발급</li><li>자본금·주식·임원 등 등기사항</li></ul></div><div class="cp-col"><b class="cp-h">사업자등록증</b><ul><li>세무서에서 발급</li><li>법인등기와 별도로 진행</li></ul></div></div><p class="cp-note">[Q] 두 서류의 차이를 구분할 수 있는가?</p></div><footer class="sl-f"><span>4.1 주식회사의 설립과 운영 원리</span><span class="num">5 / 19</span></footer></article><article class="slide ty-apply" id="s6" data-lec="4.1" aria-label="6 / 19"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>정관 &#x27;목적&#x27;에 컨설팅·배출권·제품 수입/현지화·군 관련 사업을 미리 포함</li><li>법인등기 후 사업자등록을 별도 진행하고 회사·창업자 자금을 분리</li></ul></div><footer class="sl-f"><span>4.1 주식회사의 설립과 운영 원리</span><span class="num">6 / 19</span></footer></article><article class="slide ty-title" id="s7" data-lec="4.2" aria-label="7 / 19"><div class="sl-in"><div class="t-wrap"><p class="t-wk">4주차 · 벤처 설립·주식회사</p><p class="t-no">4.2</p><h2 class="t-title">주식과 주권, 회사의 기관</h2><p class="t-thesis">주총이 이사를 뽑고, 이사회가 회사를 운영한다</p></div></div><footer class="sl-f"><span>4.2 주식과 주권, 회사의 기관</span><span class="num">7 / 19</span></footer></article><article class="slide ty-concepts" id="s8" data-lec="4.2" aria-label="8 / 19"><div class="sl-in"><h3 class="sh">주식과 주권 핵심 규정</h3><div class="ccs n4"><div class="cc"><b>액면주식</b><p>1주 100원 이상, 금액 균일 (제329조)</p></div><div class="cc"><b>주주의 책임</b><p>인수가액을 한도로 함 (제331조)</p></div><div class="cc"><b>주식 양도</b><p>원칙 자유, 정관으로 이사회 승인 요구 가능</p></div><div class="cc"><b>주권 발행</b><p>회사 성립 후 지체 없이, 그 전 발행은 무효</p></div></div></div><footer class="sl-f"><span>4.2 주식과 주권, 회사의 기관</span><span class="num">8 / 19</span></footer></article><article class="slide ty-tree" id="s9" data-lec="4.2" aria-label="9 / 19"><div class="sl-in"><h3 class="sh">회사의 기관</h3><div class="tree"><div class="tr-r">주주총회</div><div class="tr-cs n3"><div class="tr-c"><b>이사회</b><p>주총이 이사 선임, 업무집행 결정</p></div><div class="tr-c"><b>대표이사</b><p>이사회 결의로 선정 (정관상 주총 가능)</p></div><div class="tr-c"><b>감사</b><p>주총이 선임, 이사의 직무를 감사</p></div></div></div></div><footer class="sl-f"><span>4.2 주식과 주권, 회사의 기관</span><span class="num">9 / 19</span></footer></article><article class="slide ty-compare" id="s10" data-lec="4.2" aria-label="10 / 19"><div class="sl-in"><h3 class="sh">결의 요건 비교</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">주주총회 (보통결의)</b><ul><li>출석 의결권의 과반수</li><li>AND 발행주식 총수 1/4 이상</li><li>3% 이상 주주: 임시총회 청구 가능</li></ul></div><div class="cp-col"><b class="cp-h">이사회</b><ul><li>이사 과반수 출석</li><li>출석 이사의 과반수 찬성</li><li>정관으로 비율 상향 가능</li></ul></div></div><p class="cp-note">감사 선임 시 3% 초과 지분은 의결권 제한</p></div><footer class="sl-f"><span>4.2 주식과 주권, 회사의 기관</span><span class="num">10 / 19</span></footer></article><article class="slide ty-cases" id="s11" data-lec="4.2" aria-label="11 / 19"><div class="sl-in"><h3 class="sh">이사 충실의무 논란</h3><div class="css n2"><div class="cs"><b>LG엔솔 물적분할</b><p>대주주 이익 vs 소액주주 손실 논란</p></div><div class="cs"><b>삼성물산 합병</b><p>2015년 합병비율의 정당성 논란</p></div></div></div><footer class="sl-f"><span>4.2 주식과 주권, 회사의 기관</span><span class="num">11 / 19</span></footer></article><article class="slide ty-checklist" id="s12" data-lec="4.2" aria-label="12 / 19"><div class="sl-in"><h3 class="sh">배임·횡령 예방</h3><ol class="chk"><li><span class="ck">1</span>법인 돈과 개인 돈을 구별하고 있는가?</li><li><span class="ck">2</span>업무상 임무에 위배되는 행위는 없는가? (신의칙)</li><li><span class="ck">3</span>제3자에게 부당한 재산상 이익을 주지 않는가?</li><li><span class="ck">4</span>업무상 배임·횡령은 10년 이하 징역임을 아는가?</li></ol></div><footer class="sl-f"><span>4.2 주식과 주권, 회사의 기관</span><span class="num">12 / 19</span></footer></article><article class="slide ty-apply" id="s13" data-lec="4.2" aria-label="13 / 19"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>정관에 주식양도 시 이사회 승인 조항을 두어 공동창업자 간 경영권 안정</li><li>공공 자금이 오가는 군 배출권 사업은 법인·개인 자금 분리와 이사회 결의 기록</li></ul></div><footer class="sl-f"><span>4.2 주식과 주권, 회사의 기관</span><span class="num">13 / 19</span></footer></article><article class="slide ty-title" id="s14" data-lec="4.3" aria-label="14 / 19"><div class="sl-in"><div class="t-wrap"><p class="t-wk">4주차 · 벤처 설립·주식회사</p><p class="t-no">4.3</p><h2 class="t-title">기업공개와 재무정보의 니즈</h2><p class="t-thesis">상장은 신뢰의 관문, 기본은 투명한 재무정보</p></div></div><footer class="sl-f"><span>4.3 기업공개와 재무정보의 니즈</span><span class="num">14 / 19</span></footer></article><article class="slide ty-concepts" id="s15" data-lec="4.3" aria-label="15 / 19"><div class="sl-in"><h3 class="sh">IPO와 상장</h3><div class="ccs n4"><div class="cc"><b>IPO (기업공개)</b><p>설립 후 처음 외부투자자에게 주식 공개·매도</p></div><div class="cc"><b>상장회사</b><p>KOSPI·KOSDAQ에서 일반인이 자유롭게 매매</p></div><div class="cc"><b>비상장회사</b><p>거래소에 상장되지 않은 주식회사</p></div><div class="cc"><b>상장 심사</b><p>원활한 유통·공정한 가격으로 투자자 보호</p></div></div></div><footer class="sl-f"><span>4.3 기업공개와 재무정보의 니즈</span><span class="num">15 / 19</span></footer></article><article class="slide ty-compare" id="s16" data-lec="4.3" aria-label="16 / 19"><div class="sl-in"><h3 class="sh">주식시장 비교</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">KOSPI</b><ul><li>증권거래소 유가증권시장</li><li>일반인이 자유롭게 매매</li></ul></div><div class="cp-col"><b class="cp-h">KOSDAQ</b><ul><li>코스닥증권시장</li><li>한국증권업협회에 등록</li></ul></div><div class="cp-col"><b class="cp-h">KONEX</b><ul><li>2013년 개설, 초기 중소·벤처 전용</li><li>진입 문턱·공시부담 낮음</li><li>KOSDAQ 이전상장이 목표</li></ul></div></div><p class="cp-note">상장회사는 심사를 거쳐 사회적 신인도가 높음</p></div><footer class="sl-f"><span>4.3 기업공개와 재무정보의 니즈</span><span class="num">16 / 19</span></footer></article><article class="slide ty-concepts" id="s17" data-lec="4.3" aria-label="17 / 19"><div class="sl-in"><h3 class="sh">이해관계자별 재무정보 니즈</h3><div class="ccs n6"><div class="cc"><b>경영자</b><p>재산·성과 파악, 예산 대비 실적 평가</p></div><div class="cc"><b>투자자(주주)</b><p>보유·처분·신규 투자 결정</p></div><div class="cc"><b>채권자</b><p>대여 여부·이자율·연장 조건 결정</p></div><div class="cc"><b>재무분석가·신용평가기관</b><p>투자·신용정보 제공을 위한 분석</p></div><div class="cc"><b>정부기관</b><p>과세 및 규제·관리</p></div><div class="cc"><b>종업원</b><p>근로조건 협상, 잔류·이직 판단</p></div></div></div><footer class="sl-f"><span>4.3 기업공개와 재무정보의 니즈</span><span class="num">17 / 19</span></footer></article><article class="slide ty-checklist" id="s18" data-lec="4.3" aria-label="18 / 19"><div class="sl-in"><h3 class="sh">창업자가 주의할 점</h3><ol class="chk"><li><span class="ck">1</span>주식과 채권의 차이를 이해하고 있는가?</li><li><span class="ck">2</span>개인 연대보증 시 법인인감·개인인감을 구분하는가?</li><li><span class="ck">3</span>부가세·법인세를 정직하게 신고하는가?</li><li><span class="ck">4</span>재무정보가 객관적이고 투명한가?</li></ol></div><footer class="sl-f"><span>4.3 기업공개와 재무정보의 니즈</span><span class="num">18 / 19</span></footer></article><article class="slide ty-apply" id="s19" data-lec="4.3" aria-label="19 / 19"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>자금조달 경로: 엔젤/VC → KONEX → KOSDAQ 이전상장과 지분 희석 비교</li><li>대형 사업 수주 대비 투명한 재무정보를 초기부터 준비, 대표 연대보증 회피</li></ul></div><footer class="sl-f"><span>4.3 기업공개와 재무정보의 니즈</span><span class="num">19 / 19</span></footer></article>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="week-03.html">← 3주차 비즈니스모델·경쟁전략</a><a class="wk-nav" href="week-05.html">5주차 재무분석 기초 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: ITM502 기업가정신 2024-3 (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slide'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

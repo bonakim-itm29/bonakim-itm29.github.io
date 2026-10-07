@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1주차 기업가정신의 이해 · 기업가정신</title>
+<meta name="description" content="열정·역량을 기회와 맞춰 새 기업을 만든다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slide{display:none} .deck.paged .slide.cur{display:flex}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slide.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">기업가 정신</a> / <a href="index.html">주차별 핵심</a> / 1주차</p>
+<header class="dk-h">
+  <p class="dk-wk num">WEEK 01</p>
+  <h1>기업가정신의 이해</h1>
+  <p class="lead">열정·역량을 기회와 맞춰 새 기업을 만든다</p>
+  <div class="kws"><span class="kw">Entrepreneurship</span><span class="kw">Opportunity</span><span class="kw">Intellectual Capital</span><span class="kw">가설 검증</span><span class="kw">Stakeholders</span><span class="kw">Spirit &amp; Skills</span></div>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="강의"><a href="#s1" class="tab" data-lec="1.1"><b>1.1</b><span>Course Introduction</span></a><a href="#s6" class="tab" data-lec="1.2"><b>1.2</b><span>Introducing Entrepreneurship 1</span></a><a href="#s12" class="tab" data-lec="1.3"><b>1.3</b><span>Introducing Entrepreneurship 2</span></a><a href="#s19" class="tab" data-lec="1.4"><b>1.4</b><span>Economics and the Firm</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 25</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<article class="slide ty-title" id="s1" data-lec="1.1" aria-label="1 / 25"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 기업가정신의 이해</p><p class="t-no">1.1</p><h2 class="t-title">Course Introduction</h2><p class="t-thesis">물고기 잡는 법: Spirit과 Skills를 함께 기른다</p></div></div><footer class="sl-f"><span>1.1 Course Introduction</span><span class="num">1 / 25</span></footer></article><article class="slide ty-quote" id="s2" data-lec="1.1" aria-label="2 / 25"><div class="sl-in"><figure class="qt"><blockquote>물고기 잡는 방법을 가르쳐 주면 일생 동안 먹고 살 수 있다.</blockquote><figcaption>1.1 슬라이드 p.3</figcaption></figure></div><footer class="sl-f"><span>1.1 Course Introduction</span><span class="num">2 / 25</span></footer></article><article class="slide ty-compare" id="s3" data-lec="1.1" aria-label="3 / 25"><div class="sl-in"><h3 class="sh">T-Model 과목 구조</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">ITM502 · Spirit</b><ul><li>기업운영 원리 중심, 넓게(Macro)</li><li>Case Study Project 실습</li><li>Q. 어떤 회사를 만들 것인가?</li></ul></div><div class="cp-col"><b class="cp-h">ITM610 · Skills</b><ul><li>Skill 중심, 깊게(Focused)</li><li>24 Steps 가상 창업 실습</li><li>Q. 어떤 제품·BM으로 창업할까?</li></ul></div></div><p class="cp-note">Good-to-Great + Disciplined = 깊고 넓은 입체적 시각</p></div><footer class="sl-f"><span>1.1 Course Introduction</span><span class="num">3 / 25</span></footer></article><article class="slide ty-concepts" id="s4" data-lec="1.1" aria-label="4 / 25"><div class="sl-in"><h3 class="sh">수업의 5가지 목표</h3><div class="ccs n5"><div class="cc"><b>Entrepreneurship 이해</b><p>기업가정신의 의미와 역할</p></div><div class="cc"><b>Venture Business 이해</b><p>벤처의 형성과 성장</p></div><div class="cc"><b>Case Study Project</b><p>실제 기업 사례 분석 수행</p></div><div class="cc"><b>발표·토론 실습</b><p>팀/개인 프로젝트 결과 공유</p></div><div class="cc"><b>기업운영·주식 원리</b><p>모의 투자로 배우는 Learning-by-doing</p></div></div></div><footer class="sl-f"><span>1.1 Course Introduction</span><span class="num">4 / 25</span></footer></article><article class="slide ty-apply" id="s5" data-lec="1.1" aria-label="5 / 25"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>Spirit: 왜 기후테크 탄소감축 컨설팅인가를 먼저 정의한다</li><li>Skills: 24 Steps로 고객·BM을 구체화해 사업계획을 이중 점검</li><li>Case Report 과제를 창업계획의 단계별 산출물로 활용한다</li></ul></div><footer class="sl-f"><span>1.1 Course Introduction</span><span class="num">5 / 25</span></footer></article><article class="slide ty-title" id="s6" data-lec="1.2" aria-label="6 / 25"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 기업가정신의 이해</p><p class="t-no">1.2</p><h2 class="t-title">Introducing Entrepreneurship 1</h2><p class="t-thesis">기업가정신은 사회를 바꾸는 새 기업의 창출</p></div></div><footer class="sl-f"><span>1.2 Introducing Entrepreneurship 1</span><span class="num">6 / 25</span></footer></article><article class="slide ty-compare" id="s7" data-lec="1.2" aria-label="7 / 25"><div class="sl-in"><h3 class="sh">企業家 vs 起業家</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">企業家 (기업가)</b><ul><li>영리 목적으로 자본을 투자</li><li>기업 경영을 담당하는 사람</li></ul></div><div class="cp-col"><b class="cp-h">起業家 (창업가)</b><ul><li>사업을 계획해 회사를 설립</li><li>창업을 직업으로 하는 사람</li></ul></div></div><p class="cp-note">[기업가 정신] vs. [창업가 정신]</p></div><footer class="sl-f"><span>1.2 Introducing Entrepreneurship 1</span><span class="num">7 / 25</span></footer></article><article class="slide ty-tree" id="s8" data-lec="1.2" aria-label="8 / 25"><div class="sl-in"><h3 class="sh">기업가는 무엇을 찾는가</h3><div class="tree"><div class="tr-r">Entrepreneur</div><div class="tr-cs n3"><div class="tr-c"><b>문제 속</b><p>해결책(solutions)을 찾는다</p></div><div class="tr-c"><b>니즈 속</b><p>가능성(possibilities)을 본다</p></div><div class="tr-c"><b>도전 속</b><p>기회를 잡는다 (위기는 기회다)</p></div></div></div></div><footer class="sl-f"><span>1.2 Introducing Entrepreneurship 1</span><span class="num">8 / 25</span></footer></article><article class="slide ty-points" id="s9" data-lec="1.2" aria-label="9 / 25"><div class="sl-in"><h3 class="sh">기업가정신의 목적</h3><div class="pts n4"><div class="pt"><b>부 그 이상</b><p>사업·부의 창출만이 목적이 아님</p></div><div class="pt"><b>사회에 봉사</b><p>사회와 시장의 니즈를 해결하는 조직 설립</p></div><div class="pt"><b>긍정적 변화</b><p>세상을 더 낫게 만드는 새 기업 창출</p></div><div class="pt"><b>위대한 기업</b><p>performance·leadership·longevity를 갖춘 기업</p></div></div></div><footer class="sl-f"><span>1.2 Introducing Entrepreneurship 1</span><span class="num">9 / 25</span></footer></article><article class="slide ty-cases" id="s10" data-lec="1.2" aria-label="10 / 25"><div class="sl-in"><h3 class="sh">도전에 응답한 기업가들</h3><div class="css n3"><div class="cs"><b>Sergey Brin</b><p>도전 = 어려운 과제에 응답하라는 부름과 헌신</p></div><div class="cs"><b>Richard Branson</b><p>도전이면 해보고 배웠다; 스스로를 시험</p></div><div class="cs"><b>Jeff Bezos</b><p>회복탄력성: 어려운 문제에 달려들어 해법 찾기</p></div></div></div><footer class="sl-f"><span>1.2 Introducing Entrepreneurship 1</span><span class="num">10 / 25</span></footer></article><article class="slide ty-apply" id="s11" data-lec="1.2" aria-label="11 / 25"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>탄소규제 강화·군 탄소중립 요구를 위기가 아닌 사업기회로 재정의</li><li>팀의 잘 할 일(탄소 산정)과 하고 싶은 일(기후 해결) 교집합 점검</li><li>탄소감축이라는 사회적 긍정 변화를 사업 목적에 명시한다</li></ul></div><footer class="sl-f"><span>1.2 Introducing Entrepreneurship 1</span><span class="num">11 / 25</span></footer></article><article class="slide ty-title" id="s12" data-lec="1.3" aria-label="12 / 25"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 기업가정신의 이해</p><p class="t-no">1.3</p><h2 class="t-title">Introducing Entrepreneurship 2</h2><p class="t-thesis">기업가정신은 배우고 숙달할 수 있는 규율이다</p></div></div><footer class="sl-f"><span>1.3 Introducing Entrepreneurship 2</span><span class="num">12 / 25</span></footer></article><article class="slide ty-cases" id="s13" data-lec="1.3" aria-label="13 / 25"><div class="sl-in"><h3 class="sh">FedEx와 YC의 교훈</h3><div class="css n4"><div class="cs"><b>Fred Smith 구상</b><p>야간 화물항공 리포트, 교수 평가는 C학점</p></div><div class="cs"><b>FedEx 출범(1973)</b><p>해병 조종사·항공업 경험 후 사업계획 실행</p></div><div class="cs"><b>성공 요인</b><p>컴퓨터 추적기술 + 열정·역량을 기회와 매칭</p></div><div class="cs"><b>Paul Graham(YC)</b><p>좋은 사람, 돈 낼 만한 제품, 최소 지출</p></div></div></div><footer class="sl-f"><span>1.3 Introducing Entrepreneurship 2</span><span class="num">13 / 25</span></footer></article><article class="slide ty-equation" id="s14" data-lec="1.3" aria-label="14 / 25"><div class="sl-in"><h3 class="sh">Entrepreneurship = Nexus</h3><p class="eq">기업가정신 = 진취적 개인 ∩ 유망한 기회</p><div class="eq-ts"><div class="eq-t"><b>진취적 개인</b><p>하고 싶은 일(열정) + 잘 할 일(역량)</p></div><div class="eq-t"><b>유망한 기회</b><p>사회 변화와 니즈에서 포착한 기회</p></div><div class="eq-t"><b>새로운 방식</b><p>사람·개념·기술을 재조합한 해결책</p></div></div><p class="eq-rule">아이디어 → 실제 기회인지 판단 → 맞으면 실행</p></div><footer class="sl-f"><span>1.3 Introducing Entrepreneurship 2</span><span class="num">14 / 25</span></footer></article><article class="slide ty-cycle" id="s15" data-lec="1.3" aria-label="15 / 25"><div class="sl-in"><h3 class="sh">과학적 방법처럼 검증</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="가설 식별 → 고객과 검증 → 데이터 수집 → 아이디어 정제"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,86.6) rotate(45.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,263.4) rotate(135.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,263.4) rotate(225.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,86.6) rotate(315.0)"/><g><rect x="250.5" y="29.0" width="99" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">가설 식별</text></g><g><rect x="368.0" y="154.0" width="114" height="42" rx="21" class="cy-node"/><text x="425.0" y="181.0" text-anchor="middle" class="cy-t">고객과 검증</text></g><g><rect x="243.0" y="279.0" width="114" height="42" rx="21" class="cy-node"/><text x="300.0" y="306.0" text-anchor="middle" class="cy-t">데이터 수집</text></g><g><rect x="110.5" y="154.0" width="129" height="42" rx="21" class="cy-node"/><text x="175.0" y="181.0" text-anchor="middle" class="cy-t">아이디어 정제</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">Do it, reflect</text></svg></div></div><footer class="sl-f"><span>1.3 Introducing Entrepreneurship 2</span><span class="num">15 / 25</span></footer></article><article class="slide ty-stat" id="s16" data-lec="1.3" aria-label="16 / 25"><div class="sl-in"><h3 class="sh">창업은 쉽지 않다</h3><div class="stat"><p class="st-v">1/3</p><p class="st-l">첫 3년을 살아남는 신생 벤처</p><p class="st-t">실패를 가능한 결과로 받아들이고 저비용으로 시도하라 (cf. Lean Startup)</p></div></div><footer class="sl-f"><span>1.3 Introducing Entrepreneurship 2</span><span class="num">16 / 25</span></footer></article><article class="slide ty-steps" id="s17" data-lec="1.3" aria-label="17 / 25"><div class="sl-in"><h3 class="sh">창업의 4단계</h3><ol class="steps n4"><li><span class="sn">1</span><b>역량 확보</b><p>창업팀이 필요한 스킬을 보유·획득</p></li><li><span class="sn">2</span><b>기회·해결책</b><p>역량에 맞는 기회를 찾고 해결책 설계</p></li><li><span class="sn">3</span><b>자원 확보</b><p>투자자·파트너로 재무·물적 자원 조달</p></li><li><span class="sn">4</span><b>계약·출범</b><p>팀·투자자와 지분·부 공유 계약 후 출범</p></li></ol></div><footer class="sl-f"><span>1.3 Introducing Entrepreneurship 2</span><span class="num">17 / 25</span></footer></article><article class="slide ty-apply" id="s18" data-lec="1.3" aria-label="18 / 25"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>&#x27;탄소감축 니즈가 실제 문제인가&#x27; 가설을 기업·군 인터뷰로 저비용 검증</li><li>군 경험·도메인 지식을 군 탄소배출권 사업 기회와 매칭한다</li><li>팀 역량→기회→자원(투자·파트너)→지분 계약 순으로 계획 수립</li></ul></div><footer class="sl-f"><span>1.3 Introducing Entrepreneurship 2</span><span class="num">18 / 25</span></footer></article><article class="slide ty-title" id="s19" data-lec="1.4" aria-label="19 / 25"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 기업가정신의 이해</p><p class="t-no">1.4</p><h2 class="t-title">Economics and the Firm</h2><p class="t-thesis">기업가는 지적자본으로 경제의 변화를 조직한다</p></div></div><footer class="sl-f"><span>1.4 Economics and the Firm</span><span class="num">19 / 25</span></footer></article><article class="slide ty-equation" id="s20" data-lec="1.4" aria-label="20 / 25"><div class="sl-in"><h3 class="sh">Intellectual Capital</h3><p class="eq">IC = HC + OC + SC</p><div class="eq-ts"><div class="eq-t"><b>HC 인적자본</b><p>구성원의 기술·역량·지식</p></div><div class="eq-t"><b>OC 조직자본</b><p>특허·기술·프로세스·DB·네트워크</p></div><div class="eq-t"><b>SC 사회적자본</b><p>고객·공급자·파트너와의 관계의 질</p></div></div><p class="eq-rule">기업은 IC를 개발·유치·유지해 투입을 산출로 전환</p></div><footer class="sl-f"><span>1.4 Economics and the Firm</span><span class="num">20 / 25</span></footer></article><article class="slide ty-cases" id="s21" data-lec="1.4" aria-label="21 / 25"><div class="sl-in"><h3 class="sh">자본별 대표 사례</h3><div class="css n3"><div class="cs"><b>Antinori (HC)</b><p>포도 재배자·와인 제조자의 인적자본</p></div><div class="cs"><b>KFC (OC)</b><p>레시피와 프로세스라는 조직자본</p></div><div class="cs"><b>동네 카페 (SC)</b><p>단골 취향을 아는 웨이터와의 관계</p></div></div></div><footer class="sl-f"><span>1.4 Economics and the Firm</span><span class="num">21 / 25</span></footer></article><article class="slide ty-equation" id="s22" data-lec="1.4" aria-label="22 / 25"><div class="sl-in"><h3 class="sh">기업가적 자본</h3><p class="eq">EC = Ecomp × Ecomm</p><div class="eq-ts"><div class="eq-t"><b>Ecomp 역량</b><p>기회 인식 + 자원 확보·관리 능력</p></div><div class="eq-t"><b>Ecomm 헌신</b><p>사업을 시작·결실까지 이끄는 시간·에너지</p></div></div><p class="eq-rule">곱셈 구조: 역량·헌신 중 하나라도 0이면 EC도 0</p></div><footer class="sl-f"><span>1.4 Economics and the Firm</span><span class="num">22 / 25</span></footer></article><article class="slide ty-checklist" id="s23" data-lec="1.4" aria-label="23 / 25"><div class="sl-in"><h3 class="sh">좋은 기업의 4가지 조건</h3><ol class="chk"><li><span class="ck">1</span>미션과 목적이 명확한가?</li><li><span class="ck">2</span>고객·공급자·경쟁자를 알고 이해하는가? (知彼知己)</li><li><span class="ck">3</span>지적자본을 이해하고 갱신·강화하는가?</li><li><span class="ck">4</span>사회·시장·기술이 만든 환경과 맥락을 이해하는가?</li></ol></div><footer class="sl-f"><span>1.4 Economics and the Firm</span><span class="num">23 / 25</span></footer></article><article class="slide ty-tree" id="s24" data-lec="1.4" aria-label="24 / 25"><div class="sl-in"><h3 class="sh">모든 이해관계자에 봉사</h3><div class="tree"><div class="tr-r">기업</div><div class="tr-cs n4"><div class="tr-c"><b>주주</b><p>전통적 소유자</p></div><div class="tr-c"><b>근로자</b><p>인재 가치↑ → 근로자 힘 증가</p></div><div class="tr-c"><b>고객</b><p>경쟁 심화 → 고객 힘 증가</p></div><div class="tr-c"><b>지역사회·사회</b><p>좋은 평판 위해 돌봐야 할 대상</p></div></div></div></div><footer class="sl-f"><span>1.4 Economics and the Firm</span><span class="num">24 / 25</span></footer></article><article class="slide ty-apply" id="s25" data-lec="1.4" aria-label="25 / 25"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>OC(특허·탄소산정 방법론·DB) 확보 여부로 경쟁력을 점검한다</li><li>해외 제품 현지화 시 HC(현지 전문가)·SC(국내 파트너) 확보 계획</li><li>EC = 역량×헌신으로 팀 자가진단, 군·지역사회 이해관계자 맵 작성</li></ul></div><footer class="sl-f"><span>1.4 Economics and the Firm</span><span class="num">25 / 25</span></footer></article>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><span></span><a class="wk-nav" href="week-02.html">2주차 기회·비전·가치제안 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: ITM502 기업가정신 2024-3 (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slide'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

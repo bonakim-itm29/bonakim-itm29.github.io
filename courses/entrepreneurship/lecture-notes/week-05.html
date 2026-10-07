@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5주차 재무분석 기초 · 기업가정신</title>
+<meta name="description" content="숫자로 수익성·안정성·성장성을 읽는다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slide{display:none} .deck.paged .slide.cur{display:flex}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slide.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">기업가 정신</a> / <a href="index.html">주차별 핵심</a> / 5주차</p>
+<header class="dk-h">
+  <p class="dk-wk num">WEEK 05</p>
+  <h1>재무분석 기초</h1>
+  <p class="lead">숫자로 수익성·안정성·성장성을 읽는다</p>
+  <div class="kws"><span class="kw">회계 항등식</span><span class="kw">재무제표</span><span class="kw">안정성 비율</span><span class="kw">CAGR</span><span class="kw">PER·PBR</span><span class="kw">ROE</span></div>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="강의"><a href="#s1" class="tab" data-lec="5.1"><b>5.1</b><span>재무분석 도입 (1A)</span></a><a href="#s8" class="tab" data-lec="5.2"><b>5.2</b><span>재무제표의 기초 (1B)</span></a><a href="#s15" class="tab" data-lec="5.3"><b>5.3</b><span>전자공시와 자본 용어 (1C)</span></a><a href="#s22" class="tab" data-lec="5.4"><b>5.4</b><span>손익계산서·단기안정성 (1D)</span></a><a href="#s29" class="tab" data-lec="5.5"><b>5.5</b><span>장기안정성·현금흐름·연결 (1E)</span></a><a href="#s36" class="tab" data-lec="5.6"><b>5.6</b><span>화폐의 시간가치·CAGR (2A)</span></a><a href="#s43" class="tab" data-lec="5.7"><b>5.7</b><span>주식 지표와 ROE (2B)</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 49</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<article class="slide ty-title" id="s1" data-lec="5.1" aria-label="1 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 재무분석 기초</p><p class="t-no">5.1</p><h2 class="t-title">재무분석 도입 (1A)</h2><p class="t-thesis">재무제표는 가치가 이익으로 바뀌는지 보여준다</p></div></div><footer class="sl-f"><span>5.1 재무분석 도입 (1A)</span><span class="num">1 / 49</span></footer></article><article class="slide ty-equation" id="s2" data-lec="5.1" aria-label="2 / 49"><div class="sl-in"><h3 class="sh">사업의 생존법칙</h3><p class="eq">가치(V) &gt; 가격(P) &gt; 원가(C)</p><div class="eq-ts"><div class="eq-t"><b>V − P</b><p>고객이 가져가는 순가치 (가성비)</p></div><div class="eq-t"><b>P − C</b><p>사업가가 가져가는 이익 (Profit)</p></div></div><p class="eq-rule">두 차이가 모두 양수여야 사업이 생존</p></div><footer class="sl-f"><span>5.1 재무분석 도입 (1A)</span><span class="num">2 / 49</span></footer></article><article class="slide ty-steps" id="s3" data-lec="5.1" aria-label="3 / 49"><div class="sl-in"><h3 class="sh">재무제표를 보는 능력</h3><ol class="steps n5"><li><span class="sn">1</span><b>숫자 읽기</b><p>표의 숫자를 읽을 줄 안다</p></li><li><span class="sn">2</span><b>의미 이해</b><p>각 숫자가 무엇을 뜻하는지 안다</p></li><li><span class="sn">3</span><b>경영현황 파악</b><p>숫자로 회사 상태를 본다</p></li><li><span class="sn">4</span><b>숫자 선별</b><p>어떤 숫자를 봐야 할지 안다</p></li><li><span class="sn">5</span><b>통찰력</b><p>숫자 뒤 보이지 않는 것까지 본다</p></li></ol></div><footer class="sl-f"><span>5.1 재무분석 도입 (1A)</span><span class="num">3 / 49</span></footer></article><article class="slide ty-tree" id="s4" data-lec="5.1" aria-label="4 / 49"><div class="sl-in"><h3 class="sh">회사를 재는 세 축</h3><div class="tree"><div class="tr-r">기업 평가</div><div class="tr-cs n3"><div class="tr-c"><b>수익성</b><p>이익을 얼마나 잘 내는가</p></div><div class="tr-c"><b>안정성</b><p>부채를 감당할 체력이 있는가</p></div><div class="tr-c"><b>성장성</b><p>얼마나 빠르게 커지는가</p></div></div></div></div><footer class="sl-f"><span>5.1 재무분석 도입 (1A)</span><span class="num">4 / 49</span></footer></article><article class="slide ty-checklist" id="s5" data-lec="5.1" aria-label="5 / 49"><div class="sl-in"><h3 class="sh">주식회사에 던질 질문</h3><ol class="chk two"><li><span class="ck">1</span>어떤 회사의 주식을 사고 싶은가?</li><li><span class="ck">2</span>워런 버핏이라면 어느 회사에 투자할까?</li><li><span class="ck">3</span>수익성·안정성·성장성은 어떻게 측정할까?</li><li><span class="ck">4</span>지표가 좋으면 곧 투자할 회사인가?</li><li><span class="ck">5</span>그 회사의 주식 가치는 어떻게 평가할까?</li><li><span class="ck">6</span>CEO라면 버핏이 투자할 회사를 어떻게 만들까?</li></ol></div><footer class="sl-f"><span>5.1 재무분석 도입 (1A)</span><span class="num">5 / 49</span></footer></article><article class="slide ty-quote" id="s6" data-lec="5.1" aria-label="6 / 49"><div class="sl-in"><figure class="qt"><blockquote>숫자 뒤에 보이지 않는 것을 볼 줄 아는 능력.</blockquote><figcaption>5.1 슬라이드 p.5</figcaption></figure></div><footer class="sl-f"><span>5.1 재무분석 도입 (1A)</span><span class="num">6 / 49</span></footer></article><article class="slide ty-apply" id="s7" data-lec="5.1" aria-label="7 / 49"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>고객 감축가치 &gt; 컨설팅 수수료 &gt; 인건비·툴 원가인지 점검</li><li>경쟁사를 수익성·안정성·성장성 3축 + 규제 등 정성요인으로 비교</li></ul></div><footer class="sl-f"><span>5.1 재무분석 도입 (1A)</span><span class="num">7 / 49</span></footer></article><article class="slide ty-title" id="s8" data-lec="5.2" aria-label="8 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 재무분석 기초</p><p class="t-no">5.2</p><h2 class="t-title">재무제표의 기초 (1B)</h2><p class="t-thesis">모든 거래는 자산 = 부채 + 자본을 만족한다</p></div></div><footer class="sl-f"><span>5.2 재무제표의 기초 (1B)</span><span class="num">8 / 49</span></footer></article><article class="slide ty-equation" id="s9" data-lec="5.2" aria-label="9 / 49"><div class="sl-in"><h3 class="sh">회계 항등식</h3><p class="eq">자산 = 부채 + 자본</p><div class="eq-ts"><div class="eq-t"><b>자산</b><p>회사가 가진 것 (현금·설비·특허 등)</p></div><div class="eq-t"><b>부채</b><p>앞으로 갚아야 할 남의 돈</p></div><div class="eq-t"><b>자본</b><p>주주 몫 (납입자본 + 이익잉여금)</p></div></div><p class="eq-rule">좌우를 바꿔 &#x27;부채 + 자본 = 자산&#x27;으로 쓰지 않는다</p></div><footer class="sl-f"><span>5.2 재무제표의 기초 (1B)</span><span class="num">9 / 49</span></footer></article><article class="slide ty-cases" id="s10" data-lec="5.2" aria-label="10 / 49"><div class="sl-in"><h3 class="sh">거래별 항등식 변화</h3><div class="css n3"><div class="cs"><b>주식 발행 1,000</b><p>현금↑ = 자본↑</p></div><div class="cs"><b>은행 차입 500</b><p>현금↑ = 부채↑</p></div><div class="cs"><b>사무용품 구매 100</b><p>현금↓·비품↑, 우변은 변화 없음</p></div></div></div><footer class="sl-f"><span>5.2 재무제표의 기초 (1B)</span><span class="num">10 / 49</span></footer></article><article class="slide ty-tree" id="s11" data-lec="5.2" aria-label="11 / 49"><div class="sl-in"><h3 class="sh">재무상태표의 구성</h3><div class="tree"><div class="tr-r">재무상태표</div><div class="tr-cs n4"><div class="tr-c"><b>유동자산</b><p>1년 내 현금화 (현금·매출채권)</p></div><div class="tr-c"><b>비유동자산</b><p>설비(PP&amp;E)·투자자산·무형자산</p></div><div class="tr-c"><b>부채</b><p>유동(1년 내 상환)·비유동</p></div><div class="tr-c"><b>자본</b><p>보통주·우선주·자본/이익잉여금</p></div></div></div></div><footer class="sl-f"><span>5.2 재무제표의 기초 (1B)</span><span class="num">11 / 49</span></footer></article><article class="slide ty-equation" id="s12" data-lec="5.2" aria-label="12 / 49"><div class="sl-in"><h3 class="sh">손익계산서의 구조</h3><p class="eq">손익 = 수익 − 비용</p><div class="eq-ts"><div class="eq-t"><b>수익</b><p>매출·이자수익·임대수익</p></div><div class="eq-t"><b>비용</b><p>매출원가·감가상각·인건비·법인세</p></div><div class="eq-t"><b>이익/손실</b><p>영업이익·처분이익 / 영업손실 등</p></div></div><p class="eq-rule">수익↑ → 이익↑ → 이익잉여금↑ → 자본↑</p></div><footer class="sl-f"><span>5.2 재무제표의 기초 (1B)</span><span class="num">12 / 49</span></footer></article><article class="slide ty-steps" id="s13" data-lec="5.2" aria-label="13 / 49"><div class="sl-in"><h3 class="sh">회계과정</h3><ol class="steps n6"><li><span class="sn">1</span><b>거래</b><p>B/S·I/S 측면에서 거래 발생</p></li><li><span class="sn">2</span><b>분개</b><p>차변(좌)·대변(우)으로 나눠 기록</p></li><li><span class="sn">3</span><b>계정기록</b><p>계정별 원장에 옮겨 적기</p></li><li><span class="sn">4</span><b>손익계산서 준비</b><p>기간 수익·비용 정리</p></li><li><span class="sn">5</span><b>마감분개</b><p>손익을 이익잉여금으로 마감</p></li><li><span class="sn">6</span><b>재무상태표 준비</b><p>기말 자산·부채·자본 확정</p></li></ol></div><footer class="sl-f"><span>5.2 재무제표의 기초 (1B)</span><span class="num">13 / 49</span></footer></article><article class="slide ty-apply" id="s14" data-lec="5.2" aria-label="14 / 49"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>자본금 납입·투자유치·장비 구매를 항등식으로 기록해 추정 B/S 작성</li><li>계약 선수금은 유동부채, 감축 방법론·SW는 무형자산으로 분류</li></ul></div><footer class="sl-f"><span>5.2 재무제표의 기초 (1B)</span><span class="num">14 / 49</span></footer></article><article class="slide ty-title" id="s15" data-lec="5.3" aria-label="15 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 재무분석 기초</p><p class="t-no">5.3</p><h2 class="t-title">전자공시와 자본 용어 (1C)</h2><p class="t-thesis">기사보다 원자료, DART 사업보고서를 직접 본다</p></div></div><footer class="sl-f"><span>5.3 전자공시와 자본 용어 (1C)</span><span class="num">15 / 49</span></footer></article><article class="slide ty-steps" id="s16" data-lec="5.3" aria-label="16 / 49"><div class="sl-in"><h3 class="sh">DART로 재무제표 찾기</h3><ol class="steps n4"><li><span class="sn">1</span><b>검색</b><p>구글에서 &#x27;전자공시&#x27; 검색</p></li><li><span class="sn">2</span><b>DART 접속</b><p>dart.fss.or.kr 기업정보의 창</p></li><li><span class="sn">3</span><b>사업보고서</b><p>회사명으로 사업보고서 조회</p></li><li><span class="sn">4</span><b>재무제표 확인</b><p>재무상태표·손익계산서 읽기</p></li></ol></div><footer class="sl-f"><span>5.3 전자공시와 자본 용어 (1C)</span><span class="num">16 / 49</span></footer></article><article class="slide ty-compare" id="s17" data-lec="5.3" aria-label="17 / 49"><div class="sl-in"><h3 class="sh">보통주 vs 우선주</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">보통주</b><ul><li>의결권 있음</li><li>배당 우선권 없음</li></ul></div><div class="cp-col"><b class="cp-h">우선주</b><ul><li>의결권 없음</li><li>배당·청산 시 우선권</li></ul></div></div><p class="cp-note">자본금 = 액면가(par)로 발행해 납입된 금액</p></div><footer class="sl-f"><span>5.3 전자공시와 자본 용어 (1C)</span><span class="num">17 / 49</span></footer></article><article class="slide ty-equation" id="s18" data-lec="5.3" aria-label="18 / 49"><div class="sl-in"><h3 class="sh">주식발행초과금</h3><p class="eq">초과금 = (발행가 − 액면가) × 주식수</p><div class="eq-ts"><div class="eq-t"><b>예시</b><p>1,000주, 액면 5,000원, 발행 50,000원</p></div><div class="eq-t"><b>자본금</b><p>5,000천원 (액면가 부분)</p></div><div class="eq-t"><b>초과금</b><p>45,000천원 (액면 초과 부분)</p></div></div><p class="eq-rule">현금 50,000천원 = 자본금 + 주식발행초과금</p></div><footer class="sl-f"><span>5.3 전자공시와 자본 용어 (1C)</span><span class="num">18 / 49</span></footer></article><article class="slide ty-equation" id="s19" data-lec="5.3" aria-label="19 / 49"><div class="sl-in"><h3 class="sh">이익잉여금</h3><p class="eq">이익잉여금 = Σ(순이익 − 배당금)</p><div class="eq-ts"><div class="eq-t"><b>기간</b><p>창업 이후 전체 누적</p></div><div class="eq-t"><b>의미</b><p>배당하지 않고 회사에 쌓아 둔 이익</p></div></div><p class="eq-rule">예: 삼성전자 48기 이익잉여금 약 140.7조</p></div><footer class="sl-f"><span>5.3 전자공시와 자본 용어 (1C)</span><span class="num">19 / 49</span></footer></article><article class="slide ty-stat" id="s20" data-lec="5.3" aria-label="20 / 49"><div class="sl-in"><h3 class="sh">재무상태표 균형 사례</h3><div class="stat"><p class="st-v">174.8조</p><p class="st-l">삼성전자 48기 자산총계</p><p class="st-t">부채 37.3조 + 자본 137.5조 = 자본과부채총계, 양변 일치</p></div></div><footer class="sl-f"><span>5.3 전자공시와 자본 용어 (1C)</span><span class="num">20 / 49</span></footer></article><article class="slide ty-apply" id="s21" data-lec="5.3" aria-label="21 / 49"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>DART에서 탄소감축 상장 경쟁사 사업보고서로 매출·고객·리스크 확인</li><li>경쟁사 성장 재원이 증자(초과금)인지 유보이익인지 보고 조달전략 참고</li></ul></div><footer class="sl-f"><span>5.3 전자공시와 자본 용어 (1C)</span><span class="num">21 / 49</span></footer></article><article class="slide ty-title" id="s22" data-lec="5.4" aria-label="22 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 재무분석 기초</p><p class="t-no">5.4</p><h2 class="t-title">손익계산서·단기안정성 (1D)</h2><p class="t-thesis">이익은 금액·이익률·전년 대비 변화로 함께 읽는다</p></div></div><footer class="sl-f"><span>5.4 손익계산서·단기안정성 (1D)</span><span class="num">22 / 49</span></footer></article><article class="slide ty-steps" id="s23" data-lec="5.4" aria-label="23 / 49"><div class="sl-in"><h3 class="sh">매출에서 순이익까지</h3><ol class="steps n5"><li><span class="sn">1</span><b>매출액</b><p>출발점 (100%)</p></li><li><span class="sn">2</span><b>매출총이익</b><p>매출액 − 매출원가</p></li><li><span class="sn">3</span><b>영업이익</b><p>매출총이익 − 판매비와관리비</p></li><li><span class="sn">4</span><b>세전이익</b><p>영업이익 + 영업외수익 − 영업외비용</p></li><li><span class="sn">5</span><b>당기순이익</b><p>세전이익 − 법인세비용</p></li></ol></div><footer class="sl-f"><span>5.4 손익계산서·단기안정성 (1D)</span><span class="num">23 / 49</span></footer></article><article class="slide ty-compare" id="s24" data-lec="5.4" aria-label="24 / 49"><div class="sl-in"><h3 class="sh">이익률 비교 (삼성전자)</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">2016 (48기)</b><ul><li>매출총이익률 27.4%</li><li>영업이익률 10.2%</li><li>순이익률 8.6%</li></ul></div><div class="cp-col"><b class="cp-h">2017 (49기)</b><ul><li>매출총이익률 37.4%</li><li>영업이익률 21.5%</li><li>순이익률 17.8%</li></ul></div></div><p class="cp-note">이익률 = 각 이익 ÷ 매출액, 금액·비율 모두 개선</p></div><footer class="sl-f"><span>5.4 손익계산서·단기안정성 (1D)</span><span class="num">24 / 49</span></footer></article><article class="slide ty-equation" id="s25" data-lec="5.4" aria-label="25 / 49"><div class="sl-in"><h3 class="sh">단기유동성 비율</h3><p class="eq">유동비율 = 유동자산 ÷ 유동부채</p><div class="eq-ts"><div class="eq-t"><b>당좌비율</b><p>(유동자산 − 재고자산) ÷ 유동부채</p></div><div class="eq-t"><b>현금비율</b><p>(현금성자산 + 유가증권) ÷ 유동부채</p></div></div><p class="eq-rule">유동비율 2↑ 안정·1↓ 위험, 당좌·현금비율 1↑ 안정</p></div><footer class="sl-f"><span>5.4 손익계산서·단기안정성 (1D)</span><span class="num">25 / 49</span></footer></article><article class="slide ty-cases" id="s26" data-lec="5.4" aria-label="26 / 49"><div class="sl-in"><h3 class="sh">삼성전자 2016 계산</h3><div class="css n3"><div class="cs"><b>유동비율 2.58</b><p>141.4조 ÷ 54.7조, 2 초과로 안정</p></div><div class="cs"><b>당좌비율 2.25</b><p>재고 18.4조 제외해도 1 초과</p></div><div class="cs"><b>현금비율 1.61</b><p>가장 엄격한 기준도 1 초과</p></div></div></div><footer class="sl-f"><span>5.4 손익계산서·단기안정성 (1D)</span><span class="num">26 / 49</span></footer></article><article class="slide ty-concepts" id="s27" data-lec="5.4" aria-label="27 / 49"><div class="sl-in"><h3 class="sh">함께 알아둘 용어</h3><div class="ccs n3"><div class="cc"><b>매출원가 (COGS)</b><p>기초재고 + 당기매입 − 기말재고</p></div><div class="cc"><b>흑자 vs 적자</b><p>黑字(black ink) vs 赤字(red ink)</p></div><div class="cc"><b>흑자도산</b><p>이익이 나도 유동성 부족으로 도산</p></div></div></div><footer class="sl-f"><span>5.4 손익계산서·단기안정성 (1D)</span><span class="num">27 / 49</span></footer></article><article class="slide ty-apply" id="s28" data-lec="5.4" aria-label="28 / 49"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>인건비 중심 원가 구조라 매출총이익률·영업이익률을 핵심 KPI로 관리</li><li>대금 회수 지연에 대비해 유동비율 1 이상(목표 2)·현금비율을 월별 점검</li></ul></div><footer class="sl-f"><span>5.4 손익계산서·단기안정성 (1D)</span><span class="num">28 / 49</span></footer></article><article class="slide ty-title" id="s29" data-lec="5.5" aria-label="29 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 재무분석 기초</p><p class="t-no">5.5</p><h2 class="t-title">장기안정성·현금흐름·연결 (1E)</h2><p class="t-thesis">투자 판단은 연결 기준, 지배주주 순이익으로 한다</p></div></div><footer class="sl-f"><span>5.5 장기안정성·현금흐름·연결 (1E)</span><span class="num">29 / 49</span></footer></article><article class="slide ty-equation" id="s30" data-lec="5.5" aria-label="30 / 49"><div class="sl-in"><h3 class="sh">운전자본 대 총자산</h3><p class="eq">운전자본 ÷ 총자산</p><div class="eq-ts"><div class="eq-t"><b>운전자본</b><p>유동자산 − 유동부채 (순유동자산)</p></div><div class="eq-t"><b>삼성전자</b><p>(141.4조 − 54.7조) ÷ 262.2조 = 33.1%</p></div></div><p class="eq-rule">30%↑ 매우 좋음, 15~30% 양호, 0~15% 미흡, 0%↓ 위험</p></div><footer class="sl-f"><span>5.5 장기안정성·현금흐름·연결 (1E)</span><span class="num">30 / 49</span></footer></article><article class="slide ty-equation" id="s31" data-lec="5.5" aria-label="31 / 49"><div class="sl-in"><h3 class="sh">장기 재무리스크</h3><p class="eq">부채비율 = 부채총계 ÷ 자본총계</p><div class="eq-ts"><div class="eq-t"><b>삼성전자</b><p>69.2조 ÷ 193.0조 = 35.9%</p></div></div><p class="eq-rule">200% 이상이면 장기 재무 리스크가 큰 것으로 봄</p></div><footer class="sl-f"><span>5.5 장기안정성·현금흐름·연결 (1E)</span><span class="num">31 / 49</span></footer></article><article class="slide ty-tree" id="s32" data-lec="5.5" aria-label="32 / 49"><div class="sl-in"><h3 class="sh">현금흐름표 구조 (48기)</h3><div class="tree"><div class="tr-r">현금 순증감</div><div class="tr-cs n3"><div class="tr-c"><b>영업활동</b><p>본업으로 번 현금 +24.0조</p></div><div class="tr-c"><b>투자활동</b><p>설비·금융상품 취득 −14.2조</p></div><div class="tr-c"><b>재무활동</b><p>자사주 매입·배당 −9.0조</p></div></div></div></div><footer class="sl-f"><span>5.5 장기안정성·현금흐름·연결 (1E)</span><span class="num">32 / 49</span></footer></article><article class="slide ty-compare" id="s33" data-lec="5.5" aria-label="33 / 49"><div class="sl-in"><h3 class="sh">별도 vs 연결 (48기)</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">별도(개별) 재무제표</b><ul><li>회사 단독 실적</li><li>매출 133.9조</li><li>순이익 11.6조</li></ul></div><div class="cp-col"><b class="cp-h">연결 재무제표</b><ul><li>지배하는 자회사까지 합산</li><li>회사 간 내부거래는 제거</li><li>매출 201.9조, 순이익 22.7조</li></ul></div></div><p class="cp-note">지분 또는 이사회 50% 이상 지배 시 연결 작성 (K-IFRS)</p></div><footer class="sl-f"><span>5.5 장기안정성·현금흐름·연결 (1E)</span><span class="num">33 / 49</span></footer></article><article class="slide ty-compare" id="s34" data-lec="5.5" aria-label="34 / 49"><div class="sl-in"><h3 class="sh">지배주주 vs 비지배 이익</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">지배주주 순이익</b><ul><li>지배기업 소유주 귀속 몫</li><li>48기 22.4조</li><li>투자 판단 기준으로 합리적</li></ul></div><div class="cp-col"><b class="cp-h">비지배 순이익</b><ul><li>자회사 지분 중 타 주주 몫</li><li>60% 보유 시 나머지 40% 몫</li><li>48기 0.3조</li></ul></div></div><p class="cp-note">비지배 비중이 작으면 전체 순이익으로 간편 계산</p></div><footer class="sl-f"><span>5.5 장기안정성·현금흐름·연결 (1E)</span><span class="num">34 / 49</span></footer></article><article class="slide ty-apply" id="s35" data-lec="5.5" aria-label="35 / 49"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>경쟁사는 연결재무제표·지배주주 순이익 기준으로 비교</li><li>운전자본/총자산 15%↑, 부채비율 200% 미만을 사업계획 안전선으로 설정</li></ul></div><footer class="sl-f"><span>5.5 장기안정성·현금흐름·연결 (1E)</span><span class="num">35 / 49</span></footer></article><article class="slide ty-title" id="s36" data-lec="5.6" aria-label="36 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 재무분석 기초</p><p class="t-no">5.6</p><h2 class="t-title">화폐의 시간가치·CAGR (2A)</h2><p class="t-thesis">같은 돈도 시점이 다르면 가치가 다르다</p></div></div><footer class="sl-f"><span>5.6 화폐의 시간가치·CAGR (2A)</span><span class="num">36 / 49</span></footer></article><article class="slide ty-equation" id="s37" data-lec="5.6" aria-label="37 / 49"><div class="sl-in"><h3 class="sh">현재가치와 미래가치</h3><p class="eq">FV = PV × (1 + r)^n</p><div class="eq-ts"><div class="eq-t"><b>PV</b><p>현재가치 (Present Value)</p></div><div class="eq-t"><b>FV</b><p>미래가치 (Future Value)</p></div><div class="eq-t"><b>r</b><p>할인율 (이자율·수익률)</p></div><div class="eq-t"><b>n</b><p>기간 (년)</p></div></div><p class="eq-rule">이자율 10%면 지금 $100 = 3년 뒤 $133.1</p></div><footer class="sl-f"><span>5.6 화폐의 시간가치·CAGR (2A)</span><span class="num">37 / 49</span></footer></article><article class="slide ty-compare" id="s38" data-lec="5.6" aria-label="38 / 49"><div class="sl-in"><h3 class="sh">Return vs Revenue</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Return (투자수익)</b><ul><li>투자로 번(잃은) 돈</li><li>수익률 = (현재가 − 원가) ÷ 원가</li></ul></div><div class="cp-col"><b class="cp-h">Revenue (매출)</b><ul><li>판매로 들어온 수익</li><li>Sales Revenue와 같은 뜻</li></ul></div></div><p class="cp-note">둘 다 &#x27;수익&#x27;으로 번역되지만 다른 개념</p></div><footer class="sl-f"><span>5.6 화폐의 시간가치·CAGR (2A)</span><span class="num">38 / 49</span></footer></article><article class="slide ty-cycle" id="s39" data-lec="5.6" aria-label="39 / 49"><div class="sl-in"><h3 class="sh">복리(Compounding)의 원리</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="원금 투자 → 수익 발생 → 수익 재투자 → 더 큰 수익"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,86.6) rotate(45.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,263.4) rotate(135.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,263.4) rotate(225.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,86.6) rotate(315.0)"/><g><rect x="250.5" y="29.0" width="99" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">원금 투자</text></g><g><rect x="375.5" y="154.0" width="99" height="42" rx="21" class="cy-node"/><text x="425.0" y="181.0" text-anchor="middle" class="cy-t">수익 발생</text></g><g><rect x="243.0" y="279.0" width="114" height="42" rx="21" class="cy-node"/><text x="300.0" y="306.0" text-anchor="middle" class="cy-t">수익 재투자</text></g><g><rect x="118.0" y="154.0" width="114" height="42" rx="21" class="cy-node"/><text x="175.0" y="181.0" text-anchor="middle" class="cy-t">더 큰 수익</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">Compounding</text></svg></div></div><footer class="sl-f"><span>5.6 화폐의 시간가치·CAGR (2A)</span><span class="num">39 / 49</span></footer></article><article class="slide ty-equation" id="s40" data-lec="5.6" aria-label="40 / 49"><div class="sl-in"><h3 class="sh">연평균 성장률 CAGR</h3><p class="eq">CAGR = (기말값 ÷ 기초값)^(1/n) − 1</p><div class="eq-ts"><div class="eq-t"><b>예시</b><p>$1,000 → $1,610.51 (5년) = 연 10%</p></div><div class="eq-t"><b>n</b><p>측정 기간 (년수)</p></div><div class="eq-t"><b>같은 개념</b><p>복합수익률 (compound return)</p></div></div><p class="eq-rule">약 3%(경제성장·물가) 넘으면 성장, 두 자릿수면 높음</p></div><footer class="sl-f"><span>5.6 화폐의 시간가치·CAGR (2A)</span><span class="num">40 / 49</span></footer></article><article class="slide ty-cases" id="s41" data-lec="5.6" aria-label="41 / 49"><div class="sl-in"><h3 class="sh">삼성전자 5년 CAGR</h3><div class="css n3"><div class="cs"><b>매출액</b><p>201.1조 → 239.6조, 연 3.56%</p></div><div class="cs"><b>당기순이익</b><p>23.8조 → 42.2조, 연 12.1%</p></div><div class="cs"><b>주가</b><p>150만원 → 280만원, 연 13.3%</p></div></div></div><footer class="sl-f"><span>5.6 화폐의 시간가치·CAGR (2A)</span><span class="num">41 / 49</span></footer></article><article class="slide ty-apply" id="s42" data-lec="5.6" aria-label="42 / 49"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>시장·매출 계획 CAGR은 여러 기간과 추세선을 함께 제시해 착시 방지</li><li>고객 감축투자 효과를 현재가치로 환산해 제안서의 경제성 근거로 활용</li></ul></div><footer class="sl-f"><span>5.6 화폐의 시간가치·CAGR (2A)</span><span class="num">42 / 49</span></footer></article><article class="slide ty-title" id="s43" data-lec="5.7" aria-label="43 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">5주차 · 재무분석 기초</p><p class="t-no">5.7</p><h2 class="t-title">주식 지표와 ROE (2B)</h2><p class="t-thesis">주가는 이익과 순자산의 몇 배인지로 가늠한다</p></div></div><footer class="sl-f"><span>5.7 주식 지표와 ROE (2B)</span><span class="num">43 / 49</span></footer></article><article class="slide ty-compare" id="s44" data-lec="5.7" aria-label="44 / 49"><div class="sl-in"><h3 class="sh">주당 지표 vs 주가 배수</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">주당 지표</b><ul><li>EPS: 1주당 순이익</li><li>BPS: 1주당 순자산</li></ul></div><div class="cp-col"><b class="cp-h">주가 배수</b><ul><li>PER: 주가 ÷ EPS (배)</li><li>PBR: 주가 ÷ BPS (배)</li></ul></div></div><p class="cp-note">네이버 금융에서 종목별로 바로 조회</p></div><footer class="sl-f"><span>5.7 주식 지표와 ROE (2B)</span><span class="num">44 / 49</span></footer></article><article class="slide ty-equation" id="s45" data-lec="5.7" aria-label="45 / 49"><div class="sl-in"><h3 class="sh">EPS와 PER</h3><p class="eq">PER = 주가 ÷ EPS</p><div class="eq-ts"><div class="eq-t"><b>EPS</b><p>보통주 순이익 ÷ 가중평균 주식수</p></div><div class="eq-t"><b>EPS 예시</b><p>EPS 10,000원 = 1주로 1만원 벌었음</p></div><div class="eq-t"><b>PER</b><p>주가가 EPS의 몇 배인가</p></div></div><p class="eq-rule">10 이하 낮음, 50 이상 높음 (금리·성장성 따라 다름)</p></div><footer class="sl-f"><span>5.7 주식 지표와 ROE (2B)</span><span class="num">45 / 49</span></footer></article><article class="slide ty-equation" id="s46" data-lec="5.7" aria-label="46 / 49"><div class="sl-in"><h3 class="sh">BPS와 PBR</h3><p class="eq">PBR = 주가 ÷ BPS</p><div class="eq-ts"><div class="eq-t"><b>BPS</b><p>순자산 ÷ 발행주식수</p></div><div class="eq-t"><b>순자산</b><p>총자산 − 부채총계 = 자본총계</p></div><div class="eq-t"><b>PBR</b><p>주가가 순자산가치의 몇 배인가</p></div></div><p class="eq-rule">BPS = 주당 청산가치 (회사 정리 시 주당 몫)</p></div><footer class="sl-f"><span>5.7 주식 지표와 ROE (2B)</span><span class="num">46 / 49</span></footer></article><article class="slide ty-equation" id="s47" data-lec="5.7" aria-label="47 / 49"><div class="sl-in"><h3 class="sh">수익성 핵심 지표</h3><p class="eq">ROE = 순이익 ÷ 자기자본</p><div class="eq-ts"><div class="eq-t"><b>순이익</b><p>Net Income</p></div><div class="eq-t"><b>자기자본</b><p>Owner&#x27;s Equity (자본총계)</p></div></div><p class="eq-rule">버핏: ROE가 꾸준히 15% 이상인 기업에 투자</p></div><footer class="sl-f"><span>5.7 주식 지표와 ROE (2B)</span><span class="num">47 / 49</span></footer></article><article class="slide ty-stat" id="s48" data-lec="5.7" aria-label="48 / 49"><div class="sl-in"><h3 class="sh">부채가 ROE를 키운다</h3><div class="stat"><p class="st-v">50%</p><p class="st-l">레버리지를 쓴 ROE 예시</p><p class="st-t">자기자본 2억 + 차입 1억으로 산 집이 1억 오르면 ROE 50%</p></div></div><footer class="sl-f"><span>5.7 주식 지표와 ROE (2B)</span><span class="num">48 / 49</span></footer></article><article class="slide ty-apply" id="s49" data-lec="5.7" aria-label="49 / 49"><div class="sl-in"><p class="ap-k">기후테크 창업 기획에 적용</p><ul class="ap"><li>상장 경쟁사 EPS·PER·PBR·ROE를 표로 정리해 투자유치 가치 추정</li><li>ROE 15%↑ 지속을 목표로, 부채비율과 함께 수익성의 질 확인</li></ul></div><footer class="sl-f"><span>5.7 주식 지표와 ROE (2B)</span><span class="num">49 / 49</span></footer></article>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="week-04.html">← 4주차 벤처 설립·주식회사</a><a class="wk-nav" href="week-06.html">6주차 KOSPI 사례 분석 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: ITM502 기업가정신 2024-3 (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slide'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>
