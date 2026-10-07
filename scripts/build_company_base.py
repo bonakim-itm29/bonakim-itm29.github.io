@@ -27,6 +27,8 @@ RULES = {  # 페이지 점수 규칙과 동일
     "cn_yield": lambda y: clip(y / 0.10), "nc": lambda y: clip(y / 0.5),
     "en_ev": lambda x: clip((5 - x) / 2.5), "en_yield": lambda y: clip(y / 0.20),
     "pnav": lambda x: clip((1.5 - x) / 1),
+    "br_ev": lambda x: clip((10 - x) / 6), "br_pe": lambda x: clip((20 - x) / 12),
+    "pb": lambda x: clip((2.5 - x) / 1.5), "bk_pe": lambda x: clip((15 - x) / 9), "bk_yield": lambda y: clip(y / 0.08),
 }
 
 
@@ -39,6 +41,12 @@ def val_items(score, kind, b):
     items = []
     for it in pil["items"]:
         k, v = it["k"], str(it["val"])
+        if "move" in it:  # 브라질 페이지: 항목에 정밀값·이동 방식·규칙을 직접 저장
+            rule = it.get("rule_id"); x = it.get("x"); move = it["move"]
+            if x is None or (rule and abs(RULES[rule](x) - it["pts"]) > 0.02):
+                move, rule = "fixed", None
+            items.append(dict(k=k, val=v, x=x, pts=it["pts"], move=move if rule else "fixed", rule=rule))
+            continue
         m = re.search(r"-?\d+(?:\.\d+)?", v.replace(",", ""))
         x = float(m.group()) / (100 if "%" in v[: m.end() + 1] else 1) if m else None
         if k.startswith("EV/"):
@@ -73,8 +81,8 @@ def main():
         cn, val, nav, score = grab(html, "cnval"), grab(html, "val"), grab(html, "nav"), grab(html, "score")
         b = {"score": score.get("total") if score else None}
         if cn:
-            b.update(kind="cn", date=cn.get("asof") or DATES.get(slug, DEFAULT_DATE), price=cn["price"],
-                     mcap=cn["mcap_b"], netcash=cn["netcash_b"], ev=cn["ev_b"], ev_op=cn.get("ev_op"),
+            b.update(kind=cn.get("kind", "cn"), date=cn.get("asof") or DATES.get(slug, DEFAULT_DATE), price=cn["price"],
+                     mcap=cn["mcap_b"], netcash=cn.get("netcash_b", 0), ev=cn.get("ev_b", cn["mcap_b"]), ev_op=cn.get("ev_op"),
                      pe=cn.get("pe"), fcf_yield=cn.get("fcf_yield"), nc_share=cn.get("nc_share"))
         elif val and "net_debt_m" in val:
             b.update(kind="energy", date=val.get("asof") or DATES.get(slug, DEFAULT_DATE), price=val["price"],

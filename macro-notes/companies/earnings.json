@@ -105,6 +105,60 @@
    "date": "2026-10-29",
    "status": "예상",
    "reflected_period": "2026년 상반기(2분기)"
+  },
+  "vale": {
+   "period": "2026년 3분기",
+   "date": "2026-10-29",
+   "status": "회사 일정(2026년 1월 기업 일정 공시)",
+   "reflected_period": "2026년 2분기"
+  },
+  "petrobras": {
+   "period": "2026년 3분기",
+   "date": "2026-11-05",
+   "status": "추정(회사 미발표)",
+   "reflected_period": "2026년 2분기"
+  },
+  "itau": {
+   "period": "2026년 3분기",
+   "date": "2026-11-03",
+   "status": "추정(회사 미발표)",
+   "reflected_period": "2026년 2분기"
+  },
+  "nu": {
+   "period": "2026년 3분기",
+   "date": "2026-11-12",
+   "status": "추정(회사 미발표)",
+   "reflected_period": "2026년 2분기"
+  },
+  "bradesco": {
+   "period": "2026년 3분기",
+   "date": "2026-10-30",
+   "status": "추정(회사 미발표)",
+   "reflected_period": "2026년 2분기"
+  },
+  "ambev": {
+   "period": "2026년 3분기",
+   "date": "2026-10-29",
+   "status": "추정(회사 미발표)",
+   "reflected_period": "2026년 2분기"
+  },
+  "sabesp": {
+   "period": "2026년 3분기",
+   "date": "2026-11-10",
+   "status": "추정(회사 미발표)",
+   "reflected_period": "2026년 2분기"
+  },
+  "embraer": {
+   "period": "2026년 3분기",
+   "date": "2026-11-04",
+   "status": "추정(회사 미발표)",
+   "reflected_period": "2026년 2분기"
+  },
+  "axia": {
+   "period": "2026년 3분기",
+   "date": "2026-11-12",
+   "status": "추정(회사 미발표)",
+   "reflected_period": "2026년 2분기"
   }
  }
 }

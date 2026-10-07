@@ -32,11 +32,12 @@
   var RULES={cn_ev:function(x){return clip((25-x)/20)},pe:function(x){return clip((25-x)/17)},
     cn_yield:function(y){return clip(y/0.10)},nc:function(y){return clip(y/0.5)},
     en_ev:function(x){return clip((5-x)/2.5)},en_yield:function(y){return clip(y/0.20)},
-    pnav:function(x){return clip((1.5-x)/1)}};
+    pnav:function(x){return clip((1.5-x)/1)},br_ev:function(x){return clip((10-x)/6)},br_pe:function(x){return clip((20-x)/12)},
+    pb:function(x){return clip((2.5-x)/1.5)},bk_pe:function(x){return clip((15-x)/9)},bk_yield:function(y){return clip(y/0.08)}};
   function cur(c,v){var d=c==='KRW'?0:2;var s=v.toLocaleString('ko-KR',{minimumFractionDigits:d,maximumFractionDigits:d});
-    return c==='KRW'?'₩'+s:c==='HKD'?'HK$'+s:'$'+s}
+    return c==='KRW'?'₩'+s:c==='HKD'?'HK$'+s:c==='BRL'?'R$'+s:'$'+s}
   function fmtX(k,x){if(x===null||x===undefined||!isFinite(x))return '—';
-    return /수익률|순현금/.test(k)?(x*100).toFixed(1)+'%':x.toFixed(/NAV/.test(k)?2:1)+'배'}
+    return /수익률|순현금\/|^순현금|ROE/.test(k)?(x*100).toFixed(1)+'%':x.toFixed(/NAV|P\/B/.test(k)?2:1)+'배'}
   function tier(v){return v>=8?'sc-g':v>=6?'sc-y':'sc-r'}
   function last(s){return s&&s.points&&s.points.length?s.points[s.points.length-1]:null}
 
@@ -56,6 +57,7 @@
       else if(/^시가총액/.test(k)){scaleNum(v,r);l.textContent='시가총액 (현재 주가)'}
       else if(/^EV/.test(k)&&!/NAV/.test(k)){scaleNum(v,evR);l.textContent=k+' · 현재 주가'}
       else if(/^PER/.test(k)){scaleNum(v,r);l.textContent=k+' · 현재 주가'}
+      else if(/^P\/B/.test(k)){scaleNum(v,r);l.textContent=k+' · 현재 주가'}
       else if(/^종합 매력도/.test(k)&&tot!=null&&d){d.textContent='분석 시점 점수 · 주가 반영 추정 '+tot.toFixed(1)}
     });
   }

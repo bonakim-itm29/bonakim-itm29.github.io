@@ -21,6 +21,17 @@ SECTORS = [
     ("lenovo", "Lenovo Group", "HKEX 0992 · AI 서버 매출 2배·워런트 희석"),
     ("xiaomi", "Xiaomi", "HKEX 1810 · 순현금 시총의 34%·EV 손실 축소"),
     ("byd", "BYD Company", "HKEX 1211 · 판매 반등·공급망 신용")]),
+  ("브라질 원자재·산업·소비", "EWZ 편입 · 미국 상장 ADR(AXIA는 B3)", [
+    ("vale", "Vale", "NYSE VALE · 철광석·구리, EV/EBITDA 4.9배"),
+    ("petrobras", "Petrobras", "NYSE PBR · 석유, FCF 수익률 15%"),
+    ("axia", "AXIA Energia", "B3 AXIA3 · 옛 Eletrobras, NYSE 상장폐지"),
+    ("sabesp", "Sabesp", "NYSE SBS · 민영화 후 투자 확대"),
+    ("ambev", "Ambev", "NYSE ABEV · 맥주, 순현금"),
+    ("embraer", "Embraer", "NYSE EMBJ · 항공기, 수주잔고 US$345억")]),
+  ("브라질 금융", "은행·핀테크 · P/B·ROE 기준", [
+    ("itau", "Itaú Unibanco", "NYSE ITUB · ROE 24%, P/B 2.5배"),
+    ("bradesco", "Banco Bradesco", "NYSE BBD · P/B 1.3배·ROE 회복"),
+    ("nu", "Nu Holdings", "NYSE NU · 고객 1.39억 명, ROE 33%")]),
   ("한국 반도체", "메모리 사이클", [
     ("samsung-electronics", "Samsung Electronics", "KOSPI 005930 · AI 메모리 호황과 사이클 정점 논쟁"),
     ("sk-hynix", "SK hynix", "KOSPI 000660 · HBM 이익률 76%·원화 민감도")]),

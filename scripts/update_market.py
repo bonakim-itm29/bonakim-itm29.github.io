@@ -85,6 +85,8 @@ COMP = [  # 관심기업 주가: slug(페이지 폴더), 야후 심볼, 통화
     ("lenovo", "0992.HK", "HKD"), ("xiaomi", "1810.HK", "HKD"), ("byd", "1211.HK", "HKD"),
     ("ewz", "EWZ", "USD"), ("kweb", "KWEB", "USD"), ("ktec", "KTEC", "USD"), ("fxi", "FXI", "USD"), ("kba", "KBA", "USD"),  # 칼럼 언급 ETF
     ("samsung-electronics", "005930.KS", "KRW"), ("sk-hynix", "000660.KS", "KRW"),
+    ("vale", "VALE", "USD"), ("petrobras", "PBR", "USD"), ("itau", "ITUB", "USD"), ("nu", "NU", "USD"), ("bradesco", "BBD", "USD"),
+    ("ambev", "ABEV", "USD"), ("sabesp", "SBS", "USD"), ("embraer", "EMBJ", "USD"), ("axia", "AXIA3.SA", "BRL"),  # 브라질 (AXIA는 NYSE 상장폐지 → B3)
 ]
 PRICES = OUT.parent.parent / "companies" / "prices.json"
 
