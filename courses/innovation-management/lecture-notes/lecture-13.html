@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IM13 기술사업화 · 이노베이션 경영</title>
+<meta name="description" content="기술을 시장 가치로 바꾸는 단계와 도구">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">이노베이션 경영</a> / <a href="index.html">강의별 핵심</a> / IM13</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 13</p>
+  <h1>기술사업화</h1>
+  <p class="lead">기술을 시장 가치로 바꾸는 단계와 도구</p>
+  <div class="kws"><span class="kw">기술사업화</span><span class="kw">Stage-Gate</span><span class="kw">기술가치평가</span><span class="kw">Open Innovation</span><span class="kw">Chasm</span><span class="kw">SWOT</span></div>
+  <details class="plist"><summary>이 강의의 논문 8편</summary><ol><li><b>Cooper (1990)</b> Cooper, R. G. (1990). Stage-gate systems: A new tool for managing new products. Business Horizons, 33(3), 44–54.</li><li><b>Jolly (1997)</b> Jolly, V. K. (1997). Commercializing new technologies: Getting from mind to market. Boston, MA: Harvard Business School Press.</li><li><b>Stevens &amp; Burley (1997)</b> Stevens, G. A., &amp; Burley, J. (1997). 3,000 raw ideas = 1 commercial success! Research-Technology Management, 40(3), 16–27.</li><li><b>Prahalad &amp; Hamel (1990)</b> Prahalad, C. K., &amp; Hamel, G. (1990). The core competence of the corporation. Harvard Business Review, 68(3), 79–91.</li><li><b>Chesbrough (2006a)</b> Chesbrough, H. W. (2006). Open business models: How to thrive in the new innovation landscape. Boston, MA: Harvard Business School Press.</li><li><b>Rogers (1962)</b> Rogers, E. M. (1962). Diffusion of innovations. New York: Free Press.</li><li><b>Moore (1991)</b> Moore, G. A. (1991). Crossing the chasm: Marketing and selling technology products to mainstream customers. New York: HarperBusiness.</li><li><b>Porter (1979)</b> Porter, M. E. (1979). How competitive forces shape strategy. Harvard Business Review, 57(2), 137–145.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="13-1"><b>13-1</b><span>R&amp;D 프로세스와 Stage-Gate</span></a><a href="#s9" class="tab" data-lec="13-2"><b>13-2</b><span>기술사업화의 개념과 단계모형</span></a><a href="#s17" class="tab" data-lec="13-3"><b>13-3</b><span>무엇을 사업화할까: 역량·가치평가</span></a><a href="#s27" class="tab" data-lec="13-4"><b>13-4</b><span>어떻게 육성할까: 개방형·사내벤처</span></a><a href="#s37" class="tab" data-lec="13-5"><b>13-5</b><span>넘어야 할 산: Death Valley·Chasm</span></a><a href="#s46" class="tab" data-lec="13-6"><b>13-6</b><span>가치 창출: BM·사업계획·환경분석</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 55</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="13-1"><article class="slide ty-title" aria-label="1 / 55"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · 기술사업화</p><p class="t-no">13-1</p><h2 class="t-title">R&amp;D 프로세스와 Stage-Gate</h2><p class="t-thesis">R&amp;D는 기획-수행-평가로 이어지는 관리 과정</p></div></div><footer class="sl-f"><span>13-1 R&amp;D 프로세스와 Stage-Gate</span><span class="num">1 / 55</span></footer></article></div><div class="slot" id="s2" data-lec="13-1"><article class="slide ty-compare" aria-label="2 / 55"><div class="sl-in"><h3 class="sh">R&amp;D 관리의 두 질문</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Right Thing</b><ul><li>효과성(Effective)</li><li>무엇을 연구할지 선정</li><li>니즈·장기전략·환경 분석</li></ul></div><div class="cp-col"><b class="cp-h">Do Right</b><ul><li>효율성(Efficient)</li><li>어떻게 잘 수행할지</li><li>인력·자원 배분, 연구 관리</li></ul></div></div><p class="cp-note">Clarify(Responsible): 결과 평가와 개선 책임</p></div><footer class="sl-f"><span>13-1 R&amp;D 프로세스와 Stage-Gate</span><span class="num">2 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>R&amp;D 관리는 두 질문으로 나뉜다. &#x27;옳은 일을 하는가&#x27;는 과제 선정의 효과성이고, &#x27;일을 옳게 하는가&#x27;는 수행의 효율성이다. 여기에 결과를 평가하고 개선할 책임(Clarify)이 더해진다. 흔한 실수는 수행 효율만 관리하는 것이다. 잘못 고른 과제를 아무리 효율적으로 수행해도 성과가 나지 않으므로, 과제 선정 단계에 가장 많은 고민을 쏟아야 한다.</p></div></div><div class="slot" id="s3" data-lec="13-1"><article class="slide ty-steps" aria-label="3 / 55"><div class="sl-in"><h3 class="sh">R&amp;D 관리 3단계 (PDCA)</h3><ol class="steps n4"><li><span class="sn">1</span><b>Plan: 과제 선정</b><p>환경분석, 기술예측(TRM), 가치평가</p></li><li><span class="sn">2</span><b>Do: 연구 관리</b><p>내부/외부 수행, 인력·자원 배분</p></li><li><span class="sn">3</span><b>Check/Act: 평가</b><p>중간·최종 평가, 성과보상, 사업화</p></li><li><span class="sn">4</span><b>Feedback</b><p>결과 검토 후 다음 과제 선정에 반영</p></li></ol></div><footer class="sl-f"><span>13-1 R&amp;D 프로세스와 Stage-Gate</span><span class="num">3 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.6)의 R&amp;D 관리 체계다. Phase I에서 니즈·장기전략·환경을 분석하고 기술로드맵(TRM)과 기술가치평가로 우선순위를 정한다. Phase II에서는 자체 수행할지 외부에 맡길지 정하고 인력·자원을 배분한다. Phase III에서 중간·최종 평가, 성과보상, 사업화·현장적용을 한다. 평가 결과와 R&amp;D DB가 다음 과제 선정으로 되먹임되는 것이 핵심이다.</p></div></div><div class="slot" id="s4" data-lec="13-1"><article class="slide ty-steps" aria-label="4 / 55"><div class="sl-in"><h3 class="sh">Stage-Gate 5단계</h3><ol class="steps n5"><li><span class="sn">1</span><b>1 아이디어 발굴</b><p>제품 컨셉 설정, 시장성·기술 예비조사</p></li><li><span class="sn">2</span><b>2 상세조사</b><p>고객요구 정량화, 수행 여부·개발계획</p></li><li><span class="sn">3</span><b>3 제품 개발</b><p>프로토타입, 경쟁제품 비교, 원가 분석</p></li><li><span class="sn">4</span><b>4 시험·검증</b><p>품질 최종평가, 양산 계획·경제성 검토</p></li><li><span class="sn">5</span><b>5 양산·출시</b><p>신속 출시와 마케팅으로 고객 공급</p></li></ol></div><footer class="sl-f"><span>13-1 R&amp;D 프로세스와 Stage-Gate</span><span class="num">4 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Cooper(1990)가 제안한 Stage-Gate는 개발을 단계로 나누고, 단계 사이 관문(gate)에서 계속할지 멈출지를 판정한다. 슬라이드의 5단계를 보면 시장성과 경제성 검토가 1단계부터 4단계까지 계속 반복된다. 즉 기술 개발과 사업성 검토를 따로 하지 않고 함께 진행한다. 비용이 큰 3~4단계에 들어가기 전에 가망 없는 과제를 걸러내는 것이 목적이다.</p></div></div><div class="slot" id="s5" data-lec="13-1"><article class="slide ty-paper" aria-label="5 / 55"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Cooper (1990)</h3><p class="pp-q">신제품 개발을 어떻게 빠르고 덜 위험하게 관리할까?</p><div class="pp-g"><div><b>핵심 주장</b><p>개발을 여러 단계(stage)로 나누고 각 단계 사이 관문(gate)에서 정해진 기준으로 Go/Kill을 판정하면 실패 과제를 일찍 걸러 성공률을 높인다.</p><div class="pp-cs"><span class="pp-c">Stage</span><span class="pp-c">Gate</span><span class="pp-c">Go/Kill 판정</span><span class="pp-c">교차기능 팀</span></div></div><div><b>강의와의 연결</b><p>13-1 p.8: Stage-gate 5단계(아이디어 발굴→상세조사→개발→시험·검증→양산·출시)</p><b>보충 설명</b><p>게이트에는 필수 기준(must-meet)과 가점 기준(should-meet)이 있고, 마케팅·생산 등 여러 부서가 함께 심사한다. 이후 단계 중첩·유연 게이트를 허용하는 차세대 Stage-Gate로 발전했다.</p></div></div><p class="pp-cite">Cooper, R. G. (1990). Stage-gate systems: A new tool for managing new products. Business Horizons, 33(3), 44–54. </p></div><footer class="sl-f"><span>13-1 R&amp;D 프로세스와 Stage-Gate</span><span class="num">5 / 55</span></footer></article></div><div class="slot" id="s6" data-lec="13-1"><article class="slide ty-checklist" aria-label="6 / 55"><div class="sl-in"><h3 class="sh">게이트 심사 질문</h3><ol class="chk two"><li><span class="ck">1</span>아이디어의 시장성과 기술 가능성을 예비조사했는가?</li><li><span class="ck">2</span>고객 요구를 개발 목표에 정량화해 반영했는가?</li><li><span class="ck">3</span>인력·비용·KPI와 투자 대비 수익을 분석했는가?</li><li><span class="ck">4</span>프로토타입을 경쟁제품과 실증 비교했는가?</li><li><span class="ck">5</span>제조원가와 양산 투자의 경제성을 검토했는가?</li></ol></div><footer class="sl-f"><span>13-1 R&amp;D 프로세스와 Stage-Gate</span><span class="num">6 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>각 단계의 과업을 게이트 질문으로 바꾼 것이다. Cooper(1990)는 게이트마다 판정 기준을 미리 정해 두고 Go(진행)·Kill(중단)·Hold(보류)·Recycle(보완 후 재심) 중 하나를 결정하라고 한다. 실무에서 흔한 실패는 이미 쓴 돈이 아까워 Kill 판정을 미루는 것이다. 질문에 답하지 못하는 과제는 다음 단계 예산을 받지 못하게 해야 게이트가 작동한다.</p></div></div><div class="slot" id="s7" data-lec="13-1"><article class="slide ty-compare" aria-label="7 / 55"><div class="sl-in"><h3 class="sh">R&amp;D 평가의 시점</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">선정 평가</b><ul><li>기술성·시장성 예비 판단</li><li>우선순위·자원 배분 결정</li></ul></div><div class="cp-col"><b class="cp-h">중간 평가</b><ul><li>진척도와 목표 달성 가능성</li><li>계속·수정·중단 판단</li></ul></div><div class="cp-col"><b class="cp-h">최종 평가</b><ul><li>성과 측정과 보상</li><li>사업화·현장적용 연계</li></ul></div></div><p class="cp-note">평가 결과는 R&amp;D DB로 축적돼 다음 과제에 반영</p></div><footer class="sl-f"><span>13-1 R&amp;D 프로세스와 Stage-Gate</span><span class="num">7 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.6, p.9-11)는 R&amp;D 평가를 과제 선정, 중간, 최종의 흐름으로 다룬다. 선정 평가는 무엇을 할지, 중간 평가는 계속할지, 최종 평가는 어떻게 보상하고 사업화할지를 결정한다. 평가가 성과 보상에만 쓰이면 연구자는 쉬운 목표만 세우게 된다. 그래서 평가는 학습과 다음 과제 선정을 위한 피드백 도구로 설계해야 한다.</p></div></div><div class="slot" id="s8" data-lec="13-1"><article class="slide ty-takeaway" aria-label="8 / 55"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>R&amp;D 관리 = 옳은 과제 선정(효과성) + 올바른 수행(효율성) + 책임 있는 평가</li><li>Plan-Do-Check/Act 순환과 피드백으로 다음 과제 선정을 개선한다</li><li>Stage-Gate는 단계마다 관문에서 Go/Kill을 판정해 실패를 일찍 거른다</li><li>시장성·경제성 검토는 개발 초기부터 단계마다 반복된다</li></ul></div><footer class="sl-f"><span>13-1 R&amp;D 프로세스와 Stage-Gate</span><span class="num">8 / 55</span></footer></article></div><div class="slot" id="s9" data-lec="13-2"><article class="slide ty-title" aria-label="9 / 55"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · 기술사업화</p><p class="t-no">13-2</p><h2 class="t-title">기술사업화의 개념과 단계모형</h2><p class="t-thesis">사업화는 단계 사이 &#x27;전이&#x27;에서 성패가 갈린다</p></div></div><footer class="sl-f"><span>13-2 기술사업화의 개념과 단계모형</span><span class="num">9 / 55</span></footer></article></div><div class="slot" id="s10" data-lec="13-2"><article class="slide ty-concepts" aria-label="10 / 55"><div class="sl-in"><h3 class="sh">기술사업화란</h3><div class="ccs n4"><div class="cc"><b>기술사업화</b><p>기술로 제품을 개발·생산·판매하거나 관련 기술 향상</p></div><div class="cc"><b>사업화 유형</b><p>자체 사업화, 기술이전, 창업 등 경로가 다양</p></div><div class="cc"><b>선형 vs 비선형 모형</b><p>순차 진행이 아니라 단계가 겹치고 되먹임</p></div><div class="cc"><b>전이(bridge)</b><p>단계 사이 이해관계자 충족과 자원 동원</p></div></div></div><footer class="sl-f"><span>13-2 기술사업화의 개념과 단계모형</span><span class="num">10 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>기술사업화는 연구 성과를 시장의 제품·서비스로 바꾸는 전 과정이다. KISTEP(2014)은 정부 R&amp;D 성과의 사업화 실패 사례를 유형별로 정리했는데, 실패의 상당수가 기술 자체보다 사업화 경로 선택과 단계 간 연결에서 생긴다. 선형 모형은 연구→개발→생산→판매를 순서대로 보지만, 실제로는 단계가 겹치고 시장 반응이 앞 단계로 되돌아오는 비선형 과정이다.</p></div></div><div class="slot" id="s11" data-lec="13-2"><article class="slide ty-steps" aria-label="11 / 55"><div class="sl-in"><h3 class="sh">Jolly 5단계 모형</h3><ol class="steps n5"><li><span class="sn">1</span><b>착상 (R, MA)</b><p>기술의 가능성과 시장 아이디어 구상</p></li><li><span class="sn">2</span><b>보육 (D, E, MA)</b><p>기술·사업 개념을 함께 다듬음</p></li><li><span class="sn">3</span><b>시연 (D, E, MF)</b><p>제품으로 구현해 실현 가능성 입증</p></li><li><span class="sn">4</span><b>촉진 (MF, MA)</b><p>시장 수용 촉진, 생산·마케팅 확대</p></li><li><span class="sn">5</span><b>지속 (R, D, E)</b><p>개선을 이어가며 가치 지속 창출</p></li></ol></div><footer class="sl-f"><span>13-2 기술사업화의 개념과 단계모형</span><span class="num">11 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Jolly(1997)의 &#x27;5단계 4전이&#x27; 모형은 사업화의 대표적 비선형 모형이다. 괄호 안은 각 단계에서 주로 일하는 기능(R 연구, D 개발, E 엔지니어링, MF 제조, MA 마케팅)으로, 마케팅이 착상 단계부터 참여한다는 점이 중요하다. 오른쪽 화살표는 피드포워드, 왼쪽 화살표는 피드백이다. 기술 담당자만으로 사업화를 끝까지 끌고 갈 수 없다는 뜻이다.</p></div></div><div class="slot" id="s12" data-lec="13-2"><article class="slide ty-steps" aria-label="12 / 55"><div class="sl-in"><h3 class="sh">4개의 전이(bridge)</h3><ol class="steps n4"><li><span class="sn">1</span><b>착상→보육</b><p>관심과 지지 확보(이해관계자 설득)</p></li><li><span class="sn">2</span><b>보육→시연</b><p>시연에 필요한 자원·자금 동원</p></li><li><span class="sn">3</span><b>시연→촉진</b><p>시장 참여자(고객·유통) 동원</p></li><li><span class="sn">4</span><b>촉진→지속</b><p>보완자산 확보로 공급 체계화</p></li></ol></div><footer class="sl-f"><span>13-2 기술사업화의 개념과 단계모형</span><span class="num">12 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Jolly(1997)는 단계 자체보다 단계 사이를 잇는 전이를 강조한다. 각 전이에서 다음 단계에 필요한 이해관계자를 만족시키고 자원을 동원해야 넘어갈 수 있다. 예: 실험실 시제품이 좋아도 시연 자금을 댈 투자자나 내부 경영진을 설득하지 못하면 거기서 멈춘다. 사업화 계획을 세울 때 단계별 &#x27;누구를 설득해 무엇을 얻을지&#x27;를 따로 적어 두면 유용하다.</p></div></div><div class="slot" id="s13" data-lec="13-2"><article class="slide ty-paper" aria-label="13 / 55"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Jolly (1997)</h3><p class="pp-q">신기술은 어떤 과정을 거쳐 시장 가치로 전환되는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>사업화는 착상·보육·시연·촉진·지속 5단계로 진행되며, 단계 사이 4개 전이에서 이해관계자를 충족시키고 자원을 동원해야 다음 단계로 넘어간다.</p><div class="pp-cs"><span class="pp-c">5단계 4전이</span><span class="pp-c">이해관계자 충족</span><span class="pp-c">자원 동원</span><span class="pp-c">피드포워드·피드백</span></div></div><div><b>강의와의 연결</b><p>13-2 p.16: 비선형 단계모형의 대표로 소개, 단계 간 &#x27;전이&#x27;의 이해관계자·자원동원 역할 강조</p><b>보충 설명</b><p>단계별 활동(R·D·E·MF·MA)이 겹쳐 진행되는 비선형 구조. 실패는 기술보다 전이 단계에서 지지자·자금을 못 모아 생기는 경우가 많다는 실무적 시사점을 준다.</p></div></div><p class="pp-cite">Jolly, V. K. (1997). Commercializing new technologies: Getting from mind to market. Boston, MA: Harvard Business School Press. </p></div><footer class="sl-f"><span>13-2 기술사업화의 개념과 단계모형</span><span class="num">13 / 55</span></footer></article></div><div class="slot" id="s14" data-lec="13-2"><article class="slide ty-stat" aria-label="14 / 55"><div class="sl-in"><h3 class="sh">단계별 생존율</h3><div class="stat"><p class="st-v">3000:1</p><p class="st-l">원시 아이디어 대 시장 성공 제품</p><p class="st-t">300→125→9→4→1.7→1로 급감, 누적비용은 후반에 급증</p></div></div><footer class="sl-f"><span>13-2 기술사업화의 개념과 단계모형</span><span class="num">14 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Stevens &amp; Burley(1997)는 원시 아이디어 약 3,000개가 제출 아이디어 300개, 소규모 프로젝트 125개, 초기 개발 9개, 본격 개발 4개, 출시 1.7개를 거쳐 1개의 상업적 성공이 된다고 정리했다. 초기 단계는 건당 비용이 작고 후기 단계는 매우 크다. 따라서 아이디어는 싸게 많이 시험하고, 비싼 개발 단계 전에 과감히 걸러내는 것이 합리적이다.</p></div></div><div class="slot" id="s15" data-lec="13-2"><article class="slide ty-paper" aria-label="15 / 55"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Stevens &amp; Burley (1997)</h3><p class="pp-q">원시 아이디어 몇 개가 있어야 상업적 성공 1건이 나오는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>특허·VC·신제품 데이터를 종합하면 원시 아이디어 약 3,000개가 단계별로 걸러져 시장에서 성공하는 제품 1개가 된다는 &#x27;산업 성공 곡선&#x27;이 나타난다.</p><div class="pp-cs"><span class="pp-c">성공 곡선</span><span class="pp-c">단계별 생존율</span><span class="pp-c">아이디어 깔때기</span></div></div><div><b>강의와의 연결</b><p>13-2 p.17: 3,000 원시 아이디어→300→125→9→4→1.7→1, 누적비용은 후반에 급증</p><b>보충 설명</b><p>초기 아이디어 단계는 싸고 후기 단계는 비싸므로, 초기에 많이 시도하고 빨리 걸러내는 것이 비용 효율적이라는 포트폴리오 관리 논리의 근거로 널리 인용된다.</p></div></div><p class="pp-cite">Stevens, G. A., &amp; Burley, J. (1997). 3,000 raw ideas = 1 commercial success! Research-Technology Management, 40(3), 16–27. </p></div><footer class="sl-f"><span>13-2 기술사업화의 개념과 단계모형</span><span class="num">15 / 55</span></footer></article></div><div class="slot" id="s16" data-lec="13-2"><article class="slide ty-takeaway" aria-label="16 / 55"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>기술사업화 = 기술로 제품을 개발·생산·판매하거나 관련 기술을 향상시키는 것</li><li>Jolly: 5단계 사이 4개의 전이에서 이해관계자와 자원을 동원해야 한다</li><li>원시 아이디어 약 3,000개 중 1개만 상업적으로 성공한다</li><li>비용은 후반 단계에서 급증하므로 초기에 싸게 많이 시도하고 빨리 거른다</li></ul></div><footer class="sl-f"><span>13-2 기술사업화의 개념과 단계모형</span><span class="num">16 / 55</span></footer></article></div><div class="slot" id="s17" data-lec="13-3"><article class="slide ty-title" aria-label="17 / 55"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · 기술사업화</p><p class="t-no">13-3</p><h2 class="t-title">무엇을 사업화할까: 역량·가치평가</h2><p class="t-thesis">핵심역량에서 출발해 기술가치와 사업성을 숫자로</p></div></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">17 / 55</span></footer></article></div><div class="slot" id="s18" data-lec="13-3"><article class="slide ty-points" aria-label="18 / 55"><div class="sl-in"><h3 class="sh">핵심역량의 중요성</h3><div class="pts n4"><div class="pt"><b>다각화 근간</b><p>사업다각화의 논리 제공, 사업구조 재구성</p></div><div class="pt"><b>자원배분·학습</b><p>투자 우선순위 설정, 구성원 역량 인식 공유</p></div><div class="pt"><b>기술개발 방향</b><p>제조업 핵심역량 획득을 위한 R&amp;D 방향 제시</p></div><div class="pt"><b>경영의 근원 질문</b><p>발전적 경영을 위한 근본 물음에 답 제시</p></div></div></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">18 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Prahalad &amp; Hamel(1990)은 핵심역량을 경쟁자와 구별되는 기술·특성·자산으로, 혁신의 연료이자 경쟁우위의 뿌리로 본다. 핵심역량을 정의하면 어떤 사업으로 다각화할지, 어디에 먼저 투자할지, 어떤 기술을 개발할지가 정해진다. 판별 기준은 여러 시장에 쓰일 수 있는가, 고객 가치에 크게 기여하는가, 모방이 어려운가이다.</p></div></div><div class="slot" id="s19" data-lec="13-3"><article class="slide ty-paper" aria-label="19 / 55"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Prahalad &amp; Hamel (1990)</h3><p class="pp-q">기업은 사업부가 아니라 무엇을 중심으로 성장해야 하나?</p><div class="pp-g"><div><b>핵심 주장</b><p>경쟁력의 뿌리는 사업부 포트폴리오가 아니라 여러 제품에 걸쳐 쓰이는 핵심역량이다. 핵심역량→핵심제품→최종제품의 나무 구조로 성장한다.</p><div class="pp-cs"><span class="pp-c">핵심역량</span><span class="pp-c">핵심제품</span><span class="pp-c">역량의 나무</span></div></div><div><b>강의와의 연결</b><p>13-3 p.19-21: 핵심역량은 혁신의 연료·경쟁우위의 뿌리, 다각화·자원배분·기술개발 방향 제시</p><b>보충 설명</b><p>핵심역량의 판별 기준 3가지: 여러 시장에 접근 가능, 고객 효익에 크게 기여, 경쟁자가 모방하기 어려움. NEC·Canon·Honda(엔진) 사례로 설명했다.</p></div></div><p class="pp-cite">Prahalad, C. K., &amp; Hamel, G. (1990). The core competence of the corporation. Harvard Business Review, 68(3), 79–91. </p></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">19 / 55</span></footer></article></div><div class="slot" id="s20" data-lec="13-3"><article class="slide ty-case" aria-label="20 / 55"><div class="sl-in"><p class="ca-k">사례 · 핵심역량 식별</p><h3 class="sh">아이폰과 애플의 핵심역량</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>2007년 이전 휴대폰 시장은 버튼식 기기 중심이었고 여러 제조사가 기능 경쟁을 했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>애플은 하드웨어·소프트웨어 통합과 심플하고 세련된 디자인을 결합해 터치스크린 아이폰을 내놓았다.</p></div><div class="ca-b ca-result"><i>결과</i><p>아이폰은 스마트폰 시장의 기준을 바꾼 혁신제품이 됐고, 같은 역량이 이후 제품군으로 이어졌다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>핵심역량은 단일 제품이 아니라 여러 제품에 반복해 쓰이는 능력이다.</p></div></div></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">20 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.21)는 &#x27;우리의 핵심역량은?&#x27;이라는 질문에 아이폰, 혁신제품, 심플하고 세련된 디자인을 예로 든다. 애플의 역량은 특정 부품이 아니라 디자인과 사용자 경험을 통합하는 능력이며, 이는 아이팟·아이폰·아이패드에 반복 적용됐다. 자기 조직의 역량을 정의할 때 &#x27;이 능력이 다른 제품에도 쓰일 수 있는가&#x27;를 확인하면 단순 강점과 핵심역량을 구분할 수 있다.</p></div></div><div class="slot" id="s21" data-lec="13-3"><article class="slide ty-compare" aria-label="21 / 55"><div class="sl-in"><h3 class="sh">기술가치평가 3가지 접근법</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">시장접근법</b><ul><li>유사기술 거래가치와 비교</li><li>활성 거래시장·거래정보 필요</li><li>차이는 적절히 조정</li></ul></div><div class="cp-col"><b class="cp-h">수익접근법</b><ul><li>경제적 이익을 현재가치로 할인</li><li>경제적 수명·현금흐름</li><li>할인율·기술기여도 추정</li></ul></div><div class="cp-col"><b class="cp-h">원가접근법</b><ul><li>동일 효익 기술의 개발·구입 원가</li><li>대체의 경제 원리</li><li>재생산·대체원가 정보 필요</li></ul></div></div><p class="cp-note">기술평가: 기술의 경제적 가치를 가액·등급·점수로 표현</p></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">21 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>기술평가는 이전·거래 가격, 담보·투자유치, 현물출자, 소송, 세무, 특례상장 등에 쓰인다(산업통상자원부 2017). 수익접근법이 가장 많이 쓰이며, 예: 기술 덕에 5년간 매년 10억 이익이 나고 기술기여도가 30%면 매년 3억을 할인율로 현재가치화해 더한다(예시). 시장접근법은 비교 거래가 있어야 하고, 업종·수익성·법적 보호범위 등 조건이 비슷해야 쓸 수 있다.</p></div></div><div class="slot" id="s22" data-lec="13-3"><article class="slide ty-equation" aria-label="22 / 55"><div class="sl-in"><h3 class="sh">원가접근법 산식</h3><p class="eq">기술가치 = 대체비용 - 진부화·감소분</p><div class="eq-ts"><div class="eq-t"><b>대체비용</b><p>같은 효익의 기술을 새로 확보하는 원가</p></div><div class="eq-t"><b>물리적 감소</b><p>사용에 따른 가치 감소</p></div><div class="eq-t"><b>기능·경제적</b><p>성능 열위·시장 여건 악화로 인한 진부화</p></div></div><p class="eq-rule">초기단계 기술일수록 원가법, 상용화 단계는 시장·수익법</p></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">22 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>원가접근법은 &#x27;같은 효익의 기술을 지금 다시 만들거나 사려면 얼마가 드는가&#x27;로 가치를 잰다. 예: 대체비용 10억에서 물리적 감소 1억, 기능적 진부화 2억, 경제적 진부화 1억을 빼면 기술가치는 6억이다(예시). 매출 실적이 없는 초기 기술에 쓸 수 있지만, 원가가 미래 수익을 반영하지 못하므로 정확도는 낮다.</p></div></div><div class="slot" id="s23" data-lec="13-3"><article class="slide ty-steps" aria-label="23 / 55"><div class="sl-in"><h3 class="sh">가치 단계별 평가방법</h3><ol class="steps n4"><li><span class="sn">1</span><b>초기단계</b><p>재생원가법 (정확도 낮음)</p></li><li><span class="sn">2</span><b>개발 중</b><p>대체원가법 / 로열티공제법</p></li><li><span class="sn">3</span><b>개발완료</b><p>수익접근법 / 시장접근법</p></li><li><span class="sn">4</span><b>상용화</b><p>시장접근법 / 수익접근법 (정확도 높음)</p></li></ol></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">23 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>기술이 성숙할수록 쓸 수 있는 정보가 많아져 평가 정확도가 높아진다. 초기에는 들어간 원가 외에 근거가 없어 재생원가법을 쓰고, 개발 중에는 대체원가나 로열티공제법을 쓴다. 로열티공제법은 &#x27;이 기술을 빌려 쓴다면 낼 로열티&#x27;를 아낀 금액으로 가치를 추정한다. 개발완료·상용화 단계에는 실제 현금흐름과 거래 사례가 있어 수익·시장 접근법을 쓴다.</p></div></div><div class="slot" id="s24" data-lec="13-3"><article class="slide ty-equation" aria-label="24 / 55"><div class="sl-in"><h3 class="sh">사업성 판단: NPV·IRR·B/C</h3><p class="eq">NPV = 유입 현가 − 유출 현가</p><div class="eq-ts"><div class="eq-t"><b>NPV</b><p>&gt; 0 이면 채택</p></div><div class="eq-t"><b>IRR</b><p>NPV=0 수익률 &gt; 할인율이면 채택</p></div><div class="eq-t"><b>B/C Ratio</b><p>편익 ÷ 비용 &gt; 1 이면 채택</p></div></div><p class="eq-rule">모든 전제사항을 표시, 시장 규모는 확산비율로 추정</p></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">24 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>예: 지금 100억을 투자해 1년 뒤 121억을 받는다면, 할인율 10%에서 유입 현가는 110억이라 NPV는 +10억이고 채택한다. IRR은 NPV를 0으로 만드는 수익률로 여기서는 21%이며 할인율 10%보다 크다(예시). B/C는 110÷100=1.1이다. 슬라이드(p.30)는 시장 크기·점유율을 알 수 없을 때 확산비율로 추정하고 모든 전제를 표시하라고 강조한다.</p></div></div><div class="slot" id="s25" data-lec="13-3"><article class="slide ty-equation" aria-label="25 / 55"><div class="sl-in"><h3 class="sh">할인율의 기준: WACC</h3><p class="eq">WACC = 부채비중×이자율 + 자본비중×Ke</p><div class="eq-ts"><div class="eq-t"><b>이자율</b><p>부채의 자본비용</p></div><div class="eq-t"><b>Ke</b><p>자기자본비용(채권수익률+프리미엄)</p></div><div class="eq-t"><b>채택 기준</b><p>기대수익률 &gt; WACC</p></div></div><p class="eq-rule">예: 0.6×7% + 0.4×15% = 10.2%</p></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">25 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>WACC는 돈을 댄 채권자와 주주가 요구하는 수익률의 가중평균이다. 자산 1,000 중 부채 600(이자 7%), 자본 400(자기자본비용 15%)이면 WACC는 10.2%이고, 기대수익률이 이보다 높은 사업만 채택한다. 자기자본비용은 부채비용보다 높으므로 부채비율을 지나치게 줄이면 WACC가 오히려 오르고 투자가 위축된다. 슬라이드는 부채를 잘 활용하는 기업가 정신을 강조한다.</p></div></div><div class="slot" id="s26" data-lec="13-3"><article class="slide ty-takeaway" aria-label="26 / 55"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>무엇을 사업화할지는 핵심역량에서 출발한다</li><li>기술가치평가는 시장·수익·원가 접근법 중 기술 단계에 맞는 것을 쓴다</li><li>사업성은 NPV&gt;0, IRR&gt;할인율, B/C&gt;1, 기대수익률&gt;WACC로 판단한다</li><li>시장 크기·점유율을 모르면 전제사항을 모두 명시하고 확산비율로 추정한다</li></ul></div><footer class="sl-f"><span>13-3 무엇을 사업화할까: 역량·가치평가</span><span class="num">26 / 55</span></footer></article></div><div class="slot" id="s27" data-lec="13-4"><article class="slide ty-title" aria-label="27 / 55"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · 기술사업화</p><p class="t-no">13-4</p><h2 class="t-title">어떻게 육성할까: 개방형·사내벤처</h2><p class="t-thesis">안팎의 자원을 연결해 혁신 비용을 낮추고 매출을 넓힌다</p></div></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">27 / 55</span></footer></article></div><div class="slot" id="s28" data-lec="13-4"><article class="slide ty-compare" aria-label="28 / 55"><div class="sl-in"><h3 class="sh">폐쇄형 vs 개방형 혁신 원리</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">폐쇄형</b><ul><li>똑똑한 인재는 모두 우리 회사에</li><li>직접 발명·개발·판매</li><li>먼저 시장에 내놓아야 승리</li><li>내부 IP로 경쟁자 차단</li></ul></div><div class="cp-col"><b class="cp-h">개방형</b><ul><li>내외부 인재와 함께 일함</li><li>외부 R&amp;D도 큰 가치 창출</li><li>더 나은 BM 구축이 더 중요</li><li>IP를 팔고 사서 수익 창출</li></ul></div></div><p class="cp-note">제품수명 단축 + 혁신비용 증가 → 폐쇄형의 한계</p></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">28 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Chesbrough(2006)에 따르면 폐쇄형 혁신은 연구부터 판매까지 모두 내부에서 하는 모델이다. 그런데 개발비는 오르고 제품수명은 짧아져, 같은 투자로 회수할 수 있는 수익이 줄었다. 개방형 혁신은 외부 기술을 들여와 개발 비용과 시간을 줄이고(내향형), 쓰지 않는 기술을 라이선싱·분사로 내보내 새 매출을 만든다(외향형). 핵심은 기술보다 BM이다.</p></div></div><div class="slot" id="s29" data-lec="13-4"><article class="slide ty-paper" aria-label="29 / 55"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Chesbrough (2006a)</h3><p class="pp-q">폐쇄형 혁신이 왜 한계에 부딪혔고 개방형은 어떻게 다른가?</p><div class="pp-g"><div><b>핵심 주장</b><p>제품수명 단축과 혁신비용 증가로 폐쇄형 모델은 수익이 압박받는다. 외부 자원으로 비용을 줄이고 라이선싱·분사·매각으로 신규 매출을 내는 개방형 BM이 필요하다.</p><div class="pp-cs"><span class="pp-c">폐쇄형 vs 개방형</span><span class="pp-c">내향형·외향형</span><span class="pp-c">비즈니스 모델</span><span class="pp-c">Spin-off</span></div></div><div><b>강의와의 연결</b><p>13-4 p.33-36: 폐쇄형/개방형 비용-수익 구조와 기본 원리(김석관 2008 정리), 13-6 p.56 BM 정의</p><b>보충 설명</b><p>Chesbrough(2003) 개방형 혁신을 BM 관점으로 확장. 핵심은 기술 자체가 아니라 그 기술을 시장에 연결하는 BM이 가치를 결정한다는 것. 슬라이드의 &#x27;2006a&#x27; 표기는 김석관(2008) 인용 기준.</p></div></div><p class="pp-cite">Chesbrough, H. W. (2006). Open business models: How to thrive in the new innovation landscape. Boston, MA: Harvard Business School Press. </p></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">29 / 55</span></footer></article></div><div class="slot" id="s30" data-lec="13-4"><article class="slide ty-cases" aria-label="30 / 55"><div class="sl-in"><h3 class="sh">개방형 혁신의 유형</h3><div class="css n3"><div class="cs"><b>내향형(Inbound)</b><p>기술구매·공동연구·벤처투자·기업인수</p></div><div class="cs"><b>외향형(Outbound)</b><p>기술판매(라이선싱), 분사(spin-off)</p></div><div class="cs"><b>연계형</b><p>내향·외향을 결합한 전략적 제휴</p></div></div></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">30 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>김석관(2008)은 Chesbrough의 이론을 정리하며 개방형 혁신을 기술이 들어오는 방향(내향형)과 나가는 방향(외향형)으로 나눈다. 내향형은 외부 아이디어와 기술을 사거나 함께 개발해 내부 R&amp;D를 보완한다. 외향형은 자사에서 쓰지 않는 특허를 팔거나 별도 회사로 분사해 가치를 회수한다. 실무에서는 자사의 기술 포트폴리오 중 무엇을 들이고 무엇을 내보낼지부터 정한다.</p></div></div><div class="slot" id="s31" data-lec="13-4"><article class="slide ty-case" aria-label="31 / 55"><div class="sl-in"><p class="ca-k">사례 · 내향형 개방 혁신</p><h3 class="sh">P&amp;G Connect + Develop</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>2000년경 P&amp;G는 내부 R&amp;D만으로는 성장에 필요한 혁신 속도와 생산성을 내기 어려웠다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>외부 아이디어를 &#x27;연결&#x27;해 내부에서 &#x27;개발&#x27;하는 C&amp;D를 도입하고 신제품의 절반을 외부에서 찾는 목표를 세웠다.</p></div><div class="ca-b ca-result"><i>결과</i><p>외부 기술을 활용한 신제품 비중이 크게 늘고 R&amp;D 생산성이 높아졌다. 개방형 혁신의 대표 사례가 됐다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>R&amp;D(Research &amp; Develop)를 C&amp;D(Connect &amp; Develop)로 바꾸면 외부가 연구소가 된다.</p></div></div></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">31 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.37-38)는 P&amp;G의 C&amp;D를 개방형 로드맵 사례로 다룬다(전정환 외 2012). 대표 예로 감자칩에 그림을 인쇄한 프링글스 제품이 있는데, 필요한 식용 잉크 인쇄 기술을 외부(이탈리아의 한 제과업체)에서 찾아 개발 기간을 줄였다. 핵심은 외부 기술을 찾는 조직과 네트워크, 그리고 필요 기술을 미리 정리한 로드맵을 갖추는 것이다.</p></div></div><div class="slot" id="s32" data-lec="13-4"><article class="slide ty-tree" aria-label="32 / 55"><div class="sl-in"><h3 class="sh">사내벤처(ICV) 유형</h3><div class="tree"><div class="tr-r">사내벤처</div><div class="tr-cs n3"><div class="tr-c"><b>사내기업형</b><p>핵심사업 연관, 이관 후 보상·분사</p></div><div class="tr-c"><b>별도법인형</b><p>자회사 또는 비계열사로 분사</p></div><div class="tr-c"><b>사업제안형</b><p>아이디어만 제안, 회사가 추진</p></div></div></div></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">32 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>사내벤처는 기존 사업과 다른 분야를 개척하기 위해 기업 안에 자율적·독립적 조직을 두는 제도다(중기벤처부 2016). 목적은 다각화, 신사업 활성화, 인재 유출 방지, 창의적 문화 형성 등이다. 유형은 사업과 핵심사업의 연관성, 제안자의 경영 의지로 갈린다. 연관성이 크면 사내기업형, 독립 의지가 강하면 별도법인형, 아이디어만 있으면 사업제안형이 맞다.</p></div></div><div class="slot" id="s33" data-lec="13-4"><article class="slide ty-compare" aria-label="33 / 55"><div class="sl-in"><h3 class="sh">사내벤처 성패 요인</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">성공요인</b><ul><li>모기업 자금조달·전략개발</li><li>본사자원 활용·운영참여</li><li>비즈니스 시너지</li></ul></div><div class="cp-col"><b class="cp-h">실패요인</b><ul><li>모기업 전문성 부족</li><li>프로세스 비효율·복잡한 권력구조</li><li>자원부족, 상충된 목표</li></ul></div></div><p class="cp-note">같은 모기업의 관여가 지원도 되고 방해도 된다</p></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">33 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>성공요인과 실패요인은 모두 모기업과의 관계에서 나온다. 자금·전략·본사 자원을 지원받고 시너지를 내면 성공 확률이 높다. 반대로 모기업의 승인 절차가 느리거나, 여러 부서가 간섭하거나, 기존 사업과 목표가 충돌하면 실패한다. 설계할 때는 &#x27;자원은 연결하고 의사결정은 분리한다&#x27;는 원칙으로 독립적인 결재 라인과 예산을 주는 것이 핵심이다.</p></div></div><div class="slot" id="s34" data-lec="13-4"><article class="slide ty-compare" aria-label="34 / 55"><div class="sl-in"><h3 class="sh">사내벤처 결과조치</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">독립분사</b><ul><li>성장성·창업의지·전략 판단</li><li>휴직·퇴사 지원, 3~5년 복귀 보장</li><li>직접 또는 CVC 투자, IP 양도</li></ul></div><div class="cp-col"><b class="cp-h">사내사업화</b><ul><li>내부 추진이 시너지가 클 때</li><li>원소속 복귀 또는 신사업 부서</li><li>기여도 보상, 영업이익 성과급</li></ul></div><div class="cp-col"><b class="cp-h">완료·실패</b><ul><li>시장성이 없는 경우</li><li>프로젝트 완료·실패만 판단</li></ul></div></div></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">34 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>사내벤처 운영 매뉴얼(2016)은 결과를 세 가지로 정리한다. 독립분사는 성장 가능성과 팀의 창업 의지가 크고 회사도 분사가 전략적으로 유리할 때 택한다. 이때 복귀 보장과 투자가 참여자의 위험을 줄인다. 사내사업화는 내부 시너지가 클 때 택하며 성과급으로 보상한다. 실패해도 복귀할 수 있어야 우수 인재가 도전하므로, 출구 설계가 제도 성공의 핵심이다.</p></div></div><div class="slot" id="s35" data-lec="13-4"><article class="slide ty-case" aria-label="35 / 55"><div class="sl-in"><p class="ca-k">사례 · 대기업 사내벤처</p><h3 class="sh">삼성전자 C-Lab</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>대기업 내부에서는 창의적 아이디어가 기존 사업 논리와 절차에 묻히기 쉬웠다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>2012년 사내벤처 프로그램 C-Lab을 열어 임직원 과제를 선발하고 독립 조직·자금을 주며, 일부를 분사시켰다.</p></div><div class="ca-b ca-result"><i>결과</i><p>다수 과제가 독립 기업으로 분사하거나 사내 사업으로 이어졌고, 이후 외부 신생기업 지원으로도 확대했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>선발→독립 운영→분사·사내사업화의 경로와 복귀 보장이 제도화되어야 사내벤처가 지속된다.</p></div></div></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">35 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.47-48)는 삼성전자와 SK의 사내벤처 운영을 국내 사례로 소개한다(2019 보고서). 삼성 C-Lab은 앞 슬라이드의 결과조치(독립분사·사내사업화·복귀 보장)를 실제 제도로 구현한 예다. 회사는 분사 기업에 지분 투자를 하며 외부 혁신과 연결 고리를 유지한다. 사내벤처를 설계할 때 이런 선발·육성·출구 구조를 벤치마킹할 수 있다.</p></div></div><div class="slot" id="s36" data-lec="13-4"><article class="slide ty-takeaway" aria-label="36 / 55"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>제품수명 단축과 혁신비용 증가로 폐쇄형 혁신은 한계에 부딪혔다</li><li>개방형 혁신은 외부 기술로 비용을 낮추고 라이선싱·분사로 매출을 넓힌다</li><li>사내벤처는 사내기업형·별도법인형·사업제안형으로 운영된다</li><li>사내벤처 결과는 독립분사, 사내사업화, 단순 완료·실패로 정리한다</li></ul></div><footer class="sl-f"><span>13-4 어떻게 육성할까: 개방형·사내벤처</span><span class="num">36 / 55</span></footer></article></div><div class="slot" id="s37" data-lec="13-5"><article class="slide ty-title" aria-label="37 / 55"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · 기술사업화</p><p class="t-no">13-5</p><h2 class="t-title">넘어야 할 산: Death Valley·Chasm</h2><p class="t-thesis">초기수용자에서 주류시장으로 건너가야 사업이 된다</p></div></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">37 / 55</span></footer></article></div><div class="slot" id="s38" data-lec="13-5"><article class="slide ty-compare" aria-label="38 / 55"><div class="sl-in"><h3 class="sh">사업화의 두 산</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Death Valley</b><ul><li>연구 성과와 제품 사이</li><li>개발비는 급증, 매출은 아직 0</li><li>자원·자금 공백</li></ul></div><div class="cp-col"><b class="cp-h">Chasm</b><ul><li>초기시장과 주류시장 사이</li><li>구매자 집단이 바뀜</li><li>수요의 단절</li></ul></div></div><p class="cp-note">기술 쪽 산(공급)과 시장 쪽 산(수요)을 모두 넘어야 한다</p></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">38 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.49)는 &#x27;넘어야 할 산&#x27;으로 Death Valley를 제시하고 이어 수요 측 확산과 캐즘을 다룬다. Death Valley는 연구 성과가 나온 뒤 시제품·양산으로 가는 동안 비용은 커지는데 매출이 없어 자금이 끊기는 구간이다. Stevens &amp; Burley(1997)의 후반 비용 급증과 같은 지점이다. 캐즘은 제품이 나온 뒤 초기 고객에서 주류 고객으로 넘어가는 시장 쪽 단절이다.</p></div></div><div class="slot" id="s39" data-lec="13-5"><article class="slide ty-scurve" aria-label="39 / 55"><div class="sl-in"><h3 class="sh">혁신 확산과 Chasm</h3><div class="dia"><svg viewBox="0 0 600 340" role="img" aria-label="S-curve"><line x1="60" y1="300" x2="580" y2="300" class="ax"/><line x1="60" y1="300" x2="60" y2="30" class="ax"/><text x="580" y="322" text-anchor="end" class="axl">시간 · 투입 노력</text><text x="66" y="26" class="axl">성과</text><path d="M70.0,289.2 L77.2,289.0 L84.5,288.7 L91.8,288.3 L99.0,287.8 L106.2,287.2 L113.5,286.5 L120.8,285.5 L128.0,284.3 L135.2,282.8 L142.5,280.9 L149.8,278.6 L157.0,275.7 L164.2,272.2 L171.5,268.1 L178.8,263.3 L186.0,257.7 L193.2,251.5 L200.5,244.7 L207.8,237.5 L215.0,230.0 L222.2,222.5 L229.5,215.3 L236.8,208.5 L244.0,202.3 L251.2,196.7 L258.5,191.9 L265.8,187.8 L273.0,184.3 L280.2,181.4 L287.5,179.1 L294.8,177.2 L302.0,175.7 L309.2,174.5 L316.5,173.5 L323.8,172.8 L331.0,172.2 L338.2,171.7 L345.5,171.3 L352.8,171.0 L360.0,170.8" class="s1"/><text x="250" y="160" class="sl">초기시장</text><path d="M260.0,258.6 L267.8,258.2 L275.5,257.7 L283.2,257.0 L291.0,256.2 L298.8,255.2 L306.5,253.8 L314.2,252.2 L322.0,250.0 L329.8,247.4 L337.5,244.1 L345.2,240.0 L353.0,235.0 L360.8,228.9 L368.5,221.7 L376.2,213.2 L384.0,203.5 L391.8,192.6 L399.5,180.7 L407.2,168.1 L415.0,155.0 L422.8,141.9 L430.5,129.3 L438.2,117.4 L446.0,106.5 L453.8,96.8 L461.5,88.3 L469.2,81.1 L477.0,75.0 L484.8,70.0 L492.5,65.9 L500.2,62.6 L508.0,60.0 L515.8,57.8 L523.5,56.2 L531.2,54.8 L539.0,53.8 L546.8,53.0 L554.5,52.3 L562.2,51.8 L570.0,51.4" class="s2"/><text x="560" y="44" text-anchor="end" class="sl s2l">주류시장</text><path d="M 330 178 C 345 150, 360 140, 372 128" class="jump"/><text x="378" y="138" class="jl">Jump</text></svg></div><p class="cp-note">기술사업화 주요 영역은 혁신자·초기수용자와 전기다수 사이</p></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">39 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Rogers(1962)는 혁신 채택자를 혁신자 2.5%, 초기수용자 13.5%, 전기다수 34%, 후기다수 34%, 지체자 16%로 나눈다. 채택자를 누적하면 S자 확산곡선이 된다. 슬라이드(p.51)는 기술사업화의 주요 영역이 불확실성이 큰 초기 구간이라 계층 간 구분이 뚜렷하고 캐즘이 더 부각된다고 본다. 누적 채택률 약 16%가 초기시장의 끝이다.</p></div></div><div class="slot" id="s40" data-lec="13-5"><article class="slide ty-paper" aria-label="40 / 55"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Rogers (1962)</h3><p class="pp-q">혁신은 사회 구성원들 사이에 어떤 경로로 확산되는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>혁신 채택은 정규분포를 따르며 혁신자·초기수용자·전기다수·후기다수·지체자로 나뉜다. 누적 채택은 S자 곡선을 그린다.</p><div class="pp-cs"><span class="pp-c">채택자 범주</span><span class="pp-c">S자 확산</span><span class="pp-c">초기수용자</span></div></div><div><b>강의와의 연결</b><p>13-5 p.50-51: 수요 관점 확산 곡선, 초기시장과 주류시장 사이 Chasm 위치</p><b>보충 설명</b><p>확산 속도는 상대적 이점·호환성·복잡성·시험가능성·관찰가능성에 좌우된다. Moore(1991)는 이 곡선 위에 초기수용자와 전기다수 사이의 단절(Chasm)을 추가했다.</p></div></div><p class="pp-cite">Rogers, E. M. (1962). Diffusion of innovations. New York: Free Press. </p></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">40 / 55</span></footer></article></div><div class="slot" id="s41" data-lec="13-5"><article class="slide ty-compare" aria-label="41 / 55"><div class="sl-in"><h3 class="sh">확산 곡선의 세 단절</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">혁신자→초기수용자</b><ul><li>원인: 잠재 가치·용도 불분명</li><li>극복: 확실한 활용성 제시</li></ul></div><div class="cp-col"><b class="cp-h">초기수용자→전기다수</b><ul><li>원인: 두 계층 가치관 차이</li><li>극복: 쉽지 않음 (Chasm)</li></ul></div><div class="cp-col"><b class="cp-h">전기→후기다수</b><ul><li>원인: 기능보강·가격인하 실패</li><li>극복: 가격·납기 단축, 기능 개선</li></ul></div></div></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">41 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.51)는 확산 곡선에 단절이 세 군데 있다고 본다. 첫째는 신기술의 쓸모가 분명히 보이지 않을 때로, 확실한 활용 사례를 보여줘야 한다. 셋째는 가격 인하와 기능 보강이 안 될 때로, 비용·납기·기능 개선으로 넘는다. 가장 깊은 둘째 단절이 캐즘이다. 자기 제품이 어느 단절 앞에 있는지 진단하면 처방이 달라진다.</p></div></div><div class="slot" id="s42" data-lec="13-5"><article class="slide ty-compare" aria-label="42 / 55"><div class="sl-in"><h3 class="sh">선구자 vs 실용주의자</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">초기수용자(선구자)</b><ul><li>변화와 비전을 산다</li><li>경쟁 우위를 위해 위험 감수</li><li>미완성 제품도 감수</li></ul></div><div class="cp-col"><b class="cp-h">전기다수(실용주의자)</b><ul><li>검증된 개선을 산다</li><li>같은 업계의 레퍼런스 중시</li><li>품질·AS·안심을 요구</li></ul></div></div><p class="cp-note">서로 다른 시점에, 서로 다른 이유로 구매한다</p></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">42 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Moore(1991)에 따르면 캐즘의 원인은 두 집단의 가치관 차이다. 선구자는 남보다 먼저 혁신을 써서 도약하려 하므로 불완전한 제품도 산다. 실용주의자는 검증된 개선을 원하고 같은 업계의 다른 실용주의자가 쓰는지를 확인한다. 그래서 선구자의 성공 사례가 실용주의자에게는 설득력이 없다. 초기 매출이 좋다가 갑자기 정체되는 현상이 여기서 생긴다.</p></div></div><div class="slot" id="s43" data-lec="13-5"><article class="slide ty-paper" aria-label="43 / 55"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Moore (1991)</h3><p class="pp-q">첨단제품은 왜 초기시장에서 주류시장으로 못 넘어가나?</p><div class="pp-g"><div><b>핵심 주장</b><p>초기수용자(선구자)와 전기다수(실용주의자)는 구매 이유가 달라 그 사이에 깊은 단절(캐즘)이 있다. 틈새 하나를 장악하고 완비제품을 갖춰야 건넌다.</p><div class="pp-cs"><span class="pp-c">Chasm</span><span class="pp-c">실용주의자</span><span class="pp-c">Whole product</span><span class="pp-c">Bowling Alley</span></div></div><div><b>강의와의 연결</b><p>13-5 p.51-52: 두 집단의 가치관 차이가 캐즘의 원인, 틈새 공략과 완전완비제품으로 극복</p><b>보충 설명</b><p>후속작 Inside the Tornado(1995)에서 Bowling Alley→Tornado→Main Street 단계를 제시. 실용주의자는 같은 집단의 레퍼런스를 중시하므로 틈새에서의 연쇄 확산이 중요하다.</p></div></div><p class="pp-cite">Moore, G. A. (1991). Crossing the chasm: Marketing and selling technology products to mainstream customers. New York: HarperBusiness. </p></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">43 / 55</span></footer></article></div><div class="slot" id="s44" data-lec="13-5"><article class="slide ty-steps" aria-label="44 / 55"><div class="sl-in"><h3 class="sh">Chasm 극복 경로</h3><ol class="steps n4"><li><span class="sn">1</span><b>틈새 공략</b><p>주류시장 중 application niche 공략</p></li><li><span class="sn">2</span><b>Bowling Alley</b><p>틈새를 연쇄 공략, 완비제품까지 시간 확보</p></li><li><span class="sn">3</span><b>Tornado</b><p>실용주의자 집단이 움직이며 수요 급증</p></li><li><span class="sn">4</span><b>Main Street</b><p>완전완비제품(품질·AS·안심)으로 안착</p></li></ol></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">44 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.52)의 처방은 &#x27;실용주의자 집단을 만족시켜라&#x27;이다. 먼저 주류시장 안의 특정 용도 틈새 하나를 장악해 레퍼런스를 만든다. 볼링핀처럼 인접 틈새로 확산하며 완전완비제품을 갖출 시간을 번다. 완비제품이란 핵심 기능에 품질·AS·안심·믿음까지 갖춘 것이다. 흔한 실수는 여러 시장을 동시에 공략해 어디에서도 레퍼런스를 만들지 못하는 것이다.</p></div></div><div class="slot" id="s45" data-lec="13-5"><article class="slide ty-takeaway" aria-label="45 / 55"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>사업화에는 Death Valley(자원 공백)와 Chasm(시장 단절)이라는 산이 있다</li><li>기술사업화의 주요 영역은 혁신자·초기수용자와 전기다수 사이다</li><li>캐즘의 원인은 선구자와 실용주의자의 가치관 차이다</li><li>틈새시장을 공략해 시간을 벌고 완전완비제품으로 주류시장에 안착한다</li></ul></div><footer class="sl-f"><span>13-5 넘어야 할 산: Death Valley·Chasm</span><span class="num">45 / 55</span></footer></article></div><div class="slot" id="s46" data-lec="13-6"><article class="slide ty-title" aria-label="46 / 55"><div class="sl-in"><div class="t-wrap"><p class="t-wk">13주차 · 기술사업화</p><p class="t-no">13-6</p><h2 class="t-title">가치 창출: BM·사업계획·환경분석</h2><p class="t-thesis">BM과 사업계획서로 사업 논리를 설계하고 설득한다</p></div></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">46 / 55</span></footer></article></div><div class="slot" id="s47" data-lec="13-6"><article class="slide ty-concepts" aria-label="47 / 55"><div class="sl-in"><h3 class="sh">BM과 사업계획서</h3><div class="ccs n4"><div class="cc"><b>비즈니스 모델</b><p>무엇을 누구에게 어떻게 팔고 얼마나 벌지 설계</p></div><div class="cc"><b>Business Model Canvas</b><p>9 Block으로 BM을 한눈에 표현</p></div><div class="cc"><b>사업계획서</b><p>타당성을 분석하는 설계도, 타인 설득 도구</p></div><div class="cc"><b>사업계획서 용도</b><p>투자유치, 기술평가, 정책자금, 벤처 확인 등</p></div></div></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">47 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Chesbrough(2006)는 같은 기술도 어떤 BM에 담느냐에 따라 가치가 달라진다고 보고, BM을 기술사업화의 다양한 경로를 정하는 틀로 쓴다(p.56). 사업계획서는 그 BM의 타당성을 숫자와 근거로 보여주는 문서다. 용도는 운영 지침, 인허가, 엔젤·VC 투자유치, 기술평가, 정책자금 신청 등으로 다양하다. 읽는 사람에 따라 강조점을 바꿔 써야 한다.</p></div></div><div class="slot" id="s48" data-lec="13-6"><article class="slide ty-canvas" aria-label="48 / 55"><div class="sl-in"><h3 class="sh">BMC 예시: 카카오톡</h3><div class="bmc"><div class="bm b-kp"><i>KP</i><b>핵심 파트너</b><p>통신·콘텐츠·게임 파트너</p></div><div class="bm b-ka"><i>KA</i><b>핵심 활동</b><p>메신저 운영, 플랫폼 개발</p></div><div class="bm b-kr"><i>KR</i><b>핵심 자원</b><p>대규모 사용자 네트워크</p></div><div class="bm b-vp"><i>VP</i><b>가치 제안</b><p>무료 메시지·통화로 연결</p></div><div class="bm b-cr"><i>CR</i><b>고객 관계</b><p>무료·셀프서비스</p></div><div class="bm b-ch"><i>CH</i><b>채널</b><p>모바일 앱</p></div><div class="bm b-cs"><i>CS</i><b>고객 세그먼트</b><p>스마트폰 사용자, 광고주</p></div><div class="bm b-cost"><i>C$</i><b>비용 구조</b><p>서버·개발 인력</p></div><div class="bm b-rev"><i>R$</i><b>수익원</b><p>광고·선물하기·이모티콘</p></div></div></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">48 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.58)는 카카오를 9 Block BM의 예로 든다(블록 내용은 공개 정보로 정리한 예시). 핵심은 사용자에게는 메시지를 무료로 주고, 커진 네트워크 위에서 광고주·판매자 등 다른 고객에게서 돈을 버는 구조다. 앞 강의의 &#x27;한계비용 0, 네트워크가 자산&#x27;과 같은 논리다. BMC를 그릴 때는 가치제안(VP)과 고객(CS)을 먼저 채우고, 수익원(R$)이 누구에게서 나오는지 확인한다.</p></div></div><div class="slot" id="s49" data-lec="13-6"><article class="slide ty-compare" aria-label="49 / 55"><div class="sl-in"><h3 class="sh">환경분석 체계</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">거시 외부환경</b><ul><li>STEEP(PEST) 분석</li><li>정치·경제·사회·기술 동향</li></ul></div><div class="cp-col"><b class="cp-h">미시 외부환경</b><ul><li>산업 가치사슬 분석</li><li>경쟁자(5 forces)·이해관계자</li><li>현재·잠재 고객 니즈</li></ul></div><div class="cp-col"><b class="cp-h">내부 역량</b><ul><li>가치사슬·사업구조</li><li>재무·인적·생산·R&amp;D 역량</li></ul></div></div><p class="cp-note">외부 → 기회·위협, 내부 → 강점·약점 → SWOT</p></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">49 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.63)의 환경분석 체계다. 거시 환경은 STEEP(사회·기술·경제·환경·정치)으로 산업 전체에 영향을 주는 요인을 본다. 미시 환경은 산업 구조와 경쟁자, 고객을 본다. 두 외부 분석에서 기회와 위협이, 내부 역량 분석에서 강점과 약점이 나온다. 이 결과가 SWOT으로 모인다. 각 분석이 따로 놀지 않고 SWOT의 입력이 되도록 연결하는 것이 핵심이다.</p></div></div><div class="slot" id="s50" data-lec="13-6"><article class="slide ty-forces" aria-label="50 / 55"><div class="sl-in"><h3 class="sh">Five Forces: 자동차 산업</h3><div class="fos"><div class="fo fo-t"><b>신규 진입</b><p>대규모 설비투자가 진입장벽</p></div><div class="fo fo-l"><b>공급자</b><p>배터리·반도체 등 핵심부품사</p></div><div class="fo-c">완성차 간 경쟁</div><div class="fo fo-r"><b>구매자</b><p>선택지가 많아 가격 비교 쉬움</p></div><div class="fo fo-b"><b>대체재</b><p>대중교통·차량공유 등 이동수단</p></div></div></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">50 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>Porter(1979)에 따르면 산업의 수익성은 경쟁사뿐 아니라 다섯 힘이 함께 결정한다. 슬라이드(p.65)는 자동차 산업을 예로 든다(블록 내용은 일반적 예시). 진입장벽이 높아 신규 진입은 드물지만, 전기차처럼 기술이 바뀌면 장벽이 낮아질 수 있다. 핵심부품의 비중이 커지면 공급자 교섭력이 강해진다. 각 힘이 강한지 약한지를 판정해 기회·위협으로 옮긴다.</p></div></div><div class="slot" id="s51" data-lec="13-6"><article class="slide ty-paper" aria-label="51 / 55"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Porter (1979)</h3><p class="pp-q">산업의 수익성은 무엇이 결정하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>산업의 수익성은 기존 경쟁, 신규진입 위협, 대체재 위협, 공급자·구매자 교섭력의 다섯 힘이 결정한다. 전략은 이 힘에 맞서거나 활용하는 포지셔닝이다.</p><div class="pp-cs"><span class="pp-c">Five Forces</span><span class="pp-c">진입장벽</span><span class="pp-c">교섭력</span><span class="pp-c">포지셔닝</span></div></div><div><b>강의와의 연결</b><p>13-6 p.63-65: 미시 외부환경 분석에서 산업·경쟁자 분석 도구, 자동차 산업 사례</p><b>보충 설명</b><p>경쟁을 기존 경쟁사에 한정하지 않고 공급자·구매자·대체재·잠재진입자까지 넓힌 것이 핵심. 2008년 HBR에 개정판을 실었다.</p></div></div><p class="pp-cite">Porter, M. E. (1979). How competitive forces shape strategy. Harvard Business Review, 57(2), 137–145. </p></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">51 / 55</span></footer></article></div><div class="slot" id="s52" data-lec="13-6"><article class="slide ty-points" aria-label="52 / 55"><div class="sl-in"><h3 class="sh">Delphi 기술수준평가</h3><div class="pts n4"><div class="pt"><b>정성적 예측</b><p>계량적 방법이 어려울 때 전문가 견해 종합</p></div><div class="pt"><b>반복 설문</b><p>피드백을 거쳐 합의에 도달</p></div><div class="pt"><b>익명·비대면</b><p>권위자 영향·소수의견 무시 등 부작용 완화</p></div><div class="pt"><b>근거 원리</b><p>다수의 판단이 소수보다 정확, 민주적 결정</p></div></div></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">52 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>델파이는 데이터가 부족한 미래 기술을 예측할 때 쓰는 정성적 방법으로, KISTEP 기술수준평가(2018)에서도 쓰인다. 전문가에게 설문하고 결과 분포를 다시 보여준 뒤 재응답을 받는 과정을 반복해 합의를 끌어낸다. 익명이라 목소리 큰 권위자에게 끌려가지 않는다. 예: &#x27;이 기술이 상용화되는 해는?&#x27;을 2~3회 묻고 응답 범위가 좁혀지면 그 중앙값을 쓴다.</p></div></div><div class="slot" id="s53" data-lec="13-6"><article class="slide ty-steps" aria-label="53 / 55"><div class="sl-in"><h3 class="sh">연구개발·로드맵 기획 흐름</h3><ol class="steps n5"><li><span class="sn">1</span><b>Megatrend</b><p>거시적 변화 방향 파악</p></li><li><span class="sn">2</span><b>STEEP</b><p>거시 외부환경 분석</p></li><li><span class="sn">3</span><b>가치사슬·5 forces</b><p>산업·경쟁자·이해관계자 분석</p></li><li><span class="sn">4</span><b>핵심이슈</b><p>기회·위협과 강점·약점 정리</p></li><li><span class="sn">5</span><b>SWOT</b><p>교차 분석으로 전략 과제 도출</p></li></ol></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">53 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>슬라이드(p.71)는 연구개발·로드맵 기획을 크게 3단계로 진행한다고 본다. 메가트렌드와 STEEP으로 큰 흐름을 보고, 가치사슬과 5 forces로 산업을 좁혀 본 뒤, 핵심 이슈를 SWOT으로 묶어 전략을 도출한다. 넓은 데서 좁은 데로 내려오는 깔때기 구조다. 처음부터 SWOT 표를 채우면 근거 없는 나열이 되기 쉬우므로 앞 단계 분석을 먼저 해야 한다.</p></div></div><div class="slot" id="s54" data-lec="13-6"><article class="slide ty-matrix" aria-label="54 / 55"><div class="sl-in"><h3 class="sh">SWOT 교차 전략</h3><div class="mx"><span class="mx-y1">기회(O)</span><span class="mx-y2">위협(T)</span><div class="mx-c tl"><b>SO</b><p>강점으로 기회를 활용</p></div><div class="mx-c tr"><b>WO</b><p>기회를 통해 약점 보완</p></div><div class="mx-c bl"><b>ST</b><p>경쟁 증가×기술력 → 핵심기술 차별화</p></div><div class="mx-c br"><b>WT</b><p>약점·위협을 최소화하는 방어</p></div><span class="mx-x1">강점(S)</span><span class="mx-x2">약점(W)</span></div></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">54 / 55</span></footer></article><div class="sl-ex"><b>설명</b><p>SWOT은 내부의 강점·약점과 외부의 기회·위협을 교차해 전략 대안을 만드는 방법이다. 슬라이드(p.76)의 예는 모두 ST 전략이다. 경쟁업체 증가(T)와 기술경쟁력(S)을 엮어 핵심기술 차별화, 높은 제조기술(S)로 원가 경쟁력, IP 분쟁 증가(T)에는 적극적 특허 출원과 IP 전략을 도출한다. 칸을 채우는 데서 멈추지 말고 항목 쌍마다 실행 과제를 써야 한다.</p></div></div><div class="slot" id="s55" data-lec="13-6"><article class="slide ty-takeaway" aria-label="55 / 55"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>BM = 무엇을 누구에게 어떻게 팔고 얼마를 벌지 설계하는 것</li><li>사업계획서는 타당성 분석의 설계도이자 타인을 설득하는 도구다</li><li>환경분석: 거시(STEEP)·미시(5 forces)·내부(가치사슬)를 SWOT로 모은다</li><li>SWOT는 항목 나열이 아니라 교차 분석으로 전략 과제를 도출할 때 쓸모가 있다</li></ul></div><footer class="sl-f"><span>13-6 가치 창출: BM·사업계획·환경분석</span><span class="num">55 / 55</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-12.html">← IM12 디지털 경제·플랫폼</a><a class="wk-nav" href="lecture-14.html">IM14 국가혁신시스템 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: Innovation Management (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

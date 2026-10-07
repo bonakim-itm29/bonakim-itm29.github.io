@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IM09 PFI·R&amp;D생산성·흡수역량 · 이노베이션 경영</title>
+<meta name="description" content="혁신 수익은 지키고, R&amp;D는 흡수역량을 남긴다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">이노베이션 경영</a> / <a href="index.html">강의별 핵심</a> / IM09</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 09</p>
+  <h1>PFI·R&amp;D생산성·흡수역량</h1>
+  <p class="lead">혁신 수익은 지키고, R&amp;D는 흡수역량을 남긴다</p>
+  <div class="kws"><span class="kw">PFI</span><span class="kw">전유성</span><span class="kw">보완자산</span><span class="kw">R&amp;D 생산성</span><span class="kw">Chain-linked Model</span><span class="kw">흡수역량</span></div>
+  <details class="plist"><summary>이 강의의 논문 8편</summary><ol><li><b>Cohen et al. (2000)</b> Cohen, W. M., Nelson, R. R., &amp; Walsh, J. P. (2000). Protecting their intellectual assets: Appropriability conditions and why U.S. manufacturing firms patent (or not) (NBER Working Paper No. 7552). National Bureau of Economic Research.</li><li><b>Teece (1986)</b> Teece, D. J. (1986). Profiting from technological innovation: Implications for integration, collaboration, licensing and public policy. Research Policy, 15(6), 285–305.</li><li><b>Scherer (1982)</b> Scherer, F. M. (1982). Inter-industry technology flows and productivity growth. The Review of Economics and Statistics, 64(4), 627–634.</li><li><b>Griliches (1979)</b> Griliches, Z. (1979). Issues in assessing the contribution of research and development to productivity growth. The Bell Journal of Economics, 10(1), 92–116.</li><li><b>Rothwell (1994)</b> Rothwell, R. (1994). Towards the fifth-generation innovation process. International Marketing Review, 11(1), 7–31.</li><li><b>Kline &amp; Rosenberg (1986)</b> Kline, S. J., &amp; Rosenberg, N. (1986). An overview of innovation. In R. Landau &amp; N. Rosenberg (Eds.), The positive sum strategy: Harnessing technology for economic growth (pp. 275–305). National Academy Press.</li><li><b>Cohen &amp; Levinthal (1990)</b> Cohen, W. M., &amp; Levinthal, D. A. (1990). Absorptive capacity: A new perspective on learning and innovation. Administrative Science Quarterly, 35(1), 128–152.</li><li><b>Zahra &amp; George (2002)</b> Zahra, S. A., &amp; George, G. (2002). Absorptive capacity: A review, reconceptualization, and extension. Academy of Management Review, 27(2), 185–203.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="09-1"><b>09-1</b><span>전유성과 PFI: 혁신 수익 지키기</span></a><a href="#s12" class="tab" data-lec="09-2"><b>09-2</b><span>R&amp;D 생산성의 개념과 측정</span></a><a href="#s19" class="tab" data-lec="09-3"><b>09-3</b><span>R&amp;D 투자의 생산성 효과</span></a><a href="#s26" class="tab" data-lec="09-4"><b>09-4</b><span>Chain-linked Model과 R&amp;D 세대</span></a><a href="#s35" class="tab" data-lec="09-5"><b>09-5</b><span>R&amp;D 딜레마와 흡수역량</span></a><a href="#s43" class="tab" data-lec="09-6"><b>09-6</b><span>흡수역량의 속성과 성과</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 49</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="09-1"><article class="slide ty-title" aria-label="1 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">9주차 · PFI·R&amp;D생산성·흡수역량</p><p class="t-no">09-1</p><h2 class="t-title">전유성과 PFI: 혁신 수익 지키기</h2><p class="t-thesis">혁신 수익은 특허보다 보완자산·리드타임이 지킨다</p></div></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">1 / 49</span></footer></article></div><div class="slot" id="s2" data-lec="09-1"><article class="slide ty-compare" aria-label="2 / 49"><div class="sl-in"><h3 class="sh">특허만으로는 부족하다</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">특허</b><ul><li>기술공개의 대가로 독점권 부여</li><li>출원일부터 20년(실용신안 15년)</li><li>보호가치는 R&amp;D의 15~20%뿐</li></ul></div><div class="cp-col"><b class="cp-h">비밀·리드타임</b><ul><li>수익 전유에 훨씬 유리(Cohen 등)</li><li>배합·공정 등 비특허 대상 보호</li><li>기획→제품화 속도로 시장 선점</li></ul></div></div><p class="cp-note">전유성 = 혁신 수익을 배타적으로 확보하는 정도</p></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">2 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Breschi 외(2000)는 전유성을 혁신을 모방에서 보호하고 혁신 활동의 이익을 거둘 가능성으로 정의한다. 특허는 기술 공개의 대가로 독점권을 주지만, Cohen et al.(2000)에서 기업들은 비밀 유지와 리드타임을 더 유효한 수단으로 꼽았다. Schankerman(1998)은 특허 보호의 경제적 가치가 R&amp;D 투자의 15~20%라고 추정했다. 예: R&amp;D 100억이면 특허가 지켜주는 가치는 15~20억 정도다.</p></div></div><div class="slot" id="s3" data-lec="09-1"><article class="slide ty-paper" aria-label="3 / 49"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Cohen et al. (2000)</h3><p class="pp-q">미국 제조기업은 혁신 수익을 무엇으로 보호하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>1994년 카네기멜론 설문(R&amp;D 랩 1,478곳) 결과, 대부분 산업에서 특허보다 비밀·리드타임·보완자산이 더 효과적인 보호수단으로 꼽혔다.</p><div class="pp-cs"><span class="pp-c">전유성 메커니즘</span><span class="pp-c">영업비밀</span><span class="pp-c">리드타임</span><span class="pp-c">전략적 특허</span></div></div><div><b>강의와의 연결</b><p>09-1, p.3: 특허는 R&amp;D 수익 전유에 부적절, 비밀·리드타임이 훨씬 유리(Cohen et al., 2000)</p><b>보충 설명</b><p>특허 출원 동기는 모방 방지 외에 경쟁사 특허 차단(blocking), 소송 방어, 협상력 확보가 크다. 복합제품 산업과 이산제품 산업(제약·화학)의 특허 활용 방식 차이를 제시.</p></div></div><p class="pp-cite">Cohen, W. M., Nelson, R. R., &amp; Walsh, J. P. (2000). Protecting their intellectual assets: Appropriability conditions and why U.S. manufacturing firms patent (or not) (NBER Working Paper No. 7552). National Bureau of Economic Research. </p></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">3 / 49</span></footer></article></div><div class="slot" id="s4" data-lec="09-1"><article class="slide ty-concepts" aria-label="4 / 49"><div class="sl-in"><h3 class="sh">전유성 확보 메커니즘</h3><div class="ccs n6"><div class="cc"><b>특허(Patent)</b><p>기술공개 대가로 일정 기간 독점권</p></div><div class="cc"><b>영업비밀(Secrecy)</b><p>실험데이터·배합·공정·고객명부 등 비공개 보호</p></div><div class="cc"><b>리드타임(Lead time)</b><p>빠른 제품화로 first mover 시장 선점</p></div><div class="cc"><b>보완자산: 판매·서비스</b><p>연계 제품·서비스로 사용가치 증대</p></div><div class="cc"><b>보완자산: 보완적 제조</b><p>제조역량으로 후발 불리 극복, 시장 장악</p></div><div class="cc"><b>제품 아키텍처</b><p>구성요소 변경·integral 설계로 모방·특허 회피</p></div></div></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">4 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>전유성 수단은 법적 장치만이 아니다. 특허·실용신안·저작권은 공개가 전제이고 기간이 정해져 있다. 실험데이터·배합·설계도·고객정보처럼 특허 대상이 아닌 것은 영업비밀로 지킨다. 리드타임은 먼저 출시해 시장을 선점하는 것이고, 보완자산은 판매·서비스·제조 역량으로 모방자가 따라오기 어렵게 만든다. 강의는 애플과 대비되는 삼성전자의 자체 제조 역량을 보완적 제조의 예로 든다. 기업별 전유성 체제는 이 수단들의 조합이다(Henttonen 외, 2016).</p></div></div><div class="slot" id="s5" data-lec="09-1"><article class="slide ty-case" aria-label="5 / 49"><div class="sl-in"><p class="ca-k">사례 · 영업비밀</p><h3 class="sh">코카콜라 원액 배합</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>음료의 맛을 결정하는 원액 배합법은 경쟁사가 가장 탐낼 핵심 지식이다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>코카콜라는 배합법을 특허로 출원하지 않고 영업비밀로 관리하며, 아는 사람을 극소수로 제한했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>특허였다면 공개된 뒤 기간이 끝나 누구나 쓸 수 있었겠지만, 비밀로 지켜 100년 넘게 배타적 지위를 유지했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>역설계가 어렵고 오래 쓰일 지식은 특허보다 영업비밀이 더 강한 보호가 될 수 있다.</p></div></div></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">5 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 영업비밀(재료배합)의 예로 드는 사례다. 특허는 공개가 조건이라 기간이 끝나면 누구나 쓸 수 있다. 반대로 제품을 분석해도 알아내기 어려운 지식은 비밀로 두는 편이 낫다. 선택 기준: ① 역설계 난이도 ② 기술의 수명 ③ 유출 시 피해 ④ 경쟁사의 독립 개발 가능성. 쉽게 분해·분석되는 제품이라면 비밀보다 특허가 맞다.</p></div></div><div class="slot" id="s6" data-lec="09-1"><article class="slide ty-tree" aria-label="6 / 49"><div class="sl-in"><h3 class="sh">제품 아키텍처로 지키기</h3><div class="tree"><div class="tr-r">제품 아키텍처</div><div class="tr-cs n3"><div class="tr-c"><b>Core Tech 캡슐</b><p>핵심기술을 모듈 안에 감춰 보호</p></div><div class="tr-c"><b>플랫폼</b><p>내부 표준화로 여러 제품에 공용</p></div><div class="tr-c"><b>파생제품·부품</b><p>외부 표준화로 확장</p></div></div></div></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">6 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 p.4~5의 내용이다. 구성요소 구조를 설계해 특허를 회피하거나 공정 비밀을 지킬 수 있다. 핵심기술(Core Tech)은 캡슐·모듈 안에 넣어 밖에서 들여다볼 수 없게 하고, 플랫폼 안에서는 내부 표준화로 효율을 얻으며, 외부와 맞닿는 부분만 표준화해 파생제품과 부품으로 넓힌다. 어디까지 인테그랄로 감싸고 어디부터 모듈로 열지가 곧 전유성 전략이다.</p></div></div><div class="slot" id="s7" data-lec="09-1"><article class="slide ty-matrix" aria-label="7 / 49"><div class="sl-in"><h3 class="sh">PFI: 누가 수익을 갖나</h3><div class="mx"><span class="mx-y1">전유성 강함</span><span class="mx-y2">전유성 약함</span><div class="mx-c tl"><b>혁신자 승리</b><p>강한 보호로 혁신자가 수익 확보</p></div><div class="mx-c tr"><b>혁신자 유리</b><p>보완자산 보유자와 협상 필요</p></div><div class="mx-c bl"><b>모두 어려움</b><p>누구도 큰 이익을 내기 어려움</p></div><div class="mx-c br"><b>자산 보유자 승리</b><p>보완자산을 쥔 쪽이 수익을 가져감</p></div><span class="mx-x1">보완자산 범용</span><span class="mx-x2">보완자산 특화</span></div></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">7 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Teece(1986)의 핵심 틀이다. 혁신 수익은 ① 전유성 체제의 강약 ② 지배적 디자인의 출현 ③ 보완자산을 누가 쥐었는지에 달려 있다. 오른쪽 아래가 혁신자에게 가장 위험하다. 모방이 쉬운데 생산·유통·서비스 같은 필수 자산을 경쟁자가 쥐고 있으면, 혁신자는 시장을 열어 주고 이익은 남이 가져간다. 자기 혁신이 어느 칸에 있는지부터 진단해야 한다.</p></div></div><div class="slot" id="s8" data-lec="09-1"><article class="slide ty-case" aria-label="8 / 49"><div class="sl-in"><p class="ca-k">사례 · 보완자산 부재</p><h3 class="sh">EMI의 CT 스캐너</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>영국 EMI의 하운스필드가 1970년대 초 CT 스캐너를 개발했다. 혁신성은 컸지만 EMI에는 의료기기 판매·서비스망이 없었다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>EMI는 미국 시장에 직접 진출했지만, GE 등 의료기기 강자들이 빠르게 경쟁 제품을 내놓았다.</p></div><div class="ca-b ca-result"><i>결과</i><p>판매·서비스망을 갖춘 GE 등이 시장을 장악했고 EMI는 수년 만에 사업에서 물러났다. 하운스필드는 1979년 노벨상을 받았다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>혁신자라도 전유성이 약하고 보완자산이 없으면 이익은 보완자산을 가진 추종자에게 간다.</p></div></div></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">8 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Teece(1986)가 혁신자가 이익을 놓친 대표 사례로 분석했다. CT는 진단 기술의 혁명이었지만 병원 영업·설치·유지보수·사용자 교육 같은 보완자산이 판매를 좌우했다. 모방이 비교적 쉬운 상황에서 그 자산을 가진 GE가 이겼다. 기술 개발 단계에서부터 &#x27;상업화에 어떤 보완자산이 필요한가&#x27;를 물어야 하는 이유다.</p></div></div><div class="slot" id="s9" data-lec="09-1"><article class="slide ty-compare" aria-label="9 / 49"><div class="sl-in"><h3 class="sh">보완자산: 계약 vs 통합</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">계약(제휴·라이선스)</b><ul><li>보완자산이 특화되지 않음</li><li>지식재산 보호가 철통같음</li><li>핵심 아님 또는 자금 확보 불가</li><li>모방자가 이미 확실히 우위</li></ul></div><div class="cp-col"><b class="cp-h">통합(In-house)</b><ul><li>위 조건이 아니면 통합 우선</li><li>필요 보완자산을 사전에 식별</li></ul></div></div><p class="cp-note">PFI: 보완자산을 쥔 자가 혁신 수익을 가져간다</p></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">9 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Teece(1988)의 처방이다. 상업화에 필요한 보완자산을 미리 식별한 뒤 계약과 통합 중에서 고른다. 보완자산이 특화되지 않았거나, 지식재산 보호가 철통같거나, 핵심 자산이 아니거나, 자금을 마련할 수 없거나, 모방자가 이미 확실히 앞서 있다면 제휴·라이선스 같은 계약이 낫다. 그 외에는 직접 보유(통합)가 우선이다. 예: 핵심 생산설비는 내재화하고 범용 물류는 위탁한다.</p></div></div><div class="slot" id="s10" data-lec="09-1"><article class="slide ty-paper" aria-label="10 / 49"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Teece (1986)</h3><p class="pp-q">왜 혁신자가 아닌 추종자가 수익을 가져가는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>혁신 수익은 전유성 체제, 지배적 디자인 단계, 보완자산 보유에 달려 있다. 전유성이 약하면 보완자산을 가진 쪽이 이긴다.</p><div class="pp-cs"><span class="pp-c">전유성 체제</span><span class="pp-c">지배적 디자인</span><span class="pp-c">보완자산</span></div></div><div><b>강의와의 연결</b><p>15-6 p.38: 성공요인 3가지, ICT는 전유성이 약해 하류의 보완자산이 중요</p><b>보충 설명</b><p>EMI CT 스캐너, RC 콜라 등 사례로 혁신자 실패를 설명했다. 보완자산 확보 방식(통합 vs 계약·제휴)의 선택이 핵심 전략 결정이 된다.</p></div></div><p class="pp-cite">Teece, D. J. (1986). Profiting from technological innovation: Implications for integration, collaboration, licensing and public policy. Research Policy, 15(6), 285–305. </p></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">10 / 49</span></footer></article></div><div class="slot" id="s11" data-lec="09-1"><article class="slide ty-takeaway" aria-label="11 / 49"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>전유성 = 혁신 수익을 모방에서 지켜 배타적으로 거두는 정도</li><li>특허보다 영업비밀·리드타임·보완자산이 더 효과적인 경우가 많다</li><li>전유성이 약하면 특화된 보완자산을 쥔 쪽이 이익을 가져간다(Teece)</li><li>보완자산을 미리 식별하고, 조건에 따라 계약 또는 통합을 택한다</li></ul></div><footer class="sl-f"><span>09-1 전유성과 PFI: 혁신 수익 지키기</span><span class="num">11 / 49</span></footer></article></div><div class="slot" id="s12" data-lec="09-2"><article class="slide ty-title" aria-label="12 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">9주차 · PFI·R&amp;D생산성·흡수역량</p><p class="t-no">09-2</p><h2 class="t-title">R&amp;D 생산성의 개념과 측정</h2><p class="t-thesis">R&amp;D 성과는 효율성과 효과성으로 나눠 봐야 한다</p></div></div><footer class="sl-f"><span>09-2 R&amp;D 생산성의 개념과 측정</span><span class="num">12 / 49</span></footer></article></div><div class="slot" id="s13" data-lec="09-2"><article class="slide ty-compare" aria-label="13 / 49"><div class="sl-in"><h3 class="sh">효율성 vs 효과성</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">효율성</b><ul><li>투입 대비 직접 산출(Output)</li><li>자원 운영 효율, 과정 중시</li></ul></div><div class="cp-col"><b class="cp-h">효과성</b><ul><li>투입·산출에 비춘 결과(Outcome)</li><li>목표 달성 유효성, 결과 중시</li></ul></div></div><p class="cp-note">장진규(STEPI, 2003)</p></div><footer class="sl-f"><span>09-2 R&amp;D 생산성의 개념과 측정</span><span class="num">13 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>장진규(2003)의 구분이다. 효율성은 같은 자원으로 얼마나 많이 산출했는지(Output)를 보는 과정 지표이고, 효과성은 그 산출이 목표한 결과(Outcome)를 냈는지를 본다. 논문·특허가 많아도 사업 매출이나 문제 해결로 이어지지 않으면 효율적이지만 효과적이지 않다. R&amp;D 평가에 두 지표를 함께 두어야 한쪽으로 쏠린 행동을 막을 수 있다.</p></div></div><div class="slot" id="s14" data-lec="09-2"><article class="slide ty-equation" aria-label="14 / 49"><div class="sl-in"><h3 class="sh">효율성·효과성 측정</h3><p class="eq">효율성 = 산출 ÷ 투입</p><div class="eq-ts"><div class="eq-t"><b>투입</b><p>인력·예산·장비·시간</p></div><div class="eq-t"><b>산출</b><p>논문·특허·시제품 등 직접 산출</p></div><div class="eq-t"><b>결과</b><p>매출·원가절감 등 실제 성과</p></div><div class="eq-t"><b>효과성</b><p>결과가 목표를 얼마나 달성했나</p></div></div><p class="eq-rule">산출만 보면 &#x27;건수 늘리기&#x27;에 빠지기 쉽다</p></div><footer class="sl-f"><span>09-2 R&amp;D 생산성의 개념과 측정</span><span class="num">14 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>예: 연구비 10억으로 특허 20건을 냈다면 효율성은 1억당 2건이다. 그중 2건만 제품에 적용되어 매출 30억을 냈고 목표가 50억이었다면, 효과성은 목표 대비 60%로 따진다(설명용 숫자). 같은 팀이라도 특허 건수(효율)는 높고 사업 기여(효과)는 낮을 수 있다. 그래서 지표를 설계할 때 산출 지표와 결과 지표를 짝지어 둔다.</p></div></div><div class="slot" id="s15" data-lec="09-2"><article class="slide ty-steps" aria-label="15 / 49"><div class="sl-in"><h3 class="sh">R&amp;D 측정 프레임워크</h3><ol class="steps n5"><li><span class="sn">1</span><b>투입(Input)</b><p>인력·자금·장비·아이디어</p></li><li><span class="sn">2</span><b>처리 시스템</b><p>R&amp;D 활동 수행</p></li><li><span class="sn">3</span><b>산출(Output)</b><p>논문·특허·신제품·공정</p></li><li><span class="sn">4</span><b>수용 시스템</b><p>사업부·시장이 산출을 활용</p></li><li><span class="sn">5</span><b>결과(Outcome)</b><p>매출 증대·원가 절감 등 성과</p></li></ol></div><footer class="sl-f"><span>09-2 R&amp;D 생산성의 개념과 측정</span><span class="num">15 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Brown &amp; Svenson(1988)의 R&amp;D 측정 프레임워크다. R&amp;D를 투입→처리(연구 활동)→산출→수용 시스템(사업부·시장)→결과의 흐름으로 보고, 단계마다 맞는 지표를 둔다. 기술경영 연구의 상당수가 이 흐름 위에서 이루어진다. 실무적 함의: 산출이 좋아도 수용 시스템이 받아 쓰지 못하면 결과가 없으므로, 사업부로 넘기는 단계를 별도로 관리해야 한다.</p></div></div><div class="slot" id="s16" data-lec="09-2"><article class="slide ty-points" aria-label="16 / 49"><div class="sl-in"><h3 class="sh">R&amp;D 생산성 측정이 어려운 이유</h3><div class="pts n4"><div class="pt"><b>측정단위 차이</b><p>투입·산출 단위가 다름(원, 월, 개)</p></div><div class="pt"><b>질적 측정 한계</b><p>품질·중요성·영향력은 계량화 곤란</p></div><div class="pt"><b>시차(time lag)</b><p>투입과 산출 사이의 긴 시간 간격</p></div><div class="pt"><b>예측불가능성</b><p>부산물·의외성 있는 성과 발생</p></div></div></div><footer class="sl-f"><span>09-2 R&amp;D 생산성의 개념과 측정</span><span class="num">16 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Griliches 편저 『R&amp;D, Patents and Productivity』(1984)가 이 문제를 폭넓게 다룬다. 투입은 원·인월, 산출은 건수처럼 단위가 달라 직접 비교가 어렵다. 특허 1건의 가치도 천차만별이라 질을 재기 어렵고, 기초연구의 성과는 수년 뒤에 나온다. 예상치 못한 부산물이 진짜 성과가 되기도 한다. 그래서 단일 지표보다 질적 평가와 장기 추적을 섞어 쓴다.</p></div></div><div class="slot" id="s17" data-lec="09-2"><article class="slide ty-checklist" aria-label="17 / 49"><div class="sl-in"><h3 class="sh">R&amp;D 성과지표 설계 질문</h3><ol class="chk two"><li><span class="ck">1</span>투입·산출을 같은 단위나 비율로 비교할 수 있는가?</li><li><span class="ck">2</span>건수 외에 질적 성과(영향력·중요성)를 보는가?</li><li><span class="ck">3</span>연구 단계별로 평가 목적과 지표를 달리했는가?</li><li><span class="ck">4</span>산출과 결과 사이의 시차를 감안했는가?</li><li><span class="ck">5</span>정부·해외 기관 지표를 참고해 조직에 맞췄는가?</li></ol></div><footer class="sl-f"><span>09-2 R&amp;D 생산성의 개념과 측정</span><span class="num">17 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 후반부는 정부 R&amp;D 관련 지표, 질적 성과지표, 연구개발 단계별 과제평가의 목적, 미국 각 기관의 R&amp;D 성과측정 사례를 보여준다. 공통 메시지는 하나의 지표로 R&amp;D를 평가할 수 없다는 것이다. 기초 단계는 지식 축적과 질적 우수성, 개발 단계는 사업화와 일정 달성처럼 단계마다 평가 목적을 나눈다. 공공 지표를 그대로 쓰기보다 조직 목표에 맞게 고쳐 쓴다.</p></div></div><div class="slot" id="s18" data-lec="09-2"><article class="slide ty-takeaway" aria-label="18 / 49"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>효율성은 투입 대비 산출(과정), 효과성은 목표 대비 결과(성과)</li><li>투입→처리→산출→수용→결과의 흐름으로 R&amp;D를 측정한다</li><li>단위 차이·질적 측정·시차·예측불가능성 때문에 측정이 어렵다</li></ul></div><footer class="sl-f"><span>09-2 R&amp;D 생산성의 개념과 측정</span><span class="num">18 / 49</span></footer></article></div><div class="slot" id="s19" data-lec="09-3"><article class="slide ty-title" aria-label="19 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">9주차 · PFI·R&amp;D생산성·흡수역량</p><p class="t-no">09-3</p><h2 class="t-title">R&amp;D 투자의 생산성 효과</h2><p class="t-thesis">R&amp;D는 자기 산업과 타 산업 생산성을 함께 높인다</p></div></div><footer class="sl-f"><span>09-3 R&amp;D 투자의 생산성 효과</span><span class="num">19 / 49</span></footer></article></div><div class="slot" id="s20" data-lec="09-3"><article class="slide ty-compare" aria-label="20 / 49"><div class="sl-in"><h3 class="sh">직접효과 vs 간접효과</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">직접효과</b><ul><li>생산함수로 R&amp;D-생산성 관계 분석</li><li>R&amp;D 투자→생산성 증가(정의 상관)</li><li>Griliches(1964), Mansfield(1965)</li></ul></div><div class="cp-col"><b class="cp-h">간접효과</b><ul><li>타 산업 R&amp;D 지식·체화 상품 구매</li><li>혜택 상당부분이 구매 기업에 이전</li><li>Terleckyj(1974), Scherer(1982)</li></ul></div></div><p class="cp-note">R&amp;D 혜택이 수행 기업에 온전히 전유되는 경우는 드묾</p></div><footer class="sl-f"><span>09-3 R&amp;D 투자의 생산성 효과</span><span class="num">20 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>R&amp;D 효과는 두 갈래다. 직접효과는 기업·산업이 스스로 R&amp;D를 해서 생산성이 오르는 것으로, 생산함수 분석에서 강한 정(+)의 관계가 확인되었다. 간접효과는 남이 한 R&amp;D의 결과를 사서 쓰는 것이다. 가격경쟁 때문에 지불한 가격보다 성능이 좋거나 더 싸진 중간재·자본재를 사면, 그 R&amp;D 혜택의 상당 부분이 구매 산업의 생산성 향상으로 넘어간다.</p></div></div><div class="slot" id="s21" data-lec="09-3"><article class="slide ty-paper" aria-label="21 / 49"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Scherer (1982)</h3><p class="pp-q">타 산업에서 흘러든 R&amp;D도 생산성을 높이는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>특허 데이터로 산업 간 기술흐름 행렬을 만들어, 구매·사용한 기술의 R&amp;D가 자체 공정 R&amp;D보다 생산성 증가를 더 잘 설명함을 보였다.</p><div class="pp-cs"><span class="pp-c">산업 간 기술흐름</span><span class="pp-c">제품 vs 공정 R&amp;D</span><span class="pp-c">간접효과</span></div></div><div><b>강의와의 연결</b><p>09-3, p.21: R&amp;D 간접효과—중간재·자본재로 체화되어 타 산업 생산성 향상(Terleckyj 1974, Scherer 1982)</p><b>보충 설명</b><p>Terleckyj(1974)가 산업연관 구매로 체화된 R&amp;D 효과를 처음 추정했다면, Scherer는 특허 기반 행렬로 기술을 만든 산업과 쓰는 산업을 구분해 정교화했다.</p></div></div><p class="pp-cite">Scherer, F. M. (1982). Inter-industry technology flows and productivity growth. The Review of Economics and Statistics, 64(4), 627–634. </p></div><footer class="sl-f"><span>09-3 R&amp;D 투자의 생산성 효과</span><span class="num">21 / 49</span></footer></article></div><div class="slot" id="s22" data-lec="09-3"><article class="slide ty-tree" aria-label="22 / 49"><div class="sl-in"><h3 class="sh">외부 기술지식의 파급효과</h3><div class="tree"><div class="tr-r">R&amp;D 스필오버</div><div class="tr-cs n4"><div class="tr-c"><b>산업 내 파급</b><p>동일 산업 타 기업이 창출한 지식</p></div><div class="tr-c"><b>산업 간 파급</b><p>타 산업에서 흘러든 지식</p></div><div class="tr-c"><b>산업연관표 가중</b><p>중간재·자본재 구매량으로 가중 합산</p></div><div class="tr-c"><b>특허흐름</b><p>산업 간 상호 특허 이용 측정</p></div></div></div></div><footer class="sl-f"><span>09-3 R&amp;D 투자의 생산성 효과</span><span class="num">22 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>외부 지식이 같은 산업에서 왔는지(산업 내 파급), 다른 산업에서 왔는지(산업 간 파급)를 구분한다. 산업 간 파급은 두 방식으로 잰다. Griliches 모형은 타 산업 제품을 많이 살수록 지식도 많이 들어온다고 보고, 구매 비중으로 타 산업 R&amp;D를 가중 합산한다. 예: A산업 R&amp;D 100억, 구매 비중 20%면 20억어치 지식 유입으로 본다(설명용). 특허흐름 방식(Schmookler 1966)은 산업 간 특허 이용을 직접 센다.</p></div></div><div class="slot" id="s23" data-lec="09-3"><article class="slide ty-equation" aria-label="23 / 49"><div class="sl-in"><h3 class="sh">R&amp;D를 넣은 생산함수</h3><p class="eq">Q = A · L^α · K^β · R^γ</p><div class="eq-ts"><div class="eq-t"><b>Q</b><p>산출(부가가치·생산량)</p></div><div class="eq-t"><b>L, K</b><p>노동과 자본 투입</p></div><div class="eq-t"><b>R</b><p>R&amp;D 투자(지식 스톡), 직접 생산요소</p></div><div class="eq-t"><b>γ</b><p>R&amp;D의 산출 탄력성</p></div></div><p class="eq-rule">Cobb-Douglas + R&amp;D: 단순하지만 가정이 비현실적</p></div><footer class="sl-f"><span>09-3 R&amp;D 투자의 생산성 효과</span><span class="num">23 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Griliches(1979)가 정리한 방식으로, R&amp;D를 노동·자본과 함께 직접적인 생산요소로 넣은 Cobb-Douglas 생산함수다. 로그를 취하면 γ는 R&amp;D가 1% 늘 때 산출이 몇 % 느는지(탄력성)를 뜻한다. 예: γ=0.1이면 R&amp;D 스톡이 10% 늘 때 산출은 약 1% 는다(설명용). 다만 단순하고 비현실적인 가정 위에 서 있으므로 추정값은 방향을 보는 참고치로 쓴다.</p></div></div><div class="slot" id="s24" data-lec="09-3"><article class="slide ty-paper" aria-label="24 / 49"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Griliches (1979)</h3><p class="pp-q">R&amp;D가 생산성 증가에 얼마나 기여하는지 어떻게 재나?</p><div class="pp-g"><div><b>핵심 주장</b><p>R&amp;D 자본(지식 스톡)을 노동·자본과 함께 생산함수에 넣는 틀을 제시하고, 스톡 측정·시차·감가·스필오버 추정의 난점을 체계화했다.</p><div class="pp-cs"><span class="pp-c">R&amp;D 자본 스톡</span><span class="pp-c">지식생산함수</span><span class="pp-c">R&amp;D 스필오버</span></div></div><div><b>강의와의 연결</b><p>09-3, p.22-23: Cobb-Douglas+R&amp;D 요소 모형과 산업연관표 가중 Griliches 모형, 단순·비현실적 가정</p><b>보충 설명</b><p>스필오버를 가격에 체화된 &#x27;렌트&#x27; 스필오버와 순수 지식 스필오버로 구분. 이후 편저 R&amp;D, Patents and Productivity(1984)로 실증이 축적됨(p.24 인용).</p></div></div><p class="pp-cite">Griliches, Z. (1979). Issues in assessing the contribution of research and development to productivity growth. The Bell Journal of Economics, 10(1), 92–116. </p></div><footer class="sl-f"><span>09-3 R&amp;D 투자의 생산성 효과</span><span class="num">24 / 49</span></footer></article></div><div class="slot" id="s25" data-lec="09-3"><article class="slide ty-takeaway" aria-label="25 / 49"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>직접효과: 자기 R&amp;D가 자기 생산성을 높인다(Griliches, Mansfield)</li><li>간접효과: 타 산업 R&amp;D가 중간재·자본재에 체화되어 흘러든다</li><li>산업 간 스필오버는 산업연관표 가중 또는 특허흐름으로 추정한다</li><li>R&amp;D 생산함수는 단순하지만 비현실적 가정 위에 서 있다</li></ul></div><footer class="sl-f"><span>09-3 R&amp;D 투자의 생산성 효과</span><span class="num">25 / 49</span></footer></article></div><div class="slot" id="s26" data-lec="09-4"><article class="slide ty-title" aria-label="26 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">9주차 · PFI·R&amp;D생산성·흡수역량</p><p class="t-no">09-4</p><h2 class="t-title">Chain-linked Model과 R&amp;D 세대</h2><p class="t-thesis">혁신은 선형이 아니라 피드백으로 이어진 사슬이다</p></div></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">26 / 49</span></footer></article></div><div class="slot" id="s27" data-lec="09-4"><article class="slide ty-steps" aria-label="27 / 49"><div class="sl-in"><h3 class="sh">R&amp;D 프로세스의 5세대</h3><ol class="steps n5"><li><span class="sn">1</span><b>1세대 기술주도</b><p>Technology push, 선형 모델</p></li><li><span class="sn">2</span><b>2세대 시장견인</b><p>Market pull, 선형 모델</p></li><li><span class="sn">3</span><b>3세대 결합모형</b><p>기술·시장 상호작용(Chain-linked)</p></li><li><span class="sn">4</span><b>4세대 통합모형</b><p>부서 간 병렬·통합 개발</p></li><li><span class="sn">5</span><b>5세대 시스템통합</b><p>네트워킹·외부 연계, Stage-gate 적용</p></li></ol></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">27 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Rothwell(1994)의 구분이다. 1세대는 과학이 발견하면 시장이 따라온다는 기술주도, 2세대는 시장 수요가 R&amp;D를 끈다는 시장견인으로, 둘 다 선형이다. 3세대는 기술과 시장의 상호작용을 결합한 모형, 4세대는 여러 부서가 병렬로 함께 개발하는 통합 모형, 5세대는 외부 파트너와 IT로 연결된 시스템 통합·네트워킹 모형이다. Nobelius(2004)는 이를 6세대로 확장했다.</p></div></div><div class="slot" id="s28" data-lec="09-4"><article class="slide ty-paper" aria-label="28 / 49"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Rothwell (1994)</h3><p class="pp-q">혁신 프로세스 모형은 어떻게 진화해 왔는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>혁신 프로세스는 기술주도→시장견인→결합→통합→시스템 통합·네트워킹(5세대)으로 진화했고, 속도·유연성을 위해 IT 도구와 외부 네트워크가 중요해진다.</p><div class="pp-cs"><span class="pp-c">5세대 혁신 프로세스</span><span class="pp-c">결합(coupling) 모형</span><span class="pp-c">시스템 통합·네트워킹</span></div></div><div><b>강의와의 연결</b><p>09-4, p.30-34: 1·2세대 선형 모델, 3세대 Chain-linked, 4·5세대와 Stage-gate 적용</p><b>보충 설명</b><p>각 세대를 1950~90년대 경제 환경(고성장, 인플레이션, 구조조정)과 연결. 5세대는 일본식 병렬 개발, 전략적 제휴, CAD 등 전자도구를 강조. Nobelius(2004)가 6세대로 확장.</p></div></div><p class="pp-cite">Rothwell, R. (1994). Towards the fifth-generation innovation process. International Marketing Review, 11(1), 7–31. </p></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">28 / 49</span></footer></article></div><div class="slot" id="s29" data-lec="09-4"><article class="slide ty-compare" aria-label="29 / 49"><div class="sl-in"><h3 class="sh">선형 모델 vs Chain-linked</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">선형 모델</b><ul><li>혁신을 일직선 순서로 표현</li><li>피드백·학습의 역할 반영 못함</li><li>가격 등 다른 변화를 무시</li><li>드러나지 않은 니즈 설명 불가</li></ul></div><div class="cp-col"><b class="cp-h">Chain-linked</b><ul><li>설계→개발·생산→마케팅 중심사슬</li><li>단계 간 반복 피드백</li><li>기존 지식 먼저, 안 되면 연구</li></ul></div></div></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">29 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Kline &amp; Rosenberg(1986)는 혁신을 &#x27;과학→개발→생산→판매&#x27;의 일직선으로 보는 선형 모델이 잘못되었다고 비판했다. 실제 혁신에서는 시장 반응과 생산 경험이 설계를 다시 바꾸는 피드백과 학습이 핵심이다. 또 선형 모델은 가격 같은 다른 변화를 무시하고, 고객이 말하지 않는 숨은 니즈가 어떻게 제품이 되는지 설명하지 못한다.</p></div></div><div class="slot" id="s30" data-lec="09-4"><article class="slide ty-concepts" aria-label="30 / 49"><div class="sl-in"><h3 class="sh">혁신에 이르는 5개 경로</h3><div class="ccs n5"><div class="cc"><b>C: 중심사슬</b><p>디자인→개발·생산→마케팅</p></div><div class="cc"><b>F, f: 피드백 링크</b><p>시장·사용자 반응이 다음 개선점에 영향</p></div><div class="cc"><b>K-R: 지식-연구 링크</b><p>기존 지식에서 해법 탐색, 안 되면 연구 기획</p></div><div class="cc"><b>D: 연구-발명 직접 링크</b><p>새 과학이 급진 혁신 가능(반도체·레이저)</p></div><div class="cc"><b>I: 제품→과학 피드백</b><p>현미경·망원경이 의학·천문학 발전 견인</p></div></div></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">30 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Kline &amp; Rosenberg의 Chain-linked Model에서 혁신은 설계에서 시작해 개발·생산을 거쳐 마케팅에 이르는 중심사슬(C)을 따라가며, 단계마다 되돌아가는 피드백(f)과 시장에서 돌아오는 큰 피드백(F)이 있다. 문제가 생기면 곧바로 연구하지 않고 먼저 기존 지식(K)에서 답을 찾고, 없을 때 연구(R)를 기획한다. 개발 계획에 피드백 경로와 &#x27;기존 지식 탐색&#x27; 단계를 처음부터 넣으라는 뜻이다.</p></div></div><div class="slot" id="s31" data-lec="09-4"><article class="slide ty-case" aria-label="31 / 49"><div class="sl-in"><p class="ca-k">사례 · 제품→과학(I)</p><h3 class="sh">현미경·망원경과 과학</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>선형 모델은 과학이 먼저 발견하고 기술이 뒤따른다고 본다. 그러나 과학 발견이 도구에 의존하는 경우가 많다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>현미경은 미생물 관찰을 가능하게 했고, 파스퇴르는 이를 토대로 미생물 연구를 발전시켰다. 망원경은 갈릴레오의 천체 관측을 가능케 했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>현미경은 현대 의학으로, 망원경은 현대 천문학·우주론으로 이어졌다. 혁신 제품이 새로운 과학을 연 것이다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>기술과 과학은 양방향이다. 새 도구·제품이 새 과학 지식의 출발점이 될 수 있다.</p></div></div></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">31 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 경로 I의 예로 든 사례다. 반대 방향인 경로 D(연구→발명 직접 연결)의 예로는 반도체·레이저·원자폭탄·유전공학을 든다. 두 경로를 함께 보면 과학은 혁신의 유일한 출발점이 아니라 사슬의 모든 단계와 오가는 지식 저장소다. 측정·분석 장비의 개선이 연구의 돌파구를 여는 일은 지금도 반복된다.</p></div></div><div class="slot" id="s32" data-lec="09-4"><article class="slide ty-paper" aria-label="32 / 49"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Kline &amp; Rosenberg (1986)</h3><p class="pp-q">혁신은 과학→기술→시장의 선형 과정인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>혁신은 시장 기회에서 출발한 설계 중심사슬 위에서 피드백이 반복되는 비선형 과정이며, 연구는 기존 지식으로 안 풀릴 때 호출된다.</p><div class="pp-cs"><span class="pp-c">Chain-linked model</span><span class="pp-c">중심사슬</span><span class="pp-c">피드백 링크</span><span class="pp-c">지식-연구 링크</span></div></div><div><b>강의와의 연결</b><p>09-4, p.31-33: 선형 모델 비판과 혁신에 이르는 5개 경로(C, F/f, K-R, D, I)</p><b>보충 설명</b><p>혁신의 본질적 불확실성과 &#x27;설계&#x27;의 중심 역할을 강조. 과학은 출발점이 아니라 모든 단계에서 쓰이는 지식 저장소. 슬라이드는 2010년 Rosenberg 선집 재수록본을 인용.</p></div></div><p class="pp-cite">Kline, S. J., &amp; Rosenberg, N. (1986). An overview of innovation. In R. Landau &amp; N. Rosenberg (Eds.), The positive sum strategy: Harnessing technology for economic growth (pp. 275–305). National Academy Press. </p></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">32 / 49</span></footer></article></div><div class="slot" id="s33" data-lec="09-4"><article class="slide ty-steps" aria-label="33 / 49"><div class="sl-in"><h3 class="sh">Stage-gate 프로세스</h3><ol class="steps n6"><li><span class="sn">1</span><b>아이디어 발굴</b><p>기회 탐색 후 첫 게이트 심사</p></li><li><span class="sn">2</span><b>범위 검토</b><p>시장·기술 예비 조사</p></li><li><span class="sn">3</span><b>사업타당성</b><p>제품 정의·사업계획 수립</p></li><li><span class="sn">4</span><b>개발</b><p>설계·시제품 제작</p></li><li><span class="sn">5</span><b>시험·검증</b><p>현장·시장 테스트</p></li><li><span class="sn">6</span><b>출시</b><p>생산·판매 개시, 사후 검토</p></li></ol></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">33 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 4·5세대의 적용 예로 제시한 Stage-gate(Cooper)는 개발을 여러 단계로 나누고, 단계 사이 게이트에서 계속·보류·중단을 결정한다. 게이트에는 기술뿐 아니라 마케팅·생산 등 여러 부서가 참여해 다양한 관점을 반영하고, 이후 사업화에 필요한 공감대도 미리 만든다. 흔한 실수는 게이트를 형식적 승인 절차로 만들어 가망 없는 과제를 끝까지 끌고 가는 것이다.</p></div></div><div class="slot" id="s34" data-lec="09-4"><article class="slide ty-takeaway" aria-label="34 / 49"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>선형 모델은 피드백·학습과 숨은 니즈를 설명하지 못한다</li><li>Chain-linked: 설계 중심사슬 위에서 피드백이 반복되는 비선형 과정</li><li>문제는 기존 지식에서 먼저 풀고, 안 될 때 연구로 넘어간다(K-R)</li><li>4·5세대는 통합·병렬·네트워크로 진화, Stage-gate로 적용된다</li></ul></div><footer class="sl-f"><span>09-4 Chain-linked Model과 R&amp;D 세대</span><span class="num">34 / 49</span></footer></article></div><div class="slot" id="s35" data-lec="09-5"><article class="slide ty-title" aria-label="35 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">9주차 · PFI·R&amp;D생산성·흡수역량</p><p class="t-no">09-5</p><h2 class="t-title">R&amp;D 딜레마와 흡수역량</h2><p class="t-thesis">R&amp;D는 실패해도 흡수역량을 남긴다</p></div></div><footer class="sl-f"><span>09-5 R&amp;D 딜레마와 흡수역량</span><span class="num">35 / 49</span></footer></article></div><div class="slot" id="s36" data-lec="09-5"><article class="slide ty-stat" aria-label="36 / 49"><div class="sl-in"><h3 class="sh">R&amp;D 딜레마: Why R&amp;D?</h3><div class="stat"><p class="st-v">3,000:1</p><p class="st-l">원시 아이디어 3,000개당 상업적 성공 1개</p><p class="st-t">제약사는 6천~8천 개로 출발, 특허 중 crown jewel은 1% 미만</p></div></div><footer class="sl-f"><span>09-5 R&amp;D 딜레마와 흡수역량</span><span class="num">36 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Stevens &amp; Burley(1997)의 유명한 수치다. 원시 아이디어 3,000개가 걸러지고 걸러져 상업적 성공 1개가 된다. 제약사는 6천~8천 개에서 출발하고, 특허 중에서도 핵심 &#x27;보석&#x27;은 1% 미만이다. 이렇게 살아남은 기술끼리 다시 시장에서 경쟁한다(다윈의 바다). 성공 확률만 보면 R&amp;D는 손해 보는 투자처럼 보이는데, 그런데도 왜 하느냐가 흡수역량 논의의 출발점이다.</p></div></div><div class="slot" id="s37" data-lec="09-5"><article class="slide ty-steps" aria-label="37 / 49"><div class="sl-in"><h3 class="sh">흡수역량이란</h3><ol class="steps n3"><li><span class="sn">1</span><b>인식(Identify)</b><p>외부 신지식의 가치를 알아봄</p></li><li><span class="sn">2</span><b>흡수(Assimilate)</b><p>지식을 조직 안으로 소화</p></li><li><span class="sn">3</span><b>활용(Exploit)</b><p>상업적 목적에 적용</p></li></ol></div><footer class="sl-f"><span>09-5 R&amp;D 딜레마와 흡수역량</span><span class="num">37 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Cohen &amp; Levinthal(1990)의 정의다. 흡수역량은 새 외부 정보의 가치를 알아보고(인식), 조직 안에 소화하고(흡수), 상업적 목적에 쓰는(활용) 능력이다. 세 단계 중 하나라도 약하면 좋은 외부 지식도 성과가 되지 못한다. 예: 공동연구로 최신 기술 자료를 받아도 그 의미를 이해할 내부 인력이 없으면 제품 개발에 반영되지 못한다.</p></div></div><div class="slot" id="s38" data-lec="09-5"><article class="slide ty-points" aria-label="38 / 49"><div class="sl-in"><h3 class="sh">Cohen &amp; Levinthal의 발견</h3><div class="pts n4"><div class="pt"><b>외부 지식</b><p>조직 수준과 무관하게 혁신에 중요</p></div><div class="pt"><b>차용</b><p>대부분의 혁신은 발명보다 차용에서 비롯</p></div><div class="pt"><b>사전지식</b><p>대수를 알면 미적분을 쉽게 배우듯 축적이 관건</p></div><div class="pt"><b>개인 역량</b><p>조직 흡수역량은 구성원 역량에 의존</p></div></div></div><footer class="sl-f"><span>09-5 R&amp;D 딜레마와 흡수역량</span><span class="num">38 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Cohen &amp; Levinthal이 기존 연구에서 끌어낸 출발점이다. 대부분의 혁신은 순수 발명보다 남의 지식을 빌려 와 응용하는 데서 나온다. 그런데 빌려 오는 능력은 사전지식에 비례한다. 대수를 아는 학생이 미적분을 쉽게 배우듯 관련 지식이 쌓여 있어야 새 지식이 흡수된다. 연습이 쌓일수록 문제해결 능력이 오르고(Harlow 1959), 새 기술이 이로울 것이라는 기대가 있어야 학습 투자가 일어난다.</p></div></div><div class="slot" id="s39" data-lec="09-5"><article class="slide ty-compare" aria-label="39 / 49"><div class="sl-in"><h3 class="sh">R&amp;D의 두 얼굴</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">신지식 창출</b><ul><li>새 제품·공정 개발</li><li>직접적·가시적 성과</li><li>성공 확률은 낮음</li></ul></div><div class="cp-col"><b class="cp-h">흡수역량 축적</b><ul><li>외부 지식을 이해할 기반</li><li>간접적·누적적 성과</li><li>과제가 실패해도 남음</li></ul></div></div><p class="cp-note">R&amp;D는 신지식 창출과 함께 흡수역량에도 기여</p></div><footer class="sl-f"><span>09-5 R&amp;D 딜레마와 흡수역량</span><span class="num">39 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Cohen &amp; Levinthal의 핵심 주장은 R&amp;D가 새 지식을 만들 뿐 아니라 기업의 흡수역량에도 기여한다는 것이다. 이 관점에서는 상업적으로 실패한 과제도 연구 인력의 지식과 외부 네트워크를 남긴다. 그래서 성공 확률이 낮아도 R&amp;D를 유지할 이유가 생긴다. 예산을 줄일 때는 과제 성공률만이 아니라 외부 기술을 따라갈 능력이 남는지를 함께 따져야 한다.</p></div></div><div class="slot" id="s40" data-lec="09-5"><article class="slide ty-tree" aria-label="40 / 49"><div class="sl-in"><h3 class="sh">R&amp;D 지출의 결정요인</h3><div class="tree"><div class="tr-r">R&amp;D 지출</div><div class="tr-cs n3"><div class="tr-c"><b>기술적 기회</b><p>표준 기술 도달이 어려울수록 집중</p></div><div class="tr-c"><b>전유성</b><p>수익 보호 가능성 클수록 집중</p></div><div class="tr-c"><b>흡수역량</b><p>지식량 많고 학습 어려울수록 투자</p></div></div></div></div><footer class="sl-f"><span>09-5 R&amp;D 딜레마와 흡수역량</span><span class="num">40 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Cohen &amp; Levinthal은 R&amp;D 지출에 영향을 주는 요인을 정리했다. 표준화된 기술에 도달하기 어려울수록(기술적 기회), 수익을 배타적으로 지킬 수 있을수록(전유성) R&amp;D가 늘고, 경쟁자 간 상호의존도 전유성에 영향을 준다. 여기에 흡수역량 관점이 더해진다. 흡수해야 할 외부 지식이 많을수록, 학습이 어려울수록 자체 R&amp;D 유인이 커진다. 실제로 학습 난이도가 높은 분야일수록 R&amp;D 집약도가 높았다.</p></div></div><div class="slot" id="s41" data-lec="09-5"><article class="slide ty-paper" aria-label="41 / 49"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Cohen &amp; Levinthal (1990)</h3><p class="pp-q">외부 지식이 있는데 기업은 왜 스스로 R&amp;D를 하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>외부 지식을 인식·흡수·활용하는 능력은 사전 관련지식에 달려 있고, R&amp;D는 신지식 창출과 흡수역량 축적이라는 두 얼굴을 가진다.</p><div class="pp-cs"><span class="pp-c">흡수역량</span><span class="pp-c">사전지식</span><span class="pp-c">Gatekeeper</span><span class="pp-c">R&amp;D의 두 얼굴</span></div></div><div><b>강의와의 연결</b><p>09-5·09-6, p.36-41: 정의, R&amp;D 지출 결정요인(기술기회·전유성·흡수역량), 속성과 시사점</p><b>보충 설명</b><p>흡수역량은 누적·경로의존적이라 초기 투자가 부족하면 새 기술기회에서 아예 배제(lockout)될 수 있다. FTC 사업부 자료로 학습 난이도가 높을수록 R&amp;D 집약도가 높음을 실증.</p></div></div><p class="pp-cite">Cohen, W. M., &amp; Levinthal, D. A. (1990). Absorptive capacity: A new perspective on learning and innovation. Administrative Science Quarterly, 35(1), 128–152. </p></div><footer class="sl-f"><span>09-5 R&amp;D 딜레마와 흡수역량</span><span class="num">41 / 49</span></footer></article></div><div class="slot" id="s42" data-lec="09-5"><article class="slide ty-takeaway" aria-label="42 / 49"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>아이디어 3,000개 중 1개만 성공해도 R&amp;D를 하는 이유가 있다</li><li>흡수역량 = 외부 지식을 인식·흡수·활용하는 능력</li><li>흡수역량은 사전지식에 달려 있고, R&amp;D가 이를 키운다</li><li>R&amp;D 지출은 기술기회·전유성·흡수역량 필요에 따라 달라진다</li></ul></div><footer class="sl-f"><span>09-5 R&amp;D 딜레마와 흡수역량</span><span class="num">42 / 49</span></footer></article></div><div class="slot" id="s43" data-lec="09-6"><article class="slide ty-title" aria-label="43 / 49"><div class="sl-in"><div class="t-wrap"><p class="t-wk">9주차 · PFI·R&amp;D생산성·흡수역량</p><p class="t-no">09-6</p><h2 class="t-title">흡수역량의 속성과 성과</h2><p class="t-thesis">흡수역량은 경로의존적이며 외부에서 살 수 없다</p></div></div><footer class="sl-f"><span>09-6 흡수역량의 속성과 성과</span><span class="num">43 / 49</span></footer></article></div><div class="slot" id="s44" data-lec="09-6"><article class="slide ty-concepts" aria-label="44 / 49"><div class="sl-in"><h3 class="sh">흡수역량의 속성</h3><div class="ccs n5"><div class="cc"><b>개인 의존</b><p>개인 역량에 의존하나 단순 합은 아님</p></div><div class="cc"><b>Gatekeeping</b><p>경계연결(boundary-spanning) 개인이 큰 역할</p></div><div class="cc"><b>기업 고유성</b><p>외부 인재 영입·컨설팅만으로 체화하기 어려움</p></div><div class="cc"><b>경로의존성</b><p>사전지식이 흡수·활용을 가능케, 초기 과소투자는 누적</p></div><div class="cc"><b>R&amp;D의 부산물</b><p>R&amp;D가 신지식과 흡수역량을 동시에 생성</p></div></div></div><footer class="sl-f"><span>09-6 흡수역량의 속성과 성과</span><span class="num">44 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Cohen &amp; Levinthal(1990)이 정리한 속성이다. 조직의 흡수역량은 구성원 역량에 기대지만, 지식이 부서 사이를 오가는 구조가 없으면 합쳐지지 않는다. 그래서 외부와 내부를 잇는 gatekeeper·경계연결 인력이 중요하다. 또 흡수역량은 기업 고유의 맥락 지식이라 외부 전문가 영입이나 컨설팅만으로 체화하기 어렵다. 결국 자체 R&amp;D의 부산물로 쌓인다.</p></div></div><div class="slot" id="s45" data-lec="09-6"><article class="slide ty-cycle" aria-label="45 / 49"><div class="sl-in"><h3 class="sh">흡수역량의 누적 고리</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="사전지식 → 외부지식 인식 → 흡수·동화 → 활용·학습"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,86.6) rotate(45.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,263.4) rotate(135.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,263.4) rotate(225.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,86.6) rotate(315.0)"/><g><rect x="258.0" y="29.0" width="84" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">사전지식</text></g><g><rect x="360.5" y="154.0" width="129" height="42" rx="21" class="cy-node"/><text x="425.0" y="181.0" text-anchor="middle" class="cy-t">외부지식 인식</text></g><g><rect x="250.5" y="279.0" width="99" height="42" rx="21" class="cy-node"/><text x="300.0" y="306.0" text-anchor="middle" class="cy-t">흡수·동화</text></g><g><rect x="125.5" y="154.0" width="99" height="42" rx="21" class="cy-node"/><text x="175.0" y="181.0" text-anchor="middle" class="cy-t">활용·학습</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">경로의존성</text></svg></div></div><footer class="sl-f"><span>09-6 흡수역량의 속성과 성과</span><span class="num">45 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>흡수역량은 스스로 강화되는 고리다. 사전지식이 있어야 새 지식을 알아보고 흡수하며, 활용 경험이 다시 사전지식이 된다. 반대로 Cohen &amp; Levinthal에 따르면 초기 투자가 부족하면 기술 기회를 알아차려도 다음 시기의 투자까지 줄어드는 악순환이 생긴다. 예: 어떤 분야에 몇 년간 연구 인력을 두지 않았다면, 그 분야가 급성장해도 무엇을 사고 누구와 협력할지 판단하기 어렵다.</p></div></div><div class="slot" id="s46" data-lec="09-6"><article class="slide ty-points" aria-label="46 / 49"><div class="sl-in"><h3 class="sh">흡수역량이 성과를 내는 경로</h3><div class="pts n4"><div class="pt"><b>기회 상업화</b><p>기존 지식 기반으로 유망 기회를 재빨리 포착</p></div><div class="pt"><b>신제품 성과</b><p>지식 활용도를 높여 독특한 편익의 제품 출시</p></div><div class="pt"><b>시장 기회</b><p>새 시장·기술·인과관계 아이디어 제공</p></div><div class="pt"><b>고객 협력</b><p>약하면 고객 요구를 신제품에 통합 곤란(Tsai)</p></div></div></div><footer class="sl-f"><span>09-6 흡수역량의 속성과 성과</span><span class="num">46 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>Zahra &amp; George(2002)는 흡수역량이 기존 지식을 바탕으로 유망 기회를 빨리 이해·상업화하게 하고, 독특한 편익의 신제품과 새 시장 기회 포착을 돕는다고 본다. Tsai(2009)는 흡수역량이 낮은 조직은 고객과 긴밀히 협력해도 잠재 고객의 요구를 신제품에 반영하기 어렵다고 보였다. 즉 외부 협력의 효과도 결국 흡수역량에 달려 있다.</p></div></div><div class="slot" id="s47" data-lec="09-6"><article class="slide ty-paper" aria-label="47 / 49"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Zahra &amp; George (2002)</h3><p class="pp-q">흡수역량은 어떤 하위 역량들로 이루어지는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>흡수역량을 획득·동화(잠재적)와 변환·활용(실현된) 네 역량으로 된 동적역량으로 재정의하고, 두 차원의 균형이 경쟁우위를 좌우한다고 제안했다.</p><div class="pp-cs"><span class="pp-c">잠재적 흡수역량</span><span class="pp-c">실현된 흡수역량</span><span class="pp-c">동적역량</span></div></div><div><b>강의와의 연결</b><p>09-6, p.40: 흡수역량이 기회 상업화·신제품 성과·새 시장기회 포착에 기여(Zahra and George, 2002)</p><b>보충 설명</b><p>활성화 촉발요인, 사회적 통합 메커니즘, 전유성 체제를 조절변수로 제시. Todorova &amp; Durisin(2007)은 &#x27;가치 인식&#x27; 단계가 빠졌다고 비판하며 재수정.</p></div></div><p class="pp-cite">Zahra, S. A., &amp; George, G. (2002). Absorptive capacity: A review, reconceptualization, and extension. Academy of Management Review, 27(2), 185–203. </p></div><footer class="sl-f"><span>09-6 흡수역량의 속성과 성과</span><span class="num">47 / 49</span></footer></article></div><div class="slot" id="s48" data-lec="09-6"><article class="slide ty-checklist" aria-label="48 / 49"><div class="sl-in"><h3 class="sh">흡수역량을 높이려면?</h3><ol class="chk two"><li><span class="ck">1</span>외부 지식을 들여올 gatekeeper가 정해져 있는가?</li><li><span class="ck">2</span>핵심 분야에 소규모라도 자체 R&amp;D를 유지하는가?</li><li><span class="ck">3</span>구성원 개인의 학습·전문성 축적을 지원하는가?</li><li><span class="ck">4</span>들여온 지식이 부서 간에 공유되는 구조가 있는가?</li><li><span class="ck">5</span>외부 영입·자문에만 의존하고 있지 않은가?</li></ol></div><footer class="sl-f"><span>09-6 흡수역량의 속성과 성과</span><span class="num">48 / 49</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 &#x27;조직의 흡수역량을 높이는 방법&#x27;을 묻는다. 앞의 속성에서 답을 끌어낼 수 있다. 흡수역량이 개인에 의존하므로 사람에 투자하고, gatekeeper가 핵심이므로 외부 접점을 맡을 사람을 정하며, R&amp;D의 부산물이므로 자체 연구를 끊지 않는다. 개인 지식이 조직 지식이 되도록 공유 구조도 만든다. 예: 학회·공동연구에 다녀온 연구자가 사내 세미나로 내용을 공유하게 한다.</p></div></div><div class="slot" id="s49" data-lec="09-6"><article class="slide ty-takeaway" aria-label="49 / 49"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>조직 흡수역량은 개인 역량에 의존하지만 단순 합이 아니다</li><li>Gatekeeper·경계연결 인력이 외부 지식을 조직으로 들인다</li><li>경로의존적: 초기 과소투자는 다음 기회 포착까지 약화시킨다</li><li>외부 인재 영입·컨설팅만으로는 흡수역량을 살 수 없다</li></ul></div><footer class="sl-f"><span>09-6 흡수역량의 속성과 성과</span><span class="num">49 / 49</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-07.html">← IM07 확산·파괴적 혁신</a><a class="wk-nav" href="lecture-12.html">IM12 디지털 경제·플랫폼 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: Innovation Management (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

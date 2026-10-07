@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IM06 개방형혁신·핵심역량 · 이노베이션 경영</title>
+<meta name="description" content="밖의 지식을 쓰되, 뿌리 역량은 지켜라">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">이노베이션 경영</a> / <a href="index.html">강의별 핵심</a> / IM06</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 06</p>
+  <h1>개방형혁신·핵심역량</h1>
+  <p class="lead">밖의 지식을 쓰되, 뿌리 역량은 지켜라</p>
+  <div class="kws"><span class="kw">Open Innovation</span><span class="kw">Inbound/Outbound</span><span class="kw">Business Model</span><span class="kw">Openness</span><span class="kw">Core Competence</span><span class="kw">SBU의 횡포</span></div>
+  <details class="plist"><summary>이 강의의 논문 7편</summary><ol><li><b>Chesbrough (2006)</b> Chesbrough, H. (2006). Open innovation: A new paradigm for understanding industrial innovation. In H. Chesbrough, W. Vanhaverbeke, &amp; J. West (Eds.), Open innovation: Researching a new paradigm (pp. 1–12). Oxford University Press.</li><li><b>Chesbrough &amp; Rosenbloom (2002)</b> Chesbrough, H., &amp; Rosenbloom, R. S. (2002). The role of the business model in capturing value from innovation: Evidence from Xerox Corporation&#x27;s technology spin-off companies. Industrial and Corporate Change, 11(3), 529–555.</li><li><b>Laursen &amp; Salter (2006)</b> Laursen, K., &amp; Salter, A. (2006). Open for innovation: The role of openness in explaining innovation performance among U.K. manufacturing firms. Strategic Management Journal, 27(2), 131–150.</li><li><b>Schäper et al. (2023)</b> Schäper, T., Jung, C., Foege, J. N., Bogers, M. L. A. M., Fainshmidt, S., &amp; Nüesch, S. (2023). The S-shaped relationship between open innovation and financial performance: A longitudinal perspective using a novel text-based measure. Research Policy, 52(6), 104764.</li><li><b>Chesbrough &amp; Crowther (2006)</b> Chesbrough, H., &amp; Crowther, A. K. (2006). Beyond high tech: Early adopters of open innovation in other industries. R&amp;D Management, 36(3), 229–236.</li><li><b>West (2003)</b> West, J. (2003). How open is open enough? Melding proprietary and open source platform strategies. Research Policy, 32(7), 1259–1285.</li><li><b>Prahalad &amp; Hamel (1990)</b> Prahalad, C. K., &amp; Hamel, G. (1990). The core competence of the corporation. Harvard Business Review, 68(3), 79–91.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="06-1"><b>06-1</b><span>개방형 혁신의 개념과 원리</span></a><a href="#s9" class="tab" data-lec="06-2"><b>06-2</b><span>비즈니스모델과 P&amp;G C+D</span></a><a href="#s20" class="tab" data-lec="06-3"><b>06-3</b><span>얼마나 개방할 것인가</span></a><a href="#s28" class="tab" data-lec="06-4"><b>06-4</b><span>오픈이노베이션 연구 지도</span></a><a href="#s36" class="tab" data-lec="06-5"><b>06-5</b><span>핵심역량의 개념</span></a><a href="#s45" class="tab" data-lec="06-6"><b>06-6</b><span>핵심역량의 활용과 도출</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 52</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="06-1"><article class="slide ty-title" aria-label="1 / 52"><div class="sl-in"><div class="t-wrap"><p class="t-wk">6주차 · 개방형혁신·핵심역량</p><p class="t-no">06-1</p><h2 class="t-title">개방형 혁신의 개념과 원리</h2><p class="t-thesis">혁신 지식은 기업 경계를 넘어 들어오고 나간다</p></div></div><footer class="sl-f"><span>06-1 개방형 혁신의 개념과 원리</span><span class="num">1 / 52</span></footer></article></div><div class="slot" id="s2" data-lec="06-1"><article class="slide ty-quote" aria-label="2 / 52"><div class="sl-in"><figure class="qt"><blockquote>the use of purposive inflows and outflows of knowledge to accelerate internal innovation</blockquote><figcaption>06-1 슬라이드 p.7</figcaption></figure></div><footer class="sl-f"><span>06-1 개방형 혁신의 개념과 원리</span><span class="num">2 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Chesbrough 외(2006)의 정의다. 개방형 혁신은 의도적인 지식의 유입으로 내부 혁신을 가속하고, 의도적인 유출로 혁신의 외부 활용 시장을 넓히는 것이다. 연구에서 개발, 상업화에 이르는 전 과정에서 기업 안팎 사이에 일어나는 모든 형태의 지식 교류가 포함된다. &#x27;의도적(purposive)&#x27;이라는 말이 핵심으로, 우연한 정보 유출이나 단순 외주와는 다르다.</p></div></div><div class="slot" id="s3" data-lec="06-1"><article class="slide ty-paper" aria-label="3 / 52"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Chesbrough (2006a)</h3><p class="pp-q">폐쇄형 혁신이 왜 한계에 부딪혔고 개방형은 어떻게 다른가?</p><div class="pp-g"><div><b>핵심 주장</b><p>제품수명 단축과 혁신비용 증가로 폐쇄형 모델은 수익이 압박받는다. 외부 자원으로 비용을 줄이고 라이선싱·분사·매각으로 신규 매출을 내는 개방형 BM이 필요하다.</p><div class="pp-cs"><span class="pp-c">폐쇄형 vs 개방형</span><span class="pp-c">내향형·외향형</span><span class="pp-c">비즈니스 모델</span><span class="pp-c">Spin-off</span></div></div><div><b>강의와의 연결</b><p>13-4 p.33-36: 폐쇄형/개방형 비용-수익 구조와 기본 원리(김석관 2008 정리), 13-6 p.56 BM 정의</p><b>보충 설명</b><p>Chesbrough(2003) 개방형 혁신을 BM 관점으로 확장. 핵심은 기술 자체가 아니라 그 기술을 시장에 연결하는 BM이 가치를 결정한다는 것. 슬라이드의 &#x27;2006a&#x27; 표기는 김석관(2008) 인용 기준.</p></div></div><p class="pp-cite">Chesbrough, H. W. (2006). Open business models: How to thrive in the new innovation landscape. Boston, MA: Harvard Business School Press. </p></div><footer class="sl-f"><span>06-1 개방형 혁신의 개념과 원리</span><span class="num">3 / 52</span></footer></article></div><div class="slot" id="s4" data-lec="06-1"><article class="slide ty-steps" aria-label="4 / 52"><div class="sl-in"><h3 class="sh">R&amp;D 생산성의 흐름</h3><ol class="steps n6"><li><span class="sn">1</span><b>Idea</b><p>PLAN: 아이디어 발굴</p></li><li><span class="sn">2</span><b>Input</b><p>DO: 인력·자금 투입</p></li><li><span class="sn">3</span><b>Throughput</b><p>DO: 연구개발 수행</p></li><li><span class="sn">4</span><b>Output</b><p>SEE: 특허·기술 등 산출</p></li><li><span class="sn">5</span><b>Transfer</b><p>SEE: 기술이전·사업화</p></li><li><span class="sn">6</span><b>Outcome</b><p>SEE: 경제·사회적 성과</p></li></ol></div><footer class="sl-f"><span>06-1 개방형 혁신의 개념과 원리</span><span class="num">4 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>R&amp;D 생산성은 아이디어에서 최종 성과까지의 흐름으로 본다. 세계 R&amp;D 지출, 특히 제약 분야 지출이 급증하면서 같은 돈으로 더 많은 성과를 내야 하는 압력이 커졌다. 개방형 혁신은 이 흐름의 어느 단계에서든 외부와 연결할 수 있다는 발상이다. 예: 아이디어는 외부 공모로, 산출된 특허는 다른 기업에 이전해 성과를 낼 수 있다.</p></div></div><div class="slot" id="s5" data-lec="06-1"><article class="slide ty-compare" aria-label="5 / 52"><div class="sl-in"><h3 class="sh">폐쇄형 vs 개방형: 기본 원리</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">폐쇄형 혁신</b><ul><li>최고 인재는 우리 회사에 있다</li><li>직접 발견·개발·출시해야 이익</li><li>시장에 먼저 나가는 자가 승리</li><li>IP를 통제해 경쟁자 활용 차단</li></ul></div><div class="cp-col"><b class="cp-h">개방형 혁신</b><ul><li>인재 상당수는 회사 밖에 있다</li><li>외부 R&amp;D도 큰 가치를 창출</li><li>더 나은 BM이 먼저 출시보다 중요</li><li>IP를 사고팔아 수익 창출</li></ul></div></div><p class="cp-note">외부 R&amp;D는 내부 R&amp;D의 대체가 아닌 보완</p></div><footer class="sl-f"><span>06-1 개방형 혁신의 개념과 원리</span><span class="num">5 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Chesbrough(2006a)가 정리한 두 패러다임의 원리 비교다. 폐쇄형은 모든 것을 직접 해야 통제할 수 있다고 믿고, 개방형은 유용한 지식이 밖에 널리 퍼져 있다고 본다. 개방형에서도 내부 R&amp;D는 필요하다. 외부 지식을 알아보고 흡수하며 가치의 일부를 확보하려면 내부 역량이 있어야 하기 때문이다.</p></div></div><div class="slot" id="s6" data-lec="06-1"><article class="slide ty-tree" aria-label="6 / 52"><div class="sl-in"><h3 class="sh">개방형의 비용-수익 논리</h3><div class="tree"><div class="tr-r">개방형 혁신</div><div class="tr-cs n3"><div class="tr-c"><b>배경</b><p>개발비 급증, 제품수명 단축</p></div><div class="tr-c"><b>비용 절감</b><p>외부 기술 활용으로 개발 비용·시간↓</p></div><div class="tr-c"><b>수익 확대</b><p>안 쓰는 기술 라이선스·스핀오프</p></div></div></div></div><footer class="sl-f"><span>06-1 개방형 혁신의 개념과 원리</span><span class="num">6 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Chesbrough(2006a)에 따르면 개발 비용은 오르고 제품 수명은 짧아져, 폐쇄형으로는 R&amp;D 투자를 회수하기 점점 어렵다. 개방형은 양쪽에서 해법을 찾는다. 외부 기술을 들여와 개발 비용과 시간을 줄이고, 자사가 쓰지 않는 기술은 라이선스나 스핀오프로 팔아 새 수익을 만든다. 예: 서랍 속 특허를 타 업계에 라이선싱하는 것이다.</p></div></div><div class="slot" id="s7" data-lec="06-1"><article class="slide ty-points" aria-label="7 / 52"><div class="sl-in"><h3 class="sh">기술사업화의 다양한 경로</h3><div class="pts n4"><div class="pt"><b>자사 시장</b><p>내부 기술로 현재 사업에서 사업화</p></div><div class="pt"><b>기술 도입</b><p>외부 기술을 들여와 자사 제품에 활용</p></div><div class="pt"><b>라이선스 아웃</b><p>타사 시장에서 내 기술이 쓰이게 함</p></div><div class="pt"><b>스핀오프</b><p>별도 회사로 분리해 새 시장 개척</p></div></div></div><footer class="sl-f"><span>06-1 개방형 혁신의 개념과 원리</span><span class="num">7 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>폐쇄형에서 기술은 자사의 현재 시장으로만 나간다. 개방형에서는 기업 경계에 구멍이 나 있어 외부 기술이 들어오고, 내부 기술이 라이선스나 스핀오프로 다른 시장에 나간다(Chesbrough 2006a). 기술 하나를 가지고도 &#x27;우리가 직접 할지, 팔지, 분사할지&#x27;를 비교하는 것이 개방형의 실무적 의미다.</p></div></div><div class="slot" id="s8" data-lec="06-1"><article class="slide ty-takeaway" aria-label="8 / 52"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>개방형 혁신: 의도적 지식 유입·유출로 혁신을 가속·확장</li><li>유용한 지식은 기업 밖에 널리 분산되어 있다</li><li>외부 R&amp;D는 내부 R&amp;D를 대체가 아니라 보완한다</li><li>기술은 자사 사업 외에 라이선스·스핀오프로도 사업화된다</li></ul></div><footer class="sl-f"><span>06-1 개방형 혁신의 개념과 원리</span><span class="num">8 / 52</span></footer></article></div><div class="slot" id="s9" data-lec="06-2"><article class="slide ty-title" aria-label="9 / 52"><div class="sl-in"><div class="t-wrap"><p class="t-wk">6주차 · 개방형혁신·핵심역량</p><p class="t-no">06-2</p><h2 class="t-title">비즈니스모델과 P&amp;G C+D</h2><p class="t-thesis">기술의 가치는 비즈니스모델이 결정한다</p></div></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">9 / 52</span></footer></article></div><div class="slot" id="s10" data-lec="06-2"><article class="slide ty-concepts" aria-label="10 / 52"><div class="sl-in"><h3 class="sh">BM의 6가지 기능</h3><div class="ccs n6"><div class="cc"><b>가치 제안</b><p>제품이 소비자에게 창출하는 가치 규정</p></div><div class="cc"><b>목표 시장</b><p>제품을 유용하게 쓸 소비자 규정</p></div><div class="cc"><b>가치 사슬</b><p>생산·판매 구조와 필요한 보완자산 정의</p></div><div class="cc"><b>비용/편익 구조</b><p>매출 창출 절차와 비용·예상수익 추정</p></div><div class="cc"><b>가치 네트워크</b><p>공급자·고객·경쟁자 생태계 내 위치</p></div><div class="cc"><b>경쟁 전략</b><p>경쟁자 대비 우위 확보 방식</p></div></div></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">10 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Chesbrough &amp; Rosenbloom(2002)에 따르면 기술 자체에는 경제적 가치가 없고, 비즈니스모델을 거쳐 상업화될 때 가치가 생긴다. 이 여섯 기능은 기술을 돈으로 바꾸는 설계도다. 같은 기술이라도 누구에게(목표 시장) 무엇을(가치 제안) 어떤 구조로(가치 사슬·비용) 팔지에 따라 가치가 완전히 달라진다.</p></div></div><div class="slot" id="s11" data-lec="06-2"><article class="slide ty-paper" aria-label="11 / 52"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Chesbrough &amp; Rosenbloom (2002)</h3><p class="pp-q">같은 기술의 가치가 왜 비즈니스모델에 따라 달라지나?</p><div class="pp-g"><div><b>핵심 주장</b><p>기술 자체는 경제적 가치가 없고 BM을 통해 상업화될 때 가치가 생긴다. Xerox는 기존 BM에 맞지 않는 기술을 놓쳤고 스핀오프가 다른 BM으로 가치를 실현했다.</p><div class="pp-cs"><span class="pp-c">Business model 6기능</span><span class="pp-c">Value capture</span><span class="pp-c">Spin-off</span></div></div><div><b>강의와의 연결</b><p>06-2, p.16: 개방형 혁신 관점의 BM 6요소(가치제안·목표시장·가치사슬·비용/수익·가치네트워크·경쟁전략)</p><b>보충 설명</b><p>Xerox PARC 스핀오프 35개 추적. 기존 BM의 성공이 지배적 논리(dominant logic)가 되어 새 BM 탐색을 막는다는 인지적 한계를 제시—이후 BM 혁신 연구의 출발점.</p></div></div><p class="pp-cite">Chesbrough, H., &amp; Rosenbloom, R. S. (2002). The role of the business model in capturing value from innovation: Evidence from Xerox Corporation&#x27;s technology spin-off companies. Industrial and Corporate Change, 11(3), 529–555. </p></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">11 / 52</span></footer></article></div><div class="slot" id="s12" data-lec="06-2"><article class="slide ty-case" aria-label="12 / 52"><div class="sl-in"><p class="ca-k">사례 · BM이 기술 가치 결정</p><h3 class="sh">Xerox PARC 스핀오프</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>Xerox의 PARC 연구소는 이더넷, GUI, 레이저 프린팅 등 뛰어난 기술을 만들었지만 복사기 중심 BM에 맞지 않는 기술이 많았다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>BM에 맞지 않는 기술은 사내에서 사장되거나, 연구자들이 나가 3Com, Adobe 같은 별도 회사로 사업화했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>일부 스핀오프는 Xerox와 다른 BM으로 큰 성공을 거뒀다. Chesbrough &amp; Rosenbloom은 35개 스핀오프를 추적했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>기존 BM의 성공이 새 기술을 보는 눈을 가린다. 기술마다 맞는 BM을 따로 찾아야 한다.</p></div></div></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">12 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Xerox는 기술이 부족한 것이 아니라 기술을 기존 복사기·장비 판매 방식으로만 평가한 것이 문제였다. 기존 BM이 &#x27;지배적 논리&#x27;가 되어 다른 수익 방식을 상상하지 못한 것이다. 기술을 평가할 때 &#x27;우리 BM에 맞는가&#x27;만 묻지 말고 &#x27;어떤 BM이면 이 기술이 가치를 낼까&#x27;를 함께 물어야 한다.</p></div></div><div class="slot" id="s13" data-lec="06-2"><article class="slide ty-steps" aria-label="13 / 52"><div class="sl-in"><h3 class="sh">비즈니스모델 진화의 6단계</h3><ol class="steps n6"><li><span class="sn">1</span><b>1 미분화</b><p>차별화 없는 범용 제품·가격 경쟁</p></li><li><span class="sn">2</span><b>2 차별화</b><p>일부 차별화, 단일 제품 의존</p></li><li><span class="sn">3</span><b>3 세분화</b><p>여러 시장 세그먼트별로 대응</p></li><li><span class="sn">4</span><b>4 외부 인식</b><p>외부 아이디어·기술을 받아들이기 시작</p></li><li><span class="sn">5</span><b>5 혁신 통합</b><p>공급자·고객과 혁신 과정을 통합</p></li><li><span class="sn">6</span><b>6 적응형 플랫폼</b><p>BM 자체를 바꾸며 플랫폼이 됨</p></li></ol></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">13 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Chesbrough(2006)는 개방형 관점에서 BM을 6단계로 분류했다. 아래 단계일수록 혁신이 내부에 갇혀 있고 위로 갈수록 외부와의 연결이 깊어진다. 4단계부터 외부 기술을 체계적으로 활용하고, 6단계에서는 시장 변화에 맞춰 BM 자체를 바꾼다. 어떤 기업의 혁신 방식이 어느 단계인지 진단하고 다음 단계로 무엇이 필요한지 정하는 데 쓴다.</p></div></div><div class="slot" id="s14" data-lec="06-2"><article class="slide ty-compare" aria-label="14 / 52"><div class="sl-in"><h3 class="sh">Connect+Develop의 두 방향</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">내향적 OI (IOI)</b><ul><li>외부 자원·역량을 획득·활용</li><li>내부에서 R&amp;D·제품 개발</li><li>outside in</li></ul></div><div class="cp-col"><b class="cp-h">외향적 OI (OOI)</b><ul><li>내부 자원을 외부로 방출(spin-off)</li><li>외부 기업이 개발·상업화</li><li>inside out</li></ul></div></div><p class="cp-note">P&amp;G: 전사 차원의 체계적 개방형 혁신 프로그램</p></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">14 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>전정환 외(2012)는 P&amp;G의 개방형 혁신을 두 방향으로 나눈다. 내향적 OI는 외부 기술이나 역량을 들여와 내부에서 제품을 만드는 것이고, 외향적 OI는 내부 기술을 외부에 내보내 다른 기업이 상업화하게 하는 것이다. 한 기업이 두 방향을 동시에 운영할 수 있으며, P&amp;G는 둘을 모두 체계화했다.</p></div></div><div class="slot" id="s15" data-lec="06-2"><article class="slide ty-case" aria-label="15 / 52"><div class="sl-in"><p class="ca-k">사례 · 전사적 개방형 혁신</p><h3 class="sh">P&amp;G Connect+Develop</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>P&amp;G는 내부 역량과 신뢰하는 공급자 네트워크에 의존해 제품을 개발해 왔으나, 그것만으로는 필요한 혁신 속도를 내기 어려웠다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>전사 차원의 Connect+Develop을 출범해 외부 기술을 들여오고(outside in) 내부 기술을 내보내는(inside out) 체계를 만들었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>혁신의 절반을 외부에서 찾는다는 목표 아래 외부 기술을 결합한 신제품이 잇따라 나왔다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>개방형 혁신은 개별 제휴가 아니라 전사적 프로그램으로 운영될 때 효과가 크다.</p></div></div></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">15 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>P&amp;G의 C+D는 &#x27;연구개발(R&amp;D)&#x27;을 &#x27;연결개발(C&amp;D)&#x27;로 바꾼 것으로, 외부 아이디어를 찾는 전담 조직과 절차를 갖춘 대표 사례다. 핵심은 일회성 제휴가 아니라 상시 운영 체계라는 점이다. 전정환 외(2012)는 이를 R&amp;D·기술·제품 기반 × 내향·외향으로 나눈 &#x27;개방형 로드맵&#x27;으로 정리했다.</p></div></div><div class="slot" id="s16" data-lec="06-2"><article class="slide ty-matrix" aria-label="16 / 52"><div class="sl-in"><h3 class="sh">P&amp;G 개방형 로드맵 사례</h3><div class="mx"><span class="mx-y1">R&amp;D 기반</span><span class="mx-y2">기술 기반</span><div class="mx-c tl"><b>CarpetFlick</b><p>외부 협력으로 개발, 연매출 7.5억 달러</p></div><div class="mx-c tr"><b>Glad</b><p>연구 부산물 필름 → Clorox와 JV</p></div><div class="mx-c bl"><b>OLAY</b><p>세데르마 기술 라이선스 → 8개월 만 1위</p></div><div class="mx-c br"><b>Tropicana</b><p>칼슘(CCM) 기술을 라이선스 아웃</p></div><span class="mx-x1">내향적</span><span class="mx-x2">외향적</span></div></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">16 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>전정환 외(2012)의 분류로 보면 출발점(R&amp;D·기술·제품)과 방향(내향·외향)에 따라 개방의 방식이 다르다. CarpetFlick은 P&amp;G 제품 중 수익성이 가장 높은 제품이 되었다. 제품 기반 내향형으로는 자사 페브리즈와 양초 회사의 제품을 결합한 Febreze Candle이 있다. 자사 기술이 어느 칸에 해당하는지 보면 활용 경로가 보인다.</p></div></div><div class="slot" id="s17" data-lec="06-2"><article class="slide ty-case" aria-label="17 / 52"><div class="sl-in"><p class="ca-k">사례 · 기술 기반 내향형</p><h3 class="sh">OLAY Regenerist</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>P&amp;G는 주름 개선 기능을 갖춘 차세대 화장품이 필요했지만 해당 기술을 내부에 갖고 있지 않았다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>프랑스 화장품 원료 기업 세데르마와 기술 라이선싱 계약을 맺어 주름 개선 기술을 들여왔다.</p></div><div class="ca-b ca-result"><i>결과</i><p>OLAY Regenerist는 출시 8개월 만에 주름 개선 화장품 시장 1위에 올랐다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>없는 기술은 사 오는 것이 빠르다. 내부 강점(브랜드·유통)과 외부 기술을 결합하라.</p></div></div></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">17 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>P&amp;G가 기술을 직접 개발했다면 수년이 걸렸을 것이다. 라이선싱으로 개발 시간을 줄이고, P&amp;G가 이미 가진 브랜드와 유통망에 결합해 빠르게 시장을 잡았다. 내향적 개방형 혁신의 전형으로, 외부 기술은 내부 역량을 대체하는 것이 아니라 보완할 때 가치가 크다.</p></div></div><div class="slot" id="s18" data-lec="06-2"><article class="slide ty-case" aria-label="18 / 52"><div class="sl-in"><p class="ca-k">사례 · R&amp;D 기반 외향형</p><h3 class="sh">Glad (P&amp;G×Clorox)</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>P&amp;G는 기저귀 연구 과정에서 부산물로 뛰어난 플라스틱 필름 기술을 발견했지만, 자사에는 이를 팔 포장재 사업이 없었다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>포장재 시장에서 브랜드 파워가 강한 Clorox와 조인트벤처 형태로 Glad 사업에 기술을 투입했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>필름 기술이 Glad 랩·봉투 제품에 적용되었고, P&amp;G는 직접 진출하지 않고도 기술에서 수익을 얻었다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>내 BM에 안 맞는 기술은 그 시장의 강자와 손잡아 가치를 실현하라.</p></div></div></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">18 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Xerox가 BM에 맞지 않는 기술을 놓쳤다면, P&amp;G는 같은 상황에서 외향적 개방형 혁신을 택했다. 새 시장에 직접 들어가면 브랜드와 유통을 처음부터 만들어야 하지만, 이미 강한 파트너와 결합하면 위험이 작다. Tropicana에 칼슘 기술을 라이선싱한 것도 같은 논리다.</p></div></div><div class="slot" id="s19" data-lec="06-2"><article class="slide ty-takeaway" aria-label="19 / 52"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>기술 자체는 가치가 없고 BM을 통해 가치가 생긴다</li><li>기존 BM의 성공이 새 기술을 보는 눈을 가린다(Xerox)</li><li>P&amp;G C+D: 내향(outside in)과 외향(inside out)을 체계화</li><li>없는 기술은 라이선스로 들이고, 안 맞는 기술은 파트너로 내보낸다</li></ul></div><footer class="sl-f"><span>06-2 비즈니스모델과 P&amp;G C+D</span><span class="num">19 / 52</span></footer></article></div><div class="slot" id="s20" data-lec="06-3"><article class="slide ty-title" aria-label="20 / 52"><div class="sl-in"><div class="t-wrap"><p class="t-wk">6주차 · 개방형혁신·핵심역량</p><p class="t-no">06-3</p><h2 class="t-title">얼마나 개방할 것인가</h2><p class="t-thesis">개방은 많을수록 좋은 것이 아니라 적정 수준이 있다</p></div></div><footer class="sl-f"><span>06-3 얼마나 개방할 것인가</span><span class="num">20 / 52</span></footer></article></div><div class="slot" id="s21" data-lec="06-3"><article class="slide ty-case" aria-label="21 / 52"><div class="sl-in"><p class="ca-k">사례 · 개방의 압력</p><h3 class="sh">제약 산업의 R&amp;D 생산성</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>제약 산업의 R&amp;D 지출은 2000년 이후 급증했지만, R&amp;D 10억 달러당 신약(NME) 수는 줄어들었다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>임상 단계가 진행될수록 비용이 커지는 구조에서, 기업들은 외부 기술 도입과 공동개발로 위험과 비용을 나누려 했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>R&amp;D 투자 대비 성과를 높이는 것이 핵심 과제가 되었고, 외부 지식 활용은 선택이 아닌 필수가 되었다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>R&amp;D 비용과 불확실성이 클수록 개방의 압력은 커진다.</p></div></div></div><footer class="sl-f"><span>06-3 얼마나 개방할 것인가</span><span class="num">21 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>제약은 과학기반 산업이라 R&amp;D 비용이 특히 크다. 슬라이드의 임상 단계별 비용(25.3→34.9→54.0백만 달러)처럼 후기 단계로 갈수록 실패 비용이 커진다. 또 대형 제약사는 전 세계적으로 수요가 큰 소수 약품에 집중하는 경향이 있다. 이런 산업에서 &#x27;얼마나 개방해야 하는가&#x27;가 실제 경영 문제가 된다.</p></div></div><div class="slot" id="s22" data-lec="06-3"><article class="slide ty-compare" aria-label="22 / 52"><div class="sl-in"><h3 class="sh">외부 탐색의 폭과 깊이</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">탐색 폭 (Breadth)</b><ul><li>활용하는 외부 지식원의 수</li><li>늘수록 성과↑, 너무 많으면↓</li></ul></div><div class="cp-col"><b class="cp-h">탐색 깊이 (Depth)</b><ul><li>외부 지식원을 깊게 활용한 정도</li><li>과도하면 성과 하락</li></ul></div></div><p class="cp-note">성과지표: INNWORLD(세계 최초 신제품 매출비중)</p></div><footer class="sl-f"><span>06-3 얼마나 개방할 것인가</span><span class="num">22 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Laursen &amp; Salter(2006)는 개방성을 두 차원으로 측정했다. 폭은 고객·공급자·대학·경쟁사 등 몇 종류의 외부 지식원을 쓰는가, 깊이는 그중 몇 곳을 집중적으로 활용하는가다. 성과는 세계 시장에 처음 나온 제품의 매출 비중(INNWORLD)으로 쟀다. 협력처를 늘리는 것과 깊게 협력하는 것은 다른 전략임을 보여준다.</p></div></div><div class="slot" id="s23" data-lec="06-3"><article class="slide ty-paper" aria-label="23 / 52"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Laursen &amp; Salter (2006)</h3><p class="pp-q">외부 탐색의 폭과 깊이는 혁신성과와 어떤 관계인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>외부 지식원 탐색의 폭(breadth)과 깊이(depth)는 혁신성과와 역U자 관계다. 적당한 개방은 성과를 높이지만 과도한 탐색은 오히려 성과를 떨어뜨린다.</p><div class="pp-cs"><span class="pp-c">Search breadth</span><span class="pp-c">Search depth</span><span class="pp-c">Over-search</span><span class="pp-c">역U자 관계</span></div></div><div><b>강의와의 연결</b><p>06-3 p.33, 06-4 p.43: 탐색 폭·깊이와 INNWORLD(세계 최초 신제품 매출비중)의 역U자 관계</p><b>보충 설명</b><p>UK 혁신조사 2,707개 제조기업 분석. 경영자 주의력(attention)이 한정되어 과다 탐색 시 비용이 편익을 넘는다는 메커니즘 제시. R&amp;D 집약 기업일수록 깊은 탐색의 효과가 큼.</p></div></div><p class="pp-cite">Laursen, K., &amp; Salter, A. (2006). Open for innovation: The role of openness in explaining innovation performance among U.K. manufacturing firms. Strategic Management Journal, 27(2), 131–150. </p></div><footer class="sl-f"><span>06-3 얼마나 개방할 것인가</span><span class="num">23 / 52</span></footer></article></div><div class="slot" id="s24" data-lec="06-3"><article class="slide ty-compare" aria-label="24 / 52"><div class="sl-in"><h3 class="sh">역U자 vs S자: 두 실증</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Laursen &amp; Salter</b><ul><li>UK 제조기업 2,707개, 설문</li><li>성과: 신제품 매출비중</li><li>역U자: 적정 수준 넘으면 하락</li></ul></div><div class="cp-col"><b class="cp-h">Schäper 외(2023)</b><ul><li>미국 상장사 9,000여 개, 1994-2017</li><li>10-K 텍스트로 개방 정도 측정</li><li>S자: 초기 비용 → 상승 → 체감</li></ul></div></div><p class="cp-note">개방은 &#x27;많을수록 좋다&#x27;가 아니다</p></div><footer class="sl-f"><span>06-3 얼마나 개방할 것인가</span><span class="num">24 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Laursen &amp; Salter(2006)는 경영자의 주의력이 한정되어 너무 많은 외부원을 관리하면 비용이 편익을 넘는다고 설명한다. Schäper 외(2023)는 머신러닝으로 만든 OI 사전으로 10-K 보고서를 분석해, 낮은 개방에서는 비용만 들고 중간 구간에서 재무성과가 오르다 높은 개방에서 다시 둔화되는 S자를 찾았다. 어설프게 조금만 여는 것도 손해일 수 있다는 뜻이다.</p></div></div><div class="slot" id="s25" data-lec="06-3"><article class="slide ty-paper" aria-label="25 / 52"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Schäper et al. (2023)</h3><p class="pp-q">개방형 혁신의 정도와 재무성과는 어떤 형태의 관계인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>10-K 텍스트로 측정한 개방형 혁신 정도와 재무성과는 S자 관계다. 낮은 개방은 비용만 들고, 중간 구간에서 성과가 오르다 높은 개방에서 다시 체감한다.</p><div class="pp-cs"><span class="pp-c">S자 관계</span><span class="pp-c">텍스트 기반 측정</span><span class="pp-c">OI dictionary</span></div></div><div><b>강의와의 연결</b><p>06-3, p.34: 머신러닝 OI 사전으로 1994–2017 미국 상장사 9,000여 개 10-K 분석</p><b>보충 설명</b><p>설문 단면 자료에 의존하던 OI 측정의 한계를 종단 텍스트 지표로 보완. 역U자(Laursen &amp; Salter)를 확장해, 초기 개방 비용을 넘어서는 &#x27;임계 수준&#x27;이 있음을 시사.</p></div></div><p class="pp-cite">Schäper, T., Jung, C., Foege, J. N., Bogers, M. L. A. M., Fainshmidt, S., &amp; Nüesch, S. (2023). The S-shaped relationship between open innovation and financial performance: A longitudinal perspective using a novel text-based measure. Research Policy, 52(6), 104764. </p></div><footer class="sl-f"><span>06-3 얼마나 개방할 것인가</span><span class="num">25 / 52</span></footer></article></div><div class="slot" id="s26" data-lec="06-3"><article class="slide ty-cycle" aria-label="26 / 52"><div class="sl-in"><h3 class="sh">동적역량과 개방형 혁신</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="감지(Sensing) → 포착(Seizing) → 변혁·재구성"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(408.3,112.5) rotate(60.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(300.0,300.0) rotate(180.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(191.7,112.5) rotate(300.0)"/><g><rect x="205.5" y="29.0" width="189" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">감지(Sensing)</text></g><g><rect x="313.8" y="216.5" width="189" height="42" rx="21" class="cy-node"/><text x="408.3" y="243.5" text-anchor="middle" class="cy-t">포착(Seizing)</text></g><g><rect x="134.7" y="216.5" width="114" height="42" rx="21" class="cy-node"/><text x="191.7" y="243.5" text-anchor="middle" class="cy-t">변혁·재구성</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">동적역량×OI</text></svg></div></div><footer class="sl-f"><span>06-3 얼마나 개방할 것인가</span><span class="num">26 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Bogers 외(2019)는 개방형 혁신과 동적역량이 서로 영향을 준다고 본다. 외부의 기회와 위협을 감지하고, 자원을 투입해 기회를 포착하고, 조직을 재구성해 변혁하는 능력이 있어야 개방을 성과로 바꿀 수 있다. 반대로 외부와의 협력이 이 능력을 키운다. 개방의 &#x27;양&#x27;보다 개방을 관리하는 역량이 더 중요하다는 메시지다.</p></div></div><div class="slot" id="s27" data-lec="06-3"><article class="slide ty-takeaway" aria-label="27 / 52"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>R&amp;D 비용과 불확실성이 클수록 개방 압력이 커진다(제약)</li><li>탐색 폭·깊이와 혁신성과는 역U자 관계(Laursen &amp; Salter 2006)</li><li>개방 정도와 재무성과는 S자 관계(Schäper 외 2023)</li><li>개방의 양보다 개방을 관리할 동적역량이 중요하다</li></ul></div><footer class="sl-f"><span>06-3 얼마나 개방할 것인가</span><span class="num">27 / 52</span></footer></article></div><div class="slot" id="s28" data-lec="06-4"><article class="slide ty-title" aria-label="28 / 52"><div class="sl-in"><div class="t-wrap"><p class="t-wk">6주차 · 개방형혁신·핵심역량</p><p class="t-no">06-4</p><h2 class="t-title">오픈이노베이션 연구 지도</h2><p class="t-thesis">OI는 방향(In/Out)과 거래 방식으로 유형화된다</p></div></div><footer class="sl-f"><span>06-4 오픈이노베이션 연구 지도</span><span class="num">28 / 52</span></footer></article></div><div class="slot" id="s29" data-lec="06-4"><article class="slide ty-matrix" aria-label="29 / 52"><div class="sl-in"><h3 class="sh">주요 OI 연구의 4가지 초점</h3><div class="mx"><span class="mx-y1">Inbound</span><span class="mx-y2">Outbound</span><div class="mx-c tl"><b>Acquiring</b><p>외부 기술 획득 (Chesbrough &amp; Crowther)</p></div><div class="mx-c tr"><b>Sourcing</b><p>외부 지식 탐색 (Laursen &amp; Salter)</p></div><div class="mx-c bl"><b>Licensing</b><p>기술 아웃라이선싱 (Lichtenthaler &amp; Ernst)</p></div><div class="mx-c br"><b>Revealing</b><p>선택적 공개 (Henkel, West)</p></div><span class="mx-x1">금전적 거래</span><span class="mx-x2">비금전적 교류</span></div></div><footer class="sl-f"><span>06-4 오픈이노베이션 연구 지도</span><span class="num">29 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>주요 OI 연구는 지식의 방향(들어오는가, 나가는가)과 거래 방식(돈이 오가는가)으로 네 유형에 놓인다. 기술을 사 오면 Acquiring, 대가 없이 외부 지식을 탐색하면 Sourcing, 기술을 팔면 Licensing, 대가 없이 공개하면 Revealing이다. 기업의 협력 사례를 이 네 칸에 배치하면 어떤 개방이 많고 어떤 개방이 빠져 있는지 한눈에 보인다.</p></div></div><div class="slot" id="s30" data-lec="06-4"><article class="slide ty-cases" aria-label="30 / 52"><div class="sl-in"><h3 class="sh">Inbound 연구의 핵심 결과</h3><div class="css n4"><div class="cs"><b>Chesbrough 06</b><p>저기술 산업도 OI, 외부연구는 보완재</p></div><div class="cs"><b>Christensen 05</b><p>기술 레짐 단계에 따라 OI 적용 상이</p></div><div class="cs"><b>Laursen 06</b><p>외부자원 활용과 성과는 곡선 관계</p></div><div class="cs"><b>Fey 05</b><p>외부 R&amp;D의 거버넌스 선택이 성과 좌우</p></div></div></div><footer class="sl-f"><span>06-4 오픈이노베이션 연구 지도</span><span class="num">30 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Chesbrough &amp; Crowther(2006)는 저기술·성숙 산업 12개 기업도 OI를 쓰며, 외부 기술이 내부 R&amp;D를 대체하지 않고 보완함을 보였다. Christensen 외(2005)는 가전 음향증폭 기술이 디지털로 바뀌는 과정에서 기술 단계에 따라 OI 방식이 달라짐을, Fey &amp; Birkinshaw(2005)는 외부 R&amp;D의 거버넌스 방식이 성과에 영향을 줌을 보였다.</p></div></div><div class="slot" id="s31" data-lec="06-4"><article class="slide ty-paper" aria-label="31 / 52"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Chesbrough &amp; Crowther (2006)</h3><p class="pp-q">하이테크가 아닌 성숙 산업에서도 개방형 혁신이 일어나나?</p><div class="pp-g"><div><b>핵심 주장</b><p>저기술·성숙 산업 12개 기업도 개방형 혁신을 도입하고 있다. 외부 기술 획득은 내부 R&amp;D를 대체하지 않고 보완하는 방식으로 활용된다.</p><div class="pp-cs"><span class="pp-c">Inbound OI</span><span class="pp-c">Low-tech 산업</span><span class="pp-c">내부 R&amp;D 보완</span></div></div><div><b>강의와의 연결</b><p>06-4, p.43: 주요 OI 연구 표—Low-tech에서도 OI, 내부연구의 보완재로서 외부연구(Inbound–acquiring)</p><b>보충 설명</b><p>성장 정체를 돌파하려는 동기가 도입을 이끌며, &#x27;Not-Invented-Here&#x27; 증후군과 내부 반발이 주요 장애로 관찰됨. Outbound는 Inbound보다 드물게 실행됨.</p></div></div><p class="pp-cite">Chesbrough, H., &amp; Crowther, A. K. (2006). Beyond high tech: Early adopters of open innovation in other industries. R&amp;D Management, 36(3), 229–236. </p></div><footer class="sl-f"><span>06-4 오픈이노베이션 연구 지도</span><span class="num">31 / 52</span></footer></article></div><div class="slot" id="s32" data-lec="06-4"><article class="slide ty-cases" aria-label="32 / 52"><div class="sl-in"><h3 class="sh">Outbound 연구의 핵심 결과</h3><div class="css n4"><div class="cs"><b>West 2003</b><p>독점 플랫폼도 일부를 오픈소스로 공개</p></div><div class="cs"><b>Henkel 2006</b><p>기업마다 OI 가치 부여가 달라 공개 상이</p></div><div class="cs"><b>Lichtenthaler 09</b><p>아웃라이선싱 성과는 전략 프로세스 좌우</p></div><div class="cs"><b>Lichtenthaler 07</b><p>외부 상용화는 조건부 가능성일 뿐</p></div></div></div><footer class="sl-f"><span>06-4 오픈이노베이션 연구 지도</span><span class="num">32 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Henkel(2006)은 임베디드 리눅스 개발자 268명을 분석해 기업마다 무엇을 공개할지 다르게 선택함을 보였다. Lichtenthaler &amp; Ernst(2009, 2007)는 유럽 기업 150여 곳을 조사해 아웃라이선싱 성과가 전략과 프로세스에 달려 있고, 외부 상용화는 실현될 때에만 의미 있는 가능성이라고 했다. 기술을 판다고 자동으로 수익이 나는 것은 아니다.</p></div></div><div class="slot" id="s33" data-lec="06-4"><article class="slide ty-case" aria-label="33 / 52"><div class="sl-in"><p class="ca-k">사례 · 선택적 공개</p><h3 class="sh">Apple·IBM의 부분 개방</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>독점 플랫폼 기업들은 오픈소스의 확산 속에서 개방하면 수익을 잃고, 닫으면 채택이 줄어드는 딜레마에 놓였다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>Apple은 OS 핵심부(Darwin)를 오픈소스로 공개하고 UI와 핵심 앱은 독점으로 유지했다. IBM은 Linux를 지원하며 하드웨어·서비스로 수익을 냈다.</p></div><div class="ca-b ca-result"><i>결과</i><p>공개한 층에서는 외부 개발자의 기여와 채택을 얻고, 닫은 층에서는 차별화와 수익을 지켰다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>채택을 늘리는 층은 열고, 가치를 획득하는 층은 지켜라.</p></div></div></div><footer class="sl-f"><span>06-4 오픈이노베이션 연구 지도</span><span class="num">33 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>West(2003)는 Apple, IBM, Sun 세 사례로 개방이 전부 아니면 전무의 선택이 아니라고 보였다. 플랫폼의 일부 층만 여는 방식과 일부 권리만 여는 방식이 있다. 하드웨어나 서비스로 돈을 버는 기업일수록 소프트웨어를 열기 쉽다. 무엇을 열지 정할 때는 &#x27;이 부분에서 돈을 버는가&#x27;를 먼저 물어보면 된다.</p></div></div><div class="slot" id="s34" data-lec="06-4"><article class="slide ty-paper" aria-label="34 / 52"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">West (2003)</h3><p class="pp-q">플랫폼 기업은 얼마나 개방해야 하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>Apple·IBM·Sun은 플랫폼의 일부를 오픈소스로 공개해 채택을 늘리고 핵심 부분은 독점으로 유지했다. 개방은 채택(adoption)과 전유(appropriability)의 균형이다.</p><div class="pp-cs"><span class="pp-c">전유 vs 채택</span><span class="pp-c">Hybrid 플랫폼</span><span class="pp-c">Outbound–revealing</span></div></div><div><b>강의와의 연결</b><p>06-4, p.43: 독점 플랫폼 기업이 전유와 전유가능성 사이 긴장을 조율하며 오픈소스를 지원(Outbound–revealing)</p><b>보충 설명</b><p>전략 유형으로 &#x27;개방된 부분(opening parts)&#x27;과 &#x27;부분적 개방(partly opening)&#x27;을 구분. 하드웨어로 수익을 내는 기업일수록 소프트웨어 개방이 쉬움—무엇을 열고 무엇을 지킬지의 설계 문제.</p></div></div><p class="pp-cite">West, J. (2003). How open is open enough? Melding proprietary and open source platform strategies. Research Policy, 32(7), 1259–1285. </p></div><footer class="sl-f"><span>06-4 오픈이노베이션 연구 지도</span><span class="num">34 / 52</span></footer></article></div><div class="slot" id="s35" data-lec="06-4"><article class="slide ty-takeaway" aria-label="35 / 52"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>OI는 Inbound/Outbound × 금전/비금전의 네 유형으로 나뉜다</li><li>저기술 산업에서도 OI가 일어나며 외부연구는 내부연구의 보완재</li><li>아웃라이선싱 성과는 전략·프로세스에 달려 있다</li><li>개방은 전부/전무가 아니다: 채택을 늘리는 층만 연다(West 2003)</li></ul></div><footer class="sl-f"><span>06-4 오픈이노베이션 연구 지도</span><span class="num">35 / 52</span></footer></article></div><div class="slot" id="s36" data-lec="06-5"><article class="slide ty-title" aria-label="36 / 52"><div class="sl-in"><div class="t-wrap"><p class="t-wk">6주차 · 개방형혁신·핵심역량</p><p class="t-no">06-5</p><h2 class="t-title">핵심역량의 개념</h2><p class="t-thesis">경쟁우위의 뿌리는 SBU가 아니라 핵심역량이다</p></div></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">36 / 52</span></footer></article></div><div class="slot" id="s37" data-lec="06-5"><article class="slide ty-concepts" aria-label="37 / 52"><div class="sl-in"><h3 class="sh">핵심역량이란</h3><div class="ccs n5"><div class="cc"><b>정의</b><p>경쟁자와 구별되는 기술·특성·자산의 묶음</p></div><div class="cc"><b>집단적 학습</b><p>조직 전체에 축적된 학습의 결과</p></div><div class="cc"><b>통합</b><p>다양한 기술과 기술 흐름의 조정·통합</p></div><div class="cc"><b>경계 넘는 협업</b><p>소통·참여·조직 경계를 넘는 협업</p></div><div class="cc"><b>쓸수록 성장</b><p>물적 자산과 달리 공유할수록 커진다</p></div></div></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">37 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Prahalad &amp; Hamel(1990)에 따르면 핵심역량은 혁신의 연료이자 경쟁우위의 뿌리다. 과거에 기업을 이끌어 왔고, 전환하거나 새 역량을 더해 미래 성장을 이끌 수 있는, 기업 내부에 공유된 고유의 능력·기술·지식이다. 대표 상품 하나가 아니라 그런 상품을 거듭 만들어낼 수 있는 바탕 능력이라는 점이 핵심이다.</p></div></div><div class="slot" id="s38" data-lec="06-5"><article class="slide ty-tree" aria-label="38 / 52"><div class="sl-in"><h3 class="sh">다각화 기업 = 큰 나무</h3><div class="tree"><div class="tr-r">다각화 기업</div><div class="tr-cs n3"><div class="tr-c"><b>잎·꽃·열매</b><p>최종제품 (End products)</p></div><div class="tr-c"><b>줄기·큰 가지</b><p>핵심제품 (Core products)</p></div><div class="tr-c"><b>뿌리</b><p>핵심역량: 영양·지탱·안정 제공</p></div></div></div></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">38 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Prahalad &amp; Hamel(1990)의 유명한 비유다. 겉으로 보이는 최종제품(열매)만 보고 경쟁사를 판단하면 뿌리의 힘을 놓친다. 핵심제품은 여러 최종제품에 들어가는 부품이나 모듈로, 역량과 최종제품을 잇는 줄기다. 예: 엔진 기술(역량) → 엔진(핵심제품) → 자동차·오토바이·발전기(최종제품). 경쟁사를 분석할 때 세 층위를 따로 보아야 한다.</p></div></div><div class="slot" id="s39" data-lec="06-5"><article class="slide ty-paper" aria-label="39 / 52"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Prahalad &amp; Hamel (1990)</h3><p class="pp-q">기업은 사업부가 아니라 무엇을 중심으로 성장해야 하나?</p><div class="pp-g"><div><b>핵심 주장</b><p>경쟁력의 뿌리는 사업부 포트폴리오가 아니라 여러 제품에 걸쳐 쓰이는 핵심역량이다. 핵심역량→핵심제품→최종제품의 나무 구조로 성장한다.</p><div class="pp-cs"><span class="pp-c">핵심역량</span><span class="pp-c">핵심제품</span><span class="pp-c">역량의 나무</span></div></div><div><b>강의와의 연결</b><p>13-3 p.19-21: 핵심역량은 혁신의 연료·경쟁우위의 뿌리, 다각화·자원배분·기술개발 방향 제시</p><b>보충 설명</b><p>핵심역량의 판별 기준 3가지: 여러 시장에 접근 가능, 고객 효익에 크게 기여, 경쟁자가 모방하기 어려움. NEC·Canon·Honda(엔진) 사례로 설명했다.</p></div></div><p class="pp-cite">Prahalad, C. K., &amp; Hamel, G. (1990). The core competence of the corporation. Harvard Business Review, 68(3), 79–91. </p></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">39 / 52</span></footer></article></div><div class="slot" id="s40" data-lec="06-5"><article class="slide ty-checklist" aria-label="40 / 52"><div class="sl-in"><h3 class="sh">핵심역량 판별 3요건</h3><ol class="chk"><li><span class="ck">1</span>다양한 시장에 접근할 잠재력을 주는가? (확장력)</li><li><span class="ck">2</span>최종제품의 고객 효용에 크게 기여하는가? (고객가치)</li><li><span class="ck">3</span>경쟁자가 모방하기 어려운가? (차별화)</li></ol></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">40 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Prahalad &amp; Hamel(1990)의 판별 기준으로, 세 가지를 모두 충족해야 핵심역량이다. 예: &#x27;친절한 고객응대&#x27;가 고객가치는 크지만 경쟁사가 쉽게 따라 하고 다른 시장으로 확장되지 않는다면 핵심역량이 아니다. 자기 조직의 역량 후보를 나열하고 세 질문에 하나씩 답해 보면, 대부분은 일반적 강점일 뿐이고 진짜 핵심역량은 몇 개에 불과함을 알게 된다.</p></div></div><div class="slot" id="s41" data-lec="06-5"><article class="slide ty-steps" aria-label="41 / 52"><div class="sl-in"><h3 class="sh">핵심역량→핵심제품→최종제품</h3><ol class="steps n3"><li><span class="sn">1</span><b>핵심역량</b><p>특정 제품 기능의 설계·개발 세계 리더십</p></li><li><span class="sn">2</span><b>핵심제품</b><p>역량을 담아 세계 제조 점유율 극대화</p></li><li><span class="sn">3</span><b>최종제품</b><p>부품시장 우위로 브랜드 점유율 확보</p></li></ol></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">41 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Prahalad &amp; Hamel(1990)은 경쟁을 세 층위에서 본다. 먼저 특정 기능의 설계·개발에서 세계적 리더십을 쌓고, 그 역량을 핵심제품에 담아 다른 회사에도 공급해 제조 점유율을 극대화한다. 이렇게 번 규모와 학습으로 최종제품의 진화 방향을 주도한다. 핵심제품을 남에게 아웃소싱하면 역량 축적 기회를 넘겨주게 된다.</p></div></div><div class="slot" id="s42" data-lec="06-5"><article class="slide ty-cases" aria-label="42 / 52"><div class="sl-in"><h3 class="sh">핵심역량으로 만든 신제품</h3><div class="css n4"><div class="cs"><b>Casio</b><p>LCD 역량 → 소형 화면 LCD TV</p></div><div class="cs"><b>Canon</b><p>광학·이미징 역량 → 개인용 복사기</p></div><div class="cs"><b>Komatsu</b><p>수중 원격조종 불도저</p></div><div class="cs"><b>Sony</b><p>소형화 역량 → 8mm 캠코더</p></div></div></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">42 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>핵심역량을 활용하면 막대한 R&amp;D 비용 없이도 새 기술과 제품을 만들 수 있다. 계산기에서 쌓은 Casio의 LCD 기술은 소형 TV로, Canon의 광학·이미징 역량은 복사기로 이어졌다. 이 기업들은 역량을 축으로 빠르게 성장했고, Sony·Casio·Yamaha는 새로운 기기를 연이어 내놓았다. 신제품 아이디어를 낼 때 &#x27;우리 역량이 쓰일 다른 시장은 어디인가&#x27;를 묻는 방식이다.</p></div></div><div class="slot" id="s43" data-lec="06-5"><article class="slide ty-case" aria-label="43 / 52"><div class="sl-in"><p class="ca-k">사례 · 역량 기반 다각화</p><h3 class="sh">Honda의 엔진 역량</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>Honda는 오토바이에서 출발해 엔진과 동력전달 장치 분야에 깊은 설계·생산 역량을 쌓았다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>같은 엔진 역량을 자동차, 잔디깎이, 발전기, 오프로드 버기 등 서로 다른 시장의 제품에 반복 적용했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>겉보기에 무관한 여러 사업에서 경쟁력을 얻었고, 경쟁사보다 빠르게 성장했다(Prahalad &amp; Hamel 1990).</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>다각화는 업종이 아니라 역량을 기준으로 할 때 성공한다.</p></div></div></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">43 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Honda의 사업들은 업종으로 보면 서로 달라 보이지만, 뿌리에는 모두 엔진이라는 하나의 역량이 있다. 그래서 새 시장에 들어갈 때마다 처음부터 기술을 개발할 필요가 없었다. 신사업을 검토할 때 시장 매력도만 보지 말고 &#x27;우리 핵심역량이 이 시장에서도 차이를 만드는가&#x27;를 함께 따져야 하는 이유다.</p></div></div><div class="slot" id="s44" data-lec="06-5"><article class="slide ty-takeaway" aria-label="44 / 52"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>핵심역량: 조직 전체의 집단적 학습, 쓸수록 커지는 자산</li><li>나무 비유: 뿌리(역량)→줄기(핵심제품)→열매(최종제품)</li><li>3요건: 고객가치·차별화·확장력을 모두 충족해야 한다</li><li>역량 기반 다각화는 적은 R&amp;D로 새 시장에 진입하게 한다</li></ul></div><footer class="sl-f"><span>06-5 핵심역량의 개념</span><span class="num">44 / 52</span></footer></article></div><div class="slot" id="s45" data-lec="06-6"><article class="slide ty-title" aria-label="45 / 52"><div class="sl-in"><div class="t-wrap"><p class="t-wk">6주차 · 개방형혁신·핵심역량</p><p class="t-no">06-6</p><h2 class="t-title">핵심역량의 활용과 도출</h2><p class="t-thesis">전략은 사업 포트폴리오가 아니라 역량 포트폴리오</p></div></div><footer class="sl-f"><span>06-6 핵심역량의 활용과 도출</span><span class="num">45 / 52</span></footer></article></div><div class="slot" id="s46" data-lec="06-6"><article class="slide ty-compare" aria-label="46 / 52"><div class="sl-in"><h3 class="sh">SBU 관점 vs 핵심역량 관점</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">SBU의 횡포</b><ul><li>당장 경쟁력 있는 제품 출시에 집중</li><li>핵심역량·핵심제품 과소투자</li><li>인력 등 자원 재배분 불가</li><li>근시안적 혁신만 가능</li></ul></div><div class="cp-col"><b class="cp-h">핵심역량 관점</b><ul><li>기업 = 핵심역량의 포트폴리오</li><li>각 층위에서 자사 위치 분석</li><li>SBU 간 수평적 통합의 장</li></ul></div></div><p class="cp-note">역량은 물적 자산과 달리 쓸수록 성장한다</p></div><footer class="sl-f"><span>06-6 핵심역량의 활용과 도출</span><span class="num">46 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Prahalad &amp; Hamel(1990)은 사업부(SBU)별로 성과를 따지는 조직을 &#x27;SBU의 횡포&#x27;라 비판했다. 각 SBU가 자기 제품만 챙기면 여러 사업이 함께 쓸 역량에는 아무도 투자하지 않고, 핵심 인력은 한 사업부에 묶여 새 기회로 옮겨 가지 못한다. 그 결과 지리적 확장 같은 근시안적 혁신만 남는다. 해법은 역량을 전사 자원으로 보고 관리하는 것이다.</p></div></div><div class="slot" id="s47" data-lec="06-6"><article class="slide ty-case" aria-label="47 / 52"><div class="sl-in"><p class="ca-k">사례 · 역량과 먼 다각화</p><h3 class="sh">Exxon의 사무기기 진출</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>에너지 산업에서 큰 이익을 내던 Exxon은 1970~80년대 성장 동력을 찾아 새로운 사업을 모색했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>에너지 관련 역량과 거리가 먼 사무용품·컴퓨터 등 사무자동화 기기 사업에 뛰어들었다.</p></div><div class="ca-b ca-result"><i>결과</i><p>필요한 기술·마케팅 역량이 없어 큰 손실을 보고 결국 사업에서 물러났다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>핵심역량과 너무 먼 전략은 매우 위험하다. 자금력만으로는 역량을 살 수 없다.</p></div></div></div><footer class="sl-f"><span>06-6 핵심역량의 활용과 도출</span><span class="num">47 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>Honda 사례의 정반대다. Exxon은 자금은 충분했지만, 사무기기 사업에 필요한 기술과 고객 이해는 에너지 사업의 역량과 겹치지 않았다. 기업이 자원을 잘 쓰려면 자기 핵심역량을 완전히 이해해야 한다. 신사업 검토 시 &#x27;우리가 이미 잘하는 것 중 무엇이 그 시장에서 통하는가&#x27;에 답하지 못하면 경고 신호다.</p></div></div><div class="slot" id="s48" data-lec="06-6"><article class="slide ty-points" aria-label="48 / 52"><div class="sl-in"><h3 class="sh">핵심역량이 주는 4가지</h3><div class="pts n4"><div class="pt"><b>다각화의 근간</b><p>다각화의 논리 제공, 사업구조 재구성</p></div><div class="pt"><b>자원배분·학습</b><p>투자 우선순위 설정, 필요 역량 공유</p></div><div class="pt"><b>기술개발 방향</b><p>제조업에서 기술개발의 방향성 제시</p></div><div class="pt"><b>근원적 질문</b><p>발전적 경영을 위한 근본 물음에 답함</p></div></div></div><footer class="sl-f"><span>06-6 핵심역량의 활용과 도출</span><span class="num">48 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>핵심역량을 규명하면 경영 판단의 기준이 생긴다. 어떤 사업에 들어가고 어떤 사업을 정리할지, 예산과 인재를 어디에 먼저 쓸지, 어떤 기술을 개발할지가 역량에 맞춰 정해진다. 또 구성원이 &#x27;우리 회사가 가져야 할 역량&#x27;을 같은 언어로 이해하게 된다. Prahalad &amp; Hamel(1990)은 핵심제품을 아웃소싱하면 역량을 잃기 쉽다고 경고한다.</p></div></div><div class="slot" id="s49" data-lec="06-6"><article class="slide ty-steps" aria-label="49 / 52"><div class="sl-in"><h3 class="sh">핵심역량 도출 과정</h3><ol class="steps n4"><li><span class="sn">1</span><b>과거 추적</b><p>기업 활동의 근원이 된 역량 추론</p></li><li><span class="sn">2</span><b>환경·니즈 분석</b><p>현재·미래에 필요한 역량과 지향점</p></li><li><span class="sn">3</span><b>종합 도출</b><p>과거 역량 + 미래 필요 역량 결합</p></li><li><span class="sn">4</span><b>3요건 검증</b><p>고객가치·차별화·확장력 모두 충족</p></li></ol></div><footer class="sl-f"><span>06-6 핵심역량의 활용과 도출</span><span class="num">49 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>핵심역량 도출은 과거와 미래를 함께 본다. 먼저 회사가 지금까지 성공한 이유가 된 역량을 거슬러 추론하고, 다음으로 내외부 환경과 니즈를 분석해 앞으로 필요한 역량을 정한다. 둘을 합쳐 후보를 만든 뒤 고객가치·차별화·확장력 세 요건으로 검증하며, 하나라도 맞지 않으면 탈락이다. 예: 과거 성공 제품 3개의 공통 기술을 찾는 것부터 시작한다.</p></div></div><div class="slot" id="s50" data-lec="06-6"><article class="slide ty-concepts" aria-label="50 / 52"><div class="sl-in"><h3 class="sh">핵심역량의 예 (12개 중 6)</h3><div class="ccs n6"><div class="cc"><b>구매력</b><p>큰 영향력으로 경쟁사보다 유리하게 구매</p></div><div class="cc"><b>고객 서비스</b><p>친절하고 정직한 고객 경험</p></div><div class="cc"><b>디자인</b><p>핵심제품의 차별적 디자인</p></div><div class="cc"><b>저비용</b><p>최종제품 가격을 낮게 유지</p></div><div class="cc"><b>품질관리</b><p>양보다 질을 앞세운 정밀한 관리</p></div><div class="cc"><b>속도</b><p>같은 제품·서비스를 더 빨리 제공</p></div></div></div><footer class="sl-f"><span>06-6 핵심역량의 활용과 도출</span><span class="num">50 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>MasterClass(2022)가 든 12가지 예 중 일부다(그 밖에 기업문화, 의사결정·적응력, 조직력, 파트너십, 전문화, 표준화). 이런 항목은 출발점일 뿐이다. &#x27;고객 서비스&#x27;처럼 흔한 강점은 3요건 검증을 통과하지 못하는 경우가 많다. 일반적 강점을 핵심역량으로 착각하지 않으려면 반드시 모방 곤란성과 확장력을 따져야 한다.</p></div></div><div class="slot" id="s51" data-lec="06-6"><article class="slide ty-compare" aria-label="51 / 52"><div class="sl-in"><h3 class="sh">핵심역량 요건 (공기업 확장)</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">기본 3요건</b><ul><li>고객가치: 최종제품 효용에 기여</li><li>차별화: 경쟁자가 모방 곤란</li><li>확장력: 다양한 시장 접근</li></ul></div><div class="cp-col"><b class="cp-h">공기업 추가 3요건</b><ul><li>목표의 공공성: 설립목적 달성</li><li>확장의 공공성: 확장사업도 공공적</li><li>효과의 공공성: 지역·국가경제 기여</li></ul></div></div><p class="cp-note">하나라도 불충족 시 핵심역량 아님</p></div><footer class="sl-f"><span>06-6 핵심역량의 활용과 도출</span><span class="num">51 / 52</span></footer></article><div class="sl-ex"><b>설명</b><p>김의석 외(2008)는 공기업의 핵심역량에 공공성 요건 세 가지를 더했다. 공기업의 역량은 법률로 위임받은 설립목적을 수행하는 데 쓰여야 하고, 역량을 응용한 확장사업도 공공적이어야 하며, 기업가치뿐 아니라 지역·국가경제에도 기여해야 한다. 따라서 공기업은 설립 목적에 비추어 역량을 검증해야 한다.</p></div></div><div class="slot" id="s52" data-lec="06-6"><article class="slide ty-takeaway" aria-label="52 / 52"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>SBU의 횡포: 사업부 단위 관리는 역량 과소투자를 낳는다</li><li>역량과 먼 다각화는 위험하다(Exxon)</li><li>도출: 과거 역량 추적 + 미래 필요 역량 → 3요건 검증</li><li>공기업은 목표·확장·효과의 공공성 요건이 추가된다</li></ul></div><footer class="sl-f"><span>06-6 핵심역량의 활용과 도출</span><span class="num">52 / 52</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-05.html">← IM05 혁신의 동태적 모델</a><a class="wk-nav" href="lecture-07.html">IM07 확산·파괴적 혁신 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: Innovation Management (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

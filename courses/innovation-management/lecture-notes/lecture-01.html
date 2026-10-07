@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IM01 혁신경영 입문 · 이노베이션 경영</title>
+<meta name="description" content="기업은 왜 다른가? 답은 기술혁신에 있다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">이노베이션 경영</a> / <a href="index.html">강의별 핵심</a> / IM01</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 01</p>
+  <h1>혁신경영 입문</h1>
+  <p class="lead">기업은 왜 다른가? 답은 기술혁신에 있다</p>
+  <div class="kws"><span class="kw">기술경영(MOT)</span><span class="kw">슘페터</span><span class="kw">창조적 파괴</span><span class="kw">혁신연구의 역사</span><span class="kw">R&amp;D</span><span class="kw">특허·논문 분석</span></div>
+  <details class="plist"><summary>이 강의의 논문 6편</summary><ol><li><b>NRC (1987)</b> National Research Council (1987). Management of Technology: The Hidden Competitive Advantage. Washington, DC: National Academy Press.</li><li><b>Schumpeter (1912)</b> Schumpeter, J. A. (1912). Theorie der wirtschaftlichen Entwicklung. Leipzig: Duncker &amp; Humblot. [English trans.: The Theory of Economic Development, 1934, Cambridge, MA: Harvard University Press]</li><li><b>Schumpeter (1942)</b> Schumpeter, J. A. (1942). Capitalism, Socialism and Democracy. New York: Harper &amp; Brothers.</li><li><b>Fagerberg &amp; Verspagen (2009)</b> Fagerberg, J., &amp; Verspagen, B. (2009). Innovation studies—The emerging structure of a new scientific field. Research Policy, 38(2), 218–233.</li><li><b>Nelson &amp; Winter (1982)</b> Nelson, R. R., &amp; Winter, S. G. (1982). An Evolutionary Theory of Economic Change. Cambridge, MA: Belknap Press of Harvard University Press.</li><li><b>OECD (2015)</b> OECD (2015). Frascati Manual 2015: Guidelines for Collecting and Reporting Data on Research and Experimental Development. The Measurement of Scientific, Technological and Innovation Activities. Paris: OECD Publishing.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="01-1"><b>01-1</b><span>왜 혁신인가</span></a><a href="#s9" class="tab" data-lec="01-2"><b>01-2</b><span>기술경영(MOT)이란</span></a><a href="#s17" class="tab" data-lec="01-3"><b>01-3</b><span>혁신의 기원: 슘페터 vs 케인스</span></a><a href="#s27" class="tab" data-lec="01-4"><b>01-4</b><span>혁신연구의 역사</span></a><a href="#s35" class="tab" data-lec="01-5"><b>01-5</b><span>과학·기술·R&amp;D와 데이터 분석</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 41</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="01-1"><article class="slide ty-title" aria-label="1 / 41"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 혁신경영 입문</p><p class="t-no">01-1</p><h2 class="t-title">왜 혁신인가</h2><p class="t-thesis">성장과 경쟁력의 원천은 혁신, 그래서 R&amp;D에 투자한다</p></div></div><footer class="sl-f"><span>01-1 왜 혁신인가</span><span class="num">1 / 41</span></footer></article></div><div class="slot" id="s2" data-lec="01-1"><article class="slide ty-points" aria-label="2 / 41"><div class="sl-in"><h3 class="sh">혁신이 바꾼 성장 경로</h3><div class="pts n3"><div class="pt"><b>장기 성장률</b><p>0~1820년 세계 GDP·인구 성장률은 매우 낮음</p></div><div class="pt"><b>1820년 이후</b><p>GDP·인구 연평균 성장률이 급격히 상승</p></div><div class="pt"><b>산업혁명</b><p>기술혁신이 성장 가속의 출발점</p></div></div></div><footer class="sl-f"><span>01-1 왜 혁신인가</span><span class="num">2 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 세계 GDP와 인구의 연평균 성장률을 0~1000년, 1000~1500년, 1500~1820년, 1820~2010년 네 구간으로 비교한다(World Bank 자료). 1820년 이전에는 성장률이 거의 0에 가까웠지만 산업혁명 이후 크게 뛰었다. 지속적인 성장은 자연스러운 상태가 아니라 기술혁신이 만든 예외적 현상이라는 뜻이고, 그래서 혁신을 우연이 아닌 경영의 대상으로 다뤄야 한다.</p></div></div><div class="slot" id="s3" data-lec="01-1"><article class="slide ty-case" aria-label="3 / 41"><div class="sl-in"><p class="ca-k">사례 · 혁신이 성장을 바꾼다</p><h3 class="sh">산업혁명</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>18세기 중반까지 생산은 수공업·가내 생산 중심이었고, 수천 년간 1인당 소득은 거의 늘지 않았다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>영국에서 증기기관·방적기 등 기계가 도입되고, 공장에 노동과 기계를 모으는 새로운 생산방식이 자리 잡았다.</p></div><div class="ca-b ca-result"><i>결과</i><p>생산성이 크게 올라 인구와 GDP가 함께 빠르게 늘었고, 이 기술과 제도가 다른 나라로 확산되었다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>기술혁신은 개별 기업의 성과를 넘어 경제 전체의 성장 경로를 바꾼다.</p></div></div></div><footer class="sl-f"><span>01-1 왜 혁신인가</span><span class="num">3 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>강의가 산업혁명을 &#x27;혁신이란 무엇인가&#x27;의 첫 사례로 드는 이유는 성장률 그래프의 꺾이는 지점이 바로 여기이기 때문이다. 중요한 것은 기계 하나가 아니라 기계·동력·공장 조직이 함께 바뀌었다는 점이다. 이후 강의에서 배울 신결합, 범용기술(GPT), 산업혁명 생애주기 개념이 모두 이 사례를 설명하는 틀이다.</p></div></div><div class="slot" id="s4" data-lec="01-1"><article class="slide ty-compare" aria-label="4 / 41"><div class="sl-in"><h3 class="sh">혁신이 주는 두 경쟁력</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Cost Reduction</b><ul><li>생산 효율 (Production Efficiency)</li><li>관리 효율 (Management Efficiency)</li><li>규모의 경제 (Economy of Scale)</li></ul></div><div class="cp-col"><b class="cp-h">Differentiation</b><ul><li>차별화된 제품·서비스</li><li>가격 외 요인으로 경쟁</li></ul></div></div><p class="cp-note">두 경쟁력 모두 R&amp;D 지출로 이어진다</p></div><footer class="sl-f"><span>01-1 왜 혁신인가</span><span class="num">4 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>기업 수준에서 혁신이 경쟁력이 되는 길은 두 가지다. 같은 제품을 더 싸게 만들거나(원가절감), 남과 다른 가치를 주는 것(차별화)이다. 예: 공정 자동화로 단위원가를 20% 낮추면 원가 경쟁력, 새 기능으로 더 높은 가격을 받으면 차별화다. 자기 혁신이 어느 쪽을 노리는지 먼저 정해야 R&amp;D 목표와 성과지표가 분명해진다.</p></div></div><div class="slot" id="s5" data-lec="01-1"><article class="slide ty-points" aria-label="5 / 41"><div class="sl-in"><h3 class="sh">R&amp;D 투자는 산업마다 다르다</h3><div class="pts n3"><div class="pt"><b>근거</b><p>2016 EU Industrial R&amp;D Investment Scoreboard</p></div><div class="pt"><b>산업별 격차</b><p>산업 부문별 R&amp;D 지출 규모가 크게 다름</p></div><div class="pt"><b>R&amp;D-생산성</b><p>R&amp;D 지출과 생산성의 관계를 함께 검토</p></div></div></div><footer class="sl-f"><span>01-1 왜 혁신인가</span><span class="num">5 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>혁신이 경쟁력의 원천이라면 기업은 R&amp;D에 투자한다. 그런데 EU Scoreboard를 보면 제약·바이오, IT 하드웨어, 자동차, 소프트웨어처럼 R&amp;D를 많이 쓰는 산업과 적게 쓰는 산업의 차이가 매우 크다. 따라서 한 기업의 R&amp;D 수준은 산업 평균과 비교해서 읽어야 한다. 예: 매출 대비 R&amp;D 3%는 제약에선 낮고 식품에선 높은 편이다.</p></div></div><div class="slot" id="s6" data-lec="01-1"><article class="slide ty-steps" aria-label="6 / 41"><div class="sl-in"><h3 class="sh">혁신 → R&amp;D → 생산성</h3><ol class="steps n4"><li><span class="sn">1</span><b>혁신 필요</b><p>원가절감·차별화가 경쟁력의 원천</p></li><li><span class="sn">2</span><b>R&amp;D 투자</b><p>산업별 R&amp;D 지출 규모의 차이</p></li><li><span class="sn">3</span><b>생산성</b><p>R&amp;D 지출과 생산성의 관계 검토</p></li><li><span class="sn">4</span><b>핵심 질문</b><p>그런데 왜 기업마다 성과가 다른가?</p></li></ol></div><footer class="sl-f"><span>01-1 왜 혁신인가</span><span class="num">6 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 도입부의 논리 흐름이다. 혁신이 필요하니 R&amp;D에 투자하고, R&amp;D는 생산성으로 이어져야 한다. 하지만 같은 산업에서 비슷한 돈을 써도 성과는 기업마다 크게 다르다. 이 차이를 만드는 것이 바로 &#x27;기술혁신을 어떻게 관리하느냐&#x27;, 즉 기술경영이며, 이 과목 전체가 그 이유를 설명하는 이론들을 다룬다.</p></div></div><div class="slot" id="s7" data-lec="01-1"><article class="slide ty-quote" aria-label="7 / 41"><div class="sl-in"><figure class="qt"><blockquote>Why Do Firms Differ ?</blockquote><figcaption>01-1 슬라이드 p.20</figcaption></figure></div><footer class="sl-f"><span>01-1 왜 혁신인가</span><span class="num">7 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>이 강의의 핵심 질문이다. 같은 기술·시장 조건에서도 어떤 기업은 성공하고 어떤 기업은 실패한다. 이 질문은 진화경제학자 Nelson(1991)의 논문 제목이기도 하며, 답은 기업마다 다른 기술역량과 혁신을 관리하는 방식에 있다고 본다. 이후 배울 이론(슘페터, 진화이론, 흡수역량 등)을 이 질문에 대한 서로 다른 답으로 읽으면 이해가 쉽다.</p></div></div><div class="slot" id="s8" data-lec="01-1"><article class="slide ty-takeaway" aria-label="8 / 41"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>지속적인 경제성장은 산업혁명 이후 기술혁신이 만든 현상이다</li><li>혁신은 원가절감과 차별화라는 두 경쟁력으로 이어진다</li><li>R&amp;D 수준은 산업마다 크게 다르므로 산업 평균과 비교해 읽는다</li><li>핵심 질문: 같은 조건에서 왜 기업마다 성과가 다른가?</li></ul></div><footer class="sl-f"><span>01-1 왜 혁신인가</span><span class="num">8 / 41</span></footer></article></div><div class="slot" id="s9" data-lec="01-2"><article class="slide ty-title" aria-label="9 / 41"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 혁신경영 입문</p><p class="t-no">01-2</p><h2 class="t-title">기술경영(MOT)이란</h2><p class="t-thesis">공학·과학·경영을 결합해 기술역량을 전략 성과로</p></div></div><footer class="sl-f"><span>01-2 기술경영(MOT)이란</span><span class="num">9 / 41</span></footer></article></div><div class="slot" id="s10" data-lec="01-2"><article class="slide ty-points" aria-label="10 / 41"><div class="sl-in"><h3 class="sh">MOT의 등장 배경 (1980s)</h3><div class="pts n3"><div class="pt"><b>생산성 정체</b><p>기업의 생산성 포화·저하를 극복하려는 노력</p></div><div class="pt"><b>IT 융합</b><p>새 제품·시장 탄생으로 기술의 중요성 증대</p></div><div class="pt"><b>범위 확장</b><p>경영 대상을 기술혁신 전 과정으로 확장</p></div></div></div><footer class="sl-f"><span>01-2 기술경영(MOT)이란</span><span class="num">10 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>기술경영은 1980년대에 학문 분야로 자리 잡았다. 기존 경영 방식으로는 생산성 정체를 풀기 어려웠고, IT가 여러 산업과 결합하며 기술이 제품과 시장을 새로 만드는 핵심 변수가 되었다. 그래서 기술을 연구소에만 맡기지 않고, 경영자가 직접 계획하고 관리해야 할 대상으로 보기 시작했다.</p></div></div><div class="slot" id="s11" data-lec="01-2"><article class="slide ty-case" aria-label="11 / 41"><div class="sl-in"><p class="ca-k">사례 · MOT 등장 배경</p><h3 class="sh">1980년대 미국 제조업</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>1980년대 미국 기업은 생산성 정체를 겪었고, 자동차·전자 등에서 일본 기업에 시장을 내주고 있었다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>미국 국립과학학회(NRC, 1987)가 기술을 경영의 핵심 대상으로 보는 MOT를 정의하고 교육·연구 분야로 키우자고 권고했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>대학에 MOT 과정이 확산되고 기술전략·R&amp;D 관리가 경영학의 정식 분야로 자리 잡았다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>좋은 기술 자체보다 그 기술을 전략과 연결해 관리하는 능력이 경쟁력을 가른다.</p></div></div></div><footer class="sl-f"><span>01-2 기술경영(MOT)이란</span><span class="num">11 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 MOT가 생산성 위기를 극복하려는 노력에서 출발했다고 설명한다. 당시 미국 기업은 연구 역량은 뛰어났지만 이를 제품과 공정 개선으로 빠르게 연결하는 데서 뒤처졌다. NRC 보고서 제목의 &#x27;숨겨진 경쟁우위&#x27;는 바로 이 관리 능력을 가리킨다. 기술이 좋아도 사업 성과가 안 나는 조직이라면 기술이 아닌 관리부터 점검해야 한다.</p></div></div><div class="slot" id="s12" data-lec="01-2"><article class="slide ty-concepts" aria-label="12 / 41"><div class="sl-in"><h3 class="sh">기술경영의 정의</h3><div class="ccs n3"><div class="cc"><b>Management of Technology</b><p>공학·과학·경영 원리를 결합해 기술역량을 계획·개발·실행</p></div><div class="cc"><b>목적</b><p>조직의 전략·운영상 목표 달성</p></div><div class="cc"><b>대상</b><p>기술혁신 전 과정: 발명·혁신·확산</p></div></div></div><footer class="sl-f"><span>01-2 기술경영(MOT)이란</span><span class="num">12 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>NRC(1987)의 정의에 따르면 기술경영은 공학·과학·경영 원리를 결합해 기술역량을 계획·개발·실행하고, 이를 통해 조직의 전략·운영 목표를 달성하는 것이다. 핵심은 &#x27;결합&#x27;이다. 엔지니어는 기술만, 경영자는 재무·마케팅만 보는 조직에서는 기술이 전략으로 연결되지 않는다. 기술 로드맵과 사업 목표를 한 장의 계획으로 묶는 것이 기술경영의 출발점이다.</p></div></div><div class="slot" id="s13" data-lec="01-2"><article class="slide ty-paper" aria-label="13 / 41"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">NRC (1987)</h3><p class="pp-q">기업 경쟁력 저하에 기술경영으로 어떻게 대응할까?</p><div class="pp-g"><div><b>핵심 주장</b><p>기술경영은 공학·과학·경영을 결합해 기술역량을 계획·개발·실행하는 학제 분야이자 &#x27;숨겨진 경쟁우위&#x27;. 이를 교육·연구 분야로 키워야 한다.</p><div class="pp-cs"><span class="pp-c">MOT 정의</span><span class="pp-c">학제적 접근</span><span class="pp-c">숨겨진 경쟁우위</span></div></div><div><b>강의와의 연결</b><p>01-2: 1980년대 MOT 등장 배경과 기술경영의 정의(미국 국립과학학회, 1987)로 인용 (p.21)</p><b>보충 설명</b><p>1980년대 미국 제조업의 생산성·경쟁력 위기를 배경으로 MOT를 독립된 교육·연구 분야로 육성하자고 권고한 보고서. 대학 MOT 프로그램 확산과 연구 의제 설정에 영향을 줌.</p></div></div><p class="pp-cite">National Research Council (1987). Management of Technology: The Hidden Competitive Advantage. Washington, DC: National Academy Press. </p></div><footer class="sl-f"><span>01-2 기술경영(MOT)이란</span><span class="num">13 / 41</span></footer></article></div><div class="slot" id="s14" data-lec="01-2"><article class="slide ty-steps" aria-label="14 / 41"><div class="sl-in"><h3 class="sh">기술혁신의 전 과정</h3><ol class="steps n3"><li><span class="sn">1</span><b>발명 (Invention)</b><p>새로운 기술 아이디어의 창출</p></li><li><span class="sn">2</span><b>혁신 (Innovation)</b><p>기술을 제품·공정으로 상업화</p></li><li><span class="sn">3</span><b>확산 (Diffusion)</b><p>시장·산업 전반으로 퍼짐</p></li></ol></div><footer class="sl-f"><span>01-2 기술경영(MOT)이란</span><span class="num">14 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>기술경영이 다루는 범위는 발명에서 끝나지 않는다. 예: 트랜지스터는 1947년 벨연구소에서 발명되었고(발명), 트랜지스터 라디오 같은 제품으로 상업화되었으며(혁신), 이후 컴퓨터와 전자산업 전반으로 퍼졌다(확산). 단계마다 필요한 역량과 관리 과제가 다르므로, 자기 기술이 지금 어느 단계에 있는지부터 진단해야 한다.</p></div></div><div class="slot" id="s15" data-lec="01-2"><article class="slide ty-compare" aria-label="15 / 41"><div class="sl-in"><h3 class="sh">기술경영 과목의 분담</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">ITM501 혁신경영</b><ul><li>기술경영 전 과정 요약·종합</li><li>핵심 원리·이론·대표 사례</li></ul></div><div class="cp-col"><b class="cp-h">ITM590 데이터전략</b><ul><li>기술전략 수립 부문에 집중</li><li>특허·데이터 중심 기획 방법론</li></ul></div><div class="cp-col"><b class="cp-h">ITM660 ICT혁신</b><ul><li>디지털 전환·IT 융합 버전</li><li>새로 강조될 원리·사례 학습</li></ul></div></div><p class="cp-note">자료: 기술혁신과정과 R&amp;D 프로세스 (배종태, 2015)</p></div><footer class="sl-f"><span>01-2 기술경영(MOT)이란</span><span class="num">15 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>이 과목(혁신경영)은 기술혁신 전 과정을 한 번에 훑으며 핵심 이론과 대표 사례를 익히는 기초 과목이다. 특허·데이터로 전략을 세우는 방법은 데이터전략 과목이, 디지털 전환으로 달라지는 원리는 ICT혁신 과목이 깊게 다룬다. 이 과목에서 배우는 이론은 다른 과목에서 분석 틀로 계속 쓰인다.</p></div></div><div class="slot" id="s16" data-lec="01-2"><article class="slide ty-takeaway" aria-label="16 / 41"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>기술경영 = 공학·과학·경영을 결합해 기술역량을 전략 성과로 만드는 것</li><li>관리 대상은 발명만이 아니라 혁신(상업화)과 확산까지 전 과정이다</li><li>기술이 좋아도 전략과 연결되지 않으면 경쟁력이 되지 않는다</li></ul></div><footer class="sl-f"><span>01-2 기술경영(MOT)이란</span><span class="num">16 / 41</span></footer></article></div><div class="slot" id="s17" data-lec="01-3"><article class="slide ty-title" aria-label="17 / 41"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 혁신경영 입문</p><p class="t-no">01-3</p><h2 class="t-title">혁신의 기원: 슘페터 vs 케인스</h2><p class="t-thesis">자본주의 동학의 중심은 생산자, 곧 기업의 혁신</p></div></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">17 / 41</span></footer></article></div><div class="slot" id="s18" data-lec="01-3"><article class="slide ty-case" aria-label="18 / 41"><div class="sl-in"><p class="ca-k">사례 · 두 관점의 탄생</p><h3 class="sh">대공황 (1929)</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>1929년 이후 세계적 대불황과 대량 실업이 왔다. 시장이 스스로 회복한다는 믿음이 흔들리고 &#x27;마르크스의 예언&#x27;이 거론되었다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>케인스는 수요 부족을 원인으로 보고 정부 개입을 처방했고, 슘페터는 생산자인 기업의 혁신을 자본주의 동학의 핵심으로 보았다.</p></div><div class="ca-b ca-result"><i>결과</i><p>케인스의 정부개입론이 전후 정책의 주류가 되었고, 1970년대 위기 이후에는 정부 간섭을 줄이는 신자유주의가 등장했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>같은 위기라도 수요와 공급 중 어디를 보느냐에 따라 원인과 처방이 완전히 달라진다.</p></div></div></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">18 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 대공황을 &#x27;문제 해결을 위한 두 사람의 충격적인 관점&#x27;이 나온 계기로 소개한다. 둘 다 정부 간섭 없는 완전경쟁 시장이 스스로 균형을 찾는다는 고전파의 믿음을 거부했다. 다만 케인스는 수요를 살리는 정부의 역할을, 슘페터는 기업의 혁신을 답으로 보았다. 혁신경영은 슘페터의 관점에서 출발한다.</p></div></div><div class="slot" id="s19" data-lec="01-3"><article class="slide ty-compare" aria-label="19 / 41"><div class="sl-in"><h3 class="sh">대공황에 대한 두 관점</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">케인스 (수요)</b><ul><li>불황의 원인 = 수요 부족</li><li>자유시장(완전경쟁) 같은 것은 없었다</li><li>심각한 침체엔 정부 공공사업 주도</li></ul></div><div class="cp-col"><b class="cp-h">슘페터 (공급)</b><ul><li>정태적 자본주의 경제는 존재하지 않음</li><li>완전경쟁은 불가능한 명제</li><li>핵심은 기업 혁신: 신결합·창조적 파괴</li></ul></div></div><p class="cp-note">둘 다 &#x27;완전경쟁 시장&#x27;이라는 고전파 전제를 거부</p></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">19 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>케인스는 수요가 작으면 생산이 줄어 불황이 온다고 보고, 정부가 공공사업으로 투자를 일으켜야 한다고 했다. 슘페터는 경제를 움직이는 것은 언제나 생산자이며, 자본주의는 본래 정태적일 수 없고 기업의 혁신으로 끊임없이 변한다고 보았다. 경기 침체를 볼 때 &#x27;수요가 없는가, 새로운 결합이 없는가&#x27;를 나눠 묻는 습관이 이 대비에서 나온다.</p></div></div><div class="slot" id="s20" data-lec="01-3"><article class="slide ty-cycle" aria-label="20 / 41"><div class="sl-in"><h3 class="sh">경제 순환: 두 관점의 진입점</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="기업 투자 → 일자리 → 임금 → 구매(수요)"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,86.6) rotate(45.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,263.4) rotate(135.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,263.4) rotate(225.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,86.6) rotate(315.0)"/><g><rect x="250.5" y="29.0" width="99" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">기업 투자</text></g><g><rect x="383.0" y="154.0" width="84" height="42" rx="21" class="cy-node"/><text x="425.0" y="181.0" text-anchor="middle" class="cy-t">일자리</text></g><g><rect x="258.0" y="279.0" width="84" height="42" rx="21" class="cy-node"/><text x="300.0" y="306.0" text-anchor="middle" class="cy-t">임금</text></g><g><rect x="118.0" y="154.0" width="114" height="42" rx="21" class="cy-node"/><text x="175.0" y="181.0" text-anchor="middle" class="cy-t">구매(수요)</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">Tax·정부</text></svg></div></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">20 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>강의 도식은 투자→일자리→임금→구매로 이어지는 경제 순환을 보여준다. 케인스는 세금과 재정으로 구매(수요) 쪽을 움직여 순환을 살리려 하고, 슘페터는 기업의 투자와 혁신(공급) 쪽에서 순환이 시작된다고 본다. 같은 순환이라도 어디를 밀어야 돈이 도느냐에 대한 답이 다르며, 정책과 기업전략은 이 진입점의 선택에서 갈린다.</p></div></div><div class="slot" id="s21" data-lec="01-3"><article class="slide ty-steps" aria-label="21 / 41"><div class="sl-in"><h3 class="sh">경제학의 흐름</h3><ol class="steps n6"><li><span class="sn">1</span><b>고전경제학</b><p>Smith 국부론(1776): 부의 원천은 노동</p></li><li><span class="sn">2</span><b>신고전파</b><p>Walras: 완전경쟁이 경제균형</p></li><li><span class="sn">3</span><b>마르크스</b><p>잉여가치·이윤율 하락 → 자본주의 몰락</p></li><li><span class="sn">4</span><b>대공황 (1929)</b><p>Keynes 일반이론(1936): 정부개입 정당</p></li><li><span class="sn">5</span><b>슘페터</b><p>기업가 혁신(1912)·창조적 파괴(1942)</p></li><li><span class="sn">6</span><b>1970s 위기 이후</b><p>Neo-Liberalism: 정부간섭 최소화</p></li></ol></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">21 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>고전·신고전파는 자유시장과 완전경쟁이 균형을 만든다고 보았고, 마르크스는 이윤율 하락으로 자본주의가 무너진다고 예언했다. 대공황은 이 예언이 맞는 듯 보이게 했고, 자본주의를 이론적으로 다시 설명할 필요가 생긴 시점에 케인스와 슘페터가 등장했다. 혁신연구는 이 중 슘페터의 계보를 잇는다.</p></div></div><div class="slot" id="s22" data-lec="01-3"><article class="slide ty-concepts" aria-label="22 / 41"><div class="sl-in"><h3 class="sh">슘페터의 핵심 개념</h3><div class="ccs n4"><div class="cc"><b>Dynamism</b><p>정태적 자본주의는 없다. 경제는 늘 변한다</p></div><div class="cc"><b>신결합 (New Combination)</b><p>생산요소를 새롭게 결합하는 것이 혁신</p></div><div class="cc"><b>창조적 파괴</b><p>낡은 것을 부수고 새것을 만드는 내부 변화</p></div><div class="cc"><b>슘페터 가설</b><p>독점·대기업이 혁신에 유리하다는 주장</p></div></div></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">22 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>슘페터에 따르면 자본주의의 본질은 기업가에 의한 혁신을 바탕으로 한 역동성(Dynamism)이다. 혁신은 생산요소의 &#x27;신결합&#x27;이고, 그 결과 낡은 산업이 무너지고 새 산업이 생기는 &#x27;창조적 파괴&#x27;가 일어난다. 이 개념들과 슘페터 가설은 다음 강의(IM02)에서 원전과 실증연구로 자세히 다룬다.</p></div></div><div class="slot" id="s23" data-lec="01-3"><article class="slide ty-compare" aria-label="23 / 41"><div class="sl-in"><h3 class="sh">Schumpeter Mark I vs II</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Mark I (1912)</b><ul><li>The Theory of Economic Development</li><li>Entrepreneur(기업가)에 의한 혁신</li></ul></div><div class="cp-col"><b class="cp-h">Mark II (1942)</b><ul><li>Capitalism, Socialism and Democracy</li><li>Creative Destruction</li><li>자본 축적한 대기업에 의한 혁신</li><li>슘페터 가설(독점우위론) → 실증연구</li></ul></div></div></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">23 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>Schumpeter(1912)의 Mark I은 새로운 결합을 실행하는 개인 기업가를 혁신의 주체로 본다. Schumpeter(1942)의 Mark II는 대량생산으로 자본을 축적한 대기업의 조직화된 R&amp;D를 혁신의 엔진으로 본다. 같은 학자 안에서도 혁신 주체에 대한 관점이 바뀐 것이며, 실제 산업에서도 신생기업이 주도하는 분야와 대기업이 주도하는 분야가 공존한다.</p></div></div><div class="slot" id="s24" data-lec="01-3"><article class="slide ty-paper" aria-label="24 / 41"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Schumpeter (1912)</h3><p class="pp-q">경제는 왜 정태적 균형을 벗어나 &#x27;발전&#x27;하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>경제발전은 외부 충격이 아니라 내부의 &#x27;신결합&#x27;에서 비연속적으로 일어나며, 그 주체는 기업가다. 은행 신용이 자원을 기업가에게 옮겨 혁신을 가능케 한다.</p><div class="pp-cs"><span class="pp-c">신결합</span><span class="pp-c">기업가</span><span class="pp-c">비연속성</span><span class="pp-c">기업가 이윤</span></div></div><div><b>강의와의 연결</b><p>02-1: Mark I. 신결합 5가지, 기업가와 비경제적 동기, &#x27;마차를 이어도 철도가 안 된다&#x27; (p.3, 7)</p><b>보충 설명</b><p>변화 없는 &#x27;순환(circular flow)&#x27;과 &#x27;발전&#x27;을 구분. 기업가 이윤은 모방이 일어날 때까지의 일시적 보상이며, 은행의 신용창조가 혁신 자금의 핵심 통로. 원저는 1911년 말 출간(1912년 판권), 슬라이드엔 1911로도 표기.</p></div></div><p class="pp-cite">Schumpeter, J. A. (1912). Theorie der wirtschaftlichen Entwicklung. Leipzig: Duncker &amp; Humblot. [English trans.: The Theory of Economic Development, 1934, Cambridge, MA: Harvard University Press] </p></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">24 / 41</span></footer></article></div><div class="slot" id="s25" data-lec="01-3"><article class="slide ty-paper" aria-label="25 / 41"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Schumpeter (1942)</h3><p class="pp-q">자본주의는 살아남을 수 있는가? 혁신은 누가 주도하나?</p><div class="pp-g"><div><b>핵심 주장</b><p>자본주의는 낡은 것을 파괴하고 새것을 창조하는 내부 변이(창조적 파괴) 과정이며, 시장지배력을 가진 대기업이 혁신을 이끈다.</p><div class="pp-cs"><span class="pp-c">창조적 파괴</span><span class="pp-c">슘페터 가설</span><span class="pp-c">대기업 혁신</span></div></div><div><b>강의와의 연결</b><p>15-4 p.17-21: 창조적 파괴 정의(Part II), 독점·대기업과 혁신의 양(+) 관계 가설</p><b>보충 설명</b><p>1912년 저서의 기업가 중심(Mark I)에서 대기업 R&amp;D 중심(Mark II)으로 관점이 이동했다. 기업 규모·시장집중과 혁신 관계에 대한 대규모 실증연구를 촉발했다.</p></div></div><p class="pp-cite">Schumpeter, J. A. (1942). Capitalism, socialism and democracy. New York: Harper &amp; Brothers. </p></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">25 / 41</span></footer></article></div><div class="slot" id="s26" data-lec="01-3"><article class="slide ty-takeaway" aria-label="26 / 41"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>케인스는 수요(정부 개입), 슘페터는 공급(기업 혁신)에서 답을 찾았다</li><li>슘페터: 자본주의는 정태적일 수 없고 신결합·창조적 파괴로 움직인다</li><li>Mark I은 개인 기업가, Mark II는 자본을 축적한 대기업이 혁신 주체</li><li>Mark II의 독점우위론(슘페터 가설)이 이후 실증연구를 이끌었다</li></ul></div><footer class="sl-f"><span>01-3 혁신의 기원: 슘페터 vs 케인스</span><span class="num">26 / 41</span></footer></article></div><div class="slot" id="s27" data-lec="01-4"><article class="slide ty-title" aria-label="27 / 41"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 혁신경영 입문</p><p class="t-no">01-4</p><h2 class="t-title">혁신연구의 역사</h2><p class="t-thesis">경제이슈에서 시스템·기업 관점으로 넓어진 혁신연구</p></div></div><footer class="sl-f"><span>01-4 혁신연구의 역사</span><span class="num">27 / 41</span></footer></article></div><div class="slot" id="s28" data-lec="01-4"><article class="slide ty-steps" aria-label="28 / 41"><div class="sl-in"><h3 class="sh">혁신연구의 시대별 초점</h3><ol class="steps n5"><li><span class="sn">1</span><b>~1970 경제이슈</b><p>생산성·슘페터 가설 실증 (Solow 등)</p></li><li><span class="sn">2</span><b>~1980 정책이슈</b><p>혁신과 과학·기술: 선형→혼합모델</p></li><li><span class="sn">3</span><b>~1990 시스템</b><p>제도·다양성: 사용자 혁신, NIS</p></li><li><span class="sn">4</span><b>~2000 기업관점</b><p>기업전략·핵심역량, 경로의존·누적성</p></li><li><span class="sn">5</span><b>~현재 현상분석</b><p>Open·융합·Disruptive·녹색</p></li></ol></div><footer class="sl-f"><span>01-4 혁신연구의 역사</span><span class="num">28 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>혁신연구의 관심은 거시경제에서 기업으로 좁혀지는 동시에 넓어졌다. 처음에는 기술이 생산성과 성장에 얼마나 기여하는지를 물었고, 이어 과학·기술과 혁신의 관계, 국가 제도와 시스템, 개별 기업의 전략과 역량으로 옮겨갔다. 지금은 개방형·융합·파괴적 혁신 같은 새 현상을 분석한다. 이 과목의 주차 구성도 대체로 이 흐름을 따른다.</p></div></div><div class="slot" id="s29" data-lec="01-4"><article class="slide ty-concepts" aria-label="29 / 41"><div class="sl-in"><h3 class="sh">누가 무엇을 열었나</h3><div class="ccs n6"><div class="cc"><b>Solow</b><p>생산함수 내 잔여 분석 (기술과 생산성)</p></div><div class="cc"><b>Rosenberg</b><p>과학·기술 관계, 동태적 관점</p></div><div class="cc"><b>Utterback·Abernathy</b><p>기술 궤적과 패턴</p></div><div class="cc"><b>Nelson·Winter</b><p>진화경제학 관점의 혁신</p></div><div class="cc"><b>Lundvall</b><p>국가혁신체제(NIS)</p></div><div class="cc"><b>Prahalad·Hamel</b><p>기업 핵심역량</p></div></div></div><footer class="sl-f"><span>01-4 혁신연구의 역사</span><span class="num">29 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>Solow의 잔여 분석은 성장 중 자본·노동 투입으로 설명되지 않는 나머지를 기술진보로 본다. 예: 성장률 3% 중 투입 증가로 1%만 설명되면 나머지 2%가 기술의 몫이다. Solow(1957)는 미국 1인당 생산 증가의 약 7/8을 이 잔여로 추정했다. 이후 Nelson·Winter는 진화론으로, Lundvall은 국가 시스템으로, Prahalad·Hamel은 기업 역량으로 혁신을 설명했다.</p></div></div><div class="slot" id="s30" data-lec="01-4"><article class="slide ty-paper" aria-label="30 / 41"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Nelson &amp; Winter (1982)</h3><p class="pp-q">균형·이윤극대화 대신 루틴과 선택으로 경제변화를 설명할 수 있나?</p><div class="pp-g"><div><b>핵심 주장</b><p>기업은 루틴에 따라 행동하고 탐색으로 새 기술을 찾으며, 시장 선택이 수익성 높은 루틴을 확산시킨다. 기술과 산업구조는 함께 진화한다.</p><div class="pp-cs"><span class="pp-c">루틴</span><span class="pp-c">탐색(Search)</span><span class="pp-c">선택(Selection)</span><span class="pp-c">경로의존성</span></div></div><div><b>강의와의 연결</b><p>01-4: 혁신연구 흐름 속 &#x27;진화경제학 관점의 혁신&#x27;(N&amp;W), 기술 경로의존·누적성으로 언급 (p.7, 37)</p><b>보충 설명</b><p>루틴을 생물의 유전자에 비유하고 암묵지·조직 기억을 강조. 컴퓨터 시뮬레이션으로 거시 성장 데이터를 재현. 이후 역량기반 관점·동적역량 연구의 토대가 됨. 진화이론은 IM02에서 본격적으로 다룸.</p></div></div><p class="pp-cite">Nelson, R. R., &amp; Winter, S. G. (1982). An Evolutionary Theory of Economic Change. Cambridge, MA: Belknap Press of Harvard University Press. </p></div><footer class="sl-f"><span>01-4 혁신연구의 역사</span><span class="num">30 / 41</span></footer></article></div><div class="slot" id="s31" data-lec="01-4"><article class="slide ty-compare" aria-label="31 / 41"><div class="sl-in"><h3 class="sh">혁신의 동인: Push vs Pull</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Technology push</b><ul><li>과학·기술 발전이 혁신을 이끈다</li><li>연구 → 개발 → 생산 → 시장</li><li>선형모델의 전형</li></ul></div><div class="cp-col"><b class="cp-h">Market pull</b><ul><li>시장 수요가 혁신을 이끈다</li><li>수요 파악 → 개발 → 시장</li><li>Myers·Marquis 등 실증</li></ul></div></div><p class="cp-note">Mowery·Rosenberg: 선형모델 → 혼합모델</p></div><footer class="sl-f"><span>01-4 혁신연구의 역사</span><span class="num">31 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>1970~80년대 연구는 혁신을 기술이 미느냐(push), 시장이 당기느냐(pull)로 나눠 실증했다. Mowery·Rosenberg는 어느 한쪽만으로는 설명이 안 되고 둘이 상호작용한다는 혼합모델로 정리했다. 실무에서도 &#x27;좋은 기술이 있으니 팔자&#x27;나 &#x27;고객이 원하니 만들자&#x27; 한쪽만 보면 실패하기 쉽다. 기술 가능성과 시장 수요를 함께 검증해야 한다.</p></div></div><div class="slot" id="s32" data-lec="01-4"><article class="slide ty-tree" aria-label="32 / 41"><div class="sl-in"><h3 class="sh">강의의 핵심 문헌 지도</h3><div class="tree"><div class="tr-r">혁신이론</div><div class="tr-cs n4"><div class="tr-c"><b>슘페터·가설</b><p>Schumpeter, Acs·Audretsch</p></div><div class="tr-c"><b>진화·패러다임</b><p>Nelson·Winter, David, Kuhn</p></div><div class="tr-c"><b>혁신 동학·유형</b><p>Utterback, Pavitt, Christensen</p></div><div class="tr-c"><b>기업·시스템</b><p>Teece, Cohen·Levinthal, Perez</p></div></div></div></div><footer class="sl-f"><span>01-4 혁신연구의 역사</span><span class="num">32 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>강의의 Key reference는 이 과목 전체의 지도다. Fagerberg &amp; Verspagen(2009)과 Martin(2012)은 혁신연구에서 가장 많이 인용된 문헌을 분석했는데, 이 목록의 고전들이 대부분 상위에 있다. 각 주차에서 이론을 배울 때 어느 갈래에 속하는지 위치를 잡아두면, 서로 다른 이론을 연결해 실제 기업 현상을 설명하기 쉬워진다.</p></div></div><div class="slot" id="s33" data-lec="01-4"><article class="slide ty-paper" aria-label="33 / 41"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Fagerberg &amp; Verspagen (2009)</h3><p class="pp-q">혁신연구는 독립된 과학 분야로 자리 잡았는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>혁신연구는 1960년대 이후 기존 학문의 주변부에서 성장해 고유한 학술지·연구센터·핵심 문헌을 갖춘 분야가 되었으나, 학제 통합과 정체성은 아직 형성 중이다.</p><div class="pp-cs"><span class="pp-c">혁신연구</span><span class="pp-c">핵심 문헌</span><span class="pp-c">학문 분야 형성</span></div></div><div><b>강의와의 연결</b><p>01-4: 혁신연구의 영향력 있는 문헌(influential works) 자료 출처로 인용 (p.8)</p><b>보충 설명</b><p>연구자 설문과 인용 데이터로 Schumpeter, Nelson &amp; Winter, Freeman, Rosenberg 등 핵심 문헌을 도출. SPRU 같은 연구센터와 Research Policy 등 학술지가 분야의 제도적 기반이 되었음을 보임.</p></div></div><p class="pp-cite">Fagerberg, J., &amp; Verspagen, B. (2009). Innovation studies—The emerging structure of a new scientific field. Research Policy, 38(2), 218–233. </p></div><footer class="sl-f"><span>01-4 혁신연구의 역사</span><span class="num">33 / 41</span></footer></article></div><div class="slot" id="s34" data-lec="01-4"><article class="slide ty-takeaway" aria-label="34 / 41"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>혁신연구는 생산성(경제)→과학·기술(정책)→시스템→기업으로 넓어졌다</li><li>Solow 잔여: 투입으로 설명 안 되는 성장의 몫이 기술진보</li><li>혁신은 기술 push와 시장 pull의 상호작용으로 일어난다</li><li>Key reference는 이 과목 전체의 이론 지도다</li></ul></div><footer class="sl-f"><span>01-4 혁신연구의 역사</span><span class="num">34 / 41</span></footer></article></div><div class="slot" id="s35" data-lec="01-5"><article class="slide ty-title" aria-label="35 / 41"><div class="sl-in"><div class="t-wrap"><p class="t-wk">1주차 · 혁신경영 입문</p><p class="t-no">01-5</p><h2 class="t-title">과학·기술·R&amp;D와 데이터 분석</h2><p class="t-thesis">논문·특허 데이터로 과학과 기술의 흐름을 읽는다</p></div></div><footer class="sl-f"><span>01-5 과학·기술·R&amp;D와 데이터 분석</span><span class="num">35 / 41</span></footer></article></div><div class="slot" id="s36" data-lec="01-5"><article class="slide ty-compare" aria-label="36 / 41"><div class="sl-in"><h3 class="sh">과학 vs 기술</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Science</b><ul><li>검증 가능한 방법으로 얻은 지식 체계</li><li>자연의 발견과 설명</li></ul></div><div class="cp-col"><b class="cp-h">Technology</b><ul><li>과학이론을 적용해 유용하게 가공</li><li>인간 목적을 위한 자연의 조작</li></ul></div></div><p class="cp-note">출처: 유경만·양혜영(2008), KISTEP</p></div><footer class="sl-f"><span>01-5 과학·기술·R&amp;D와 데이터 분석</span><span class="num">36 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>과학은 자연을 발견하고 설명하는 지식 체계이고, 기술은 그 지식을 적용해 인간에게 유용하게 만드는 수단이다. 둘은 목적과 산출물이 다르다. 과학의 결과는 주로 논문, 기술의 결과는 주로 특허와 제품으로 나온다. 그래서 과학과 기술의 흐름을 분석할 때 각각 논문과 특허 데이터를 쓴다.</p></div></div><div class="slot" id="s37" data-lec="01-5"><article class="slide ty-concepts" aria-label="37 / 41"><div class="sl-in"><h3 class="sh">R&amp;D를 재는 기준</h3><div class="ccs n3"><div class="cc"><b>Frascati Manual (OECD)</b><p>R&amp;D 통계·조사분석의 국제 표준 지침</p></div><div class="cc"><b>역할</b><p>R&amp;D 정의·분류체계 제공 (R&amp;D 분야 바이블)</p></div><div class="cc"><b>과학-기술-산업 연계</b><p>과학→기술→산업 지식흐름의 분석 체계</p></div></div></div><footer class="sl-f"><span>01-5 과학·기술·R&amp;D와 데이터 분석</span><span class="num">37 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>무엇을 R&amp;D로 셀지 기준이 없으면 기업·국가 간 R&amp;D 투자를 비교할 수 없다. OECD(2015) Frascati Manual은 R&amp;D를 기초연구, 응용연구, 실험개발로 나누고 판별 기준을 준다. 예: 새 촉매 원리를 밝히는 일은 기초연구, 이를 특정 공정에 쓰는 연구는 응용연구, 시제품 설비를 만드는 일은 실험개발이다. 정부 R&amp;D 과제 분류도 이 기준을 따른다.</p></div></div><div class="slot" id="s38" data-lec="01-5"><article class="slide ty-paper" aria-label="38 / 41"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">OECD (2015)</h3><p class="pp-q">무엇을 R&amp;D로 보고, 어떻게 측정·분류할 것인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>R&amp;D는 지식을 늘리고 새 응용을 찾는 창의적·체계적 활동. 기초연구·응용연구·실험개발로 나누고, 국가 간 비교 가능한 통계 기준을 제시한다.</p><div class="pp-cs"><span class="pp-c">R&amp;D 정의</span><span class="pp-c">기초·응용·실험개발</span><span class="pp-c">R&amp;D 통계 표준</span></div></div><div><b>강의와의 연결</b><p>01-5: Frascati Manual을 R&amp;D 정의·분류체계의 국제 표준 지침, &#x27;R&amp;D 분야의 바이블&#x27;로 소개 (p.41)</p><b>보충 설명</b><p>1963년 초판 이후 개정을 거듭한 OECD 지침. 2015년판은 R&amp;D 판별 5기준(새로움·창의성·불확실성·체계성·이전/재현 가능성)을 명시. 각국 R&amp;D 통계와 정부 R&amp;D 예산 분류의 기준이 됨.</p></div></div><p class="pp-cite">OECD (2015). Frascati Manual 2015: Guidelines for Collecting and Reporting Data on Research and Experimental Development. The Measurement of Scientific, Technological and Innovation Activities. Paris: OECD Publishing. </p></div><footer class="sl-f"><span>01-5 과학·기술·R&amp;D와 데이터 분석</span><span class="num">38 / 41</span></footer></article></div><div class="slot" id="s39" data-lec="01-5"><article class="slide ty-compare" aria-label="39 / 41"><div class="sl-in"><h3 class="sh">논문·특허로 풀 수 있는 문제</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">논문 (과학)</b><ul><li>공동연구 형태, 핵심 과학자·기관</li><li>과학 진보 속도·확산 패턴</li><li>분야별 취약 부문, 연구성과 수명</li></ul></div><div class="cp-col"><b class="cp-h">특허 (기술)</b><ul><li>기업 간 기술협력 관계</li><li>핵심 기업·핵심 기술</li><li>기술 진보 속도·확산, 기술 수명</li><li>국가·기관·분야별 융합 정도</li></ul></div></div></div><footer class="sl-f"><span>01-5 과학·기술·R&amp;D와 데이터 분석</span><span class="num">39 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>논문과 특허는 누가, 무엇을, 누구와, 얼마나 빨리 만들었는지가 기록된 데이터다. 공동저자·공동출원으로 협력 네트워크를, 인용 관계로 핵심 기관·기술과 확산 속도를, 출원 추세로 기술 수명을 볼 수 있다. 예: 한 분야의 특허 출원이 매년 늘다가 정체되면 기술이 성숙기에 들어섰다는 신호로 읽는다. 이 과목 기말 리포트도 특허로 이론을 실증한다.</p></div></div><div class="slot" id="s40" data-lec="01-5"><article class="slide ty-points" aria-label="40 / 41"><div class="sl-in"><h3 class="sh">과학-기술 연계성 분석</h3><div class="pts n3"><div class="pt"><b>NPL</b><p>특허 참고문헌 중 비특허문헌(논문 등)</p></div><div class="pt"><b>흡수 패턴</b><p>특허 기술분야별 과학 흡수 패턴 파악</p></div><div class="pt"><b>진보 속도</b><p>과학 → 기술로 이어지는 속도 측정</p></div></div></div><footer class="sl-f"><span>01-5 과학·기술·R&amp;D와 데이터 분석</span><span class="num">40 / 41</span></footer></article><div class="sl-ex"><b>설명</b><p>특허가 인용한 논문(NPL)은 그 기술이 과학에 얼마나 기대는지 보여준다. 예: A분야 특허는 평균 5편, B분야는 0.5편의 논문을 인용한다면 A가 훨씬 과학 기반적인 분야다(수치는 예시). 논문 출판에서 이를 인용한 특허가 나오기까지의 시간 차로 과학이 기술로 넘어오는 속도도 잴 수 있다. 과학 기반 분야일수록 대학·연구소와의 협력이 중요해진다.</p></div></div><div class="slot" id="s41" data-lec="01-5"><article class="slide ty-takeaway" aria-label="41 / 41"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>과학은 발견·설명(논문), 기술은 응용·가공(특허)으로 나타난다</li><li>R&amp;D는 Frascati Manual 기준으로 정의·분류·측정한다</li><li>논문·특허 데이터로 협력관계·핵심기술·확산속도·기술수명을 분석한다</li><li>특허의 NPL 인용으로 기술이 과학에 얼마나 기대는지 측정한다</li></ul></div><footer class="sl-f"><span>01-5 과학·기술·R&amp;D와 데이터 분석</span><span class="num">41 / 41</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><span></span><a class="wk-nav" href="lecture-02.html">IM02 혁신연구의 고전·진화이론 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: Innovation Management (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

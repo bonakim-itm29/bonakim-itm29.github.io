@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IM03 혁신의 원천: 과학·기술 · 이노베이션 경영</title>
+<meta name="description" content="혁신은 과학·수요·지식의 상호작용에서 나온다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">이노베이션 경영</a> / <a href="index.html">강의별 핵심</a> / IM03</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 03</p>
+  <h1>혁신의 원천: 과학·기술</h1>
+  <p class="lead">혁신은 과학·수요·지식의 상호작용에서 나온다</p>
+  <div class="kws"><span class="kw">Technology Push</span><span class="kw">Demand Pull</span><span class="kw">Chain-Link Model</span><span class="kw">Mode 2</span><span class="kw">SECI</span><span class="kw">Pasteur&#x27;s Quadrant</span></div>
+  <details class="plist"><summary>이 강의의 논문 8편</summary><ol><li><b>Bush (1945)</b> Bush, V. (1945). Science, the endless frontier: A report to the President. Washington, DC: U.S. Government Printing Office.</li><li><b>Schmookler (1966)</b> Schmookler, J. (1966). Invention and economic growth. Cambridge, MA: Harvard University Press.</li><li><b>Nemet (2009)</b> Nemet, G. F. (2009). Demand-pull, technology-push, and government-led incentives for non-incremental technical change. Research Policy, 38(5), 700–709.</li><li><b>Mowery &amp; Rosenberg (1979)</b> Mowery, D., &amp; Rosenberg, N. (1979). The influence of market demand upon innovation: A critical review of some recent empirical studies. Research Policy, 8(2), 102–153.</li><li><b>Gibbons et al. (1994)</b> Gibbons, M., Limoges, C., Nowotny, H., Schwartzman, S., Scott, P., &amp; Trow, M. (1994). The new production of knowledge: The dynamics of science and research in contemporary societies. London: Sage.</li><li><b>Nonaka (1994)</b> Nonaka, I. (1994). A dynamic theory of organizational knowledge creation. Organization Science, 5(1), 14–37.</li><li><b>Nonaka &amp; Takeuchi (1995)</b> Nonaka, I., &amp; Takeuchi, H. (1995). The knowledge-creating company: How Japanese companies create the dynamics of innovation. New York: Oxford University Press.</li><li><b>Stokes (1997)</b> Stokes, D. E. (1997). Pasteur&#x27;s quadrant: Basic science and technological innovation. Washington, DC: Brookings Institution Press.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="03-1"><b>03-1</b><span>혁신의 원천: Push vs Pull</span></a><a href="#s10" class="tab" data-lec="03-2"><b>03-2</b><span>Push-Pull 논쟁과 실증연구</span></a><a href="#s20" class="tab" data-lec="03-3"><b>03-3</b><span>상호작용 모델과 지식생산</span></a><a href="#s29" class="tab" data-lec="03-4"><b>03-4</b><span>지식경영과 지식창조</span></a><a href="#s38" class="tab" data-lec="03-5"><b>03-5</b><span>과학·기술과 R&amp;D 구분</span></a><a href="#s47" class="tab" data-lec="03-6"><b>03-6</b><span>과학·기술 성과의 측정</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 53</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="03-1"><article class="slide ty-title" aria-label="1 / 53"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 혁신의 원천: 과학·기술</p><p class="t-no">03-1</p><h2 class="t-title">혁신의 원천: Push vs Pull</h2><p class="t-thesis">혁신은 기술이 밀거나 시장이 끌어서 시작된다</p></div></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">1 / 53</span></footer></article></div><div class="slot" id="s2" data-lec="03-1"><article class="slide ty-steps" aria-label="2 / 53"><div class="sl-in"><h3 class="sh">Technology Push 모델</h3><ol class="steps n4"><li><span class="sn">1</span><b>기초과학</b><p>자연현상의 새로운 발견과 이해</p></li><li><span class="sn">2</span><b>응용과학·공학</b><p>발견을 쓸 수 있는 기술로 전환</p></li><li><span class="sn">3</span><b>제조</b><p>기술을 제품으로 생산</p></li><li><span class="sn">4</span><b>마케팅</b><p>만들어진 제품을 시장에 판매</p></li></ol></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">2 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>과학에서 출발해 한 방향으로 시장까지 흘러가는 선형모델이다. Dosi(1982)는 이 모델이 힘을 얻은 이유로 혁신에서 과학의 중요성과 복잡성 증가, 장기적 시각의 필요, R&amp;D와 혁신 산출의 뚜렷한 상관, 혁신 과정의 본질적 불확실성을 든다. 출발점이 &#x27;시장 니즈&#x27;가 아니라 &#x27;새 지식&#x27;이라는 점이 핵심이다.</p></div></div><div class="slot" id="s3" data-lec="03-1"><article class="slide ty-paper" aria-label="3 / 53"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Bush (1945)</h3><p class="pp-q">정부는 왜, 어떻게 과학연구를 지원해야 하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>기초연구는 새로운 지식의 원천이며 산업·보건·안보의 발전으로 이어진다. 따라서 정부가 기초과학을 장기 지원해야 한다는 과학추동(science-push) 논리를 제시.</p><div class="pp-cs"><span class="pp-c">기초연구</span><span class="pp-c">Science Push</span><span class="pp-c">정부 R&amp;D 지원</span></div></div><div><b>강의와의 연결</b><p>03-1 p.3: Technology Push 선형모델의 원조로, 정부 R&amp;D 자금의 근거이자 과학자들이 선호한 모델로 소개</p><b>보충 설명</b><p>보고서는 NSF 설립(1950)으로 이어졌다. Bush가 직접 선형 도식을 그린 것은 아니며 &#x27;기초→응용→개발&#x27; 선형모델은 이후 해석으로 정형화되었고, 피드백 부재로 Kline &amp; Rosenberg(1986) 등에게 비판받았다.</p></div></div><p class="pp-cite">Bush, V. (1945). Science, the endless frontier: A report to the President. Washington, DC: U.S. Government Printing Office. </p></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">3 / 53</span></footer></article></div><div class="slot" id="s4" data-lec="03-1"><article class="slide ty-steps" aria-label="4 / 53"><div class="sl-in"><h3 class="sh">Demand Pull 모델</h3><ol class="steps n4"><li><span class="sn">1</span><b>시장 니즈</b><p>시장 조건 변화로 미충족 니즈 발생</p></li><li><span class="sn">2</span><b>개발</b><p>니즈를 채울 기술·제품 개발</p></li><li><span class="sn">3</span><b>제조</b><p>개발된 제품 생산</p></li><li><span class="sn">4</span><b>판매</b><p>니즈가 있던 시장에 판매</p></li></ol></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">4 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Schmookler(1962, 1966)에 따르면 시장 조건의 변화가 미충족 니즈를 만들고, 기업은 그 기회를 잡기 위해 혁신에 투자한다. 즉 수요 변화가 혁신을 &#x27;불러낸다(calls forth)&#x27;. 출발점이 시장이라는 점만 다를 뿐, 이 역시 피드백 없는 한 방향 선형모델이다.</p></div></div><div class="slot" id="s5" data-lec="03-1"><article class="slide ty-paper" aria-label="5 / 53"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Schmookler (1966)</h3><p class="pp-q">발명 활동의 방향과 양을 결정하는 것은 무엇인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>산업별 특허(발명) 추이가 투자·생산 등 수요 변화를 뒤따름을 보이며, 시장 수요가 발명의 방향과 속도를 이끈다는 수요견인(demand-pull)론을 제시.</p><div class="pp-cs"><span class="pp-c">Demand Pull</span><span class="pp-c">특허 통계</span><span class="pp-c">시장 수요</span></div></div><div><b>강의와의 연결</b><p>03-1 p.4-5: 시장 조건 변화가 미충족 니즈를 채우는 혁신을 &#x27;불러낸다&#x27;는 수요견인 모델의 원조로 인용</p><b>보충 설명</b><p>철도·농업·석유정제 등의 특허·투자 시계열을 분석. 수요가 클수록 발명의 기대수익이 커진다는 경제적 유인 논리이며, Mowery &amp; Rosenberg(1979)는 &#x27;수요&#x27; 개념의 모호성을 비판했다.</p></div></div><p class="pp-cite">Schmookler, J. (1966). Invention and economic growth. Cambridge, MA: Harvard University Press. </p></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">5 / 53</span></footer></article></div><div class="slot" id="s6" data-lec="03-1"><article class="slide ty-stat" aria-label="6 / 53"><div class="sl-in"><h3 class="sh">수요견인의 실증 근거</h3><div class="stat"><p class="st-v">550+</p><p class="st-l">Myers &amp; Marquis(1969) 혁신 사례</p><p class="st-t">5개 산업 분석: 수요 인식이 기술 잠재력 인식보다 더 빈번한 혁신 요인</p></div></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">6 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Myers &amp; Marquis(1969)는 5개 산업의 혁신 550여 건을 조사해 &#x27;수요의 인식&#x27;이 &#x27;기술 잠재력의 인식&#x27;보다 더 자주 혁신의 계기였다고 보고했다. 수요견인 모델을 대중화한 대표 연구다. 다만 &#x27;수요&#x27;를 넓게 정의할수록 이런 결과가 나오기 쉽다는 비판이 뒤따랐다(Mowery &amp; Rosenberg 1979).</p></div></div><div class="slot" id="s7" data-lec="03-1"><article class="slide ty-compare" aria-label="7 / 53"><div class="sl-in"><h3 class="sh">두 모델의 정책적 함의</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Technology Push</b><ul><li>정부의 기초연구 지원 근거</li><li>과학자들이 선호한 모델</li><li>R&amp;D 투입을 늘리면 혁신 증가</li></ul></div><div class="cp-col"><b class="cp-h">Demand Pull</b><ul><li>시장 수요가 혁신을 불러냄</li><li>수요를 만드는 정책이 중요</li><li>R&amp;D보다 시장 조건이 핵심</li></ul></div></div><p class="cp-note">정책 처방이 정반대 → 다양한 실증연구가 시작됨</p></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">7 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>두 모델 중 무엇이 맞느냐에 따라 정부가 돈을 쓰는 곳이 달라진다. Push가 맞다면 대학·연구소의 기초연구 지원을, Pull이 맞다면 조달·규제 등 수요 창출을 우선해야 한다. 그래서 1960~70년대에 어느 쪽이 더 중요한지를 따지는 실증연구가 쏟아졌다. 어떤 기술 정책을 볼 때도 &#x27;어느 모델을 전제하는가&#x27;를 먼저 물어보면 논리가 보인다.</p></div></div><div class="slot" id="s8" data-lec="03-1"><article class="slide ty-tree" aria-label="8 / 53"><div class="sl-in"><h3 class="sh">그 밖의 혁신 동인</h3><div class="tree"><div class="tr-r">혁신의 원천</div><div class="tr-cs n3"><div class="tr-c"><b>Public Push</b><p>정부·공공 주도: 지속가능성·우주</p></div><div class="tr-c"><b>중간 사용자</b><p>사용자 기업이 직접 개발·개선</p></div><div class="tr-c"><b>최종 사용자</b><p>개인·사용자 커뮤니티의 혁신</p></div></div></div></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">8 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Push와 Pull 외에도 원천은 다양하다. 정부·공공은 지속가능성, 우주개발, 방위처럼 시장이 스스로 만들기 어려운 혁신을 직접 밀어붙인다. Eric von Hippel은 공급자가 아닌 사용자 기업이나 개인이 혁신하는 User innovation을 연구했다. 많은 제품이 실제 사용 현장에서 사용자에 의해 개발되거나 다듬어진다는 점에서, 혁신 아이디어를 찾을 때 리드 유저를 관찰하는 것이 유용하다.</p></div></div><div class="slot" id="s9" data-lec="03-1"><article class="slide ty-takeaway" aria-label="9 / 53"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>Technology Push: 기초과학→응용·공학→제조→마케팅의 선형 흐름</li><li>Demand Pull: 시장 니즈가 혁신을 불러낸다(Schmookler)</li><li>두 모델은 정책 처방이 정반대라 실증 논쟁을 낳았다</li><li>공공 주도(Public Push)와 사용자 혁신(von Hippel)도 중요한 원천</li></ul></div><footer class="sl-f"><span>03-1 혁신의 원천: Push vs Pull</span><span class="num">9 / 53</span></footer></article></div><div class="slot" id="s10" data-lec="03-2"><article class="slide ty-title" aria-label="10 / 53"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 혁신의 원천: 과학·기술</p><p class="t-no">03-2</p><h2 class="t-title">Push-Pull 논쟁과 실증연구</h2><p class="t-thesis">혁신은 수요와 공급 양쪽에 반응하는 반복 과정</p></div></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">10 / 53</span></footer></article></div><div class="slot" id="s11" data-lec="03-2"><article class="slide ty-compare" aria-label="11 / 53"><div class="sl-in"><h3 class="sh">Nemet(2009): 양쪽 모두 비판</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Tech-push 비판</b><ul><li>시장 조건·가격 변화를 무시</li><li>주로 급진적 혁신만 설명</li><li>피드백 없는 선형모델</li></ul></div><div class="cp-col"><b class="cp-h">Demand-pull 비판</b><ul><li>기술 역량을 무시</li><li>&#x27;수요&#x27;라는 범주가 너무 넓음</li><li>주로 점진적 변화만 설명</li><li>드러나지 않은 니즈는 설명 곤란</li></ul></div></div><p class="cp-note">절충 모델: 두 동인이 동시에 작용</p></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">11 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Nemet(2009)은 두 모델 모두 반쪽짜리라고 정리한다. Push는 가격과 시장 변화를 보지 못하고, Pull은 기술이 무엇을 할 수 있는지를 보지 못한다. 또 Push는 급진적 혁신을, Pull은 점진적 개선을 설명하는 데 치우친다. 그래서 두 동인이 동시에 작용한다는 절충 모델이 받아들여졌다. 실제 기술을 분석할 때도 기술 기회와 시장 수요를 함께 확인해야 한다.</p></div></div><div class="slot" id="s12" data-lec="03-2"><article class="slide ty-compare" aria-label="12 / 53"><div class="sl-in"><h3 class="sh">정부의 두 가지 혁신정책</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">기술공급정책(Push)</b><ul><li>혁신 생산의 민간비용을 감소</li><li>R&amp;D 자금 지원</li><li>R&amp;D 관련 세금감면</li></ul></div><div class="cp-col"><b class="cp-h">기술수요정책(Pull)</b><ul><li>혁신의 민간이득을 증대</li><li>특허제도·정부조달</li><li>경쟁 기술에 대한 규제</li></ul></div></div><p class="cp-note">수요정책이 고피인용 특허로 이어지지는 않았다</p></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">12 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Nemet(2009)에 따르면 정부는 혁신을 만드는 비용을 낮추거나(Push), 혁신으로 얻는 이득을 키워(Pull) 기업의 혁신을 유도한다. 정부 조달은 시장이 사지 않는 제품을 정부가 사 주는 대표적 Pull 정책이다. 어떤 지원사업이든 비용을 줄여 주는지, 수익을 늘려 주는지로 분류하면 그 정책이 노리는 효과를 읽을 수 있다.</p></div></div><div class="slot" id="s13" data-lec="03-2"><article class="slide ty-paper" aria-label="13 / 53"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Nemet (2009)</h3><p class="pp-q">수요견인 정책이 비점진적 기술변화를 촉진하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>캘리포니아 풍력 사례에서 수요측 정책은 시장을 키웠지만 고피인용(비점진적) 특허를 늘리지 못했다. push와 pull을 함께 설계하는 정책이 필요하다.</p><div class="pp-cs"><span class="pp-c">기술공급정책</span><span class="pp-c">기술수요정책</span><span class="pp-c">비점진적 혁신</span></div></div><div><b>강의와의 연결</b><p>03-2 p.8-10: push·pull 각각의 비판, 정부의 두 정책수단, 수요정책이 가치 있는 특허로 이어지지 않은 이유</p><b>보충 설명</b><p>풍력 특허 인용 분석. 원인으로 지배적 설계로의 수렴, 보상 지연과 정책 불확실성, 기술 프런티어 소진을 제시. 수요정책만으로는 급진적 혁신 유도에 한계가 있다는 함의.</p></div></div><p class="pp-cite">Nemet, G. F. (2009). Demand-pull, technology-push, and government-led incentives for non-incremental technical change. Research Policy, 38(5), 700–709. </p></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">13 / 53</span></footer></article></div><div class="slot" id="s14" data-lec="03-2"><article class="slide ty-tree" aria-label="14 / 53"><div class="sl-in"><h3 class="sh">수요정책의 한계: 3가지 이유</h3><div class="tree"><div class="tr-r">가치 있는 특허↓</div><div class="tr-cs n3"><div class="tr-c"><b>지배적 설계</b><p>시장·기술이 빨리 한 설계로 수렴</p></div><div class="tr-c"><b>보상 지연</b><p>성과까지 시차, 정책 불확실성</p></div><div class="tr-c"><b>프런티어 소진</b><p>기술 성숙에 따라 특허활동 저조</p></div></div></div></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">14 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Nemet(2009)은 수요정책으로 시장은 커졌지만 많이 인용되는 &#x27;가치 있는&#x27; 특허는 늘지 않은 이유를 세 가지로 설명한다. 기술이 한 가지 지배적 설계로 빠르게 수렴했고, 투자 회수까지 시간이 길고 정책이 바뀔 위험이 컸으며, 기술이 성숙해 새로 개척할 여지가 줄었다. 수요정책만으로는 급진적 혁신을 끌어내기 어렵다는 함의다.</p></div></div><div class="slot" id="s15" data-lec="03-2"><article class="slide ty-case" aria-label="15 / 53"><div class="sl-in"><p class="ca-k">사례 · Demand Pull 근거</p><h3 class="sh">Project Hindsight (1967)</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>미 DoD(군 당국)가 자금을 대 군사 무기체계 혁신 20건이 어떤 연구에서 나왔는지 거꾸로 추적했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>각 혁신에 결정적이었던 &#x27;핵심 연구 사건&#x27;을 찾아 과학인지 기술인지, 특정 니즈를 겨냥했는지 분류했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>핵심 사건은 주로 &#x27;과학&#x27;이 아니라 &#x27;기술&#x27;이었고 95%가 DoD의 니즈를 향했다. → 수요견인이 더 중요.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>단, 추적 기간을 20년으로 자의적으로 잘랐다. 관찰 기간이 결론을 바꿀 수 있다.</p></div></div></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">15 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>이 연구는 &#x27;기초과학에 투자하면 혁신이 나온다&#x27;는 Bush(1945)식 믿음에 대한 첫 도전이었다. 그러나 20년 이전의 연구는 보지 않았기 때문에 오래전 기초연구의 기여가 빠졌을 수 있다. 실증연구를 읽을 때는 표본과 관찰 기간이 결론을 미리 정하지 않았는지 확인해야 한다.</p></div></div><div class="slot" id="s16" data-lec="03-2"><article class="slide ty-case" aria-label="16 / 53"><div class="sl-in"><p class="ca-k">사례 · Science Push 근거</p><h3 class="sh">TRACES (1968)</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>NSF는 Hindsight에 대한 반론으로, 민간 혁신 5건의 연구 기원을 훨씬 긴 기간에 걸쳐 추적하게 했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>자기 페라이트, 비디오테이프 레코더, 경구피임약 등의 핵심 연구 사건을 수십 년 거슬러 분류했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>핵심 연구 사건의 70%가 특정 임무를 겨냥하지 않은(non-mission-oriented) 기초연구였다. → 과학추동이 더 중요.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>같은 질문도 표본·기간 설정에 따라 정반대 결론이 나온다.</p></div></div></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">16 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Hindsight가 군사 혁신과 20년 창을 썼다면, TRACES는 민간 혁신과 훨씬 긴 기간을 봤다. 기초연구의 성과는 수십 년 뒤에 나타나므로 기간을 길게 잡으면 Push가, 짧게 잡으면 Pull이 강해 보인다. 두 연구를 나란히 보면 push-pull 논쟁이 측정 방법의 논쟁이기도 했음을 알 수 있다.</p></div></div><div class="slot" id="s17" data-lec="03-2"><article class="slide ty-cases" aria-label="17 / 53"><div class="sl-in"><h3 class="sh">이후 실증연구의 결론</h3><div class="css n4"><div class="cs"><b>Battelle(1973)</b><p>기술기회 인식 89% vs 니즈 인식 69%</p></div><div class="cs"><b>Comroe&amp;Dripps</b><p>심혈관 의학 핵심연구 62%가 기초연구</p></div><div class="cs"><b>Langrish(1972)</b><p>84건: 니즈와 기술가능성의 종합</p></div><div class="cs"><b>Mowery&amp;Rosenberg</b><p>수요·공급 양쪽에 반응하는 반복 과정</p></div></div></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">17 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Battelle(1973)은 결정적 사건에서 기술 기회의 인식(89%)과 니즈 인식(69%)이 모두 중요했음을, Comroe &amp; Dripps(1976)는 기초연구가 두 배로 보상한다고 보고했다. Langrish 외(1972)는 혁신이 니즈와 기술 가능성의 종합이며 원천은 여럿이라 했다. Mowery &amp; Rosenberg(1979)는 혁신을 수요와 공급 양쪽 힘에 반응하는 반복 과정으로 정리하며 논쟁을 마무리했다.</p></div></div><div class="slot" id="s18" data-lec="03-2"><article class="slide ty-paper" aria-label="18 / 53"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Mowery &amp; Rosenberg (1979)</h3><p class="pp-q">시장 수요가 혁신을 이끈다는 실증 증거는 타당한가?</p><div class="pp-g"><div><b>핵심 주장</b><p>수요견인을 지지한 실증연구들은 &#x27;수요&#x27;와 &#x27;니즈&#x27;를 혼동하는 등 개념이 모호하다. 혁신은 수요와 공급(기술) 양쪽 힘에 반응하는 반복적 과정이다.</p><div class="pp-cs"><span class="pp-c">수요 vs 니즈</span><span class="pp-c">반복적 과정</span><span class="pp-c">Coupling</span></div></div><div><b>강의와의 연결</b><p>03-2 p.15: 혁신은 수요·공급 양쪽 힘에 반응하는 반복 과정이라는 결론으로 push-pull 실증 논쟁을 정리</p><b>보충 설명</b><p>Myers &amp; Marquis(1969) 등 수요견인 실증연구의 방법론적 한계를 지적하고, 단순 수요견인형 정책 처방에 경고했다. 이후 Kline &amp; Rosenberg(1986)의 Chain-link 등 상호작용 모델로 이어졌다.</p></div></div><p class="pp-cite">Mowery, D., &amp; Rosenberg, N. (1979). The influence of market demand upon innovation: A critical review of some recent empirical studies. Research Policy, 8(2), 102–153. </p></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">18 / 53</span></footer></article></div><div class="slot" id="s19" data-lec="03-2"><article class="slide ty-takeaway" aria-label="19 / 53"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>Push는 시장을, Pull은 기술 역량을 무시한다(Nemet 2009)</li><li>정부정책은 혁신 비용을 낮추거나(Push) 이득을 키운다(Pull)</li><li>Hindsight는 Pull, TRACES는 Push: 관찰 기간이 결론을 갈랐다</li><li>결론: 혁신은 수요·공급 양쪽에 반응하는 반복 과정이다</li></ul></div><footer class="sl-f"><span>03-2 Push-Pull 논쟁과 실증연구</span><span class="num">19 / 53</span></footer></article></div><div class="slot" id="s20" data-lec="03-3"><article class="slide ty-title" aria-label="20 / 53"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 혁신의 원천: 과학·기술</p><p class="t-no">03-3</p><h2 class="t-title">상호작용 모델과 지식생산</h2><p class="t-thesis">혁신은 피드백과 지식의 융합 속에서 일어난다</p></div></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">20 / 53</span></footer></article></div><div class="slot" id="s21" data-lec="03-3"><article class="slide ty-compare" aria-label="21 / 53"><div class="sl-in"><h3 class="sh">Linear vs Chain-Link</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Linear Model</b><ul><li>연구→개발→설계→생산→판매</li><li>피드백 경로가 없음</li><li>혁신의 현실을 왜곡</li></ul></div><div class="cp-col"><b class="cp-h">Chain-Link</b><ul><li>각 기능이 연결·상호작용</li><li>단계마다 피드백(f) 발생</li><li>혁신의 중심은 설계</li><li>과학-기술 상호작용이 매우 강력</li></ul></div></div></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">21 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>선형모델은 혁신을 연구에서 판매까지 한 방향으로 흐르는 과정으로 보지만, 실제 혁신에는 피드백이 필수적이다. 판매 단계의 고객 반응이 설계를 바꾸고, 생산 문제가 다시 연구를 부른다. Kline &amp; Rosenberg(1986)의 Chain-Link 모델은 혁신의 중심을 과학이 아니라 설계에 두고, 과학은 필요할 때마다 각 단계가 꺼내 쓰는 지식 창고로 본다.</p></div></div><div class="slot" id="s22" data-lec="03-3"><article class="slide ty-steps" aria-label="22 / 53"><div class="sl-in"><h3 class="sh">Chain-Link의 중심 경로</h3><ol class="steps n5"><li><span class="sn">1</span><b>잠재 시장</b><p>시장의 가능성·니즈를 발견</p></li><li><span class="sn">2</span><b>발명·분석적 설계</b><p>아이디어를 개념 설계로</p></li><li><span class="sn">3</span><b>상세 설계·시험</b><p>구체화하고 시험으로 검증</p></li><li><span class="sn">4</span><b>재설계·생산</b><p>문제를 고쳐 생산에 투입</p></li><li><span class="sn">5</span><b>유통·마케팅</b><p>시장에 내놓고 반응을 되먹임</p></li></ol></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">22 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Kline &amp; Rosenberg(1986)의 중심 경로(central chain)는 연구가 아니라 잠재 시장에서 시작한다. 각 단계 사이에는 앞 단계로 돌아가는 짧은 피드백이, 시장에서 처음으로 돌아가는 긴 피드백이 있다. 단계마다 막히면 먼저 기존 지식을 찾고, 없을 때만 새 연구를 한다. 단계별 검토 후 다음 단계로 넘어가는 R&amp;D 관리 방식이 이 모델과 닮았다.</p></div></div><div class="slot" id="s23" data-lec="03-3"><article class="slide ty-concepts" aria-label="23 / 53"><div class="sl-in"><h3 class="sh">Chain-Link 도식의 기호</h3><div class="ccs n4"><div class="cc"><b>f (Feedback)</b><p>단계 사이와 시장에서 앞 단계로 되돌아오는 흐름</p></div><div class="cc"><b>I</b><p>새 장비가 과학을 자극, 과학이 새 장비를 만듦</p></div><div class="cc"><b>C</b><p>아이디어의 발아(idea germination)</p></div><div class="cc"><b>S</b><p>기업의 장기 연구에 대한 지원</p></div></div></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">23 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Kline 도식의 기호는 혁신이 여러 경로로 연결됨을 보여준다. f는 피드백, I는 현미경·가속기처럼 새 장비가 과학을 자극하고 과학이 다시 새 장비를 낳는 순환이다. C는 새 과학에서 아이디어가 싹트는 경로, S는 기업이 장기 연구를 지원하는 경로다. 과학과 기술이 서로를 끌어올리는 상호작용이 이 모델의 핵심이다.</p></div></div><div class="slot" id="s24" data-lec="03-3"><article class="slide ty-checklist" aria-label="24 / 53"><div class="sl-in"><h3 class="sh">Drucker의 7가지 혁신 원천</h3><ol class="chk two"><li><span class="ck">1</span>예상치 못한 성공·실패가 있었나? (Unexpected)</li><li><span class="ck">2</span>현실과 기대 사이의 불일치는? (Incongruity)</li><li><span class="ck">3</span>프로세스상의 필요가 있는가? (Necessity)</li><li><span class="ck">4</span>산업·시장 구조가 바뀌고 있는가?</li><li><span class="ck">5</span>인구구조가 변하고 있는가? (Demographics)</li><li><span class="ck">6</span>사람들의 인식이 바뀌고 있는가?</li><li><span class="ck">7</span>새로운 지식이 등장했는가? (New Knowledge)</li></ol></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">24 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Drucker(1985)는 혁신 기회를 찾는 7가지 원천을 제시했다. 앞의 네 가지는 기업·산업 내부에서, 뒤의 세 가지는 사회와 지식 등 외부에서 오며, 새로운 지식은 가장 불확실하고 시간이 오래 걸린다. 이론적 후속연구는 많지 않지만, 기회를 체계적으로 탐색하는 체크리스트로 쓰기 좋다. 예: 예상 밖으로 잘 팔린 고객층은 새 시장의 신호일 수 있다.</p></div></div><div class="slot" id="s25" data-lec="03-3"><article class="slide ty-compare" aria-label="25 / 53"><div class="sl-in"><h3 class="sh">Mode 1 vs Mode 2 지식생산</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">Mode 1</b><ul><li>학문분과(discipline) 기반</li><li>주로 대학 등 학술기관</li><li>지식 증진 자체가 목적</li><li>내부(동료) 검증</li></ul></div><div class="cp-col"><b class="cp-h">Mode 2</b><ul><li>초학제적(transdisciplinary)</li><li>다양한 기관에서 수행</li><li>&#x27;응용의 맥락&#x27;에서 지식 생산</li><li>외부 책무성(accountability)</li></ul></div></div><p class="cp-note">Mode 1→2 이행? 과학기술사학자들은 이견</p></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">25 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Gibbons 외(1994)에 따르면 전통적 지식생산(Mode 1)은 학과 단위로, 대학 안에서, 동료 평가로 이뤄진다. Mode 2는 실제 문제를 풀기 위한 맥락에서 여러 분야와 기관이 함께 지식을 만들고, 사회에 대한 책무성으로 평가받는다. 산학연 공동연구가 대표적이다. 다만 과학사학자들은 Mode 2가 새로운 현상이 아니라며 이행 주장에 반대한다.</p></div></div><div class="slot" id="s26" data-lec="03-3"><article class="slide ty-paper" aria-label="26 / 53"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Gibbons et al. (1994)</h3><p class="pp-q">현대 사회에서 지식 생산 방식은 어떻게 바뀌고 있나?</p><div class="pp-g"><div><b>핵심 주장</b><p>학문 분과 안에서 연구자가 주도하는 Mode 1과 달리, Mode 2는 응용 맥락에서 다양한 주체가 초학제적으로 문제를 풀고 사회적 책무성과 다면적 품질 평가를 따른다.</p><div class="pp-cs"><span class="pp-c">Mode 1</span><span class="pp-c">Mode 2</span><span class="pp-c">초학제성</span><span class="pp-c">사회적 책무성</span></div></div><div><b>강의와의 연결</b><p>05-5: 다수 이해관계자가 함께 기획하는 연구(Mode 2)는 어떻게 평가하나? (p.34-35)</p><b>보충 설명</b><p>Mode 2 지식은 대학 밖 기업·정부연구소 등 이질적 조직에 분산돼 생산되고, 팀은 문제에 따라 모였다 흩어진다. 이후 Triple Helix 논의와 이어졌으며, 경험적 근거가 약하다는 비판도 받는다.</p></div></div><p class="pp-cite">Gibbons, M., Limoges, C., Nowotny, H., Schwartzman, S., Scott, P., &amp; Trow, M. (1994). The new production of knowledge: The dynamics of science and research in contemporary societies. London: Sage. </p></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">26 / 53</span></footer></article></div><div class="slot" id="s27" data-lec="03-3"><article class="slide ty-steps" aria-label="27 / 53"><div class="sl-in"><h3 class="sh">학제 융합의 단계</h3><ol class="steps n4"><li><span class="sn">1</span><b>Single</b><p>단일 학문 안에서 만든 지식</p></li><li><span class="sn">2</span><b>Multi</b><p>여러 학문이 나란히, 섞이지 않고 참여</p></li><li><span class="sn">3</span><b>Inter</b><p>학문 간 방법·개념을 통합</p></li><li><span class="sn">4</span><b>Trans</b><p>학문 경계를 넘어 새 틀을 형성</p></li></ol></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">27 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Mode 2로 갈수록 지식 융합의 수준이 높아진다. Multi는 여러 분야가 각자 기여해 결과를 모은 것이고, Inter는 분야 간 방법과 개념을 통합한 것이다. Trans는 학문 경계 자체를 넘어 사회·사용자까지 포함한 새로운 문제 틀을 만든다. 공동연구 팀을 볼 때 실제로 어느 단계의 융합이 일어나는지 구분해 보면 협업의 깊이를 판단할 수 있다.</p></div></div><div class="slot" id="s28" data-lec="03-3"><article class="slide ty-takeaway" aria-label="28 / 53"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>선형모델은 피드백이 없어 혁신의 현실을 왜곡한다</li><li>Chain-Link: 잠재 시장에서 시작, 단계마다 피드백, 과학은 지식 창고</li><li>Drucker의 7가지 원천은 혁신 기회 탐색 체크리스트</li><li>Mode 2: 응용 맥락의 초학제적 지식생산(Gibbons 외 1994)</li></ul></div><footer class="sl-f"><span>03-3 상호작용 모델과 지식생산</span><span class="num">28 / 53</span></footer></article></div><div class="slot" id="s29" data-lec="03-4"><article class="slide ty-title" aria-label="29 / 53"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 혁신의 원천: 과학·기술</p><p class="t-no">03-4</p><h2 class="t-title">지식경영과 지식창조</h2><p class="t-thesis">암묵지와 형식지의 전환이 조직 지식을 만든다</p></div></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">29 / 53</span></footer></article></div><div class="slot" id="s30" data-lec="03-4"><article class="slide ty-points" aria-label="30 / 53"><div class="sl-in"><h3 class="sh">지식경영(KM)이란</h3><div class="pts n4"><div class="pt"><b>정의</b><p>조직 내 집단지식을 조직·창출·활용·공유하는 과정</p></div><div class="pt"><b>핵심 활동</b><p>지식의 축적·창출과 조직 전반으로의 공유</p></div><div class="pt"><b>기원</b><p>1986 유럽경영컨퍼런스(UN ILO 후원)</p></div><div class="pt"><b>대상</b><p>형식지와 암묵지 두 종류의 지식</p></div></div></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">30 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>지식경영은 1986년 UN ILO가 후원한 유럽경영컨퍼런스 &#x27;지식경영: 새로운 기회의 전망&#x27;에서 시작되었다. Turban 외(2003)는 이를 지식을 축적·창출하고 조직 전반에 효과적으로 적용되도록 공유하는 활동으로 정의한다. 개인이 가진 지식이 조직의 지식이 되지 않으면 사람이 떠날 때 함께 사라진다는 문제의식이 출발점이다.</p></div></div><div class="slot" id="s31" data-lec="03-4"><article class="slide ty-compare" aria-label="31 / 53"><div class="sl-in"><h3 class="sh">형식지 vs 암묵지</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">형식지(Explicit)</b><ul><li>말·글로 쉽게 표현·전달</li><li>코드화·저장·검색 가능</li><li>예: 매뉴얼, 설계도, 특허</li></ul></div><div class="cp-col"><b class="cp-h">암묵지(Tacit)</b><ul><li>개인에 체화, 말로 표현 곤란</li><li>운동기술·경험·통찰·직관</li><li>예: 숙련공의 손감각, 노하우</li></ul></div></div></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">31 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Nonaka(1994)는 지식을 형식지와 암묵지로 나눈다. 형식지는 문서로 옮겨 쉽게 전달되지만, 암묵지는 개인의 몸과 경험에 붙어 있어 글로 적기 어렵다. 경쟁자가 모방하기 어려운 것은 대개 암묵지다. 그래서 조직의 과제는 핵심 인력의 암묵지를 어떻게 공유 가능한 형태로 바꾸고 다시 다른 사람에게 체화시키느냐가 된다.</p></div></div><div class="slot" id="s32" data-lec="03-4"><article class="slide ty-paper" aria-label="32 / 53"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Nonaka (1994)</h3><p class="pp-q">조직은 어떻게 새로운 지식을 창출하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>조직 지식은 암묵지와 형식지의 지속적 상호전환을 통해 개인→집단→조직으로 나선형으로 확장되며 창출된다.</p><div class="pp-cs"><span class="pp-c">암묵지</span><span class="pp-c">형식지</span><span class="pp-c">지식 나선</span></div></div><div><b>강의와의 연결</b><p>03-4 p.25: 형식지(말·글로 전달 가능)와 암묵지(개인에 체화, 전달 곤란)를 구분하는 지식창조 이론</p><b>보충 설명</b><p>Polanyi의 암묵지 개념을 조직 차원으로 확장. 인식론적 축(암묵↔형식)과 존재론적 축(개인→조직)으로 지식 나선을 설명하고, 중간관리자 중심 &#x27;middle-up-down&#x27; 경영을 제안.</p></div></div><p class="pp-cite">Nonaka, I. (1994). A dynamic theory of organizational knowledge creation. Organization Science, 5(1), 14–37. </p></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">32 / 53</span></footer></article></div><div class="slot" id="s33" data-lec="03-4"><article class="slide ty-cycle" aria-label="33 / 53"><div class="sl-in"><h3 class="sh">SECI 지식창조 모델</h3><div class="dia"><svg viewBox="0 0 600 350" role="img" aria-label="공동화(S) → 표출화(E) → 연결화(C) → 내면화(I)"><circle cx="300" cy="175" r="125" class="cy-ring"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,86.6) rotate(45.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(388.4,263.4) rotate(135.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,263.4) rotate(225.0)"/><path d="M -7 -6 L 5 0 L -7 6 Z" class="cy-arrow" transform="translate(211.6,86.6) rotate(315.0)"/><g><rect x="243.0" y="29.0" width="114" height="42" rx="21" class="cy-node"/><text x="300.0" y="56.0" text-anchor="middle" class="cy-t">공동화(S)</text></g><g><rect x="368.0" y="154.0" width="114" height="42" rx="21" class="cy-node"/><text x="425.0" y="181.0" text-anchor="middle" class="cy-t">표출화(E)</text></g><g><rect x="243.0" y="279.0" width="114" height="42" rx="21" class="cy-node"/><text x="300.0" y="306.0" text-anchor="middle" class="cy-t">연결화(C)</text></g><g><rect x="118.0" y="154.0" width="114" height="42" rx="21" class="cy-node"/><text x="175.0" y="181.0" text-anchor="middle" class="cy-t">내면화(I)</text></g><text x="300" y="182" text-anchor="middle" class="cy-c">지식창조 나선</text></svg></div></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">33 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Nonaka &amp; Takeuchi(1995)의 SECI 모델은 네 가지 지식 전환이 순환하며 지식이 개인에서 집단, 조직으로 나선형으로 커진다고 본다. 한 바퀴 돌 때마다 지식의 범위가 넓어진다. 지식경영의 가장 기초가 되는 틀이며, 조직에서 지식이 막히는 지점을 찾을 때 네 단계 중 어디가 약한지 점검하는 데 쓴다.</p></div></div><div class="slot" id="s34" data-lec="03-4"><article class="slide ty-concepts" aria-label="34 / 53"><div class="sl-in"><h3 class="sh">4가지 지식 전환</h3><div class="ccs n4"><div class="cc"><b>공동화 (암묵→암묵)</b><p>함께 일하며 경험을 공유: 도제, OJT</p></div><div class="cc"><b>표출화 (암묵→형식)</b><p>은유·개념·모델로 말과 글로 표현</p></div><div class="cc"><b>연결화 (형식→형식)</b><p>형식지를 결합·체계화: 문서, DB</p></div><div class="cc"><b>내면화 (형식→암묵)</b><p>매뉴얼을 실행하며 몸에 익힘</p></div></div></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">34 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Nonaka &amp; Takeuchi(1995)의 네 전환을 실무로 풀면 이렇다. 신입이 선배 옆에서 배우는 것은 공동화, 선배 노하우를 매뉴얼로 쓰는 것은 표출화, 여러 매뉴얼을 묶어 표준을 만드는 것은 연결화, 표준을 실제로 익혀 자기 것으로 만드는 것은 내면화다. Nonaka는 이 전환이 일어나는 공유 공간을 &#x27;바(ba)&#x27;라 불렀다.</p></div></div><div class="slot" id="s35" data-lec="03-4"><article class="slide ty-case" aria-label="35 / 53"><div class="sl-in"><p class="ca-k">사례 · SECI의 실제</p><h3 class="sh">마쓰시타 제빵기 개발</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>1980년대 마쓰시타는 가정용 자동 제빵기를 개발했지만 반죽 기계가 빵을 제대로 만들지 못했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>개발자가 호텔 제빵장에게 직접 배우며 반죽 비결을 몸으로 익혔고(공동화), 이를 &#x27;비틀어 늘리기&#x27;로 표현해 설계에 반영했다(표출화).</p></div><div class="ca-b ca-result"><i>결과</i><p>반죽 기술을 기계 사양으로 옮긴 제빵기가 출시되어 주방가전 신제품으로 큰 판매 성과를 냈다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>핵심 노하우는 암묵지다. 체험으로 얻고 말로 바꿔야 제품에 담을 수 있다.</p></div></div></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">35 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Nonaka &amp; Takeuchi(1995)가 SECI를 설명할 때 쓴 대표 사례다. 엔지니어들은 문서와 데이터로는 맛있는 빵의 원리를 알 수 없었다. 숙련 제빵사의 손감각(암묵지)을 함께 일하며 익히고, 은유적 표현으로 바꾸어 설계 사양(형식지)으로 만든 것이 돌파구였다. 기술 개발이 막혔을 때 현장 전문가 곁에서 배우는 것이 지름길일 수 있다.</p></div></div><div class="slot" id="s36" data-lec="03-4"><article class="slide ty-paper" aria-label="36 / 53"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Nonaka &amp; Takeuchi (1995)</h3><p class="pp-q">일본 기업은 어떻게 지속적으로 혁신을 만들어내는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>공동화·표출화·연결화·내면화(SECI)의 4가지 지식전환이 순환하며 조직 지식이 창출되고, 이것이 일본 기업 혁신의 원천이다.</p><div class="pp-cs"><span class="pp-c">SECI</span><span class="pp-c">지식전환</span><span class="pp-c">Middle-up-down</span></div></div><div><b>강의와의 연결</b><p>03-4 p.26: SECI 지식창조 모델을 지식경영의 기초 틀로 제시</p><b>보충 설명</b><p>혼다·캐논·마쓰시타 제빵기 개발 사례로 설명. 이후 Nonaka &amp; Konno(1998)가 지식전환이 일어나는 공유 맥락 &#x27;바(ba)&#x27;를 제시했다. 서구 기업으로의 일반화 가능성에 대한 논쟁도 있다.</p></div></div><p class="pp-cite">Nonaka, I., &amp; Takeuchi, H. (1995). The knowledge-creating company: How Japanese companies create the dynamics of innovation. New York: Oxford University Press. </p></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">36 / 53</span></footer></article></div><div class="slot" id="s37" data-lec="03-4"><article class="slide ty-takeaway" aria-label="37 / 53"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>지식경영: 집단지식을 창출·공유·활용하는 과정</li><li>형식지는 문서로 전달되고, 암묵지는 몸과 경험에 붙어 있다</li><li>SECI: 공동화→표출화→연결화→내면화의 지식 나선</li><li>지식 전환이 일어나는 장(ba)을 만드는 것이 지식경영의 핵심</li></ul></div><footer class="sl-f"><span>03-4 지식경영과 지식창조</span><span class="num">37 / 53</span></footer></article></div><div class="slot" id="s38" data-lec="03-5"><article class="slide ty-title" aria-label="38 / 53"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 혁신의 원천: 과학·기술</p><p class="t-no">03-5</p><h2 class="t-title">과학·기술과 R&amp;D 구분</h2><p class="t-thesis">기초와 응용의 경계는 단순 이분법이 아니다</p></div></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">38 / 53</span></footer></article></div><div class="slot" id="s39" data-lec="03-5"><article class="slide ty-compare" aria-label="39 / 53"><div class="sl-in"><h3 class="sh">과학 vs 기술</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">과학(Science)</b><ul><li>검증 가능한 방법으로 얻은 지식 체계</li><li>자연의 발견과 설명</li></ul></div><div class="cp-col"><b class="cp-h">기술(Technology)</b><ul><li>과학이론을 실제로 적용하는 수단</li><li>인간 목적을 위한 자연의 조작</li></ul></div></div><p class="cp-note">R&amp;D 정의·분류의 국제 표준: Frascati Manual</p></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">39 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>과학은 자연을 발견하고 설명하는 검증 가능한 지식 체계이고, 기술은 과학이론을 적용해 자연을 인간 생활에 유용하게 가공하는 수단이다. 이 구분은 R&amp;D 통계와 정책의 기본 정의다. 다만 실제로는 대학이 기술을, 기업이 기초연구를 하는 등 경계가 흐려지고 있다.</p></div></div><div class="slot" id="s40" data-lec="03-5"><article class="slide ty-steps" aria-label="40 / 53"><div class="sl-in"><h3 class="sh">Frascati의 R&amp;D 3분류</h3><ol class="steps n3"><li><span class="sn">1</span><b>기초연구</b><p>특정 응용 없이 새 지식 획득</p></li><li><span class="sn">2</span><b>응용연구</b><p>특정 실용 목적을 위한 새 지식</p></li><li><span class="sn">3</span><b>개발연구</b><p>지식으로 새 제품·공정을 만들거나 개선</p></li></ol></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">40 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Frascati Manual은 OECD가 만든 R&amp;D 통계의 국제 표준 지침으로, 연구개발 분야의 바이블로 불린다. 각국은 이 정의에 따라 R&amp;D를 기초·응용·개발로 나눠 집계하므로 국가 간 비교가 가능하다. 반면 혁신 활동 통계는 Oslo Manual이 다룬다. 정부 과제나 기업 R&amp;D 예산을 볼 때 어느 단계에 돈이 몰리는지 이 구분으로 읽을 수 있다.</p></div></div><div class="slot" id="s41" data-lec="03-5"><article class="slide ty-matrix" aria-label="41 / 53"><div class="sl-in"><h3 class="sh">Stokes: Pasteur 사분면</h3><div class="mx"><span class="mx-y1">근본 이해 추구</span><span class="mx-y2">이해 추구 없음</span><div class="mx-c tl"><b>Bohr</b><p>순수 기초연구: 지식 증진만 목적</p></div><div class="mx-c tr"><b>Pasteur</b><p>이용을 위한 기초연구: 지식+유용한 결과</p></div><div class="mx-c bl"><b>(명명 없음)</b><p>이해도 응용도 지향하지 않음</p></div><div class="mx-c br"><b>Edison</b><p>순수 응용연구: 유용한 결과만 목적</p></div><span class="mx-x1">응용 고려 없음</span><span class="mx-x2">응용 고려 있음</span></div></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">41 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Stokes(1997)는 기초-응용을 한 줄의 양 끝으로 보던 Bush(1945)식 이분법을 두 개의 독립 축으로 바꿨다. 보어의 원자 연구는 이해만, 에디슨의 전구 개발은 쓸모만 추구했다. 파스퇴르는 둘 다 추구했다. 어떤 연구 과제를 볼 때 &#x27;근본 이해를 추구하는가&#x27;와 &#x27;활용을 고려하는가&#x27;를 따로 물으면 사분면 위치를 정할 수 있다.</p></div></div><div class="slot" id="s42" data-lec="03-5"><article class="slide ty-paper" aria-label="42 / 53"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Stokes (1997)</h3><p class="pp-q">기초연구와 응용연구는 정말 한 축의 양 끝인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>근본 이해 추구와 활용 고려는 독립된 두 축이다. 둘 다 추구하는 &#x27;이용을 위한 기초연구&#x27;(파스퇴르 사분면)가 존재한다.</p><div class="pp-cs"><span class="pp-c">Pasteur&#x27;s Quadrant</span><span class="pp-c">Bohr·Edison</span><span class="pp-c">이용 지향 기초연구</span></div></div><div><b>강의와의 연결</b><p>14-4 p.21: 산학 기술이전의 새로운 질문으로 소개, &#x27;이용을 위한 기초연구&#x27;</p><b>보충 설명</b><p>Bush(1945) 선형모델의 기초→응용 1차원 구분을 비판하고, 공공 연구비 배분을 &#x27;이용 지향 기초연구&#x27;에 정당화하는 정책 논리를 제공했다.</p></div></div><p class="pp-cite">Stokes, D. E. (1997). Pasteur&#x27;s quadrant: Basic science and technological innovation. Washington, DC: Brookings Institution Press. </p></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">42 / 53</span></footer></article></div><div class="slot" id="s43" data-lec="03-5"><article class="slide ty-case" aria-label="43 / 53"><div class="sl-in"><p class="ca-k">사례 · 이용을 위한 기초연구</p><h3 class="sh">파스퇴르의 연구</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>19세기 프랑스의 포도주·맥주 산업은 원인 모를 부패와 발효 실패로 큰 손실을 겪고 있었다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>파스퇴르는 실용 문제를 풀기 위해 발효와 부패의 근본 원인을 연구해 미생물이 원인임을 밝혔다.</p></div><div class="ca-b ca-result"><i>결과</i><p>가열 살균법(저온살균)이 나왔고, 미생물학과 백신 연구의 기초가 세워졌다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>실용 목적에서 출발한 연구도 근본 원리를 밝히는 기초연구가 될 수 있다.</p></div></div></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">43 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Stokes가 사분면 이름을 파스퇴르에서 딴 이유다. 산업 문제(응용)를 풀려다 질병의 세균설 같은 근본 지식(기초)에 도달했다. 백신처럼 과학에서 바로 시장으로 이어지는 연구가 이 유형에 해당한다. 공공 R&amp;D가 &#x27;사회적 필요에서 출발한 기초연구&#x27;를 지원해야 한다는 논리의 근거가 된다.</p></div></div><div class="slot" id="s44" data-lec="03-5"><article class="slide ty-points" aria-label="44 / 53"><div class="sl-in"><h3 class="sh">Bayh-Dole Act(1980)</h3><div class="pts n4"><div class="pt"><b>목적</b><p>연방정부 지원 연구성과의 활용 촉진</p></div><div class="pt"><b>산학협력</b><p>대학 등 비영리기관과 기업 간 협력 촉진</p></div><div class="pt"><b>중소기업</b><p>연방 R&amp;D에 중소기업 참여 극대화</p></div><div class="pt"><b>정부 권리</b><p>공익 보호를 위한 정부의 권리 확보</p></div></div></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">44 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Bayh-Dole Act는 1980년 12월 미국 특허법을 개정한 법(35 USC 200~212조, 13개 조문)이다. 연방 지원 연구의 발명을 활용하도록 촉진하고, 대학·비영리기관과 기업의 협력과 중소기업 참여를 넓히는 것이 목적이다. 동시에 발명이 쓰이지 않거나 남용될 때를 대비해 정부가 충분한 권리를 갖도록 했다.</p></div></div><div class="slot" id="s45" data-lec="03-5"><article class="slide ty-case" aria-label="45 / 53"><div class="sl-in"><p class="ca-k">사례 · 대학 역할의 변화</p><h3 class="sh">Bayh-Dole 이후의 대학</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>1980년 이전 연방 지원 발명은 주로 정부 소유였고, 대학 특허는 Research Corporation이 중앙에서 관리해 활용이 저조했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>Bayh-Dole Act로 대학이 연방 지원 연구의 특허를 소유할 수 있게 되었고, 대학마다 TLO를 두어 직접 관리했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>대학의 특허 출원과 기업 대상 기술 라이선싱이 크게 늘었고, TLO가 미국 대학에 널리 퍼졌다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>제도가 바뀌면 대학이 &#x27;과학 공급자&#x27;에서 &#x27;기술사업화 주체&#x27;로 바뀐다.</p></div></div></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">45 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>이 법은 Pasteur 사분면처럼 기초와 응용의 경계가 흐려지는 흐름과 맞물려 과학기술 정책의 전환점이 되었다. 대학은 특허를 소유하고 라이선스 수입을 얻을 수 있게 되었다. 이후 여러 나라가 비슷한 제도를 도입했다. 대학 기술을 도입하려는 기업은 해당 대학의 TLO가 첫 창구가 된다.</p></div></div><div class="slot" id="s46" data-lec="03-5"><article class="slide ty-takeaway" aria-label="46 / 53"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>과학은 발견·설명, 기술은 인간 목적을 위한 자연의 조작</li><li>Frascati Manual: 기초·응용·개발로 R&amp;D를 분류하는 국제 표준</li><li>Pasteur 사분면: 이해와 활용을 동시에 추구하는 기초연구</li><li>Bayh-Dole Act: 대학이 특허를 소유하는 기술사업화 주체로</li></ul></div><footer class="sl-f"><span>03-5 과학·기술과 R&amp;D 구분</span><span class="num">46 / 53</span></footer></article></div><div class="slot" id="s47" data-lec="03-6"><article class="slide ty-title" aria-label="47 / 53"><div class="sl-in"><div class="t-wrap"><p class="t-wk">3주차 · 혁신의 원천: 과학·기술</p><p class="t-no">03-6</p><h2 class="t-title">과학·기술 성과의 측정</h2><p class="t-thesis">논문과 특허로 과학-기술 연계를 측정한다</p></div></div><footer class="sl-f"><span>03-6 과학·기술 성과의 측정</span><span class="num">47 / 53</span></footer></article></div><div class="slot" id="s48" data-lec="03-6"><article class="slide ty-steps" aria-label="48 / 53"><div class="sl-in"><h3 class="sh">R&amp;D 측정 프레임워크</h3><ol class="steps n5"><li><span class="sn">1</span><b>투입(Input)</b><p>인력·아이디어·장비·자금·정보</p></li><li><span class="sn">2</span><b>처리(R&amp;D)</b><p>연구소의 연구개발 활동</p></li><li><span class="sn">3</span><b>산출(Output)</b><p>논문·특허·신제품·신공정</p></li><li><span class="sn">4</span><b>수용 시스템</b><p>생산·마케팅 등이 산출을 활용</p></li><li><span class="sn">5</span><b>성과(Outcome)</b><p>매출 증가·비용 절감 등 성과</p></li></ol></div><footer class="sl-f"><span>03-6 과학·기술 성과의 측정</span><span class="num">48 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>Brown &amp; Svenson(1988)의 프레임워크는 R&amp;D를 투입→처리→산출→수용→성과의 시스템으로 본다. 흔한 실수는 투입(예산, 인원)만 세거나 성과(매출)만 보는 것이다. 산출과 성과 사이에는 그것을 받아 쓰는 조직이 있어, 좋은 특허도 사업부가 쓰지 않으면 성과가 없다. 측정 지표를 만들 때 단계별로 하나씩 정하면 병목을 찾을 수 있다.</p></div></div><div class="slot" id="s49" data-lec="03-6"><article class="slide ty-compare" aria-label="49 / 53"><div class="sl-in"><h3 class="sh">무엇을 분석할 수 있나</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">논문 분석</b><ul><li>과학자들의 공동연구 형태</li><li>분야별 핵심 과학자·기관</li><li>과학 진보 속도·확산 패턴</li><li>기관·분야별 융합의 정도</li></ul></div><div class="cp-col"><b class="cp-h">특허 분석</b><ul><li>기업 간 기술협력 관계</li><li>분야별 핵심 기업·핵심 기술</li><li>기술 진보 속도·확산 패턴</li><li>특정 기술의 수명</li></ul></div></div><p class="cp-note">취약 부문 진단: 국가·기관별 약한 분야 파악</p></div><footer class="sl-f"><span>03-6 과학·기술 성과의 측정</span><span class="num">49 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>혁신 성과를 측정하는 도구가 논문과 특허만은 아니지만, 대규모로 비교 가능한 데이터는 사실상 이 둘이다. 논문은 과학 활동을, 특허는 기술 활동을 보여준다. 공저자와 공동출원인으로 협력 관계를, 인용으로 지식 흐름과 확산 속도를 볼 수 있다. 특정 분야에서 우리나라나 기관이 약한 부분을 진단하는 데도 쓴다.</p></div></div><div class="slot" id="s50" data-lec="03-6"><article class="slide ty-tree" aria-label="50 / 53"><div class="sl-in"><h3 class="sh">특허 한 건에서 읽는 정보</h3><div class="tree"><div class="tr-r">특허 서지정보</div><div class="tr-cs n4"><div class="tr-c"><b>출원인</b><p>2인 이상 공동출원 → 기술협력</p></div><div class="tr-c"><b>인용 특허</b><p>기술 간 지식 흐름·핵심 특허</p></div><div class="tr-c"><b>NPL</b><p>인용한 논문 → 과학 의존도</p></div><div class="tr-c"><b>출원일</b><p>진보 속도·기술 수명 추정</p></div></div></div></div><footer class="sl-f"><span>03-6 과학·기술 성과의 측정</span><span class="num">50 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>특허 분석에는 미국 특허청(USPTO) 자료가 널리 쓰인다. 특허 한 건의 서지정보만으로도 여러 지표를 만들 수 있다. 출원인이 둘 이상이면 공동 개발로, 인용한 특허는 지식의 출처로, 인용한 논문(NPL)은 과학 의존도로 본다. 출원일과 인용 문헌의 시점을 비교하면 과학이 기술로 넘어오는 속도도 계산할 수 있다.</p></div></div><div class="slot" id="s51" data-lec="03-6"><article class="slide ty-equation" aria-label="51 / 53"><div class="sl-in"><h3 class="sh">과학-기술 연계강도</h3><p class="eq">연계강도 = 인용 과학논문 수 ÷ 등록특허 수</p><div class="eq-ts"><div class="eq-t"><b>NPL</b><p>특허 참고문헌 중 비특허문헌(논문 등)</p></div><div class="eq-t"><b>측정 단위</b><p>국가·기술분야·기업별 특허 1건당</p></div></div><p class="eq-rule">값이 클수록 그 분야의 과학지식 연계가 강함</p></div><footer class="sl-f"><span>03-6 과학·기술 성과의 측정</span><span class="num">51 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>박현우 외(2011)의 지표로, 특허 1건이 평균 몇 편의 과학논문을 인용하는지를 본다. 예: 어떤 분야의 등록특허 1,000건이 논문 2,500편을 인용했다면 연계강도는 2.5다(수치는 예시). 바이오처럼 값이 높은 분야는 과학 의존도가 높으므로, 정부가 대학 기초연구 지원 비중을 정할 때 근거로 쓸 수 있다.</p></div></div><div class="slot" id="s52" data-lec="03-6"><article class="slide ty-points" aria-label="52 / 53"><div class="sl-in"><h3 class="sh">NPL 분석으로 보는 것</h3><div class="pts n4"><div class="pt"><b>과학 흡수</b><p>특허 기술분야별 과학지식 흡수 패턴</p></div><div class="pt"><b>진보 속도</b><p>과학에서 기술로 이어지는 속도</p></div><div class="pt"><b>논문-특허 시차</b><p>논문 발표와 특허 출원 사이의 시간 차</p></div><div class="pt"><b>취약 분야</b><p>과학 기반이 약한 기술분야 진단</p></div></div></div><footer class="sl-f"><span>03-6 과학·기술 성과의 측정</span><span class="num">52 / 53</span></footer></article><div class="sl-ex"><b>설명</b><p>NPL 분석은 과학이 기술로 흘러가는 경로를 보여준다. 어떤 기술분야가 어떤 과학분야를 주로 인용하는지(흡수 패턴), 논문이 나온 뒤 몇 년 만에 특허에 인용되는지(시차)를 볼 수 있다. 예: 특허 출원 연도에서 인용 논문의 평균 발표 연도를 빼면 과학→기술 시차가 된다. 시차가 짧은 분야는 과학 성과가 빨리 사업화되는 분야다.</p></div></div><div class="slot" id="s53" data-lec="03-6"><article class="slide ty-takeaway" aria-label="53 / 53"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>R&amp;D는 투입→처리→산출→수용→성과의 시스템으로 측정한다</li><li>논문은 과학, 특허는 기술 활동의 대표적 측정 도구</li><li>연계강도 = 특허 1건당 인용 과학논문 수: 과학 의존도 지표</li><li>NPL로 과학→기술 흡수 패턴과 시차를 본다</li></ul></div><footer class="sl-f"><span>03-6 과학·기술 성과의 측정</span><span class="num">53 / 53</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-02.html">← IM02 혁신연구의 고전·진화이론</a><a class="wk-nav" href="lecture-04.html">IM04 혁신 유형·아키텍처·분류 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: Innovation Management (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>

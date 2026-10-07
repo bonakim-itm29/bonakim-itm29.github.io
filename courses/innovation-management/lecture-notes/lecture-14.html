@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IM14 국가혁신시스템 · 이노베이션 경영</title>
+<meta name="description" content="혁신은 기업이 아닌 시스템이 만든다">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../../../assets/style.css">
+<style>/* Layout: site chrome from assets/style.css; slides are 16:9 sheets that scale with container query units, stacking as cards on phones */
+:root{--amber:#a8620f;--amber-soft:#fbf0e1;--ink:#16302a;--paper:#ffffff;--paper2:#f4f6f3;--title-bg:#20473d;--title-fg:#f3f6f2;--title-mute:#a9c4ba;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme: dark){:root{--amber:#e3a55a;--amber-soft:#2e2517;--ink:#e6eee9;--paper:#1a1c1a;--paper2:#20231f;--title-bg:#163029;--title-fg:#e8f0ec;--title-mute:#86ab9e}}
+.wrap.wide{max-width:1120px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kws{display:flex;flex-wrap:wrap;gap:6px}
+.kw{font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- hub ---------- */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 28px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flow li{padding:12px 14px;background:var(--surface);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.flow li:last-child{border-right:0}
+.flow b{font-family:var(--mono);font-size:.8rem;color:var(--accent);font-weight:500}
+.flow span{font-size:.92rem;font-weight:600}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;padding-bottom:40px}
+.wk-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px;transition:border-color .15s,transform .15s}
+.wk-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.wk-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wc-no{font-size:2.4rem;line-height:1;color:var(--accent);font-weight:500;letter-spacing:-.04em}
+.wc-body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.wc-body h3{font-size:1.12rem;letter-spacing:-.02em;line-height:1.3}
+.wc-one{font-size:.9rem;color:var(--muted);margin:0;line-height:1.45}
+.wc-meta{font-size:.74rem;color:var(--muted);margin:0}
+.wc-go{color:var(--muted);font-size:1.2rem;transition:color .15s,transform .15s}
+.wk-card:hover .wc-go{color:var(--accent);transform:translateX(3px)}
+
+/* ---------- deck page chrome ---------- */
+.dk-h{padding:12px 0 18px;display:flex;flex-direction:column;gap:8px}
+.dk-wk{font-size:.8rem;color:var(--accent);letter-spacing:.12em}
+.dk-h .lead{margin-top:0}
+.dk-bar{position:sticky;top:56px;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:thin}
+.tab{flex:none;display:flex;gap:6px;align-items:baseline;text-decoration:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;font-size:.82rem;color:var(--muted);background:var(--surface)}
+.tab b{font-family:var(--mono);font-weight:500;color:var(--text)}
+.tab span{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tab.on{border-color:var(--accent);color:var(--accent)} .tab.on b{color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:6px}
+.ctl button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:4px;padding:5px 11px;cursor:pointer}
+.ctl button:hover{border-color:var(--accent)} .ctl button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.ctl #pos{font-size:.82rem;color:var(--muted);min-width:64px;text-align:center}
+.hint{font-size:.8rem;color:var(--muted);margin:14px 0 0}
+.wk-pn{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 0 40px}
+.wk-nav{font-size:.9rem;text-decoration:none;color:var(--accent);font-weight:600}
+footer.site{padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+
+/* ---------- slides ---------- */
+.deck{display:grid;gap:22px}
+.deck.paged .slot{display:none} .deck.paged .slot.cur{display:block}
+.slot{scroll-margin-top:120px}
+.deck.paged{cursor:default}
+.slide{scroll-margin-top:120px;container-type:inline-size;position:relative;display:flex;flex-direction:column;aspect-ratio:16/9;background:var(--paper);border:1px solid var(--line);border-radius:6px;color:var(--ink);overflow:hidden}
+.sl-in{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2.2cqw;padding:4.4cqw 5.4cqw 2cqw;min-height:0}
+.sl-f{display:flex;justify-content:space-between;gap:12px;padding:0 5.4cqw 2.2cqw;font-size:clamp(10px,1.05cqw,13px);color:var(--muted)}
+.sl-f span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sh{font-size:clamp(19px,3.1cqw,36px);font-weight:800;letter-spacing:-.035em;line-height:1.2;text-wrap:balance;color:var(--ink)}
+.slide p{margin:0}
+.slide b{font-weight:700}
+.slide p,.slide li{font-size:clamp(13px,1.62cqw,19px);line-height:1.5}
+
+/* title */
+.ty-title{background:var(--title-bg);border-color:var(--title-bg);color:var(--title-fg)}
+.ty-title .sl-f{color:var(--title-mute)}
+.t-wrap{display:flex;flex-direction:column;gap:1.4cqw}
+.t-wk{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--title-mute);letter-spacing:.06em}
+.t-no{font-family:var(--mono);font-size:clamp(44px,10cqw,120px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--title-mute)}
+.t-title{text-transform:none;color:var(--title-fg);margin:0;font-size:clamp(24px,4.6cqw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.t-thesis{font-size:clamp(15px,2.1cqw,25px)!important;color:var(--title-fg);opacity:.9;max-width:34em;border-top:1px solid color-mix(in srgb,var(--title-mute) 50%,transparent);padding-top:1.4cqw}
+
+/* points / concepts / cases */
+.pts,.ccs,.css{display:grid;gap:1.6cqw}
+.pts{grid-template-columns:repeat(2,1fr)} .pts.n3{grid-template-columns:repeat(3,1fr)}
+.pt{border-top:3px solid var(--accent);padding-top:1.2cqw;display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pt b{font-size:clamp(14px,1.9cqw,22px);color:var(--accent)}
+.ccs{grid-template-columns:repeat(3,1fr)} .ccs.n4{grid-template-columns:repeat(2,1fr)} .ccs.n2{grid-template-columns:repeat(2,1fr)}
+.cc{background:var(--paper2);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cc b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em}
+.css{grid-template-columns:repeat(2,1fr)} .css.n3{grid-template-columns:repeat(3,1fr)}
+.cs{border:1px solid var(--line);border-radius:4px;padding:1.5cqw 1.7cqw;display:flex;flex-direction:column;gap:.5cqw;min-width:0}
+.cs b{font-size:clamp(15px,2cqw,23px);letter-spacing:-.02em}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:0}
+.steps li{position:relative;display:flex;flex-direction:column;gap:.7cqw;padding:1.4cqw 1.6cqw 1.4cqw 1.2cqw;border-top:3px solid var(--accent);min-width:0}
+.steps li+li{border-left:1px dashed var(--line)}
+.steps li::after{content:"";position:absolute;top:-8px;right:-7px;width:0;height:0;border-left:8px solid var(--accent);border-top:6.5px solid transparent;border-bottom:6.5px solid transparent;z-index:1}
+.steps li:last-child::after{display:none}
+.sn{font-family:var(--mono);font-size:clamp(20px,3.4cqw,40px);color:var(--accent);line-height:1}
+.steps b{font-size:clamp(14px,1.8cqw,21px);letter-spacing:-.02em;line-height:1.3}
+.steps p{font-size:clamp(12px,1.45cqw,17px)!important;color:var(--muted)}
+
+/* diagrams */
+.dia{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+.dia svg{width:100%;max-height:100%;height:auto;max-width:900px}
+.cy-ring{fill:none;stroke:var(--line);stroke-width:2.5}
+.cy-arrow{fill:var(--accent)}
+.cy-node{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.cy-t{font-size:16px;font-weight:700;fill:var(--ink);font-family:Pretendard,sans-serif}
+.cy-c{font-size:18px;font-weight:800;fill:var(--accent);font-family:Pretendard,sans-serif}
+.ax{stroke:var(--muted);stroke-width:1.5} .axl{font-size:13px;fill:var(--muted);font-family:Pretendard,sans-serif}
+.s1{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round}
+.s2{fill:none;stroke:var(--accent);stroke-width:4;stroke-linecap:round}
+.sl{font-size:16px;font-weight:700;fill:var(--muted);font-family:Pretendard,sans-serif} .s2l{fill:var(--accent)}
+.jump{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 4} .jl{font-size:14px;font-weight:700;fill:var(--amber);font-family:Pretendard,sans-serif}
+
+/* matrix */
+.mx{display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:.8cqw;flex:1;min-height:0}
+.mx-y1,.mx-y2{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-y1{grid-area:1/1} .mx-y2{grid-area:2/1}
+.mx-x1,.mx-x2{text-align:center;font-size:clamp(11px,1.3cqw,15px);color:var(--muted);font-weight:600}
+.mx-x1{grid-area:3/2} .mx-x2{grid-area:3/3}
+.mx-c{padding:1.4cqw 1.8cqw;border-radius:4px;display:flex;flex-direction:column;gap:.5cqw;justify-content:center;min-width:0}
+.mx-c b{font-size:clamp(15px,2.1cqw,24px);letter-spacing:-.02em}
+.tl{grid-area:1/2;background:var(--accent-soft)} .tr{grid-area:1/3;background:var(--paper2)} .bl{grid-area:2/2;background:var(--paper2)} .br{grid-area:2/3;background:var(--amber-soft)}
+
+/* compare */
+.cp{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.cp.n3{grid-template-columns:repeat(3,1fr)}
+.cp-col{padding:1.6cqw 2cqw;min-width:0;display:flex;flex-direction:column;gap:1cqw}
+.cp-col+.cp-col{border-left:1px solid var(--line)}
+.cp-col:first-child{background:var(--paper2)}
+.cp-h{font-size:clamp(16px,2.2cqw,26px);letter-spacing:-.03em;color:var(--accent)}
+.cp-col ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:.6cqw}
+.cp-note{align-self:flex-start;background:var(--amber-soft);color:var(--ink);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* BMC */
+.bmc{display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:1fr 1fr .8fr;gap:.5cqw;flex:1;min-height:0}
+.bm{background:var(--paper2);border-radius:3px;padding:.9cqw 1cqw;display:flex;flex-direction:column;gap:.3cqw;min-width:0;position:relative}
+.bm i{position:absolute;top:.6cqw;right:.8cqw;font-style:normal;font-family:var(--mono);font-size:clamp(9px,.95cqw,12px);color:var(--muted)}
+.bm b{font-size:clamp(12px,1.45cqw,17px);color:var(--accent)}
+.bm p{font-size:clamp(11px,1.25cqw,15px)!important;line-height:1.4!important}
+.b-kp{grid-area:1/1/3/3}.b-ka{grid-area:1/3/2/5}.b-kr{grid-area:2/3/3/5}.b-vp{grid-area:1/5/3/7;background:var(--accent-soft)}
+.b-cr{grid-area:1/7/2/9}.b-ch{grid-area:2/7/3/9}.b-cs{grid-area:1/9/3/11}.b-cost{grid-area:3/1/4/6}.b-rev{grid-area:3/6/4/11}
+
+/* forces */
+.fos{display:grid;grid-template-columns:1fr 1.1fr 1fr;grid-template-areas:". t ." "l c r" ". b x";gap:1cqw;flex:1;min-height:0;align-items:stretch}
+.fo{border:1px solid var(--line);border-radius:4px;padding:1cqw 1.4cqw;display:flex;flex-direction:column;gap:.3cqw;justify-content:center;min-width:0}
+.fo b{font-size:clamp(13px,1.7cqw,20px);color:var(--accent)}
+.fo p{font-size:clamp(12px,1.35cqw,16px)!important}
+.fo-t{grid-area:t}.fo-l{grid-area:l}.fo-r{grid-area:r}.fo-b{grid-area:b}.fo-x{grid-area:x;border-style:dashed}
+.fo-c{grid-area:c;background:var(--title-bg);color:var(--title-fg);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:clamp(15px,2.1cqw,24px);padding:1cqw}
+
+/* scores */
+.scs{display:flex;flex-direction:column;gap:1cqw}
+.sc{display:grid;grid-template-columns:minmax(80px,13cqw) auto 2.5em 1fr;gap:1.4cqw;align-items:center}
+.sc b{font-size:clamp(14px,1.75cqw,20px)}
+.sc-bar{display:flex;gap:3px}
+.sc-bar i{display:block;width:clamp(14px,2.6cqw,30px);height:clamp(12px,1.6cqw,18px);background:var(--paper2);border:1px solid var(--line);border-radius:2px}
+.sc-bar i.on{background:var(--accent);border-color:var(--accent)}
+.sc-n{font-family:var(--mono);font-size:clamp(14px,1.8cqw,21px);color:var(--accent)}
+.sc p{color:var(--muted)}
+
+/* equation */
+.eq{font-family:var(--mono);font-size:clamp(20px,3.6cqw,44px)!important;line-height:1.25!important;letter-spacing:-.02em;color:var(--accent);padding:1.4cqw 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-wrap:balance}
+.eq-ts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.2cqw 2.4cqw}
+.eq-t{display:flex;flex-direction:column;gap:.2cqw;min-width:0}
+.eq-t b{font-size:clamp(13px,1.6cqw,19px)}
+.eq-t p{color:var(--muted)}
+.eq-rule{align-self:flex-start;background:var(--amber-soft);border-left:3px solid var(--amber);padding:.8cqw 1.4cqw;font-weight:700}
+
+/* tree */
+.tree{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;justify-content:center}
+.tr-r{background:var(--title-bg);color:var(--title-fg);font-weight:800;padding:1cqw 3cqw;border-radius:4px;font-size:clamp(16px,2.2cqw,26px);position:relative}
+.tr-r::after{content:"";position:absolute;left:50%;top:100%;height:2.2cqw;border-left:2px solid var(--line)}
+.tr-cs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1.6cqw;margin-top:2.2cqw;padding-top:2.2cqw;border-top:2px solid var(--line);width:100%}
+.tr-c{border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px;padding:1.2cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.tr-c b{font-size:clamp(14px,1.9cqw,22px)}
+
+/* checklist */
+.chk{list-style:none;padding:0;margin:0;display:grid;gap:1cqw 2.6cqw}
+.chk.two{grid-template-columns:1fr 1fr}
+.chk li{display:flex;gap:1.1cqw;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:.8cqw}
+.ck{flex:none;font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px);color:var(--accent);border:1.5px solid var(--accent);border-radius:3px;min-width:1.9em;text-align:center}
+
+/* stat / quote / apply */
+.stat{display:flex;flex-direction:column;gap:.8cqw}
+.st-v{font-family:var(--mono);font-size:clamp(48px,11cqw,132px)!important;line-height:1!important;color:var(--accent);letter-spacing:-.05em}
+.st-l{font-size:clamp(16px,2.4cqw,28px)!important;font-weight:800;letter-spacing:-.03em}
+.st-t{color:var(--muted);max-width:40em}
+.qt{margin:0;display:flex;flex-direction:column;gap:2cqw;padding-left:3cqw;border-left:4px solid var(--accent)}
+.qt blockquote{margin:0;font-size:clamp(20px,3.6cqw,42px);font-weight:700;letter-spacing:-.03em;line-height:1.35;text-wrap:balance}
+.qt figcaption{font-family:var(--mono);font-size:clamp(11px,1.25cqw,14px);color:var(--muted)}
+.ty-apply{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 35%,var(--line))}
+.ap-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.ap{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.6cqw}
+.ap li{font-size:clamp(15px,2.2cqw,26px)!important;font-weight:700;letter-spacing:-.025em;line-height:1.4!important;display:flex;gap:1.2cqw}
+.ap li::before{content:"→";color:var(--amber);font-weight:500}
+
+/* phones and narrow screens: slides become cards with natural height */
+@media (max-width:720px){
+  .slide{aspect-ratio:auto}
+  .sl-in{padding:22px 18px 14px;gap:14px;justify-content:flex-start}
+  .sl-f{padding:0 18px 14px}
+  .pts,.pts.n3,.ccs,.ccs.n4,.css,.css.n3,.cp,.cp.n3,.chk.two{grid-template-columns:1fr}
+  .cp-col+.cp-col{border-left:0;border-top:1px solid var(--line)}
+  .steps{grid-auto-flow:row}
+  .steps li+li{border-left:0}
+  .steps li::after{display:none}
+  .bmc{grid-template-columns:1fr 1fr;grid-template-rows:none}
+  .bmc .bm{grid-area:auto}
+  .b-vp,.b-cost,.b-rev{grid-column:1/3!important}
+  .fos{grid-template-columns:1fr;grid-template-areas:"c" "t" "r" "b" "l" "x"}
+  .tr-cs{grid-auto-flow:row}
+  .sc{grid-template-columns:1fr auto 2em}
+  .sc p{grid-column:1/-1}
+  .mx{grid-template-columns:auto 1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow li:nth-child(2){border-right:0}
+  .flow li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .dk-bar{top:56px}
+}
+@media (prefers-reduced-motion:no-preference){.deck.paged .slot.cur{animation:sl .22s ease}}
+@keyframes sl{from{opacity:.35;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* paper card + paper list */
+.ty-paper{background:var(--paper)}
+.pp-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.06em}
+.pp-q{color:var(--muted)}
+.pp-g{display:grid;grid-template-columns:1fr 1.3fr;gap:2.4cqw}
+.pp-g > div{display:flex;flex-direction:column;gap:.6cqw;min-width:0}
+.pp-g b{font-size:clamp(12px,1.4cqw,16px);color:var(--accent);margin-top:.4cqw}
+.pp-cs{display:flex;flex-wrap:wrap;gap:6px;margin-top:.6cqw}
+.pp-c{font-size:clamp(11px,1.2cqw,14px);border:1px solid var(--line);padding:1px 8px;border-radius:3px}
+.pp-cite{font-size:clamp(11px,1.15cqw,13.5px)!important;color:var(--muted);border-top:1px solid var(--line);padding-top:1cqw;line-height:1.45!important}
+.pp-unv{color:var(--amber);font-weight:700;margin-left:6px}
+details.plist{margin-top:6px;font-size:.88rem}
+details.plist summary{cursor:pointer;color:var(--accent);font-weight:600}
+details.plist ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--muted)}
+details.plist b{color:var(--text)}
+@media (max-width:720px){.pp-g{grid-template-columns:1fr}}
+
+/* explanation panel under each slide */
+.sl-ex{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;max-width:900px}
+.sl-ex b{font-size:.78rem;color:var(--accent);letter-spacing:.04em;padding-top:2px;white-space:nowrap}
+.sl-ex p{margin:0;font-size:.96rem;line-height:1.75}
+/* case slides */
+.ca-k{font-family:var(--mono);font-size:clamp(11px,1.3cqw,15px)!important;color:var(--amber);letter-spacing:.04em}
+.ca-g{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.ca-b{background:var(--paper2);border-radius:4px;padding:1.3cqw 1.6cqw;display:flex;flex-direction:column;gap:.4cqw;min-width:0}
+.ca-b i{font-style:normal;font-weight:700;font-size:clamp(12px,1.35cqw,16px);color:var(--accent)}
+.ca-b p{font-size:clamp(13px,1.5cqw,18px)!important}
+.ca-lesson{background:var(--amber-soft)} .ca-lesson i{color:var(--amber)}
+.ty-takeaway{background:var(--accent-soft)}
+.ty-takeaway .ap-k{color:var(--accent)} .ty-takeaway .ap li::before{color:var(--accent)}
+@media (max-width:720px){.ca-g{grid-template-columns:1fr}.sl-ex{grid-template-columns:1fr}}
+
+/* EDA appendix on hub */
+.eda{padding:40px 0 20px;border-top:1px solid var(--line)}
+.eda h2{margin-bottom:10px}
+.eda h3{font-size:1.02rem;margin:28px 0 10px;letter-spacing:-.01em}
+.eda .note{font-size:.85rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+.ed-bars{display:flex;flex-direction:column;gap:6px}
+.ed-row{display:grid;grid-template-columns:minmax(150px,1.3fr) 2fr 7.5em 1fr 2.5em;gap:10px;align-items:center;font-size:.85rem}
+.ed-h{font-size:.75rem;color:var(--muted)}
+.ed-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ed-l b{color:var(--accent);font-weight:500;margin-right:4px}
+.ed-t{height:14px;background:var(--line);border-radius:2px;overflow:hidden;display:block} .ed-t i{display:block;height:100%;background:var(--accent)}
+.ed-t2 i{background:var(--amber)}
+.ed-v{color:var(--muted);font-size:.78rem}
+table.heat,table.ed-cl{border-collapse:collapse;width:100%;font-size:.82rem;min-width:620px}
+table.heat th,table.heat td,table.ed-cl th,table.ed-cl td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left}
+table.heat thead th{font-size:.74rem;color:var(--muted);font-weight:500;text-align:center}
+table.heat th[scope=row]{white-space:nowrap;font-weight:500}
+table.heat td{text-align:center;font-family:var(--mono);background:rgba(47,93,80,var(--a))}
+table.heat td.hi{color:#fff} table.heat td.tot{background:transparent;color:var(--muted)}
+@media (prefers-color-scheme: dark){table.heat td{background:rgba(140,196,176,var(--a))} table.heat td.hi{color:#111}}
+.ed-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px 24px;font-size:.86rem}
+.ed-tt{display:flex;gap:10px} .ed-tt b{color:var(--accent);font-weight:500;white-space:nowrap}
+.ed-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.ed-q li{border-left:2px solid var(--accent);padding-left:12px;font-size:.95rem} .ed-q .num{color:var(--muted);font-size:.75rem;margin-right:6px}
+@media (max-width:720px){.ed-row{grid-template-columns:1fr 7.5em;row-gap:3px;padding-bottom:6px;border-bottom:1px solid var(--line)}.ed-row .ed-l{grid-column:1/-1}.ed-h{display:none}}
+
+/* paper index on hub */
+.papers{padding:40px 0 10px;border-top:1px solid var(--line)}
+.pidx{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.pidx li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pi-h{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.pi-h b{margin-right:auto}
+.pi-l{font-size:.72rem;text-decoration:none;color:var(--accent);border:1px solid var(--line);border-radius:3px;padding:0 6px}
+.pi-a{font-size:.88rem;margin:0}
+.pi-c{font-size:.74rem;color:var(--muted);margin:0;line-height:1.45}
+</style>
+</head>
+<body class="deckpage">
+<nav><div class="wrap"><a href="../../../index.html" class="logo">김보나</a><ul>
+<li><a href="../../../index.html#direction">연구방향</a></li><li><a href="../../../courses/index.html">대학원 과목</a></li><li><a href="../../../macro-notes/index.html">투자노트</a></li>
+</ul></div></nav>
+
+<main class="wrap wide">
+<p class="crumb"><a href="../../../index.html">홈</a> / <a href="../../index.html">대학원 과목</a> / <a href="../index.html">이노베이션 경영</a> / <a href="index.html">강의별 핵심</a> / IM14</p>
+<header class="dk-h">
+  <p class="dk-wk num">LECTURE 14</p>
+  <h1>국가혁신시스템</h1>
+  <p class="lead">혁신은 기업이 아닌 시스템이 만든다</p>
+  <div class="kws"><span class="kw">NIS(국가혁신시스템)</span><span class="kw">Triple Helix</span><span class="kw">Bayh-Dole Act</span><span class="kw">기술 추격</span><span class="kw">다층적 관점(MLP)</span><span class="kw">외부효과</span></div>
+  <details class="plist"><summary>이 강의의 논문 8편</summary><ol><li><b>Edquist (1997)</b> Edquist, C. (Ed.). (1997). Systems of innovation: Technologies, institutions and organizations. London: Pinter.</li><li><b>Freeman (1988)</b> Freeman, C. (1988). Japan: A new national system of innovation? In G. Dosi, C. Freeman, R. Nelson, G. Silverberg, &amp; L. Soete (Eds.), Technical change and economic theory (pp. 330–348). London: Pinter.</li><li><b>Lundvall (1992)</b> Lundvall, B.-Å. (Ed.). (1992). National systems of innovation: Towards a theory of innovation and interactive learning. London: Pinter.</li><li><b>Nelson (1993)</b> Nelson, R. R. (Ed.). (1993). National innovation systems: A comparative analysis. New York: Oxford University Press.</li><li><b>Stokes (1997)</b> Stokes, D. E. (1997). Pasteur&#x27;s quadrant: Basic science and technological innovation. Washington, DC: Brookings Institution Press.</li><li><b>Lee &amp; Lim (2001)</b> Lee, K., &amp; Lim, C. (2001). Technological regimes, catching-up and leapfrogging: Findings from the Korean industries. Research Policy, 30(3), 459–483.</li><li><b>Gaziulusoy et al. (2013)</b> Gaziulusoy, A. İ., Boyle, C., &amp; McDowall, R. (2013). System innovation for sustainability: A systemic double-flow scenario method for companies. Journal of Cleaner Production, 45, 104–116.</li><li><b>Geels (2002)</b> Geels, F. W. (2002). Technological transitions as evolutionary reconfiguration processes: A multi-level perspective and a case-study. Research Policy, 31(8–9), 1257–1274.</li></ol></details>
+</header>
+<div class="dk-bar">
+  <div class="tabs" role="navigation" aria-label="섹션"><a href="#s1" class="tab" data-lec="14-1"><b>14-1</b><span>시장실패와 외부효과</span></a><a href="#s8" class="tab" data-lec="14-2"><b>14-2</b><span>NIS의 정의와 기원</span></a><a href="#s16" class="tab" data-lec="14-3"><b>14-3</b><span>NIS 이론의 확산과 분석모형</span></a><a href="#s24" class="tab" data-lec="14-4"><b>14-4</b><span>트리플 헬릭스와 산학관 연계</span></a><a href="#s34" class="tab" data-lec="14-5"><b>14-5</b><span>한국 NIS와 기술 추격</span></a><a href="#s43" class="tab" data-lec="14-6"><b>14-6</b><span>사회기술 시스템 전환</span></a></div>
+  <div class="ctl">
+    <button type="button" id="mode" aria-pressed="false">전체 보기</button>
+    <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+    <span id="pos" class="num">1 / 51</span>
+    <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+  </div>
+</div>
+<div class="deck" id="deck">
+<div class="slot" id="s1" data-lec="14-1"><article class="slide ty-title" aria-label="1 / 51"><div class="sl-in"><div class="t-wrap"><p class="t-wk">14주차 · 국가혁신시스템</p><p class="t-no">14-1</p><h2 class="t-title">시장실패와 외부효과</h2><p class="t-thesis">시장실패를 줄이는 정부 개입이 NIS의 근거</p></div></div><footer class="sl-f"><span>14-1 시장실패와 외부효과</span><span class="num">1 / 51</span></footer></article></div><div class="slot" id="s2" data-lec="14-1"><article class="slide ty-points" aria-label="2 / 51"><div class="sl-in"><h3 class="sh">완전경쟁과 시장실패</h3><div class="pts n3"><div class="pt"><b>완전경쟁</b><p>가격기구가 희소 자원을 효율적으로 배분</p></div><div class="pt"><b>시장실패</b><p>가격기구가 효율 배분에 실패하는 상황</p></div><div class="pt"><b>판단 기준</b><p>시장의 작동이 순 사회후생 손실을 낳는가</p></div></div></div><footer class="sl-f"><span>14-1 시장실패와 외부효과</span><span class="num">2 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>완전경쟁시장에서는 시장 가격이 기업과 소비자의 선택을 조정해 자원이 효율적으로 배분된다. 시장실패는 이 가격기구가 제대로 작동하지 않아 사회 전체로 보면 손실이 생기는 경우다. 강의는 이 개념을 출발점으로 &#x27;왜 정부가 혁신에 개입하는가&#x27;라는 NIS의 정당성을 설명한다.</p></div></div><div class="slot" id="s3" data-lec="14-1"><article class="slide ty-concepts" aria-label="3 / 51"><div class="sl-in"><h3 class="sh">시장실패의 원인</h3><div class="ccs n6"><div class="cc"><b>부(-)의 외부효과</b><p>오염 등으로 사회적 비용 &gt; 사적 비용</p></div><div class="cc"><b>정(+)의 외부효과</b><p>교육·보건 등 사회적 편익 &gt; 사적 편익</p></div><div class="cc"><b>정보 불완전</b><p>가치재 과소생산, 비가치재 과잉생산</p></div><div class="cc"><b>공공재</b><p>민간이 이윤을 내며 공급할 수 없음</p></div><div class="cc"><b>독점·요소 비이동성</b><p>과소생산·고가격, 실업과 효율 손실</p></div><div class="cc"><b>형평성</b><p>수용 불가능한 소득 분배와 사회적 배제</p></div></div></div><footer class="sl-f"><span>14-1 시장실패와 외부효과</span><span class="num">3 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>시장실패의 원인은 일곱 가지로 정리된다. 혁신 정책에서 가장 중요한 것은 외부효과와 공공재다. 연구개발 성과는 다른 기업과 사회로 퍼져 나가는 정(+)의 외부효과가 크고, 기초 지식은 공공재 성격이 강해 민간에만 맡기면 사회가 원하는 양보다 적게 생산된다.</p></div></div><div class="slot" id="s4" data-lec="14-1"><article class="slide ty-equation" aria-label="4 / 51"><div class="sl-in"><h3 class="sh">외부효과의 크기</h3><p class="eq">사회적 비용 = 사적 비용 + 외부 비용</p><div class="eq-ts"><div class="eq-t"><b>사적 비용</b><p>생산자가 직접 부담하는 비용</p></div><div class="eq-t"><b>외부 비용</b><p>거래 밖 제3자가 떠안는 비용</p></div><div class="eq-t"><b>사회적 비용</b><p>사회 전체가 실제로 치르는 비용</p></div></div><p class="eq-rule">사회적 비용 &gt; 사적 비용이면 과잉생산</p></div><footer class="sl-f"><span>14-1 시장실패와 외부효과</span><span class="num">4 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>부(-)의 외부효과는 사회적 비용이 사적 비용보다 클 때 생긴다. 예: 제품 1개의 사적 비용이 100, 오염으로 주민이 떠안는 비용이 30이면 사회적 비용은 130이다. 시장 가격은 100 기준으로 정해져 너무 싸고 너무 많이 생산되므로, 30만큼 세금을 매겨 가격을 바로잡는 것이 교정 원리다.</p></div></div><div class="slot" id="s5" data-lec="14-1"><article class="slide ty-compare" aria-label="5 / 51"><div class="sl-in"><h3 class="sh">외부효과와 정책 수단</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">부(-)의 외부효과</b><ul><li>사회적 비용 미반영</li><li>가격 너무 낮고 과잉 생산</li><li>정책: 기업에 세금 부과</li></ul></div><div class="cp-col"><b class="cp-h">정(+)의 외부효과</b><ul><li>사회적 편익 미반영</li><li>가격·생산량 모두 과소</li><li>정책: 기업에 보조금 지원</li></ul></div></div><p class="cp-note">두 경우 모두 시장 가격이 &#x27;틀린 가격&#x27;</p></div><footer class="sl-f"><span>14-1 시장실패와 외부효과</span><span class="num">5 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>부의 외부효과는 세금으로 생산을 줄이고, 정의 외부효과는 보조금으로 생산을 늘린다. 연구개발이 대표적인 정의 외부효과다. 한 기업의 연구 성과가 다른 기업에 퍼지면 그 기업은 편익을 다 회수하지 못해 투자를 줄인다. 정부의 R&amp;D 보조금과 세액공제는 바로 이 &#x27;틀린 가격&#x27;을 교정하는 수단이다.</p></div></div><div class="slot" id="s6" data-lec="14-1"><article class="slide ty-steps" aria-label="6 / 51"><div class="sl-in"><h3 class="sh">외부효과에서 NIS로</h3><ol class="steps n4"><li><span class="sn">1</span><b>시장실패</b><p>가격기구가 자원을 효율적으로 배분 못함</p></li><li><span class="sn">2</span><b>공공정책</b><p>정부의 시장 개입</p></li><li><span class="sn">3</span><b>외부효과 최소화</b><p>시장실패 최소화 = 외부효과 최소화</p></li><li><span class="sn">4</span><b>NIS</b><p>정부가 만드는 정(+)의 외부효과</p></li></ol></div><footer class="sl-f"><span>14-1 시장실패와 외부효과</span><span class="num">6 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>강의의 논리는 &#x27;시장실패 → 공공정책 → 외부효과 최소화 → NIS&#x27;로 이어진다. 공공정책은 시장에 대한 정부 개입이고, 그 목적은 시장실패, 곧 외부효과를 줄이는 것이다. NIS는 정부가 대학·연구소·기업의 연결을 설계해 정의 외부효과를 의도적으로 만들어 내는 장치로 볼 수 있다.</p></div></div><div class="slot" id="s7" data-lec="14-1"><article class="slide ty-takeaway" aria-label="7 / 51"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>시장실패: 가격기구가 자원을 효율적으로 배분하지 못하는 상태</li><li>R&amp;D는 정(+)의 외부효과가 커서 민간에만 맡기면 과소투자된다</li><li>세금(부의 외부효과)과 보조금(정의 외부효과)은 &#x27;틀린 가격&#x27;의 교정</li><li>NIS는 정부가 의도적으로 정(+)의 외부효과를 만드는 시스템</li></ul></div><footer class="sl-f"><span>14-1 시장실패와 외부효과</span><span class="num">7 / 51</span></footer></article></div><div class="slot" id="s8" data-lec="14-2"><article class="slide ty-title" aria-label="8 / 51"><div class="sl-in"><div class="t-wrap"><p class="t-wk">14주차 · 국가혁신시스템</p><p class="t-no">14-2</p><h2 class="t-title">NIS의 정의와 기원</h2><p class="t-thesis">산업·대학·정부가 상호작용하는 하나의 시스템</p></div></div><footer class="sl-f"><span>14-2 NIS의 정의와 기원</span><span class="num">8 / 51</span></footer></article></div><div class="slot" id="s9" data-lec="14-2"><article class="slide ty-concepts" aria-label="9 / 51"><div class="sl-in"><h3 class="sh">NIS 정의</h3><div class="ccs n3"><div class="cc"><b>3부문 (Goto 2000)</b><p>산업·대학·정부가 상호작용하며 각자 역할 수행</p></div><div class="cc"><b>시스템 (Edquist 1997)</b><p>요소들이 서로 조건·제약하며 함께 기능</p></div><div class="cc"><b>복합체</b><p>상호작용하는 독립 주체들의 복잡한 집합</p></div></div></div><footer class="sl-f"><span>14-2 NIS의 정의와 기원</span><span class="num">9 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Goto(2000)에 따르면 NIS는 산업·대학·정부 세 부문이 각자의 역할을 하면서 서로 상호작용하는 체계이며, 그래서 Triple Helix 모델이라고도 불린다. Fleck(1992)과 Edquist(1997)는 시스템을 &#x27;서로 조건 짓고 제약하며 하나의 기능을 수행하는 요소들의 복합체&#x27;로 정의한다. 핵심은 개별 주체가 아니라 그 연결이 성과를 좌우한다는 점이다.</p></div></div><div class="slot" id="s10" data-lec="14-2"><article class="slide ty-paper" aria-label="10 / 51"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Edquist (1997)</h3><p class="pp-q">&#x27;혁신 시스템&#x27;은 무엇이며 어떻게 분석해야 하는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>혁신 시스템은 서로 조건 짓고 제약하는 구성요소들이 하나의 기능을 위해 함께 작동하는 복합체다. 학습·제도·상호의존·비선형성을 중심에 둔다.</p><div class="pp-cs"><span class="pp-c">혁신 시스템 접근</span><span class="pp-c">제도</span><span class="pp-c">상호의존성</span><span class="pp-c">비선형성</span></div></div><div><b>강의와의 연결</b><p>14-2 p.10: NIS 정의에서 &#x27;상호 조건·제약하는 요소들의 복합체&#x27;(Fleck 1992; Edquist 1997: 13) 인용</p><b>보충 설명</b><p>국가·지역·산업별 시스템 접근을 한데 정리한 편저. 혁신·학습을 중심에 두고 역사적·진화적·학제적 관점을 강조하지만 개념이 아직 &#x27;확산적&#x27;이라는 한계도 스스로 지적했다.</p></div></div><p class="pp-cite">Edquist, C. (Ed.). (1997). Systems of innovation: Technologies, institutions and organizations. London: Pinter. </p></div><footer class="sl-f"><span>14-2 NIS의 정의와 기원</span><span class="num">10 / 51</span></footer></article></div><div class="slot" id="s11" data-lec="14-2"><article class="slide ty-tree" aria-label="11 / 51"><div class="sl-in"><h3 class="sh">혁신 시스템의 주요 관점</h3><div class="tree"><div class="tr-r">혁신 시스템</div><div class="tr-cs n4"><div class="tr-c"><b>NIS</b><p>국가 전체의 혁신성·경쟁력·발전</p></div><div class="tr-c"><b>SIS / RIS</b><p>산업(부문)·지역 단위 혁신 시스템</p></div><div class="tr-c"><b>Triple Helix</b><p>산·학·관 3주체 상호작용</p></div><div class="tr-c"><b>TIS</b><p>특정 기술 중심 혁신 시스템</p></div></div></div></div><footer class="sl-f"><span>14-2 NIS의 정의와 기원</span><span class="num">11 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>혁신 시스템은 분석 단위에 따라 국가(NIS), 산업 부문(SIS), 지역(RIS), 특정 기술(TIS)로 나뉘고, 주체 간 관계에 초점을 둔 Triple Helix 관점도 있다. 같은 반도체라도 국가 정책을 볼 땐 NIS, 특정 클러스터를 볼 땐 RIS, 반도체 산업 고유의 지식 구조를 볼 땐 SIS가 적합하다. 질문에 맞게 단위를 고르는 것이 분석의 첫 단계다.</p></div></div><div class="slot" id="s12" data-lec="14-2"><article class="slide ty-points" aria-label="12 / 51"><div class="sl-in"><h3 class="sh">NIS 관점의 특징과 기원</h3><div class="pts n4"><div class="pt"><b>일본 설명</b><p>초기엔 일본 경쟁력 향상을 설명하는 논리</p></div><div class="pt"><b>시스템 변수</b><p>설명 변수가 시스템 차원으로 가장 광범위</p></div><div class="pt"><b>OECD 채택</b><p>국가·산업·지역 정책의 핵심 논리로 채택</p></div><div class="pt"><b>Freeman</b><p>SPRU 설립, 1987 OECD·1988 일본 NIS 논문</p></div></div></div><footer class="sl-f"><span>14-2 NIS의 정의와 기원</span><span class="num">12 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>NIS는 국가 혁신 시스템 전체의 혁신성·경쟁력과 발전 과정을 설명하는 관점이다. 설명 변수를 기업이나 기술이 아니라 시스템 차원에서 가장 넓게 잡는다는 점이 특징이다. 영국 Sussex 대학 SPRU를 세운 Christopher Freeman이 일본 분석에서 개념을 정립했고, 이후 OECD 과학기술혁신국이 국가·산업·지역 정책의 핵심 논리로 채택했다.</p></div></div><div class="slot" id="s13" data-lec="14-2"><article class="slide ty-case" aria-label="13 / 51"><div class="sl-in"><p class="ca-k">사례 · NIS 개념의 탄생</p><h3 class="sh">일본의 부상과 NIS</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>2차 대전 후 기술 후발국이던 일본이 1970-80년대 여러 산업에서 서구 선진국을 위협할 만큼 빠르게 따라잡았다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>Freeman은 개별 기업이 아닌 정부(MITI) 정책, 기업 R&amp;D, 교육훈련, 산업구조가 맞물린 제도 전체를 분석했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>Freeman(1987·1988)이 이를 &#x27;국가 혁신 시스템&#x27;으로 개념화했고 NIS가 추격 성공을 설명하는 논리가 됐다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>기술 경쟁력은 우수한 기업 하나보다 주체들을 연결하는 제도에서 나온다.</p></div></div></div><footer class="sl-f"><span>14-2 NIS의 정의와 기원</span><span class="num">13 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>NIS 개념은 &#x27;왜 일본은 빨리 따라잡았나&#x27;라는 질문에서 시작됐다. Freeman(1988)에 따르면 일본은 수입 기술을 역설계·개량으로 빠르게 소화하는 제도적 역량이 있었다. 같은 기술을 들여와도 학습 체계가 다르면 성과가 달라진다는 점이 이후 한국 등 추격국 연구의 출발점이 됐다.</p></div></div><div class="slot" id="s14" data-lec="14-2"><article class="slide ty-paper" aria-label="14 / 51"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Freeman (1988)</h3><p class="pp-q">일본은 어떻게 기술·경제적으로 빠르게 따라잡았는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>일본의 부상은 개별 기업이 아니라 정부(MITI)·기업 R&amp;D·교육훈련·산업구조가 엮인 국가 차원의 혁신 시스템 덕분이다.</p><div class="pp-cs"><span class="pp-c">NIS</span><span class="pp-c">MITI</span><span class="pp-c">제도적 네트워크</span></div></div><div><b>강의와의 연결</b><p>14-2 p.12-13: NIS가 초기 일본 경쟁력 향상을 설명하는 논리로 개발됨, Freeman(1987·1988) 계보</p><b>보충 설명</b><p>Freeman(1987) &#x27;Technology Policy and Economic Performance: Lessons from Japan&#x27;과 짝을 이룸. 기술 수입을 역설계·학습으로 소화한 제도 역량을 강조해 이후 한국 등 추격국 분석의 틀이 됐다.</p></div></div><p class="pp-cite">Freeman, C. (1988). Japan: A new national system of innovation? In G. Dosi, C. Freeman, R. Nelson, G. Silverberg, &amp; L. Soete (Eds.), Technical change and economic theory (pp. 330–348). London: Pinter. </p></div><footer class="sl-f"><span>14-2 NIS의 정의와 기원</span><span class="num">14 / 51</span></footer></article></div><div class="slot" id="s15" data-lec="14-2"><article class="slide ty-takeaway" aria-label="15 / 51"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>NIS = 산업·대학·정부가 각자 역할을 하며 상호작용하는 체계</li><li>성과는 개별 주체가 아니라 주체 간 연결과 제도에서 나온다</li><li>분석 단위에 따라 NIS·SIS·RIS·TIS·Triple Helix를 골라 쓴다</li><li>NIS는 일본의 추격을 설명하며 탄생해 OECD 정책 논리가 됐다</li></ul></div><footer class="sl-f"><span>14-2 NIS의 정의와 기원</span><span class="num">15 / 51</span></footer></article></div><div class="slot" id="s16" data-lec="14-3"><article class="slide ty-title" aria-label="16 / 51"><div class="sl-in"><div class="t-wrap"><p class="t-wk">14주차 · 국가혁신시스템</p><p class="t-no">14-3</p><h2 class="t-title">NIS 이론의 확산과 분석모형</h2><p class="t-thesis">유럽에서 시작한 NIS가 국가 비교·정책 틀로 확산</p></div></div><footer class="sl-f"><span>14-3 NIS 이론의 확산과 분석모형</span><span class="num">16 / 51</span></footer></article></div><div class="slot" id="s17" data-lec="14-3"><article class="slide ty-steps" aria-label="17 / 51"><div class="sl-in"><h3 class="sh">NIS 학문 계보</h3><ol class="steps n5"><li><span class="sn">1</span><b>Freeman 1987·88</b><p>Lundvall과 개념 공동 개발, 일본 분석</p></li><li><span class="sn">2</span><b>Lundvall 1992</b><p>혁신과 상호작용 학습 이론화</p></li><li><span class="sn">3</span><b>Nelson 1993</b><p>국가 혁신 시스템 비교분석</p></li><li><span class="sn">4</span><b>STEPI 1998</b><p>「한국의 국가혁신체제」 28인 공저</p></li><li><span class="sn">5</span><b>Goto 2000</b><p>일본 NIS 현황과 문제 (도입 늦음)</p></li></ol></div><footer class="sl-f"><span>14-3 NIS 이론의 확산과 분석모형</span><span class="num">17 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>NIS 이론은 Freeman과 Lundvall이 함께 개념을 만들고, Lundvall(1992)이 상호작용 학습 이론으로, Nelson(1993)이 국가 간 비교분석으로 정교화했다. 한국은 1998년 과학기술정책연구원(STEPI)이 28인 공저로 빠르게 도입했지만, 정작 일본은 도입이 늦어 히토츠바시 대학 중심으로 일부 수용됐다(Goto 2000).</p></div></div><div class="slot" id="s18" data-lec="14-3"><article class="slide ty-paper" aria-label="18 / 51"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Lundvall (1992)</h3><p class="pp-q">국가 혁신 시스템을 움직이는 핵심 메커니즘은 무엇인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>혁신은 사용자-생산자 간 상호작용적 학습에서 나오며, 이 학습은 국가별 제도·문화에 뿌리내려 있어 NIS마다 성과가 다르다.</p><div class="pp-cs"><span class="pp-c">상호작용 학습</span><span class="pp-c">사용자-생산자</span><span class="pp-c">제도</span></div></div><div><b>강의와의 연결</b><p>14-3 p.13: Freeman과 개념을 공동 개발, 1992년 저서로 NIS 이론화</p><b>보충 설명</b><p>좁은 정의(R&amp;D 기관)보다 생산구조·제도 전체를 포함하는 넓은 정의를 택했다. 소국(덴마크) 관점에서 지식의 암묵성과 학습 역량을 강조했다.</p></div></div><p class="pp-cite">Lundvall, B.-Å. (Ed.). (1992). National systems of innovation: Towards a theory of innovation and interactive learning. London: Pinter. </p></div><footer class="sl-f"><span>14-3 NIS 이론의 확산과 분석모형</span><span class="num">18 / 51</span></footer></article></div><div class="slot" id="s19" data-lec="14-3"><article class="slide ty-paper" aria-label="19 / 51"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Nelson (1993)</h3><p class="pp-q">국가별 혁신 시스템은 어떻게 다르고 왜 다른가?</p><div class="pp-g"><div><b>핵심 주장</b><p>15개국 사례 비교 결과, 국가 혁신 시스템은 기업·대학·정부 정책의 구성이 크게 다르며 이는 국가 규모, 자원, 안보 등 역사적 조건에 따라 형성된다.</p><div class="pp-cs"><span class="pp-c">국가 간 비교</span><span class="pp-c">제도 구성</span><span class="pp-c">역사적 경로</span></div></div><div><b>강의와의 연결</b><p>14-3 p.14: Nelson이 NIS를 비교분석으로 정교화, 한국은 1998년 STEPI 연구로 빨리 도입</p><b>보충 설명</b><p>한국 장(김인수 집필)도 포함된 비교연구. 유럽식 학습 중심 NIS 논의를 미국식 제도·조직 실증 분석으로 확장해 OECD 정책 논리로 퍼지는 계기가 됐다.</p></div></div><p class="pp-cite">Nelson, R. R. (Ed.). (1993). National innovation systems: A comparative analysis. New York: Oxford University Press. </p></div><footer class="sl-f"><span>14-3 NIS 이론의 확산과 분석모형</span><span class="num">19 / 51</span></footer></article></div><div class="slot" id="s20" data-lec="14-3"><article class="slide ty-tree" aria-label="20 / 51"><div class="sl-in"><h3 class="sh">국가혁신체제 분석 기본모형</h3><div class="tree"><div class="tr-r">기술혁신</div><div class="tr-cs n4"><div class="tr-c"><b>구성 주체</b><p>기업·대학·출연(연)·정부</p></div><div class="tr-c"><b>연계 구조</b><p>연계조직, 기술금융, 정보교류</p></div><div class="tr-c"><b>하부구조</b><p>교육·연구환경, 기초·응용연구</p></div><div class="tr-c"><b>환경 요소</b><p>국내외 경제, 사회문화, 기술보호제도</p></div></div></div></div><footer class="sl-f"><span>14-3 NIS 이론의 확산과 분석모형</span><span class="num">20 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>STEPI(1998)의 기본모형은 NIS를 구성 주체, 주체를 잇는 연계 구조, 과학기술 하부구조, 이를 둘러싼 환경 요소로 나눈다. 실제 분석에서는 &#x27;어느 주체가 약한가&#x27;뿐 아니라 &#x27;어느 연결이 끊겨 있는가&#x27;를 본다. 예컨대 대학 연구는 강한데 기술금융이 약하면 성과가 사업화로 이어지지 않는다.</p></div></div><div class="slot" id="s21" data-lec="14-3"><article class="slide ty-tree" aria-label="21 / 51"><div class="sl-in"><h3 class="sh">노르웨이 NIS 모형 (시스템 중심)</h3><div class="tree"><div class="tr-r">국가혁신시스템</div><div class="tr-cs n4"><div class="tr-c"><b>산업시스템</b><p>대기업, 중소·중견, 기술기반 벤처</p></div><div class="tr-c"><b>교육/연구</b><p>대학, 공공연구기관, 전문교육</p></div><div class="tr-c"><b>정치시스템</b><p>정부, 거버넌스, R&amp;D 정책</p></div><div class="tr-c"><b>중간조직·인프라</b><p>기술이전·브로커, 금융·IPR·표준</p></div></div></div></div><footer class="sl-f"><span>14-3 NIS 이론의 확산과 분석모형</span><span class="num">21 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Kuhlmann &amp; Arnold(2001)의 노르웨이 모형은 NIS를 산업·교육연구·정치라는 하부 시스템으로 나누고, 그 사이를 기술이전·브로커·컨설팅 같은 중간조직이 잇는 구조로 그린다. 하부 시스템마다 논리가 다르기 때문에 이를 번역해 주는 중간조직이 시스템 성과의 병목이 되기 쉽다.</p></div></div><div class="slot" id="s22" data-lec="14-3"><article class="slide ty-compare" aria-label="22 / 51"><div class="sl-in"><h3 class="sh">시스템을 둘러싼 조건</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">수요</b><ul><li>소비자 수요 (최종)</li><li>생산자 수요 (중간)</li></ul></div><div class="cp-col"><b class="cp-h">프레임워크 조건</b><ul><li>재원, 세금·인센티브</li><li>기업가정신, 인력이동</li></ul></div><div class="cp-col"><b class="cp-h">인프라</b><ul><li>은행·벤처자금</li><li>IPR·정보, 표준·규제</li></ul></div></div></div><footer class="sl-f"><span>14-3 NIS 이론의 확산과 분석모형</span><span class="num">22 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>같은 모형은 혁신 시스템 바깥의 수요, 프레임워크 조건, 인프라를 함께 본다. 기술이 좋아도 최종·중간 수요가 없거나, 세제·인력 이동 같은 조건이 막혀 있거나, 자금·표준 인프라가 없으면 혁신은 확산되지 않는다. 한 나라의 혁신 성과를 진단할 때 공급 측만 보지 말고 이 세 조건을 함께 점검해야 한다.</p></div></div><div class="slot" id="s23" data-lec="14-3"><article class="slide ty-takeaway" aria-label="23 / 51"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>계보: Freeman·Lundvall → Nelson 비교분석 → 한국 STEPI(1998)</li><li>NIS 분석은 주체·연계·하부구조·환경 요소의 네 층으로 본다</li><li>약한 주체보다 &#x27;끊긴 연결&#x27;을 찾는 것이 진단의 핵심</li><li>수요·프레임워크 조건·인프라가 혁신 확산을 좌우한다</li></ul></div><footer class="sl-f"><span>14-3 NIS 이론의 확산과 분석모형</span><span class="num">23 / 51</span></footer></article></div><div class="slot" id="s24" data-lec="14-4"><article class="slide ty-title" aria-label="24 / 51"><div class="sl-in"><div class="t-wrap"><p class="t-wk">14주차 · 국가혁신시스템</p><p class="t-no">14-4</p><h2 class="t-title">트리플 헬릭스와 산학관 연계</h2><p class="t-thesis">대학·정부·기업 세 축의 연계가 지식을 상품으로</p></div></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">24 / 51</span></footer></article></div><div class="slot" id="s25" data-lec="14-4"><article class="slide ty-tree" aria-label="25 / 51"><div class="sl-in"><h3 class="sh">세 주체의 역할</h3><div class="tree"><div class="tr-r">Triple Helix</div><div class="tr-cs n3"><div class="tr-c"><b>대학</b><p>기초 과학기술 연구, 인재 교육</p></div><div class="tr-c"><b>정부</b><p>IPR 설계, 연구 위탁·재정, R&amp;D 보조</p></div><div class="tr-c"><b>기업</b><p>상용 R&amp;D, 혁신제품 출시, 창업</p></div></div></div></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">25 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Triple Helix에서 대학은 기초연구와 과학기술 인력 양성, 정부는 지식재산권 제도 설계와 연구 재정·위탁, 기업은 상용화 R&amp;D와 제품 출시·창업을 맡는다. 이 역할 분담을 알면 기술 하나가 실험실에서 시장까지 갈 때 각 단계에서 누구와 손잡아야 하는지 그릴 수 있다.</p></div></div><div class="slot" id="s26" data-lec="14-4"><article class="slide ty-compare" aria-label="26 / 51"><div class="sl-in"><h3 class="sh">세 개의 연계 축</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">정부-대학</b><ul><li>지식은 공공재(비경합)</li><li>시장만으로 최적량 생산 불가</li><li>정부 연구비·국가 연구소</li></ul></div><div class="cp-col"><b class="cp-h">대학-기업</b><ul><li>대학 IPR·라이선싱</li><li>공동연구, 스핀아웃·창업</li><li>인력 교류·채용</li></ul></div><div class="cp-col"><b class="cp-h">정부-기업</b><ul><li>IPR 집행·입법</li><li>R&amp;D 세제·벤처캐피탈 규정</li><li>경쟁정책</li></ul></div></div></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">26 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>정부-대학 축의 근거는 지식이 비경합적 공공재라 시장만으로는 최적량이 생산되지 않는다는 점이다. 대학-기업 축은 특허·공동연구·스핀아웃·인력 교류로, 정부-기업 축은 IPR 집행, R&amp;D 세제, 경쟁정책으로 작동한다. 경쟁정책은 지배적 기업이 동시에 혁신 선도자일 때 특히 판단이 어렵다.</p></div></div><div class="slot" id="s27" data-lec="14-4"><article class="slide ty-compare" aria-label="27 / 51"><div class="sl-in"><h3 class="sh">기초과학 공급 방식의 변화</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">과거</b><ul><li>기초과학 = 공공재로 공급</li><li>발견은 사적 소유 없이 공개</li><li>동료 평가·명성이 동기</li><li>모든 기업이 과학 기반 이용</li></ul></div><div class="cp-col"><b class="cp-h">최근</b><ul><li>정부 연구비에 응용 조건</li><li>산업·상업 제품과의 연결 요구</li></ul></div></div><p class="cp-note">지식경제에서 대학 연구의 역할이 바뀜</p></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">27 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>전통적으로 기초과학은 공공재로 공급되어 연구 결과가 누구나 쓸 수 있게 공개되었고, 과학자의 동기는 동료 평가와 학계의 인정이었다. 최근에는 정부 연구비가 산업·상업 제품에 빨리 응용될 것을 조건으로 붙는 경우가 늘었다. 대학이 특허와 사업화에 적극 나서게 된 배경이다.</p></div></div><div class="slot" id="s28" data-lec="14-4"><article class="slide ty-compare" aria-label="28 / 51"><div class="sl-in"><h3 class="sh">Bayh-Dole Act (1980)</h3><div class="cp n2"><div class="cp-col"><b class="cp-h">이전</b><ul><li>연방지원 연구 특허는 정부 소유</li><li>비독점 라이선스만 허용</li><li>Research Corp. 중앙관리</li></ul></div><div class="cp-col"><b class="cp-h">이후</b><ul><li>대학이 발명 권리 보유</li><li>핵심 기업에 독점 라이선스</li><li>TLO 중심 대학 분산관리</li></ul></div></div><p class="cp-note">정부엔 무상 비독점 라이선스, 발명자와 수익 공유</p></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">28 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Bayh-Dole Act 이전에는 연방 연구비로 나온 특허를 정부가 갖고 비독점 라이선스만 줬기 때문에, 기업은 막대한 상용화 비용을 들여도 경쟁자를 막을 수 없어 투자를 꺼렸다. 이후 대학이 권리를 갖고 독점 라이선스를 줄 수 있게 되면서 기업의 상용화 유인이 생겼고, 대학별 TLO가 관리 주체가 됐다.</p></div></div><div class="slot" id="s29" data-lec="14-4"><article class="slide ty-case" aria-label="29 / 51"><div class="sl-in"><p class="ca-k">사례 · 소유권이 이전을 움직임</p><h3 class="sh">미국 Bayh-Dole Act</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>연방 연구비 성과의 특허는 정부 소유, 비독점 라이선스만 가능해 대학 발명이 상용화되지 못하고 묵혔다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>1980년 법 개정: 대학이 권리 보유, 정부엔 무상 라이선스, 중소기업 우선, 발명자 수익 공유, 미국 내 제조 의무.</p></div><div class="ca-b ca-result"><i>결과</i><p>대학 특허·라이선싱과 TLO를 통한 기술이전, 스핀아웃이 활성화됐고 여러 EU 국가가 유사 제도를 도입했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>기술 자체보다 권리·인센티브 설계가 사업화 속도를 바꾼다.</p></div></div></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">29 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>이 사례는 &#x27;소유권을 누구에게 주느냐&#x27;가 기술이전의 핵심 변수임을 보여준다. 독점권이 있어야 기업이 상용화 투자를 하고, 수익 공유가 있어야 발명자가 참여한다. 대학 기술을 라이선싱받으려는 기업은 독점 범위, 정부 권리, 국내 제조 조건 같은 조항을 미리 확인해야 한다.</p></div></div><div class="slot" id="s30" data-lec="14-4"><article class="slide ty-tree" aria-label="30 / 51"><div class="sl-in"><h3 class="sh">대학-기업 연계 경로</h3><div class="tree"><div class="tr-r">산학 연계</div><div class="tr-cs n3"><div class="tr-c"><b>연구 협력</b><p>공동·위탁 연구, 교수 자문</p></div><div class="tr-c"><b>스핀아웃·창업</b><p>합작사, 대학 인큐베이터, 사이언스파크</p></div><div class="tr-c"><b>인적 연계</b><p>네트워크, 재교육, 인력 교류·채용</p></div></div></div></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">30 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>대학 연구 성과는 졸업생, 논문·세미나, 교수 자문, 산업체 후원 연구, IP 라이선싱, 산업 제휴 프로그램 등 여러 경로로 기업과 시장에 전달된다. 특허 라이선싱만이 기술이전이 아니다. 실제로는 졸업생 채용과 교수 자문처럼 사람을 통한 암묵지 이전이 더 큰 비중을 차지하는 경우가 많다.</p></div></div><div class="slot" id="s31" data-lec="14-4"><article class="slide ty-matrix" aria-label="31 / 51"><div class="sl-in"><h3 class="sh">Pasteur&#x27;s Quadrant</h3><div class="mx"><span class="mx-y1">근본 이해 추구</span><span class="mx-y2">근본 이해 비추구</span><div class="mx-c tl"><b>Bohr</b><p>순수 기초연구</p></div><div class="mx-c tr"><b>Pasteur</b><p>이용을 위한 기초연구</p></div><div class="mx-c bl"><b>(명칭 없음)</b><p>이해·활용 모두 직접 목표 아님</p></div><div class="mx-c br"><b>Edison</b><p>순수 응용연구</p></div><span class="mx-x1">활용 고려 없음</span><span class="mx-x2">활용 고려 있음</span></div></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">31 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Stokes(1997)에 따르면 &#x27;근본 이해 추구&#x27;와 &#x27;활용 고려&#x27;는 한 축의 양 끝이 아니라 독립된 두 축이다. 원자 구조를 탐구한 Bohr는 순수 기초, 전구를 상용화한 Edison은 순수 응용, 미생물을 이해하면서 질병 예방에 쓰려 한 Pasteur는 두 목표를 함께 추구했다. 산학 협력이 가장 생산적인 영역이 바로 파스퇴르 사분면이다.</p></div></div><div class="slot" id="s32" data-lec="14-4"><article class="slide ty-paper" aria-label="32 / 51"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Stokes (1997)</h3><p class="pp-q">기초연구와 응용연구는 정말 한 축의 양 끝인가?</p><div class="pp-g"><div><b>핵심 주장</b><p>근본 이해 추구와 활용 고려는 독립된 두 축이다. 둘 다 추구하는 &#x27;이용을 위한 기초연구&#x27;(파스퇴르 사분면)가 존재한다.</p><div class="pp-cs"><span class="pp-c">Pasteur&#x27;s Quadrant</span><span class="pp-c">Bohr·Edison</span><span class="pp-c">이용 지향 기초연구</span></div></div><div><b>강의와의 연결</b><p>14-4 p.21: 산학 기술이전의 새로운 질문으로 소개, &#x27;이용을 위한 기초연구&#x27;</p><b>보충 설명</b><p>Bush(1945) 선형모델의 기초→응용 1차원 구분을 비판하고, 공공 연구비 배분을 &#x27;이용 지향 기초연구&#x27;에 정당화하는 정책 논리를 제공했다.</p></div></div><p class="pp-cite">Stokes, D. E. (1997). Pasteur&#x27;s quadrant: Basic science and technological innovation. Washington, DC: Brookings Institution Press. </p></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">32 / 51</span></footer></article></div><div class="slot" id="s33" data-lec="14-4"><article class="slide ty-takeaway" aria-label="33 / 51"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>대학=기초연구·인재, 정부=IPR·재정, 기업=상용화·창업</li><li>지식은 공공재라 정부-대학 축의 공적 투자가 필요하다</li><li>Bayh-Dole: 대학에 특허 권리를 주자 상용화 유인이 생겼다</li><li>가장 생산적인 산학 협력 영역은 &#x27;이용을 위한 기초연구&#x27;</li></ul></div><footer class="sl-f"><span>14-4 트리플 헬릭스와 산학관 연계</span><span class="num">33 / 51</span></footer></article></div><div class="slot" id="s34" data-lec="14-5"><article class="slide ty-title" aria-label="34 / 51"><div class="sl-in"><div class="t-wrap"><p class="t-wk">14주차 · 국가혁신시스템</p><p class="t-no">14-5</p><h2 class="t-title">한국 NIS와 기술 추격</h2><p class="t-thesis">한국은 산업마다 다른 추격 경로로 따라잡았다</p></div></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">34 / 51</span></footer></article></div><div class="slot" id="s35" data-lec="14-5"><article class="slide ty-steps" aria-label="35 / 51"><div class="sl-in"><h3 class="sh">한국 NIS 발전 단계</h3><ol class="steps n3"><li><span class="sn">1</span><b>태동 1962-79</b><p>출연연 설립, 해외 기술 도입·학습</p></li><li><span class="sn">2</span><b>확장 1980-99</b><p>기업 연구소 확대, 국가 R&amp;D 확장</p></li><li><span class="sn">3</span><b>성숙 2000~</b><p>산학연 협력·기초연구 강화</p></li></ol></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">35 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 한국 NIS를 태동기(1962-79), 확장기(1980-99), 성숙기(2000년 이후)로 나눈다. 태동기에는 KIST 같은 정부 출연연구소가 해외 기술을 들여와 학습하는 중심이었고, 확장기에는 대기업 연구소가 R&amp;D의 주역으로 커졌다. 성숙기에는 따라잡기를 넘어 산학연 협력과 기초연구가 과제가 됐다.</p></div></div><div class="slot" id="s36" data-lec="14-5"><article class="slide ty-compare" aria-label="36 / 51"><div class="sl-in"><h3 class="sh">기술 추격의 3가지 유형</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">경로추적</b><ul><li>선발자 경로를 그대로 따라감</li><li>가전, PC, 공작기계</li></ul></div><div class="cp-col"><b class="cp-h">경로생략</b><ul><li>따라가다 중간 단계를 건너뜀</li><li>D-RAM, 자동차</li></ul></div><div class="cp-col"><b class="cp-h">경로창출</b><ul><li>아예 새로운 경로를 생성</li><li>CDMA 휴대폰</li></ul></div></div><p class="cp-note">진입은 내생 지식보다 외국 기업과의 협력이 주도</p></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">36 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Lee &amp; Lim(2001)은 한국 6개 산업을 분석해 추격을 세 유형으로 나눴다. 경로추적은 선발자가 걸은 길을 그대로 밟고, 경로생략은 따라가다 중간 세대를 건너뛰어 더 빠르고 효율적으로 따라잡으며, 경로창출은 선발자와 경쟁하는 새 기술 경로를 연다. 어떤 제품이 어느 유형인지는 이 회사가 이전 세대를 거쳤는지로 판별할 수 있다.</p></div></div><div class="slot" id="s37" data-lec="14-5"><article class="slide ty-paper" aria-label="37 / 51"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Lee &amp; Lim (2001)</h3><p class="pp-q">한국 산업들은 왜 서로 다른 방식으로 기술을 따라잡았나?</p><div class="pp-g"><div><b>핵심 주장</b><p>기술 체제(누적성, 궤도 예측가능성 등)에 따라 추격 방식이 경로추적·경로생략·경로창출로 갈리며, 예측 가능한 궤도에서는 단계 건너뛰기가 가능하다.</p><div class="pp-cs"><span class="pp-c">기술 체제</span><span class="pp-c">경로생략</span><span class="pp-c">경로창출</span><span class="pp-c">Leapfrogging</span></div></div><div><b>강의와의 연결</b><p>14-5 p.36-40: D-RAM·자동차·CDMA 등 6개 산업의 3가지 추격 유형과 기술 체제 비교</p><b>보충 설명</b><p>Perez &amp; Soete의 기회의 창 논의와 달리, 진입은 내생 지식보다 외국 기업 협력이 주도했고 공공-민간 공동 R&amp;D가 중요했다는 점을 실증적으로 보여준다.</p></div></div><p class="pp-cite">Lee, K., &amp; Lim, C. (2001). Technological regimes, catching-up and leapfrogging: Findings from the Korean industries. Research Policy, 30(3), 459–483. </p></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">37 / 51</span></footer></article></div><div class="slot" id="s38" data-lec="14-5"><article class="slide ty-compare" aria-label="38 / 51"><div class="sl-in"><h3 class="sh">기술 체제가 추격 유형을 가른다</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">경로생략</b><ul><li>궤도 예측 가능</li><li>사내 R&amp;D+외부 지식</li><li>자동차, D-RAM</li></ul></div><div class="cp-col"><b class="cp-h">경로창출</b><ul><li>궤도 유동적·예측 어려움</li><li>민관 공동 R&amp;D</li><li>CDMA 휴대폰</li></ul></div><div class="cp-col"><b class="cp-h">경로추적</b><ul><li>OEM·조립, 실행 학습</li><li>모방 중심</li><li>PC, 가전, 공작기계</li></ul></div></div></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">38 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Lee &amp; Lim(2001)에 따르면 핵심은 기술 체제다. 기술 궤도가 예측 가능하면 다음 세대가 어디로 갈지 알기 때문에 중간을 건너뛸 수 있다. 궤도가 유동적이면 혼자 건너뛰기 위험하므로 민관 협력으로 새 경로를 만든다. 제품 수명이 짧고 혁신이 잦은 PC·가전은 OEM과 모방으로 경로를 따라가는 데 머물렀다.</p></div></div><div class="slot" id="s39" data-lec="14-5"><article class="slide ty-stat" aria-label="39 / 51"><div class="sl-in"><h3 class="sh">경로생략의 성과</h3><div class="stat"><p class="st-v">0→29%</p><p class="st-l">한국 D-RAM 시장점유율 (1983→1995)</p><p class="st-t">경로추적 산업(오디오 3→11→8%)은 점유율이 올랐다 하락</p></div></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">39 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>경로생략 산업인 D-RAM은 1983년 0%에서 1995년 29%로 점유율이 꾸준히 올랐다. 반면 경로추적 산업인 오디오 부품은 1985년 3%에서 1988년 11%로 올랐다가 1995년 8%로, 컴퓨터는 2%→6%→3%로 다시 떨어졌다. 따라가기만 하면 선발자가 앞서 나갈 때 격차를 좁히기 어렵다는 뜻이다.</p></div></div><div class="slot" id="s40" data-lec="14-5"><article class="slide ty-case" aria-label="40 / 51"><div class="sl-in"><p class="ca-k">사례 · 경로생략(Leapfrog)</p><h3 class="sh">한국 D-RAM</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>1983년 한국의 D-RAM 시장점유율은 0%. 미국·일본 기업이 시장과 기술을 주도하고 있었다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>초기 세대를 건너뛰고 64K D-RAM부터 진입. 외부 기술 도입과 사내 R&amp;D를 결합해 세대별로 빠르게 추격했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>1995년 세계 시장점유율 29%. 이후 한국이 메모리 반도체 강국이 되는 기반이 됐다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>기술 궤도가 예측 가능하면 세대를 건너뛰어 따라잡을 수 있다.</p></div></div></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">40 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>D-RAM은 집적도가 세대마다 예측 가능한 방향으로 올라가는 산업이다. 다음 목표가 분명하므로 후발자가 이전 세대를 다 거치지 않고 64K부터 진입할 수 있었다. 다만 Lee &amp; Lim(2001)이 지적하듯 진입 자체는 외국 기업과의 기술 협력이 주도했고, 이후 사내 R&amp;D 역량이 격차를 메웠다.</p></div></div><div class="slot" id="s41" data-lec="14-5"><article class="slide ty-case" aria-label="41 / 51"><div class="sl-in"><p class="ca-k">사례 · 경로창출</p><h3 class="sh">한국 CDMA 이동통신</h3><div class="ca-g"><div class="ca-b ca-situation"><i>상황</i><p>이동통신은 아날로그 방식에서 디지털로 넘어가는 시기였고, 어떤 디지털 표준이 이길지 불확실했다.</p></div><div class="ca-b ca-action"><i>한 일</i><p>정부 연구소(ETRI)·국내 기업·해외 기술기업(Qualcomm)이 공동개발로 당시 검증되지 않은 CDMA를 택했다.</p></div><div class="ca-b ca-result"><i>결과</i><p>1996년 세계 최초로 CDMA를 상용화. 아날로그 기술을 따라가지 않고 새 경로로 진입했다.</p></div><div class="ca-b ca-lesson"><i>교훈</i><p>궤도가 불확실하면 민관 협력으로 새 경로를 만들 수 있다.</p></div></div></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">41 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>CDMA는 선발자 경로를 건너뛰는 데서 나아가 선발자와 경쟁하는 새 기술 경로를 만든 경로창출 사례다. 기술 궤도가 유동적이라 한 기업이 감당하기엔 위험이 컸기 때문에 공공-민간 공동 R&amp;D가 결정적이었다. 불확실성이 큰 기술일수록 위험을 나눌 협력 구조가 진입 전략의 일부가 된다.</p></div></div><div class="slot" id="s42" data-lec="14-5"><article class="slide ty-takeaway" aria-label="42 / 51"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>한국 NIS: 태동(1962-79) → 확장(1980-99) → 성숙(2000~)</li><li>추격 3유형: 경로추적·경로생략·경로창출 (Lee &amp; Lim 2001)</li><li>궤도가 예측 가능하면 건너뛰고, 불확실하면 민관 협력으로 창출</li><li>따라가기만 한 산업은 점유율이 올랐다가 다시 떨어졌다</li></ul></div><footer class="sl-f"><span>14-5 한국 NIS와 기술 추격</span><span class="num">42 / 51</span></footer></article></div><div class="slot" id="s43" data-lec="14-6"><article class="slide ty-title" aria-label="43 / 51"><div class="sl-in"><div class="t-wrap"><p class="t-wk">14주차 · 국가혁신시스템</p><p class="t-no">14-6</p><h2 class="t-title">사회기술 시스템 전환</h2><p class="t-thesis">지속가능성은 기술+제도+문화의 동시 전환이다</p></div></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">43 / 51</span></footer></article></div><div class="slot" id="s44" data-lec="14-6"><article class="slide ty-compare" aria-label="44 / 51"><div class="sl-in"><h3 class="sh">선형 모델의 한계</h3><div class="cp n3"><div class="cp-col"><b class="cp-h">Technology Push</b><ul><li>기초과학→응용·공학</li><li>→제조→마케팅</li></ul></div><div class="cp-col"><b class="cp-h">Demand Pull</b><ul><li>시장 니즈→개발</li><li>→제조→판매</li></ul></div><div class="cp-col"><b class="cp-h">시스템 전환</b><ul><li>제도·사회문화·조직·기술 변화</li><li>복잡한 문제엔 비선형 접근</li></ul></div></div></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">44 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>기술 푸시와 수요 풀은 방향만 다를 뿐 모두 한 방향으로 흐르는 선형 모델이다. 지속가능성처럼 복잡한 문제는 기술만 바뀌어서는 해결되지 않고 제도·사회문화·조직이 함께 변해야 한다. 그래서 강의는 개별 제품 혁신이 아닌 사회기술 시스템 전체의 전환을 분석 단위로 삼는다.</p></div></div><div class="slot" id="s45" data-lec="14-6"><article class="slide ty-steps" aria-label="45 / 51"><div class="sl-in"><h3 class="sh">시나리오와 백캐스팅</h3><ol class="steps n5"><li><span class="sn">1</span><b>목표 설정</b><p>바람직한(Desirable) 미래 상태 정의</p></li><li><span class="sn">2</span><b>Likely 궤적</b><p>현재 추세가 이어질 때의 미래</p></li><li><span class="sn">3</span><b>Backcasting</b><p>목표에서 현재로 거꾸로 경로 설계</p></li><li><span class="sn">4</span><b>Double-flow</b><p>두 흐름을 비교해 혁신 과제 도출</p></li><li><span class="sn">5</span><b>Niche 프로젝트</b><p>모범 사례로 실증하고 확산</p></li></ol></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">45 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Gaziulusoy et al.(2013)의 이중흐름 방법은 현재 추세대로 가면 도달할 &#x27;가능성 높은(Likely)&#x27; 미래와 도달해야 할 &#x27;바람직한(Desirable)&#x27; 미래를 함께 그린다. 바람직한 미래에서 현재로 거꾸로 경로를 설계하는 것이 백캐스팅이다. 예: 10년 뒤 목표 상태를 정하고 거꾸로 5년·3년·1년 차 과제를 도출하면, 두 궤적의 차이가 곧 혁신 과제 목록이 된다.</p></div></div><div class="slot" id="s46" data-lec="14-6"><article class="slide ty-paper" aria-label="46 / 51"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Gaziulusoy et al. (2013)</h3><p class="pp-q">기업은 지속가능성 시스템 전환을 어떻게 계획할 수 있나?</p><div class="pp-g"><div><b>핵심 주장</b><p>바람직한 미래에서 거꾸로 오는 백캐스팅과 현재에서 앞으로 가는 예측을 동시에 돌리는 이중흐름 시나리오로 기업 제품개발을 시스템 혁신에 연결한다.</p><div class="pp-cs"><span class="pp-c">Double-flow</span><span class="pp-c">Backcasting</span><span class="pp-c">시스템 혁신</span></div></div><div><b>강의와의 연결</b><p>14-6 p.46-49: 기업·제품개발의 시스템 모델, 바람직한 vs 가능성 높은 궤적</p><b>보충 설명</b><p>기업 수준의 제품 결정과 사회기술 시스템 전환 사이의 간극을 메우려는 방법론. 두 흐름의 격차가 곧 기업이 메워야 할 혁신 과제가 된다.</p></div></div><p class="pp-cite">Gaziulusoy, A. İ., Boyle, C., &amp; McDowall, R. (2013). System innovation for sustainability: A systemic double-flow scenario method for companies. Journal of Cleaner Production, 45, 104–116. </p></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">46 / 51</span></footer></article></div><div class="slot" id="s47" data-lec="14-6"><article class="slide ty-tree" aria-label="47 / 51"><div class="sl-in"><h3 class="sh">전략적 니치 진화 (다층 관점)</h3><div class="tree"><div class="tr-r">시스템 전환</div><div class="tr-cs n3"><div class="tr-c"><b>Landscape</b><p>거시 환경 (macro)</p></div><div class="tr-c"><b>Regime</b><p>기존 사회기술 체제 (meso)</p></div><div class="tr-c"><b>Niche</b><p>R&amp;D·실증 등 보호된 공간 (micro)</p></div></div></div></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">47 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>Geels(2002)의 다층적 관점에서 니치는 R&amp;D 실험실, 보조금을 받는 실증 프로젝트, 특별한 요구를 가진 사용자가 있는 작은 시장처럼 &#x27;보호된 공간&#x27;이다. 기업가·스타트업·스핀오프 같은 니치 행위자가 기존 레짐에서 벗어난 급진적 혁신을 키우고, 거시 환경 압력으로 레짐이 흔들릴 때 니치 혁신이 레짐을 대체한다.</p></div></div><div class="slot" id="s48" data-lec="14-6"><article class="slide ty-paper" aria-label="48 / 51"><div class="sl-in"><p class="pp-k">논문 보충</p><h3 class="sh">Geels (2002)</h3><p class="pp-q">기술 전환(transition)은 어떻게 일어나는가?</p><div class="pp-g"><div><b>핵심 주장</b><p>전환은 니치의 급진적 혁신이 레짐의 불안정·경관(landscape) 압력과 맞물릴 때 레짐을 재구성하며 일어난다(다층적 관점).</p><div class="pp-cs"><span class="pp-c">다층적 관점(MLP)</span><span class="pp-c">Niche</span><span class="pp-c">Regime</span><span class="pp-c">Landscape</span></div></div><div><b>강의와의 연결</b><p>14-6 p.50-51: 보호된 공간인 니치에서 혁신이 자라 레짐으로 확산되는 전략적 니치 진화 그림</p><b>보충 설명</b><p>범선→증기선 전환 사례로 입증. 단일 기술이 아니라 시장·규제·문화·인프라가 함께 재배열되는 과정으로 전환을 본다. 이후 지속가능성 전환 연구의 표준 틀이 됐다.</p></div></div><p class="pp-cite">Geels, F. W. (2002). Technological transitions as evolutionary reconfiguration processes: A multi-level perspective and a case-study. Research Policy, 31(8–9), 1257–1274. </p></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">48 / 51</span></footer></article></div><div class="slot" id="s49" data-lec="14-6"><article class="slide ty-checklist" aria-label="49 / 51"><div class="sl-in"><h3 class="sh">니치를 키우는 조건</h3><ol class="chk two"><li><span class="ck">1</span>혁신 목표가 정의되고 우선순위에 공감대가 있는가?</li><li><span class="ck">2</span>여러 학문·현장을 잇는 초학제적 접근인가?</li><li><span class="ck">3</span>국가가 공공재 인프라를 제공하는가?</li><li><span class="ck">4</span>실험을 허용하는 규제자유 공간이 있는가?</li><li><span class="ck">5</span>주체를 잇는 중간조직(연결자)이 있는가?</li><li><span class="ck">6</span>민간의 폭넓은 참여와 투자 환경이 조성됐는가?</li></ol></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">49 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>강의는 Geels(2002)의 그림과 함께 전략적 니치가 자라기 위한 조건을 제시한다. 목표에 대한 공감대, 초학제 접근, 국가의 인프라·규제자유 공간, 연결자 역할을 하는 중간조직, 민간 참여와 투자 환경이다. 실증 프로젝트를 설계하거나 평가할 때 이 항목으로 빠진 조건을 점검할 수 있다.</p></div></div><div class="slot" id="s50" data-lec="14-6"><article class="slide ty-points" aria-label="50 / 51"><div class="sl-in"><h3 class="sh">시스템 전환의 핵심</h3><div class="pts n4"><div class="pt"><b>대상</b><p>복잡하고 어려운 문제</p></div><div class="pt"><b>접근</b><p>선형 모델이 아닌 시스템 접근</p></div><div class="pt"><b>도구</b><p>시나리오(Desirable·Likely)와 백캐스팅</p></div><div class="pt"><b>실행</b><p>니치 프로젝트를 모범 사례로 확산</p></div></div></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">50 / 51</span></footer></article><div class="sl-ex"><b>설명</b><p>강의의 결론은 네 가지다. 복잡한 문제에는 선형 모델이 통하지 않으므로, 바람직한 미래와 가능성 높은 미래의 시나리오를 그리고, 백캐스팅으로 경로를 설계하며, 니치 프로젝트를 모범 사례로 만들어 확산한다. 니치 프로젝트는 그 자체의 성과보다 &#x27;가능하다&#x27;는 증거를 보여 레짐을 움직이는 역할이 크다.</p></div></div><div class="slot" id="s51" data-lec="14-6"><article class="slide ty-takeaway" aria-label="51 / 51"><div class="sl-in"><p class="ap-k">이 강의에서 기억할 것</p><ul class="ap"><li>복잡한 사회 문제는 선형 모델이 아닌 시스템 전환으로 접근</li><li>Desirable vs Likely 미래의 차이가 곧 혁신 과제다</li><li>백캐스팅: 목표 상태에서 거꾸로 현재까지의 경로를 설계</li><li>니치(보호된 공간)의 모범 사례가 기존 레짐을 흔든다 (Geels)</li></ul></div><footer class="sl-f"><span>14-6 사회기술 시스템 전환</span><span class="num">51 / 51</span></footer></article></div>
+</div>
+<p class="hint">← → 키나 화면 좌우 클릭으로 넘길 수 있습니다. 휴대폰에서는 모든 슬라이드가 세로로 펼쳐집니다.</p>
+<div class="wk-pn"><a class="wk-nav" href="lecture-13.html">← IM13 기술사업화</a><a class="wk-nav" href="lecture-15.html">IM15 ESG와 사회적 가치 →</a></div>
+</main>
+<footer class="site"><div class="wrap">© 2026 김보나 · 강의 원자료: Innovation Management (KAIST). 이 페이지는 수업 내용을 학습 목적으로 요약·재구성한 것입니다.</div></footer>
+<script>(function(){
+  var deck=document.getElementById('deck'); if(!deck) return;
+  var slides=[].slice.call(deck.querySelectorAll('.slot'));
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var pos=document.getElementById('pos'), mode=document.getElementById('mode');
+  var h=fromHash(), cur=0, narrow=window.matchMedia('(max-width:720px)');
+  var paged=!narrow.matches;
+  function fromHash(){var m=/^#s(\d+)$/.exec(location.hash);return m?Math.min(Math.max(+m[1]-1,0),slides.length-1):null}
+  function mark(){
+    var lec=slides[cur].getAttribute('data-lec');
+    tabs.forEach(function(t){t.classList.toggle('on',t.getAttribute('data-lec')===lec)});
+    pos.textContent=(cur+1)+' / '+slides.length;
+  }
+  function show(i,push,noscroll){
+    cur=Math.min(Math.max(i,0),slides.length-1);
+    slides.forEach(function(s,k){s.classList.toggle('cur',k===cur)});
+    if(!paged&&!noscroll){slides[cur].scrollIntoView({block:'start'});}
+    if(push!==false){try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
+    mark();
+  }
+  function setMode(p,init){
+    paged=p; deck.classList.toggle('paged',p);
+    mode.textContent=p?'전체 보기':'한 장씩 보기'; mode.setAttribute('aria-pressed',String(!p));
+    show(cur,false,init&&h===null);
+  }
+  document.getElementById('prev').onclick=function(){show(cur-1)};
+  document.getElementById('next').onclick=function(){show(cur+1)};
+  mode.onclick=function(){setMode(!paged)};
+  tabs.forEach(function(t){t.addEventListener('click',function(ev){ev.preventDefault();show(+t.getAttribute('href').slice(2)-1)})});
+  document.addEventListener('keydown',function(ev){
+    if(ev.target.closest&&ev.target.closest('input,textarea,select'))return;
+    if(ev.key==='ArrowRight'||ev.key==='PageDown'){show(cur+1);ev.preventDefault()}
+    else if(ev.key==='ArrowLeft'||ev.key==='PageUp'){show(cur-1);ev.preventDefault()}
+  });
+  deck.addEventListener('click',function(ev){
+    if(!paged||ev.target.closest('a,button')||!ev.target.closest('.slide'))return;
+    var r=deck.getBoundingClientRect(); show(ev.clientX<r.left+r.width/3?cur-1:cur+1);
+  });
+  var x0=null;
+  deck.addEventListener('touchstart',function(ev){x0=ev.touches[0].clientX},{passive:true});
+  deck.addEventListener('touchend',function(ev){if(!paged||x0===null)return;var dx=ev.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?cur+1:cur-1);x0=null});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(paged)return;es.forEach(function(en){if(en.isIntersecting){cur=slides.indexOf(en.target);mark()}})},{rootMargin:'-45% 0px -50% 0px'});
+    slides.forEach(function(s){io.observe(s)});
+  }
+  if(h!==null)cur=h;
+  setMode(paged,true);
+})();
+</script>
+</body>
+</html>
