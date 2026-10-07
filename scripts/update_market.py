@@ -135,6 +135,46 @@ def fred(sid):
     return pts
 
 
+def treasury(kind, col="10 YR"):
+    """미 재무부 일별 금리 곡선(H.15·FRED보다 하루 빨리 올라옴). kind: daily_treasury_yield_curve / daily_treasury_real_yield_curve"""
+    pts = []
+    y = dt.date.today().year
+    for yr in (y - 1, y):
+        url = (f"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/{yr}/all"
+               f"?type={kind}&field_tdr_date_value={yr}&page&_format=csv")
+        rows = list(csv.reader(io.StringIO(get(url).decode("utf-8-sig"))))
+        hdr = [h.strip().upper() for h in rows[0]]
+        i = hdr.index(col)
+        for r in rows[1:]:
+            try:
+                m, d, yy = r[0].split("/")
+                pts.append([f"{yy}-{int(m):02d}-{int(d):02d}", round(float(r[i]), 3)])
+            except (ValueError, IndexError):
+                pass
+    return sorted(pts)
+
+
+TREASURY_FILL = {"ust10": "daily_treasury_yield_curve", "real10": "daily_treasury_real_yield_curve"}
+
+
+def fill_latest(series, errors):
+    """FRED가 하루 늦게 올리는 10년 명목·실질 금리를 재무부 최신 값으로 이어 붙인다(같은 날짜 값은 동일 출처라 덮어쓰지 않음)."""
+    for key, kind in TREASURY_FILL.items():
+        sr = series.get(key)
+        if not sr or not sr.get("points"):
+            continue
+        try:
+            tp = treasury(kind)
+            last = sr["points"][-1][0]
+            add = [p for p in tp if p[0] > last]
+            if add:
+                sr["points"] += add
+                sr["source"] = "FRED + 미 재무부(최근일)"
+                sr["note_latest"] = f"{add[0][0]}~{add[-1][0]} 값은 미 재무부 일별 금리 곡선(FRED 반영 전)"
+        except Exception as e:
+            errors.append(f"{key} treasury: {e}")
+
+
 _ACM = {}
 
 
@@ -227,6 +267,7 @@ def main():
             if prev:
                 prev["ok"] = False
                 series[key] = prev
+    fill_latest(series, errors)
     signals = compute_signals(series, old.get("signals", {}))
     out = dict(signals=signals, updated_utc=dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
                series=series, errors=errors)
