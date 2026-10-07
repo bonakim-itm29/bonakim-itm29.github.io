@@ -1,0 +1,229 @@
+{
+ "ticker": "AXIA",
+ "top": [
+  {
+   "date": "2017-08-22",
+   "filed": "2017-08-21",
+   "title_ko": "광업에너지부, 엘레트로브라스 민영화 제안",
+   "summary_ko": "2017년 8월 21일 광업에너지부 장관이 투자파트너십프로그램(PPI) 위원회에 엘레트로브라스 민영화를 제안하겠다는 서한을 회사가 중요사실로 공시했다. 다음 거래일 B3 보통주는 49.3% 폭등했고 매크로 모델 예측은 0.4%에 불과해 잔차가 39.7%로 전 기간 최대였다. 회사는 같은 날 '비정상적 주가 변동'에 대한 해명 공시도 냈다.",
+   "why_important_ko": "국가 통제 공기업에서 민영화(지배구조 전환)로 회사의 방향이 바뀌는 출발점. 의결권 상한·황금주 등 이후 2022년 민영화 구조의 골격이 이 서한에 처음 등장했다.",
+   "facts": [
+    {
+     "fact_ko": "광업에너지부가 PPI 위원회에 민영화를 제안",
+     "quote": "will propose to the Council of the Investment and Partnership Program of the Presidency, the privatization of Eletrobras",
+     "file": "AXIA3.SA__000129281417002119__ebr20170821_6k.htm"
+    },
+    {
+     "fact_ko": "대주주 의결권 제한 조건 포함",
+     "quote": "the limitation of majority shareholders' voting rights",
+     "file": "AXIA3.SA__000129281417002119__ebr20170821_6k.htm"
+    },
+    {
+     "fact_ko": "정부 보유 황금주 조건",
+     "quote": "a golden class share to be owned by the State",
+     "file": "AXIA3.SA__000129281417002119__ebr20170821_6k.htm"
+    },
+    {
+     "fact_ko": "8/22 비정상 주가 변동에 대한 해명 공시",
+     "quote": "due to the atypical oscillation, on this date, of its shares",
+     "file": "AXIA3.SA__000129281417002125__ebr20170822-6k.htm"
+    }
+   ]
+  },
+  {
+   "date": "2025-12-22",
+   "filed": "2025-12-19 ~ 2025-12-22",
+   "title_ko": "AXIA 주식 클래스 재편: 우선주 C 배분·PNR 강제상환",
+   "summary_ko": "2025년 12월 19일 임시주총이 PNR 우선주 강제상환(주당 R$1.2994705188032, 기준일 12/19)을 승인했고, 12월 22일 회사는 보통주·A·B주 보유자에게 신규 우선주 C를 비례 배분하는 계획과 티커를 공시했다. 12월 22일 B3 보통주는 -22.5% 하락(매크로 예측 0.1%, 잔차 -25.7%). 우선주 C 배분의 권리락(ex) 기술적 하락일 가능성이 있으나 권리락 날짜는 원문에서 확인 안 됨 → 모호.",
+   "why_important_ko": "민영화 이후 사명 변경(AXIA Energia)과 함께 진행된 대규모 자본구조 재편·주주환원(현물 배분·현금 상환)으로, 기존 우선주 체계가 정리된 지배구조 변경 이벤트.",
+   "facts": [
+    {
+     "fact_ko": "임시주총이 PNR 강제상환 승인",
+     "quote": "the compulsory redemption of the class “R” preferred shares - PNR (“ Redemption ”) was approved",
+     "file": "AXIA3.SA__000129281425004341__axia20251219_6k1.htm"
+    },
+    {
+     "fact_ko": "상환가 주당 R$1.2994705188032, 2026-01-13 지급",
+     "quote": "at the price of R$ 1.2994705188032 per redeemed PNR share",
+     "file": "AXIA3.SA__000129281425004341__axia20251219_6k1.htm"
+    },
+    {
+     "fact_ko": "기존 보통·A·B주 보유자에게 우선주 C 비례 배분",
+     "quote": "pro rata distribution of (i) Preferred C Shares to all existing holders of Company common",
+     "file": "AXIA3.SA__000129281425004371__axia20251222_6k.htm"
+    },
+    {
+     "fact_ko": "신규 우선주 C ADR 티커",
+     "quote": "NYSE: AXIA PRC",
+     "file": "AXIA3.SA__000129281425004371__axia20251222_6k.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2010-02-01",
+   "filed": "2010-01-29",
+   "title_ko": "특별배당 유보금 4회 분할 지급액 공시(보통주 총 R$11.36/주)",
+   "R": -0.2201,
+   "res": -0.2549,
+   "file": "AXIA3.SA__000129281410000195__ebr20100129_6k.htm"
+  },
+  {
+   "date": "2012-05-21",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": -0.1095,
+   "res": -0.1232,
+   "file": "000129281412001430/elp20120518_6k.htm"
+  },
+  {
+   "date": "2012-11-30",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1679,
+   "res": 0.1531,
+   "file": "000129281412002788/ebr20121130_6k.htm"
+  },
+  {
+   "date": "2013-03-28",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1184,
+   "res": 0.114,
+   "file": "000129281413000608/ebr20130328_6k5.htm"
+  },
+  {
+   "date": "2013-12-30",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1915,
+   "res": 0.1712,
+   "file": "000129281413002907/ebr20131230_6k.htm"
+  },
+  {
+   "date": "2016-06-23",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1245,
+   "res": 0.106,
+   "file": "000129281416005030/ebr20160622_6k.htm"
+  },
+  {
+   "date": "2017-07-06",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1614,
+   "res": 0.1618,
+   "file": "000129281417001684/ebr20170630_6k2.htm"
+  },
+  {
+   "date": "2018-04-09",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": -0.0956,
+   "res": -0.0783,
+   "file": "000129281418001078/ebr20180406_6ka1.htm"
+  },
+  {
+   "date": "2018-05-23",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": -0.1147,
+   "res": -0.1189,
+   "file": "000129281418001873/ebr20180522_6k.htm"
+  },
+  {
+   "date": "2019-01-03",
+   "filed": "2019-01-02",
+   "title_ko": "오데브레시 리니언시 협약 가입(배상금 21년 분할 수령)",
+   "R": 0.2762,
+   "res": 0.2476,
+   "file": "AXIA3.SA__000129281419000002__ebr20190102_6k.htm"
+  },
+  {
+   "date": "2019-08-21",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1239,
+   "res": 0.1078,
+   "file": "000129281419002828/ebr20190821_6k.htm"
+  },
+  {
+   "date": "2020-03-30",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1058,
+   "res": 0.0701,
+   "file": "000129281420001023/ebr20200328_6k2.htm"
+  },
+  {
+   "date": "2020-07-17",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1435,
+   "res": 0.1354,
+   "file": "000129281420002622/ebr20200717_6k.htm"
+  },
+  {
+   "date": "2021-01-26",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": -0.0969,
+   "res": -0.0989,
+   "file": "000129281421000191/ebr20210125_6k1.htm"
+  },
+  {
+   "date": "2021-02-23",
+   "filed": "모호",
+   "title_ko": "±3일 SEC 6-K 공시 존재(원문 미검토, 내용 미확인)",
+   "R": 0.1301,
+   "res": 0.1269,
+   "file": "000129281421000515/ebr20210222_6ka.htm"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2008-05-30",
+   "R": 0.1475,
+   "res": 0.136,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2012-11-21",
+   "R": -0.1573,
+   "res": -0.1747,
+   "cause_ko": "정부의 전력요금 인하(양허 갱신 조건)로 이익 훼손 우려 → 상파울루 종가 20% 급락, 1994년 이후 최대 낙폭(Bloomberg: \"Rate cuts ordered by the government will erode earnings\")",
+   "url": "https://www.bloomberg.com/news/articles/2012-11-21/eletrobras-in-record-slump-as-rate-cuts-imperil-earnings"
+  },
+  {
+   "date": "2015-05-05",
+   "R": 0.1202,
+   "res": 0.1175,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2018-07-04",
+   "R": 0.1799,
+   "res": 0.1829,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2018-10-08",
+   "R": 0.1733,
+   "res": 0.1324,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2020-02-26",
+   "R": -0.0932,
+   "res": -0.0954,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  }
+ ]
+}

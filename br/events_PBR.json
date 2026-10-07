@@ -1,0 +1,29 @@
+{"ticker":"PBR",
+"top":[
+{"date":"2021-02-22","filed":"2021-02-19","title_ko":"정부, CEO 교체 요구(카스텔루 브랑쿠→실바 이 루나)",
+"summary_ko":"광업에너지부가 서한으로 임시주총 소집과 CEO 로베르투 카스텔루 브랑쿠를 조아킹 실바 이 루나로 교체할 것을 요구했다고 공시했다. 다음 거래일 ADR은 -21.0% 하락했으며 매크로 예측은 +0.2%로 잔차는 -23.7%였다.",
+"why_important_ko":"지배주주인 연방정부가 경영진 교체에 직접 개입해 시장 가격정책·지배구조 독립성 우려를 키운 사건.",
+"facts":[
+{"fact_ko":"광업에너지부가 실바 이 루나로 카스텔루 브랑쿠를 교체할 것을 요청","quote":"to appoint Joaquim Silva e Luna to replace Roberto da Cunha Castello Branco","file":"PBR__000129281421000505__pbra20210219_6k1.htm"},
+{"fact_ko":"정부는 이사회 전원을 임시주총에서 재선임할 것을 제안","quote":"all members of the Board of Directors should be immediately reappointed","file":"PBR__000129281421000505__pbra20210219_6k1.htm"}]},
+{"date":"2007-11-08","filed":"2007-11-08","title_ko":"투피(Tupi) 프리솔트 대규모 매장량 발표",
+"summary_ko":"산투스 분지 BM-S-11 투피 지역 두 번째 시추공 시험 분석 결과 회수 가능 경질유·가스를 50억~80억 배럴로 추정한다고 발표했다. 당일 ADR은 +25.9% 급등했으며 매크로 예측은 -0.6%로 잔차는 +23.7%였다.",
+"why_important_ko":"프리솔트 시대를 연 발견으로 회사의 매장량·성장 전망을 근본적으로 바꾼 사건.",
+"facts":[
+{"fact_ko":"투피 회수가능 매장량 50억~80억 배럴 추정","quote":"recoverable light oil and natural gas for Tupi of between 5 and 8 billion barrels","file":"PBR__000129281407003136__pbra20071108_6k.htm"},
+{"fact_ko":"페트로브라스가 운영사로 지분 65% 보유","quote":"Petrobras is the operator in the area and holds a 65% working interest","file":"PBR__000129281407003136__pbra20071108_6k.htm"}]}],
+"others":[
+{"date":"2020-03-09","filed":"2020-03-06","title_ko":"콜롬비아 유통사업 매각 티저·YPFB 가스계약 수정 등(급락 원인과 무관해 보임)","R":-0.3099,"res":-0.2946,"file":"PBR__000156459020009138__pbr-6k_20200306.htm"},
+{"date":"2018-05-24","filed":"2018-05-23","title_ko":"트럭 파업 대응 디젤 가격 10% 인하(매출 약 R$3.5억 감소 추정)","R":-0.1542,"res":-0.1694,"file":"PBR__000119312518172440__d584625d6k.htm"},
+{"date":"2014-10-27","filed":"2014-10-24","title_ko":"공시(원문 미확보)","R":-0.1369,"res":-0.1637,"file":"pbra20141027_6k.htm"},
+{"date":"2013-03-06","filed":"2013-03-05","title_ko":"공시(원문 미확보)","R":0.1511,"res":0.1406,"file":"pbra20130305_6k.htm"},
+{"date":"2014-12-15","filed":"2014-12-12","title_ko":"공시(원문 미확보)","R":-0.1196,"res":-0.1219,"file":"pbra20141212_6k.htm"},
+{"date":"2024-03-08","filed":"2024-03-07","title_ko":"4Q23 실적 공시(원문 미확보)","R":-0.115,"res":-0.1193,"file":"pbr20240307_6k.htm"},
+{"date":"2013-12-02","filed":"2013-11-29","title_ko":"공시(원문 미확보)","R":-0.1092,"res":-0.1054,"file":"pbra20131129_6k.htm"},
+{"date":"2014-10-06","filed":"2014-10-03","title_ko":"공시(원문 미확보)","R":0.131,"res":0.1037,"file":"pbra20141006_6ka.htm"},
+{"date":"2015-02-03","filed":"2015-02-02","title_ko":"공시(원문 미확보)","R":0.1373,"res":0.0937,"file":"pbra20150202_6k.htm"},
+{"date":"2008-12-10","filed":"2008-12-10","title_ko":"공시(원문 미확보)","R":0.1352,"res":0.0906,"file":"pbra20081210_6k.htm"},
+{"date":"2015-08-27","filed":"2015-08-26","title_ko":"공시(원문 미확보)","R":0.128,"res":0.0695,"file":"pbra20150826_6k.htm"}],
+"no_filing_moves":[
+{"date":"2016-02-22","R":0.1683,"res":0.127,"cause_ko":"원인 미확인","url":""},
+{"date":"2023-01-03","R":-0.108,"res":-0.0963,"cause_ko":"원인 미확인","url":""}]}

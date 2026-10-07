@@ -1,0 +1,1851 @@
+{
+ "ticker": "ITUB",
+ "currency": "BRL (R$ millions)",
+ "items": [
+  {
+   "id": "X1_2Q26_PR",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "recurring managerial result ... BRL million / BRL billion",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "본문/표 단위",
+    "col": ""
+   },
+   "note": "보도자료: 회사 경영(managerial) 기준 '경상 경영 실적', 통화 BRL. 회계기준 명시 없음(경영 기준, 연결 FS note 30상 BR 회계기준 기반 관리회계)."
+  },
+  {
+   "id": "X1_FS",
+   "period": "2026H1",
+   "value": null,
+   "raw": "June 30, 2026 Condensed Consolidated Financial Statements in IFRS; (In millions of reais)",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme001.jpg / 020.jpg",
+    "row": "표지; 손익계산서 캡션",
+    "col": ""
+   },
+   "note": "IFRS(IAS 34, IASB) 요약 연결재무제표, R$ million. 감사인 PwC. 부문정보(note 30)는 브라질 회계기준(BACEN) 기반 경영 기준 후 IFRS 조정. 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "X1_1Q26_PR",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "Recurring Managerial Result (R$ million)",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "표 행 라벨",
+    "col": ""
+   },
+   "note": "1분기 보도자료: 경영(managerial) 기준, R$."
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 11979,
+   "raw": "11,979",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Net income attributable to owners of the parent company",
+    "col": "04/01 to 06/30/2026"
+   },
+   "note": "IFRS 회계 순이익(지배주주 귀속) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 11137,
+   "raw": "11,137",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Net income attributable to owners of the parent company",
+    "col": "04/01 to 06/30/2025"
+   },
+   "note": "IFRS 회계 순이익(지배주주 귀속) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 23615,
+   "raw": "23,615",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Net income attributable to owners of the parent company",
+    "col": "01/01 to 06/30/2026"
+   },
+   "note": "IFRS 회계 순이익(지배주주 귀속) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q1",
+   "period": "2025H1",
+   "value": 21644,
+   "raw": "21,644",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Net income attributable to owners of the parent company",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "IFRS 회계 순이익(지배주주 귀속) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q1_total_net_income",
+   "period": "2026Q2",
+   "value": 12324,
+   "raw": "12,324",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Net income / (loss)",
+    "col": "04/01 to 06/30/2026"
+   },
+   "note": "비지배지분 포함 총 순이익 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q1_total_net_income",
+   "period": "2025Q2",
+   "value": 11398,
+   "raw": "11,398",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Net income / (loss)",
+    "col": "04/01 to 06/30/2025"
+   },
+   "note": "비지배지분 포함 총 순이익 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q1_total_net_income",
+   "period": "2026H1",
+   "value": 24199,
+   "raw": "24,199",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Net income / (loss)",
+    "col": "01/01 to 06/30/2026"
+   },
+   "note": "비지배지분 포함 총 순이익 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q1_total_net_income",
+   "period": "2025H1",
+   "value": 22105,
+   "raw": "22,105",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Net income / (loss)",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "비지배지분 포함 총 순이익 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "R$ million",
+   "status": "null",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "1분기 단독 IFRS 순이익은 제공 문서(2Q FS, 1Q 보도자료)에 없음. 반기-2분기 차감 계산 금지."
+  },
+  {
+   "id": "Q2",
+   "period": "2026Q2",
+   "value": 12407,
+   "raw": "12,407",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Recurring Managerial Result (BRL million)",
+    "col": "2Q26"
+   },
+   "note": "회사 명칭 'Recurring Managerial Result'(경상 경영 실적). 회계 순이익과 구분."
+  },
+  {
+   "id": "Q2",
+   "period": "2026Q1",
+   "value": 12282,
+   "raw": "12,282",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Recurring Managerial Result (BRL million)",
+    "col": "1Q26"
+   },
+   "note": "회사 명칭 'Recurring Managerial Result'(경상 경영 실적). 회계 순이익과 구분."
+  },
+  {
+   "id": "Q2",
+   "period": "2025Q2",
+   "value": 11508,
+   "raw": "11,508",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Recurring Managerial Result (BRL million)",
+    "col": "2Q25"
+   },
+   "note": "회사 명칭 'Recurring Managerial Result'(경상 경영 실적). 회계 순이익과 구분."
+  },
+  {
+   "id": "Q2",
+   "period": "2026H1",
+   "value": 24689,
+   "raw": "24,689",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Recurring Managerial Result (BRL million)",
+    "col": "1H26"
+   },
+   "note": "회사 명칭 'Recurring Managerial Result'(경상 경영 실적). 회계 순이익과 구분."
+  },
+  {
+   "id": "Q2",
+   "period": "2025H1",
+   "value": 22636,
+   "raw": "22,636",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Recurring Managerial Result (BRL million)",
+    "col": "1H25"
+   },
+   "note": "회사 명칭 'Recurring Managerial Result'(경상 경영 실적). 회계 순이익과 구분."
+  },
+  {
+   "id": "Q2",
+   "period": "2025Q4",
+   "value": 12317,
+   "raw": "12,317",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "Recurring Managerial Result (R$ million)",
+    "col": "4Q25"
+   },
+   "note": "1분기 보도자료"
+  },
+  {
+   "id": "Q2",
+   "period": "2025Q1",
+   "value": 11128,
+   "raw": "11,128",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "Recurring Managerial Result (R$ million)",
+    "col": "1Q25"
+   },
+   "note": "1분기 보도자료"
+  },
+  {
+   "id": "Q2_note30_managerial",
+   "period": "2026Q2",
+   "value": 12407,
+   "raw": "12,407",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme105.jpg",
+    "row": "Net income (Consolidated Statement of Managerial Result)",
+    "col": "04/01 to 06/30/2026 / ITAÚ UNIBANCO"
+   },
+   "note": "Note 30 부문정보 경영 기준 순이익(조정 전). 보도자료 경상 경영 실적과 일치 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q2_note30_managerial",
+   "period": "2025Q2",
+   "value": 11508,
+   "raw": "11,508",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme106.jpg",
+    "row": "Net income (Consolidated Statement of Managerial Result)",
+    "col": "04/01 to 06/30/2025 / ITAÚ UNIBANCO"
+   },
+   "note": "Note 30 부문정보 경영 기준 순이익(조정 전). 보도자료 경상 경영 실적과 일치 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q2_note30_managerial",
+   "period": "2026H1",
+   "value": 24689,
+   "raw": "24,689",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme107.jpg",
+    "row": "Net income (Consolidated Statement of Managerial Result)",
+    "col": "01/01 to 06/30/2026 / ITAÚ UNIBANCO"
+   },
+   "note": "Note 30 부문정보 경영 기준 순이익(조정 전). 보도자료 경상 경영 실적과 일치 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q2_note30_managerial",
+   "period": "2025H1",
+   "value": 22636,
+   "raw": "22,636",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme108.jpg",
+    "row": "Net income (Consolidated Statement of Managerial Result)",
+    "col": "01/01 to 06/30/2025 / ITAÚ UNIBANCO"
+   },
+   "note": "Note 30 부문정보 경영 기준 순이익(조정 전). 보도자료 경상 경영 실적과 일치 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q2_IFRS_mgmt_report_Recurring_Result",
+   "period": "2026H1",
+   "value": 24000.0,
+   "raw": "24.0",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme004.jpg",
+    "row": "Recurring Result",
+    "col": "In R$ billions / 1H26"
+   },
+   "note": "IFRS 재무제표 경영보고서의 'Recurring Result'(R$ billion→million 환산). 보도자료 경영기준 1H26 24,689와 다른 기준(IFRS 기반)으로 보임; 정의 상세 없음 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q2_IFRS_mgmt_report_Recurring_Result",
+   "period": "2025H1",
+   "value": 21700.0,
+   "raw": "21.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme004.jpg",
+    "row": "Recurring Result",
+    "col": "In R$ billions / 1H25"
+   },
+   "note": "IFRS 재무제표 경영보고서의 'Recurring Result'(R$ billion→million 환산). 보도자료 경영기준 1H26 24,689와 다른 기준(IFRS 기반)으로 보임; 정의 상세 없음 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 24.3,
+   "raw": "24.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Annualized Recurring Managerial Return on Average Equity (%)",
+    "col": "2Q26"
+   },
+   "note": "회사 제시 연율 경상 경영 ROE(각주1: Recurring return on average equity)"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 24.8,
+   "raw": "24.8%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Annualized Recurring Managerial Return on Average Equity (%)",
+    "col": "1Q26"
+   },
+   "note": "회사 제시 연율 경상 경영 ROE(각주1: Recurring return on average equity)"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 23.3,
+   "raw": "23.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Annualized Recurring Managerial Return on Average Equity (%)",
+    "col": "2Q25"
+   },
+   "note": "회사 제시 연율 경상 경영 ROE(각주1: Recurring return on average equity)"
+  },
+  {
+   "id": "Q3",
+   "period": "2026H1",
+   "value": 24.5,
+   "raw": "24.5%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Annualized Recurring Managerial Return on Average Equity (%)",
+    "col": "1H26"
+   },
+   "note": "회사 제시 연율 경상 경영 ROE(각주1: Recurring return on average equity)"
+  },
+  {
+   "id": "Q3",
+   "period": "2025H1",
+   "value": 22.8,
+   "raw": "22.8%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Annualized Recurring Managerial Return on Average Equity (%)",
+    "col": "1H25"
+   },
+   "note": "회사 제시 연율 경상 경영 ROE(각주1: Recurring return on average equity)"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q4",
+   "value": 24.4,
+   "raw": "24.4%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "Annualized Recurring Managerial Return on Average Equity (%)",
+    "col": "4Q25"
+   },
+   "note": "1분기 보도자료"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q1",
+   "value": 22.5,
+   "raw": "22.5%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "Annualized Recurring Managerial Return on Average Equity (%)",
+    "col": "1Q25"
+   },
+   "note": "1분기 보도자료"
+  },
+  {
+   "id": "Q3_IFRS_recurring_ROE",
+   "period": "2026H1",
+   "value": 22.8,
+   "raw": "22.8%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme004.jpg",
+    "row": "Recurring Return on Average Equity - Annualized",
+    "col": "1H26"
+   },
+   "note": "IFRS 경영보고서: Recurring Result / 평균 자기자본, 연율화 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q3_IFRS_recurring_ROE",
+   "period": "2025H1",
+   "value": 21.0,
+   "raw": "21.0%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme004.jpg",
+    "row": "Recurring Return on Average Equity - Annualized",
+    "col": "1H25"
+   },
+   "note": "IFRS 경영보고서: Recurring Result / 평균 자기자본, 연율화 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q3_IFRS_accounting_ROE",
+   "period": "2026H1",
+   "value": 22.4,
+   "raw": "22.4%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme004.jpg",
+    "row": "Return on Average Equity - Annualized",
+    "col": "1H26"
+   },
+   "note": "지배주주 순이익 / 평균 자기자본, 연율화 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q3_IFRS_accounting_ROE",
+   "period": "2025H1",
+   "value": 20.9,
+   "raw": "20.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme004.jpg",
+    "row": "Return on Average Equity - Annualized",
+    "col": "1H25"
+   },
+   "note": "지배주주 순이익 / 평균 자기자본, 연율화 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 31320,
+   "raw": "31,320",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme105.jpg",
+    "row": "Interest margin",
+    "col": "04/01 to 06/30/2026 / IFRS consolidated"
+   },
+   "note": "Note 30 'Interest margin' IFRS 연결 열 = 이자수익·비용 + FVTPL 손익 + 외환손익 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 28372,
+   "raw": "28,372",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme106.jpg",
+    "row": "Interest margin",
+    "col": "04/01 to 06/30/2025 / IFRS consolidated"
+   },
+   "note": "Note 30 'Interest margin' IFRS 연결 열 = 이자수익·비용 + FVTPL 손익 + 외환손익 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4",
+   "period": "2026H1",
+   "value": 59695,
+   "raw": "59,695",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme107.jpg",
+    "row": "Interest margin",
+    "col": "01/01 to 06/30/2026 / IFRS consolidated"
+   },
+   "note": "Note 30 'Interest margin' IFRS 연결 열 = 이자수익·비용 + FVTPL 손익 + 외환손익 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4",
+   "period": "2025H1",
+   "value": 58794,
+   "raw": "58,794",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme108.jpg",
+    "row": "Interest margin",
+    "col": "01/01 to 06/30/2025 / IFRS consolidated"
+   },
+   "note": "Note 30 'Interest margin' IFRS 연결 열 = 이자수익·비용 + FVTPL 손익 + 외환손익 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4_managerial_interest_margin",
+   "period": "2026Q2",
+   "value": 33488,
+   "raw": "33,488",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme105.jpg",
+    "row": "Interest margin",
+    "col": "04/01 to 06/30/2026 / ITAÚ UNIBANCO"
+   },
+   "note": "경영(managerial) 기준 금융마진 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4_managerial_interest_margin",
+   "period": "2025Q2",
+   "value": 31846,
+   "raw": "31,846",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme106.jpg",
+    "row": "Interest margin",
+    "col": "04/01 to 06/30/2025 / ITAÚ UNIBANCO"
+   },
+   "note": "경영(managerial) 기준 금융마진 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4_managerial_interest_margin",
+   "period": "2026H1",
+   "value": 65814,
+   "raw": "65,814",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme107.jpg",
+    "row": "Interest margin",
+    "col": "01/01 to 06/30/2026 / ITAÚ UNIBANCO"
+   },
+   "note": "경영(managerial) 기준 금융마진 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4_managerial_interest_margin",
+   "period": "2025H1",
+   "value": 62927,
+   "raw": "62,927",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme108.jpg",
+    "row": "Interest margin",
+    "col": "01/01 to 06/30/2025 / ITAÚ UNIBANCO"
+   },
+   "note": "경영(managerial) 기준 금융마진 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4_mgmt_report_NII",
+   "period": "2026H1",
+   "value": 62900.0,
+   "raw": "62.9",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme004.jpg",
+    "row": "Net Interest Income",
+    "col": "In R$ billions / 1H26"
+   },
+   "note": "경영보고서 'Net Interest Income'(각주2 정의, 경영조정 세효과 재분류). R$ billion→million | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4_mgmt_report_NII",
+   "period": "2025H1",
+   "value": 62600.0,
+   "raw": "62.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme004.jpg",
+    "row": "Net Interest Income",
+    "col": "In R$ billions / 1H25"
+   },
+   "note": "경영보고서 'Net Interest Income'(각주2 정의, 경영조정 세효과 재분류). R$ billion→million | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q4_NII_with_clients",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "grew 3.3% in the quarter",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "financial margin with clients (NII with clients)",
+    "col": ""
+   },
+   "note": "보도자료는 증가율(+3.3% QoQ)만 제시, 금액 없음"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 12062,
+   "raw": "12,062",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Commissions and Banking Fees",
+    "col": "04/01 to 06/30/2026"
+   },
+   "note": "IFRS 손익계산서 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 11071,
+   "raw": "11,071",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Commissions and Banking Fees",
+    "col": "04/01 to 06/30/2025"
+   },
+   "note": "IFRS 손익계산서 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 24012,
+   "raw": "24,012",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Commissions and Banking Fees",
+    "col": "01/01 to 06/30/2026"
+   },
+   "note": "IFRS 손익계산서 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5",
+   "period": "2025H1",
+   "value": 22704,
+   "raw": "22,704",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Commissions and Banking Fees",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "IFRS 손익계산서 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5_managerial",
+   "period": "2026Q2",
+   "value": 11028,
+   "raw": "11,028",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme105.jpg",
+    "row": "Commissions and Banking Fees (2,3)",
+    "col": "04/01 to 06/30/2026 / ITAÚ UNIBANCO"
+   },
+   "note": "경영 기준 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5_managerial",
+   "period": "2025Q2",
+   "value": 10781,
+   "raw": "10,781",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme106.jpg",
+    "row": "Commissions and Banking Fees (2,3)",
+    "col": "04/01 to 06/30/2025 / ITAÚ UNIBANCO"
+   },
+   "note": "경영 기준 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5_insurance",
+   "period": "2026Q2",
+   "value": 2456,
+   "raw": "2,456",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Income from Insurance Contracts and Private Pension",
+    "col": "04/01 to 06/30/2026"
+   },
+   "note": "보험·연금 수익(수수료와 별도 행) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5_insurance",
+   "period": "2025Q2",
+   "value": 2298,
+   "raw": "2,298",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Income from Insurance Contracts and Private Pension",
+    "col": "04/01 to 06/30/2025"
+   },
+   "note": "보험·연금 수익(수수료와 별도 행) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5_insurance",
+   "period": "2026H1",
+   "value": 4790,
+   "raw": "4,790",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Income from Insurance Contracts and Private Pension",
+    "col": "01/01 to 06/30/2026"
+   },
+   "note": "보험·연금 수익(수수료와 별도 행) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q5_insurance",
+   "period": "2025H1",
+   "value": 4301,
+   "raw": "4,301",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Income from Insurance Contracts and Private Pension",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "보험·연금 수익(수수료와 별도 행) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": -9394,
+   "raw": "(9,394)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Expected Credit Loss from Financial Assets",
+    "col": "04/01 to 06/30/2026"
+   },
+   "note": "IFRS 예상신용손실 비용(괄호=음수) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": -7831,
+   "raw": "(7,831)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Expected Credit Loss from Financial Assets",
+    "col": "04/01 to 06/30/2025"
+   },
+   "note": "IFRS 예상신용손실 비용(괄호=음수) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6",
+   "period": "2026H1",
+   "value": -18397,
+   "raw": "(18,397)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Expected Credit Loss from Financial Assets",
+    "col": "01/01 to 06/30/2026"
+   },
+   "note": "IFRS 예상신용손실 비용(괄호=음수) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6",
+   "period": "2025H1",
+   "value": -17389,
+   "raw": "(17,389)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Expected Credit Loss from Financial Assets",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "IFRS 예상신용손실 비용(괄호=음수) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6_loans",
+   "period": "2026Q2",
+   "value": -8605,
+   "raw": "(8,605)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Expected Credit Loss with Loan and Lease Operations",
+    "col": "04/01 to 06/30/2026"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6_loans",
+   "period": "2025Q2",
+   "value": -8259,
+   "raw": "(8,259)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Expected Credit Loss with Loan and Lease Operations",
+    "col": "04/01 to 06/30/2025"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6_loans",
+   "period": "2026H1",
+   "value": -16889,
+   "raw": "(16,889)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Expected Credit Loss with Loan and Lease Operations",
+    "col": "01/01 to 06/30/2026"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6_loans",
+   "period": "2025H1",
+   "value": -16951,
+   "raw": "(16,951)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Expected Credit Loss with Loan and Lease Operations",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6_managerial_cost_of_credit",
+   "period": "2026Q2",
+   "value": -10138,
+   "raw": "(10,138)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme105.jpg",
+    "row": "Cost of Credit (4)",
+    "col": "04/01 to 06/30/2026 / ITAÚ UNIBANCO"
+   },
+   "note": "경영 기준 신용비용 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6_managerial_cost_of_credit",
+   "period": "2025Q2",
+   "value": -9443,
+   "raw": "(9,443)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme106.jpg",
+    "row": "Cost of Credit (4)",
+    "col": "04/01 to 06/30/2025 / ITAÚ UNIBANCO"
+   },
+   "note": "경영 기준 신용비용 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6_managerial_cost_of_credit",
+   "period": "2026H1",
+   "value": -20090,
+   "raw": "(20,090)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme107.jpg",
+    "row": "Cost of Credit (4)",
+    "col": "01/01 to 06/30/2026 / ITAÚ UNIBANCO"
+   },
+   "note": "경영 기준 신용비용 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q6_managerial_cost_of_credit",
+   "period": "2025H1",
+   "value": -18967,
+   "raw": "(18,967)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme108.jpg",
+    "row": "Cost of Credit (4)",
+    "col": "01/01 to 06/30/2025 / ITAÚ UNIBANCO"
+   },
+   "note": "경영 기준 신용비용 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 35.5,
+   "raw": "35.5%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26002.jpg",
+    "row": "The efficiency ratio in Brazil reached 35.5%",
+    "col": "본문"
+   },
+   "note": "브라질 효율성 지수(회사 제시, 본문 문장)"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 34.9,
+   "raw": "34.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults002.jpg",
+    "row": "The efficiency ratio reached 34.9% in Brazil",
+    "col": "본문"
+   },
+   "note": "1분기 보도자료, 브라질"
+  },
+  {
+   "id": "Q7_consolidated_BRGAAP_managerial",
+   "period": "2026H1",
+   "value": 37.3,
+   "raw": "37.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme003.jpg",
+    "row": "Efficiency Ratio³",
+    "col": "1H26"
+   },
+   "note": "각주3: BRGAAP managerial disclosure 기준. 브라질 아닌 전체 기준으로 보임(1H25 대비 -30bps; 1H25 값은 미기재) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q8_basic",
+   "period": "2026Q2",
+   "value": 1.09,
+   "raw": "1.09",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Earnings per share - basic / Common, Preferred",
+    "col": "04/01 to 06/30/2026"
+   },
+   "note": "보통주·우선주 동일 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q8_basic",
+   "period": "2025Q2",
+   "value": 1.0,
+   "raw": "1.00",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Earnings per share - basic / Common, Preferred",
+    "col": "04/01 to 06/30/2025"
+   },
+   "note": "보통주·우선주 동일 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q8_basic",
+   "period": "2026H1",
+   "value": 2.14,
+   "raw": "2.14",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Earnings per share - basic / Common, Preferred",
+    "col": "01/01 to 06/30/2026"
+   },
+   "note": "보통주·우선주 동일 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q8_basic",
+   "period": "2025H1",
+   "value": 1.95,
+   "raw": "1.95",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Earnings per share - basic / Common, Preferred",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "보통주·우선주 동일 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q8_diluted",
+   "period": "2026Q2",
+   "value": 1.07,
+   "raw": "1.07",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Earnings per share - diluted / Common, Preferred",
+    "col": "04/01 to 06/30/2026"
+   },
+   "note": "보통주·우선주 동일 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q8_diluted",
+   "period": "2025Q2",
+   "value": 0.99,
+   "raw": "0.99",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Earnings per share - diluted / Common, Preferred",
+    "col": "04/01 to 06/30/2025"
+   },
+   "note": "보통주·우선주 동일 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q8_diluted",
+   "period": "2026H1",
+   "value": 2.12,
+   "raw": "2.12",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Earnings per share - diluted / Common, Preferred",
+    "col": "01/01 to 06/30/2026"
+   },
+   "note": "보통주·우선주 동일 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "Q8_diluted",
+   "period": "2025H1",
+   "value": 1.93,
+   "raw": "1.93",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme020.jpg",
+    "row": "Earnings per share - diluted / Common, Preferred",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "보통주·우선주 동일 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 1522000,
+   "raw": "1,522",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Total Credit Portfolio² (BRL billion)",
+    "col": "2Q26"
+   },
+   "note": "원 단위 BRL billion→million. 각주2: 금융보증·사모채 포함"
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 1483000,
+   "raw": "1,483",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Total Credit Portfolio² (BRL billion)",
+    "col": "1Q26"
+   },
+   "note": "원 단위 BRL billion→million. 각주2: 금융보증·사모채 포함"
+  },
+  {
+   "id": "B1",
+   "period": "2025-06-30",
+   "value": 1389000,
+   "raw": "1,389",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "Total Credit Portfolio² (BRL billion)",
+    "col": "2Q25"
+   },
+   "note": "원 단위 BRL billion→million. 각주2: 금융보증·사모채 포함"
+  },
+  {
+   "id": "B1_ex_FX",
+   "period": "2026-03-31",
+   "value": 1482700,
+   "raw": "1482.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "Total Credit Portfolio (excluding the effect of FX variation)² (R$ billion)",
+    "col": "1Q26"
+   },
+   "note": "환율효과 제외 기준, R$ billion→million"
+  },
+  {
+   "id": "B1_ex_FX",
+   "period": "2025-12-31",
+   "value": 1465300,
+   "raw": "1465.3",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "Total Credit Portfolio (excluding the effect of FX variation)² (R$ billion)",
+    "col": "4Q25"
+   },
+   "note": "환율효과 제외 기준, R$ billion→million"
+  },
+  {
+   "id": "B1_ex_FX",
+   "period": "2025-03-31",
+   "value": 1360200,
+   "raw": "1360.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "Total Credit Portfolio (excluding the effect of FX variation)² (R$ billion)",
+    "col": "1Q25"
+   },
+   "note": "환율효과 제외 기준, R$ billion→million"
+  },
+  {
+   "id": "B1_IFRS_loans_gross",
+   "period": "2026-06-30",
+   "value": 1082266,
+   "raw": "1,082,266",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme060.jpg",
+    "row": "Loans and lease operations by type / Total",
+    "col": "Gross book value 06/30/2026"
+   },
+   "note": "IFRS 대출·리스 총액(Note 10, 보증·사모채 미포함) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B1_IFRS_loans_gross",
+   "period": "2025-12-31",
+   "value": 1083798,
+   "raw": "1,083,798",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme060.jpg",
+    "row": "Loans and lease operations by type / Total",
+    "col": "Gross book value 12/31/2025"
+   },
+   "note": "IFRS 대출·리스 총액(Note 10, 보증·사모채 미포함) | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B2",
+   "period": "2026-06-30",
+   "value": 1.9,
+   "raw": "1.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "NPL ratio (90 days overdue) (%)",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2",
+   "period": "2026-03-31",
+   "value": 1.9,
+   "raw": "1.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "NPL ratio (90 days overdue) (%)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2",
+   "period": "2025-06-30",
+   "value": 1.9,
+   "raw": "1.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26001.jpg",
+    "row": "NPL ratio (90 days overdue) (%)",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2",
+   "period": "2025-12-31",
+   "value": 1.9,
+   "raw": "1.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "NPL ratio (90 days overdue) – Total (%)",
+    "col": "4Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2",
+   "period": "2025-03-31",
+   "value": 1.9,
+   "raw": "1.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults001.jpg",
+    "row": "NPL ratio (90 days overdue) – Total (%)",
+    "col": "1Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3",
+   "period": "2026-06-30",
+   "value": 3202125,
+   "raw": "3,202,125",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme018.jpg",
+    "row": "Total assets",
+    "col": "06/30/2026"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B3",
+   "period": "2025-12-31",
+   "value": 3066169,
+   "raw": "3,066,169",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme018.jpg",
+    "row": "Total assets",
+    "col": "12/31/2025"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": 217779,
+   "raw": "217,779",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme019.jpg",
+    "row": "Total stockholders’ equity attributed to the owners of the parent company",
+    "col": "06/30/2026"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B4",
+   "period": "2025-12-31",
+   "value": 204501,
+   "raw": "204,501",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme019.jpg",
+    "row": "Total stockholders’ equity attributed to the owners of the parent company",
+    "col": "12/31/2025"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B4",
+   "period": "2025-06-30",
+   "value": 208547,
+   "raw": "208,547",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme022.jpg",
+    "row": "Total - 06/30/2025",
+    "col": "Total stockholders’ equity – owners of the parent company"
+   },
+   "note": "자본변동표 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 12.3,
+   "raw": "12.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme131.jpg",
+    "row": "Common Equity Tier 1 ratio (%)",
+    "col": "06/30/2026"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B5",
+   "period": "2025-12-31",
+   "value": 12.3,
+   "raw": "12.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme131.jpg",
+    "row": "Common Equity Tier 1 ratio (%)",
+    "col": "12/31/2025"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 12.3,
+   "raw": "12.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000215/eng_pressreleasex2t26.htm",
+    "page": "eng_pressreleasex2t26002.jpg",
+    "row": "The Common Equity Tier 1 (CET1) ratio reached 12.3%",
+    "col": "본문"
+   },
+   "note": "FS note와 일치"
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 12.0,
+   "raw": "12.0%",
+   "unit": "%",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001132597-26-000153/pressreleaseontheresults.htm",
+    "page": "pressreleaseontheresults002.jpg",
+    "row": "Tier I Capital (CET I) reached 12.0% in March 2026",
+    "col": "본문"
+   },
+   "note": "라벨이 'Tier I Capital (CET I)'로 Tier 1과 CET1을 혼용 — 어느 비율인지 모호"
+  },
+  {
+   "id": "B5_CET1_amount",
+   "period": "2026-06-30",
+   "value": 194742,
+   "raw": "194,742",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme131.jpg",
+    "row": "Common Equity Tier 1 (CET 1)",
+    "col": "06/30/2026"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B5_CET1_amount",
+   "period": "2025-12-31",
+   "value": 185595,
+   "raw": "185,595",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme131.jpg",
+    "row": "Common Equity Tier 1 (CET 1)",
+    "col": "12/31/2025"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 1134485,
+   "raw": "1,134,485",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme070.jpg",
+    "row": "Deposits / Total",
+    "col": "06/30/2026 Amortized cost"
+   },
+   "note": "Note 15 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "B6",
+   "period": "2025-12-31",
+   "value": 1114482,
+   "raw": "1,114,482",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme070.jpg",
+    "row": "Deposits / Total",
+    "col": "12/31/2025 Amortized cost"
+   },
+   "note": "Note 15 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "S1_common",
+   "period": "2026-06-30",
+   "value": 5617742977,
+   "raw": "5,617,742,977",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme074.jpg",
+    "row": "Number of total shares at the end of the period (2) 06/30/2026",
+    "col": "Common"
+   },
+   "note": "자기주식 제외(각주2). 자기주식 우선주 4,996,650주 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "S1_preferred",
+   "period": "2026-06-30",
+   "value": 5404129565,
+   "raw": "5,404,129,565",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme074.jpg",
+    "row": "Number of total shares at the end of the period (2) 06/30/2026",
+    "col": "Preferred"
+   },
+   "note": "자기주식 제외(각주2). 자기주식 우선주 4,996,650주 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "S1_total",
+   "period": "2026-06-30",
+   "value": 11021872542,
+   "raw": "11,021,872,542",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme074.jpg",
+    "row": "Number of total shares at the end of the period (2) 06/30/2026",
+    "col": "Total"
+   },
+   "note": "자기주식 제외(각주2). 자기주식 우선주 4,996,650주 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "S1_common",
+   "period": "2025-12-31",
+   "value": 5617742977,
+   "raw": "5,617,742,977",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme074.jpg",
+    "row": "Number of total shares at the end of the period (2) 12/31/2025",
+    "col": "Common"
+   },
+   "note": "자기주식 제외 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "S1_preferred",
+   "period": "2025-12-31",
+   "value": 5408781553,
+   "raw": "5,408,781,553",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme074.jpg",
+    "row": "Number of total shares at the end of the period (2) 12/31/2025",
+    "col": "Preferred"
+   },
+   "note": "자기주식 제외 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "S1_total",
+   "period": "2025-12-31",
+   "value": 11026524530,
+   "raw": "11,026,524,530",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme074.jpg",
+    "row": "Number of total shares at the end of the period (2) 12/31/2025",
+    "col": "Total"
+   },
+   "note": "자기주식 제외 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R1_total_IOC",
+   "period": "2026H1",
+   "value": 9036,
+   "raw": "9,036",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme076.jpg",
+    "row": "Total - 01/01 to 06/30/2026",
+    "col": "Value"
+   },
+   "note": "자본이자(JCP) 총액(원천세 전). 원천세 (1,581), 순액 7,455 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R1_total_IOC",
+   "period": "2025H1",
+   "value": 8612,
+   "raw": "8,612",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme076.jpg",
+    "row": "Total - 01/01 to 06/30/2025",
+    "col": "Value"
+   },
+   "note": "원천세 (1,292), 순액 7,320 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R1_IOC_credited_2026-05-28",
+   "period": "2026Q2",
+   "value": 3989,
+   "raw": "3,989",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme076.jpg",
+    "row": "Interest on capital - credited on 05/28/2026 to be paid until 08/31/2026",
+    "col": "Value"
+   },
+   "note": "note상 주당 0.2986은 순액 기준 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R1_IOC_per_share_gross_2026-05-28",
+   "period": "2026Q2",
+   "value": 0.36188,
+   "raw": "R$0.36188",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme007.jpg",
+    "row": "Gross amount per share",
+    "col": "05/28/2026"
+   },
+   "note": "경영보고서 표; Total amount R$3.99 billion, Net amount per share R$0.298551 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R1_IOC_credited_2026-02-26",
+   "period": "2026Q1",
+   "value": 3845,
+   "raw": "3,845",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme076.jpg",
+    "row": "Interest on capital - credited on 02/26/2026 to be paid until 08/31/2026",
+    "col": "Value"
+   },
+   "note": "note상 주당 0.2878은 순액 기준 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R1_IOC_per_share_gross_2026-02-26",
+   "period": "2026Q1",
+   "value": 0.34888,
+   "raw": "R$0.34888",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme007.jpg",
+    "row": "Gross amount per share",
+    "col": "02/26/2026"
+   },
+   "note": "Total amount R$3.85 billion, Net per share R$0.287826 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R1_monthly_IOC_per_share",
+   "period": "2026H1",
+   "value": 0.015,
+   "raw": "0.0150",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme076.jpg",
+    "row": "Interest on capital - 5 monthly installments paid from February to June 2026",
+    "col": "Value per share (R$)"
+   },
+   "note": "월별 선지급, 5회 합계 1,002; 7/1 지급분 200 별도 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R1_quarter_total",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "R$ million",
+   "status": "null",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme076.jpg",
+    "row": "",
+    "col": ""
+   },
+   "note": "분기 단위 선언 총액(월별분 분기 배분 포함)은 공시에 없음"
+  },
+  {
+   "id": "R2",
+   "period": "2026H1",
+   "value": 1760,
+   "raw": "(1,760)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme074.jpg",
+    "row": "Acquisition of treasury shares",
+    "col": "06/30/2026 Amount"
+   },
+   "note": "우선주 36,555,258주 매입(자본 감소로 괄호 표기; 지출액 R$1,760m). 현금흐름표 Acquisition of treasury shares (1,760) 일치. 분기 구분 없음 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R2_shares",
+   "period": "2026H1",
+   "value": 36555258,
+   "raw": "36,555,258",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme074.jpg",
+    "row": "Acquisition of treasury shares",
+    "col": "Preferred"
+   },
+   "note": "원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  },
+  {
+   "id": "R2",
+   "period": "2025H1",
+   "value": 83,
+   "raw": "(83)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001132597-26-000224/completefinancialstateme.htm",
+    "page": "completefinancialstateme023.jpg",
+    "row": "Acquisition of treasury shares",
+    "col": "01/01 to 06/30/2025"
+   },
+   "note": "현금흐름표 | 원본 페이지 jpg가 폴더에 없음(SEC 접속 불가) → htm 내 해당 페이지의 숨김 텍스트 레이어(행 라벨·열 머리 순서)로 판독"
+  }
+ ]
+}

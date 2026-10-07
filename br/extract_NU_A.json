@@ -1,0 +1,1356 @@
+{
+ "ticker": "NU",
+ "currency": "US$ (단위 US$ million 통일; 재무제표 원 단위 US$ thousands)",
+ "items": [
+  {
+   "id": "X1_FS",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "prepared in accordance with International Financial Reporting Standards – Accounting Standards (IFRS Accounting Standards) as issued by the International Accounting Standards Board (“IASB”); (In thousands of U.S. Dollars, except earnings per share)",
+   "unit": "text",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Statement of compliance / statement headers",
+    "col": ""
+   },
+   "note": "회계기준 IFRS(IASB), 보고통화 US$, 재무제표 단위 US$ thousands"
+  },
+  {
+   "id": "X1_FS",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "International Financial Reporting Standards – Accounting Standards (IFRS - Accounting Standards) as issued by International Accounting Standards Board (“IASB”); (In thousands of U.S. Dollars, except earnings per share)",
+   "unit": "text",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Statement of compliance / statement headers",
+    "col": ""
+   },
+   "note": "회계기준 IFRS(IASB), US$ thousands"
+  },
+  {
+   "id": "X1_PR",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "released its financial results ... prepared in accordance with IFRS, as well as complementary managerial results; tables (in $ millions)",
+   "unit": "text",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm",
+    "page": "nupr2q266k_001.jpg",
+    "row": "본문 1페이지 / 표 캡션",
+    "col": ""
+   },
+   "note": "보도자료는 IFRS 회계 P&L + 비IFRS Managerial P&L 병기, 단위 $ millions"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 1060.199,
+   "raw": "1,060,199",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Net income attributable to shareholders of the parent company",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 636.838,
+   "raw": "636,838",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Net income attributable to shareholders of the parent company",
+    "col": "Three-month period ended 06/30/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 1932.255,
+   "raw": "1,932,255",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Net income attributable to shareholders of the parent company",
+    "col": "Six-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 872.056,
+   "raw": "872,056",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Net income attributable to shareholders of the parent company",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "Q1_total_incl_NCI",
+   "period": "2026Q2",
+   "value": 1061.089,
+   "raw": "1,061,089",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Net income for the period",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; 비지배지분 포함 총 순이익"
+  },
+  {
+   "id": "Q1_total_incl_NCI",
+   "period": "2025Q2",
+   "value": 636.987,
+   "raw": "636,987",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Net income for the period",
+    "col": "Three-month period ended 06/30/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; 비지배지분 포함"
+  },
+  {
+   "id": "Q1_total_incl_NCI",
+   "period": "2026Q1",
+   "value": 871.431,
+   "raw": "871,431",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Net income for the period",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; 비지배지분 포함"
+  },
+  {
+   "id": "Q2",
+   "period": "2026Q2",
+   "value": 1061.1,
+   "raw": "1,061.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_005.jpg",
+    "page": "nupr2q266k_005.jpg",
+    "row": "Net Income (Managerial P&L (in $ millions) - Three-month period ended)",
+    "col": "Q2'26"
+   },
+   "note": "회사 제시 명칭 \"Managerial P&L\" Net Income (비IFRS, IFRS 항목의 재분류 체계로 순이익은 보존; Reconciliation Bridge상 조정액 0.0). 비지배지분 포함 총 순이익과 동일 수치"
+  },
+  {
+   "id": "Q2",
+   "period": "2025Q2",
+   "value": 637.0,
+   "raw": "637.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_005.jpg",
+    "page": "nupr2q266k_005.jpg",
+    "row": "Net Income (Managerial P&L (in $ millions) - Three-month period ended)",
+    "col": "Q2'25"
+   },
+   "note": "회사 제시 명칭 \"Managerial P&L\" Net Income (비IFRS, IFRS 항목의 재분류 체계로 순이익은 보존; Reconciliation Bridge상 조정액 0.0). 비지배지분 포함 총 순이익과 동일 수치"
+  },
+  {
+   "id": "Q2",
+   "period": "2026Q1",
+   "value": 871.4,
+   "raw": "871.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Net Income (in $ millions) [MANAGERIAL FINANCIAL METRICS]",
+    "col": "Q1'26"
+   },
+   "note": "Managerial 순이익(비IFRS)"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 33.0,
+   "raw": "33%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "ROE [Summary of Consolidated Other Performance Metrics]",
+    "col": "Q2'26"
+   },
+   "note": "회사 제시 ROE; 연율 여부·산식은 보도자료에 명시되지 않음"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 29.0,
+   "raw": "29%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "ROE [Summary of Consolidated Other Performance Metrics]",
+    "col": "Q1'26"
+   },
+   "note": "회사 제시 ROE; 연율 여부·산식은 보도자료에 명시되지 않음"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 28.0,
+   "raw": "28%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "ROE [Summary of Consolidated Other Performance Metrics]",
+    "col": "Q2'25"
+   },
+   "note": "회사 제시 ROE; 연율 여부·산식은 보도자료에 명시되지 않음"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "NII reached $3.7 billion, up 9% QoQ",
+   "unit": "US$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_002.jpg",
+    "page": "nupr2q266k_002.jpg",
+    "row": "Financial Highlights 본문 (표 행 없음)",
+    "col": ""
+   },
+   "note": "회사 제시 \"Net Interest Income (NII)\"은 본문 반올림 수치($3.7 billion)뿐이고 표에 행이 없으며 정의 미공시. IFRS 손익의 Interest income(4,760.6)−Interest and other financial expenses(1,556.7)과도 일치하지 않아 Managerial 기준으로 보임 → 정확한 값·정의 확정 불가"
+  },
+  {
+   "id": "Q4_Interest income and gains net of losses on financial instruments",
+   "period": "2026Q2",
+   "value": 4760.573,
+   "raw": "4,760,573",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Interest income and gains net of losses on financial instruments",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 이자수익 행(NII 아님, 참고)"
+  },
+  {
+   "id": "Q4_Interest income and gains net of losses on financial instruments",
+   "period": "2025Q2",
+   "value": 3128.743,
+   "raw": "3,128,743",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Interest income and gains net of losses on financial instruments",
+    "col": "Three-month period ended 06/30/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 이자수익 행(참고)"
+  },
+  {
+   "id": "Q4_Interest income and gains net of losses on financial instruments",
+   "period": "2026Q1",
+   "value": 4275.313,
+   "raw": "4,275,313",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Interest income and gains net of losses on financial instruments",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 이자수익 행(참고)"
+  },
+  {
+   "id": "Q4_Interest and other financial expenses",
+   "period": "2026Q2",
+   "value": -1556.65,
+   "raw": "(1,556,650)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Interest and other financial expenses",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 이자비용 행(참고)"
+  },
+  {
+   "id": "Q4_Interest and other financial expenses",
+   "period": "2025Q2",
+   "value": -1029.989,
+   "raw": "(1,029,989)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Interest and other financial expenses",
+    "col": "Three-month period ended 06/30/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 이자비용 행(참고)"
+  },
+  {
+   "id": "Q4_Interest and other financial expenses",
+   "period": "2026Q1",
+   "value": -1269.184,
+   "raw": "(1,269,184)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Interest and other financial expenses",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 이자비용 행(참고)"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 752.635,
+   "raw": "752,635",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Fee and commission income",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 회계 수치"
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 539.727,
+   "raw": "539,727",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Fee and commission income",
+    "col": "Three-month period ended 06/30/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 692.654,
+   "raw": "692,654",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Fee and commission income",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 1445.289,
+   "raw": "1,445,289",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Fee and commission income",
+    "col": "Six-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "Q5_Managerial Fee Income",
+   "period": "2026Q2",
+   "value": 816.4,
+   "raw": "816.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_005.jpg",
+    "page": "nupr2q266k_005.jpg",
+    "row": "Fee Income (Managerial P&L)",
+    "col": "Q2'26"
+   },
+   "note": "비IFRS Managerial 수치"
+  },
+  {
+   "id": "Q5_Managerial Fee Income",
+   "period": "2025Q2",
+   "value": 541.6,
+   "raw": "541.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_005.jpg",
+    "page": "nupr2q266k_005.jpg",
+    "row": "Fee Income (Managerial P&L)",
+    "col": "Q2'25"
+   },
+   "note": "비IFRS Managerial 수치"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": -1482.213,
+   "raw": "(1,482,213)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Expected credit loss",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 손익계산서 행"
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": -1012.192,
+   "raw": "(1,012,192)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Expected credit loss",
+    "col": "Three-month period ended 06/30/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": -1718.015,
+   "raw": "(1,718,015)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Expected credit loss",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "Q6",
+   "period": "2026H1",
+   "value": -3200.228,
+   "raw": "(3,200,228)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Expected credit loss",
+    "col": "Six-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "Q6_Managerial Cost of Credit",
+   "period": "2026Q2",
+   "value": -1690.8,
+   "raw": "-1,690.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_005.jpg",
+    "page": "nupr2q266k_005.jpg",
+    "row": "Cost of Credit (Managerial P&L)",
+    "col": "Q2'26"
+   },
+   "note": "비IFRS Managerial 수치"
+  },
+  {
+   "id": "Q6_Managerial Cost of Credit",
+   "period": "2025Q2",
+   "value": -1051.1,
+   "raw": "-1,051.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_005.jpg",
+    "page": "nupr2q266k_005.jpg",
+    "row": "Cost of Credit (Managerial P&L)",
+    "col": "Q2'25"
+   },
+   "note": "비IFRS Managerial 수치"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 19.5,
+   "raw": "19.5%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Efficiency-Ratio",
+    "col": "Q2'26"
+   },
+   "note": "회사 제시 Efficiency Ratio"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 17.6,
+   "raw": "17.6%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Efficiency-Ratio",
+    "col": "Q1'26"
+   },
+   "note": "회사 제시 Efficiency Ratio"
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q2",
+   "value": 21.3,
+   "raw": "21.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Efficiency-Ratio",
+    "col": "Q2'25"
+   },
+   "note": "회사 제시 Efficiency Ratio"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": 0.2183,
+   "raw": "0.2183",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share – Basic",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "기본 EPS(보통주 Class A+B 합산 가중평균)"
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q2",
+   "value": 0.132,
+   "raw": "0.1320",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share – Basic",
+    "col": "Three-month period ended 06/30/2025"
+   },
+   "note": "기본 EPS(보통주 Class A+B 합산 가중평균)"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 0.3979,
+   "raw": "0.3979",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share – Basic",
+    "col": "Six-month period ended 06/30/2026"
+   },
+   "note": "기본 EPS(보통주 Class A+B 합산 가중평균)"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 0.1796,
+   "raw": "0.1796",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share – Basic",
+    "col": "03/31/2026"
+   },
+   "note": "기본 EPS(보통주 Class A+B 합산 가중평균)"
+  },
+  {
+   "id": "Q8_diluted",
+   "period": "2026Q2",
+   "value": 0.2162,
+   "raw": "0.2162",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share – Diluted",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "희석 EPS"
+  },
+  {
+   "id": "Q8_diluted",
+   "period": "2026Q1",
+   "value": 0.1776,
+   "raw": "0.1776",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share – Diluted",
+    "col": "03/31/2026"
+   },
+   "note": "희석 EPS"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 39400.0,
+   "raw": "39.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Total portfolio - credit card and loan (in $ billions)",
+    "col": "Q2'26"
+   },
+   "note": "원 단위 US$ billions → US$ millions 변환(반올림된 원수치 ×1000)"
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 37200.0,
+   "raw": "37.2",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Total portfolio - credit card and loan (in $ billions)",
+    "col": "Q1'26"
+   },
+   "note": "원 단위 US$ billions → US$ millions 변환(반올림된 원수치 ×1000)"
+  },
+  {
+   "id": "B1",
+   "period": "2025-06-30",
+   "value": 27300.0,
+   "raw": "27.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Total portfolio - credit card and loan (in $ billions)",
+    "col": "Q2'25"
+   },
+   "note": "원 단위 US$ billions → US$ millions 변환(반올림된 원수치 ×1000)"
+  },
+  {
+   "id": "B1_Credit card receivables (gross)",
+   "period": "2026-06-30",
+   "value": 25961.122,
+   "raw": "25,961,122",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Credit card receivables (note 13, gross)",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; ECL 차감 전"
+  },
+  {
+   "id": "B1_Credit card receivables (gross)",
+   "period": "2026-03-31",
+   "value": 24301.844,
+   "raw": "24,301,844",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Credit card receivables (note 13, gross)",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; ECL 차감 전"
+  },
+  {
+   "id": "B1_Total loans (gross)",
+   "period": "2026-06-30",
+   "value": 13437.254,
+   "raw": "13,437,254",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Total loans (i) (note 14)",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; ECL 차감 전"
+  },
+  {
+   "id": "B1_Total loans (gross)",
+   "period": "2026-03-31",
+   "value": 12904.339,
+   "raw": "12,904,339",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Total loans (i) (note 14)",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; ECL 차감 전"
+  },
+  {
+   "id": "B2",
+   "period": "2026-06-30",
+   "value": 6.9,
+   "raw": "6.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "NPL 90+",
+    "col": "Q2'26"
+   },
+   "note": "회사 제시 NPL 90+ 비율"
+  },
+  {
+   "id": "B2",
+   "period": "2026-03-31",
+   "value": 6.5,
+   "raw": "6.5%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "NPL 90+",
+    "col": "Q1'26"
+   },
+   "note": "회사 제시 NPL 90+ 비율"
+  },
+  {
+   "id": "B2",
+   "period": "2025-06-30",
+   "value": 6.5,
+   "raw": "6.5%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "NPL 90+",
+    "col": "Q2'25"
+   },
+   "note": "회사 제시 NPL 90+ 비율"
+  },
+  {
+   "id": "B2_Credit card receivables overdue Over 90 days",
+   "period": "2026-06-30",
+   "value": 6.3,
+   "raw": "6.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Receivables overdue by: Over 90 days (credit card, note 13)",
+    "col": "06/30/2026 %"
+   },
+   "note": "카드채권 총액 대비 비중(참고)"
+  },
+  {
+   "id": "B2_Credit card receivables overdue Over 90 days",
+   "period": "2026-03-31",
+   "value": 6.0,
+   "raw": "6.0%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Receivables overdue by: Over 90 days (credit card, note 13)",
+    "col": "03/31/2026 %"
+   },
+   "note": "카드채권 총액 대비 비중(참고)"
+  },
+  {
+   "id": "B2_Loans to customers overdue Over 90 days",
+   "period": "2026-06-30",
+   "value": 1.8,
+   "raw": "1.8%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Loans to customers overdue by: Over 90 days (note 14)",
+    "col": "06/30/2026 %"
+   },
+   "note": "대출 총액 대비 비중(참고)"
+  },
+  {
+   "id": "B2_Loans to customers overdue Over 90 days",
+   "period": "2026-03-31",
+   "value": 1.6,
+   "raw": "1.6%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Loans to customers overdue by: Over 90 days (note 14)",
+    "col": "03/31/2026 %"
+   },
+   "note": "대출 총액 대비 비중(참고)"
+  },
+  {
+   "id": "B3",
+   "period": "2026-06-30",
+   "value": 82753.414,
+   "raw": "82,753,414",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Total assets",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B3",
+   "period": "2026-03-31",
+   "value": 77456.407,
+   "raw": "77,456,407",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Total assets",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B3",
+   "period": "2025-12-31",
+   "value": 74893.877,
+   "raw": "74,893,877",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Total assets",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": 13249.67,
+   "raw": "13,249,670",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to shareholders of the parent company",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B4",
+   "period": "2026-03-31",
+   "value": 12588.777,
+   "raw": "12,588,777",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to shareholders of the parent company",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B4",
+   "period": "2025-12-31",
+   "value": 11290.948,
+   "raw": "11,290,948",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to shareholders of the parent company",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 11.9,
+   "raw": "11.9%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "CET1 ratio (Prudential conglomerate)",
+    "col": "06/30/2026"
+   },
+   "note": "범위: 브라질 중앙은행 기준 Nu Pagamentos 주도 prudential conglomerate(브라질), Nu Holdings 연결 기준 아님"
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 11.3,
+   "raw": "11.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "CET1 ratio (Prudential conglomerate)",
+    "col": "03/31/2026"
+   },
+   "note": "범위: 브라질 중앙은행 기준 Nu Pagamentos 주도 prudential conglomerate(브라질), Nu Holdings 연결 기준 아님"
+  },
+  {
+   "id": "B5",
+   "period": "2025-12-31",
+   "value": 13.0,
+   "raw": "13.0%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "CET1 ratio (Prudential conglomerate)",
+    "col": "12/31/2025"
+   },
+   "note": "범위: 브라질 중앙은행 기준 Nu Pagamentos 주도 prudential conglomerate(브라질), Nu Holdings 연결 기준 아님"
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 45328.419,
+   "raw": "45,328,419",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Deposits (Financial liabilities at amortized cost)",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B6",
+   "period": "2026-03-31",
+   "value": 42448.121,
+   "raw": "42,448,121",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Deposits (Financial liabilities at amortized cost)",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B6",
+   "period": "2025-12-31",
+   "value": 41925.101,
+   "raw": "41,925,101",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Deposits",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환"
+  },
+  {
+   "id": "B6",
+   "period": "2025-06-30",
+   "value": 36600.0,
+   "raw": "36.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Deposits (in $ billions)",
+    "col": "Q2'25"
+   },
+   "note": "원 단위 US$ billions → US$ millions(반올림 원수치)"
+  },
+  {
+   "id": "S1_Class A",
+   "period": "2026-06-30",
+   "value": 3808087961,
+   "raw": "3,808,087,961",
+   "unit": "shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Total as of June 30, 2026 (Shares authorized and fully issued)",
+    "col": "Class A Ordinary shares"
+   },
+   "note": "행 라벨은 \"authorized and fully issued\"이나 표에서 Shares repurchased (40,659,600)를 차감함. 본문은 해당 주식이 소각 없이 treasury 보유라고 기재 → 자기주식 제외 유통주식인지 발행주식인지 라벨과 처리 불일치"
+  },
+  {
+   "id": "S1_Class B",
+   "period": "2026-06-30",
+   "value": 1022600698,
+   "raw": "1,022,600,698",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Total as of June 30, 2026 (Shares authorized and fully issued)",
+    "col": "Class B Ordinary shares"
+   },
+   "note": "Class B 자기주식 없음"
+  },
+  {
+   "id": "S1_Class A treasury",
+   "period": "2026-06-30",
+   "value": 40659600,
+   "raw": "40,659,600",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Note 31: Company held 40,659,600 Class A ordinary shares in treasury",
+    "col": "본문"
+   },
+   "note": "자기주식"
+  },
+  {
+   "id": "S1_Class A",
+   "period": "2026-03-31",
+   "value": 3839140553,
+   "raw": "3,839,140,553",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Total as of March 31, 2026 (Shares authorized and fully issued)",
+    "col": "Class A Ordinary shares"
+   },
+   "note": "2026Q1 자사주 매입 없음(프로그램은 2026-06-04 시작, 12/31/2025 treasury 없음)"
+  },
+  {
+   "id": "S1_Class B",
+   "period": "2026-03-31",
+   "value": 1022600698,
+   "raw": "1,022,600,698",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Total as of March 31, 2026 (Shares authorized and fully issued)",
+    "col": "Class B Ordinary shares"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1",
+   "period": "2026H1",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "배당·자본이자 선언 공시 없음(Q2 재무제표·보도자료, Q1 재무제표 확인)"
+  },
+  {
+   "id": "R2",
+   "period": "2026H1",
+   "value": -500.393,
+   "raw": "(500,393)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Repurchase of shares (Cash flows in financing activities)",
+    "col": "06/30/2026 (six-month)"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; 40,659,600 Class A주 매입. 프로그램(최대 US$1.0 billion) 2026-06-03 승인·06-04 시작 → 실질적으로 2026Q2(6월) 집행; 잔여 한도 US$499,607 thousand"
+  },
+  {
+   "id": "R2_shares",
+   "period": "2026H1",
+   "value": 40659600,
+   "raw": "40,659,600",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Shares repurchased (note 31 table)",
+    "col": "Class A Ordinary shares"
+   },
+   "note": ""
+  },
+  {
+   "id": "NU_customers",
+   "period": "2026Q2",
+   "value": 138.9,
+   "raw": "138.9",
+   "unit": "million customers",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Number of Customers (in millions)",
+    "col": "Q2'26"
+   },
+   "note": ""
+  },
+  {
+   "id": "NU_customers",
+   "period": "2026Q1",
+   "value": 135.2,
+   "raw": "135.2",
+   "unit": "million customers",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Number of Customers (in millions)",
+    "col": "Q1'26"
+   },
+   "note": ""
+  },
+  {
+   "id": "NU_customers",
+   "period": "2025Q2",
+   "value": 122.7,
+   "raw": "122.7",
+   "unit": "million customers",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Number of Customers (in millions)",
+    "col": "Q2'25"
+   },
+   "note": ""
+  },
+  {
+   "id": "NU_revenue",
+   "period": "2026Q2",
+   "value": 5513.208,
+   "raw": "5,513,208",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Total revenue",
+    "col": "Three-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS 회계 Total revenue"
+  },
+  {
+   "id": "NU_revenue",
+   "period": "2025Q2",
+   "value": 3668.47,
+   "raw": "3,668,470",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Total revenue",
+    "col": "Three-month period ended 06/30/2025"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "NU_revenue",
+   "period": "2026Q1",
+   "value": 4967.967,
+   "raw": "4,967,967",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003053/nufs1q26_6k.htm",
+    "page": "",
+    "row": "Total revenue",
+    "col": "03/31/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "NU_revenue",
+   "period": "2026H1",
+   "value": 10481.175,
+   "raw": "10,481,175",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004225/nufs2q26_6k.htm",
+    "page": "",
+    "row": "Total revenue",
+    "col": "Six-month period ended 06/30/2026"
+   },
+   "note": "원 단위 US$ thousands → US$ millions 변환; IFRS"
+  },
+  {
+   "id": "NU_revenue_Managerial Total Revenue",
+   "period": "2026Q2",
+   "value": 5875.7,
+   "raw": "5,875.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Total Revenue (in $ millions) [MANAGERIAL FINANCIAL METRICS]",
+    "col": "Q2'26"
+   },
+   "note": "비IFRS Managerial 수치(본문 \"gross revenue\")"
+  },
+  {
+   "id": "NU_revenue_Managerial Total Revenue",
+   "period": "2026Q1",
+   "value": 5315.5,
+   "raw": "5,315.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Total Revenue (in $ millions) [MANAGERIAL FINANCIAL METRICS]",
+    "col": "Q1'26"
+   },
+   "note": "비IFRS Managerial 수치(본문 \"gross revenue\")"
+  },
+  {
+   "id": "NU_revenue_Managerial Total Revenue",
+   "period": "2025Q2",
+   "value": 3772.3,
+   "raw": "3,772.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm / nupr2q266k_004.jpg",
+    "page": "nupr2q266k_004.jpg",
+    "row": "Total Revenue (in $ millions) [MANAGERIAL FINANCIAL METRICS]",
+    "col": "Q2'25"
+   },
+   "note": "비IFRS Managerial 수치(본문 \"gross revenue\")"
+  },
+  {
+   "id": "NU_adjusted_net_income",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004222/nupr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "\"Adjusted Net Income\" 명칭 지표 미공시. Managerial P&L Net Income(Q2 항목)만 제시"
+  }
+ ]
+}

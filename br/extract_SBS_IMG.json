@@ -1,0 +1,455 @@
+{
+ "ticker": "SBS",
+ "items": [
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 1447.184,
+   "raw": "1,447,184",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_006.jpg",
+    "page": 6,
+    "row": "Controlling shareholders",
+    "col": "Consolidated April to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 3196.215,
+   "raw": "3,196,215",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_006.jpg",
+    "page": 6,
+    "row": "Controlling shareholders",
+    "col": "Consolidated January to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 2135.962,
+   "raw": "2,135,962",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_006.jpg",
+    "page": 6,
+    "row": "Controlling shareholders",
+    "col": "Consolidated April to June 2025"
+   },
+   "note": "원문 R$ thousand ÷1000; 2Q25 비지배지분 없음(—)"
+  },
+  {
+   "id": "Q5_total",
+   "period": "2026Q2",
+   "value": 1464.433,
+   "raw": "1,464,433",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_006.jpg",
+    "page": 6,
+    "row": "Profit for the period",
+    "col": "Consolidated April to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; NCI 17,249"
+  },
+  {
+   "id": "Q5_total",
+   "period": "2026H1",
+   "value": 3213.464,
+   "raw": "3,213,464",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_006.jpg",
+    "page": 6,
+    "row": "Profit for the period",
+    "col": "Consolidated January to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; NCI 17,249"
+  },
+  {
+   "id": "Q5_total",
+   "period": "2025Q2",
+   "value": 2135.962,
+   "raw": "2,135,962",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_006.jpg",
+    "page": 6,
+    "row": "Profit for the period",
+    "col": "Consolidated April to June 2025"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 0.41,
+   "raw": "0.41",
+   "unit": "R$/share",
+   "status": "confirmed",
+   "source": {
+    "file": "image_006.jpg",
+    "page": 6,
+    "row": "Earnings per share - basic and diluted (in reais)",
+    "col": "Consolidated April to June 2026"
+   },
+   "note": "Note 29(p79) 동일; 1:5 분할 소급"
+  },
+  {
+   "id": "Q7",
+   "period": "2026H1",
+   "value": 0.91,
+   "raw": "0.91",
+   "unit": "R$/share",
+   "status": "confirmed",
+   "source": {
+    "file": "image_006.jpg",
+    "page": 6,
+    "row": "Earnings per share - basic and diluted (in reais)",
+    "col": "Consolidated January to June 2026"
+   },
+   "note": "Note 29(p79) 동일"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 4127.702,
+   "raw": "4,127,702",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_010.jpg",
+    "page": 10,
+    "row": "Net cash generated from operating activities",
+    "col": "Consolidated January to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": null,
+   "raw": null,
+   "unit": "R$ million",
+   "status": "not_disclosed",
+   "source": {
+    "file": "image_010.jpg",
+    "page": 10,
+    "row": "Net cash generated from operating activities",
+    "col": "-"
+   },
+   "note": "ITR 현금흐름표는 누적(1~6월)만 제시, 분기 단독 표 없음. 차감 계산하지 않음"
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2026H1",
+   "value": -8532.006,
+   "raw": "(8,532,006)",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_010.jpg",
+    "page": 10,
+    "row": "Acquisition of contract assets, intangible assets and property, plant and equipment",
+    "col": "Consolidated January to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 4243.477,
+   "raw": "4,243,477",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_002.jpg",
+    "page": 2,
+    "row": "Cash and cash equivalents",
+    "col": "Consolidated June 30, 2026"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "B2",
+   "period": "2026-06-30",
+   "value": 13197.409,
+   "raw": "13,197,409",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_002.jpg",
+    "page": 2,
+    "row": "Financial investments",
+    "col": "Consolidated June 30, 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; 유동자산"
+  },
+  {
+   "id": "B3_current",
+   "period": "2026-06-30",
+   "value": 5289.831,
+   "raw": "5,289,831",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_003.jpg",
+    "page": 3,
+    "row": "Borrowings and financing (current liabilities)",
+    "col": "Consolidated June 30, 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; 사채·리스 포함(Note 17)"
+  },
+  {
+   "id": "B3_noncurrent",
+   "period": "2026-06-30",
+   "value": 46367.971,
+   "raw": "46,367,971",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_003.jpg",
+    "page": 3,
+    "row": "Borrowings and financing (non-current liabilities)",
+    "col": "Consolidated June 30, 2026"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "B3_total",
+   "period": "2026-06-30",
+   "value": 51657.802,
+   "raw": "51,657,802",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_055.jpg",
+    "page": 55,
+    "row": "Total borrowings and financing",
+    "col": "Consolidated June 30, 2026 Total"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "B3_debentures",
+   "period": "2026-06-30",
+   "value": 25234.374,
+   "raw": "25,234,374",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_055.jpg",
+    "page": 55,
+    "row": "Debentures",
+    "col": "Consolidated June 30, 2026 Total"
+   },
+   "note": "원문 R$ thousand ÷1000; 유동 2,769,993 / 비유동 22,464,381; 이자는 별도 Interest 행"
+  },
+  {
+   "id": "B3_debentures_current",
+   "period": "2026-06-30",
+   "value": 2769.993,
+   "raw": "2,769,993",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_055.jpg",
+    "page": 55,
+    "row": "Debentures",
+    "col": "Consolidated June 30, 2026 Current"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "B3_debentures_noncurrent",
+   "period": "2026-06-30",
+   "value": 22464.381,
+   "raw": "22,464,381",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_055.jpg",
+    "page": 55,
+    "row": "Debentures",
+    "col": "Consolidated June 30, 2026 Non-current"
+   },
+   "note": "원문 R$ thousand ÷1000"
+  },
+  {
+   "id": "B3_lease_concession",
+   "period": "2026-06-30",
+   "value": 190.078,
+   "raw": "190,078",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_055.jpg",
+    "page": 55,
+    "row": "Leases (concession)",
+    "col": "Consolidated June 30, 2026 Total"
+   },
+   "note": "원문 R$ thousand ÷1000; 유동 81,009 / 비유동 109,069; 차입금에 포함, BS 별도 리스부채 행 없음"
+  },
+  {
+   "id": "B3_lease_others",
+   "period": "2026-06-30",
+   "value": 75.099,
+   "raw": "75,099",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_055.jpg",
+    "page": 55,
+    "row": "Leases (others)",
+    "col": "Consolidated June 30, 2026 Total"
+   },
+   "note": "원문 R$ thousand ÷1000; 유동 64,733 / 비유동 10,366; 차입금에 포함"
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": 34216.916,
+   "raw": "34,216,916",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_032.jpg",
+    "page": 32,
+    "row": "Net debt",
+    "col": "Consolidated June 30, 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; 정의: Total borrowings and financing(Note 17) − cash and cash equivalents − financial investments (Note 5.2 Capital Management). OCR은 34,016,916으로 오인했으나 이미지 확인 34,216,916"
+  },
+  {
+   "id": "S1_issued_common",
+   "period": "2026-06-30",
+   "value": 3524534025,
+   "raw": "3,524,534,025",
+   "unit": "shares",
+   "status": "confirmed",
+   "source": {
+    "file": "image_077.jpg",
+    "page": 77,
+    "row": "Total - Common Number of Shares",
+    "col": "June 30, 2026"
+   },
+   "note": "1:5 분할 후; 우선주(golden share) 1주 별도, 총 3,524,534,026"
+  },
+  {
+   "id": "S1_treasury",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": null,
+   "unit": "shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "image_004.jpg",
+    "page": 4,
+    "row": "Treasury shares",
+    "col": "Consolidated June 30, 2026"
+   },
+   "note": "BS에 금액 (472,000) R$ thousand(=R$472.0mn)만 있고 자기주식 수는 확인한 페이지(4,77-79)에 없음. image_087.jpg는 이미지가 아닌 HTML(다운로드 실패)이라 미확인"
+  },
+  {
+   "id": "S1_wavg_basic",
+   "period": "2026Q2",
+   "value": 3523385573,
+   "raw": "3,523,385,573",
+   "unit": "shares",
+   "status": "confirmed",
+   "source": {
+    "file": "image_079.jpg",
+    "page": 79,
+    "row": "Weighted average number of common shares issued for basic earnings per share",
+    "col": "April to June 2026"
+   },
+   "note": "H1도 동일 3,523,385,573; 희석 3,523,860,958"
+  },
+  {
+   "id": "Q2_sanitation",
+   "period": "2026Q2",
+   "value": 6440.64,
+   "raw": "6,440,640",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_082.jpg",
+    "page": 82,
+    "row": "Net operating revenue",
+    "col": "Consolidated Sanitation April to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; 총매출 7,006,944"
+  },
+  {
+   "id": "Q2_sanitation",
+   "period": "2026H1",
+   "value": 12772.172,
+   "raw": "12,772,172",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_082.jpg",
+    "page": 82,
+    "row": "Net operating revenue",
+    "col": "Consolidated Sanitation January to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; 총매출 13,756,035"
+  },
+  {
+   "id": "Q2_other",
+   "period": "2026Q2",
+   "value": 3768.262,
+   "raw": "3,768,262",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_082.jpg",
+    "page": 82,
+    "row": "Net operating revenue",
+    "col": "Consolidated Other segments (i) April to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; 에너지(EMAE)+건설수익; 총매출 3,790,477"
+  },
+  {
+   "id": "Q2_other",
+   "period": "2026H1",
+   "value": 7401.572,
+   "raw": "7,401,572",
+   "unit": "R$ million",
+   "status": "confirmed",
+   "source": {
+    "file": "image_082.jpg",
+    "page": 82,
+    "row": "Net operating revenue",
+    "col": "Consolidated Other segments (i) January to June 2026"
+   },
+   "note": "원문 R$ thousand ÷1000; 총매출 7,423,788"
+  },
+  {
+   "id": "X1",
+   "period": "2026H1",
+   "value": null,
+   "raw": "prepared based on CPC 21 (R1) and IAS 34 – Interim Financial Reporting, issued by the IASB ... In thousands of reais",
+   "unit": "text",
+   "status": "confirmed",
+   "source": {
+    "file": "image_020.jpg",
+    "page": 20,
+    "row": "Note 2 Basis of preparation",
+    "col": "-"
+   },
+   "note": "보고통화 명시 문장 없음, 모든 표 캡션 'In thousands of reais'(p21: amounts in Notes presented in thousands of reais)"
+  }
+ ]
+}

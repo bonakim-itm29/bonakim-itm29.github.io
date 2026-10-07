@@ -1,0 +1,22 @@
+{"ticker":"VALE",
+ "top":[{"date":"2019-01-28","filed":"2019-01-25 ~ 2019-01-28","title_ko":"브루마지뉴 광미댐 붕괴와 법원 자산동결·배당 중단",
+  "summary_ko":"2019년 1월 25일(금) 미나스제라이스주 브루마지뉴의 Córrego do Feijão 광산 1번 댐이 붕괴했다고 발표했고, 주말 동안 법원이 R$110억 규모 은행계좌 압류 가처분을 내렸으며 이사회는 주주환원 정책을 중단했다. 첫 거래일인 1월 28일 ADR은 -18.0% 하락했는데 매크로 모델 예측은 -1.8%에 불과해 잔차가 -18.0%였다.",
+  "why_important_ko":"표본 기간 중 가장 큰 비매크로 하락으로, 인명 사고·소송·규제 제재·배당 중단이 한꺼번에 겹쳐 회사의 지배구조와 주주환원 방향을 바꾼 사건이다.",
+  "facts":[
+   {"fact_ko":"1월 25일 오후 Feijão 광산 1번 댐 붕괴","quote":"there was a breach of Dam 1 of the Feijão Mine in Brumadinho (MG)","file":"VALE__000110465919003406__a19-3495_26k.htm"},
+   {"fact_ko":"법원 가처분으로 은행계좌 R$110억 압류","quote":"granted attachments on Vale's bank accounts on the total value of R$ 11,000,000,000.00","file":"VALE__000110465919003494__a19-3553_26k.htm"},
+   {"fact_ko":"IBAMA 행정 제재 R$2.5억","quote":"administrative sanctions by IBAMA and SUFIS-MG, in the amount of R$ 250,000,000","file":"VALE__000110465919003494__a19-3553_26k.htm"},
+   {"fact_ko":"이사회, 배당·자사주매입 등 주주환원 정책 중단","quote":"The suspension of the Shareholder Remuneration Policy, and therefore the non-payment of dividends","file":"VALE__000110465919003495__a19-3553_36k.htm"},
+   {"fact_ko":"댐은 1976년 상류식(upstream)으로 건설, 2015년 이후 비가동","quote":"The dam was built in 1976 by Ferteco Mineração ... using the upstream method.","file":"VALE__000110465919003496__a19-3553_16k.htm"}]}],
+ "others":[
+  {"date":"2016-02-04","filed":"2016-02-01","title_ko":"사마르쿠 댐 사고 관련 R$202억 공공민사소송 피소 통지(주가는 상승, 연관성 약함)","R":0.1595,"res":0.115,"file":"VALE__000110465916092613__a16-3154_26k.htm"},
+  {"date":"2016-03-08","filed":"2016-03-07","title_ko":"Fortescue와 중국 블렌딩 JV 등 비구속 MoU 체결","R":-0.1398,"res":-0.0987,"file":"VALE__000110465916103026__a16-5700_26k.htm"},
+  {"date":"2022-11-11","filed":"2022-11-08","title_ko":"6-K 원문은 표지·서명면만 있어 내용 미확인","R":0.1155,"res":0.0926,"file":"VALE__000129281422004335__vale20221107_6k2.htm"},
+  {"date":"2015-04-24","filed":"2015-04-22","title_ko":"6-K(원문 로컬 미보유, 내용 미확인)","R":0.1124,"res":0.0898,"file":"https://www.sec.gov/Archives/edgar/data/0000917851/000110465915029228/a15-9630_16k.htm"},
+  {"date":"2016-06-03","filed":"2016-06-01","title_ko":"6-K(원문 로컬 미보유, 내용 미확인)","R":0.1108,"res":0.0648,"file":"https://www.sec.gov/Archives/edgar/data/0000917851/000110465916124675/a16-12599_16k.htm"}],
+ "no_filing_moves":[
+  {"date":"2016-03-16","R":0.1243,"res":0.1158,"cause_ko":"원인 미확인 (웹 검색에서 날짜가 맞는 신뢰 출처 없음)","url":""},
+  {"date":"2016-02-22","R":0.1361,"res":0.0956,"cause_ko":"원인 미확인","url":""},
+  {"date":"2015-01-23","R":-0.0967,"res":-0.0903,"cause_ko":"원인 미확인 (Bloomberg의 S&P 등급 강등 기사는 2015-01-26자로 반응일과 불일치)","url":""},
+  {"date":"2016-05-09","R":-0.0983,"res":-0.0796,"cause_ko":"원인 미확인","url":""},
+  {"date":"2015-08-27","R":0.1261,"res":0.0643,"cause_ko":"원인 미확인","url":""}]}

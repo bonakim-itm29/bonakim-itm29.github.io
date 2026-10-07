@@ -1,0 +1,95 @@
+{
+ "ticker": "BBD",
+ "top": [
+  {
+   "date": "2022-11-09",
+   "filed": "2022-11-08 (가이던스 수정), 2022-11-09 (3Q22 실적)",
+   "title_ko": "3Q22 실적과 함께 대손비용 가이던스 대폭 상향",
+   "summary_ko": "3분기 실적 발표 직전 브라데스쿠는 2022년 확대 대손충당금(Expanded ALL) 가이던스를 R$17.0~21.0bn에서 R$25.5~27.5bn으로 올렸고, 다른 지표는 유지했다. ADR은 당일 -18.6% 하락했으며 매크로 모델 예측은 -0.6%, 잔차는 -19.9%로 표본 내 최대 비매크로 하락이다. 실적 보도자료·재무제표 본문은 이미지 형식이라 순이익 수치는 원문에서 확인하지 못했다(모호).",
+   "why_important_ko": "회사가 신용비용 급증을 스스로 공식화한 사건으로, 매크로로 설명되지 않는 표본 내 최대 하락(잔차 -19.9%)이다.",
+   "facts": [
+    {
+     "fact_ko": "회사가 2022년 가이던스를 수정했다고 공시",
+     "quote": "Banco Bradesco S.A. informs to the market that has revised the guidance for this year",
+     "file": "BBD__000129281422004351__bbd20221108_6k.htm"
+    },
+    {
+     "fact_ko": "확대 대손충당금 가이던스: 기존 R$17.0~21.0bn → 수정 R$25.5~27.5bn (9M22 실적 R$17.4bn)",
+     "quote": "Expanded ALL (R$ billion) | R$17.0 to R$21.0 | R$25.5 to R$27.5 | R$17.4",
+     "file": "BBD__000129281422004351__bbd20221108_6k.htm"
+    },
+    {
+     "fact_ko": "대출·수수료·비용 등 나머지 지표는 '유지'",
+     "quote": "Fee and Commission Income | 4% to 8% | Maintained",
+     "file": "BBD__000129281422004351__bbd20221108_6k.htm"
+    }
+   ]
+  },
+  {
+   "date": "2024-02-07",
+   "filed": "2024-02-06 (Cielo 공개매수), 2024-02-07 (4Q23 실적·2024 가이던스)",
+   "title_ko": "4Q23 실적과 보수적인 2024 가이던스",
+   "summary_ko": "4Q23 실적과 함께 2024년 가이던스를 공시했으며, 확대 대손충당금 R$35~39bn, 순이자이익 증가율 3~7%, 대출 증가율 7~11%를 제시했다. 직전일에는 Banco do Brasil과 함께 Cielo 상장폐지 공개매수(주당 R$5.35)도 발표됐다. ADR은 -15.5% 하락했고 매크로 예측은 +0.2%, 잔차는 -17.0%였다. 실적 본문은 이미지 형식이라 순이익 수치는 미확인(모호).",
+   "why_important_ko": "높은 신용비용과 낮은 이자이익 성장을 회사가 연간 목표로 확인해 수익성 회복 기대를 꺾은 날로, 2022년 이후 두 번째로 큰 비매크로 하락이다.",
+   "facts": [
+    {
+     "fact_ko": "2024 성장 가이던스 공시",
+     "quote": "Banco Bradesco S.A. informs to the market its 2024 growth guidance",
+     "file": "BBD__000129281424000349__bbd20240207_6k.htm"
+    },
+    {
+     "fact_ko": "확대 대손충당금 R$35~39bn, 순이자이익 증가 3~7%",
+     "quote": "Expanded ALL (R$ billion) | R$35 to R$39",
+     "file": "BBD__000129281424000349__bbd20240207_6k.htm"
+    },
+    {
+     "fact_ko": "Cielo 상장폐지 공개매수 가격 주당 R$5.35",
+     "quote": "The price offered for each Tender Offer Shares will be R$5,35.",
+     "file": "BBD__000129281424000313__bbd20240205_6k.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2025-05-08",
+   "filed": "2025-05-07/08",
+   "title_ko": "1Q25 실적 발표 및 자사주 매입 프로그램 갱신(최대 106,584,881주, 2025.5.8~2026.11.8)",
+   "R": 0.1894,
+   "res": 0.1743,
+   "file": "BBD__000129281425001896__bbd20250507_6k.htm"
+  },
+  {
+   "date": "2010-01-20",
+   "filed": "2010-01-19",
+   "title_ko": "월 배당 공시(보통주 R$0.013219250) — 하락 원인과 무관해 보임",
+   "R": -0.113,
+   "res": -0.0959,
+   "file": "BBD__000129281410000114__bbd20100118_6k.htm"
+  },
+  {
+   "date": "2023-01-03",
+   "filed": "2023-01-03",
+   "title_ko": "6-K 2건(내용 미확인, 로컬 원문 없음)",
+   "R": -0.1111,
+   "res": -0.0935,
+   "file": "https://www.sec.gov/Archives/edgar/data/0001160330/000129281423000014/bbd20230103_6k.htm"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2022-04-19",
+   "R": -0.0976,
+   "res": -0.1043,
+   "cause_ko": "10% 무상주(보너스 주식) 배정 기준일(4/18) 다음 거래일. 1:10 무상주 반영에 따른 가격 조정(약 -9%)과 일치하는 기술적 하락으로 보임(ADR 반영일은 원문에 없어 모호). 인용: 'acionistas que estiverem inscritos nos registros do banco no dia 18 de abril'",
+   "url": "https://forbes.com.br/forbes-money/2022/04/bradesco-bbdc4-anuncia-bonificacao-de-10-em-acoes-veja-os-destaques-do-radar/"
+  },
+  {
+   "date": "2018-04-02",
+   "R": -0.1002,
+   "res": -0.0918,
+   "cause_ko": "공시 없음·원인 미확인",
+   "url": ""
+  }
+ ]
+}

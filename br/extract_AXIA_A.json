@@ -1,0 +1,2511 @@
+{
+ "ticker": "AXIA",
+ "currency": "BRL (R$ million)",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 11188.0,
+   "raw": "11,188",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q26"
+   },
+   "note": "IFRS 회계 수치"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 10199.0,
+   "raw": "10,199",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q25"
+   },
+   "note": "IFRS 회계 수치"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 12712.0,
+   "raw": "12,712",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 1Q26"
+   },
+   "note": "IFRS 회계 수치"
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 23900.0,
+   "raw": "23,900",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M26"
+   },
+   "note": "IFRS 회계 수치"
+  },
+  {
+   "id": "Q1",
+   "period": "2025H1",
+   "value": 20613.0,
+   "raw": "20,613",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M25"
+   },
+   "note": "IFRS 회계 수치"
+  },
+  {
+   "id": "Q1_Adjusted_Net_Operating_Revenue",
+   "period": "2026Q2",
+   "value": 11188.0,
+   "raw": "11,188",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q26"
+   },
+   "note": "회사 제시 조정치(비경상 제외, IFRS 기준). 회계 수치 아님"
+  },
+  {
+   "id": "Q1_Adjusted_Net_Operating_Revenue",
+   "period": "2025Q2",
+   "value": 10308.0,
+   "raw": "10,308",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q25"
+   },
+   "note": "회사 제시 조정치(비경상 제외, IFRS 기준). 회계 수치 아님"
+  },
+  {
+   "id": "Q1_Adjusted_Net_Operating_Revenue",
+   "period": "2026Q1",
+   "value": 12712.0,
+   "raw": "12,712",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 1Q26"
+   },
+   "note": "회사 제시 조정치(비경상 제외, IFRS 기준). 회계 수치 아님"
+  },
+  {
+   "id": "Q1_Adjusted_Net_Operating_Revenue",
+   "period": "2026H1",
+   "value": 23900.0,
+   "raw": "23,900",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M26"
+   },
+   "note": "회사 제시 조정치(비경상 제외, IFRS 기준). 회계 수치 아님"
+  },
+  {
+   "id": "Q1_Adjusted_Net_Operating_Revenue",
+   "period": "2025H1",
+   "value": 20722.0,
+   "raw": "20,722",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M25"
+   },
+   "note": "회사 제시 조정치(비경상 제외, IFRS 기준). 회계 수치 아님"
+  },
+  {
+   "id": "Q1_Regulatory_Net_Operating_Revenue",
+   "period": "2026Q2",
+   "value": 10007.0,
+   "raw": "10,007",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Regulatory Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q26"
+   },
+   "note": "규제회계(ANEEL) 기준, IFRS 아님"
+  },
+  {
+   "id": "Q1_Regulatory_Net_Operating_Revenue",
+   "period": "2025Q2",
+   "value": 9593.0,
+   "raw": "9,593",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Regulatory Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q25"
+   },
+   "note": "규제회계(ANEEL) 기준, IFRS 아님"
+  },
+  {
+   "id": "Q1_Regulatory_Net_Operating_Revenue",
+   "period": "2026Q1",
+   "value": 11618.0,
+   "raw": "11,618",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Regulatory Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 1Q26"
+   },
+   "note": "규제회계(ANEEL) 기준, IFRS 아님"
+  },
+  {
+   "id": "Q1_Regulatory_Net_Operating_Revenue",
+   "period": "2026H1",
+   "value": 21625.0,
+   "raw": "21,625",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Regulatory Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M26"
+   },
+   "note": "규제회계(ANEEL) 기준, IFRS 아님"
+  },
+  {
+   "id": "Q1_Regulatory_Net_Operating_Revenue",
+   "period": "2025H1",
+   "value": 19300.0,
+   "raw": "19,300",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Regulatory Net Operating Revenue (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M25"
+   },
+   "note": "규제회계(ANEEL) 기준, IFRS 아님"
+  },
+  {
+   "id": "Q2_Generation",
+   "period": "2026Q2",
+   "value": 7106.0,
+   "raw": "7,106",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Generation Revenues",
+    "col": "Table 32 - Generation operating revenue (R$ mn) / 2Q26"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Generation",
+   "period": "2025Q2",
+   "value": 6851.0,
+   "raw": "6,851",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Generation Revenues",
+    "col": "Table 32 - Generation operating revenue (R$ mn) / 2Q25"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Generation",
+   "period": "2026Q1",
+   "value": 9428.0,
+   "raw": "9,428",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Generation Revenues",
+    "col": "Table 32 - Generation operating revenue (R$ mn) / 1Q26"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Generation",
+   "period": "2026H1",
+   "value": 16533.0,
+   "raw": "16,533",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Generation Revenues",
+    "col": "Table 32 - Generation operating revenue (R$ mn) / 6M26"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Generation",
+   "period": "2025H1",
+   "value": 13819.0,
+   "raw": "13,819",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Generation Revenues",
+    "col": "Table 32 - Generation operating revenue (R$ mn) / 6M25"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Transmission",
+   "period": "2026Q2",
+   "value": 5657.0,
+   "raw": "5,657",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Transmission Revenues",
+    "col": "Table 33 - Transmission operating revenue (R$ mn) / 2Q26"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Transmission",
+   "period": "2025Q2",
+   "value": 5079.0,
+   "raw": "5,079",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Transmission Revenues",
+    "col": "Table 33 - Transmission operating revenue (R$ mn) / 2Q25"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Transmission",
+   "period": "2026Q1",
+   "value": 5015.0,
+   "raw": "5,015",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Transmission Revenues",
+    "col": "Table 33 - Transmission operating revenue (R$ mn) / 1Q26"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Transmission",
+   "period": "2026H1",
+   "value": 10671.0,
+   "raw": "10,671",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Transmission Revenues",
+    "col": "Table 33 - Transmission operating revenue (R$ mn) / 6M26"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Transmission",
+   "period": "2025H1",
+   "value": 10264.0,
+   "raw": "10,264",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Transmission Revenues",
+    "col": "Table 33 - Transmission operating revenue (R$ mn) / 6M25"
+   },
+   "note": "IFRS 부문 총매출(gross, 공제 전). 부문별 IFRS 순매출은 공시 없음"
+  },
+  {
+   "id": "Q2_Others",
+   "period": "2026Q2",
+   "value": 147.0,
+   "raw": "147",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Others",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 2Q26 IFRS"
+   },
+   "note": "IFRS 기타 총매출(gross)"
+  },
+  {
+   "id": "Q2_Others",
+   "period": "2026Q1",
+   "value": 143.0,
+   "raw": "143",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Others",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 1Q26 IFRS"
+   },
+   "note": "IFRS 기타 총매출(gross)"
+  },
+  {
+   "id": "Q2_Generation_Adjusted_Regulatory_Net",
+   "period": "2026Q2",
+   "value": 6106.0,
+   "raw": "6,106",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 15 - Income statement 2Q26 (R$ mn) / Generation (e.1)"
+   },
+   "note": "조정 규제회계 기준 부문 순매출(관리 목적), IFRS 아님"
+  },
+  {
+   "id": "Q2_Transmission_Adjusted_Regulatory_Net",
+   "period": "2026Q2",
+   "value": 4025.0,
+   "raw": "4,025",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 15 - Income statement 2Q26 (R$ mn) / Transmission (e.2)"
+   },
+   "note": "조정 규제회계 기준 부문 순매출(관리 목적), IFRS 아님"
+  },
+  {
+   "id": "Q2_Others_Adjusted_Regulatory_Net",
+   "period": "2026Q2",
+   "value": 143.0,
+   "raw": "143",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 15 - Income statement 2Q26 (R$ mn) / Others (e.3)"
+   },
+   "note": "조정 규제회계 기준 부문 순매출(관리 목적), IFRS 아님"
+  },
+  {
+   "id": "Q2_Eliminations_Adjusted_Regulatory_Net",
+   "period": "2026Q2",
+   "value": -266.0,
+   "raw": "-266",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 15 - Income statement 2Q26 (R$ mn) / Eliminations (e.4)"
+   },
+   "note": "조정 규제회계 기준 부문 순매출(관리 목적), IFRS 아님"
+  },
+  {
+   "id": "Q2_Generation_Adjusted_Regulatory_Net",
+   "period": "2025Q2",
+   "value": 5898.0,
+   "raw": "5,898",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 16 - Income statement 2Q25 (R$ mn) / Generation (e.1)"
+   },
+   "note": "조정 규제회계 기준 부문 순매출(관리 목적), IFRS 아님"
+  },
+  {
+   "id": "Q2_Transmission_Adjusted_Regulatory_Net",
+   "period": "2025Q2",
+   "value": 3972.0,
+   "raw": "3,972",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 16 - Income statement 2Q25 (R$ mn) / Transmission (e.2)"
+   },
+   "note": "조정 규제회계 기준 부문 순매출(관리 목적), IFRS 아님"
+  },
+  {
+   "id": "Q2_Others_Adjusted_Regulatory_Net",
+   "period": "2025Q2",
+   "value": 105.0,
+   "raw": "105",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 16 - Income statement 2Q25 (R$ mn) / Others (e.3)"
+   },
+   "note": "조정 규제회계 기준 부문 순매출(관리 목적), IFRS 아님"
+  },
+  {
+   "id": "Q2_Eliminations_Adjusted_Regulatory_Net",
+   "period": "2025Q2",
+   "value": -273.0,
+   "raw": "-273",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 16 - Income statement 2Q25 (R$ mn) / Eliminations (e.4)"
+   },
+   "note": "조정 규제회계 기준 부문 순매출(관리 목적), IFRS 아님"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2026Q2",
+   "value": 6307.0,
+   "raw": "6,307",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q26"
+   },
+   "note": "회사 명칭 'Adjusted EBITDA'(IFRS EBITDA에서 비경상 항목 제외, 지분법이익 포함). 회계 EBITDA 2Q26 5,925 / 2Q25 1,259 / 1Q26 7,448"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2025Q2",
+   "value": 5151.0,
+   "raw": "5,151",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q25"
+   },
+   "note": "회사 명칭 'Adjusted EBITDA'(IFRS EBITDA에서 비경상 항목 제외, 지분법이익 포함). 회계 EBITDA 2Q26 5,925 / 2Q25 1,259 / 1Q26 7,448"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2026Q1",
+   "value": 8540.0,
+   "raw": "8,540",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 1Q26"
+   },
+   "note": "회사 명칭 'Adjusted EBITDA'(IFRS EBITDA에서 비경상 항목 제외, 지분법이익 포함). 회계 EBITDA 2Q26 5,925 / 2Q25 1,259 / 1Q26 7,448"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2026H1",
+   "value": 14847.0,
+   "raw": "14,847",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M26"
+   },
+   "note": "회사 명칭 'Adjusted EBITDA'(IFRS EBITDA에서 비경상 항목 제외, 지분법이익 포함). 회계 EBITDA 2Q26 5,925 / 2Q25 1,259 / 1Q26 7,448"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2025H1",
+   "value": 9567.0,
+   "raw": "9,567",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M25"
+   },
+   "note": "회사 명칭 'Adjusted EBITDA'(IFRS EBITDA에서 비경상 항목 제외, 지분법이익 포함). 회계 EBITDA 2Q26 5,925 / 2Q25 1,259 / 1Q26 7,448"
+  },
+  {
+   "id": "Q3_Adjusted_Regulatory_EBITDA",
+   "period": "2026Q2",
+   "value": 6683.0,
+   "raw": "6,683",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Regulatory EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q26"
+   },
+   "note": "회사 명칭 'Adjusted Regulatory EBITDA'(규제회계 EBITDA에서 비경상 항목 제외). 회사가 헤드라인으로 사용"
+  },
+  {
+   "id": "Q3_Adjusted_Regulatory_EBITDA",
+   "period": "2025Q2",
+   "value": 5501.0,
+   "raw": "5,501",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Regulatory EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q25"
+   },
+   "note": "회사 명칭 'Adjusted Regulatory EBITDA'(규제회계 EBITDA에서 비경상 항목 제외). 회사가 헤드라인으로 사용"
+  },
+  {
+   "id": "Q3_Adjusted_Regulatory_EBITDA",
+   "period": "2026Q1",
+   "value": 8600.0,
+   "raw": "8,600",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Regulatory EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 1Q26"
+   },
+   "note": "회사 명칭 'Adjusted Regulatory EBITDA'(규제회계 EBITDA에서 비경상 항목 제외). 회사가 헤드라인으로 사용"
+  },
+  {
+   "id": "Q3_Adjusted_Regulatory_EBITDA",
+   "period": "2026H1",
+   "value": 15283.0,
+   "raw": "15,283",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Regulatory EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M26"
+   },
+   "note": "회사 명칭 'Adjusted Regulatory EBITDA'(규제회계 EBITDA에서 비경상 항목 제외). 회사가 헤드라인으로 사용"
+  },
+  {
+   "id": "Q3_Adjusted_Regulatory_EBITDA",
+   "period": "2025H1",
+   "value": 10878.0,
+   "raw": "10,878",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Regulatory EBITDA (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M25"
+   },
+   "note": "회사 명칭 'Adjusted Regulatory EBITDA'(규제회계 EBITDA에서 비경상 항목 제외). 회사가 헤드라인으로 사용"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 4692,
+   "raw": "4,692",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "EBIT",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 2Q26 IFRS"
+   },
+   "note": "IFRS EBIT(지분법이익 포함, EBITDA-D&A)"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 127,
+   "raw": "127",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "EBIT",
+    "col": "Table 16 - Income statement 2Q25 (R$ mn) / IFRS (a)"
+   },
+   "note": "IFRS EBIT(지분법이익 포함)"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q1",
+   "value": 6196,
+   "raw": "6,196",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "EBIT",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 1Q26 IFRS"
+   },
+   "note": "IFRS EBIT(지분법이익 포함)"
+  },
+  {
+   "id": "Q4_Operating_Result_Before_Financial_Result",
+   "period": "2026H1",
+   "value": 9851.034,
+   "raw": "9,851,034",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "OPERATING RESULT BEFORE FINANCIAL RESULT",
+    "col": "Table 49 - Income statement (R$ thousand) / CONSOLIDATED 30/06/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 재무제표 행(지분법이익 제외, 6개월 누적). 보도자료 EBIT와 정의 다름. Table 51 조정표에는 같은 행이 9,651,387로 표시(기타손익 위치 차이)"
+  },
+  {
+   "id": "Q4_Operating_Result_Before_Financial_Result",
+   "period": "2025H1",
+   "value": 3091.007,
+   "raw": "3,091,007",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "OPERATING RESULT BEFORE FINANCIAL RESULT",
+    "col": "Table 49 - Income statement (R$ thousand) / CONSOLIDATED 30/06/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 지분법이익 제외, 6개월 누적"
+  },
+  {
+   "id": "Q4_Operating_Result_Before_Financial_Result",
+   "period": "2026Q1",
+   "value": 5531.531,
+   "raw": "5,531,531",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "OPERATING RESULT BEFORE FINANCIAL RESULT",
+    "col": "Table 38 - Income statement (R$ thousand) / CONSOLIDATED 31/03/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 지분법이익 제외"
+  },
+  {
+   "id": "Q4_Adjusted_EBIT",
+   "period": "2026Q2",
+   "value": 5075.0,
+   "raw": "5,075",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "EBIT",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 2Q26 Adjusted"
+   },
+   "note": "회사 제시 조정 IFRS EBIT"
+  },
+  {
+   "id": "Q4_Adjusted_EBIT",
+   "period": "2025Q2",
+   "value": 4019.0,
+   "raw": "4,019",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "EBIT",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 2Q25 Adjusted"
+   },
+   "note": "회사 제시 조정 IFRS EBIT"
+  },
+  {
+   "id": "Q4_Adjusted_EBIT",
+   "period": "2026Q1",
+   "value": 7287.0,
+   "raw": "7,287",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "EBIT",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 1Q26 Adjusted"
+   },
+   "note": "회사 제시 조정 IFRS EBIT"
+  },
+  {
+   "id": "Q4_Adjusted_EBIT",
+   "period": "2026H1",
+   "value": 12362.0,
+   "raw": "12,362",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "EBIT",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 6M26 Adjusted"
+   },
+   "note": "회사 제시 조정 IFRS EBIT"
+  },
+  {
+   "id": "Q4_Adjusted_EBIT",
+   "period": "2025H1",
+   "value": 7323.0,
+   "raw": "7,323",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "EBIT",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 6M25 Adjusted"
+   },
+   "note": "회사 제시 조정 IFRS EBIT"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "1,191",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Income",
+    "col": "Table 4 - Income statement IFRS (R$ mn) / 2Q26 IFRS"
+   },
+   "note": "보도자료 분기 'Net Income' 1,191은 비지배지분 포함 총 순이익(6M 합계 3,821 = 재무제표 NET INCOME FOR THE YEAR 3,821,431과 일치). 2Q26 분기 지배주주 귀속분은 별도 공시 없음(반기·1분기 값만 존재)"
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": null,
+   "raw": "-1,325",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Income",
+    "col": "Table 3 - Financial highlights / 2Q25"
+   },
+   "note": "비지배지분 포함 총 순이익일 가능성(분기 지배주주 귀속분 별도 공시 없음)"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 2629.666,
+   "raw": "2,629,666",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "NET INCOME FOR THE YEAR / Portion attributable to controlling",
+    "col": "Table 38 - Income statement (R$ thousand) / CONSOLIDATED 31/03/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 3819.749,
+   "raw": "3,819,749",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "NET INCOME FOR THE YEAR / Portion attributable to controlling",
+    "col": "Table 49 - Income statement (R$ thousand) / CONSOLIDATED 30/06/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q5",
+   "period": "2025H1",
+   "value": -1677.488,
+   "raw": "-1,677,488",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "NET INCOME FOR THE YEAR / Portion attributable to controlling",
+    "col": "Table 49 - Income statement (R$ thousand) / CONSOLIDATED 30/06/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q6_Adjusted_Net_Income",
+   "period": "2026Q2",
+   "value": 1608.0,
+   "raw": "1,608",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Income (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q26"
+   },
+   "note": "회사 명칭 'Adjusted Net Income, IFRS': IFRS 순이익에서 비경상 항목(PMSO 비경상, 비경상 충당금, 자산매각손익, 기타손익, 강제차관 물가조정 금융비용, 관련 세효과) 제외"
+  },
+  {
+   "id": "Q6_Adjusted_Net_Income",
+   "period": "2025Q2",
+   "value": 1469.0,
+   "raw": "1,469",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Income (R$ mn)",
+    "col": "Table 3 - Financial highlights / 2Q25"
+   },
+   "note": "회사 명칭 'Adjusted Net Income, IFRS': IFRS 순이익에서 비경상 항목(PMSO 비경상, 비경상 충당금, 자산매각손익, 기타손익, 강제차관 물가조정 금융비용, 관련 세효과) 제외"
+  },
+  {
+   "id": "Q6_Adjusted_Net_Income",
+   "period": "2026Q1",
+   "value": 3707.0,
+   "raw": "3,707",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Income (R$ mn)",
+    "col": "Table 3 - Financial highlights / 1Q26"
+   },
+   "note": "회사 명칭 'Adjusted Net Income, IFRS': IFRS 순이익에서 비경상 항목(PMSO 비경상, 비경상 충당금, 자산매각손익, 기타손익, 강제차관 물가조정 금융비용, 관련 세효과) 제외"
+  },
+  {
+   "id": "Q6_Adjusted_Net_Income",
+   "period": "2026H1",
+   "value": 5315.0,
+   "raw": "5,315",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Income (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M26"
+   },
+   "note": "회사 명칭 'Adjusted Net Income, IFRS': IFRS 순이익에서 비경상 항목(PMSO 비경상, 비경상 충당금, 자산매각손익, 기타손익, 강제차관 물가조정 금융비용, 관련 세효과) 제외"
+  },
+  {
+   "id": "Q6_Adjusted_Net_Income",
+   "period": "2025H1",
+   "value": 1389.0,
+   "raw": "1,389",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Adjusted Net Income (R$ mn)",
+    "col": "Table 3 - Financial highlights / 6M25"
+   },
+   "note": "회사 명칭 'Adjusted Net Income, IFRS': IFRS 순이익에서 비경상 항목(PMSO 비경상, 비경상 충당금, 자산매각손익, 기타손익, 강제차관 물가조정 금융비용, 관련 세효과) 제외"
+  },
+  {
+   "id": "Q6_Adjusted_Regulatory_Net_Income",
+   "period": "2026Q2",
+   "value": 1679.0,
+   "raw": "1,679",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Income",
+    "col": "Table 5 - Regulatory IS (R$ mn) / 2Q26 Adjusted"
+   },
+   "note": "조정 규제회계 순이익(IFRS 아님)"
+  },
+  {
+   "id": "Q6_Adjusted_Regulatory_Net_Income",
+   "period": "2025Q2",
+   "value": 1245.0,
+   "raw": "1,245",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Income",
+    "col": "Table 5 - Regulatory IS (R$ mn) / 2Q25 Adjusted"
+   },
+   "note": "조정 규제회계 순이익(IFRS 아님)"
+  },
+  {
+   "id": "Q6_Adjusted_Regulatory_Net_Income",
+   "period": "2026Q1",
+   "value": 3213.0,
+   "raw": "3,213",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Income",
+    "col": "Table 5 - Regulatory IS (R$ mn) / 1Q26 Adjusted"
+   },
+   "note": "조정 규제회계 순이익(IFRS 아님)"
+  },
+  {
+   "id": "Q6_Adjusted_Regulatory_Net_Income",
+   "period": "2026H1",
+   "value": 4892.0,
+   "raw": "4,892",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Income",
+    "col": "Table 5 - Regulatory IS (R$ mn) / 6M26 Adjusted"
+   },
+   "note": "조정 규제회계 순이익(IFRS 아님)"
+  },
+  {
+   "id": "Q6_Adjusted_Regulatory_Net_Income",
+   "period": "2025H1",
+   "value": 1654.0,
+   "raw": "1,654",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Income",
+    "col": "Table 5 - Regulatory IS (R$ mn) / 6M25 Adjusted"
+   },
+   "note": "조정 규제회계 순이익(IFRS 아님)"
+  },
+  {
+   "id": "Q7",
+   "period": "2026H1",
+   "value": 1.33,
+   "raw": "1.33",
+   "unit": "R$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share - basic (ON/PNC)",
+    "col": "Table 49 - Income statement (R$ thousand) / CONSOLIDATED 30/06/2026"
+   },
+   "note": "6개월 누적, 보통주(ON)/PNC 공통. 분기(2Q26) 단독 EPS는 공시 없음"
+  },
+  {
+   "id": "Q7",
+   "period": "2025H1",
+   "value": -0.59,
+   "raw": "-0.59",
+   "unit": "R$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share - basic (ON/PNC)",
+    "col": "Table 49 - Income statement (R$ thousand) / CONSOLIDATED 30/06/2025"
+   },
+   "note": "6개월 누적"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 0.92,
+   "raw": "0.92",
+   "unit": "R$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share - basic (ON/PNC)",
+    "col": "Table 38 - Income statement (R$ thousand) / CONSOLIDATED 31/03/2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_PNA_PNB",
+   "period": "2026Q1",
+   "value": 1.01,
+   "raw": "1.01",
+   "unit": "R$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share - basic (PNA/PNB)",
+    "col": "Table 38 - Income statement (R$ thousand) / CONSOLIDATED 31/03/2026"
+   },
+   "note": "1Q26에는 PNA/PNB 주식 별도 EPS 존재(2Q26 Novo Mercado 이전 후 소멸)"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "R$ per share",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "2Q26 분기 단독 EPS 공시 없음(반기 누적만)"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 9284.76,
+   "raw": "9,284,760",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net cash provided by (used in) operating activities",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 6개월 누적"
+  },
+  {
+   "id": "Q8",
+   "period": "2025H1",
+   "value": 7080.77,
+   "raw": "7,080,770",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net cash provided by (used in) operating activities",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 6개월 누적"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 2760.904,
+   "raw": "2,760,904",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Net cash provided by (used in) operating activities",
+    "col": "Table 39 - Cash flow statement (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "R$ million",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "분기 단독 회계 영업현금흐름 공시 없음(반기 누적만). 회사 관리용 'Operating Cash Flow' 7,792는 Q8_Managerial 참조"
+  },
+  {
+   "id": "Q8_Managerial_Operating_Cash_Flow",
+   "period": "2026Q2",
+   "value": 7792.0,
+   "raw": "7,792",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Operating Cash Flow",
+    "col": "Table 14 - Cash flow (R$ mn) / 2Q26"
+   },
+   "note": "회사 관리용 지표: Adjusted Regulatory Result before Equity Holdings + EBITDA Adjustment + 법인세 + 운전자본 + Privatization Charges + Dividends Received. 회계 현금흐름표 수치 아님"
+  },
+  {
+   "id": "Q8_Managerial_Operating_Cash_Flow",
+   "period": "2025Q2",
+   "value": 4121.0,
+   "raw": "4,121",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Operating Cash Flow",
+    "col": "Table 14 - Cash flow (R$ mn) / 2Q25"
+   },
+   "note": "회사 관리용 지표: Adjusted Regulatory Result before Equity Holdings + EBITDA Adjustment + 법인세 + 운전자본 + Privatization Charges + Dividends Received. 회계 현금흐름표 수치 아님"
+  },
+  {
+   "id": "Q8_Managerial_Operating_Cash_Flow",
+   "period": "2026Q1",
+   "value": 3476.0,
+   "raw": "3,476",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Operating Cash Flow",
+    "col": "Table 14 - Cash flow (R$ mn) / 1Q26"
+   },
+   "note": "회사 관리용 지표: Adjusted Regulatory Result before Equity Holdings + EBITDA Adjustment + 법인세 + 운전자본 + Privatization Charges + Dividends Received. 회계 현금흐름표 수치 아님"
+  },
+  {
+   "id": "Q9_Investments_company",
+   "period": "2026Q2",
+   "value": 3117.0,
+   "raw": "3,117",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Table 10 - Investments (R$ mn) / 2Q26"
+   },
+   "note": "회사 제시 'Investments'(발전·송전·인프라·환경·SPE 출자·Itaipu HVDC 포함)"
+  },
+  {
+   "id": "Q9_Investments_company",
+   "period": "2025Q2",
+   "value": 2043.0,
+   "raw": "2,043",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Table 10 - Investments (R$ mn) / 2Q25"
+   },
+   "note": "회사 제시 'Investments'(발전·송전·인프라·환경·SPE 출자·Itaipu HVDC 포함)"
+  },
+  {
+   "id": "Q9_Investments_company",
+   "period": "2026Q1",
+   "value": 1355.0,
+   "raw": "1,355",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Table 10 - Investments (R$ mn) / 1Q26"
+   },
+   "note": "회사 제시 'Investments'(발전·송전·인프라·환경·SPE 출자·Itaipu HVDC 포함)"
+  },
+  {
+   "id": "Q9_Investments_company",
+   "period": "2026H1",
+   "value": 4472.0,
+   "raw": "4,472",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Table 10 - Investments (R$ mn) / 6M26"
+   },
+   "note": "회사 제시 'Investments'(발전·송전·인프라·환경·SPE 출자·Itaipu HVDC 포함)"
+  },
+  {
+   "id": "Q9_Investments_company",
+   "period": "2025H1",
+   "value": 3037.0,
+   "raw": "3,037",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Table 10 - Investments (R$ mn) / 6M25"
+   },
+   "note": "회사 제시 'Investments'(발전·송전·인프라·환경·SPE 출자·Itaipu HVDC 포함)"
+  },
+  {
+   "id": "Q9_Managerial_CF_Investments",
+   "period": "2026Q2",
+   "value": -2834.0,
+   "raw": "-2,834",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Investments **",
+    "col": "Table 14 - Cash flow (R$ mn) / 2Q26"
+   },
+   "note": "관리용 현금흐름표 투자(발전회사 자본출자 제외)"
+  },
+  {
+   "id": "Q9_Managerial_CF_Investments",
+   "period": "2025Q2",
+   "value": -1571.0,
+   "raw": "-1,571",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Investments **",
+    "col": "Table 14 - Cash flow (R$ mn) / 2Q25"
+   },
+   "note": "관리용 현금흐름표 투자(발전회사 자본출자 제외)"
+  },
+  {
+   "id": "Q9_Managerial_CF_Investments",
+   "period": "2026Q1",
+   "value": -1624.0,
+   "raw": "-1,624",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Investments **",
+    "col": "Table 14 - Cash flow (R$ mn) / 1Q26"
+   },
+   "note": "관리용 현금흐름표 투자(발전회사 자본출자 제외)"
+  },
+  {
+   "id": "Q9_CFS_Acquisition_of_fixed_assets",
+   "period": "2026H1",
+   "value": -1026.36,
+   "raw": "-1,026,360",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisition of fixed assets",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q9_CFS_Acquisition_of_fixed_assets",
+   "period": "2025H1",
+   "value": -727.574,
+   "raw": "-727,574",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisition of fixed assets",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q9_CFS_Acquisition_of_fixed_assets",
+   "period": "2026Q1",
+   "value": -415.22,
+   "raw": "-415,220",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Acquisition of fixed assets",
+    "col": "Table 39 - Cash flow statement (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q9_CFS_Acquisition_of_intangible_assets",
+   "period": "2026H1",
+   "value": -186.017,
+   "raw": "-186,017",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisition of intangible assets",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q9_CFS_Acquisition_of_intangible_assets",
+   "period": "2025H1",
+   "value": -105.746,
+   "raw": "-105,746",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisition of intangible assets",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q9_CFS_Acquisition_of_intangible_assets",
+   "period": "2026Q1",
+   "value": -100.485,
+   "raw": "-100,485",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Acquisition of intangible assets",
+    "col": "Table 39 - Cash flow statement (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q9_CFS_Transmission_infrastructure",
+   "period": "2026H1",
+   "value": -2934.152,
+   "raw": "-2,934,152",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Transmission infrastructure - contractual asset",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q9_CFS_Transmission_infrastructure",
+   "period": "2025H1",
+   "value": -1780.935,
+   "raw": "-1,780,935",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Transmission infrastructure - contractual asset",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q9_CFS_Transmission_infrastructure",
+   "period": "2026Q1",
+   "value": -1548.604,
+   "raw": "-1,548,604",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Transmission infrastructure - contractual asset",
+    "col": "Table 39 - Cash flow statement (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 투자활동 행, 누적"
+  },
+  {
+   "id": "Q10_Free_Cash_Flow",
+   "period": "2026Q2",
+   "value": 4958.0,
+   "raw": "4,958",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Free Cash Flow",
+    "col": "Table 14 - Cash flow (R$ mn) / 2Q26"
+   },
+   "note": "회사 정의: 관리용 Operating Cash Flow + Investments(발전회사 자본출자 제외). 부채상환·소송·배당 등 전"
+  },
+  {
+   "id": "Q10_Free_Cash_Flow",
+   "period": "2025Q2",
+   "value": 2550.0,
+   "raw": "2,550",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Free Cash Flow",
+    "col": "Table 14 - Cash flow (R$ mn) / 2Q25"
+   },
+   "note": "회사 정의: 관리용 Operating Cash Flow + Investments(발전회사 자본출자 제외). 부채상환·소송·배당 등 전"
+  },
+  {
+   "id": "Q10_Free_Cash_Flow",
+   "period": "2026Q1",
+   "value": 1852.0,
+   "raw": "1,852",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Free Cash Flow",
+    "col": "Table 14 - Cash flow (R$ mn) / 1Q26"
+   },
+   "note": "회사 정의: 관리용 Operating Cash Flow + Investments(발전회사 자본출자 제외). 부채상환·소송·배당 등 전"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 11039.66,
+   "raw": "11,039,660",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 12535.253,
+   "raw": "12,535,253",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B1",
+   "period": "2025-12-31",
+   "value": 16417.86,
+   "raw": "16,417,860",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Securities_current",
+   "period": "2026-06-30",
+   "value": 15189.665,
+   "raw": "15,189,665",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Securities (CURRENT ASSETS)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Securities_current",
+   "period": "2026-03-31",
+   "value": 15141.95,
+   "raw": "15,141,950",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Securities (CURRENT ASSETS)",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Securities_current",
+   "period": "2025-12-31",
+   "value": 11133.842,
+   "raw": "11,133,842",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Securities (CURRENT ASSETS)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Securities_noncurrent",
+   "period": "2026-06-30",
+   "value": 441.084,
+   "raw": "441,084",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Securities (NON-CURRENT ASSETS)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Securities_noncurrent",
+   "period": "2026-03-31",
+   "value": 480.576,
+   "raw": "480,576",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Securities (NON-CURRENT ASSETS)",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Securities_noncurrent",
+   "period": "2025-12-31",
+   "value": 722.673,
+   "raw": "722,673",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Securities (NON-CURRENT ASSETS)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Restricted_cash_current",
+   "period": "2026-06-30",
+   "value": 932.264,
+   "raw": "932,264",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Restricted cash (CURRENT ASSETS)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Restricted_cash_current",
+   "period": "2026-03-31",
+   "value": 684.271,
+   "raw": "684,271",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Restricted cash (CURRENT ASSETS)",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Restricted_cash_current",
+   "period": "2025-12-31",
+   "value": 660.259,
+   "raw": "660,259",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Restricted cash (CURRENT ASSETS)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B3_Loans_financing_debentures_current",
+   "period": "2026-06-30",
+   "value": 9344.113,
+   "raw": "9,344,113",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Loans, financing and debentures (CURRENT LIABILITIES)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 6/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B3_Loans_financing_debentures_current",
+   "period": "2026-03-31",
+   "value": 11141.094,
+   "raw": "11,141,094",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Loans, financing and debentures (CURRENT LIABILITIES)",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 3/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B3_Loans_financing_debentures_current",
+   "period": "2025-12-31",
+   "value": 13204.167,
+   "raw": "13,204,167",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Loans, financing and debentures (CURRENT LIABILITIES)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B3_Loans_financing_debentures_noncurrent",
+   "period": "2026-06-30",
+   "value": 61628.489,
+   "raw": "61,628,489",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Loans, financing and debentures (NON-CURRENT LIABILITIES)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 6/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B3_Loans_financing_debentures_noncurrent",
+   "period": "2026-03-31",
+   "value": 62382.521,
+   "raw": "62,382,521",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Loans, financing and debentures (NON-CURRENT LIABILITIES)",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 3/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B3_Loans_financing_debentures_noncurrent",
+   "period": "2025-12-31",
+   "value": 61091.597,
+   "raw": "61,091,597",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Loans, financing and debentures (NON-CURRENT LIABILITIES)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B3_Leasing_current",
+   "period": "2026-06-30",
+   "value": 111.353,
+   "raw": "111,353",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Leasing (CURRENT LIABILITIES)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 6/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 리스부채는 차입금과 별도"
+  },
+  {
+   "id": "B3_Leasing_current",
+   "period": "2026-03-31",
+   "value": 84.598,
+   "raw": "84,598",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Leasing (CURRENT LIABILITIES)",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 3/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 리스부채는 차입금과 별도"
+  },
+  {
+   "id": "B3_Leasing_noncurrent",
+   "period": "2026-06-30",
+   "value": 572.385,
+   "raw": "572,385",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Leasing (NON-CURRENT LIABILITIES)",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 6/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 리스부채는 차입금과 별도"
+  },
+  {
+   "id": "B3_Leasing_noncurrent",
+   "period": "2026-03-31",
+   "value": 556.718,
+   "raw": "556,718",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Leasing (NON-CURRENT LIABILITIES)",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 3/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 리스부채는 차입금과 별도"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 277258.437,
+   "raw": "277,258,437",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "TOTAL ASSETS",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 279912.545,
+   "raw": "279,912,545",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "TOTAL ASSETS",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B5",
+   "period": "2025-12-31",
+   "value": 279685.593,
+   "raw": "279,685,593",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "TOTAL ASSETS",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 122244.292,
+   "raw": "122,244,292",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Controlling shareholders",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 6/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B6",
+   "period": "2026-03-31",
+   "value": 121147.598,
+   "raw": "121,147,598",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Controlling shareholders",
+    "col": "Table 37 - Balance sheet (R$ thousand) / CONSOLIDATED 3/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B6",
+   "period": "2025-12-31",
+   "value": 118430.137,
+   "raw": "118,430,137",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Controlling shareholders",
+    "col": "Table 48 - Balance sheet (R$ thousand) / CONSOLIDATED 12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B3_Gross_Debt_company",
+   "period": "2026-06-30",
+   "value": 70973.0,
+   "raw": "70,973",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "(+) Gross Debt",
+    "col": "Table 12 - Net debt (R$ mn) / 06/30/2026"
+   },
+   "note": "회사 제시 총차입(파생상품 제외). 재무상태표 유동+비유동 차입금 합과 정의 차이 가능"
+  },
+  {
+   "id": "B3_Gross_Debt_company",
+   "period": "2026-03-31",
+   "value": 73524.0,
+   "raw": "73,524",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "(+) Gross Debt",
+    "col": "Table 12 - Net debt (R$ mn) / 03/31/2026"
+   },
+   "note": "회사 제시 총차입(파생상품 제외). 재무상태표 유동+비유동 차입금 합과 정의 차이 가능"
+  },
+  {
+   "id": "B3_Gross_Debt_company",
+   "period": "2025-06-30",
+   "value": 70290.0,
+   "raw": "70,290",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "(+) Gross Debt",
+    "col": "Table 12 - Net debt (R$ mn) / 06/30/2025"
+   },
+   "note": "회사 제시 총차입(파생상품 제외). 재무상태표 유동+비유동 차입금 합과 정의 차이 가능"
+  },
+  {
+   "id": "B3_Gross_Debt_incl_derivatives",
+   "period": "2026-06-30",
+   "value": 72829.0,
+   "raw": "72,829",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "(+) Gross Debt, including derivatives",
+    "col": "Table 12 - Net debt (R$ mn) / 06/30/2026"
+   },
+   "note": "회사 제시 'Adjusted Gross Debt'(통화헤지 파생상품 순액 포함)"
+  },
+  {
+   "id": "B3_Gross_Debt_incl_derivatives",
+   "period": "2026-03-31",
+   "value": 74787.0,
+   "raw": "74,787",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "(+) Gross Debt, including derivatives",
+    "col": "Table 12 - Net debt (R$ mn) / 03/31/2026"
+   },
+   "note": "회사 제시 'Adjusted Gross Debt'(통화헤지 파생상품 순액 포함)"
+  },
+  {
+   "id": "B3_Gross_Debt_incl_derivatives",
+   "period": "2025-06-30",
+   "value": 71042.0,
+   "raw": "71,042",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "(+) Gross Debt, including derivatives",
+    "col": "Table 12 - Net debt (R$ mn) / 06/30/2025"
+   },
+   "note": "회사 제시 'Adjusted Gross Debt'(통화헤지 파생상품 순액 포함)"
+  },
+  {
+   "id": "B4_Net_Debt",
+   "period": "2026-06-30",
+   "value": 45461.0,
+   "raw": "45,461",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Debt",
+    "col": "Table 12 - Net debt (R$ mn) / 06/30/2026"
+   },
+   "note": "회사 정의: Gross Debt incl. derivatives (currency hedge, net) - (Cash and Cash Equivalents + Current Securities) - Restricted Cash for Loans and Financing - Loans receivable. 'Adjusted Net Debt'로도 표기"
+  },
+  {
+   "id": "B4_Net_Debt",
+   "period": "2026-03-31",
+   "value": 46045.0,
+   "raw": "46,045",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Debt",
+    "col": "Table 12 - Net debt (R$ mn) / 03/31/2026"
+   },
+   "note": "회사 정의: Gross Debt incl. derivatives (currency hedge, net) - (Cash and Cash Equivalents + Current Securities) - Restricted Cash for Loans and Financing - Loans receivable. 'Adjusted Net Debt'로도 표기"
+  },
+  {
+   "id": "B4_Net_Debt",
+   "period": "2025-06-30",
+   "value": 40125.0,
+   "raw": "40,125",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Debt",
+    "col": "Table 12 - Net debt (R$ mn) / 06/30/2025"
+   },
+   "note": "회사 정의: Gross Debt incl. derivatives (currency hedge, net) - (Cash and Cash Equivalents + Current Securities) - Restricted Cash for Loans and Financing - Loans receivable. 'Adjusted Net Debt'로도 표기"
+  },
+  {
+   "id": "B4_Net_Debt",
+   "period": "2025-12-31",
+   "value": 46484.0,
+   "raw": "46,484",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Net Debt",
+    "col": "Table 12 - Net debt (R$ mn) / 12/31/2025"
+   },
+   "note": "회사 정의: Gross Debt incl. derivatives (currency hedge, net) - (Cash and Cash Equivalents + Current Securities) - Restricted Cash for Loans and Financing - Loans receivable. 'Adjusted Net Debt'로도 표기"
+  },
+  {
+   "id": "S1",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "보도자료에 유통주식 수 공시 없음(재무상태표에 자기주식 금액 R$ -3,003,436 thousand만 존재). 2Q26 Novo Mercado 이전으로 자본구조는 보통주(ON, AXIA3)와 PNC(AXIA7)만 존재"
+  },
+  {
+   "id": "S2",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "ON shares per ADR",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "ADR 비율 공시 없음"
+  },
+  {
+   "id": "R1",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "up to R$ 3.7 billion in capital available for allocation from 2Q26 results",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Capital Allocation Methodology (본문)",
+    "col": "1.1. 2Q26 Main Events"
+   },
+   "note": "이사회가 2Q26 실적 기준 '배분 가능 자본' 최대 R$3.7bn 승인(1Q26 최대 R$4.0bn, 1H26 합계 최대 R$7.7bn). 배당/JCP 선언 총액·주당금액으로 명시되지 않음. 재무상태표 'Proposed additional dividend' 0, 'Shareholder remuneration'(유동부채) R$45,346 thousand"
+  },
+  {
+   "id": "R1",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "R$ 4 billion in allocable capital",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Capital Allocation Methodology (본문)",
+    "col": "1Q26 Main Events"
+   },
+   "note": "배분 가능 자본 승인이며 배당·JCP 선언 금액/주당 금액 명시 없음"
+  },
+  {
+   "id": "R1_Paid_Shareholder_Remuneration",
+   "period": "2026H1",
+   "value": -90.518,
+   "raw": "-90,518",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Payment of remuneration to shareholders",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 선언액이 아닌 현금 지급액(6개월 누적). 관리용 현금흐름 'Dividends' 2Q26 -90"
+  },
+  {
+   "id": "R1_Paid_Shareholder_Remuneration",
+   "period": "2026Q1",
+   "value": -0.17,
+   "raw": "-170",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Payment of remuneration to shareholders",
+    "col": "Table 39 - Cash flow statement (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금 지급액"
+  },
+  {
+   "id": "R2",
+   "period": "2026H1",
+   "value": 0.0,
+   "raw": "0",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Share buybacks",
+    "col": "Table 50 - Cash flow statement (R$ thousand) / CONSOLIDATED 06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 자사주 매입 0. 별도로 PNC 주식 상환·전환 R$30 million 완료(본문 'Redemption and conversion of PNC shares')"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q1",
+   "value": 0.0,
+   "raw": "0",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "",
+    "row": "Share buybacks",
+    "col": "Table 39 - Cash flow statement (R$ thousand) / CONSOLIDATED 03/31/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "OP_Net_Generation_TWh",
+   "period": "2026Q2",
+   "value": 41.1,
+   "raw": "41.1",
+   "unit": "TWh",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Generation (TWh)",
+    "col": "Table 2 - Operating highlights / 2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Net_Generation_TWh",
+   "period": "2025Q2",
+   "value": 38.7,
+   "raw": "38.7",
+   "unit": "TWh",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Generation (TWh)",
+    "col": "Table 2 - Operating highlights / 2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Net_Generation_TWh",
+   "period": "2026Q1",
+   "value": 44.4,
+   "raw": "44.4",
+   "unit": "TWh",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Generation (TWh)",
+    "col": "Table 2 - Operating highlights / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_RAP",
+   "period": "2026Q2",
+   "value": 16839.0,
+   "raw": "16,839",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "RAP (R$ mn) (6)",
+    "col": "Table 2 - Operating highlights / 2Q26"
+   },
+   "note": "분기말 기준 현행 규제주기 승인 RAP(연간)"
+  },
+  {
+   "id": "OP_RAP",
+   "period": "2025Q2",
+   "value": 17209.0,
+   "raw": "17,209",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "RAP (R$ mn) (6)",
+    "col": "Table 2 - Operating highlights / 2Q25"
+   },
+   "note": "분기말 기준 현행 규제주기 승인 RAP(연간)"
+  },
+  {
+   "id": "OP_RAP",
+   "period": "2026Q1",
+   "value": 16824.0,
+   "raw": "16,824",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "RAP (R$ mn) (6)",
+    "col": "Table 2 - Operating highlights / 1Q26"
+   },
+   "note": "분기말 기준 현행 규제주기 승인 RAP(연간)"
+  },
+  {
+   "id": "OP_Transmission_Contribution_Margin_Regulatory",
+   "period": "2026Q2",
+   "value": 4025.0,
+   "raw": "4,025",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 21 - Transmission - adjusted contribution margin, regulatory (R$ mn) / 2Q26"
+   },
+   "note": "송전 부문 조정 규제 순매출=공헌이익(관리 목적)"
+  },
+  {
+   "id": "OP_Transmission_Contribution_Margin_Regulatory",
+   "period": "2025Q2",
+   "value": 3972.0,
+   "raw": "3,972",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 21 - Transmission - adjusted contribution margin, regulatory (R$ mn) / 2Q25"
+   },
+   "note": "송전 부문 조정 규제 순매출=공헌이익(관리 목적)"
+  },
+  {
+   "id": "OP_Transmission_Contribution_Margin_Regulatory",
+   "period": "2026Q1",
+   "value": 3426.0,
+   "raw": "3,426",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 21 - Transmission - adjusted contribution margin, regulatory (R$ mn) / 1Q26"
+   },
+   "note": "송전 부문 조정 규제 순매출=공헌이익(관리 목적)"
+  },
+  {
+   "id": "OP_Transmission_Contribution_Margin_Regulatory",
+   "period": "2026H1",
+   "value": 7451.0,
+   "raw": "7,451",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 21 - Transmission - adjusted contribution margin, regulatory (R$ mn) / 6M26"
+   },
+   "note": "송전 부문 조정 규제 순매출=공헌이익(관리 목적)"
+  },
+  {
+   "id": "OP_Transmission_Contribution_Margin_Regulatory",
+   "period": "2025H1",
+   "value": 7924.0,
+   "raw": "7,924",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Net Revenue",
+    "col": "Table 21 - Transmission - adjusted contribution margin, regulatory (R$ mn) / 6M25"
+   },
+   "note": "송전 부문 조정 규제 순매출=공헌이익(관리 목적)"
+  },
+  {
+   "id": "OP_Generation_Contribution_Margin_Regulatory",
+   "period": "2026Q2",
+   "value": 3653.0,
+   "raw": "3,653",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Contribution Margin",
+    "col": "Table 18 - Generation - adjusted contribution margin, regulatory (R$ mn) / 2Q26"
+   },
+   "note": "발전 부문 조정 규제 공헌이익"
+  },
+  {
+   "id": "OP_Generation_Contribution_Margin_Regulatory",
+   "period": "2025Q2",
+   "value": 3109.0,
+   "raw": "3,109",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Contribution Margin",
+    "col": "Table 18 - Generation - adjusted contribution margin, regulatory (R$ mn) / 2Q25"
+   },
+   "note": "발전 부문 조정 규제 공헌이익"
+  },
+  {
+   "id": "OP_Generation_Contribution_Margin_Regulatory",
+   "period": "2026Q1",
+   "value": 5982.0,
+   "raw": "5,982",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Contribution Margin",
+    "col": "Table 18 - Generation - adjusted contribution margin, regulatory (R$ mn) / 1Q26"
+   },
+   "note": "발전 부문 조정 규제 공헌이익"
+  },
+  {
+   "id": "OP_Generation_Contribution_Margin_Regulatory",
+   "period": "2026H1",
+   "value": 9635.0,
+   "raw": "9,635",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Contribution Margin",
+    "col": "Table 18 - Generation - adjusted contribution margin, regulatory (R$ mn) / 6M26"
+   },
+   "note": "발전 부문 조정 규제 공헌이익"
+  },
+  {
+   "id": "OP_Generation_Contribution_Margin_Regulatory",
+   "period": "2025H1",
+   "value": 5639.0,
+   "raw": "5,639",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "",
+    "row": "Contribution Margin",
+    "col": "Table 18 - Generation - adjusted contribution margin, regulatory (R$ mn) / 6M25"
+   },
+   "note": "발전 부문 조정 규제 공헌이익"
+  },
+  {
+   "id": "X1",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "prepared ... in accordance with accounting practices adopted in Brazil and with the International Financial Reporting Standards (\"IFRS\") issued by the IASB ... and, where applicable, the regulations of ... ANEEL",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004087/axiapr2q26_6k.htm",
+    "page": "0001292814-26-004087/image_003.jpg",
+    "row": "(표지 하단 문구)",
+    "col": ""
+   },
+   "note": "회계기준: IFRS 및 브라질 회계관행(CPC/CVM). 보고통화 R$(표 단위 R$ mn / R$ thousand). 별도로 ANEEL 규제회계(Regulatory) 수치 병행 제시"
+  },
+  {
+   "id": "X1",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "prepared ... in accordance with accounting practices adopted in Brazil and with the International Financial Reporting Standards (\"IFRS\") issued by the IASB ... and, where applicable, the regulations of ... ANEEL",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002854/axiapr1q26_6k.htm",
+    "page": "0001292814-26-002854/axiapr1q266k_002.jpg",
+    "row": "(표지 하단 문구)",
+    "col": ""
+   },
+   "note": "회계기준: IFRS 및 브라질 회계관행(CPC/CVM). 보고통화 R$(표 단위 R$ mn / R$ thousand). 별도로 ANEEL 규제회계(Regulatory) 수치 병행 제시"
+  }
+ ]
+}

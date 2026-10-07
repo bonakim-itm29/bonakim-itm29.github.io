@@ -1,0 +1,1716 @@
+{
+ "ticker": "SBS",
+ "currency": "BRL (R$ millions)",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 10209,
+   "raw": "10,209",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) Net Revenue",
+    "col": "2Q26"
+   },
+   "note": "Reported Income Statement (Consolidated), R$ mn. 건설수익(Construction Revenue) 포함"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 8965,
+   "raw": "8,965",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) Net Revenue",
+    "col": "2Q25"
+   },
+   "note": "Reported Income Statement (Consolidated), R$ mn. 건설수익(Construction Revenue) 포함"
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 20174,
+   "raw": "20,174",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) Net Revenue",
+    "col": "YTD26"
+   },
+   "note": "Reported Income Statement (Consolidated), R$ mn. 건설수익(Construction Revenue) 포함"
+  },
+  {
+   "id": "Q1",
+   "period": "2025H1",
+   "value": 17391,
+   "raw": "17,391",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) Net Revenue",
+    "col": "YTD25"
+   },
+   "note": "Reported Income Statement (Consolidated), R$ mn. 건설수익(Construction Revenue) 포함"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 9964.842,
+   "raw": "9,964,842",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / January to March 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환; 건설수익 포함"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q1",
+   "value": 8426.2,
+   "raw": "8,426,200",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / January to March 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q1_Adjusted_Net_Revenue",
+   "period": "2026Q2",
+   "value": 6013,
+   "raw": "6,013",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "(=) Net Revenue",
+    "col": "2Q26 Adjusted"
+   },
+   "note": "회사 조정 지표: 금융자산·건설·비경상·EMAE 제외. 회계 수치 아님"
+  },
+  {
+   "id": "Q1_Adjusted_Net_Revenue",
+   "period": "2025Q2",
+   "value": 5635,
+   "raw": "5,635",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "(=) Net Revenue",
+    "col": "2Q25 Adjusted"
+   },
+   "note": "회사 조정 지표"
+  },
+  {
+   "id": "Q1_Adjusted_Net_Revenue",
+   "period": "2026Q1",
+   "value": 6021,
+   "raw": "6,021",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "(=) Net Revenue",
+    "col": "1Q26 Adjusted"
+   },
+   "note": "회사 조정 지표"
+  },
+  {
+   "id": "Q2_Sanitation (Reportable segment)",
+   "period": "2026Q2",
+   "value": 6440.64,
+   "raw": "6,440,640",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / Sanitation (Reportable segment) / April to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q2_Other segments",
+   "period": "2026Q2",
+   "value": 3768.262,
+   "raw": "3,768,262",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / Other segments (i) / April to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 기타=에너지(EMAE)·건설수익; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q2_Sanitation (Reportable segment)",
+   "period": "2026H1",
+   "value": 12772.172,
+   "raw": "12,772,172",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / Sanitation / January to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q2_Other segments",
+   "period": "2026H1",
+   "value": 7401.572,
+   "raw": "7,401,572",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / Other segments / January to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q2_Sanitation (Reportable segment)",
+   "period": "2025Q2",
+   "value": 5881.619,
+   "raw": "5,881,619",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / Sanitation / April to June 2025"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q2_Sanitation",
+   "period": "2026Q1",
+   "value": 6331.531,
+   "raw": "6,331,531",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / March 31, 2026 / Sanitation (i)"
+   },
+   "note": "1Q 주석: EMAE 수익 산정 불가로 위생 부문만 제시; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q2_Reconciliation to statement of profit or loss",
+   "period": "2026Q1",
+   "value": 3633.311,
+   "raw": "3,633,311",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / March 31, 2026 / Reconciliation to statement of profit or loss"
+   },
+   "note": "건설수익에 해당하는 조정 열(부문 아님); 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q2_Sanitation",
+   "period": "2025Q1",
+   "value": 5837.204,
+   "raw": "5,837,204",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Consolidated / March 31, 2025 / Sanitation (i)"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 3503,
+   "raw": "3,503",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "(=) EBITDA",
+    "col": "2Q26 Adjusted"
+   },
+   "note": "회사 명칭 'Adjusted EBITDA'; 정의(각주2): construction margin, financial asset, R$68mn 비경상(Jaguaré 사고), EMAE 제외"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 3617,
+   "raw": "3,617",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "(=) EBITDA",
+    "col": "2Q25 Adjusted"
+   },
+   "note": "회사 명칭 'Adjusted EBITDA'; 정의(각주2): construction margin, financial asset, R$68mn 비경상(Jaguaré 사고), EMAE 제외"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 3786,
+   "raw": "3,786",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "(=) EBITDA",
+    "col": "1Q26 Adjusted"
+   },
+   "note": "1Q 조정: Financial Asset, Construction, Non-Recurring 제외"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q1",
+   "value": 3008,
+   "raw": "3,008",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "(=) EBITDA",
+    "col": "1Q25 Adjusted"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3_Reported_EBITDA",
+   "period": "2026Q2",
+   "value": 3906,
+   "raw": "3,906",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) EBITDA",
+    "col": "2Q26"
+   },
+   "note": "보고 EBITDA(회사 표 기준, Minority Interest 행 포함)"
+  },
+  {
+   "id": "Q3_Reported_EBITDA",
+   "period": "2025Q2",
+   "value": 3890,
+   "raw": "3,890",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) EBITDA",
+    "col": "2Q25"
+   },
+   "note": "보고 EBITDA(회사 표 기준, Minority Interest 행 포함)"
+  },
+  {
+   "id": "Q3_Reported_EBITDA",
+   "period": "2026H1",
+   "value": 7987,
+   "raw": "7,987",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) EBITDA",
+    "col": "YTD26"
+   },
+   "note": "보고 EBITDA(회사 표 기준, Minority Interest 행 포함)"
+  },
+  {
+   "id": "Q3_Reported_EBITDA",
+   "period": "2025H1",
+   "value": 7317,
+   "raw": "7,317",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) EBITDA",
+    "col": "YTD25"
+   },
+   "note": "보고 EBITDA(회사 표 기준, Minority Interest 행 포함)"
+  },
+  {
+   "id": "Q3_Reported_EBITDA",
+   "period": "2026Q1",
+   "value": 4080,
+   "raw": "4,080",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "(=) EBITDA",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 3168,
+   "raw": "3,168",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) EBIT",
+    "col": "2Q26"
+   },
+   "note": "ITR 행 Profit from operations before financial income (expenses)=3,167,463(천)과 일치(텍스트 레이어)"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 3346,
+   "raw": "3,346",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) EBIT",
+    "col": "2Q25"
+   },
+   "note": "ITR 행 Profit from operations before financial income (expenses)=3,167,463(천)과 일치(텍스트 레이어)"
+  },
+  {
+   "id": "Q4",
+   "period": "2026H1",
+   "value": 6551,
+   "raw": "6,551",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) EBIT",
+    "col": "YTD26"
+   },
+   "note": "ITR 행 Profit from operations before financial income (expenses)=3,167,463(천)과 일치(텍스트 레이어)"
+  },
+  {
+   "id": "Q4",
+   "period": "2025H1",
+   "value": 6190,
+   "raw": "6,190",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) EBIT",
+    "col": "YTD25"
+   },
+   "note": "ITR 행 Profit from operations before financial income (expenses)=3,167,463(천)과 일치(텍스트 레이어)"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q1",
+   "value": 3383.665,
+   "raw": "3,383,665",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Profit from operations before financial income (expenses)",
+    "col": "Consolidated / January to March 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q1",
+   "value": 2843.896,
+   "raw": "2,843,896",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Profit from operations before financial income (expenses)",
+    "col": "Consolidated / January to March 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q4_Adjusted_EBIT",
+   "period": "2026Q2",
+   "value": 2772,
+   "raw": "2,772",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "(=) EBIT",
+    "col": "2Q26 Adjusted"
+   },
+   "note": "회사 조정 지표"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 1447.184,
+   "raw": "1,447,184",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Attributable to: Controlling shareholders",
+    "col": "Consolidated / April to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 보도자료 이미지(image_002) Net Income 1,464는 비지배 17 포함 총액; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 3196.215,
+   "raw": "3,196,215",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Attributable to: Controlling shareholders",
+    "col": "Consolidated / January to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 2136,
+   "raw": "2,136",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) Net Income",
+    "col": "2Q25"
+   },
+   "note": "2Q25에는 비지배지분 없음(ITR 텍스트 Controlling 2,135,962와 일치)"
+  },
+  {
+   "id": "Q5_Net_Income_total",
+   "period": "2026Q2",
+   "value": 1464,
+   "raw": "1,464",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) Net Income",
+    "col": "2Q26"
+   },
+   "note": "비지배 포함 당기순이익 총액(지배주주 귀속 아님)"
+  },
+  {
+   "id": "Q5_Net_Income_total",
+   "period": "2026H1",
+   "value": 3213,
+   "raw": "3,213",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "(=) Net Income",
+    "col": "YTD26"
+   },
+   "note": "비지배 포함 총액"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 1749.031,
+   "raw": "1,749,031",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Profit attributable to the Company's shareholders",
+    "col": "Note 29 / January to March 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q1",
+   "value": 1482.092,
+   "raw": "1,482,092",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Profit attributable to the Company's shareholders",
+    "col": "Note 29 / January to March 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": 1150,
+   "raw": "1,150",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "(=) Net Income",
+    "col": "2Q26 Adjusted"
+   },
+   "note": "회사 명칭 'Adjusted Net Income'; 정의: construction margin, financial asset, 비경상(Jaguaré), EMAE 제외"
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": 1956,
+   "raw": "1,956",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "(=) Net Income",
+    "col": "2Q25 Adjusted"
+   },
+   "note": "회사 명칭 'Adjusted Net Income'; 정의: construction margin, financial asset, 비경상(Jaguaré), EMAE 제외"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": 1554,
+   "raw": "1,554",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "(=) Net income",
+    "col": "1Q26 Adjusted"
+   },
+   "note": "1Q 조정: Financial Asset, Non-Recurring 제외"
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q1",
+   "value": 1176,
+   "raw": "1,176",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "(=) Net income",
+    "col": "1Q25 Adjusted"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_Adjusted_EPS",
+   "period": "2026Q2",
+   "value": 0.33,
+   "raw": "0.33",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "EPS (R$)*",
+    "col": "2Q26 Adjusted"
+   },
+   "note": "회사 조정 EPS; 1:5 주식분할 반영"
+  },
+  {
+   "id": "Q6_Adjusted_EPS",
+   "period": "2025Q2",
+   "value": 0.57,
+   "raw": "0.57",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "EPS (R$)*",
+    "col": "2Q25 Adjusted"
+   },
+   "note": "회사 조정 EPS; 1:5 주식분할 반영"
+  },
+  {
+   "id": "Q6_Adjusted_EPS",
+   "period": "2026Q1",
+   "value": 0.44,
+   "raw": "0.44",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "EPS (R$)*",
+    "col": "1Q26 Adjusted"
+   },
+   "note": "회사 조정 EPS; 1:5 주식분할 반영"
+  },
+  {
+   "id": "Q6_Adjusted_EPS",
+   "period": "2025Q1",
+   "value": 0.34,
+   "raw": "0.34",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "EPS (R$)*",
+    "col": "1Q25 Adjusted"
+   },
+   "note": "회사 조정 EPS; 1:5 주식분할 반영"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 0.41,
+   "raw": "0.41",
+   "unit": "R$/share",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Earnings per share - basic and diluted (in reais)",
+    "col": "Consolidated / April to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 보도자료 이미지(image_002) EPS(R$)* 0.42(*Includes EMAE)와 불일치"
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q2",
+   "value": 0.62,
+   "raw": "0.62",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "EPS (R$)*",
+    "col": "2Q25"
+   },
+   "note": "ITR 텍스트 기본·희석 0.62와 일치; 분할 소급 반영"
+  },
+  {
+   "id": "Q7",
+   "period": "2026H1",
+   "value": 0.91,
+   "raw": "0.91",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "EPS (R$)*",
+    "col": "YTD26"
+   },
+   "note": "ITR 텍스트 기본·희석 0.91과 일치"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 0.5,
+   "raw": "0,50",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share (reais per share)",
+    "col": "Note 29 / January to March 2026"
+   },
+   "note": "원문 브라질식 소수점 0,50; 1:5 분할 소급 반영"
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q1",
+   "value": 0.43,
+   "raw": "0,43",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share (reais per share)",
+    "col": "Note 29 / January to March 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": 3366.064,
+   "raw": "3,366,064",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Free Cashflow from Operations",
+    "col": "2Q26"
+   },
+   "note": "보도자료 현금흐름표(R$ '000)의 행 이름은 'Free Cashflow from Operations'(=Cash from Operations−Interest Paid−Income Tax); ITR 영업활동 현금흐름 분기값 미제시(ITR은 반기만); 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q2",
+   "value": 3180.574,
+   "raw": "3,180,574",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Free Cashflow from Operations",
+    "col": "2Q25"
+   },
+   "note": "동일 행; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 4127.702,
+   "raw": "4,127,702",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Net cash generated from operating activities",
+    "col": "Consolidated / January to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 761.638,
+   "raw": "761,638",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Net cash generated from operating activities",
+    "col": "Consolidated / January to March 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q1",
+   "value": 1100.52,
+   "raw": "1,100,520",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Net cash generated from operating activities",
+    "col": "Consolidated / January to March 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q2",
+   "value": 3731,
+   "raw": "3,731",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Total (CAPITAL EXPENDITURES)",
+    "col": "2Q26"
+   },
+   "note": "회사 제시 Capex(Water+Sewage)"
+  },
+  {
+   "id": "Q9",
+   "period": "2025Q2",
+   "value": 3601,
+   "raw": "3,601",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Total (CAPITAL EXPENDITURES)",
+    "col": "2Q25"
+   },
+   "note": "회사 제시 Capex(Water+Sewage)"
+  },
+  {
+   "id": "Q9",
+   "period": "2026H1",
+   "value": 7458,
+   "raw": "7,458",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Total (CAPITAL EXPENDITURES)",
+    "col": "YTD 26"
+   },
+   "note": "회사 제시 Capex(Water+Sewage)"
+  },
+  {
+   "id": "Q9",
+   "period": "2025H1",
+   "value": 6452,
+   "raw": "6,452",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Total (CAPITAL EXPENDITURES)",
+    "col": "YTD 25"
+   },
+   "note": "회사 제시 Capex(Water+Sewage)"
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q1",
+   "value": 3728,
+   "raw": "3,728",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "Total (Capex)",
+    "col": "1Q26"
+   },
+   "note": "회사 제시 Capex"
+  },
+  {
+   "id": "Q9",
+   "period": "2025Q1",
+   "value": 2851,
+   "raw": "2,851",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "Total (Capex)",
+    "col": "1Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2026Q2",
+   "value": -3475.312,
+   "raw": "(3,475,312)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Contract, Intangible Assets and PP&E",
+    "col": "2Q26"
+   },
+   "note": "현금흐름표 투자활동 행; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2025Q2",
+   "value": -4328.718,
+   "raw": "(4,328,718)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Contract, Intangible Assets and PP&E",
+    "col": "2Q25"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2026H1",
+   "value": -8532.006,
+   "raw": "(8,532,006)",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisition of contract assets, intangible assets and property, plant and equipment",
+    "col": "Consolidated / January to June 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2026Q1",
+   "value": -5056.694,
+   "raw": "(5,056,694)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Acquisition of contract assets, intangible assets and property, plant and equipment",
+    "col": "Consolidated / January to March 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q2",
+   "value": 3366.064,
+   "raw": "3,366,064",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Free Cashflow from Operations",
+    "col": "2Q26"
+   },
+   "note": "회사 표의 'Free Cashflow from Operations' 행: Cash from Operations − Interest Paid − Income Tax(설비투자 차감 전, IFRS 영업활동현금흐름과 동일 개념). 별도 정의 문장 없음; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "Q10",
+   "period": "2025Q2",
+   "value": 3180.574,
+   "raw": "3,180,574",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Free Cashflow from Operations",
+    "col": "2Q25"
+   },
+   "note": "회사 표의 'Free Cashflow from Operations' 행: Cash from Operations − Interest Paid − Income Tax(설비투자 차감 전, IFRS 영업활동현금흐름과 동일 개념). 별도 정의 문장 없음"
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q1",
+   "value": 761.638,
+   "raw": "761,638",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "Free cashflow from operations",
+    "col": "1Q26"
+   },
+   "note": "회사 표의 'Free Cashflow from Operations' 행: Cash from Operations − Interest Paid − Income Tax(설비투자 차감 전, IFRS 영업활동현금흐름과 동일 개념). 별도 정의 문장 없음"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 4243.477,
+   "raw": "4,243,477",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "Cash and Equivalents",
+    "col": "2Q26"
+   },
+   "note": "원 단위 R$ thousand(이미지에 단위 캡션 없음; 동일 수치가 ITR에 'In thousands of reais'로 표기) → R$ million 변환"
+  },
+  {
+   "id": "B2_ST Investments",
+   "period": "2026-06-30",
+   "value": 13197.409,
+   "raw": "13,197,409",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "ST Investments",
+    "col": "2Q26"
+   },
+   "note": "ITR 행명 Financial investments; 원 단위 R$ thousand(이미지에 단위 캡션 없음; 동일 수치가 ITR에 'In thousands of reais'로 표기) → R$ million 변환"
+  },
+  {
+   "id": "B2_Restricted Cash",
+   "period": "2026-06-30",
+   "value": 27.889,
+   "raw": "27,889",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "Restricted Cash",
+    "col": "2Q26"
+   },
+   "note": "원 단위 R$ thousand(이미지에 단위 캡션 없음; 동일 수치가 ITR에 'In thousands of reais'로 표기) → R$ million 변환"
+  },
+  {
+   "id": "B3_ST Debt",
+   "period": "2026-06-30",
+   "value": 5289.831,
+   "raw": "5,289,831",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "ST Debt",
+    "col": "2Q26"
+   },
+   "note": "리스 포함; 원 단위 R$ thousand(이미지에 단위 캡션 없음; 동일 수치가 ITR에 'In thousands of reais'로 표기) → R$ million 변환"
+  },
+  {
+   "id": "B3_LT Debt",
+   "period": "2026-06-30",
+   "value": 46367.971,
+   "raw": "46,367,971",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "LT Debt",
+    "col": "2Q26"
+   },
+   "note": "리스 포함; 원 단위 R$ thousand(이미지에 단위 캡션 없음; 동일 수치가 ITR에 'In thousands of reais'로 표기) → R$ million 변환"
+  },
+  {
+   "id": "B3",
+   "period": "2026-06-30",
+   "value": 51657.802,
+   "raw": "51,657,802",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Total borrowings and financing",
+    "col": "Note 17 Consolidated / June 30, 2026 / Total"
+   },
+   "note": "합계는 ITR 텍스트 레이어에서만 확인되나 이미지 확인된 ST Debt+LT Debt와 정확히 일치. 차입금·debentures·blue bonds 등 포함, 리스(Leases concession/others) 포함된 표시값; 리스 제외 합계는 공시되지 않음(계산하지 않음); 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B3_Leases (concession)",
+   "period": "2026-06-30",
+   "value": 190.078,
+   "raw": "190,078",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Leases (concession)",
+    "col": "Note 17 Consolidated / June 30, 2026 / Total"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B3_Leases (others)",
+   "period": "2026-06-30",
+   "value": 75.099,
+   "raw": "75,099",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Leases (others)",
+    "col": "Note 17 Consolidated / June 30, 2026 / Total"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B3_Debentures",
+   "period": "2026-06-30",
+   "value": 25234.374,
+   "raw": "25,234,374",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Debentures",
+    "col": "Note 17 Consolidated / June 30, 2026 / Total"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": 34216.916,
+   "raw": "34,216,916",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Net debt",
+    "col": "Note 5.2 Capital Management / Consolidated / June 30, 2026"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 정의: total borrowings and financing − cash and cash equivalents − financial investments. 보도자료 이미지(image_001) 본문 'R$34 billion in 2Q26'와 정합; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 119606.768,
+   "raw": "119,606,768",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "Total Assets",
+    "col": "2Q26"
+   },
+   "note": "원 단위 R$ thousand(이미지에 단위 캡션 없음; 동일 수치가 ITR에 'In thousands of reais'로 표기) → R$ million 변환"
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 45173.827,
+   "raw": "45,173,827",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Total Equity - Controlling Shareholders",
+    "col": "2Q26"
+   },
+   "note": "원 단위 R$ thousand(이미지에 단위 캡션 없음; 동일 수치가 ITR에 'In thousands of reais'로 표기) → R$ million 변환"
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 3540.24,
+   "raw": "3,540,240",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "Consolidated / March 31, 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B2_Financial investments",
+   "period": "2026-03-31",
+   "value": 15641.914,
+   "raw": "15,641,914",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Financial investments",
+    "col": "Consolidated / March 31, 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B2_Restricted cash",
+   "period": "2026-03-31",
+   "value": 17.864,
+   "raw": "17,864",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Restricted cash",
+    "col": "Consolidated / March 31, 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B3",
+   "period": "2026-03-31",
+   "value": 51642.625,
+   "raw": "51,642,625",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Total borrowings and financing",
+    "col": "Note 17 Consolidated / March 31, 2026 / Total"
+   },
+   "note": "유동 4,872,680 + 비유동 46,769,945(표시값); 리스 포함 표시값, 리스 제외 합계 미공시; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B3_Leases (Concession)",
+   "period": "2026-03-31",
+   "value": 184.828,
+   "raw": "184,828",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Leases (Concession)",
+    "col": "Note 17 Consolidated / March 31, 2026 / Total"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B3_Leases (Other)",
+   "period": "2026-03-31",
+   "value": null,
+   "raw": "70,620 | 11,256 | 1,876",
+   "unit": "",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Leases (Other)",
+    "col": "Note 17 Consolidated / March 31, 2026 / Current | Non-current | Total"
+   },
+   "note": "원문 Total 1,876이 Current 70,620+Non-current 11,256과 불일치(오기 추정) — 값 확정 불가"
+  },
+  {
+   "id": "B4",
+   "period": "2026-03-31",
+   "value": 32460.471,
+   "raw": "32,460,471",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Net debt",
+    "col": "Note 5.2 Consolidated / March 31, 2026"
+   },
+   "note": "정의: total borrowings and financing − cash and cash equivalents − financial investments; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 116718.704,
+   "raw": "116,718,704",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Total Assets",
+    "col": "Consolidated / March 31, 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "B6",
+   "period": "2026-03-31",
+   "value": 43700.956,
+   "raw": "43,700,956",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Total Equity - Controlling",
+    "col": "Consolidated / March 31, 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "S1",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "Common 3,524,534,025 / Preferred 1 / Total 3,524,534,026 (issued)",
+   "unit": "shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Total (Capital stock table)",
+    "col": "June 30, 2026 / Common | Preferred | Total"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 발행주식 수만 제시, 자기주식 주식 수 미공시(자기주식 금액 R$472,000천만 표시) → 유통주식 수 확정 불가. 우선주 1주는 State of São Paulo 보유 특별주(golden share). 참고: Note 29 기본 EPS 가중평균 보통주 3,523,385,573주. 1:5 분할(2026-04-28 EGM) 반영 후"
+  },
+  {
+   "id": "S1",
+   "period": "2026-03-31",
+   "value": null,
+   "raw": "Common 704,906,806 / Preferred 1 / Total 704,906,807 (issued, pre-split)",
+   "unit": "shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Total (Capital stock table)",
+    "col": "March 31, 2026, and December 31, 2025 / Common | Preferred | Total"
+   },
+   "note": "분할 전 발행주식 수; 자기주식 주식 수 미공시 → 유통주식 수 확정 불가. 또한 2Q ITR(텍스트)은 2025-12-31 총수를 703,773,869로 달리 표기. Note 29 가중평균(분할 소급) 3,523,385,573"
+  },
+  {
+   "id": "S2",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "ADR 1주당 원주 비율 공시 없음(Level III ADR, ticker SBS 언급만)"
+  },
+  {
+   "id": "R1",
+   "period": "2026Q1",
+   "value": 583.563,
+   "raw": "R$ 583,563",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Note 28 (a) 본문",
+    "col": "—"
+   },
+   "note": "2026-03-16 이사회 승인 자본이자(interest on equity), 최소 의무배당, 2026-04-30 지급; 주당 금액 미공시; 원 단위 R$ thousand → R$ million 변환"
+  },
+  {
+   "id": "R1",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "2분기 중 배당·JCP 선언 공시 없음. 2Q 현금흐름 Payment of Interest on Equity (1,687,301)천은 지급액(선언액 아님); 2026-06-30 미지급 배당 잔액 441,222천"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "자사주 매입 공시 없음"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "자사주 매입 공시 없음"
+  },
+  {
+   "id": "OP_Billed_Volume_Total",
+   "period": "2026Q2",
+   "value": 1108,
+   "raw": "1,108",
+   "unit": "million m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_004.jpg",
+    "page": "image_004.jpg",
+    "row": "Total",
+    "col": "Billed Volume (millions of m³) / 2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Billed_Volume_Total",
+   "period": "2025Q2",
+   "value": 1099,
+   "raw": "1,099",
+   "unit": "million m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_004.jpg",
+    "page": "image_004.jpg",
+    "row": "Total",
+    "col": "Billed Volume (millions of m³) / 2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Billed_Volume_Total",
+   "period": "2026H1",
+   "value": 2204,
+   "raw": "2,204",
+   "unit": "million m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_004.jpg",
+    "page": "image_004.jpg",
+    "row": "Total",
+    "col": "Billed Volume (millions of m³) / YTD26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Billed_Volume_Total",
+   "period": "2025H1",
+   "value": 2197,
+   "raw": "2,197",
+   "unit": "million m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_004.jpg",
+    "page": "image_004.jpg",
+    "row": "Total",
+    "col": "Billed Volume (millions of m³) / YTD25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Billed_Volume_Total",
+   "period": "2026Q1",
+   "value": 1096,
+   "raw": "1,096",
+   "unit": "million m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Billed Volume (millions of m³) / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Billed_Volume_Total",
+   "period": "2025Q1",
+   "value": 1098,
+   "raw": "1,098",
+   "unit": "million m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Billed Volume (millions of m³) / 1Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Average_Rate_Total",
+   "period": "2026Q2",
+   "value": 6.01,
+   "raw": "6.01",
+   "unit": "R$/m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_004.jpg",
+    "page": "image_004.jpg",
+    "row": "Total",
+    "col": "Average Rate (R$/m³) / 2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Average_Rate_Total",
+   "period": "2025Q2",
+   "value": 5.49,
+   "raw": "5.49",
+   "unit": "R$/m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_004.jpg",
+    "page": "image_004.jpg",
+    "row": "Total",
+    "col": "Average Rate (R$/m³) / 2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Average_Rate_Total",
+   "period": "2026H1",
+   "value": 5.94,
+   "raw": "5.94",
+   "unit": "R$/m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_004.jpg",
+    "page": "image_004.jpg",
+    "row": "Total",
+    "col": "Average Rate (R$/m³) / YTD26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Average_Rate_Total",
+   "period": "2026Q1",
+   "value": 5.87,
+   "raw": "5.87",
+   "unit": "R$/m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Average Rate (R$/m³) / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Average_Rate_Total",
+   "period": "2025Q1",
+   "value": 5.74,
+   "raw": "5.74",
+   "unit": "R$/m³",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "Total",
+    "col": "Average Rate (R$/m³) / 1Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Tariff_Adjustment",
+   "period": "2026Q2",
+   "value": 9.9,
+   "raw": "+9.9% rate phase-in",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004210/image_004.jpg",
+    "page": "image_004.jpg",
+    "row": "ADJUSTED NET REVENUE 본문 (+8.7% in net price)",
+    "col": "—"
+   },
+   "note": "조정 순매출 요인 설명의 요금 단계 적용(phase-in) 효과; 순가격 효과 +8.7%. 정기 요금 조정률 자체 공시는 아님"
+  },
+  {
+   "id": "OP_Tariff_Adjustment",
+   "period": "2026Q1",
+   "value": 9.1,
+   "raw": "+9.1% tariff phase-in",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002895/sbspr1q26_6k.htm",
+    "page": "",
+    "row": "본문 (+11.9% in net price)",
+    "col": "—"
+   },
+   "note": "순가격 +11.9% 중 요금 phase-in +9.1%, 상업 이니셔티브 +2.8%. 정기 요금 조정률 자체 공시는 아님"
+  },
+  {
+   "id": "X1",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "CPC 21 (R1) and IAS 34; In thousands of reais",
+   "unit": "",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004252/sbsitr2q26_6k.htm",
+    "page": "",
+    "row": "Note 2 Basis of preparation",
+    "col": "—"
+   },
+   "note": "ITR 2Q26(-004252) 페이지 이미지(image_001~094.jpg)가 폴더에 없음; htm 안 숨김(흰색 0.01px) 텍스트 레이어로만 확인 가능, 표 행·열 육안 확인 불가; 텍스트상 IFRS(IAS 34)·CPC 21(R1), 보고통화 레알(천 단위). 보도자료(-004210)는 R$ mn"
+  },
+  {
+   "id": "X1",
+   "period": "2026Q1",
+   "value": "IFRS (IAS 34) / CPC 21 (R1)",
+   "raw": "based on the provisions of CPC 21 (R1) – Interim Financial Statements and the international standard IAS 34",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002897/sbsitr1q26_6k.htm",
+    "page": "",
+    "row": "Note 2 Basis of preparation",
+    "col": "—"
+   },
+   "note": "보고통화 브라질 레알, 재무제표 In thousands of reais; 보도자료 R$ mn"
+  }
+ ]
+}

@@ -1,0 +1,967 @@
+===== VALE
+Q1                                                         2026Q2                 10498 US$ million ok
+Q1                                                         2025Q2                  8804 US$ million ok
+Q1                                                         2026H1                 19756 US$ million ok
+Q1                                                         2026Q1                  9258 US$ million ok
+Q2_Iron Ore Solutions                                      2026Q2                  7888 US$ million ok
+Q2_Iron Ore Solutions                                      2025Q2                  6963 US$ million ok
+Q2_Iron Ore Solutions                                      2026H1                 14763 US$ million ok
+Q2_Vale Base Metals                                        2026Q2                  2610 US$ million ok
+Q2_Vale Base Metals                                        2025Q2                  1841 US$ million ok
+Q2_Vale Base Metals                                        2026H1                  4993 US$ million ok
+Q2_Iron Ore Solutions                                      2026Q1                  6875 US$ million ok
+Q2_Vale Base Metals                                        2026Q1                  2383 US$ million ok
+Q3                                                         2026Q2                  3676 US$ million ok
+Q3                                                         2025Q2                  3386 US$ million ok
+Q3                                                         2026Q1                  3830 US$ million ok
+Q3                                                         2026H1                  7506 US$ million ok
+Q3_Proforma EBITDA                                         2026Q2                  4066 US$ million ok
+Q3_Proforma EBITDA                                         2025Q2                  3424 US$ million ok
+Q3_Proforma EBITDA                                         2026Q1                  3895 US$ million ok
+Q3_Proforma EBITDA                                         2026H1                  7961 US$ million ok
+Q4                                                         2026Q2                  2155 US$ million ok
+Q4                                                         2025Q2                  2004 US$ million ok
+Q4                                                         2026H1                  4530 US$ million ok
+Q4                                                         2026Q1                  2375 US$ million ok
+Q4_Adjusted EBIT                                           2026Q2                  2765 US$ million ok
+Q4_Adjusted EBIT                                           2025Q2                  2606 US$ million ok
+Q4_Adjusted EBIT                                           2026Q1                  2985 US$ million ok
+Q4_Adjusted EBIT                                           2026H1                  5750 US$ million ok
+Q5                                                         2026Q2                  1375 US$ million ok
+Q5                                                         2025Q2                  2117 US$ million ok
+Q5                                                         2026H1                  3268 US$ million ok
+Q5                                                         2026Q1                  1893 US$ million ok
+Q6                                                         2026Q2                  1566 US$ million ok
+Q6                                                         2025Q2                  2117 US$ million ok
+Q6                                                         2026Q1                  1893 US$ million ok
+Q6                                                         2026H1                  3459 US$ million ok
+Q7                                                         2026Q2                  0.32 US$ per comm ok
+Q7                                                         2025Q2                   0.5 US$ per comm ok
+Q7                                                         2026H1                  0.77 US$ per comm ok
+Q7                                                         2026Q1                  0.44 US$ per comm ok
+Q8                                                         2026H1                  4291 US$ million ok
+Q8                                                         2026Q1                  1879 US$ million ok
+Q8                                                         2026Q2                  2412 US$ million ok
+Q8                                                         2025Q2                  1856 US$ million ok
+Q9                                                         2026Q2                  1128 US$ million ok
+Q9                                                         2025Q2                  1053 US$ million ok
+Q9                                                         2026Q1                  1089 US$ million ok
+Q9                                                         2026H1                  2217 US$ million ok
+Q9_CF                                                      2026Q2                 -1244 US$ million ok
+Q9_CF                                                      2025Q2                 -1168 US$ million ok
+Q9_CF                                                      2026Q1                 -1185 US$ million ok
+Q9_CF                                                      2026H1                 -2429 US$ million ok
+Q10                                                        2026Q2                  1505 US$ million ok
+Q10                                                        2025Q2                  1008 US$ million ok
+Q10                                                        2026Q1                   813 US$ million ok
+Q10                                                        2026H1                  2318 US$ million ok
+B1                                                         2026-06-30              5577 US$ million ok
+B1                                                         2026-03-31              5085 US$ million ok
+B2_Short-term investments                                  2026-06-30               188 US$ million ok
+B2_Short-term investments                                  2026-03-31               194 US$ million ok
+B3                                                         2026-06-30             18304 US$ million ok
+B3                                                         2026-03-31             18196 US$ million ok
+B3_Leases                                                  2026-06-30               634 US$ million ok
+B3_Leases                                                  2026-03-31               641 US$ million ok
+B4                                                         2026-06-30             13173 US$ million ok
+B4                                                         2026-03-31             13558 US$ million ok
+B4_Expanded net debt                                       2026-06-30             16677 US$ million ok
+B4_Expanded net debt                                       2026-03-31             17792 US$ million ok
+B5                                                         2026-06-30             89279 US$ million ok
+B5                                                         2026-03-31             87591 US$ million ok
+B6                                                         2026-06-30             38011 US$ million ok
+B6                                                         2026-03-31             36651 US$ million ok
+S1_Common                                                  2026-06-30        4255762783 shares ok
+S1_Golden shares                                           2026-06-30                12 shares ok
+S1_Common                                                  2026-03-31        4264533753 shares ok
+R1                                                         2026H1                  1701 US$ million ok
+R1_JCP                                                     2026H1                  1314 US$ million ok
+R1_Dividends                                               2026H1                   387 US$ million ok
+R2                                                         2026Q2                   140 US$ million ok
+R2                                                         2026Q1                    74 US$ million ok
+R2                                                         2026H1                   214 US$ million ok
+R2_shares                                                  2026H1              13751600 shares ok
+===== PBR
+Q1                                                         2026H1                 57142 US$ million ok
+Q1                                                         2025H1                 42110 US$ million ok
+Q1                                                         2026Q2                 33607 US$ million ok
+Q1                                                         2025Q2                 21037 US$ million ok
+Q1                                                         2026Q1                 23535 US$ million ok
+Q2_Exploration and Production (E&P)                        2026Q2                 22785 US$ million ok
+Q2_Exploration and Production (E&P)                        2025Q2                 14404 US$ million ok
+Q2_Exploration and Production (E&P)                        2026H1                 38781 US$ million ok
+Q2_Exploration and Production (E&P)                        2025H1                 29471 US$ million ok
+Q2_Exploration and Production (E&P)                        2026Q1                 15996 US$ million ok
+Q2_Refining, Transportation & Marketing (RT&M)             2026Q2                 32351 US$ million ok
+Q2_Refining, Transportation & Marketing (RT&M)             2025Q2                 19795 US$ million ok
+Q2_Refining, Transportation & Marketing (RT&M)             2026H1                 54648 US$ million ok
+Q2_Refining, Transportation & Marketing (RT&M)             2025H1                 39784 US$ million ok
+Q2_Refining, Transportation & Marketing (RT&M)             2026Q1                 22297 US$ million ok
+Q2_Gas and Low Carbon Energies (G&LCE)                     2026Q2                  2406 US$ million ok
+Q2_Gas and Low Carbon Energies (G&LCE)                     2025Q2                  2176 US$ million ok
+Q2_Gas and Low Carbon Energies (G&LCE)                     2026H1                  4611 US$ million ok
+Q2_Gas and Low Carbon Energies (G&LCE)                     2025H1                  4036 US$ million ok
+Q2_Gas and Low Carbon Energies (G&LCE)                     2026Q1                  2205 US$ million ok
+Q2_Corporate and other businesses                          2026Q2                    99 US$ million ok
+Q2_Corporate and other businesses                          2025Q2                    80 US$ million ok
+Q2_Corporate and other businesses                          2026H1                   188 US$ million ok
+Q2_Corporate and other businesses                          2025H1                   157 US$ million ok
+Q2_Corporate and other businesses                          2026Q1                    89 US$ million ok
+Q2_Eliminations                                            2026Q2                -24034 US$ million ok
+Q2_Eliminations                                            2025Q2                -15418 US$ million ok
+Q2_Eliminations                                            2026H1                -41086 US$ million ok
+Q2_Eliminations                                            2025H1                -31338 US$ million ok
+Q2_Eliminations                                            2026Q1                -17052 US$ million ok
+Q3_Adjusted EBITDA                                         2026Q2                 18615 US$ million ok
+Q3_Adjusted EBITDA                                         2026Q1                 11349 US$ million ok
+Q3_Adjusted EBITDA                                         2025Q2                  9242 US$ million ok
+Q3_Adjusted EBITDA                                         2026H1                 29964 US$ million ok
+Q3_Adjusted EBITDA                                         2025H1                 19688 US$ million ok
+Q3_Adjusted EBITDA excluding one-off events                2026Q2                 19959 US$ million ok
+Q3_Adjusted EBITDA excluding one-off events                2026Q1                 11737 US$ million ok
+Q3_Adjusted EBITDA excluding one-off events                2025Q2                 10231 US$ million ok
+Q3_Adjusted EBITDA excluding one-off events                2026H1                 31696 US$ million ok
+Q3_Adjusted EBITDA excluding one-off events                2025H1                 20883 US$ million ok
+Q3_EBITDA                                                  2026Q2                 18619 US$ million ok
+Q3_EBITDA                                                  2026Q1                 11969 US$ million ok
+Q3_EBITDA                                                  2025Q2                  9093 US$ million ok
+Q3_EBITDA                                                  2026H1                 30588 US$ million ok
+Q3_EBITDA                                                  2025H1                 19698 US$ million ok
+Q4                                                         2026H1                 22101 US$ million ok
+Q4                                                         2025H1                 12625 US$ million ok
+Q4                                                         2026Q2                 14253 US$ million ok
+Q4                                                         2025Q2                  5349 US$ million ok
+Q4                                                         2026Q1                  7848 US$ million ok
+Q5                                                         2026H1                 16627 US$ million ok
+Q5                                                         2025H1                 10708 US$ million ok
+Q5                                                         2026Q2                 10428 US$ million ok
+Q5                                                         2025Q2                  4734 US$ million ok
+Q5                                                         2026Q1                  6199 US$ million ok
+Q6                                                         2026Q2                 11073 US$ million ok
+Q6                                                         2026Q1                  4535 US$ million ok
+Q6                                                         2025Q2                  4101 US$ million ok
+Q6                                                         2026H1                 15608 US$ million ok
+Q6                                                         2025H1                  8130 US$ million ok
+Q7                                                         2026H1                  1.29 US$ per shar ok
+Q7                                                         2025H1                  0.83 US$ per shar ok
+Q7                                                         2026Q2                  0.81 US$ per shar ok
+Q7                                                         2025Q2                  0.37 US$ per shar ok
+Q7                                                         2026Q1                  0.48 US$ per shar ok
+Q8                                                         2026Q2                 12250 US$ million ok
+Q8                                                         2026Q1                  8399 US$ million ok
+Q8                                                         2025Q2                  7531 US$ million ok
+Q8                                                         2026H1                 20649 US$ million ok
+Q8                                                         2025H1                 16029 US$ million ok
+Q9_Total Capex (company)                                   2026Q2                  5299 US$ million ok
+Q9_Total Capex (company)                                   2026Q1                  5107 US$ million ok
+Q9_Total Capex (company)                                   2025Q2                  4431 US$ million ok
+Q9_Total Capex (company)                                   2026H1                 10405 US$ million ok
+Q9_Total Capex (company)                                   2025H1                  8497 US$ million ok
+Q9_Acquisition of PP&E and intangible assets (cash flow)   2026Q2                 -4559 US$ million ok
+Q9_Acquisition of PP&E and intangible assets (cash flow)   2026Q1                 -4513 US$ million ok
+Q9_Acquisition of PP&E and intangible assets (cash flow)   2025Q2                 -4084 US$ million ok
+Q9_Acquisition of PP&E and intangible assets (cash flow)   2026H1                 -9072 US$ million ok
+Q9_Acquisition of PP&E and intangible assets (cash flow)   2025H1                 -8046 US$ million ok
+Q10                                                        2026Q2                  7659 US$ million ok
+Q10                                                        2026Q1                  3855 US$ million ok
+Q10                                                        2025Q2                  3445 US$ million ok
+Q10                                                        2026H1                 11514 US$ million ok
+Q10                                                        2025H1                  7981 US$ million ok
+B1                                                         2026-06-30              6483 US$ million ok
+B1                                                         2025-12-31              6471 US$ million ok
+B1                                                         2026-03-31              6570 US$ million ok
+B2_Financial investments (current)                         2026-06-30              3903 US$ million ok
+B2_Financial investments (current)                         2025-12-31              2726 US$ million ok
+B2_Financial investments (total, note 3.2)                 2026-06-30              3935 US$ million ok
+B2_Financial investments (total, note 3.2)                 2025-12-31              2729 US$ million ok
+B3_Finance debt (current)                                  2026-06-30              1435 US$ million ok
+B3_Finance debt (current)                                  2025-12-31              2186 US$ million ok
+B3_Finance debt (non-current)                              2026-06-30             24399 US$ million ok
+B3_Finance debt (non-current)                              2025-12-31             24255 US$ million ok
+B3_Total finance debt                                      2026-06-30             25834 US$ million ok
+B3_Total finance debt                                      2025-12-31             26441 US$ million ok
+B3_Lease liability (current)                               2026-06-30             10250 US$ million ok
+B3_Lease liability (current)                               2025-12-31             10037 US$ million ok
+B3_Lease liability (non-current)                           2026-06-30             34722 US$ million ok
+B3_Lease liability (non-current)                           2025-12-31             33315 US$ million ok
+B3_Gross debt (company, incl. finance leases)              2026-06-30             70806 US$ million ok
+B3_Gross debt (company, incl. finance leases)              2026-03-31             71214 US$ million ok
+B4                                                         2026-06-30             60388 US$ million ok
+B4                                                         2026-03-31             62093 US$ million ok
+B5                                                         2026-06-30            247077 US$ million ok
+B5                                                         2025-12-31            222337 US$ million ok
+B6                                                         2026-06-30             92908 US$ million ok
+B6                                                         2025-12-31             75565 US$ million ok
+S1_common                                                  2026-06-30        7442231382 shares ok
+S1_preferred                                               2026-06-30        5446501379 shares ok
+S1_total                                                   2026-06-30       12888732761 shares ok
+S2                                                         2026-06-30                 2 shares per A ok
+R1_total                                                   2026Q2                  3406 US$ million ok
+R1_per_share                                               2026Q2                0.2642 US$ per comm ok
+R1_JCP                                                     2026Q2                  2215 US$ million ok
+R1_dividends                                               2026Q2                  1191 US$ million ok
+R1_total                                                   2026Q1                  1845 US$ million ok
+R1_per_share                                               2026Q1                0.1431 US$ per comm ok
+===== ABEV
+Q1                                                         2026Q2               20148.9 R$ million ok
+Q1                                                         2025Q2               20090.2 R$ million ok
+Q1                                                         2026H1               42613.4 R$ million ok
+Q1                                                         2025H1               42587.6 R$ million ok
+Q1                                                         2026Q1               22464.5 R$ million ok
+Q2_Brazil_Beer                                             2025Q2                8989.6 R$ million ok
+Q2_Brazil_Beer                                             2026Q2                9791.1 R$ million ok
+Q2_Brazil_Beer                                             2025H1               18990.4 R$ million ok
+Q2_Brazil_Beer                                             2026H1               20751.1 R$ million ok
+Q2_Brazil_NAB                                              2025Q2                2031.2 R$ million ok
+Q2_Brazil_NAB                                              2026Q2                2060.5 R$ million ok
+Q2_Brazil_NAB                                              2025H1                4285.8 R$ million ok
+Q2_Brazil_NAB                                              2026H1                4355.1 R$ million ok
+Q2_Brazil                                                  2025Q2               11020.8 R$ million ok
+Q2_Brazil                                                  2026Q2               11851.6 R$ million ok
+Q2_Brazil                                                  2025H1               23276.1 R$ million ok
+Q2_Brazil                                                  2026H1               25106.2 R$ million ok
+Q2_CAC                                                     2025Q2                2784.6 R$ million ok
+Q2_CAC                                                     2026Q2                2317.5 R$ million ok
+Q2_CAC                                                     2025H1                5441.5 R$ million ok
+Q2_CAC                                                     2026H1                4562.7 R$ million ok
+Q2_LAS                                                     2025Q2                3295.2 R$ million ok
+Q2_LAS                                                     2026Q2                3226.2 R$ million ok
+Q2_LAS                                                     2025H1                8831.3 R$ million ok
+Q2_LAS                                                     2026H1                8262.3 R$ million ok
+Q2_Canada                                                  2025Q2                2989.7 R$ million ok
+Q2_Canada                                                  2026Q2                2753.7 R$ million ok
+Q2_Canada                                                  2025H1                5038.6 R$ million ok
+Q2_Canada                                                  2026H1                4682.2 R$ million ok
+Q2_Brazil_Beer                                             2026Q1               10960.0 R$ million ok
+Q2_Brazil_NAB                                              2026Q1                2294.6 R$ million ok
+Q2_Brazil                                                  2026Q1               13254.6 R$ million ok
+Q2_CAC                                                     2026Q1                2245.2 R$ million ok
+Q2_LAS                                                     2026Q1                5036.1 R$ million ok
+Q2_Canada                                                  2026Q1                1928.5 R$ million ok
+Q3                                                         2026Q2                6376.7 R$ million ok
+Q3                                                         2025Q2                6152.7 R$ million ok
+Q3                                                         2026H1               13931.6 R$ million ok
+Q3                                                         2025H1               13597.4 R$ million ok
+Q3                                                         2026Q1                7555.0 R$ million ok
+Q3_EBITDA                                                  2026Q2                6356.4 R$ million ok
+Q3_EBITDA                                                  2025Q2                6096.1 R$ million ok
+Q3_EBITDA                                                  2026H1               13947.9 R$ million ok
+Q3_EBITDA                                                  2025H1               13522.0 R$ million ok
+Q4                                                         2026Q2                4814.3 R$ million ok
+Q4                                                         2025Q2                4399.1 R$ million ok
+Q4                                                         2026H1               10802.6 R$ million ok
+Q4                                                         2025H1               10109.1 R$ million ok
+Q4                                                         2026Q1                5988.4 R$ million ok
+Q4_Normalized_Operating_Profit                             2026Q2                4845.5 R$ million ok
+Q4_Normalized_Operating_Profit                             2025Q2                4450.3 R$ million ok
+Q4_Normalized_Operating_Profit                             2026H1               10797.0 R$ million ok
+Q4_Normalized_Operating_Profit                             2025H1               10181.7 R$ million ok
+Q4_Normalized_Operating_Profit                             2026Q1                5951.5 R$ million ok
+Q5                                                         2026Q2              3386.915 R$ million ok
+Q5                                                         2025Q2              2717.722 R$ million ok
+Q5                                                         2026H1              7155.178 R$ million ok
+Q5                                                         2025H1              6411.668 R$ million ok
+Q5                                                         2026Q1                3768.3 R$ million ok
+Q6                                                         2026Q2                3404.5 R$ million ok
+Q6                                                         2025Q2                2759.7 R$ million ok
+Q6                                                         2026H1                7119.7 R$ million ok
+Q6                                                         2025H1                6469.2 R$ million ok
+Q6                                                         2026Q1                3715.2 R$ million ok
+Q6_Normalized_Profit_total                                 2026Q2                3492.7 R$ million ok
+Q6_Normalized_Profit_total                                 2025Q2                2832.7 R$ million ok
+Q6_Normalized_Profit_total                                 2026H1                7325.1 R$ million ok
+Q6_Normalized_Profit_total                                 2025H1                6652.9 R$ million ok
+Q6_Normalized_Profit_total                                 2026Q1                3832.4 R$ million ok
+Q6_Normalized_basic_EPS                                    2026Q2                  0.22 R$/share ok
+Q6_Normalized_basic_EPS                                    2025Q2                  0.18 R$/share ok
+Q6_Normalized_basic_EPS                                    2026H1                  0.46 R$/share ok
+Q7                                                         2026Q2                 0.217 R$/share ok
+Q7                                                         2025Q2                0.1742 R$/share ok
+Q7                                                         2026H1                0.4584 R$/share ok
+Q7                                                         2025H1                  0.41 R$/share ok
+Q7                                                         2026Q1                  0.24 R$/share ok
+Q8                                                         2026Q2               4711.44 R$ million ok
+Q8                                                         2025Q2               3050.04 R$ million ok
+Q8                                                         2026H1               7872.32 R$ million ok
+Q8                                                         2025H1              4254.012 R$ million ok
+Q8                                                         2026Q1                3160.9 R$ million ok
+Q9                                                         2026Q2              -879.877 R$ million ok
+Q9                                                         2025Q2             -1088.203 R$ million ok
+Q9                                                         2026H1             -1346.732 R$ million ok
+Q9                                                         2025H1             -1916.354 R$ million ok
+Q9                                                         2026Q1                -466.9 R$ million ok
+Q9_Brazil                                                  2026H1               869.691 R$ million ok
+Q9_CAC                                                     2026H1               189.531 R$ million ok
+Q9_LAS                                                     2026H1               190.421 R$ million ok
+Q9_Canada                                                  2026H1                97.089 R$ million ok
+B1                                                         2026-06-30         16610.779 R$ million ok
+B1                                                         2025-12-31         18638.228 R$ million ok
+B2_Investment_securities_current                           2026-06-30          1735.617 R$ million ok
+B2_Investment_securities_current                           2025-12-31          1681.692 R$ million ok
+B2_Investment_securities_noncurrent                        2026-06-30            78.088 R$ million ok
+B2_Investment_securities_noncurrent                        2025-12-31           123.256 R$ million ok
+B3                                                         2026-06-30           2948.96 R$ million ok
+B3                                                         2025-12-31          3386.924 R$ million ok
+B3_current                                                 2026-06-30          1073.602 R$ million ok
+B3_noncurrent                                              2026-06-30          1875.358 R$ million ok
+B3_Secured_bank_loans                                      2026-06-30            80.871 R$ million ok
+B3_Other_secured_loans                                     2026-06-30           281.368 R$ million ok
+B3_Lease_liabilities                                       2026-06-30          2586.721 R$ million ok
+B3_Lease_liabilities                                       2025-12-31          2975.646 R$ million ok
+B4                                                         2026-06-30        -15397.436 R$ million ok
+B4                                                         2025-12-31        -16932.996 R$ million ok
+B5                                                         2026-06-30        138209.009 R$ million ok
+B5                                                         2025-12-31        145087.151 R$ million ok
+B6                                                         2026-06-30         88313.174 R$ million ok
+B6                                                         2025-12-31         87914.039 R$ million ok
+S1_total_issued_ON                                         2026-06-30          15763665 thousand com ok
+S1_treasury_ON                                             2026-06-30            310870 thousand com ok
+S1_weighted_basic                                          2026Q2               15513.7 million shar ok
+S1_weighted_basic                                          2026H1               15610.0 million shar ok
+R1_total                                                   2026Q2               694.639 R$ million ok
+R1_per_share                                               2026Q2                0.0449 R$/share (gr ok
+R1_total                                                   2026H1               694.639 R$ million ok
+R1_subsequent_IOC                                          2026Q3                1100.0 R$ million ambiguous
+R2_cashflow                                                2026Q2             -2239.153 R$ million ok
+R2_cashflow                                                2026H1             -2652.614 R$ million ok
+R2_cashflow                                                2025Q2              -774.602 R$ million ok
+R2_program_shares                                          2026H1             171482300 shares ok
+R2_program_cost                                            2026H1             -2751.334 R$ million ok
+===== SBS
+Q1                                                         2026Q2                 10209 R$ million ok
+Q1                                                         2025Q2                  8965 R$ million ok
+Q1                                                         2026H1                 20174 R$ million ok
+Q1                                                         2025H1                 17391 R$ million ok
+Q1                                                         2026Q1              9964.842 R$ million ok
+Q1_Adjusted_Net_Revenue                                    2026Q2                  6013 R$ million ok
+Q1_Adjusted_Net_Revenue                                    2025Q2                  5635 R$ million ok
+Q1_Adjusted_Net_Revenue                                    2026Q1                  6021 R$ million ok
+Q2_Sanitation (Reportable segment)                         2026Q2               6440.64 R$ million ambiguous
+Q2_Other segments                                          2026Q2              3768.262 R$ million ambiguous
+Q2_Sanitation (Reportable segment)                         2026H1             12772.172 R$ million ambiguous
+Q2_Other segments                                          2026H1              7401.572 R$ million ambiguous
+Q2_Sanitation (Reportable segment)                         2025Q2              5881.619 R$ million ambiguous
+Q2_Sanitation                                              2026Q1              6331.531 R$ million ok
+Q2_Reconciliation to statement of profit or loss           2026Q1              3633.311 R$ million ok
+Q3                                                         2026Q2                  3503 R$ million ok
+Q3                                                         2025Q2                  3617 R$ million ok
+Q3                                                         2026Q1                  3786 R$ million ok
+Q3_Reported_EBITDA                                         2026Q2                  3906 R$ million ok
+Q3_Reported_EBITDA                                         2025Q2                  3890 R$ million ok
+Q3_Reported_EBITDA                                         2026H1                  7987 R$ million ok
+Q3_Reported_EBITDA                                         2025H1                  7317 R$ million ok
+Q3_Reported_EBITDA                                         2026Q1                  4080 R$ million ok
+Q4                                                         2026Q2                  3168 R$ million ok
+Q4                                                         2025Q2                  3346 R$ million ok
+Q4                                                         2026H1                  6551 R$ million ok
+Q4                                                         2025H1                  6190 R$ million ok
+Q4                                                         2026Q1              3383.665 R$ million ok
+Q4_Adjusted_EBIT                                           2026Q2                  2772 R$ million ok
+Q5                                                         2026Q2              1447.184 R$ million ambiguous
+Q5                                                         2026H1              3196.215 R$ million ambiguous
+Q5                                                         2025Q2                  2136 R$ million ok
+Q5_Net_Income_total                                        2026Q2                  1464 R$ million ok
+Q5_Net_Income_total                                        2026H1                  3213 R$ million ok
+Q5                                                         2026Q1              1749.031 R$ million ok
+Q6                                                         2026Q2                  1150 R$ million ok
+Q6                                                         2025Q2                  1956 R$ million ok
+Q6                                                         2026Q1                  1554 R$ million ok
+Q6_Adjusted_EPS                                            2026Q2                  0.33 R$/share ok
+Q6_Adjusted_EPS                                            2025Q2                  0.57 R$/share ok
+Q6_Adjusted_EPS                                            2026Q1                  0.44 R$/share ok
+Q7                                                         2026Q2                  0.41 R$/share ambiguous
+Q7                                                         2025Q2                  0.62 R$/share ok
+Q7                                                         2026H1                  0.91 R$/share ok
+Q7                                                         2026Q1                   0.5 R$/share ok
+Q8                                                         2026Q2              3366.064 R$ million ok
+Q8                                                         2025Q2              3180.574 R$ million ok
+Q8                                                         2026H1              4127.702 R$ million ambiguous
+Q8                                                         2026Q1               761.638 R$ million ok
+Q9                                                         2026Q2                  3731 R$ million ok
+Q9                                                         2025Q2                  3601 R$ million ok
+Q9                                                         2026H1                  7458 R$ million ok
+Q9                                                         2025H1                  6452 R$ million ok
+Q9                                                         2026Q1                  3728 R$ million ok
+Q9_CF                                                      2026Q2             -3475.312 R$ million ok
+Q9_CF                                                      2025Q2             -4328.718 R$ million ok
+Q9_CF                                                      2026H1             -8532.006 R$ million ambiguous
+Q9_CF                                                      2026Q1             -5056.694 R$ million ok
+Q10                                                        2026Q2              3366.064 R$ million ok
+Q10                                                        2025Q2              3180.574 R$ million ok
+Q10                                                        2026Q1               761.638 R$ million ok
+B1                                                         2026-06-30          4243.477 R$ million ok
+B2_ST Investments                                          2026-06-30         13197.409 R$ million ok
+B2_Restricted Cash                                         2026-06-30            27.889 R$ million ok
+B3_ST Debt                                                 2026-06-30          5289.831 R$ million ok
+B3_LT Debt                                                 2026-06-30         46367.971 R$ million ok
+B3                                                         2026-06-30         51657.802 R$ million ok
+B3_Leases (concession)                                     2026-06-30           190.078 R$ million ambiguous
+B3_Leases (others)                                         2026-06-30            75.099 R$ million ambiguous
+B3_Debentures                                              2026-06-30         25234.374 R$ million ambiguous
+B4                                                         2026-06-30         34216.916 R$ million ambiguous
+B5                                                         2026-06-30        119606.768 R$ million ok
+B6                                                         2026-06-30         45173.827 R$ million ok
+B1                                                         2026-03-31           3540.24 R$ million ok
+B2_Financial investments                                   2026-03-31         15641.914 R$ million ok
+B2_Restricted cash                                         2026-03-31            17.864 R$ million ok
+B3                                                         2026-03-31         51642.625 R$ million ok
+B3_Leases (Concession)                                     2026-03-31           184.828 R$ million ok
+B4                                                         2026-03-31         32460.471 R$ million ok
+B5                                                         2026-03-31        116718.704 R$ million ok
+B6                                                         2026-03-31         43700.956 R$ million ok
+R1                                                         2026Q1               583.563 R$ million ok
+X1                                                         2026Q1      IFRS (IAS 34) / CPC 21 (R1)  ok
+===== ERJ
+Q1                                                         2026Q2                2235.3 US$ million ok
+Q1                                                         2026Q1                1446.7 US$ million ok
+Q1                                                         2025Q2                1819.2 US$ million ok
+Q1                                                         2026H1                3682.0 US$ million ok
+Q2_Commercial Aviation                                     2026Q2                 625.0 US$ million ok
+Q2_Commercial Aviation                                     2025Q2                 577.0 US$ million ok
+Q2_Commercial Aviation                                     2026Q1                 293.0 US$ million ok
+Q2_Executive Aviation                                      2026Q2                 725.0 US$ million ok
+Q2_Executive Aviation                                      2025Q2                 549.0 US$ million ok
+Q2_Executive Aviation                                      2026Q1                 418.0 US$ million ok
+Q2_Defense & Security                                      2026Q2                 304.0 US$ million ok
+Q2_Defense & Security                                      2025Q2                 221.0 US$ million ok
+Q2_Defense & Security                                      2026Q1                 227.0 US$ million ok
+Q2_Services & Support                                      2026Q2                 565.0 US$ million ok
+Q2_Services & Support                                      2025Q2                 456.0 US$ million ok
+Q2_Services & Support                                      2026Q1                 490.0 US$ million ok
+Q2_Others                                                  2026Q2                  15.0 US$ million ok
+Q2_Others                                                  2025Q2                  16.0 US$ million ok
+Q2_Others                                                  2026Q1                  18.3 US$ million ok
+Q3                                                         2026Q2                 355.6 US$ million ok
+Q3                                                         2026Q1                 143.6 US$ million ok
+Q3                                                         2025Q2                 245.5 US$ million ok
+Q3                                                         2026H1                 499.2 US$ million ok
+Q3_EBITDA                                                  2026Q2                 344.5 US$ million ok
+Q3_EBITDA                                                  2026Q1                 131.3 US$ million ok
+Q3_EBITDA                                                  2025Q2                 233.2 US$ million ok
+Q3_EBITDA                                                  2026H1                 475.8 US$ million ok
+Q4                                                         2026Q2                 285.8 US$ million ok
+Q4                                                         2026Q1                  81.7 US$ million ok
+Q4                                                         2025Q2                 179.5 US$ million ok
+Q4                                                         2026H1                 367.5 US$ million ok
+Q4_AdjustedEBIT                                            2026Q2                 296.9 US$ million ok
+Q4_AdjustedEBIT                                            2026Q1                  94.0 US$ million ok
+Q4_AdjustedEBIT                                            2025Q2                 191.8 US$ million ok
+Q4_AdjustedEBIT                                            2026H1                 390.9 US$ million ok
+Q5                                                         2026Q2                 212.6 US$ million ok
+Q5                                                         2026Q1                  33.4 US$ million ok
+Q5                                                         2025Q2                  78.6 US$ million ok
+Q5                                                         2026H1                 246.0 US$ million ok
+Q6                                                         2026Q2                 218.6 US$ million ok
+Q6                                                         2026Q1                  27.7 US$ million ok
+Q6                                                         2025Q2                 158.0 US$ million ok
+Q6                                                         2026H1                 246.3 US$ million ok
+Q7                                                         2026Q2                 0.297 US$ per shar ok
+Q7                                                         2026Q1                0.0464 US$ per shar ok
+Q7                                                         2025Q2                0.1071 US$ per shar ok
+Q7                                                         2026H1                0.3437 US$ per shar ok
+Q7_ADS                                                     2026Q2                 1.188 US$ per ADS ok
+Q7_ADS                                                     2026Q1                0.1856 US$ per ADS ok
+Q7_ADS                                                     2025Q2                0.4283 US$ per ADS ok
+Q7_ADS                                                     2026H1                1.3747 US$ per ADS ok
+Q8                                                         2026Q2                 447.4 US$ million ok
+Q8                                                         2026Q1                -388.4 US$ million ok
+Q8                                                         2025Q2                 -76.1 US$ million ok
+Q8                                                         2026H1                  59.0 US$ million ok
+Q8_before_tax_interest                                     2026Q2                 513.5 US$ million ok
+Q8_before_tax_interest                                     2026Q1                -309.1 US$ million ok
+Q8_before_tax_interest                                     2025Q2                 -31.3 US$ million ok
+Q8_before_tax_interest                                     2026H1                 204.4 US$ million ok
+Q9_CF_AcquisitionPPE                                       2026Q2                 -63.2 US$ million ok
+Q9_CF_AcquisitionPPE                                       2026Q1                 -76.0 US$ million ok
+Q9_CF_AcquisitionPPE                                       2025Q2                 -40.7 US$ million ok
+Q9_CF_AcquisitionPPE                                       2026H1                -139.2 US$ million ok
+Q9_CF_ProceedsPPE                                          2026Q2                   3.6 US$ million ok
+Q9_CF_ProceedsPPE                                          2026Q1                   4.3 US$ million ok
+Q9_CF_ProceedsPPE                                          2025Q2                   8.5 US$ million ok
+Q9_CF_ProceedsPPE                                          2026H1                   7.9 US$ million ok
+Q9_CF_AdditionsIntangible                                  2026Q2                 -49.5 US$ million ok
+Q9_CF_AdditionsIntangible                                  2026Q1                 -80.0 US$ million ok
+Q9_CF_AdditionsIntangible                                  2025Q2                 -72.5 US$ million ok
+Q9_CF_AdditionsIntangible                                  2026H1                -129.5 US$ million ok
+Q9_Capex_Embraer_standalone                                2026Q2                  42.4 US$ million ok
+Q9_Capex_Embraer_standalone                                2025Q2                  52.6 US$ million ok
+Q9_Capex_Embraer_standalone                                2026Q1                  37.5 US$ million ok
+Q9_Capex_Eve                                               2026Q2                   1.9 US$ million ok
+Q9_Capex_Eve                                               2026Q1                   1.4 US$ million ok
+Q9_PPE_Capex_plus_Pool                                     2026Q2                  62.4 US$ million ok
+Q9_AFCF_NetAdditionsPPE                                    2026Q2                 -59.6 US$ million ok
+Q9_AFCF_NetAdditionsPPE                                    2026Q1                 -71.7 US$ million ok
+Q9_AFCF_NetAdditionsPPE                                    2025Q2                 -32.2 US$ million ok
+Q10                                                        2026Q2                 401.0 US$ million ok
+Q10                                                        2026Q1                -447.1 US$ million ok
+Q10                                                        2025Q2                -161.6 US$ million ok
+Q10                                                        2026H1                 -46.1 US$ million ok
+Q10_consolidated                                           2026Q2                 351.8 US$ million ok
+Q10_consolidated                                           2026Q1                -515.7 US$ million ok
+Q10_consolidated                                           2025Q2                -218.3 US$ million ok
+B1                                                         2026-06-30            1392.4 US$ million ok
+B1                                                         2026-03-31            1315.7 US$ million ok
+B2_Financial investments (current)                         2026-06-30             766.3 US$ million ok
+B2_Financial investments (current)                         2026-03-31             799.1 US$ million ok
+B2_Financial investments (non-current)                     2026-06-30             181.9 US$ million ok
+B2_Financial investments (non-current)                     2026-03-31             183.8 US$ million ok
+B3_Loans and financing (current)                           2026-06-30             123.8 US$ million ok
+B3_Loans and financing (current)                           2026-03-31              95.5 US$ million ok
+B3_Loans and financing (non-current)                       2026-06-30            2340.4 US$ million ok
+B3_Loans and financing (non-current)                       2026-03-31            2594.6 US$ million ok
+B3_Embraer gross debt                                      2026-06-30            2151.9 US$ million ok
+B3_Embraer gross debt                                      2026-03-31            2387.7 US$ million ok
+B3_Eve gross debt                                          2026-06-30             312.3 US$ million ok
+B3_Eve gross debt                                          2026-03-31             302.4 US$ million ok
+B3_Lease liability (current)                               2026-06-30              25.4 US$ million ok
+B3_Lease liability (current)                               2026-03-31              22.0 US$ million ok
+B3_Lease liability (non-current)                           2026-06-30              96.3 US$ million ok
+B3_Lease liability (non-current)                           2026-03-31              95.4 US$ million ok
+B4                                                         2026-06-30            -214.5 US$ million ok
+B4                                                         2026-03-31            -530.1 US$ million ok
+B4_Embraer & Eve net cash                                  2026-06-30            -123.6 US$ million ok
+B4_Embraer & Eve net cash                                  2026-03-31            -391.5 US$ million ok
+B5                                                         2026-06-30           13237.4 US$ million ok
+B5                                                         2026-03-31           12958.6 US$ million ok
+B6                                                         2026-06-30            3459.1 US$ million ok
+B6                                                         2026-03-31            3293.2 US$ million ok
+R1                                                         2026Q2                 200.0 R$ million ok
+R1_per_share                                               2026Q2                  0.28 R$ per share ok
+R1_per_ADS                                                 2026Q2                  0.22 US$ per ADS ok
+R1_FY25_Dividends                                          2026Q2                   7.6 R$ million ok
+R2                                                         2026Q2                   0.0 US$ million ok
+R2                                                         2026Q1                -183.7 US$ million ok
+R2                                                         2025Q2                   0.0 US$ million ok
+R2                                                         2026H1                -183.7 US$ million ok
+===== AXIA
+Q1                                                         2026Q2               11188.0 R$ million ok
+Q1                                                         2025Q2               10199.0 R$ million ok
+Q1                                                         2026Q1               12712.0 R$ million ok
+Q1                                                         2026H1               23900.0 R$ million ok
+Q1                                                         2025H1               20613.0 R$ million ok
+Q1_Adjusted_Net_Operating_Revenue                          2026Q2               11188.0 R$ million ok
+Q1_Adjusted_Net_Operating_Revenue                          2025Q2               10308.0 R$ million ok
+Q1_Adjusted_Net_Operating_Revenue                          2026Q1               12712.0 R$ million ok
+Q1_Adjusted_Net_Operating_Revenue                          2026H1               23900.0 R$ million ok
+Q1_Adjusted_Net_Operating_Revenue                          2025H1               20722.0 R$ million ok
+Q1_Regulatory_Net_Operating_Revenue                        2026Q2               10007.0 R$ million ok
+Q1_Regulatory_Net_Operating_Revenue                        2025Q2                9593.0 R$ million ok
+Q1_Regulatory_Net_Operating_Revenue                        2026Q1               11618.0 R$ million ok
+Q1_Regulatory_Net_Operating_Revenue                        2026H1               21625.0 R$ million ok
+Q1_Regulatory_Net_Operating_Revenue                        2025H1               19300.0 R$ million ok
+Q2_Generation                                              2026Q2                7106.0 R$ million ok
+Q2_Generation                                              2025Q2                6851.0 R$ million ok
+Q2_Generation                                              2026Q1                9428.0 R$ million ok
+Q2_Generation                                              2026H1               16533.0 R$ million ok
+Q2_Generation                                              2025H1               13819.0 R$ million ok
+Q2_Transmission                                            2026Q2                5657.0 R$ million ok
+Q2_Transmission                                            2025Q2                5079.0 R$ million ok
+Q2_Transmission                                            2026Q1                5015.0 R$ million ok
+Q2_Transmission                                            2026H1               10671.0 R$ million ok
+Q2_Transmission                                            2025H1               10264.0 R$ million ok
+Q2_Others                                                  2026Q2                 147.0 R$ million ok
+Q2_Others                                                  2026Q1                 143.0 R$ million ok
+Q2_Generation_Adjusted_Regulatory_Net                      2026Q2                6106.0 R$ million ok
+Q2_Transmission_Adjusted_Regulatory_Net                    2026Q2                4025.0 R$ million ok
+Q2_Others_Adjusted_Regulatory_Net                          2026Q2                 143.0 R$ million ok
+Q2_Eliminations_Adjusted_Regulatory_Net                    2026Q2                -266.0 R$ million ok
+Q2_Generation_Adjusted_Regulatory_Net                      2025Q2                5898.0 R$ million ok
+Q2_Transmission_Adjusted_Regulatory_Net                    2025Q2                3972.0 R$ million ok
+Q2_Others_Adjusted_Regulatory_Net                          2025Q2                 105.0 R$ million ok
+Q2_Eliminations_Adjusted_Regulatory_Net                    2025Q2                -273.0 R$ million ok
+Q3_Adjusted_EBITDA                                         2026Q2                6307.0 R$ million ok
+Q3_Adjusted_EBITDA                                         2025Q2                5151.0 R$ million ok
+Q3_Adjusted_EBITDA                                         2026Q1                8540.0 R$ million ok
+Q3_Adjusted_EBITDA                                         2026H1               14847.0 R$ million ok
+Q3_Adjusted_EBITDA                                         2025H1                9567.0 R$ million ok
+Q3_Adjusted_Regulatory_EBITDA                              2026Q2                6683.0 R$ million ok
+Q3_Adjusted_Regulatory_EBITDA                              2025Q2                5501.0 R$ million ok
+Q3_Adjusted_Regulatory_EBITDA                              2026Q1                8600.0 R$ million ok
+Q3_Adjusted_Regulatory_EBITDA                              2026H1               15283.0 R$ million ok
+Q3_Adjusted_Regulatory_EBITDA                              2025H1               10878.0 R$ million ok
+Q4                                                         2026Q2                  4692 R$ million ok
+Q4                                                         2025Q2                   127 R$ million ok
+Q4                                                         2026Q1                  6196 R$ million ok
+Q4_Operating_Result_Before_Financial_Result                2026H1              9851.034 R$ million ok
+Q4_Operating_Result_Before_Financial_Result                2025H1              3091.007 R$ million ok
+Q4_Operating_Result_Before_Financial_Result                2026Q1              5531.531 R$ million ok
+Q4_Adjusted_EBIT                                           2026Q2                5075.0 R$ million ok
+Q4_Adjusted_EBIT                                           2025Q2                4019.0 R$ million ok
+Q4_Adjusted_EBIT                                           2026Q1                7287.0 R$ million ok
+Q4_Adjusted_EBIT                                           2026H1               12362.0 R$ million ok
+Q4_Adjusted_EBIT                                           2025H1                7323.0 R$ million ok
+Q5                                                         2026Q1              2629.666 R$ million ok
+Q5                                                         2026H1              3819.749 R$ million ok
+Q5                                                         2025H1             -1677.488 R$ million ok
+Q6_Adjusted_Net_Income                                     2026Q2                1608.0 R$ million ok
+Q6_Adjusted_Net_Income                                     2025Q2                1469.0 R$ million ok
+Q6_Adjusted_Net_Income                                     2026Q1                3707.0 R$ million ok
+Q6_Adjusted_Net_Income                                     2026H1                5315.0 R$ million ok
+Q6_Adjusted_Net_Income                                     2025H1                1389.0 R$ million ok
+Q6_Adjusted_Regulatory_Net_Income                          2026Q2                1679.0 R$ million ok
+Q6_Adjusted_Regulatory_Net_Income                          2025Q2                1245.0 R$ million ok
+Q6_Adjusted_Regulatory_Net_Income                          2026Q1                3213.0 R$ million ok
+Q6_Adjusted_Regulatory_Net_Income                          2026H1                4892.0 R$ million ok
+Q6_Adjusted_Regulatory_Net_Income                          2025H1                1654.0 R$ million ok
+Q7                                                         2026H1                  1.33 R$ per share ok
+Q7                                                         2025H1                 -0.59 R$ per share ok
+Q7                                                         2026Q1                  0.92 R$ per share ok
+Q7_PNA_PNB                                                 2026Q1                  1.01 R$ per share ok
+Q8                                                         2026H1               9284.76 R$ million ok
+Q8                                                         2025H1               7080.77 R$ million ok
+Q8                                                         2026Q1              2760.904 R$ million ok
+Q8_Managerial_Operating_Cash_Flow                          2026Q2                7792.0 R$ million ok
+Q8_Managerial_Operating_Cash_Flow                          2025Q2                4121.0 R$ million ok
+Q8_Managerial_Operating_Cash_Flow                          2026Q1                3476.0 R$ million ok
+Q9_Investments_company                                     2026Q2                3117.0 R$ million ok
+Q9_Investments_company                                     2025Q2                2043.0 R$ million ok
+Q9_Investments_company                                     2026Q1                1355.0 R$ million ok
+Q9_Investments_company                                     2026H1                4472.0 R$ million ok
+Q9_Investments_company                                     2025H1                3037.0 R$ million ok
+Q9_Managerial_CF_Investments                               2026Q2               -2834.0 R$ million ok
+Q9_Managerial_CF_Investments                               2025Q2               -1571.0 R$ million ok
+Q9_Managerial_CF_Investments                               2026Q1               -1624.0 R$ million ok
+Q9_CFS_Acquisition_of_fixed_assets                         2026H1              -1026.36 R$ million ok
+Q9_CFS_Acquisition_of_fixed_assets                         2025H1              -727.574 R$ million ok
+Q9_CFS_Acquisition_of_fixed_assets                         2026Q1               -415.22 R$ million ok
+Q9_CFS_Acquisition_of_intangible_assets                    2026H1              -186.017 R$ million ok
+Q9_CFS_Acquisition_of_intangible_assets                    2025H1              -105.746 R$ million ok
+Q9_CFS_Acquisition_of_intangible_assets                    2026Q1              -100.485 R$ million ok
+Q9_CFS_Transmission_infrastructure                         2026H1             -2934.152 R$ million ok
+Q9_CFS_Transmission_infrastructure                         2025H1             -1780.935 R$ million ok
+Q9_CFS_Transmission_infrastructure                         2026Q1             -1548.604 R$ million ok
+Q10_Free_Cash_Flow                                         2026Q2                4958.0 R$ million ok
+Q10_Free_Cash_Flow                                         2025Q2                2550.0 R$ million ok
+Q10_Free_Cash_Flow                                         2026Q1                1852.0 R$ million ok
+B1                                                         2026-06-30          11039.66 R$ million ok
+B1                                                         2026-03-31         12535.253 R$ million ok
+B1                                                         2025-12-31          16417.86 R$ million ok
+B2_Securities_current                                      2026-06-30         15189.665 R$ million ok
+B2_Securities_current                                      2026-03-31          15141.95 R$ million ok
+B2_Securities_current                                      2025-12-31         11133.842 R$ million ok
+B2_Securities_noncurrent                                   2026-06-30           441.084 R$ million ok
+B2_Securities_noncurrent                                   2026-03-31           480.576 R$ million ok
+B2_Securities_noncurrent                                   2025-12-31           722.673 R$ million ok
+B2_Restricted_cash_current                                 2026-06-30           932.264 R$ million ok
+B2_Restricted_cash_current                                 2026-03-31           684.271 R$ million ok
+B2_Restricted_cash_current                                 2025-12-31           660.259 R$ million ok
+B3_Loans_financing_debentures_current                      2026-06-30          9344.113 R$ million ok
+B3_Loans_financing_debentures_current                      2026-03-31         11141.094 R$ million ok
+B3_Loans_financing_debentures_current                      2025-12-31         13204.167 R$ million ok
+B3_Loans_financing_debentures_noncurrent                   2026-06-30         61628.489 R$ million ok
+B3_Loans_financing_debentures_noncurrent                   2026-03-31         62382.521 R$ million ok
+B3_Loans_financing_debentures_noncurrent                   2025-12-31         61091.597 R$ million ok
+B3_Leasing_current                                         2026-06-30           111.353 R$ million ok
+B3_Leasing_current                                         2026-03-31            84.598 R$ million ok
+B3_Leasing_noncurrent                                      2026-06-30           572.385 R$ million ok
+B3_Leasing_noncurrent                                      2026-03-31           556.718 R$ million ok
+B5                                                         2026-06-30        277258.437 R$ million ok
+B5                                                         2026-03-31        279912.545 R$ million ok
+B5                                                         2025-12-31        279685.593 R$ million ok
+B6                                                         2026-06-30        122244.292 R$ million ok
+B6                                                         2026-03-31        121147.598 R$ million ok
+B6                                                         2025-12-31        118430.137 R$ million ok
+B3_Gross_Debt_company                                      2026-06-30           70973.0 R$ million ok
+B3_Gross_Debt_company                                      2026-03-31           73524.0 R$ million ok
+B3_Gross_Debt_incl_derivatives                             2026-06-30           72829.0 R$ million ok
+B3_Gross_Debt_incl_derivatives                             2026-03-31           74787.0 R$ million ok
+B4_Net_Debt                                                2026-06-30           45461.0 R$ million ok
+B4_Net_Debt                                                2026-03-31           46045.0 R$ million ok
+B4_Net_Debt                                                2025-12-31           46484.0 R$ million ok
+R1_Paid_Shareholder_Remuneration                           2026H1               -90.518 R$ million ok
+R1_Paid_Shareholder_Remuneration                           2026Q1                 -0.17 R$ million ok
+R2                                                         2026H1                   0.0 R$ million ok
+R2                                                         2026Q1                   0.0 R$ million ok
+===== ITUB
+Q1                                                         2026Q2                 11979 R$ million ok
+Q1                                                         2025Q2                 11137 R$ million ok
+Q1                                                         2026H1                 23615 R$ million ok
+Q1                                                         2025H1                 21644 R$ million ok
+Q1_total_net_income                                        2026Q2                 12324 R$ million ok
+Q1_total_net_income                                        2025Q2                 11398 R$ million ok
+Q1_total_net_income                                        2026H1                 24199 R$ million ok
+Q1_total_net_income                                        2025H1                 22105 R$ million ok
+Q2                                                         2026Q2                 12407 R$ million ok
+Q2                                                         2026Q1                 12282 R$ million ok
+Q2                                                         2025Q2                 11508 R$ million ok
+Q2                                                         2026H1                 24689 R$ million ok
+Q2                                                         2025H1                 22636 R$ million ok
+Q2_segment_reconciliation                                  2026Q2                 12407 R$ million ok
+Q2_segment_reconciliation                                  2025Q2                 11508 R$ million ok
+Q2_segment_reconciliation                                  2026H1                 24689 R$ million ok
+Q2_Retail Business                                         2026Q2                  5491 R$ million ok
+Q2_Wholesale Business                                      2026Q2                  5614 R$ million ok
+Q2_Activities with the Market + Corporation                2026Q2                  1302 R$ million ok
+Q2_Retail Business                                         2025Q2                  4941 R$ million ok
+Q2_Wholesale Business                                      2025Q2                  5392 R$ million ok
+Q2_Activities with the Market + Corporation                2025Q2                  1175 R$ million ok
+Q2_Retail Business                                         2026H1                 10984 R$ million ok
+Q2_Wholesale Business                                      2026H1                 11260 R$ million ok
+Q2_Activities with the Market + Corporation                2026H1                  2445 R$ million ok
+Q2_FS_management_report_Recurring_Result                   2026H1                 24000 R$ million ambiguous
+Q2_FS_management_report_Recurring_Result                   2025H1                 21700 R$ million ambiguous
+Q3                                                         2026Q2                  24.3 % ok
+Q3                                                         2026Q1                  24.8 % ok
+Q3                                                         2025Q2                  23.3 % ok
+Q3                                                         2026H1                  24.5 % ok
+Q3                                                         2025H1                  22.8 % ok
+Q3_IFRS_ROE                                                2026H1                  22.4 % ok
+Q3_IFRS_ROE                                                2025H1                  20.9 % ok
+Q3_FS_Recurring_ROE                                        2026H1                  22.8 % ambiguous
+Q3_FS_Recurring_ROE                                        2025H1                  21.0 % ambiguous
+Q4                                                         2026Q2                 31320 R$ million ok
+Q4                                                         2025Q2                 28372 R$ million ok
+Q4                                                         2026H1                 59695 R$ million ok
+Q4_managerial_Interest_margin                              2026Q2                 33488 R$ million ok
+Q4_managerial_Interest_margin                              2025Q2                 31846 R$ million ok
+Q4_managerial_Interest_margin                              2026H1                 65814 R$ million ok
+Q4_FS_Net_Interest_Income                                  2026H1                 62900 R$ million ok
+Q4_FS_Net_Interest_Income                                  2025H1                 62600 R$ million ok
+Q5                                                         2026Q2                 12062 R$ million ok
+Q5                                                         2025Q2                 11071 R$ million ok
+Q5                                                         2026H1                 24012 R$ million ok
+Q5                                                         2025H1                 22704 R$ million ok
+Q5_Income_from_Insurance_Contracts_and_Private_Pension     2026Q2                  2456 R$ million ok
+Q5_Income_from_Insurance_Contracts_and_Private_Pension     2025Q2                  2298 R$ million ok
+Q5_Income_from_Insurance_Contracts_and_Private_Pension     2026H1                  4790 R$ million ok
+Q5_Income_from_Insurance_Contracts_and_Private_Pension     2025H1                  4301 R$ million ok
+Q6                                                         2026Q2                 -9394 R$ million ok
+Q6                                                         2025Q2                 -7831 R$ million ok
+Q6                                                         2026H1                -18397 R$ million ok
+Q6                                                         2025H1                -17389 R$ million ok
+Q6_Expected_Credit_Loss_with_Loan_and_Lease_Operations     2026Q2                 -8605 R$ million ok
+Q6_Expected_Credit_Loss_with_Loan_and_Lease_Operations     2025Q2                 -8259 R$ million ok
+Q6_Expected_Credit_Loss_with_Loan_and_Lease_Operations     2026H1                -16889 R$ million ok
+Q6_Expected_Credit_Loss_with_Loan_and_Lease_Operations     2025H1                -16951 R$ million ok
+Q6_managerial_Cost_of_Credit                               2026Q2                -10138 R$ million ok
+Q6_managerial_Cost_of_Credit                               2025Q2                 -9443 R$ million ok
+Q6_managerial_Cost_of_Credit                               2026H1                -20090 R$ million ok
+Q7                                                         2026Q2                  35.5 % ok
+Q7                                                         2026Q1                  34.9 % ok
+Q7_consolidated                                            2026H1                  37.3 % ok
+Q8_Common                                                  2026Q2                  1.09 R$/share ok
+Q8_Preferred                                               2026Q2                  1.09 R$/share ok
+Q8_Common                                                  2025Q2                   1.0 R$/share ok
+Q8_Preferred                                               2025Q2                   1.0 R$/share ok
+Q8_Common                                                  2026H1                  2.14 R$/share ok
+Q8_Preferred                                               2026H1                  2.14 R$/share ok
+Q8_Common                                                  2025H1                  1.95 R$/share ok
+Q8_Preferred                                               2025H1                  1.95 R$/share ok
+Q8_diluted                                                 2026Q2                  1.07 R$/share ok
+Q8_diluted                                                 2025Q2                  0.99 R$/share ok
+Q8_diluted                                                 2026H1                  2.12 R$/share ok
+Q8_diluted                                                 2025H1                  1.93 R$/share ok
+B1                                                         2026-06-30           1522000 R$ million ok
+B1                                                         2026-03-31           1483000 R$ million ok
+B1_excl_FX                                                 2026-03-31           1482700 R$ million ok
+B1_excl_FX                                                 2025-12-31           1465300 R$ million ok
+B1_IFRS_Loan_and_lease_operations                          2026-06-30           1082266 R$ million ok
+B1_IFRS_Loan_and_lease_operations                          2025-12-31           1083798 R$ million ok
+B2                                                         2026-06-30               1.9 % ok
+B2                                                         2026-03-31               1.9 % ok
+B2                                                         2025-12-31               1.9 % ok
+B3                                                         2026-06-30           3202125 R$ million ok
+B3                                                         2025-12-31           3066169 R$ million ok
+B4                                                         2026-06-30            217779 R$ million ok
+B4                                                         2025-12-31            204501 R$ million ok
+B5                                                         2026-06-30              12.3 % ok
+B5                                                         2025-12-31              12.3 % ok
+B5                                                         2026-06-30              12.3 % ok
+B5                                                         2026-03-31              12.0 % ambiguous
+B5_Tier1_ratio                                             2026-06-30              14.0 % ok
+B6                                                         2026-06-30           1134485 R$ million ok
+B6                                                         2025-12-31           1114482 R$ million ok
+S1_Common                                                  2026-06-30        5617742977 shares ok
+S1_Preferred                                               2026-06-30        5404129565 shares ok
+S1_Total                                                   2026-06-30       11021872542 shares ok
+S1_Common                                                  2025-12-31        5617742977 shares ok
+S1_Preferred                                               2025-12-31        5408781553 shares ok
+S1_Total                                                   2025-12-31       11026524530 shares ok
+R1_IOC_declared_2026-05-28                                 2026Q2                  3989 R$ million ok
+R1_IOC_declared_2026-05-28_per_share_gross                 2026Q2               0.36188 R$/share ok
+R1_IOC_monthly_per_share                                   2026H1                 0.015 R$/share ok
+R1_total_declared                                          2026H1                  9036 R$ million ok
+R1_total_declared                                          2025H1                  8612 R$ million ok
+R1_dividends_net_per_share                                 2026H1                  0.68 R$/share ok
+R1_IOC_declared_2026-02-26                                 2026Q1                  3845 R$ million ok
+R2                                                         2026H1                  1760 R$ million ok
+===== BBD
+Q1                                                         2026Q2              7139.847 R$ million ok
+Q1                                                         2025Q2              6066.721 R$ million ok
+Q1                                                         2026H1             12317.787 R$ million ok
+Q1                                                         2025H1              11671.55 R$ million ok
+Q1_Book Net Income                                         2026Q2                7050.0 R$ million ok
+Q1_Book Net Income                                         2026Q1                5030.0 R$ million ok
+Q1_Book Net Income                                         2025Q2                6067.0 R$ million ok
+Q1_Book Net Income                                         2026H1               12080.0 R$ million ok
+Q1_Book Net Income                                         2025H1               11869.0 R$ million ok
+Q1_Book Net Income_check1Q                                 2026Q1                5030.0 R$ million ok
+Q2                                                         2026Q2                7050.0 R$ million ok
+Q2                                                         2026Q1                6811.0 R$ million ok
+Q2                                                         2025Q2                6067.0 R$ million ok
+Q2                                                         2026H1               13861.0 R$ million ok
+Q2                                                         2025H1               11931.0 R$ million ok
+Q2_Non-Recurring Events                                    2026Q1               -1781.0 R$ million ok
+Q2_Non-Recurring Events                                    2026H1               -1781.0 R$ million ok
+Q2_Non-Recurring Events                                    2025H1                 -62.0 R$ million ok
+Q3                                                         2026Q2                  16.2 % ok
+Q3                                                         2026Q1                  15.8 % ok
+Q3                                                         2025Q2                  14.6 % ok
+Q3                                                         2026H1                  16.0 % ok
+Q4                                                         2026Q2               20872.0 R$ million ok
+Q4                                                         2026Q1               20051.0 R$ million ok
+Q4                                                         2025Q2               18044.0 R$ million ok
+Q4                                                         2026H1               40923.0 R$ million ok
+Q4                                                         2025H1               35277.0 R$ million ok
+Q4_Client NII                                              2026Q2               20199.0 R$ million ok
+Q4_Client NII                                              2026Q1               19498.0 R$ million ok
+Q4_Client NII                                              2025Q2               17756.0 R$ million ok
+Q4_Client NII                                              2026H1               39697.0 R$ million ok
+Q4_Client NII                                              2025H1               34527.0 R$ million ok
+Q4_Market NII                                              2026Q2                 673.0 R$ million ok
+Q4_Market NII                                              2026Q1                 553.0 R$ million ok
+Q4_Market NII                                              2025Q2                 288.0 R$ million ok
+Q4_Market NII                                              2026H1                1226.0 R$ million ok
+Q4_Market NII                                              2025H1                 750.0 R$ million ok
+Q4_IFRS Net interest income                                2026Q2             20367.167 R$ million ok
+Q4_IFRS Net interest income                                2025Q2             16508.667 R$ million ok
+Q4_IFRS Net interest income                                2026H1             37700.845 R$ million ok
+Q4_IFRS Net interest income                                2025H1             38854.127 R$ million ok
+Q5                                                         2026Q2               10486.0 R$ million ok
+Q5                                                         2026Q1               10373.0 R$ million ok
+Q5                                                         2025Q2               10307.0 R$ million ok
+Q5                                                         2026H1               20859.0 R$ million ok
+Q5                                                         2025H1               20076.0 R$ million ok
+Q5_IFRS Net fee and commission income                      2026Q2              7909.268 R$ million ok
+Q5_IFRS Net fee and commission income                      2025Q2              7732.524 R$ million ok
+Q5_IFRS Net fee and commission income                      2026H1             15789.954 R$ million ok
+Q5_IFRS Net fee and commission income                      2025H1             15034.068 R$ million ok
+Q6                                                         2026Q2               -9985.0 R$ million ok
+Q6                                                         2026Q1               -9667.0 R$ million ok
+Q6                                                         2025Q2               -8142.0 R$ million ok
+Q6                                                         2026H1              -19652.0 R$ million ok
+Q6                                                         2025H1              -15784.0 R$ million ok
+Q6_IFRS Expected credit losses on loans and advances       2026Q2             -8190.775 R$ million ok
+Q6_IFRS Expected credit losses on loans and advances       2025Q2             -7692.957 R$ million ok
+Q6_IFRS Expected credit losses on loans and advances       2026H1            -15776.105 R$ million ok
+Q6_IFRS Expected credit losses on loans and advances       2025H1            -15147.784 R$ million ok
+Q6_IFRS Expected credit losses on other financial assets   2026Q2               -81.583 R$ million ok
+Q6_IFRS Expected credit losses on other financial assets   2025Q2               -118.38 R$ million ok
+Q6_IFRS Expected credit losses on other financial assets   2026H1             -1148.828 R$ million ok
+Q6_IFRS Expected credit losses on other financial assets   2025H1               225.226 R$ million ok
+Q7                                                         2026Q2                  46.5 % ok
+Q7                                                         2026Q1                  46.9 % ok
+Q7                                                         2025Q2                  49.9 % ok
+Q8_Common                                                  2026Q2                  0.64 R$ per share ok
+Q8_Common                                                  2025Q2                  0.55 R$ per share ok
+Q8_Common                                                  2026H1                  1.11 R$ per share ok
+Q8_Common                                                  2025H1                  1.05 R$ per share ok
+Q8_Preferred                                               2026Q2                  0.71 R$ per share ok
+Q8_Preferred                                               2025Q2                   0.6 R$ per share ok
+Q8_Preferred                                               2026H1                  1.22 R$ per share ok
+Q8_Preferred                                               2025H1                  1.16 R$ per share ok
+B1                                                         2026-06-30         1136640.0 R$ million ok
+B1                                                         2026-03-31         1089896.0 R$ million ok
+B1_Loan Portfolio (by stage)                               2026-06-30          833507.0 R$ million ok
+B1_Loan Portfolio (by stage)                               2026-03-31          813112.0 R$ million ok
+B1_IFRS Loans and advances to customers - Total portfolio  2026-06-30        820566.941 R$ million ok
+B1_IFRS Loans and advances to customers - Total portfolio  2025-12-31        791468.154 R$ million ok
+B2                                                         2026-06-30               4.3 % ok
+B2                                                         2026-03-31               4.2 % ok
+B3                                                         2026-06-30        2468826.55 R$ million ok
+B3                                                         2025-12-31       2330327.216 R$ million ok
+B4                                                         2026-06-30         181281.46 R$ million ok
+B4                                                         2025-12-31        178415.153 R$ million ok
+B4_Basel Shareholders' Equity                              2026-06-30          175230.0 R$ million ok
+B4_Basel Shareholders' Equity                              2026-03-31          173549.0 R$ million ok
+B5                                                         2026-06-30              11.3 % ok
+B5                                                         2026-03-31              10.2 % ok
+B6                                                         2026-06-30        746926.753 R$ million ok
+B6                                                         2025-12-31        721274.151 R$ million ok
+S1                                                         2026-06-30     10570712028.0 shares ok
+S1                                                         2025-12-31     10577012028.0 shares ok
+S1_Common issued                                           2026-06-30      5303870781.0 shares ok
+S1_Common issued                                           2025-12-31      5303870781.0 shares ok
+S1_Preferred issued                                        2026-06-30      5288141247.0 shares ok
+S1_Preferred issued                                        2025-12-31      5288141247.0 shares ok
+S1_Treasury common                                         2026-06-30       -10650000.0 shares ok
+S1_Treasury common                                         2025-12-31        -7500000.0 shares ok
+S1_Treasury preferred                                      2026-06-30       -10650000.0 shares ok
+S1_Treasury preferred                                      2025-12-31        -7500000.0 shares ok
+R1                                                         2026Q2                4000.0 R$ million ok
+R1_JCP approved 2026-06-23                                 2026Q2                3500.0 R$ million ok
+R1_JCP approved 2026-03-25                                 2026Q1                3000.0 R$ million ok
+R1_1H26 total accrued (gross)                              2026H1              7969.846 R$ million ok
+R2                                                         2026H1               6300000 shares ok
+===== NU
+Q1                                                         2026Q2              1060.199 US$ million ok
+Q1                                                         2025Q2               636.838 US$ million ok
+Q1                                                         2026H1              1932.255 US$ million ok
+Q1                                                         2026Q1               872.056 US$ million ok
+Q1_total_incl_NCI                                          2026Q2              1061.089 US$ million ok
+Q1_total_incl_NCI                                          2025Q2               636.987 US$ million ok
+Q1_total_incl_NCI                                          2026Q1               871.431 US$ million ok
+Q2                                                         2026Q2                1061.1 US$ million ok
+Q2                                                         2025Q2                 637.0 US$ million ok
+Q2                                                         2026Q1                 871.4 US$ million ok
+Q3                                                         2026Q2                  33.0 % ok
+Q3                                                         2026Q1                  29.0 % ok
+Q3                                                         2025Q2                  28.0 % ok
+Q4_Interest income and gains net of losses on financial in 2026Q2              4760.573 US$ million ok
+Q4_Interest income and gains net of losses on financial in 2025Q2              3128.743 US$ million ok
+Q4_Interest income and gains net of losses on financial in 2026Q1              4275.313 US$ million ok
+Q4_Interest and other financial expenses                   2026Q2              -1556.65 US$ million ok
+Q4_Interest and other financial expenses                   2025Q2             -1029.989 US$ million ok
+Q4_Interest and other financial expenses                   2026Q1             -1269.184 US$ million ok
+Q5                                                         2026Q2               752.635 US$ million ok
+Q5                                                         2025Q2               539.727 US$ million ok
+Q5                                                         2026Q1               692.654 US$ million ok
+Q5                                                         2026H1              1445.289 US$ million ok
+Q5_Managerial Fee Income                                   2026Q2                 816.4 US$ million ok
+Q5_Managerial Fee Income                                   2025Q2                 541.6 US$ million ok
+Q6                                                         2026Q2             -1482.213 US$ million ok
+Q6                                                         2025Q2             -1012.192 US$ million ok
+Q6                                                         2026Q1             -1718.015 US$ million ok
+Q6                                                         2026H1             -3200.228 US$ million ok
+Q6_Managerial Cost of Credit                               2026Q2               -1690.8 US$ million ok
+Q6_Managerial Cost of Credit                               2025Q2               -1051.1 US$ million ok
+Q7                                                         2026Q2                  19.5 % ok
+Q7                                                         2026Q1                  17.6 % ok
+Q7                                                         2025Q2                  21.3 % ok
+Q8                                                         2026Q2                0.2183 US$ per shar ok
+Q8                                                         2025Q2                 0.132 US$ per shar ok
+Q8                                                         2026H1                0.3979 US$ per shar ok
+Q8                                                         2026Q1                0.1796 US$ per shar ok
+Q8_diluted                                                 2026Q2                0.2162 US$ per shar ok
+Q8_diluted                                                 2026Q1                0.1776 US$ per shar ok
+B1                                                         2026-06-30           39400.0 US$ million ok
+B1                                                         2026-03-31           37200.0 US$ million ok
+B1_Credit card receivables (gross)                         2026-06-30         25961.122 US$ million ok
+B1_Credit card receivables (gross)                         2026-03-31         24301.844 US$ million ok
+B1_Total loans (gross)                                     2026-06-30         13437.254 US$ million ok
+B1_Total loans (gross)                                     2026-03-31         12904.339 US$ million ok
+B2                                                         2026-06-30               6.9 % ok
+B2                                                         2026-03-31               6.5 % ok
+B2_Credit card receivables overdue Over 90 days            2026-06-30               6.3 % ok
+B2_Credit card receivables overdue Over 90 days            2026-03-31               6.0 % ok
+B2_Loans to customers overdue Over 90 days                 2026-06-30               1.8 % ok
+B2_Loans to customers overdue Over 90 days                 2026-03-31               1.6 % ok
+B3                                                         2026-06-30         82753.414 US$ million ok
+B3                                                         2026-03-31         77456.407 US$ million ok
+B3                                                         2025-12-31         74893.877 US$ million ok
+B4                                                         2026-06-30          13249.67 US$ million ok
+B4                                                         2026-03-31         12588.777 US$ million ok
+B4                                                         2025-12-31         11290.948 US$ million ok
+B5                                                         2026-06-30              11.9 % ok
+B5                                                         2026-03-31              11.3 % ok
+B5                                                         2025-12-31              13.0 % ok
+B6                                                         2026-06-30         45328.419 US$ million ok
+B6                                                         2026-03-31         42448.121 US$ million ok
+B6                                                         2025-12-31         41925.101 US$ million ok
+S1_Class A                                                 2026-06-30        3808087961 shares ambiguous
+S1_Class B                                                 2026-06-30        1022600698 shares ok
+S1_Class A treasury                                        2026-06-30          40659600 shares ok
+S1_Class A                                                 2026-03-31        3839140553 shares ok
+S1_Class B                                                 2026-03-31        1022600698 shares ok
+R2                                                         2026H1              -500.393 US$ million ok
+R2_shares                                                  2026H1              40659600 shares ok

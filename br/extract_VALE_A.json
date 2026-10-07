@@ -1,0 +1,1701 @@
+{
+ "ticker": "VALE",
+ "currency": "US$ million",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 10498,
+   "raw": "10,498",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Three-month period ended June 30, 2026"
+   },
+   "note": "Consolidated Interim Statement of Income (IFRS)"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 8804,
+   "raw": "8,804",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Three-month period ended June 30, 2025"
+   },
+   "note": "Consolidated Interim Statement of Income (IFRS)"
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 19756,
+   "raw": "19,756",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": "Consolidated Interim Statement of Income (IFRS)"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 9258,
+   "raw": "9,258",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002632/valedfifrs1q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue",
+    "col": "Three-month period ended March 31, 2026"
+   },
+   "note": "1Q26 IFRS statement of income; press release image_019 also shows 9,258"
+  },
+  {
+   "id": "Q2_Iron Ore Solutions",
+   "period": "2026Q2",
+   "value": 7888,
+   "raw": "7,888",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue (column Total Iron Ore Solutions)",
+    "col": "Three-month period ended June 30, 2026"
+   },
+   "note": "IFRS note 3 revenue by segment/geography table (Net operating revenue total row)"
+  },
+  {
+   "id": "Q2_Iron Ore Solutions",
+   "period": "2025Q2",
+   "value": 6963,
+   "raw": "6,963",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue (column Total Iron Ore Solutions)",
+    "col": "Three-month period ended June 30, 2025"
+   },
+   "note": "IFRS note 3 revenue by segment/geography table (Net operating revenue total row)"
+  },
+  {
+   "id": "Q2_Iron Ore Solutions",
+   "period": "2026H1",
+   "value": 14763,
+   "raw": "14,763",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue (column Total Iron Ore Solutions)",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": "IFRS note 3 revenue by segment/geography table (Net operating revenue total row)"
+  },
+  {
+   "id": "Q2_Vale Base Metals",
+   "period": "2026Q2",
+   "value": 2610,
+   "raw": "2,610",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue (column Total Vale Base Metals)",
+    "col": "Three-month period ended June 30, 2026"
+   },
+   "note": "IFRS note 3 revenue by segment/geography table (Net operating revenue total row)"
+  },
+  {
+   "id": "Q2_Vale Base Metals",
+   "period": "2025Q2",
+   "value": 1841,
+   "raw": "1,841",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue (column Total Vale Base Metals)",
+    "col": "Three-month period ended June 30, 2025"
+   },
+   "note": "IFRS note 3 revenue by segment/geography table (Net operating revenue total row)"
+  },
+  {
+   "id": "Q2_Vale Base Metals",
+   "period": "2026H1",
+   "value": 4993,
+   "raw": "4,993",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net operating revenue (column Total Vale Base Metals)",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": "IFRS note 3 revenue by segment/geography table (Net operating revenue total row)"
+  },
+  {
+   "id": "Q2_Iron Ore Solutions",
+   "period": "2026Q1",
+   "value": 6875,
+   "raw": "6,875",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_024.jpg",
+    "page": "image_024.jpg",
+    "row": "Iron Ore Solutions",
+    "col": "1Q26"
+   },
+   "note": "Press release Annex 1 \"Net operating revenue by business area\"; matches 1Q26 IFRS statements"
+  },
+  {
+   "id": "Q2_Vale Base Metals",
+   "period": "2026Q1",
+   "value": 2383,
+   "raw": "2,383",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_024.jpg",
+    "page": "image_024.jpg",
+    "row": "Vale Base Metals",
+    "col": "1Q26"
+   },
+   "note": "Press release Annex 1 \"Net operating revenue by business area\"; matches 1Q26 IFRS statements. PR sub-lines (Copper 1,376 etc.) differ from IFRS note sub-lines due to streaming adjustment footnote"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 3676,
+   "raw": "3,676",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_022.jpg",
+    "page": "image_022.jpg",
+    "row": "Adjusted EBITDA",
+    "col": "2Q26"
+   },
+   "note": "Name: \"Adjusted EBITDA\". Company definition (PR p.22 / IFRS note 3): operating income or loss plus EBITDA from associates and JVs, excluding (i) depreciation, depletion and amortization and (ii) impairment and gains (losses) on disposal of non-current assets. Non-GAAP; IFRS 8 segment measure. IFRS note 3 shows 3,676/3,386/7,506 too."
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 3386,
+   "raw": "3,386",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_022.jpg",
+    "page": "image_022.jpg",
+    "row": "Adjusted EBITDA",
+    "col": "2Q25"
+   },
+   "note": "Name: \"Adjusted EBITDA\". Company definition (PR p.22 / IFRS note 3): operating income or loss plus EBITDA from associates and JVs, excluding (i) depreciation, depletion and amortization and (ii) impairment and gains (losses) on disposal of non-current assets. Non-GAAP; IFRS 8 segment measure. IFRS note 3 shows 3,676/3,386/7,506 too."
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 3830,
+   "raw": "3,830",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_022.jpg",
+    "page": "image_022.jpg",
+    "row": "Adjusted EBITDA",
+    "col": "1Q26"
+   },
+   "note": "Name: \"Adjusted EBITDA\". Company definition (PR p.22 / IFRS note 3): operating income or loss plus EBITDA from associates and JVs, excluding (i) depreciation, depletion and amortization and (ii) impairment and gains (losses) on disposal of non-current assets. Non-GAAP; IFRS 8 segment measure. IFRS note 3 shows 3,676/3,386/7,506 too."
+  },
+  {
+   "id": "Q3",
+   "period": "2026H1",
+   "value": 7506,
+   "raw": "7,506",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_022.jpg",
+    "page": "image_022.jpg",
+    "row": "Adjusted EBITDA",
+    "col": "6M26"
+   },
+   "note": "Name: \"Adjusted EBITDA\". Company definition (PR p.22 / IFRS note 3): operating income or loss plus EBITDA from associates and JVs, excluding (i) depreciation, depletion and amortization and (ii) impairment and gains (losses) on disposal of non-current assets. Non-GAAP; IFRS 8 segment measure. IFRS note 3 shows 3,676/3,386/7,506 too."
+  },
+  {
+   "id": "Q3_Proforma EBITDA",
+   "period": "2026Q2",
+   "value": 4066,
+   "raw": "4,066",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Proforma EBITDA²",
+    "col": "2Q26"
+   },
+   "note": "Name: \"Proforma EBITDA\". Definition (PR p.3): Adjusted EBITDA as defined in IFRS note 3 excluding Brumadinho-related and dam decharacterization effects and non-recurring items (2Q26 non-recurring expenses US$ -289 million). Non-GAAP."
+  },
+  {
+   "id": "Q3_Proforma EBITDA",
+   "period": "2025Q2",
+   "value": 3424,
+   "raw": "3,424",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Proforma EBITDA²",
+    "col": "2Q25"
+   },
+   "note": "Name: \"Proforma EBITDA\". Definition (PR p.3): Adjusted EBITDA as defined in IFRS note 3 excluding Brumadinho-related and dam decharacterization effects and non-recurring items (2Q26 non-recurring expenses US$ -289 million). Non-GAAP."
+  },
+  {
+   "id": "Q3_Proforma EBITDA",
+   "period": "2026Q1",
+   "value": 3895,
+   "raw": "3,895",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Proforma EBITDA²",
+    "col": "1Q26"
+   },
+   "note": "Name: \"Proforma EBITDA\". Definition (PR p.3): Adjusted EBITDA as defined in IFRS note 3 excluding Brumadinho-related and dam decharacterization effects and non-recurring items (2Q26 non-recurring expenses US$ -289 million). Non-GAAP."
+  },
+  {
+   "id": "Q3_Proforma EBITDA",
+   "period": "2026H1",
+   "value": 7961,
+   "raw": "7,961",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Proforma EBITDA²",
+    "col": "6M26"
+   },
+   "note": "Name: \"Proforma EBITDA\". Definition (PR p.3): Adjusted EBITDA as defined in IFRS note 3 excluding Brumadinho-related and dam decharacterization effects and non-recurring items (2Q26 non-recurring expenses US$ -289 million). Non-GAAP."
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 2155,
+   "raw": "2,155",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Operating income",
+    "col": "Three-month period ended June 30, 2026"
+   },
+   "note": "IFRS statement of income"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 2004,
+   "raw": "2,004",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Operating income",
+    "col": "Three-month period ended June 30, 2025"
+   },
+   "note": "IFRS statement of income"
+  },
+  {
+   "id": "Q4",
+   "period": "2026H1",
+   "value": 4530,
+   "raw": "4,530",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Operating income",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": "IFRS statement of income"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q1",
+   "value": 2375,
+   "raw": "2,375",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002632/valedfifrs1q26_6k.htm",
+    "page": "",
+    "row": "Operating income",
+    "col": "Three-month period ended March 31, 2026"
+   },
+   "note": "1Q26 IFRS statement of income"
+  },
+  {
+   "id": "Q4_Adjusted EBIT",
+   "period": "2026Q2",
+   "value": 2765,
+   "raw": "2,765",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_022.jpg",
+    "page": "image_022.jpg",
+    "row": "Adjusted EBIT",
+    "col": "2Q26"
+   },
+   "note": "Company non-GAAP \"Adjusted EBIT\" = Adjusted EBITDA less depreciation, depletion and amortization (PR p.22). Reconciliation: net operating revenues - COGS - SG&A - R&D - pre-operating/stoppage - Brumadinho & dam decharacterization - other operational expenses + EBITDA from associates & JVs + streaming. Distinct from IFRS operating income (Q4)."
+  },
+  {
+   "id": "Q4_Adjusted EBIT",
+   "period": "2025Q2",
+   "value": 2606,
+   "raw": "2,606",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_022.jpg",
+    "page": "image_022.jpg",
+    "row": "Adjusted EBIT",
+    "col": "2Q25"
+   },
+   "note": "Company non-GAAP \"Adjusted EBIT\" = Adjusted EBITDA less depreciation, depletion and amortization (PR p.22). Reconciliation: net operating revenues - COGS - SG&A - R&D - pre-operating/stoppage - Brumadinho & dam decharacterization - other operational expenses + EBITDA from associates & JVs + streaming. Distinct from IFRS operating income (Q4)."
+  },
+  {
+   "id": "Q4_Adjusted EBIT",
+   "period": "2026Q1",
+   "value": 2985,
+   "raw": "2,985",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_022.jpg",
+    "page": "image_022.jpg",
+    "row": "Adjusted EBIT",
+    "col": "1Q26"
+   },
+   "note": "Company non-GAAP \"Adjusted EBIT\" = Adjusted EBITDA less depreciation, depletion and amortization (PR p.22). Reconciliation: net operating revenues - COGS - SG&A - R&D - pre-operating/stoppage - Brumadinho & dam decharacterization - other operational expenses + EBITDA from associates & JVs + streaming. Distinct from IFRS operating income (Q4)."
+  },
+  {
+   "id": "Q4_Adjusted EBIT",
+   "period": "2026H1",
+   "value": 5750,
+   "raw": "5,750",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_022.jpg",
+    "page": "image_022.jpg",
+    "row": "Adjusted EBIT",
+    "col": "6M26"
+   },
+   "note": "Company non-GAAP \"Adjusted EBIT\" = Adjusted EBITDA less depreciation, depletion and amortization (PR p.22). Reconciliation: net operating revenues - COGS - SG&A - R&D - pre-operating/stoppage - Brumadinho & dam decharacterization - other operational expenses + EBITDA from associates & JVs + streaming. Distinct from IFRS operating income (Q4)."
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 1375,
+   "raw": "1,375",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net income attributable to Vale S.A.'s shareholders",
+    "col": "Three-month period ended June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 2117,
+   "raw": "2,117",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net income attributable to Vale S.A.'s shareholders",
+    "col": "Three-month period ended June 30, 2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 3268,
+   "raw": "3,268",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net income attributable to Vale S.A.'s shareholders",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 1893,
+   "raw": "1,893",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002632/valedfifrs1q26_6k.htm",
+    "page": "",
+    "row": "Net income attributable to Vale S.A.'s shareholders",
+    "col": "Three-month period ended March 31, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": 1566,
+   "raw": "1,566",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Proforma net income attributable to Vale's shareholders",
+    "col": "2Q26"
+   },
+   "note": "Name: \"Proforma net income attributable to Vale's shareholders\" (headline table: \"Attributable proforma net income\"). Definition: excludes non-recurring items such as asset impairments, non-recurring expenses and related tax effects (non-recurring items +191 in 2Q26). Non-GAAP."
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": 2117,
+   "raw": "2,117",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Proforma net income attributable to Vale's shareholders",
+    "col": "2Q25"
+   },
+   "note": "Name: \"Proforma net income attributable to Vale's shareholders\" (headline table: \"Attributable proforma net income\"). Definition: excludes non-recurring items such as asset impairments, non-recurring expenses and related tax effects (non-recurring items +191 in 2Q26). Non-GAAP."
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": 1893,
+   "raw": "1,893",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Proforma net income attributable to Vale's shareholders",
+    "col": "1Q26"
+   },
+   "note": "Name: \"Proforma net income attributable to Vale's shareholders\" (headline table: \"Attributable proforma net income\"). Definition: excludes non-recurring items such as asset impairments, non-recurring expenses and related tax effects (non-recurring items +191 in 2Q26). Non-GAAP."
+  },
+  {
+   "id": "Q6",
+   "period": "2026H1",
+   "value": 3459,
+   "raw": "3,459",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Proforma net income attributable to Vale's shareholders",
+    "col": "6M26"
+   },
+   "note": "Name: \"Proforma net income attributable to Vale's shareholders\" (headline table: \"Attributable proforma net income\"). Definition: excludes non-recurring items such as asset impairments, non-recurring expenses and related tax effects (non-recurring items +191 in 2Q26). Non-GAAP."
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 0.32,
+   "raw": "0.32",
+   "unit": "US$ per common share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic and diluted earnings per share (US$)",
+    "col": "Three-month period ended June 30, 2026"
+   },
+   "note": "Basic and diluted reported as one line"
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q2",
+   "value": 0.5,
+   "raw": "0.50",
+   "unit": "US$ per common share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic and diluted earnings per share (US$)",
+    "col": "Three-month period ended June 30, 2025"
+   },
+   "note": "Basic and diluted reported as one line"
+  },
+  {
+   "id": "Q7",
+   "period": "2026H1",
+   "value": 0.77,
+   "raw": "0.77",
+   "unit": "US$ per common share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic and diluted earnings per share (US$)",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": "Basic and diluted reported as one line"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 0.44,
+   "raw": "0.44",
+   "unit": "US$ per common share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002632/valedfifrs1q26_6k.htm",
+    "page": "",
+    "row": "Basic and diluted earnings per share (US$)",
+    "col": "Three-month period ended March 31, 2026"
+   },
+   "note": "Basic and diluted reported as one line"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 4291,
+   "raw": "4,291",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net cash generated by operating activities",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": "IFRS cash flow statement is presented only for six-month periods"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 1879,
+   "raw": "1,879",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002632/valedfifrs1q26_6k.htm",
+    "page": "",
+    "row": "Net cash generated by operating activities",
+    "col": "Three-month period ended March 31, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": 2412,
+   "raw": "2,412",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_021.jpg",
+    "page": "image_021.jpg",
+    "row": "Net cash generated by operating activities",
+    "col": "2Q26"
+   },
+   "note": "Press release Annex 1 cash flow (quarterly not in IFRS statements)"
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q2",
+   "value": 1856,
+   "raw": "1,856",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_021.jpg",
+    "page": "image_021.jpg",
+    "row": "Net cash generated by operating activities",
+    "col": "2Q25"
+   },
+   "note": "Press release Annex 1 cash flow"
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q2",
+   "value": 1128,
+   "raw": "1,128",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Total (Total CAPEX table)",
+    "col": "2Q26"
+   },
+   "note": "Company-reported \"Capital expenditures\" (growth + sustaining). Differs from cash flow statement line Q9_CF."
+  },
+  {
+   "id": "Q9",
+   "period": "2025Q2",
+   "value": 1053,
+   "raw": "1,053",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Total (Total CAPEX table)",
+    "col": "2Q25"
+   },
+   "note": "Company-reported \"Capital expenditures\" (growth + sustaining). Differs from cash flow statement line Q9_CF."
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q1",
+   "value": 1089,
+   "raw": "1,089",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Total (Total CAPEX table)",
+    "col": "1Q26"
+   },
+   "note": "Company-reported \"Capital expenditures\" (growth + sustaining). Differs from cash flow statement line Q9_CF."
+  },
+  {
+   "id": "Q9",
+   "period": "2026H1",
+   "value": 2217,
+   "raw": "2,217",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Total (Total CAPEX table)",
+    "col": "6M26"
+   },
+   "note": "Company-reported \"Capital expenditures\" (growth + sustaining). Differs from cash flow statement line Q9_CF."
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2026Q2",
+   "value": -1244,
+   "raw": "(1,244)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_021.jpg",
+    "page": "image_021.jpg",
+    "row": "Acquisition of property, plant and equipment and intangible assets",
+    "col": "2Q26"
+   },
+   "note": "Cash flow statement line (outflow, negative). 6M26 (2,429) and 1Q26 (1,185) also in IFRS statements."
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2025Q2",
+   "value": -1168,
+   "raw": "(1,168)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_021.jpg",
+    "page": "image_021.jpg",
+    "row": "Acquisition of property, plant and equipment and intangible assets",
+    "col": "2Q25"
+   },
+   "note": "Cash flow statement line (outflow, negative). 6M26 (2,429) and 1Q26 (1,185) also in IFRS statements."
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2026Q1",
+   "value": -1185,
+   "raw": "(1,185)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_021.jpg",
+    "page": "image_021.jpg",
+    "row": "Acquisition of property, plant and equipment and intangible assets",
+    "col": "1Q26"
+   },
+   "note": "Cash flow statement line (outflow, negative). 6M26 (2,429) and 1Q26 (1,185) also in IFRS statements."
+  },
+  {
+   "id": "Q9_CF",
+   "period": "2026H1",
+   "value": -2429,
+   "raw": "(2,429)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_021.jpg",
+    "page": "image_021.jpg",
+    "row": "Acquisition of property, plant and equipment and intangible assets",
+    "col": "6M26"
+   },
+   "note": "Cash flow statement line (outflow, negative). 6M26 (2,429) and 1Q26 (1,185) also in IFRS statements."
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q2",
+   "value": 1505,
+   "raw": "1,505",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "Free Cash Flow⁶",
+    "col": "2Q26"
+   },
+   "note": "Company \"Free Cash Flow\": Proforma EBITDA less working capital, capex, net financial expenses (interest on loans, leasing, net derivative settlement), income taxes and REFIS, associates & JVs net of dividends received, Brumadinho incurred expenses & dams, streaming and others; before Brumadinho and Samarco payments and cash management/others (debt, buybacks, dividends). \"Recurring free cash flow\" (headline table) has identical values; footnote: no non-recurring events in periods. Note: PR table 6M26 increase in cash (1,932) vs IFRS cash flow statement (1,922)."
+  },
+  {
+   "id": "Q10",
+   "period": "2025Q2",
+   "value": 1008,
+   "raw": "1,008",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "Free Cash Flow⁶",
+    "col": "2Q25"
+   },
+   "note": "Company \"Free Cash Flow\": Proforma EBITDA less working capital, capex, net financial expenses (interest on loans, leasing, net derivative settlement), income taxes and REFIS, associates & JVs net of dividends received, Brumadinho incurred expenses & dams, streaming and others; before Brumadinho and Samarco payments and cash management/others (debt, buybacks, dividends). \"Recurring free cash flow\" (headline table) has identical values; footnote: no non-recurring events in periods. Note: PR table 6M26 increase in cash (1,932) vs IFRS cash flow statement (1,922)."
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q1",
+   "value": 813,
+   "raw": "813",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "Free Cash Flow⁶",
+    "col": "1Q26"
+   },
+   "note": "Company \"Free Cash Flow\": Proforma EBITDA less working capital, capex, net financial expenses (interest on loans, leasing, net derivative settlement), income taxes and REFIS, associates & JVs net of dividends received, Brumadinho incurred expenses & dams, streaming and others; before Brumadinho and Samarco payments and cash management/others (debt, buybacks, dividends). \"Recurring free cash flow\" (headline table) has identical values; footnote: no non-recurring events in periods. Note: PR table 6M26 increase in cash (1,932) vs IFRS cash flow statement (1,922)."
+  },
+  {
+   "id": "Q10",
+   "period": "2026H1",
+   "value": 2318,
+   "raw": "2,318",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "Free Cash Flow⁶",
+    "col": "6M26"
+   },
+   "note": "Company \"Free Cash Flow\": Proforma EBITDA less working capital, capex, net financial expenses (interest on loans, leasing, net derivative settlement), income taxes and REFIS, associates & JVs net of dividends received, Brumadinho incurred expenses & dams, streaming and others; before Brumadinho and Samarco payments and cash management/others (debt, buybacks, dividends). \"Recurring free cash flow\" (headline table) has identical values; footnote: no non-recurring events in periods. Note: PR table 6M26 increase in cash (1,932) vs IFRS cash flow statement (1,922)."
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 5577,
+   "raw": "5,577",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 5085,
+   "raw": "5,085",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_020.jpg",
+    "page": "image_020.jpg",
+    "row": "Cash and cash equivalents",
+    "col": "03/31/2026"
+   },
+   "note": "Press release balance sheet; also 1Q26 IFRS statements"
+  },
+  {
+   "id": "B2_Short-term investments",
+   "period": "2026-06-30",
+   "value": 188,
+   "raw": "188",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Short-term investments",
+    "col": "June 30, 2026"
+   },
+   "note": "Only other short-term financial investment line on balance sheet"
+  },
+  {
+   "id": "B2_Short-term investments",
+   "period": "2026-03-31",
+   "value": 194,
+   "raw": "194",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_020.jpg",
+    "page": "image_020.jpg",
+    "row": "Short term investments",
+    "col": "03/31/2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3",
+   "period": "2026-06-30",
+   "value": 18304,
+   "raw": "18,304",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Balance as of June 30, 2026 (Total loans and borrowings) - note 21 changes table",
+    "col": "Total loans and borrowings"
+   },
+   "note": "Loans and borrowings current 1,093 + non-current 17,211 (balance sheet); includes US$ bonds, R$ debentures and loans. Excludes leases (B3_Leases) and subordinated notes US$757 (classified as other financial liabilities). PR \"Gross debt\" 2Q26 = 18,304 (image_007)."
+  },
+  {
+   "id": "B3",
+   "period": "2026-03-31",
+   "value": 18196,
+   "raw": "18,196",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Gross debt¹",
+    "col": "1Q26"
+   },
+   "note": "PR debt table; footnote: does not include leases"
+  },
+  {
+   "id": "B3",
+   "period": "2025-06-30",
+   "value": 17146,
+   "raw": "17,146",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Gross debt¹",
+    "col": "2Q25"
+   },
+   "note": "PR debt table"
+  },
+  {
+   "id": "B3_Leases",
+   "period": "2026-06-30",
+   "value": 634,
+   "raw": "634",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Lease (IFRS 16)",
+    "col": "2Q26"
+   },
+   "note": "Balance sheet leases current 169 + non-current 465 (IFRS note 19 total 634)"
+  },
+  {
+   "id": "B3_Leases",
+   "period": "2026-03-31",
+   "value": 641,
+   "raw": "641",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Lease (IFRS 16)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": 13173,
+   "raw": "13,173",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Net debt",
+    "col": "2Q26"
+   },
+   "note": "Company \"Net debt\" = Gross debt (excl. leases) + Lease (IFRS 16) - Cash, cash equivalents and short-term investments (PR debt table; footnote \"Including leases (IFRS 16)\")"
+  },
+  {
+   "id": "B4",
+   "period": "2026-03-31",
+   "value": 13558,
+   "raw": "13,558",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Net debt",
+    "col": "1Q26"
+   },
+   "note": "Company \"Net debt\" = Gross debt (excl. leases) + Lease (IFRS 16) - Cash, cash equivalents and short-term investments (PR debt table; footnote \"Including leases (IFRS 16)\")"
+  },
+  {
+   "id": "B4",
+   "period": "2025-06-30",
+   "value": 12149,
+   "raw": "12,149",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Net debt",
+    "col": "2Q25"
+   },
+   "note": "Company \"Net debt\" = Gross debt (excl. leases) + Lease (IFRS 16) - Cash, cash equivalents and short-term investments (PR debt table; footnote \"Including leases (IFRS 16)\")"
+  },
+  {
+   "id": "B4_Expanded net debt",
+   "period": "2026-06-30",
+   "value": 16677,
+   "raw": "16,677",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Expanded net debt",
+    "col": "2Q26"
+   },
+   "note": "Company \"Expanded net debt\" = Net debt + Currency swaps (incl. interest rate swaps) + Brumadinho provisions + Samarco provisions"
+  },
+  {
+   "id": "B4_Expanded net debt",
+   "period": "2026-03-31",
+   "value": 17792,
+   "raw": "17,792",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Expanded net debt",
+    "col": "1Q26"
+   },
+   "note": "Company \"Expanded net debt\" = Net debt + Currency swaps (incl. interest rate swaps) + Brumadinho provisions + Samarco provisions"
+  },
+  {
+   "id": "B4_Expanded net debt",
+   "period": "2025-06-30",
+   "value": 17448,
+   "raw": "17,448",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Expanded net debt",
+    "col": "2Q25"
+   },
+   "note": "Company \"Expanded net debt\" = Net debt + Currency swaps (incl. interest rate swaps) + Brumadinho provisions + Samarco provisions"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 89279,
+   "raw": "89,279",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Total assets",
+    "col": "June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 87591,
+   "raw": "87,591",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_020.jpg",
+    "page": "image_020.jpg",
+    "row": "Total assets",
+    "col": "03/31/2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 38011,
+   "raw": "38,011",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to Vale S.A.'s shareholders",
+    "col": "June 30, 2026"
+   },
+   "note": "Total equity incl. NCI 38,946"
+  },
+  {
+   "id": "B6",
+   "period": "2026-03-31",
+   "value": 36651,
+   "raw": "36,651",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002632/valedfifrs1q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to Vale S.A.'s shareholders",
+    "col": "March 31, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_Common",
+   "period": "2026-06-30",
+   "value": 4255762783,
+   "raw": "4,255,762,783",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Total outstanding (without shares in treasury)",
+    "col": "Common shares"
+   },
+   "note": "Note 25(a). Vale has only common shares (no preferred); plus 12 golden shares (total 4,255,762,795). Treasury shares 183,396,969; total capital 4,439,159,764."
+  },
+  {
+   "id": "S1_Golden shares",
+   "period": "2026-06-30",
+   "value": 12,
+   "raw": "12",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Total outstanding (without shares in treasury)",
+    "col": "Golden shares"
+   },
+   "note": "Special class held by Brazilian government"
+  },
+  {
+   "id": "S1_Common",
+   "period": "2026-03-31",
+   "value": 4264533753,
+   "raw": "4,264,533,753",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002632/valedfifrs1q26_6k.htm",
+    "page": "",
+    "row": "Total outstanding (without shares in treasury)",
+    "col": "Common shares"
+   },
+   "note": "1Q26 note 25(a)"
+  },
+  {
+   "id": "S2",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "ADR:common share",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "ADR-to-share ratio not stated in any of the three filings (only mention that ADRs trade on NYSE under VALE)"
+  },
+  {
+   "id": "R1",
+   "period": "2026H1",
+   "value": 1701,
+   "raw": "US$1,701",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25(d) text after remuneration table / note 2 Significant events",
+    "col": "subsequent event (July 2026)"
+   },
+   "note": "Approved by Board in July 2026 (after period end) as anticipation of FY2026 remuneration, paid Sept 2026: JCP US$1,314 (R$6,676 million) + dividends US$387 (R$1,966 million). PR: \"US$ 1.701 billion in dividends and interest on capital ... reflecting policy applied to 1H26 results\". No declaration within 1Q26/2Q26 itself."
+  },
+  {
+   "id": "R1_JCP",
+   "period": "2026H1",
+   "value": 1314,
+   "raw": "US$1,314 (R$6,676 million)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25(d) text",
+    "col": "subsequent event (July 2026)"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_Dividends",
+   "period": "2026H1",
+   "value": 387,
+   "raw": "US$387 (R$1,966)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25(d) text",
+    "col": "subsequent event (July 2026)"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_per share",
+   "period": "2026H1",
+   "value": null,
+   "raw": "",
+   "unit": "US$ per share",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "Per-share amount for the July 2026 remuneration not disclosed in the filings"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q2",
+   "value": 140,
+   "raw": "US$140",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 2 Significant events - Share buyback program",
+    "col": "three-month period ended June 30, 2026"
+   },
+   "note": "8,771,000 common shares and respective ADRs repurchased; PR cash flow \"Share buyback program\" (140) 2Q26"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q1",
+   "value": 74,
+   "raw": "(74)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_021.jpg",
+    "page": "image_021.jpg",
+    "row": "Share buyback program",
+    "col": "1Q26"
+   },
+   "note": "4,980,600 shares (1Q26 note 25(c))"
+  },
+  {
+   "id": "R2",
+   "period": "2026H1",
+   "value": 214,
+   "raw": "214",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Shares buyback program (Effect on cash flows)",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": "13,751,600 shares acquired by Parent Company under program up to 120,000,000 shares. New program up to 100,000,000 shares approved July 2026."
+  },
+  {
+   "id": "R2_shares",
+   "period": "2026H1",
+   "value": 13751600,
+   "raw": "13,751,600",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Shares buyback program (Total of shares repurchased)",
+    "col": "Six-month period ended June 30, 2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Iron ore volume sold (total)",
+   "period": "2026Q2",
+   "value": 79.747,
+   "raw": "79,747",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Total - iron ore (Volume sold)",
+    "col": "2Q26"
+   },
+   "note": "Original unit '000 metric tons; converted to Mt. Total = Fines + Pellets + ROM."
+  },
+  {
+   "id": "OP_Iron ore volume sold (total)",
+   "period": "2025Q2",
+   "value": 77.346,
+   "raw": "77,346",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Total - iron ore (Volume sold)",
+    "col": "2Q25"
+   },
+   "note": "Original unit '000 metric tons; converted to Mt. Total = Fines + Pellets + ROM."
+  },
+  {
+   "id": "OP_Iron ore volume sold (total)",
+   "period": "2026Q1",
+   "value": 68.713,
+   "raw": "68,713",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Total - iron ore (Volume sold)",
+    "col": "1Q26"
+   },
+   "note": "Original unit '000 metric tons; converted to Mt. Total = Fines + Pellets + ROM."
+  },
+  {
+   "id": "OP_Iron ore volume sold (total)",
+   "period": "2026H1",
+   "value": 148.46,
+   "raw": "148,460",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Total - iron ore (Volume sold)",
+    "col": "6M26"
+   },
+   "note": "Original unit '000 metric tons; converted to Mt. Total = Fines + Pellets + ROM."
+  },
+  {
+   "id": "OP_Iron ore fines volume sold",
+   "period": "2026Q2",
+   "value": 69.946,
+   "raw": "69,946",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Fines (Volume sold)",
+    "col": "2Q26"
+   },
+   "note": "Original unit '000 metric tons; includes third-party purchases"
+  },
+  {
+   "id": "OP_Iron ore fines volume sold",
+   "period": "2025Q2",
+   "value": 67.678,
+   "raw": "67,678",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Fines (Volume sold)",
+    "col": "2Q25"
+   },
+   "note": "Original unit '000 metric tons; includes third-party purchases"
+  },
+  {
+   "id": "OP_Iron ore fines volume sold",
+   "period": "2026Q1",
+   "value": 59.436,
+   "raw": "59,436",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Fines (Volume sold)",
+    "col": "1Q26"
+   },
+   "note": "Original unit '000 metric tons; includes third-party purchases"
+  },
+  {
+   "id": "OP_Iron ore fines volume sold",
+   "period": "2026H1",
+   "value": 129.381,
+   "raw": "129,381",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Fines (Volume sold)",
+    "col": "6M26"
+   },
+   "note": "Original unit '000 metric tons; includes third-party purchases"
+  },
+  {
+   "id": "OP_Pellets volume sold",
+   "period": "2026Q2",
+   "value": 7.748,
+   "raw": "7,748",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Pellets (Volume sold)",
+    "col": "2Q26"
+   },
+   "note": "Original unit '000 metric tons"
+  },
+  {
+   "id": "OP_Pellets volume sold",
+   "period": "2025Q2",
+   "value": 7.483,
+   "raw": "7,483",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Pellets (Volume sold)",
+    "col": "2Q25"
+   },
+   "note": "Original unit '000 metric tons"
+  },
+  {
+   "id": "OP_Pellets volume sold",
+   "period": "2026Q1",
+   "value": 7.699,
+   "raw": "7,699",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Pellets (Volume sold)",
+    "col": "1Q26"
+   },
+   "note": "Original unit '000 metric tons"
+  },
+  {
+   "id": "OP_Pellets volume sold",
+   "period": "2026H1",
+   "value": 15.447,
+   "raw": "15,447",
+   "unit": "million metric tons",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Pellets (Volume sold)",
+    "col": "6M26"
+   },
+   "note": "Original unit '000 metric tons"
+  },
+  {
+   "id": "OP_Iron ore production",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "million metric tons",
+   "status": "null",
+   "source": {
+    "file": "",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "Iron ore production volumes not disclosed in these filings (separate production report not provided)"
+  },
+  {
+   "id": "OP_Iron ore fines realized price",
+   "period": "2026Q2",
+   "value": 95.0,
+   "raw": "95.0",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Iron ore fines realized price, CFR/FOB",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Iron ore fines realized price",
+   "period": "2025Q2",
+   "value": 85.1,
+   "raw": "85.1",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Iron ore fines realized price, CFR/FOB",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Iron ore fines realized price",
+   "period": "2026Q1",
+   "value": 95.8,
+   "raw": "95.8",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Iron ore fines realized price, CFR/FOB",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Iron ore fines realized price",
+   "period": "2026H1",
+   "value": 95.3,
+   "raw": "95.3",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Iron ore fines realized price, CFR/FOB",
+    "col": "6M26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Iron ore pellets realized price",
+   "period": "2026Q2",
+   "value": 137.0,
+   "raw": "137.0",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Iron ore pellets realized price, CFR/FOB",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Iron ore pellets realized price",
+   "period": "2025Q2",
+   "value": 134.1,
+   "raw": "134.1",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Iron ore pellets realized price, CFR/FOB",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Iron ore pellets realized price",
+   "period": "2026Q1",
+   "value": 133.8,
+   "raw": "133.8",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Iron ore pellets realized price, CFR/FOB",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Iron ore pellets realized price",
+   "period": "2026H1",
+   "value": 135.4,
+   "raw": "135.4",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Iron ore pellets realized price, CFR/FOB",
+    "col": "6M26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_C1 cash cost",
+   "period": "2026Q2",
+   "value": 24.1,
+   "raw": "24.1",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_011.jpg",
+    "page": "image_011.jpg",
+    "row": "C1 cash cost, ex-third-party purchase costs",
+    "col": "2Q26"
+   },
+   "note": "Iron ore fines C1 cash cost excluding third-party purchases. Same page also: \"C1 production costs, ex-third-party purchase costs\" 24.1/21.6/25.3/24.4 (table header says US$ million but values are US$/t)"
+  },
+  {
+   "id": "OP_C1 cash cost",
+   "period": "2025Q2",
+   "value": 22.2,
+   "raw": "22.2",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_011.jpg",
+    "page": "image_011.jpg",
+    "row": "C1 cash cost, ex-third-party purchase costs",
+    "col": "2Q25"
+   },
+   "note": "Iron ore fines C1 cash cost excluding third-party purchases. Same page also: \"C1 production costs, ex-third-party purchase costs\" 24.1/21.6/25.3/24.4 (table header says US$ million but values are US$/t)"
+  },
+  {
+   "id": "OP_C1 cash cost",
+   "period": "2026Q1",
+   "value": 23.6,
+   "raw": "23.6",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_011.jpg",
+    "page": "image_011.jpg",
+    "row": "C1 cash cost, ex-third-party purchase costs",
+    "col": "1Q26"
+   },
+   "note": "Iron ore fines C1 cash cost excluding third-party purchases. Same page also: \"C1 production costs, ex-third-party purchase costs\" 24.1/21.6/25.3/24.4 (table header says US$ million but values are US$/t)"
+  },
+  {
+   "id": "OP_C1 cash cost",
+   "period": "2026H1",
+   "value": 23.9,
+   "raw": "23.9",
+   "unit": "US$/t",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004002/image_011.jpg",
+    "page": "image_011.jpg",
+    "row": "C1 cash cost, ex-third-party purchase costs",
+    "col": "6M26"
+   },
+   "note": "Iron ore fines C1 cash cost excluding third-party purchases. Same page also: \"C1 production costs, ex-third-party purchase costs\" 24.1/21.6/25.3/24.4 (table header says US$ million but values are US$/t)"
+  },
+  {
+   "id": "X1",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "IAS 34 - Interim Financial Reporting, as issued by the IASB; presented in US$ (functional currency of Parent R$)",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004012/valedfifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 30 Basis of preparation / Functional currency and presentation currency",
+    "col": ""
+   },
+   "note": "Q2 IFRS financial statements; 1Q26 statements same basis. Press release values in US$ million."
+  }
+ ]
+}

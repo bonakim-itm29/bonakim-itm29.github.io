@@ -1,0 +1,25 @@
+{
+ "ticker": "ITUB",
+ "top": [],
+ "top_note_ko": "이타우는 매크로로 설명되지 않은 급변동이 2번뿐이었습니다. 2009년 8월 31일(−11.2%, 매크로 예측 −3.2%, 잔차 −8.7%)에는 CBD와의 금융 합작사 협상 종료 공시가 있었지만 본문을 확보하지 못해 주가 영향을 확인하지 못했고, 2015년 7월 14일은 관련 공시와 원인을 찾지 못했습니다. 회사의 방향을 바꾼 사건으로 확인된 것은 없습니다. 주가는 주로 헤알과 브라질 시장 전체를 따라 움직였습니다.",
+ "others": [
+  {
+   "date": "2009-08-31",
+   "filed": "2009-08-31",
+   "title_ko": "CBD와 Financeira Itaú CBD 합작 협상 종료 공시(Material Fact, 본문 미포함)",
+   "R": -0.1119,
+   "res": -0.0868,
+   "file": "ITUB__000094787109000550__ss71705_6k.htm",
+   "quote": "Material Fact: Conclusion of negotiations between Itaú Unibanco Holding S.A. and Companhia Brasileira de Distribuição"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2015-07-14",
+   "R": -0.0917,
+   "res": -0.1041,
+   "cause_ko": "원인 미확인 (웹 검색으로 당일 보도 확인 못함)",
+   "url": ""
+  }
+ ]
+}

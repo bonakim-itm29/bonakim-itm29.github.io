@@ -1,0 +1,230 @@
+{
+ "ticker": "ERJ",
+ "top": [
+  {
+   "date": "2017-12-21",
+   "filed": "2017-12-21",
+   "title_ko": "보잉과 합병(결합) 협상 공식 확인",
+   "summary_ko": "엠브라에르와 보잉이 공동 보도자료로 양사 간 잠재적 결합 협상을 진행 중이라고 확인했다. ADR은 당일 +22.2% 급등했으며 매크로 모델 예측은 +0.2%에 불과해 잔차가 +19.8%로 이 종목 최대였다.",
+   "why_important_ko": "브라질 정부·규제당국 승인이 필요한 지배구조 변경(보잉의 상업항공 부문 인수 추진)의 출발점으로, 이후 수년간 회사 방향을 좌우한 사건이다.",
+   "facts": [
+    {
+     "fact_ko": "보잉과 엠브라에르가 잠재적 결합 협상 중임을 확인",
+     "quote": "today confirmed the two companies are engaged in discussions regarding a potential combination",
+     "file": "EMBJ__000129281417003393__embraer20171221_6k.htm"
+    },
+    {
+     "fact_ko": "거래 성사 보장 없음",
+     "quote": "There is no guarantee a transaction will result from these discussions.",
+     "file": "EMBJ__000129281417003393__embraer20171221_6k.htm"
+    },
+    {
+     "fact_ko": "브라질 정부·규제당국·이사회·주주 승인 필요",
+     "quote": "subject to the approval of the Brazilian government and regulators",
+     "file": "EMBJ__000129281417003393__embraer20171221_6k.htm"
+    }
+   ]
+  },
+  {
+   "date": "2016-07-29",
+   "filed": "2016-07-29",
+   "title_ko": "FCPA 부패 조사 2억달러 충당금 + 2016 가이던스 하향",
+   "summary_ko": "미 법무부·SEC와의 해외부패방지법(FCPA) 위반 합의 협상이 진전돼 2분기에 2억 달러 우발손실을 인식하고, 비즈니스젯 인도·매출·EBIT 가이던스를 낮췄다. ADR은 -13.8% 하락했고 매크로 예측은 0.0%로 잔차는 -14.9%였다.",
+   "why_important_ko": "부패 소송 합의(기소유예 합의·독립 감시인 부과 가능)와 실적 전망 하향이 동시에 나온 회사 고유 악재로, 지배구조·컴플라이언스와 수익성 모두에 영향을 준 사건이다.",
+   "facts": [
+    {
+     "fact_ko": "FCPA 관련 2억 달러 우발손실 인식",
+     "quote": "Embraer is recognizing a US$ 200 million loss contingency in the quarter ended June 30, 2016",
+     "file": "EMBJ__000129281416005459__embraer20160728_6k1.htm"
+    },
+    {
+     "fact_ko": "기소유예합의(DPA)와 독립 감시인 부과 가능성",
+     "quote": "an imposition of an independent monitor to assess the Company's compliance",
+     "file": "EMBJ__000129281416005459__embraer20160728_6k1.htm"
+    },
+    {
+     "fact_ko": "2016 연결매출 가이던스 60~64억→58~62억 달러(표 EMBRAER 행 PREVIOUS/CURRENT)",
+     "quote": "EMBRAER | $6.00 - $6.40 | $5.80 - $6.20",
+     "file": "EMBJ__000129281416005463__embraer20160728_6k.htm"
+    },
+    {
+     "fact_ko": "조정 EBIT 가이던스 4.8~5.45억→4.05~5.0억 달러",
+     "quote": "US$ 405-500 million (from US$ 480-545 million)",
+     "file": "EMBJ__000129281416005463__embraer20160728_6k.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2022-03-10",
+   "filed": "2022-03-07~09",
+   "title_ko": "4Q21 실적·2022 전망 공시, 러시아 제재로 일부 고객 서비스 중단 공지, E190F/E195F 화물개조 출시 (하락 원인 모호)",
+   "R": -0.1584,
+   "res": -0.1728,
+   "file": "EMBJ__000129281422000830__embraer20220309_6k.htm"
+  },
+  {
+   "date": "2021-06-10",
+   "filed": "2021-06-10",
+   "title_ko": "자회사 Eve, SPAC(Zanite)과 합병 협상 착수 중요사실 공시(+ 6/7 Helisul eVTOL 최대 50대 주문)",
+   "R": 0.1533,
+   "res": 0.1401,
+   "file": "EMBJ__000119312521187582__d148529d6k.htm"
+  },
+  {
+   "date": "2026-05-08",
+   "filed": "2026-05-08",
+   "title_ko": "1Q26 실적: 매출 +31%, 조정 EBIT률 6.5%, 조정 FCF -4.47억 달러, 가이던스 유지",
+   "R": -0.1128,
+   "res": -0.1345,
+   "file": "raw/ERJ/0001292814-26-002893/embjpr1q26_6k.htm"
+  },
+  {
+   "date": "2016-03-03",
+   "filed": "2016-03-03",
+   "title_ko": "4Q15 실적 및 2016 전망 발표",
+   "R": -0.1186,
+   "res": -0.1328,
+   "file": "embraerpr4q15_6k.htm (원문 미확보)"
+  },
+  {
+   "date": "2025-02-05",
+   "filed": "2025-02-05",
+   "title_ko": "6-K 3건(내용 원문 미확보)",
+   "R": 0.1483,
+   "res": 0.1308,
+   "file": "d883076d6k.htm 외 (원문 미확보)"
+  },
+  {
+   "date": "2021-12-21",
+   "filed": "2021-12-21",
+   "title_ko": "6-K 6건(내용 원문 미확보)",
+   "R": 0.1561,
+   "res": 0.1272,
+   "file": "embraer20211221_6k.htm 외 (원문 미확보)"
+  },
+  {
+   "date": "2009-10-30",
+   "filed": "2009-10-30",
+   "title_ko": "6-K(내용 원문 미확보)",
+   "R": -0.1365,
+   "res": -0.1238,
+   "file": "d6k.htm (원문 미확보)"
+  },
+  {
+   "date": "2026-03-12",
+   "filed": "2026-03-09",
+   "title_ko": "6-K(내용 원문 미확보)",
+   "R": -0.1292,
+   "res": -0.1202,
+   "file": "embj20260306_6k.htm (원문 미확보)"
+  },
+  {
+   "date": "2020-12-03",
+   "filed": "2020-12-01~02",
+   "title_ko": "6-K 2건(내용 원문 미확보)",
+   "R": 0.1235,
+   "res": 0.1202,
+   "file": "embraer20201202_6k.htm 외 (원문 미확보)"
+  },
+  {
+   "date": "2025-02-27",
+   "filed": "2025-02-24~27",
+   "title_ko": "4Q24 실적 발표 등(원문 미확보)",
+   "R": 0.1075,
+   "res": 0.1196,
+   "file": "erjpr4q24_6k.htm (원문 미확보)"
+  },
+  {
+   "date": "2018-07-05",
+   "filed": "2018-07-05",
+   "title_ko": "6-K 3건(내용 원문 미확보)",
+   "R": -0.1034,
+   "res": -0.1069,
+   "file": "embraer20180705_6k.htm 외 (원문 미확보)"
+  },
+  {
+   "date": "2009-08-03",
+   "filed": "2009-07-31",
+   "title_ko": "6-K(원문 미확보)",
+   "R": 0.1226,
+   "res": 0.0913,
+   "file": "d6k.htm (원문 미확보)"
+  },
+  {
+   "date": "2008-07-08",
+   "filed": "2008-07-07",
+   "title_ko": "6-K(원문 미확보)",
+   "R": 0.1097,
+   "res": 0.085,
+   "file": "v119230_6k.htm (원문 미확보)"
+  },
+  {
+   "date": "2024-08-08",
+   "filed": "2024-08-07~08",
+   "title_ko": "2Q24 실적 발표(원문 미확보)",
+   "R": 0.1049,
+   "res": 0.0756,
+   "file": "erjpr2q24_6k.htm (원문 미확보)"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2025-07-30",
+   "R": 0.1054,
+   "res": 0.0977,
+   "cause_ko": "트럼프 대통령의 브라질산 50% 관세 행정명령에서 민간항공기가 제외되며 급등(Reuters: 'excluded dozens of key Brazilian exports ... including civil aircraft'; 'Embraer shares rose 11% in Sao Paulo')",
+   "url": "https://www.aol.com/news/trump-signs-order-implementing-additional-181029702.html"
+  },
+  {
+   "date": "2021-03-10",
+   "R": 0.1469,
+   "res": 0.1137,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2021-01-12",
+   "R": 0.1076,
+   "res": 0.1126,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2009-03-27",
+   "R": -0.1022,
+   "res": -0.0804,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2021-09-23",
+   "R": 0.1177,
+   "res": 0.0789,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2009-03-12",
+   "R": 0.1255,
+   "res": 0.0728,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2009-04-09",
+   "R": 0.1127,
+   "res": 0.0662,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  },
+  {
+   "date": "2020-11-09",
+   "R": 0.153,
+   "res": 0.0824,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  }
+ ]
+}

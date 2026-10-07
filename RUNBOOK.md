@@ -19,6 +19,7 @@ git -C /home/claude/bonakim-itm29.github.io archive origin/company-pipeline | ta
 | china2 | pdd, netease, trip-com | SEC 6-K, 20-F | 추출 A/B → verify_cn2.py → valuation_cn2.py → build_cn2.py → content_cn2.py → gen_cn2.py |
 | hk | tencent, meituan | HKEX 실적발표(PDF) | 추출 A/B → verify_hk.py → valuation_hk.py → build_hk.py → content_hk.py → gen_hk.py |
 | hk3 | lenovo, xiaomi, byd | HKEX 실적발표·연차보고서(PDF, 레노버 US$·3월 결산, BYD 중국회계기준) | 추출 A/B(EXTRACT_PROMPT.md) → verify_hk3.py → eda_hk3.py → moves_hk3.py → 이벤트(EVENT_PROMPT_HK3.md) → valuation_hk3.py → build_hk3.py → content_hk3.py 수정 → gen_hk3.py |
+| br | vale, petrobras, itau, nu, bradesco, ambev, sabesp, embraer, axia | SEC 6-K(실적 보도자료·재무제표, 표가 이미지면 jpg 함께), 20-F(인라인 XBRL) | 추출 A/B(EXTRACT_PROMPT.md) → cmp.py·verify_br.py → prices_br.py → eda_br.py → moves_br.py → 이벤트(EVENT_PROMPT_BR.md) → framework_br.py → valuation_br.py → ix20f.py → build_br.py → content_br_*.py 수정(CONTENT_PROMPT_BR.md) → 사실 확인(FACTCHECK_PROMPT_BR.md) → gen_br.py |
 | kr | samsung-electronics, sk-hynix | DART 분기보고서·잠정실적 | 추출 A/B → verify_kr.py → valuation_kr.py → build_kr.py → content_kr.py → gen_kr.py |
 
 각 스크립트를 열어 실제 입력 파일과 기준일(ASOF) 상수를 확인한 뒤 실행합니다. 순서가 표와 다르면 스크립트가 읽는 파일 기준으로 맞춥니다.
@@ -54,3 +55,9 @@ python3 scripts/build_notes_index.py      # 투자노트 목록 점수 배지
 - 실질금리 베타: 2021년 이후 월간(4주) 수익률을 미 10년 TIPS 금리(FRED DFII10) 변화에 단순회귀, −0.20 이하 만점.
 - 기존 중국 8개 페이지는 hk3/patch_pages.py로 점수·peers를 갱신했습니다. 새 기업을 추가하면 run_peers로 모든 중국 페이지의 peers를 다시 맞춥니다.
 - 각 페이지 실적 갱신 시 위 규칙을 그대로 적용합니다(파이프라인의 valuation 스크립트에서 위안화 항목 대신 framework_v11.items 사용).
+
+## 6. 브라질 ADR (2026-10-07)
+- 프레임워크 적합도: 신흥국 강세 1.5 + 종목 거명 0.25 + 헤알 베타 0.5(−1.5 이하 만점) + 미국 실질금리 베타 0.5.
+- 가치평가: 비금융 EV/EBITDA(4~10배)·PER(8~20배)·FCF 수익률(10%)·순부채/EBITDA(1~3배), 은행 P/B(1~2.5배)·PER(6~15배)·주주환원수익률(8%)·ROE(8~20%). 점수 항목에 x·move·rule_id를 저장해 build_company_base.py와 live-price.js가 그대로 씀.
+- 시가총액 = ADR 가격 ÷ ADR 비율 × 전체 주식 수(PBR은 보통주·우선주 ADR 가격을 따로 적용). AXIA는 2026년 6월 NYSE 상장폐지 → B3 AXIA3(헤알)로 가격 갱신. 15F로 SEC 등록 해지를 신청해 이후 6-K가 끊기면 회사 IR(포르투갈어/영문) 자료로 바꿔야 함.
+- 엠브라에르 순부채는 연결(Eve 포함) "Embraer & Eve net cash"의 부호를 바꿔 씀(B4는 Eve 제외 순현금, 음수 = 순부채).

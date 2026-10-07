@@ -1,0 +1,2541 @@
+{
+ "ticker": "ERJ",
+ "currency": "USD (US$ million); shareholder remuneration in R$",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 2235.3,
+   "raw": "2,235.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Revenue",
+    "col": "2Q26"
+   },
+   "note": "IFRS consolidated income statement (unaudited)"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 1446.7,
+   "raw": "1,446.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Revenue",
+    "col": "1Q26"
+   },
+   "note": "IFRS consolidated income statement (unaudited)"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 1819.2,
+   "raw": "1,819.2",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Revenue",
+    "col": "2Q25"
+   },
+   "note": "IFRS consolidated income statement (unaudited)"
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 3682.0,
+   "raw": "3,682.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Revenue",
+    "col": "1H26"
+   },
+   "note": "IFRS consolidated income statement (unaudited)"
+  },
+  {
+   "id": "Q2_Commercial Aviation",
+   "period": "2026Q2",
+   "value": 625.0,
+   "raw": "625",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_006.jpg",
+    "row": "Commercial Aviation - Revenues (US$M) chart / text",
+    "col": "2Q26"
+   },
+   "note": "rounded to US$ million in release chart/text; segment figures not in a financial-statement table"
+  },
+  {
+   "id": "Q2_Commercial Aviation",
+   "period": "2025Q2",
+   "value": 577.0,
+   "raw": "577",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_006.jpg",
+    "row": "Commercial Aviation - Revenues (US$M) chart",
+    "col": "2Q25"
+   },
+   "note": "rounded to US$ million (chart label)"
+  },
+  {
+   "id": "Q2_Commercial Aviation",
+   "period": "2026Q1",
+   "value": 293.0,
+   "raw": "293",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_006.jpg",
+    "row": "Commercial Aviation - Revenues text / Revenues (US$M) chart",
+    "col": "1Q26"
+   },
+   "note": "from 1Q26 release; rounded"
+  },
+  {
+   "id": "Q2_Executive Aviation",
+   "period": "2026Q2",
+   "value": 725.0,
+   "raw": "725",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_006.jpg",
+    "row": "Executive Aviation - Revenues (US$M) chart / text",
+    "col": "2Q26"
+   },
+   "note": "rounded to US$ million in release chart/text; segment figures not in a financial-statement table"
+  },
+  {
+   "id": "Q2_Executive Aviation",
+   "period": "2025Q2",
+   "value": 549.0,
+   "raw": "549",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_006.jpg",
+    "row": "Executive Aviation - Revenues (US$M) chart",
+    "col": "2Q25"
+   },
+   "note": "rounded to US$ million (chart label)"
+  },
+  {
+   "id": "Q2_Executive Aviation",
+   "period": "2026Q1",
+   "value": 418.0,
+   "raw": "418",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_006.jpg",
+    "row": "Executive Aviation - Revenues text / Revenues (US$M) chart",
+    "col": "1Q26"
+   },
+   "note": "from 1Q26 release; rounded"
+  },
+  {
+   "id": "Q2_Defense & Security",
+   "period": "2026Q2",
+   "value": 304.0,
+   "raw": "304",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_006.jpg",
+    "row": "Defense & Security - Revenues (US$M) chart / text",
+    "col": "2Q26"
+   },
+   "note": "rounded to US$ million in release chart/text; segment figures not in a financial-statement table"
+  },
+  {
+   "id": "Q2_Defense & Security",
+   "period": "2025Q2",
+   "value": 221.0,
+   "raw": "221",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_006.jpg",
+    "row": "Defense & Security - Revenues (US$M) chart",
+    "col": "2Q25"
+   },
+   "note": "rounded to US$ million (chart label)"
+  },
+  {
+   "id": "Q2_Defense & Security",
+   "period": "2026Q1",
+   "value": 227.0,
+   "raw": "227",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_006.jpg",
+    "row": "Defense & Security - Revenues text / Revenues (US$M) chart",
+    "col": "1Q26"
+   },
+   "note": "from 1Q26 release; rounded"
+  },
+  {
+   "id": "Q2_Services & Support",
+   "period": "2026Q2",
+   "value": 565.0,
+   "raw": "565",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_007.jpg",
+    "row": "Services & Support - Revenues (US$M) chart / text",
+    "col": "2Q26"
+   },
+   "note": "rounded to US$ million in release chart/text; segment figures not in a financial-statement table"
+  },
+  {
+   "id": "Q2_Services & Support",
+   "period": "2025Q2",
+   "value": 456.0,
+   "raw": "456",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_007.jpg",
+    "row": "Services & Support - Revenues (US$M) chart",
+    "col": "2Q25"
+   },
+   "note": "rounded to US$ million (chart label)"
+  },
+  {
+   "id": "Q2_Services & Support",
+   "period": "2026Q1",
+   "value": 490.0,
+   "raw": "490",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_007.jpg",
+    "row": "Services & Support - Revenues text / Revenues (US$M) chart",
+    "col": "1Q26"
+   },
+   "note": "from 1Q26 release; rounded"
+  },
+  {
+   "id": "Q2_Others",
+   "period": "2026Q2",
+   "value": 15.0,
+   "raw": "15",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_007.jpg",
+    "row": "Others - Revenues (US$M) chart / text",
+    "col": "2Q26"
+   },
+   "note": "rounded to US$ million in release chart/text; segment figures not in a financial-statement table"
+  },
+  {
+   "id": "Q2_Others",
+   "period": "2025Q2",
+   "value": 16.0,
+   "raw": "16",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_007.jpg",
+    "row": "Others - Revenues (US$M) chart",
+    "col": "2Q25"
+   },
+   "note": "rounded to US$ million (chart label)"
+  },
+  {
+   "id": "Q2_Others",
+   "period": "2026Q1",
+   "value": 18.3,
+   "raw": "18.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_007.jpg",
+    "row": "Others - Revenues text / Revenues (US$M) chart",
+    "col": "1Q26"
+   },
+   "note": "from 1Q26 release; text gives US$18.3 million, chart label 18"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 355.6,
+   "raw": "355.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted EBITDA (ADJUSTED EBITDA RECONCILIATION)",
+    "col": "2Q26"
+   },
+   "note": "Company name: 'Adjusted EBITDA'. Adjusted EBITDA = EBITDA (Net income attributable to Embraer + NCI + income tax + net financial (income) expense + FX (gain) loss + D&A) + Expenses related to Eve; company: non-GAAP excluding non-recurring items"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 143.6,
+   "raw": "143.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted EBITDA (ADJUSTED EBITDA RECONCILIATION)",
+    "col": "1Q26"
+   },
+   "note": "Company name: 'Adjusted EBITDA'. Adjusted EBITDA = EBITDA (Net income attributable to Embraer + NCI + income tax + net financial (income) expense + FX (gain) loss + D&A) + Expenses related to Eve; company: non-GAAP excluding non-recurring items"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 245.5,
+   "raw": "245.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted EBITDA (ADJUSTED EBITDA RECONCILIATION)",
+    "col": "2Q25"
+   },
+   "note": "Company name: 'Adjusted EBITDA'. Adjusted EBITDA = EBITDA (Net income attributable to Embraer + NCI + income tax + net financial (income) expense + FX (gain) loss + D&A) + Expenses related to Eve; company: non-GAAP excluding non-recurring items"
+  },
+  {
+   "id": "Q3",
+   "period": "2026H1",
+   "value": 499.2,
+   "raw": "499.2",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted EBITDA (ADJUSTED EBITDA RECONCILIATION)",
+    "col": "1H26"
+   },
+   "note": "Company name: 'Adjusted EBITDA'. Adjusted EBITDA = EBITDA (Net income attributable to Embraer + NCI + income tax + net financial (income) expense + FX (gain) loss + D&A) + Expenses related to Eve; company: non-GAAP excluding non-recurring items"
+  },
+  {
+   "id": "Q3_EBITDA",
+   "period": "2026Q2",
+   "value": 344.5,
+   "raw": "344.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_020.jpg",
+    "row": "EBITDA (EBITDA RECONCILIATION)",
+    "col": "2Q26"
+   },
+   "note": "Unadjusted EBITDA (non-GAAP) for reference"
+  },
+  {
+   "id": "Q3_EBITDA",
+   "period": "2026Q1",
+   "value": 131.3,
+   "raw": "131.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_020.jpg",
+    "row": "EBITDA (EBITDA RECONCILIATION)",
+    "col": "1Q26"
+   },
+   "note": "Unadjusted EBITDA (non-GAAP) for reference"
+  },
+  {
+   "id": "Q3_EBITDA",
+   "period": "2025Q2",
+   "value": 233.2,
+   "raw": "233.2",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_020.jpg",
+    "row": "EBITDA (EBITDA RECONCILIATION)",
+    "col": "2Q25"
+   },
+   "note": "Unadjusted EBITDA (non-GAAP) for reference"
+  },
+  {
+   "id": "Q3_EBITDA",
+   "period": "2026H1",
+   "value": 475.8,
+   "raw": "475.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_020.jpg",
+    "row": "EBITDA (EBITDA RECONCILIATION)",
+    "col": "1H26"
+   },
+   "note": "Unadjusted EBITDA (non-GAAP) for reference"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 285.8,
+   "raw": "285.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Operating income before financial result",
+    "col": "2Q26"
+   },
+   "note": "Company: EBIT = Operating Profit before Financial Income (IFRS income statement)"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q1",
+   "value": 81.7,
+   "raw": "81.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Operating income before financial result",
+    "col": "1Q26"
+   },
+   "note": "Company: EBIT = Operating Profit before Financial Income (IFRS income statement)"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 179.5,
+   "raw": "179.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Operating income before financial result",
+    "col": "2Q25"
+   },
+   "note": "Company: EBIT = Operating Profit before Financial Income (IFRS income statement)"
+  },
+  {
+   "id": "Q4",
+   "period": "2026H1",
+   "value": 367.5,
+   "raw": "367.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Operating income before financial result",
+    "col": "1H26"
+   },
+   "note": "Company: EBIT = Operating Profit before Financial Income (IFRS income statement)"
+  },
+  {
+   "id": "Q4_AdjustedEBIT",
+   "period": "2026Q2",
+   "value": 296.9,
+   "raw": "296.9",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted EBIT (ADJUSTED EBIT RECONCILIATION)",
+    "col": "2Q26"
+   },
+   "note": "Company name 'Adjusted EBIT' = EBIT + Expenses related to Eve (11.1 in 2Q26). Note: 1H25 shown as 253.8 in Main Financial Indicators vs 253.9 in reconciliation (not used here)"
+  },
+  {
+   "id": "Q4_AdjustedEBIT",
+   "period": "2026Q1",
+   "value": 94.0,
+   "raw": "94.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted EBIT (ADJUSTED EBIT RECONCILIATION)",
+    "col": "1Q26"
+   },
+   "note": "Company name 'Adjusted EBIT' = EBIT + Expenses related to Eve (11.1 in 2Q26). Note: 1H25 shown as 253.8 in Main Financial Indicators vs 253.9 in reconciliation (not used here)"
+  },
+  {
+   "id": "Q4_AdjustedEBIT",
+   "period": "2025Q2",
+   "value": 191.8,
+   "raw": "191.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted EBIT (ADJUSTED EBIT RECONCILIATION)",
+    "col": "2Q25"
+   },
+   "note": "Company name 'Adjusted EBIT' = EBIT + Expenses related to Eve (11.1 in 2Q26). Note: 1H25 shown as 253.8 in Main Financial Indicators vs 253.9 in reconciliation (not used here)"
+  },
+  {
+   "id": "Q4_AdjustedEBIT",
+   "period": "2026H1",
+   "value": 390.9,
+   "raw": "390.9",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted EBIT (ADJUSTED EBIT RECONCILIATION)",
+    "col": "1H26"
+   },
+   "note": "Company name 'Adjusted EBIT' = EBIT + Expenses related to Eve (11.1 in 2Q26). Note: 1H25 shown as 253.8 in Main Financial Indicators vs 253.9 in reconciliation (not used here)"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 212.6,
+   "raw": "212.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Attributable to: - Owners of Embraer",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 33.4,
+   "raw": "33.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Attributable to: - Owners of Embraer",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 78.6,
+   "raw": "78.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Attributable to: - Owners of Embraer",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 246.0,
+   "raw": "246.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Attributable to: - Owners of Embraer",
+    "col": "1H26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": 218.6,
+   "raw": "218.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted net income (ADJUSTED NET INCOME RECONCILIATION)",
+    "col": "2Q26"
+   },
+   "note": "Company name 'Adjusted net income' = Net income attributable to Embraer + Expenses related to Eve + Eve warrants including financial result; non-GAAP removing non-recurring items. From 2026 deferred taxes no longer treated as extraordinary; 2025 comps restated accordingly"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": 27.7,
+   "raw": "27.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted net income (ADJUSTED NET INCOME RECONCILIATION)",
+    "col": "1Q26"
+   },
+   "note": "Company name 'Adjusted net income' = Net income attributable to Embraer + Expenses related to Eve + Eve warrants including financial result; non-GAAP removing non-recurring items. From 2026 deferred taxes no longer treated as extraordinary; 2025 comps restated accordingly"
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": 158.0,
+   "raw": "158.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted net income (ADJUSTED NET INCOME RECONCILIATION)",
+    "col": "2Q25"
+   },
+   "note": "Company name 'Adjusted net income' = Net income attributable to Embraer + Expenses related to Eve + Eve warrants including financial result; non-GAAP removing non-recurring items. From 2026 deferred taxes no longer treated as extraordinary; 2025 comps restated accordingly"
+  },
+  {
+   "id": "Q6",
+   "period": "2026H1",
+   "value": 246.3,
+   "raw": "246.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_021.jpg",
+    "row": "Adjusted net income (ADJUSTED NET INCOME RECONCILIATION)",
+    "col": "1H26"
+   },
+   "note": "Company name 'Adjusted net income' = Net income attributable to Embraer + Expenses related to Eve + Eve warrants including financial result; non-GAAP removing non-recurring items. From 2026 deferred taxes no longer treated as extraordinary; 2025 comps restated accordingly"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 0.297,
+   "raw": "0.2970",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Earnings per share - Basic",
+    "col": "2Q26"
+   },
+   "note": "per common share"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 0.0464,
+   "raw": "0.0464",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Earnings per share - Basic",
+    "col": "1Q26"
+   },
+   "note": "per common share"
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q2",
+   "value": 0.1071,
+   "raw": "0.1071",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Earnings per share - Basic",
+    "col": "2Q25"
+   },
+   "note": "per common share"
+  },
+  {
+   "id": "Q7",
+   "period": "2026H1",
+   "value": 0.3437,
+   "raw": "0.3437",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Earnings per share - Basic",
+    "col": "1H26"
+   },
+   "note": "per common share"
+  },
+  {
+   "id": "Q7_ADS",
+   "period": "2026Q2",
+   "value": 1.188,
+   "raw": "1.1880",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Earnings per share - ADS basic (US$)",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_ADS",
+   "period": "2026Q1",
+   "value": 0.1856,
+   "raw": "0.1856",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Earnings per share - ADS basic (US$)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_ADS",
+   "period": "2025Q2",
+   "value": 0.4283,
+   "raw": "0.4283",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Earnings per share - ADS basic (US$)",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_ADS",
+   "period": "2026H1",
+   "value": 1.3747,
+   "raw": "1.3747",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_015.jpg",
+    "row": "Earnings per share - ADS basic (US$)",
+    "col": "1H26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": 447.4,
+   "raw": "447.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "1. NET CASH (USED IN) PROVIDED BY OPERATING ACTIVITIES",
+    "col": "2Q26"
+   },
+   "note": "after income tax and social contribution paid and interest paid"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": -388.4,
+   "raw": "(388.4)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "1. NET CASH (USED IN) PROVIDED BY OPERATING ACTIVITIES",
+    "col": "1Q26"
+   },
+   "note": "after income tax and social contribution paid and interest paid"
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q2",
+   "value": -76.1,
+   "raw": "(76.1)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "1. NET CASH (USED IN) PROVIDED BY OPERATING ACTIVITIES",
+    "col": "2Q25"
+   },
+   "note": "after income tax and social contribution paid and interest paid"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 59.0,
+   "raw": "59.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "1. NET CASH (USED IN) PROVIDED BY OPERATING ACTIVITIES",
+    "col": "1H26"
+   },
+   "note": "after income tax and social contribution paid and interest paid"
+  },
+  {
+   "id": "Q8_before_tax_interest",
+   "period": "2026Q2",
+   "value": 513.5,
+   "raw": "513.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "NET CASH (USED IN) GENERATED BY OPERATING ACTIVITIES",
+    "col": "2Q26"
+   },
+   "note": "subtotal before income tax/social contribution paid and interest paid"
+  },
+  {
+   "id": "Q8_before_tax_interest",
+   "period": "2026Q1",
+   "value": -309.1,
+   "raw": "(309.1)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "NET CASH (USED IN) GENERATED BY OPERATING ACTIVITIES",
+    "col": "1Q26"
+   },
+   "note": "subtotal before income tax/social contribution paid and interest paid"
+  },
+  {
+   "id": "Q8_before_tax_interest",
+   "period": "2025Q2",
+   "value": -31.3,
+   "raw": "(31.3)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "NET CASH (USED IN) GENERATED BY OPERATING ACTIVITIES",
+    "col": "2Q25"
+   },
+   "note": "subtotal before income tax/social contribution paid and interest paid"
+  },
+  {
+   "id": "Q8_before_tax_interest",
+   "period": "2026H1",
+   "value": 204.4,
+   "raw": "204.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "NET CASH (USED IN) GENERATED BY OPERATING ACTIVITIES",
+    "col": "1H26"
+   },
+   "note": "subtotal before income tax/social contribution paid and interest paid"
+  },
+  {
+   "id": "Q9_CF_AcquisitionPPE",
+   "period": "2026Q2",
+   "value": -63.2,
+   "raw": "(63.2)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Acquisition of property, plant and equipment",
+    "col": "2Q26"
+   },
+   "note": "cash flow statement row (consolidated incl. Eve)"
+  },
+  {
+   "id": "Q9_CF_AcquisitionPPE",
+   "period": "2026Q1",
+   "value": -76.0,
+   "raw": "(76.0)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Acquisition of property, plant and equipment",
+    "col": "1Q26"
+   },
+   "note": "cash flow statement row (consolidated incl. Eve)"
+  },
+  {
+   "id": "Q9_CF_AcquisitionPPE",
+   "period": "2025Q2",
+   "value": -40.7,
+   "raw": "(40.7)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Acquisition of property, plant and equipment",
+    "col": "2Q25"
+   },
+   "note": "cash flow statement row (consolidated incl. Eve)"
+  },
+  {
+   "id": "Q9_CF_AcquisitionPPE",
+   "period": "2026H1",
+   "value": -139.2,
+   "raw": "(139.2)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Acquisition of property, plant and equipment",
+    "col": "1H26"
+   },
+   "note": "cash flow statement row (consolidated incl. Eve)"
+  },
+  {
+   "id": "Q9_CF_ProceedsPPE",
+   "period": "2026Q2",
+   "value": 3.6,
+   "raw": "3.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Proceeds from sale of property, plant and equipment",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_CF_ProceedsPPE",
+   "period": "2026Q1",
+   "value": 4.3,
+   "raw": "4.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Proceeds from sale of property, plant and equipment",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_CF_ProceedsPPE",
+   "period": "2025Q2",
+   "value": 8.5,
+   "raw": "8.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Proceeds from sale of property, plant and equipment",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_CF_ProceedsPPE",
+   "period": "2026H1",
+   "value": 7.9,
+   "raw": "7.9",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Proceeds from sale of property, plant and equipment",
+    "col": "1H26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_CF_AdditionsIntangible",
+   "period": "2026Q2",
+   "value": -49.5,
+   "raw": "(49.5)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Additions to intangible assets",
+    "col": "2Q26"
+   },
+   "note": "cash flow statement row"
+  },
+  {
+   "id": "Q9_CF_AdditionsIntangible",
+   "period": "2026Q1",
+   "value": -80.0,
+   "raw": "(80.0)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Additions to intangible assets",
+    "col": "1Q26"
+   },
+   "note": "cash flow statement row"
+  },
+  {
+   "id": "Q9_CF_AdditionsIntangible",
+   "period": "2025Q2",
+   "value": -72.5,
+   "raw": "(72.5)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Additions to intangible assets",
+    "col": "2Q25"
+   },
+   "note": "cash flow statement row"
+  },
+  {
+   "id": "Q9_CF_AdditionsIntangible",
+   "period": "2026H1",
+   "value": -129.5,
+   "raw": "(129.5)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_016.jpg",
+    "row": "Additions to intangible assets",
+    "col": "1H26"
+   },
+   "note": "cash flow statement row"
+  },
+  {
+   "id": "Q9_Capex_Embraer_standalone",
+   "period": "2026Q2",
+   "value": 42.4,
+   "raw": "US$42.4 million",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_008.jpg",
+    "row": "Investments text: Capital expenditures amounted to",
+    "col": "2Q26"
+   },
+   "note": "Embraer stand-alone capex (excl. Pool program 18.1, intangibles 23.9, research 36.4); total stand-alone investment 120.8"
+  },
+  {
+   "id": "Q9_Capex_Embraer_standalone",
+   "period": "2025Q2",
+   "value": 52.6,
+   "raw": "US$52.6 million",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_008.jpg",
+    "row": "Investments text: Capital expenditures (a year ago)",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_Capex_Embraer_standalone",
+   "period": "2026Q1",
+   "value": 37.5,
+   "raw": "US$37.5 million",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_008.jpg",
+    "row": "Investments text: Capital expenditures amounted to",
+    "col": "1Q26"
+   },
+   "note": "stand-alone; Pool 14.2, intangibles 36.0, research 11.1; total 98.8"
+  },
+  {
+   "id": "Q9_Capex_Eve",
+   "period": "2026Q2",
+   "value": 1.9,
+   "raw": "US$1.9 million",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_008.jpg",
+    "row": "Investments text: Eve ... capital expenditures",
+    "col": "2Q26"
+   },
+   "note": "Eve total investment 30.2; consolidated Embraer & Eve investment 151.0"
+  },
+  {
+   "id": "Q9_Capex_Eve",
+   "period": "2026Q1",
+   "value": 1.4,
+   "raw": "US$1.4 million",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_008.jpg",
+    "row": "Investments text: Eve ... capital expenditures",
+    "col": "1Q26"
+   },
+   "note": "consolidated investment 148.6"
+  },
+  {
+   "id": "Q9_PPE_Capex_plus_Pool",
+   "period": "2026Q2",
+   "value": 62.4,
+   "raw": "US$62.4 million",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_008.jpg",
+    "row": "*PP&E (Capex + Net add Pool program) footnote",
+    "col": "2Q26"
+   },
+   "note": "cash basis; AFCF uses 59.6 (accrual) 'Net additions to property, plant and equipment'"
+  },
+  {
+   "id": "Q9_AFCF_NetAdditionsPPE",
+   "period": "2026Q2",
+   "value": -59.6,
+   "raw": "(59.6)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Net additions to property, plant and equipment (ADJUSTED FREE CASH FLOW W/O EVE)",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_AFCF_NetAdditionsPPE",
+   "period": "2026Q1",
+   "value": -71.7,
+   "raw": "(71.7)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Net additions to property, plant and equipment (ADJUSTED FREE CASH FLOW W/O EVE)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_AFCF_NetAdditionsPPE",
+   "period": "2025Q2",
+   "value": -32.2,
+   "raw": "(32.2)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Net additions to property, plant and equipment (ADJUSTED FREE CASH FLOW W/O EVE)",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q2",
+   "value": 401.0,
+   "raw": "401.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Adjusted free cash generated (used) w/o Eve",
+    "col": "2Q26"
+   },
+   "note": "Company definition: Adjusted free cash flow = operating cash flow less additions to PP&E, additions to intangible assets, financial investments and other assets (non-IFRS); w/o Eve adds back Eve free cash used. 1H26 = (46.1) per Main Financial Indicators"
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q1",
+   "value": -447.1,
+   "raw": "(447.1)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Adjusted free cash generated (used) w/o Eve",
+    "col": "1Q26"
+   },
+   "note": "Company definition: Adjusted free cash flow = operating cash flow less additions to PP&E, additions to intangible assets, financial investments and other assets (non-IFRS); w/o Eve adds back Eve free cash used. 1H26 = (46.1) per Main Financial Indicators"
+  },
+  {
+   "id": "Q10",
+   "period": "2025Q2",
+   "value": -161.6,
+   "raw": "(161.6)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Adjusted free cash generated (used) w/o Eve",
+    "col": "2Q25"
+   },
+   "note": "Company definition: Adjusted free cash flow = operating cash flow less additions to PP&E, additions to intangible assets, financial investments and other assets (non-IFRS); w/o Eve adds back Eve free cash used. 1H26 = (46.1) per Main Financial Indicators"
+  },
+  {
+   "id": "Q10",
+   "period": "2026H1",
+   "value": -46.1,
+   "raw": "(46.1)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_004.jpg",
+    "row": "Adjusted free cash flow w/o Eve (Main Financial Indicators)",
+    "col": "1H26"
+   },
+   "note": "Company definition: Adjusted free cash flow = operating cash flow less additions to PP&E, additions to intangible assets, financial investments and other assets (non-IFRS); w/o Eve adds back Eve free cash used"
+  },
+  {
+   "id": "Q10_consolidated",
+   "period": "2026Q2",
+   "value": 351.8,
+   "raw": "351.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Adjusted free cash generated (used)",
+    "col": "2Q26"
+   },
+   "note": "consolidated incl. Eve"
+  },
+  {
+   "id": "Q10_consolidated",
+   "period": "2026Q1",
+   "value": -515.7,
+   "raw": "(515.7)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Adjusted free cash generated (used)",
+    "col": "1Q26"
+   },
+   "note": "consolidated incl. Eve"
+  },
+  {
+   "id": "Q10_consolidated",
+   "period": "2025Q2",
+   "value": -218.3,
+   "raw": "(218.3)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_022.jpg",
+    "row": "Adjusted free cash generated (used)",
+    "col": "2Q25"
+   },
+   "note": "consolidated incl. Eve"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 1392.4,
+   "raw": "1,392.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Current - Cash and cash equivalents",
+    "col": "2Q26"
+   },
+   "note": "2Q26 cash flow statement ending cash shows 1,387.3 vs balance sheet 1,392.4 (difference not explained in release)"
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 1315.7,
+   "raw": "1,315.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Current - Cash and cash equivalents",
+    "col": "1Q26"
+   },
+   "note": "2Q26 cash flow statement ending cash shows 1,387.3 vs balance sheet 1,392.4 (difference not explained in release)"
+  },
+  {
+   "id": "B1",
+   "period": "2025-06-30",
+   "value": 654.0,
+   "raw": "654.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Current - Cash and cash equivalents",
+    "col": "2Q25"
+   },
+   "note": "2Q26 cash flow statement ending cash shows 1,387.3 vs balance sheet 1,392.4 (difference not explained in release)"
+  },
+  {
+   "id": "B2_Financial investments (current)",
+   "period": "2026-06-30",
+   "value": 766.3,
+   "raw": "766.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Current - Financial investments",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Financial investments (current)",
+   "period": "2026-03-31",
+   "value": 799.1,
+   "raw": "799.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Current - Financial investments",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Financial investments (current)",
+   "period": "2025-06-30",
+   "value": 603.6,
+   "raw": "603.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Current - Financial investments",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Financial investments (non-current)",
+   "period": "2026-06-30",
+   "value": 181.9,
+   "raw": "181.9",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Non-Current - Financial investments",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Financial investments (non-current)",
+   "period": "2026-03-31",
+   "value": 183.8,
+   "raw": "183.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Non-Current - Financial investments",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Financial investments (non-current)",
+   "period": "2025-06-30",
+   "value": 347.7,
+   "raw": "347.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Non-Current - Financial investments",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Loans and financing (current)",
+   "period": "2026-06-30",
+   "value": 123.8,
+   "raw": "123.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Current - Loans and financing",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Loans and financing (current)",
+   "period": "2026-03-31",
+   "value": 95.5,
+   "raw": "95.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Current - Loans and financing",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Loans and financing (current)",
+   "period": "2025-06-30",
+   "value": 121.8,
+   "raw": "121.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Current - Loans and financing",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Loans and financing (non-current)",
+   "period": "2026-06-30",
+   "value": 2340.4,
+   "raw": "2,340.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Non-Current - Loans and financing",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Loans and financing (non-current)",
+   "period": "2026-03-31",
+   "value": 2594.6,
+   "raw": "2,594.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Non-Current - Loans and financing",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Loans and financing (non-current)",
+   "period": "2025-06-30",
+   "value": 2083.5,
+   "raw": "2,083.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Non-Current - Loans and financing",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "US$ million",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "No single total-borrowings line in the balance sheet; components given in B3_Loans and financing (current/non-current); company-presented gross debt split in B3_Embraer gross debt / B3_Eve gross debt"
+  },
+  {
+   "id": "B3",
+   "period": "2026-03-31",
+   "value": null,
+   "raw": "",
+   "unit": "US$ million",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "No single total-borrowings line in the balance sheet; components given in B3_Loans and financing (current/non-current); company-presented gross debt split in B3_Embraer gross debt / B3_Eve gross debt"
+  },
+  {
+   "id": "B3",
+   "period": "2025-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "US$ million",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "No single total-borrowings line in the balance sheet; components given in B3_Loans and financing (current/non-current); company-presented gross debt split in B3_Embraer gross debt / B3_Eve gross debt"
+  },
+  {
+   "id": "B3_Embraer gross debt",
+   "period": "2026-06-30",
+   "value": 2151.9,
+   "raw": "2,151.9",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer gross debt (Debt & Liability Management)",
+    "col": "2Q26"
+   },
+   "note": "Embraer stand-alone (w/o Eve)"
+  },
+  {
+   "id": "B3_Embraer gross debt",
+   "period": "2026-03-31",
+   "value": 2387.7,
+   "raw": "2,387.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer gross debt (Debt & Liability Management)",
+    "col": "1Q26"
+   },
+   "note": "Embraer stand-alone (w/o Eve)"
+  },
+  {
+   "id": "B3_Embraer gross debt",
+   "period": "2025-06-30",
+   "value": 2049.6,
+   "raw": "2,049.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer gross debt (Debt & Liability Management)",
+    "col": "2Q25"
+   },
+   "note": "Embraer stand-alone (w/o Eve)"
+  },
+  {
+   "id": "B3_Eve gross debt",
+   "period": "2026-06-30",
+   "value": 312.3,
+   "raw": "312.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Eve gross debt",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Eve gross debt",
+   "period": "2026-03-31",
+   "value": 302.4,
+   "raw": "302.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Eve gross debt",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Eve gross debt",
+   "period": "2025-06-30",
+   "value": 155.7,
+   "raw": "155.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Eve gross debt",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Lease liability (current)",
+   "period": "2026-06-30",
+   "value": 25.4,
+   "raw": "25.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Current - Lease liability",
+    "col": "2Q26"
+   },
+   "note": "lease liabilities, kept separate from borrowings"
+  },
+  {
+   "id": "B3_Lease liability (current)",
+   "period": "2026-03-31",
+   "value": 22.0,
+   "raw": "22.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Current - Lease liability",
+    "col": "1Q26"
+   },
+   "note": "lease liabilities, kept separate from borrowings"
+  },
+  {
+   "id": "B3_Lease liability (current)",
+   "period": "2025-06-30",
+   "value": 21.0,
+   "raw": "21.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Current - Lease liability",
+    "col": "2Q25"
+   },
+   "note": "lease liabilities, kept separate from borrowings"
+  },
+  {
+   "id": "B3_Lease liability (non-current)",
+   "period": "2026-06-30",
+   "value": 96.3,
+   "raw": "96.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Non-Current - Lease liability",
+    "col": "2Q26"
+   },
+   "note": "lease liabilities, kept separate"
+  },
+  {
+   "id": "B3_Lease liability (non-current)",
+   "period": "2026-03-31",
+   "value": 95.4,
+   "raw": "95.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Non-Current - Lease liability",
+    "col": "1Q26"
+   },
+   "note": "lease liabilities, kept separate"
+  },
+  {
+   "id": "B3_Lease liability (non-current)",
+   "period": "2025-06-30",
+   "value": 98.0,
+   "raw": "98.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Non-Current - Lease liability",
+    "col": "2Q25"
+   },
+   "note": "lease liabilities, kept separate"
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": -214.5,
+   "raw": "(214.5)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer net cash",
+    "col": "2Q26"
+   },
+   "note": "Company metric 'Net cash w/o Eve' (negative = net debt): cash and cash equivalents + financial investments - short- and long-term loans and financing, less Eve's net cash"
+  },
+  {
+   "id": "B4",
+   "period": "2026-03-31",
+   "value": -530.1,
+   "raw": "(530.1)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer net cash",
+    "col": "1Q26"
+   },
+   "note": "Company metric 'Net cash w/o Eve' (negative = net debt): cash and cash equivalents + financial investments - short- and long-term loans and financing, less Eve's net cash"
+  },
+  {
+   "id": "B4",
+   "period": "2025-06-30",
+   "value": -688.7,
+   "raw": "(688.7)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer net cash",
+    "col": "2Q25"
+   },
+   "note": "Company metric 'Net cash w/o Eve' (negative = net debt): cash and cash equivalents + financial investments - short- and long-term loans and financing, less Eve's net cash"
+  },
+  {
+   "id": "B4_Embraer & Eve net cash",
+   "period": "2026-06-30",
+   "value": -123.6,
+   "raw": "(123.6)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer & Eve net cash**",
+    "col": "2Q26"
+   },
+   "note": "cash and cash equivalents + financial investments (ST & LT) - loans (ST & LT); negative = net debt"
+  },
+  {
+   "id": "B4_Embraer & Eve net cash",
+   "period": "2026-03-31",
+   "value": -391.5,
+   "raw": "(391.5)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer & Eve net cash**",
+    "col": "1Q26"
+   },
+   "note": "cash and cash equivalents + financial investments (ST & LT) - loans (ST & LT); negative = net debt"
+  },
+  {
+   "id": "B4_Embraer & Eve net cash",
+   "period": "2025-06-30",
+   "value": -600.0,
+   "raw": "(600.0)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_011.jpg",
+    "row": "Embraer & Eve net cash**",
+    "col": "2Q25"
+   },
+   "note": "cash and cash equivalents + financial investments (ST & LT) - loans (ST & LT); negative = net debt"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 13237.4,
+   "raw": "13,237.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Total Assets",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 12958.6,
+   "raw": "12,958.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Total Assets",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5",
+   "period": "2025-06-30",
+   "value": 12073.5,
+   "raw": "12,073.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_018.jpg",
+    "row": "Total Assets",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 3459.1,
+   "raw": "3,459.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Equity Attributable to owners of the Company",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "period": "2026-03-31",
+   "value": 3293.2,
+   "raw": "3,293.2",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Equity Attributable to owners of the Company",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "period": "2025-06-30",
+   "value": 3333.5,
+   "raw": "3,333.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_019.jpg",
+    "row": "Equity Attributable to owners of the Company",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "Outstanding shares ex-treasury not disclosed in releases. Only weighted average basic shares: 715.8 (2Q26), 719.7 (1Q26), 734.0 (2Q25), header says '(in thousands)' though EPS implies millions. Single class: common shares (EMBJ3)"
+  },
+  {
+   "id": "S2",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "common shares per ADS",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "ADS ratio not stated in releases (EPS per ADS vs per share implies 4x, but not stated - not filled)"
+  },
+  {
+   "id": "R1",
+   "period": "2026Q2",
+   "value": 200.0,
+   "raw": "200.0",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_013.jpg",
+    "row": "2Q26 IoE (approval June 18, 2026; record June 23, 2026; payment May 24, 2027)",
+    "col": "Gross Amount Declared (R$ million)"
+   },
+   "note": "Interest on Equity (IoE); kept in R$ (no conversion rate in source)"
+  },
+  {
+   "id": "R1_per_share",
+   "period": "2026Q2",
+   "value": 0.28,
+   "raw": "0.28",
+   "unit": "R$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_013.jpg",
+    "row": "2Q26 IoE",
+    "col": "Gross Value per Share (R$)"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_per_ADS",
+   "period": "2026Q2",
+   "value": 0.22,
+   "raw": "0.22",
+   "unit": "US$ per ADS",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_013.jpg",
+    "row": "2Q26 IoE",
+    "col": "Gross Value per ADS (US$)"
+   },
+   "note": "estimated values, dependent on spot FX"
+  },
+  {
+   "id": "R1_FY25_Dividends",
+   "period": "2026Q2",
+   "value": 7.6,
+   "raw": "7.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_013.jpg",
+    "row": "FY25 Dividends (approval Apr 29, 2026; record May 11, 2026; payment May 20, 2026)",
+    "col": "Gross Amount Declared (R$ million)"
+   },
+   "note": "Approved within 2Q26 but relates to fiscal year 2025; R$0.01 per share, US$0.01 per ADS. Listed in 1Q26 release, not in 2Q26 release table"
+  },
+  {
+   "id": "R1",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "R$ million",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_013.jpg",
+    "row": "Shareholder Remuneration table",
+    "col": "Approval date"
+   },
+   "note": "No declaration with approval date in Jan-Mar 2026 shown in 1Q26 release table"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q2",
+   "value": 0.0,
+   "raw": "-",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_017.jpg",
+    "row": "Repurchases of common shares",
+    "col": "2Q26"
+   },
+   "note": "cash flow statement; '-' = nil. Treasury shares on balance sheet: (398.7) at 2026-06-30 and 2026-03-31, (42.7) at 2025-06-30"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q1",
+   "value": -183.7,
+   "raw": "(183.7)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_017.jpg",
+    "row": "Repurchases of common shares",
+    "col": "1Q26"
+   },
+   "note": "cash flow statement; '-' = nil. Treasury shares on balance sheet: (398.7) at 2026-06-30 and 2026-03-31, (42.7) at 2025-06-30"
+  },
+  {
+   "id": "R2",
+   "period": "2025Q2",
+   "value": 0.0,
+   "raw": "-",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_017.jpg",
+    "row": "Repurchases of common shares",
+    "col": "2Q25"
+   },
+   "note": "cash flow statement; '-' = nil. Treasury shares on balance sheet: (398.7) at 2026-06-30 and 2026-03-31, (42.7) at 2025-06-30"
+  },
+  {
+   "id": "R2",
+   "period": "2026H1",
+   "value": -183.7,
+   "raw": "(183.7)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_017.jpg",
+    "row": "Repurchases of common shares",
+    "col": "1H26"
+   },
+   "note": "cash flow statement; '-' = nil. Treasury shares on balance sheet: (398.7) at 2026-06-30 and 2026-03-31, (42.7) at 2025-06-30"
+  },
+  {
+   "id": "OP_Deliveries_Commercial Aviation",
+   "period": "2026Q2",
+   "value": 20,
+   "raw": "10 E2 + 10 E1",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Commercial Aviation deliveries chart / text",
+    "col": "2Q26"
+   },
+   "note": "chart stacks read with labels; 10 E2 + 10 E1"
+  },
+  {
+   "id": "OP_Deliveries_Commercial Aviation",
+   "period": "2026Q1",
+   "value": 10,
+   "raw": "4 E2 + 6 E1",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Commercial Aviation deliveries chart / text",
+    "col": "1Q26"
+   },
+   "note": "chart stacks read with labels; 4 E2 + 6 E1 (1Q26 release chart colors swapped vs text; text '4 E2s and 6 E1s' used)"
+  },
+  {
+   "id": "OP_Deliveries_Commercial Aviation",
+   "period": "2025Q2",
+   "value": 19,
+   "raw": "10 E2 + 9 E1",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Commercial Aviation deliveries chart / text",
+    "col": "2Q25"
+   },
+   "note": "chart stacks read with labels; 10 E2 + 9 E1"
+  },
+  {
+   "id": "OP_Deliveries_Executive Aviation",
+   "period": "2026Q2",
+   "value": 45,
+   "raw": "24 small + 21 medium",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Executive Aviation deliveries chart / text",
+    "col": "2Q26"
+   },
+   "note": "chart stacks read with labels; 24 small + 21 medium"
+  },
+  {
+   "id": "OP_Deliveries_Executive Aviation",
+   "period": "2026Q1",
+   "value": 29,
+   "raw": "16 small + 13 medium",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Executive Aviation deliveries chart / text",
+    "col": "1Q26"
+   },
+   "note": "chart stacks read with labels; 16 small + 13 medium"
+  },
+  {
+   "id": "OP_Deliveries_Executive Aviation",
+   "period": "2025Q2",
+   "value": 38,
+   "raw": "21 small + 17 medium",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Executive Aviation deliveries chart / text",
+    "col": "2Q25"
+   },
+   "note": "chart stacks read with labels; 21 small + 17 medium"
+  },
+  {
+   "id": "OP_Deliveries_Defense & Security",
+   "period": "2026Q2",
+   "value": 0,
+   "raw": "no deliveries",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Defense & Security deliveries chart / text",
+    "col": "2Q26"
+   },
+   "note": "chart stacks read with labels; no deliveries"
+  },
+  {
+   "id": "OP_Deliveries_Defense & Security",
+   "period": "2026Q1",
+   "value": 5,
+   "raw": "1 KC-390 + 4 A-29",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Defense & Security deliveries chart / text",
+    "col": "1Q26"
+   },
+   "note": "chart stacks read with labels; 1 KC-390 + 4 A-29"
+  },
+  {
+   "id": "OP_Deliveries_Defense & Security",
+   "period": "2025Q2",
+   "value": 4,
+   "raw": "4 A-29",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Defense & Security deliveries chart / text",
+    "col": "2Q25"
+   },
+   "note": "chart stacks read with labels; 4 A-29"
+  },
+  {
+   "id": "OP_Deliveries_Total",
+   "period": "2026Q2",
+   "value": 65,
+   "raw": "65",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Deliveries and Backlog text: Embraer delivered",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Deliveries_Total",
+   "period": "2026Q1",
+   "value": 44,
+   "raw": "44",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_005.jpg",
+    "row": "Deliveries and Backlog text: Embraer delivered",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Deliveries_Total",
+   "period": "2025Q2",
+   "value": 61,
+   "raw": "61",
+   "unit": "aircraft",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Deliveries and Backlog text: Embraer delivered",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Backlog_Total",
+   "period": "2026-06-30",
+   "value": 34500.0,
+   "raw": "34.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Total",
+    "col": "2Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Total",
+   "period": "2026-03-31",
+   "value": 32100.0,
+   "raw": "32.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Total",
+    "col": "1Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Total",
+   "period": "2025-06-30",
+   "value": 29700.0,
+   "raw": "29.7",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Total",
+    "col": "2Q25"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Commercial Aviation",
+   "period": "2026-06-30",
+   "value": 15100.0,
+   "raw": "15.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Commercial Aviation",
+    "col": "2Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Commercial Aviation",
+   "period": "2026-03-31",
+   "value": 15000.0,
+   "raw": "15.0",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Commercial Aviation",
+    "col": "1Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Commercial Aviation",
+   "period": "2025-06-30",
+   "value": 13100.0,
+   "raw": "13.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Commercial Aviation",
+    "col": "2Q25"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Executive Aviation",
+   "period": "2026-06-30",
+   "value": 7800.0,
+   "raw": "7.8",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Executive Aviation",
+    "col": "2Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Executive Aviation",
+   "period": "2026-03-31",
+   "value": 7600.0,
+   "raw": "7.6",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Executive Aviation",
+    "col": "1Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Executive Aviation",
+   "period": "2025-06-30",
+   "value": 7400.0,
+   "raw": "7.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Executive Aviation",
+    "col": "2Q25"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Defense & Security",
+   "period": "2026-06-30",
+   "value": 6100.0,
+   "raw": "6.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Defense & Security",
+    "col": "2Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Defense & Security",
+   "period": "2026-03-31",
+   "value": 4400.0,
+   "raw": "4.4",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Defense & Security",
+    "col": "1Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Defense & Security",
+   "period": "2025-06-30",
+   "value": 4300.0,
+   "raw": "4.3",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Defense & Security",
+    "col": "2Q25"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Services & Support",
+   "period": "2026-06-30",
+   "value": 5500.0,
+   "raw": "5.5",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Services & Support",
+    "col": "2Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Services & Support",
+   "period": "2026-03-31",
+   "value": 5100.0,
+   "raw": "5.1",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Services & Support",
+    "col": "1Q26"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "OP_Backlog_Services & Support",
+   "period": "2025-06-30",
+   "value": 4900.0,
+   "raw": "4.9",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_005.jpg",
+    "row": "Backlog chart (US$ billion) - Services & Support",
+    "col": "2Q25"
+   },
+   "note": "converted from US$ billion; segment colors checked against yoy % in text (+15% CA, +5% EA, +42% D&S, +12% S&S)"
+  },
+  {
+   "id": "X1",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "IFRS; US$",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004151/embjpr2q26_6k1.htm",
+    "page": "0001292814-26-004151/image_004.jpg",
+    "row": "intro paragraph",
+    "col": ""
+   },
+   "note": "'presented ... on a consolidated basis in United States dollars (US$) and in accordance with IFRS'; unaudited"
+  },
+  {
+   "id": "X1",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "IFRS; US$",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002893/embjpr1q26_6k.htm",
+    "page": "0001292814-26-002893/image_004.jpg",
+    "row": "intro paragraph",
+    "col": ""
+   },
+   "note": "1Q26 release: same basis (IFRS, US$, unaudited)"
+  }
+ ]
+}

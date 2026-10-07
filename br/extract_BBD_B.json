@@ -1,0 +1,2016 @@
+{
+ "ticker": "BBD",
+ "currency": "BRL (R$)",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 7139.847,
+   "raw": "7,139,847",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net income — Attributable to shareholders: Shareholders of the parent",
+    "col": "Three-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). IFRS 지배주주 귀속 순이익. 2026Q1 3개월 IFRS 수치는 이 문서에 없음."
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 6066.721,
+   "raw": "6,066,721",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net income — Attributable to shareholders: Shareholders of the parent",
+    "col": "Three-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). IFRS 지배주주 귀속 순이익. 2026Q1 3개월 IFRS 수치는 이 문서에 없음."
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 12317.787,
+   "raw": "12,317,787",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net income — Attributable to shareholders: Shareholders of the parent",
+    "col": "Six-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). IFRS 지배주주 귀속 순이익. 2026Q1 3개월 IFRS 수치는 이 문서에 없음."
+  },
+  {
+   "id": "Q1",
+   "period": "2025H1",
+   "value": 11671.55,
+   "raw": "11,671,550",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net income — Attributable to shareholders: Shareholders of the parent",
+    "col": "Six-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). IFRS 지배주주 귀속 순이익. 2026Q1 3개월 IFRS 수치는 이 문서에 없음."
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "R$ million",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Shareholders of the parent",
+    "col": "-"
+   },
+   "note": "IFRS 분기(1Q26) 수치는 제공된 문서에 없음. BR GAAP Book Net Income은 Q1_BookNetIncome_BRGAAP 참조."
+  },
+  {
+   "id": "Q1_BookNetIncome_BRGAAP",
+   "period": "2026Q2",
+   "value": 7050,
+   "raw": "7,050",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Book Net Income",
+    "col": "2Q26"
+   },
+   "note": "관리회계 보도자료의 회계(장부) 순이익. 1H26 12,080은 IFRS 주석 25d의 'Adjusted net income ... accounting practices adopted in Brazil 12,080,064'(R$ thousand)와 일치 → BR GAAP 기준."
+  },
+  {
+   "id": "Q1_BookNetIncome_BRGAAP",
+   "period": "2026Q1",
+   "value": 5030,
+   "raw": "5,030",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Book Net Income",
+    "col": "1Q26"
+   },
+   "note": "관리회계 보도자료의 회계(장부) 순이익. 1H26 12,080은 IFRS 주석 25d의 'Adjusted net income ... accounting practices adopted in Brazil 12,080,064'(R$ thousand)와 일치 → BR GAAP 기준."
+  },
+  {
+   "id": "Q1_BookNetIncome_BRGAAP",
+   "period": "2025Q2",
+   "value": 6067,
+   "raw": "6,067",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Book Net Income",
+    "col": "2Q25"
+   },
+   "note": "관리회계 보도자료의 회계(장부) 순이익. 1H26 12,080은 IFRS 주석 25d의 'Adjusted net income ... accounting practices adopted in Brazil 12,080,064'(R$ thousand)와 일치 → BR GAAP 기준."
+  },
+  {
+   "id": "Q1_BookNetIncome_BRGAAP",
+   "period": "2026H1",
+   "value": 12080,
+   "raw": "12,080",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Book Net Income",
+    "col": "1H26"
+   },
+   "note": "관리회계 보도자료의 회계(장부) 순이익. 1H26 12,080은 IFRS 주석 25d의 'Adjusted net income ... accounting practices adopted in Brazil 12,080,064'(R$ thousand)와 일치 → BR GAAP 기준."
+  },
+  {
+   "id": "Q1_BookNetIncome_BRGAAP",
+   "period": "2025H1",
+   "value": 11869,
+   "raw": "11,869",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Book Net Income",
+    "col": "1H25"
+   },
+   "note": "관리회계 보도자료의 회계(장부) 순이익. 1H26 12,080은 IFRS 주석 25d의 'Adjusted net income ... accounting practices adopted in Brazil 12,080,064'(R$ thousand)와 일치 → BR GAAP 기준."
+  },
+  {
+   "id": "Q2",
+   "period": "2026Q2",
+   "value": 7050,
+   "raw": "7,050",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Recurring Net Income",
+    "col": "2Q26"
+   },
+   "note": "회사 명칭 'Recurring Net Income'(Recurring Net Income Statement, 관리회계). Book Net Income과의 차이 = Non-Recurring Events(1Q26: PTI Adherence / Tax Provisions (1,781); 2Q26: 없음 '-')."
+  },
+  {
+   "id": "Q2",
+   "period": "2026Q1",
+   "value": 6811,
+   "raw": "6,811",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Recurring Net Income",
+    "col": "1Q26"
+   },
+   "note": "회사 명칭 'Recurring Net Income'(Recurring Net Income Statement, 관리회계). Book Net Income과의 차이 = Non-Recurring Events(1Q26: PTI Adherence / Tax Provisions (1,781); 2Q26: 없음 '-')."
+  },
+  {
+   "id": "Q2",
+   "period": "2025Q2",
+   "value": 6067,
+   "raw": "6,067",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Recurring Net Income",
+    "col": "2Q25"
+   },
+   "note": "회사 명칭 'Recurring Net Income'(Recurring Net Income Statement, 관리회계). Book Net Income과의 차이 = Non-Recurring Events(1Q26: PTI Adherence / Tax Provisions (1,781); 2Q26: 없음 '-')."
+  },
+  {
+   "id": "Q2",
+   "period": "2026H1",
+   "value": 13861,
+   "raw": "13,861",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Recurring Net Income",
+    "col": "1H26"
+   },
+   "note": "회사 명칭 'Recurring Net Income'(Recurring Net Income Statement, 관리회계). Book Net Income과의 차이 = Non-Recurring Events(1Q26: PTI Adherence / Tax Provisions (1,781); 2Q26: 없음 '-')."
+  },
+  {
+   "id": "Q2",
+   "period": "2025H1",
+   "value": 11931,
+   "raw": "11,931",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Recurring Net Income",
+    "col": "1H25"
+   },
+   "note": "회사 명칭 'Recurring Net Income'(Recurring Net Income Statement, 관리회계). Book Net Income과의 차이 = Non-Recurring Events(1Q26: PTI Adherence / Tax Provisions (1,781); 2Q26: 없음 '-')."
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 16.2,
+   "raw": "16.2%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "Highlights 2Q26 — ROAE",
+    "col": "2Q26"
+   },
+   "note": "회사 명칭 'ROAE'(Consolidated Recurring Net Income 옆 표기). 'annualized' 문구는 없으나 분기 ROAE 관례상 연율 지표로 판단—연율 여부 명시 없음. image_003 차트 'ROAE Quarterly' 2Q 16.2와 일치."
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 15.8,
+   "raw": "15.8",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "ROAE Quarterly and Year-to-Date — Quarterly (회색 실선)",
+    "col": "1Q26"
+   },
+   "note": "차트 라벨 판독. 1Q26은 Quarterly·YTD 모두 15.8."
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 14.6,
+   "raw": "14.6",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "ROAE Quarterly and Year-to-Date — Quarterly",
+    "col": "2Q25"
+   },
+   "note": "차트 라벨 판독."
+  },
+  {
+   "id": "Q3",
+   "period": "2026H1",
+   "value": 16.0,
+   "raw": "16.0",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "ROAE Quarterly and Year-to-Date — Year-to-Date (빨간 실선)",
+    "col": "2Q"
+   },
+   "note": "연초 누적(YTD) ROAE, 차트 라벨."
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 20872,
+   "raw": "20,872",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Net Interest Income",
+    "col": "2Q26"
+   },
+   "note": "회사 명칭 'Net Interest Income'(관리회계, Client NII + Market NII). image_004 NII 표와 동일."
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q1",
+   "value": 20051,
+   "raw": "20,051",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Net Interest Income",
+    "col": "1Q26"
+   },
+   "note": "회사 명칭 'Net Interest Income'(관리회계, Client NII + Market NII). image_004 NII 표와 동일."
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 18044,
+   "raw": "18,044",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Net Interest Income",
+    "col": "2Q25"
+   },
+   "note": "회사 명칭 'Net Interest Income'(관리회계, Client NII + Market NII). image_004 NII 표와 동일."
+  },
+  {
+   "id": "Q4",
+   "period": "2026H1",
+   "value": 40923,
+   "raw": "40,923",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Net Interest Income",
+    "col": "1H26"
+   },
+   "note": "회사 명칭 'Net Interest Income'(관리회계, Client NII + Market NII). image_004 NII 표와 동일."
+  },
+  {
+   "id": "Q4",
+   "period": "2025H1",
+   "value": 35277,
+   "raw": "35,277",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "\\\\ Net Interest Income",
+    "col": "1H25"
+   },
+   "note": "회사 명칭 'Net Interest Income'(관리회계, Client NII + Market NII). image_004 NII 표와 동일."
+  },
+  {
+   "id": "Q4_ClientNII",
+   "period": "2026Q2",
+   "value": 20199,
+   "raw": "20,199",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Client NII",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4_ClientNII",
+   "period": "2026Q1",
+   "value": 19498,
+   "raw": "19,498",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Client NII",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4_ClientNII",
+   "period": "2025Q2",
+   "value": 17756,
+   "raw": "17,756",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Client NII",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4_MarketNII",
+   "period": "2026Q2",
+   "value": 673,
+   "raw": "673",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Market NII",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4_MarketNII",
+   "period": "2026Q1",
+   "value": 553,
+   "raw": "553",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Market NII",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4_MarketNII",
+   "period": "2025Q2",
+   "value": 288,
+   "raw": "288",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Market NII",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4_IFRS",
+   "period": "2026Q2",
+   "value": 20367.167,
+   "raw": "20,367,167",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net interest income (Consolidated Statements of Income)",
+    "col": "Three-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). "
+  },
+  {
+   "id": "Q4_IFRS",
+   "period": "2025Q2",
+   "value": 16508.667,
+   "raw": "16,508,667",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net interest income (Consolidated Statements of Income)",
+    "col": "Three-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). "
+  },
+  {
+   "id": "Q4_IFRS",
+   "period": "2026H1",
+   "value": 37700.845,
+   "raw": "37,700,845",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net interest income (Consolidated Statements of Income)",
+    "col": "Six-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). "
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 10486,
+   "raw": "10,486",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_011.jpg",
+    "page": "image_011.jpg",
+    "row": "\\\\ Total (Fee and Commission Income)",
+    "col": "2Q26"
+   },
+   "note": "관리회계 'Fee and Commission Income'."
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 10373,
+   "raw": "10,373",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_011.jpg",
+    "page": "image_011.jpg",
+    "row": "\\\\ Total (Fee and Commission Income)",
+    "col": "1Q26"
+   },
+   "note": "관리회계 'Fee and Commission Income'."
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 10307,
+   "raw": "10,307",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_011.jpg",
+    "page": "image_011.jpg",
+    "row": "\\\\ Total (Fee and Commission Income)",
+    "col": "2Q25"
+   },
+   "note": "관리회계 'Fee and Commission Income'."
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 20859,
+   "raw": "20,859",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_011.jpg",
+    "page": "image_011.jpg",
+    "row": "\\\\ Total (Fee and Commission Income)",
+    "col": "1H26"
+   },
+   "note": "관리회계 'Fee and Commission Income'."
+  },
+  {
+   "id": "Q5_IFRS",
+   "period": "2026Q2",
+   "value": 7909.268,
+   "raw": "7,909,268",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net fee and commission income",
+    "col": "Three-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). "
+  },
+  {
+   "id": "Q5_IFRS",
+   "period": "2025Q2",
+   "value": 7732.524,
+   "raw": "7,732,524",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net fee and commission income",
+    "col": "Three-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). "
+  },
+  {
+   "id": "Q5_IFRS",
+   "period": "2026H1",
+   "value": 15789.954,
+   "raw": "15,789,954",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Net fee and commission income",
+    "col": "Six-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). "
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": -9985,
+   "raw": "(9,985)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "\\\\ Expenses with Expanded Loan Loss Provisions",
+    "col": "2Q26"
+   },
+   "note": "회사 명칭 그대로. = Provision Expense with Expected Losses + Income from Recovering Written Off Loans Net of Discounts Granted."
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": -9667,
+   "raw": "(9,667)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "\\\\ Expenses with Expanded Loan Loss Provisions",
+    "col": "1Q26"
+   },
+   "note": "회사 명칭 그대로. = Provision Expense with Expected Losses + Income from Recovering Written Off Loans Net of Discounts Granted."
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": -8142,
+   "raw": "(8,142)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "\\\\ Expenses with Expanded Loan Loss Provisions",
+    "col": "2Q25"
+   },
+   "note": "회사 명칭 그대로. = Provision Expense with Expected Losses + Income from Recovering Written Off Loans Net of Discounts Granted."
+  },
+  {
+   "id": "Q6",
+   "period": "2026H1",
+   "value": -19652,
+   "raw": "(19,652)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "\\\\ Expenses with Expanded Loan Loss Provisions",
+    "col": "1H26"
+   },
+   "note": "회사 명칭 그대로. = Provision Expense with Expected Losses + Income from Recovering Written Off Loans Net of Discounts Granted."
+  },
+  {
+   "id": "Q6_ProvisionExpenseExpectedLosses",
+   "period": "2026Q2",
+   "value": -10851,
+   "raw": "(10,851)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Provision Expense with Expected Losses",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_ProvisionExpenseExpectedLosses",
+   "period": "2026Q1",
+   "value": -10503,
+   "raw": "(10,503)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Provision Expense with Expected Losses",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_ProvisionExpenseExpectedLosses",
+   "period": "2025Q2",
+   "value": -8937,
+   "raw": "(8,937)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_008.jpg",
+    "page": "image_008.jpg",
+    "row": "Provision Expense with Expected Losses",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_IFRS",
+   "period": "2026Q2",
+   "value": -8190.775,
+   "raw": "(8,190,775)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Expected credit losses on loans and advances",
+    "col": "Three-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 기타 금융자산 ECL 별도 행 있음."
+  },
+  {
+   "id": "Q6_IFRS",
+   "period": "2025Q2",
+   "value": -7692.957,
+   "raw": "(7,692,957)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Expected credit losses on loans and advances",
+    "col": "Three-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 기타 금융자산 ECL 별도 행 있음."
+  },
+  {
+   "id": "Q6_IFRS",
+   "period": "2026H1",
+   "value": -15776.105,
+   "raw": "(15,776,105)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Expected credit losses on loans and advances",
+    "col": "Six-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 기타 금융자산 ECL 별도 행 있음."
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 46.5,
+   "raw": "46.5",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Operating Efficiency Ratio / Risk – Adjusted ER — Quarterly (막대)",
+    "col": "2Q"
+   },
+   "note": "회사 명칭 'Operating Efficiency Ratio'(분기). image_002 하이라이트 46.5%, ▽0.4p.p. q/q, ▽3.4p.p. y/y와 일치."
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 46.9,
+   "raw": "46.9",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Operating Efficiency Ratio / Risk – Adjusted ER — Quarterly (막대)",
+    "col": "1Q26"
+   },
+   "note": "회사 명칭 'Operating Efficiency Ratio'(분기). image_002 하이라이트 46.5%, ▽0.4p.p. q/q, ▽3.4p.p. y/y와 일치."
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q2",
+   "value": 49.9,
+   "raw": "49.9",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Operating Efficiency Ratio / Risk – Adjusted ER — Quarterly (막대)",
+    "col": "2Q25"
+   },
+   "note": "회사 명칭 'Operating Efficiency Ratio'(분기). image_002 하이라이트 46.5%, ▽0.4p.p. q/q, ▽3.4p.p. y/y와 일치."
+  },
+  {
+   "id": "Q7_12month",
+   "period": "2026Q2",
+   "value": 48.4,
+   "raw": "48.4",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Operating Efficiency Ratio — 12-month (점선)",
+    "col": "2Q"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_12month",
+   "period": "2026Q1",
+   "value": 49.2,
+   "raw": "49.2",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Operating Efficiency Ratio — 12-month (점선)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_12month",
+   "period": "2025Q2",
+   "value": 51.2,
+   "raw": "51.2",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Operating Efficiency Ratio — 12-month (점선)",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_12month_risk_adjusted",
+   "period": "2026Q2",
+   "value": 75.5,
+   "raw": "75.5",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Risk-Adjusted ER — 12-month risk-adjusted (회색 실선)",
+    "col": "2Q"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_12month_risk_adjusted",
+   "period": "2026Q1",
+   "value": 75.7,
+   "raw": "75.7",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Risk-Adjusted ER — 12-month risk-adjusted (회색 실선)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q7_12month_risk_adjusted",
+   "period": "2025Q2",
+   "value": 76.1,
+   "raw": "76.1",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Risk-Adjusted ER — 12-month risk-adjusted (회색 실선)",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q8_common",
+   "period": "2026Q2",
+   "value": 0.64,
+   "raw": "0.64",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – Earnings per common share",
+    "col": "Three-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). IFRS 기본 EPS(희석 동일)."
+  },
+  {
+   "id": "Q8_preferred",
+   "period": "2026Q2",
+   "value": 0.71,
+   "raw": "0.71",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – Earnings per preferred share (non-subordinated)",
+    "col": "Three-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). IFRS 기본 EPS."
+  },
+  {
+   "id": "Q8_common",
+   "period": "2025Q2",
+   "value": 0.55,
+   "raw": "0.55",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – Earnings per common share",
+    "col": "Three-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). IFRS 기본 EPS(희석 동일)."
+  },
+  {
+   "id": "Q8_preferred",
+   "period": "2025Q2",
+   "value": 0.6,
+   "raw": "0.60",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – Earnings per preferred share (non-subordinated)",
+    "col": "Three-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). IFRS 기본 EPS."
+  },
+  {
+   "id": "Q8_common",
+   "period": "2026H1",
+   "value": 1.11,
+   "raw": "1.11",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – Earnings per common share",
+    "col": "Six-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). IFRS 기본 EPS(희석 동일)."
+  },
+  {
+   "id": "Q8_preferred",
+   "period": "2026H1",
+   "value": 1.22,
+   "raw": "1.22",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – Earnings per preferred share (non-subordinated)",
+    "col": "Six-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). IFRS 기본 EPS."
+  },
+  {
+   "id": "Q8_common",
+   "period": "2025H1",
+   "value": 1.05,
+   "raw": "1.05",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – Earnings per common share",
+    "col": "Six-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). IFRS 기본 EPS(희석 동일)."
+  },
+  {
+   "id": "Q8_preferred",
+   "period": "2025H1",
+   "value": 1.16,
+   "raw": "1.16",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – Earnings per preferred share (non-subordinated)",
+    "col": "Six-month period ended June 30 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). IFRS 기본 EPS."
+  },
+  {
+   "id": "Q8_common",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "",
+   "unit": "R$/share",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "-",
+    "col": "-"
+   },
+   "note": "1Q26 EPS는 제공 문서에서 확인되지 않음."
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 1136640,
+   "raw": "1,136,640",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Expanded Loan Portfolio",
+    "col": "June26"
+   },
+   "note": "회사 정의 'Expanded Loan Portfolio'(보증·보증보험 Sureties and Guarantees, 증권 등 포함)."
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 1089896,
+   "raw": "1,089,896",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Expanded Loan Portfolio",
+    "col": "Mar26"
+   },
+   "note": "회사 정의 'Expanded Loan Portfolio'(보증·보증보험 Sureties and Guarantees, 증권 등 포함)."
+  },
+  {
+   "id": "B1",
+   "period": "2025-06-30",
+   "value": 1018426,
+   "raw": "1,018,426",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Expanded Loan Portfolio",
+    "col": "June25"
+   },
+   "note": "회사 정의 'Expanded Loan Portfolio'(보증·보증보험 Sureties and Guarantees, 증권 등 포함)."
+  },
+  {
+   "id": "B1_Individuals",
+   "period": "2026-06-30",
+   "value": 479710,
+   "raw": "479,710",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Individuals",
+    "col": "June26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_Individuals",
+   "period": "2026-03-31",
+   "value": 473989,
+   "raw": "473,989",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Individuals",
+    "col": "Mar26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_Individuals",
+   "period": "2025-06-30",
+   "value": 442446,
+   "raw": "442,446",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Individuals",
+    "col": "June25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_Companies",
+   "period": "2026-06-30",
+   "value": 656930,
+   "raw": "656,930",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Companies",
+    "col": "June26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_Companies",
+   "period": "2026-03-31",
+   "value": 615907,
+   "raw": "615,907",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Companies",
+    "col": "Mar26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_Companies",
+   "period": "2025-06-30",
+   "value": 575981,
+   "raw": "575,981",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "\\\\ Companies",
+    "col": "June25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_LoanPortfolio_stage",
+   "period": "2026-06-30",
+   "value": 833507,
+   "raw": "833,507",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Changes in Loan Portfolio by Stage — \\\\ Total",
+    "col": "June26"
+   },
+   "note": "Stage 1~3 'Loan Portfolio' 총계(확장 포트폴리오 아님)."
+  },
+  {
+   "id": "B1_LoanPortfolio_stage",
+   "period": "2026-03-31",
+   "value": 813112,
+   "raw": "813,112",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Changes in Loan Portfolio by Stage — \\\\ Total",
+    "col": "Mar26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1_IFRS",
+   "period": "2026-06-30",
+   "value": 820566.941,
+   "raw": "820,566,941",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 11a Loans and advances to customers — Total portfolio",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 충당금 차감 전 총액. 순액 774,065,819."
+  },
+  {
+   "id": "B1_IFRS",
+   "period": "2025-12-31",
+   "value": 791468.154,
+   "raw": "791,468,154",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 11a — Total portfolio",
+    "col": "On December 31, 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). "
+  },
+  {
+   "id": "B2",
+   "period": "2026-06-30",
+   "value": 4.3,
+   "raw": "4.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Delinquency Ratios — Over 90 days ratio",
+    "col": "June"
+   },
+   "note": "차트 'Loan Portfolio Overdue more than 90 days' Total 선 June 4.3과 일치; ▲0.1p.p. q/q, ▲0.2p.p. y/y."
+  },
+  {
+   "id": "B2",
+   "period": "2026-03-31",
+   "value": 4.2,
+   "raw": "4.2",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Loan Portfolio Overdue more than 90 days — Total (빨간 실선)",
+    "col": "Mar26"
+   },
+   "note": "차트 라벨 판독."
+  },
+  {
+   "id": "B2",
+   "period": "2025-06-30",
+   "value": 4.1,
+   "raw": "4.1",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Loan Portfolio Overdue more than 90 days — Total (빨간 실선)",
+    "col": "June25"
+   },
+   "note": "차트 라벨 판독(June25 라벨 중 Individuals 5.1, MSMEs 4.3과 구분)."
+  },
+  {
+   "id": "B3",
+   "period": "2026-06-30",
+   "value": 2468826.55,
+   "raw": "2,468,826,550",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Total assets (Consolidated Statements of Financial Position)",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). IFRS 기준."
+  },
+  {
+   "id": "B3",
+   "period": "2025-12-31",
+   "value": 2330327.216,
+   "raw": "2,330,327,216",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Total assets (Consolidated Statements of Financial Position)",
+    "col": "On December 31, 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). IFRS 기준."
+  },
+  {
+   "id": "B3",
+   "period": "2026-03-31",
+   "value": null,
+   "raw": "",
+   "unit": "R$ million",
+   "status": "null",
+   "source": {
+    "file": "-",
+    "page": "",
+    "row": "-",
+    "col": "-"
+   },
+   "note": "1Q26 말 총자산은 제공 문서(2Q 보도자료·IFRS)에 없음."
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": 181281.46,
+   "raw": "181,281,460",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to controlling shareholders of the parent",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). IFRS. 비지배지분 별도(Jun26 1,455,131)."
+  },
+  {
+   "id": "B4",
+   "period": "2025-12-31",
+   "value": 178415.153,
+   "raw": "178,415,153",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to controlling shareholders of the parent",
+    "col": "On December 31, 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). IFRS. 비지배지분 별도(Jun26 1,455,131)."
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 11.3,
+   "raw": "11.3%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Basel III Prudential Conglomerate — Common Equity (Tier I Capital 하위)",
+    "col": "June26"
+   },
+   "note": "Prudential Conglomerate 기준. Jun26 Tier I 12.8%, Total 15.5%."
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 10.2,
+   "raw": "10.2%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Basel III Prudential Conglomerate — Common Equity (Tier I Capital 하위)",
+    "col": "Mar26"
+   },
+   "note": "Prudential Conglomerate 기준. Jun26 Tier I 12.8%, Total 15.5%."
+  },
+  {
+   "id": "B5",
+   "period": "2025-06-30",
+   "value": 11.1,
+   "raw": "11.1%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Basel III Prudential Conglomerate — Common Equity (Tier I Capital 하위)",
+    "col": "June25"
+   },
+   "note": "Prudential Conglomerate 기준. Jun26 Tier I 12.8%, Total 15.5%."
+  },
+  {
+   "id": "B5_TierI",
+   "period": "2026-06-30",
+   "value": 12.8,
+   "raw": "12.8%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Tier I Capital",
+    "col": "June26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5_TierI",
+   "period": "2026-03-31",
+   "value": 12.0,
+   "raw": "12.0%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Tier I Capital",
+    "col": "Mar26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5_TierI",
+   "period": "2025-06-30",
+   "value": 13.0,
+   "raw": "13.0%",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Tier I Capital",
+    "col": "June25"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5_proforma_TierI",
+   "period": "2026-06-30",
+   "value": 15.1,
+   "raw": "15.1",
+   "unit": "%",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Changes in the Tier I Ratio — Pro Forma (CET1 13.6 + AT1 1.5)",
+    "col": "Pro Forma"
+   },
+   "note": "회사 제시 프로포마: 최대 R$10bn 증자 제안 및 추가 Bradsaúde 효과(규제 승인 대기) 반영. 회계·규제 확정치 아님."
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 746926.753,
+   "raw": "746,926,753",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 18 Deposits from customers — Total",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 고객예금(요구·저축·정기). 은행예금(Deposits from banks, Jun26 434,454,710 thousand, 레포 포함)은 별도."
+  },
+  {
+   "id": "B6",
+   "period": "2025-12-31",
+   "value": 721274.151,
+   "raw": "721,274,151",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 18 Deposits from customers — Total",
+    "col": "On December 31, 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 고객예금(요구·저축·정기). 은행예금(Deposits from banks, Jun26 434,454,710 thousand, 레포 포함)은 별도."
+  },
+  {
+   "id": "B6_ManagementReport_TotalDeposits",
+   "period": "2026-06-30",
+   "value": 782.5,
+   "raw": "R$782.5 bi",
+   "unit": "R$ billion",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "1H26 Highlighted Information — TOTAL DEPOSITS (Jun26 vs. Jun25)",
+    "col": "Jun26"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 경영보고서 하이라이트 수치. 부속 내역(A Prazo 481,3 / Poupança 127,4 / À Vista 32,3 / Interfinanceiros 1,2 bi, 브라질식 소수점)의 합과 총액이 맞지 않고 IFRS 재무상태표 고객예금(746.9bn)과도 달라 정의 불명 → 모호."
+  },
+  {
+   "id": "B6_PR_DemandDeposits",
+   "period": "2026-06-30",
+   "value": 37299,
+   "raw": "37,299",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Demand Deposits (Funding Sources)",
+    "col": "June26"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "B6_PR_DemandDeposits",
+   "period": "2026-03-31",
+   "value": 37832,
+   "raw": "37,832",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Demand Deposits (Funding Sources)",
+    "col": "Mar26"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "B6_PR_DemandDeposits",
+   "period": "2025-06-30",
+   "value": 32199,
+   "raw": "32,199",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Demand Deposits (Funding Sources)",
+    "col": "June25"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "B6_PR_SavingsDeposits",
+   "period": "2026-06-30",
+   "value": 121286,
+   "raw": "121,286",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Savings Deposits (Funding Sources)",
+    "col": "June26"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "B6_PR_SavingsDeposits",
+   "period": "2026-03-31",
+   "value": 119593,
+   "raw": "119,593",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Savings Deposits (Funding Sources)",
+    "col": "Mar26"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "B6_PR_SavingsDeposits",
+   "period": "2025-06-30",
+   "value": 127353,
+   "raw": "127,353",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Savings Deposits (Funding Sources)",
+    "col": "June25"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "B6_PR_TimeDeposits_Debentures",
+   "period": "2026-06-30",
+   "value": 618728,
+   "raw": "618,728",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Time Deposits + Debentures (Funding Sources)",
+    "col": "June26"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "B6_PR_TimeDeposits_Debentures",
+   "period": "2026-03-31",
+   "value": 584762,
+   "raw": "584,762",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Time Deposits + Debentures (Funding Sources)",
+    "col": "Mar26"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "B6_PR_TimeDeposits_Debentures",
+   "period": "2025-06-30",
+   "value": 506487,
+   "raw": "506,487",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_005.jpg",
+    "page": "image_005.jpg",
+    "row": "Time Deposits + Debentures (Funding Sources)",
+    "col": "June25"
+   },
+   "note": "보도자료 관리회계. 'Time Deposits + Debentures'는 자사증권 담보 레포 포함(각주 1). 총 예금 합계 행은 없음."
+  },
+  {
+   "id": "S1_total_outstanding",
+   "period": "2026-06-30",
+   "value": 10570712028,
+   "raw": "10,570,712,028",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a Composition of share capital in number of shares — Total outstanding shares",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "S1_total_outstanding",
+   "period": "2025-12-31",
+   "value": 10577012028,
+   "raw": "10,577,012,028",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a Composition of share capital in number of shares — Total outstanding shares",
+    "col": "On December 31, 2025"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "S1_common_issued",
+   "period": "2026-06-30",
+   "value": 5303870781,
+   "raw": "5,303,870,781",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a Composition of share capital in number of shares — Common",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "S1_common_treasury",
+   "period": "2026-06-30",
+   "value": -10650000,
+   "raw": "(10,650,000)",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a Composition of share capital in number of shares — Treasury (common shares)",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "S1_common_outstanding",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a Composition of share capital in number of shares",
+    "col": "On June 30, 2026"
+   },
+   "note": "종류별 유통주식 수 행은 직접 표기되지 않음(발행·자기주식 행만 있음). 계산으로 메우지 않음."
+  },
+  {
+   "id": "S1_preferred_issued",
+   "period": "2026-06-30",
+   "value": 5288141247,
+   "raw": "5,288,141,247",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a Composition of share capital in number of shares — Preferred",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "S1_preferred_treasury",
+   "period": "2026-06-30",
+   "value": -10650000,
+   "raw": "(10,650,000)",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a Composition of share capital in number of shares — Treasury (preferred shares)",
+    "col": "On June 30, 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "S1_preferred_outstanding",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a Composition of share capital in number of shares",
+    "col": "On June 30, 2026"
+   },
+   "note": "종류별 유통주식 수 행은 직접 표기되지 않음(발행·자기주식 행만 있음). 계산으로 메우지 않음."
+  },
+  {
+   "id": "S1_weighted_common",
+   "period": "2026H1",
+   "value": 5293865000,
+   "raw": "5,293,865",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 26a Weighted average number of common shares outstanding (thousands)",
+    "col": "Six-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 thousands → 주 수로 표기(×1,000)."
+  },
+  {
+   "id": "S1_weighted_preferred",
+   "period": "2026H1",
+   "value": 5278135000,
+   "raw": "5,278,135",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 26a Weighted average number of preferred shares outstanding (thousands)",
+    "col": "Six-month period ended June 30 2026"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 thousands → 주 수(×1,000)."
+  },
+  {
+   "id": "R1",
+   "period": "2026Q2",
+   "value": 4000,
+   "raw": "R$4 billion",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_002.jpg",
+    "page": "image_002.jpg",
+    "row": "Press Release 본문: 'We allocated R$4 billion in interest on capital in 2Q26'",
+    "col": "2Q26"
+   },
+   "note": "원문 R$ billion → R$ million. 반올림된 서술 수치, 구성(월별·보완 JCP) 내역 및 주당 금액 미기재."
+  },
+  {
+   "id": "R1_JCP_BoardJun23_2026",
+   "period": "2026Q2",
+   "value": 3500,
+   "raw": "R$3,500,000 thousand",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — Board meeting June 23, 2026 (related to first half of 2026)",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 지급 2027-01-29까지. 경영보고서 'interest on complementary equity R$3.5 billion'과 일치."
+  },
+  {
+   "id": "R1_JCP_BoardJun23_2026_per_common",
+   "period": "2026Q2",
+   "value": 0.315359035,
+   "raw": "R$0.315359035",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — per common share",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "R1_JCP_BoardJun23_2026_per_preferred",
+   "period": "2026Q2",
+   "value": 0.346894939,
+   "raw": "R$0.346894939",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — per preferred share",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "R1_JCP_BoardMar25_2026",
+   "period": "2026Q1",
+   "value": 3000,
+   "raw": "R$3,000,000 thousand",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — Board meeting March 25, 2026 (related to the first quarter of 2026)",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 주당 보통 R$0.270307744, 우선 R$0.297338519; 지급 2026-10-30까지."
+  },
+  {
+   "id": "R1_JCP_BoardMar25_2026_per_common",
+   "period": "2026Q1",
+   "value": 0.270307744,
+   "raw": "R$0.270307744",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — per common share",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "R1_JCP_BoardMar25_2026_per_preferred",
+   "period": "2026Q1",
+   "value": 0.297338519,
+   "raw": "R$0.297338519",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — per preferred share",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "R1_JCP_total_accrued_gross",
+   "period": "2026H1",
+   "value": 7969.846,
+   "raw": "7,969,846",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — Total accrued on June 30, 2026",
+    "col": "Gross amount provisioned/ paid"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 원 단위 R$ thousands → R$ million 변환(÷1,000). 월별 1,148,877 + 중간 6,500,000 + 보완 320,969(천 R$). 원천세 17.5% 후 순액 6,575,123."
+  },
+  {
+   "id": "R1_JCP_total_accrued_per_common",
+   "period": "2026H1",
+   "value": 0.718086,
+   "raw": "0.718086",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — Total accrued on June 30, 2026",
+    "col": "Per share (gross) Common"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "R1_JCP_total_accrued_per_preferred",
+   "period": "2026H1",
+   "value": 0.789895,
+   "raw": "0.789895",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25d Interest on equity/Dividends — Total accrued on June 30, 2026",
+    "col": "Per share (gross) Preferred"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). "
+  },
+  {
+   "id": "R1_JCP_advance_Sep15",
+   "period": "2026Q3",
+   "value": 6500,
+   "raw": "R$6,5 bi",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25b Changes in share capital — advance payment of JCP approved (Board July 29, 2026) for September 15, 2026",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 분기 후 사건. 같은 주석 25d의 'Intermediary interest provisioned 6,500,000 thousand (To be paid on September 15, 2026)'과 동일 금액인지 신규 선언인지 불명확 → 모호."
+  },
+  {
+   "id": "R2",
+   "period": "2026H1",
+   "value": 6300000,
+   "raw": "6,300,000 shares",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25a footnote (1): In February 2026, 6,300,000 shares were acquired in Treasury",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 보통주 3,150,000 + 우선주 3,150,000, 2026년 2월(1Q26) 매입. 금액 미기재. 자기주식 장부가 R$288,591 thousand(Jun26). 프로그램: 2025-05-08~2026-11-08 최대 106,584,881주."
+  },
+  {
+   "id": "R2",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "shares",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "Note 25e Treasury shares",
+    "col": "-"
+   },
+   "note": "2Q26 중 매입 공시 없음(6월 말 자기주식 수는 2월 매입 후와 동일 10,650,000/10,650,000)."
+  },
+  {
+   "id": "X1_IFRS_FS",
+   "period": "2026H1",
+   "value": null,
+   "raw": "Consolidated Financial Statements in accordance with International Financial Reporting Standards (IFRS) issued by the International Accounting Standards Board (IASB); R$ thousands",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004103/bbdifrs2q26_6k.htm",
+    "page": "",
+    "row": "표지·재무상태표 머리",
+    "col": "-"
+   },
+   "note": "IFRS 문서 폴더에 jpg 페이지 이미지가 없어 htm 텍스트 레이어를 열 머리·행 라벨 순서대로 육안 확인(정규식 추출 아님). 보고통화 R$(thousands). 배당 산정 기준 순이익은 BR GAAP(브라질 중앙은행 인가기관 회계기준) 사용."
+  },
+  {
+   "id": "X1_PressRelease",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "Managerial Analysis of Results / Economic and Financial Analysis Report; R$ million",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004099/image_001.jpg",
+    "page": "image_001.jpg",
+    "row": "표지 및 표 단위 캡션 'R$ million'",
+    "col": "-"
+   },
+   "note": "관리회계(경상) 기준 보도자료. 회계기준 명시 문구는 이미지에 없음; Book Net Income이 BR GAAP 조정순이익과 일치(주석 25d)."
+  },
+  {
+   "id": "X1_PressRelease_1Q",
+   "period": "2026Q1",
+   "value": null,
+   "raw": "Managerial Analysis of Results; R$ million",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002869/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Recurring Net Income Statement 단위 캡션",
+    "col": "-"
+   },
+   "note": "1Q 보도자료: Recurring 6,811 / Book 5,030 — 2Q 보도자료의 1Q26 열과 일치(재작성 없음)."
+  }
+ ]
+}

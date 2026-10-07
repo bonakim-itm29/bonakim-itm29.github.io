@@ -1,0 +1,111 @@
+{
+ "ticker": "ABEV",
+ "top": [
+  {
+   "date": "2026-05-05",
+   "filed": "2026-05-05",
+   "title_ko": "2026년 1분기 실적 서프라이즈와 신규 IOC(자기자본이자) 배당",
+   "summary_ko": "앰베브가 1분기 순매출 8.1% 증가, 정상화 EBITDA 10.1% 증가·마진 60bp 확대를 발표하고 이사회가 IOC 2차분(약 12억 헤알)과 신규 IOC(약 7억 헤알)를 승인했다. ADR은 하루 16.2% 올랐고 매크로 예측은 0.9%에 그쳐 잔차가 +14.1%였다. NeoFeed는 순이익이 컨센서스를 7% 웃돌았다고 보도했다.",
+   "why_important_ko": "수년간 이어진 물량 감소 끝에 맥주 물량 회복·마진 확대가 확인된 실적 쇼크로, 보도에 따르면 사상 최대 일일 상승폭이며 표본 내 비매크로 잔차 1위.",
+   "facts": [
+    {
+     "fact_ko": "순매출 8.1%, 정상화 EBITDA 10.1% 증가",
+     "quote": "Net revenue grew 8.1% and Normalized EBITDA increased 10.1%, with margin expansion of 60 bps.",
+     "file": "ABEV__000129281426002777__abevpr1q26_6k.htm"
+    },
+    {
+     "fact_ko": "1분기 맥주 물량 증가 및 점유율 상승 추정",
+     "quote": "marked by beer volume growth and estimated market share gains across several of our markets",
+     "file": "ABEV__000129281426002777__abevpr1q26_6k.htm"
+    },
+    {
+     "fact_ko": "IOC 신규 분배 약 7억 헤알 승인(주당 총액 R$0.0449)",
+     "quote": "approve the distribution of IOC in the gross amount of R$0.0449 per share",
+     "file": "ABEV__000129281426002773__abev20260504_6k.htm"
+    },
+    {
+     "fact_ko": "보도: 순이익 컨센서스 7% 상회, 가격·물량·마진 동시 개선 평가로 주가 16% 이상 상승",
+     "quote": "strong pricing, improved volumes, and margin expansion",
+     "file": "https://neofeed.com.br/negocios/resultado-da-ambev-desce-redondo-e-acao-dispara-na-bolsa/en/"
+    }
+   ]
+  },
+  {
+   "date": "2021-05-06",
+   "filed": "2021-05-06",
+   "title_ko": "2021년 1분기 실적: 물량 11.6%·매출 27.8% 급증",
+   "summary_ko": "코로나 회복기 1분기에 순매출 27.8%, 물량 11.6% 증가와 정상화 순이익 124.9% 증가를 발표했다. ADR은 11.8% 올랐고 매크로 예측 1.9%를 빼면 잔차 +9.3%였다.",
+   "why_important_ko": "팬데믹 충격 이후 수요 회복과 이익 반등을 확인시킨 실적 쇼크.",
+   "facts": [
+    {
+     "fact_ko": "순매출 27.8%, 물량 11.6% 증가",
+     "quote": "net revenue up 27.8 % in 1Q21, thanks to volume growing by 11.6%",
+     "file": "ABEV__000129281421002111__ambevsapr1q21_6k.htm"
+    },
+    {
+     "fact_ko": "정상화 순이익 R$2,761.9백만, 전년 대비 124.9% 증가",
+     "quote": "Normalized profit was R$ 2,761.9 million, 124.9% higher than in 1Q20",
+     "file": "ABEV__000129281421002111__ambevsapr1q21_6k.htm"
+    }
+   ]
+  }
+ ],
+ "others": [
+  {
+   "date": "2019-07-25",
+   "filed": "2019-07-25",
+   "title_ko": "2019년 2분기 실적(순매출 +7.2%, 정상화 순이익 +16.1%)",
+   "R": 0.0909,
+   "res": 0.0917,
+   "file": "ABEV__000129281419002530__ambevsapr2q19_6k.htm"
+  },
+  {
+   "date": "2021-10-28",
+   "filed": "2021-10-28",
+   "title_ko": "2021년 3분기 실적(정상화 순이익 +50.4%)",
+   "R": 0.097,
+   "res": 0.0798,
+   "file": "ABEV__000129281421004115__ambevsapr3q21_6k.htm"
+  },
+  {
+   "date": "2020-07-13",
+   "filed": "2020-07-13",
+   "title_ko": "CVM 358 내부자 거래 보고(6월분) — 원문 미보유, 원인 모호",
+   "R": -0.0777,
+   "res": -0.0688,
+   "file": "ambevsacvm358jun2020_6k.htm (로컬 없음)"
+  },
+  {
+   "date": "2020-02-27",
+   "filed": "2020-02-27",
+   "title_ko": "2019년 4분기 실적 발표 — 원문 미보유",
+   "R": -0.0896,
+   "res": -0.0633,
+   "file": "ambevsapr4q19_6k.htm (로컬 없음)"
+  },
+  {
+   "date": "2020-03-26",
+   "filed": "2020-03-24",
+   "title_ko": "20-F 및 이사회·주총 관련 공시(혼합) — 원문 미보유",
+   "R": 0.1139,
+   "res": 0.0607,
+   "file": "ambevsa20200323_6k2.htm (로컬 없음)"
+  }
+ ],
+ "no_filing_moves": [
+  {
+   "date": "2012-12-10",
+   "R": 0.118,
+   "res": 0.1116,
+   "cause_ko": "2012-12-07 우선주·보통주 이원 구조를 의결권 보통주 단일 구조로 전환하고 최소 배당을 35%→40%로 상향하는 자본 구조조정 제안 발표(SEC 425 신고는 12-20, ±3일 밖). 인용: \"transition of the company's current dual stock capital structure\"",
+   "url": "https://www.patria.cz/zpravodajstvi/2218066/ab-inbev-ambev-capital-restructuring-proposal.html"
+  },
+  {
+   "date": "2020-05-27",
+   "R": 0.1021,
+   "res": 0.0806,
+   "cause_ko": "원인 미확인",
+   "url": ""
+  }
+ ]
+}

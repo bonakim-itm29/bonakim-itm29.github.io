@@ -1,0 +1,1731 @@
+{
+ "ticker": "PBR",
+ "currency": "USD (US$ million)",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 33607,
+   "raw": "33,607",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2026"
+   },
+   "note": "Statement of Income"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 21037,
+   "raw": "21,037",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2025"
+   },
+   "note": "Statement of Income"
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 57142,
+   "raw": "57,142",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Jun/2026"
+   },
+   "note": "Statement of Income"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 23535,
+   "raw": "23,535",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Mar/2026"
+   },
+   "note": "Statement of Income"
+  },
+  {
+   "id": "Q2_E&P",
+   "period": "2026Q2",
+   "value": 22785,
+   "raw": "22,785",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2026 / E&P"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_E&P",
+   "period": "2025Q2",
+   "value": 14404,
+   "raw": "14,404",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2025 / E&P"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_E&P",
+   "period": "2026Q1",
+   "value": 15996,
+   "raw": "15,996",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Mar/2026 / E&P"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_E&P",
+   "period": "2026H1",
+   "value": 38781,
+   "raw": "38,781",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Jun/2026 / E&P"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_RT&M",
+   "period": "2026Q2",
+   "value": 32351,
+   "raw": "32,351",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2026 / RT&M"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_RT&M",
+   "period": "2025Q2",
+   "value": 19795,
+   "raw": "19,795",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2025 / RT&M"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_RT&M",
+   "period": "2026Q1",
+   "value": 22297,
+   "raw": "22,297",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Mar/2026 / RT&M"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_RT&M",
+   "period": "2026H1",
+   "value": 54648,
+   "raw": "54,648",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Jun/2026 / RT&M"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_G&LCE",
+   "period": "2026Q2",
+   "value": 2406,
+   "raw": "2,406",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2026 / G&LCE"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_G&LCE",
+   "period": "2025Q2",
+   "value": 2176,
+   "raw": "2,176",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2025 / G&LCE"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_G&LCE",
+   "period": "2026Q1",
+   "value": 2205,
+   "raw": "2,205",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Mar/2026 / G&LCE"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_G&LCE",
+   "period": "2026H1",
+   "value": 4611,
+   "raw": "4,611",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Jun/2026 / G&LCE"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_Corporate_and_other_businesses",
+   "period": "2026Q2",
+   "value": 99,
+   "raw": "99",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2026 / Corporate and other businesses"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_Corporate_and_other_businesses",
+   "period": "2025Q2",
+   "value": 80,
+   "raw": "80",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2025 / Corporate and other businesses"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_Corporate_and_other_businesses",
+   "period": "2026Q1",
+   "value": 89,
+   "raw": "89",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Mar/2026 / Corporate and other businesses"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_Corporate_and_other_businesses",
+   "period": "2026H1",
+   "value": 188,
+   "raw": "188",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Jun/2026 / Corporate and other businesses"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_Eliminations",
+   "period": "2026Q2",
+   "value": -24034,
+   "raw": "(24,034)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2026 / Eliminations"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_Eliminations",
+   "period": "2025Q2",
+   "value": -15418,
+   "raw": "(15,418)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Apr-Jun/2025 / Eliminations"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_Eliminations",
+   "period": "2026Q1",
+   "value": -17052,
+   "raw": "(17,052)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Mar/2026 / Eliminations"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q2_Eliminations",
+   "period": "2026H1",
+   "value": -41086,
+   "raw": "(41,086)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Sales revenues",
+    "col": "Jan-Jun/2026 / Eliminations"
+   },
+   "note": "Note 8.1 Net income by operating segment; segment sales revenues include intersegment sales (eliminated in 'Eliminations')"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2026Q2",
+   "value": 18615,
+   "raw": "18,615",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_020.jpg",
+    "page": "image_020.jpg",
+    "row": "Adjusted EBITDA (TABLE 10 - RECONCILIATION OF ADJUSTED EBITDA)",
+    "col": "2Q26"
+   },
+   "note": "Adjusted EBITDA = net income + net finance income(expense) + income taxes + DD&A, adjusted for results of equity-accounted investments, impairment (reversals), results on disposal/write-offs of assets, results from co-participation agreements in bid areas (press release p.20 & glossary p.39); non-IFRS"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2026Q1",
+   "value": 11349,
+   "raw": "11,349",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_020.jpg",
+    "page": "image_020.jpg",
+    "row": "Adjusted EBITDA (TABLE 10 - RECONCILIATION OF ADJUSTED EBITDA)",
+    "col": "1Q26"
+   },
+   "note": "Adjusted EBITDA = net income + net finance income(expense) + income taxes + DD&A, adjusted for results of equity-accounted investments, impairment (reversals), results on disposal/write-offs of assets, results from co-participation agreements in bid areas (press release p.20 & glossary p.39); non-IFRS"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2025Q2",
+   "value": 9242,
+   "raw": "9,242",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_020.jpg",
+    "page": "image_020.jpg",
+    "row": "Adjusted EBITDA (TABLE 10 - RECONCILIATION OF ADJUSTED EBITDA)",
+    "col": "2Q25"
+   },
+   "note": "Adjusted EBITDA = net income + net finance income(expense) + income taxes + DD&A, adjusted for results of equity-accounted investments, impairment (reversals), results on disposal/write-offs of assets, results from co-participation agreements in bid areas (press release p.20 & glossary p.39); non-IFRS"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA",
+   "period": "2026H1",
+   "value": 29964,
+   "raw": "29,964",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_020.jpg",
+    "page": "image_020.jpg",
+    "row": "Adjusted EBITDA (TABLE 10 - RECONCILIATION OF ADJUSTED EBITDA)",
+    "col": "1H26"
+   },
+   "note": "Adjusted EBITDA = net income + net finance income(expense) + income taxes + DD&A, adjusted for results of equity-accounted investments, impairment (reversals), results on disposal/write-offs of assets, results from co-participation agreements in bid areas (press release p.20 & glossary p.39); non-IFRS"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA_excluding_one-off_events",
+   "period": "2026Q2",
+   "value": 19959,
+   "raw": "19,959",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Adjusted EBITDA excluding one-off events (TABLE 2 - ONE-OFF EVENTS)",
+    "col": "2Q26"
+   },
+   "note": "Company-defined: Adjusted EBITDA minus 'Other one-off events' (2Q26: (1,344)); non-IFRS"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA_excluding_one-off_events",
+   "period": "2026Q1",
+   "value": 11737,
+   "raw": "11,737",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Adjusted EBITDA excluding one-off events (TABLE 2 - ONE-OFF EVENTS)",
+    "col": "1Q26"
+   },
+   "note": "Company-defined: Adjusted EBITDA minus 'Other one-off events' (2Q26: (1,344)); non-IFRS"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA_excluding_one-off_events",
+   "period": "2025Q2",
+   "value": 10231,
+   "raw": "10,231",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Adjusted EBITDA excluding one-off events (TABLE 2 - ONE-OFF EVENTS)",
+    "col": "2Q25"
+   },
+   "note": "Company-defined: Adjusted EBITDA minus 'Other one-off events' (2Q26: (1,344)); non-IFRS"
+  },
+  {
+   "id": "Q3_Adjusted_EBITDA_excluding_one-off_events",
+   "period": "2026H1",
+   "value": 31696,
+   "raw": "31,696",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Adjusted EBITDA excluding one-off events (TABLE 2 - ONE-OFF EVENTS)",
+    "col": "1H26"
+   },
+   "note": "Company-defined: Adjusted EBITDA minus 'Other one-off events' (2Q26: (1,344)); non-IFRS"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 14253,
+   "raw": "14,253",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Income before net finance income (expense), results of equity-accounted investments and income taxes",
+    "col": "Apr-Jun/2026"
+   },
+   "note": "Shown as 'Operating income' in press release Table 11 (image_021.jpg)"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 5349,
+   "raw": "5,349",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Income before net finance income (expense), results of equity-accounted investments and income taxes",
+    "col": "Apr-Jun/2025"
+   },
+   "note": "Shown as 'Operating income' in press release Table 11 (image_021.jpg)"
+  },
+  {
+   "id": "Q4",
+   "period": "2026H1",
+   "value": 22101,
+   "raw": "22,101",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Income before net finance income (expense), results of equity-accounted investments and income taxes",
+    "col": "Jan-Jun/2026"
+   },
+   "note": "Shown as 'Operating income' in press release Table 11 (image_021.jpg)"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q1",
+   "value": 7848,
+   "raw": "7,848",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Income before net finance income (expense), results of equity-accounted investments and income taxes",
+    "col": "Jan-Mar/2026"
+   },
+   "note": "Shown as 'Operating income' in press release Table 11 (image_021.jpg)"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 10428,
+   "raw": "10,428",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Net income attributable to shareholders of Petrobras",
+    "col": "Apr-Jun/2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 4734,
+   "raw": "4,734",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Net income attributable to shareholders of Petrobras",
+    "col": "Apr-Jun/2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 16627,
+   "raw": "16,627",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Net income attributable to shareholders of Petrobras",
+    "col": "Jan-Jun/2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 6199,
+   "raw": "6,199",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Net income attributable to shareholders of Petrobras",
+    "col": "Jan-Mar/2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6_Net_income_excluding_one-off_events_Shareholders_of_Petrobras",
+   "period": "2026Q2",
+   "value": 11073,
+   "raw": "11,073",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Net income excluding one-off events - Shareholders of Petrobras (TABLE 2 - ONE-OFF EVENTS)",
+    "col": "2Q26"
+   },
+   "note": "Company-defined 'Net income excluding one-off events' attributable to shareholders of Petrobras (one-off events 2Q26 total (1,015) incl. tax effect 370); non-IFRS. Total incl. NCI 2Q26 = 11,083"
+  },
+  {
+   "id": "Q6_Net_income_excluding_one-off_events_Shareholders_of_Petrobras",
+   "period": "2026Q1",
+   "value": 4535,
+   "raw": "4,535",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Net income excluding one-off events - Shareholders of Petrobras (TABLE 2 - ONE-OFF EVENTS)",
+    "col": "1Q26"
+   },
+   "note": "Company-defined 'Net income excluding one-off events' attributable to shareholders of Petrobras (one-off events 2Q26 total (1,015) incl. tax effect 370); non-IFRS. Total incl. NCI 2Q26 = 11,083"
+  },
+  {
+   "id": "Q6_Net_income_excluding_one-off_events_Shareholders_of_Petrobras",
+   "period": "2025Q2",
+   "value": 4101,
+   "raw": "4,101",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Net income excluding one-off events - Shareholders of Petrobras (TABLE 2 - ONE-OFF EVENTS)",
+    "col": "2Q25"
+   },
+   "note": "Company-defined 'Net income excluding one-off events' attributable to shareholders of Petrobras (one-off events 2Q26 total (1,015) incl. tax effect 370); non-IFRS. Total incl. NCI 2Q26 = 11,083"
+  },
+  {
+   "id": "Q6_Net_income_excluding_one-off_events_Shareholders_of_Petrobras",
+   "period": "2026H1",
+   "value": 15608,
+   "raw": "15,608",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_007.jpg",
+    "page": "image_007.jpg",
+    "row": "Net income excluding one-off events - Shareholders of Petrobras (TABLE 2 - ONE-OFF EVENTS)",
+    "col": "1H26"
+   },
+   "note": "Company-defined 'Net income excluding one-off events' attributable to shareholders of Petrobras (one-off events 2Q26 total (1,015) incl. tax effect 370); non-IFRS. Total incl. NCI 2Q26 = 11,083"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 0.81,
+   "raw": "0.81",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Basic and diluted earnings per common and preferred share - in U.S. dollars",
+    "col": "Apr-Jun/2026"
+   },
+   "note": "Same for common and preferred; per ADS (2 shares) 2Q26=1.62, 1H26=2.58 (note 26.5)"
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q2",
+   "value": 0.37,
+   "raw": "0.37",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Basic and diluted earnings per common and preferred share - in U.S. dollars",
+    "col": "Apr-Jun/2025"
+   },
+   "note": "Same for common and preferred; per ADS (2 shares) 2Q26=1.62, 1H26=2.58 (note 26.5)"
+  },
+  {
+   "id": "Q7",
+   "period": "2026H1",
+   "value": 1.29,
+   "raw": "1.29",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Basic and diluted earnings per common and preferred share - in U.S. dollars",
+    "col": "Jan-Jun/2026"
+   },
+   "note": "Same for common and preferred; per ADS (2 shares) 2Q26=1.62, 1H26=2.58 (note 26.5)"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 0.48,
+   "raw": "0.48",
+   "unit": "US$ per share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Basic and diluted earnings per common and preferred share - in U.S. dollars",
+    "col": "Jan-Mar/2026"
+   },
+   "note": "Same for common and preferred"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": 12250,
+   "raw": "12,250",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Net cash provided by operating activities (TABLE 5 - LIQUIDITY AND CAPITAL RESOURCES)",
+    "col": "2Q26"
+   },
+   "note": "Quarterly figure from press release; IFRS FS cash flow only presents 6M"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 8399,
+   "raw": "8,399",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Net cash provided by operating activities (TABLE 5 - LIQUIDITY AND CAPITAL RESOURCES)",
+    "col": "1Q26"
+   },
+   "note": "Quarterly figure from press release; IFRS FS cash flow only presents 6M"
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q2",
+   "value": 7531,
+   "raw": "7,531",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Net cash provided by operating activities (TABLE 5 - LIQUIDITY AND CAPITAL RESOURCES)",
+    "col": "2Q25"
+   },
+   "note": "Quarterly figure from press release; IFRS FS cash flow only presents 6M"
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 20649,
+   "raw": "20,649",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Net cash provided by operating activities",
+    "col": "Jan-Jun/2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9_Total_Capex_company",
+   "period": "2026Q2",
+   "value": 5299,
+   "raw": "5,299",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Total (TABLE 3 - TOTAL CAPEX)",
+    "col": "2Q26"
+   },
+   "note": "Company 'Capex' (accrual; includes leasing costs, G&G, pre-operating; 2Q26 incl. signature bonus 7). Text: cash basis US$4.6bn 2Q26, US$9.1bn 1H26"
+  },
+  {
+   "id": "Q9_Total_Capex_company",
+   "period": "2026Q1",
+   "value": 5107,
+   "raw": "5,107",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Total (TABLE 3 - TOTAL CAPEX)",
+    "col": "1Q26"
+   },
+   "note": "Company 'Capex' (accrual; includes leasing costs, G&G, pre-operating; 2Q26 incl. signature bonus 7). Text: cash basis US$4.6bn 2Q26, US$9.1bn 1H26"
+  },
+  {
+   "id": "Q9_Total_Capex_company",
+   "period": "2025Q2",
+   "value": 4431,
+   "raw": "4,431",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Total (TABLE 3 - TOTAL CAPEX)",
+    "col": "2Q25"
+   },
+   "note": "Company 'Capex' (accrual; includes leasing costs, G&G, pre-operating; 2Q26 incl. signature bonus 7). Text: cash basis US$4.6bn 2Q26, US$9.1bn 1H26"
+  },
+  {
+   "id": "Q9_Total_Capex_company",
+   "period": "2026H1",
+   "value": 10405,
+   "raw": "10,405",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_009.jpg",
+    "page": "image_009.jpg",
+    "row": "Total (TABLE 3 - TOTAL CAPEX)",
+    "col": "1H26"
+   },
+   "note": "Company 'Capex' (accrual; includes leasing costs, G&G, pre-operating; 2Q26 incl. signature bonus 7). Text: cash basis US$4.6bn 2Q26, US$9.1bn 1H26"
+  },
+  {
+   "id": "Q9_CF_Acquisition_of_PP&E_and_intangible_assets",
+   "period": "2026Q2",
+   "value": -4559,
+   "raw": "(4,559)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Acquisition of PP&E and intangible assets (TABLE 5)",
+    "col": "2Q26"
+   },
+   "note": "Cash flow statement row"
+  },
+  {
+   "id": "Q9_CF_Acquisition_of_PP&E_and_intangible_assets",
+   "period": "2026Q1",
+   "value": -4513,
+   "raw": "(4,513)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Acquisition of PP&E and intangible assets (TABLE 5)",
+    "col": "1Q26"
+   },
+   "note": "Cash flow statement row"
+  },
+  {
+   "id": "Q9_CF_Acquisition_of_PP&E_and_intangible_assets",
+   "period": "2025Q2",
+   "value": -4084,
+   "raw": "(4,084)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Acquisition of PP&E and intangible assets (TABLE 5)",
+    "col": "2Q25"
+   },
+   "note": "Cash flow statement row"
+  },
+  {
+   "id": "Q9_CF_Acquisition_of_PP&E_and_intangible_assets",
+   "period": "2026H1",
+   "value": -9072,
+   "raw": "(9,072)",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Acquisition of PP&E and intangible assets",
+    "col": "Jan-Jun/2026"
+   },
+   "note": "Statement of Cash Flows"
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q2",
+   "value": 7659,
+   "raw": "7,659",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Free cash flow (*) (TABLE 5)",
+    "col": "2Q26"
+   },
+   "note": "Free cash flow = operating cash flow minus acquisitions of PP&E, intangible assets and equity interests (glossary p.40); in accordance with Shareholder Remuneration Policy approved 07/28/2023"
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q1",
+   "value": 3855,
+   "raw": "3,855",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Free cash flow (*) (TABLE 5)",
+    "col": "1Q26"
+   },
+   "note": "Free cash flow = operating cash flow minus acquisitions of PP&E, intangible assets and equity interests (glossary p.40); in accordance with Shareholder Remuneration Policy approved 07/28/2023"
+  },
+  {
+   "id": "Q10",
+   "period": "2025Q2",
+   "value": 3445,
+   "raw": "3,445",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Free cash flow (*) (TABLE 5)",
+    "col": "2Q25"
+   },
+   "note": "Free cash flow = operating cash flow minus acquisitions of PP&E, intangible assets and equity interests (glossary p.40); in accordance with Shareholder Remuneration Policy approved 07/28/2023"
+  },
+  {
+   "id": "Q10",
+   "period": "2026H1",
+   "value": 11514,
+   "raw": "11,514",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Free cash flow (*) (TABLE 5)",
+    "col": "1H26"
+   },
+   "note": "Free cash flow = operating cash flow minus acquisitions of PP&E, intangible assets and equity interests (glossary p.40); in accordance with Shareholder Remuneration Policy approved 07/28/2023"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 6483,
+   "raw": "6,483",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "06.30.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1",
+   "period": "2026-03-31",
+   "value": 6570,
+   "raw": "6,570",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "03.31.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B1",
+   "period": "2025-12-31",
+   "value": 6471,
+   "raw": "6,471",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "12.31.2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Financial_investments_current",
+   "period": "2026-06-30",
+   "value": 3903,
+   "raw": "3,903",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Financial investments (current assets)",
+    "col": "06.30.2026"
+   },
+   "note": "Note 3.2 total 3,935 incl. non-current 32 (in 'Other assets')"
+  },
+  {
+   "id": "B2_Financial_investments_current",
+   "period": "2026-03-31",
+   "value": 2549,
+   "raw": "2,549",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Financial investments (current assets)",
+    "col": "03.31.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B2_Adjusted_cash_and_cash_equivalents",
+   "period": "2026-06-30",
+   "value": 10418,
+   "raw": "10,418",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Adjusted cash and cash equivalents at the end of period (TABLE 5)",
+    "col": "2Q26"
+   },
+   "note": "Company non-IFRS: cash & equivalents 6,483 + government bonds, bank deposit certificates and time deposits >3 months 3,935"
+  },
+  {
+   "id": "B2_Adjusted_cash_and_cash_equivalents",
+   "period": "2026-03-31",
+   "value": 9121,
+   "raw": "9,121",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_013.jpg",
+    "page": "image_013.jpg",
+    "row": "Adjusted cash and cash equivalents at the end of period (TABLE 5)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Finance_debt_total",
+   "period": "2026-06-30",
+   "value": 25834,
+   "raw": "25,834",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Total finance debt (note 24.1)",
+    "col": "06.30.2026"
+   },
+   "note": "Current 1,435 + Non-current 24,399; excludes leases"
+  },
+  {
+   "id": "B3_Finance_debt_current",
+   "period": "2026-06-30",
+   "value": 1435,
+   "raw": "1,435",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Finance debt (current liabilities)",
+    "col": "06.30.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Finance_debt_noncurrent",
+   "period": "2026-06-30",
+   "value": 24399,
+   "raw": "24,399",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Finance debt (non-current liabilities)",
+    "col": "06.30.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Finance_debt_total",
+   "period": "2026-03-31",
+   "value": 27537,
+   "raw": "27,537",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Total finance debt (note 24.1)",
+    "col": "03.31.2026"
+   },
+   "note": "Current 2,485 + Non-current 25,052"
+  },
+  {
+   "id": "B3_Finance_debt_total",
+   "period": "2025-06-30",
+   "value": 25791,
+   "raw": "25,791",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_015.jpg",
+    "page": "image_015.jpg",
+    "row": "Financial Debt (TABLE 6 - DEBT METRICS)",
+    "col": "06.30.2025"
+   },
+   "note": ""
+  },
+  {
+   "id": "B3_Lease_liability",
+   "period": "2026-06-30",
+   "value": 44972,
+   "raw": "44,972",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Lease liability balance at June 30, 2026 (note 25)",
+    "col": "Total"
+   },
+   "note": "Current 10,250 + Non-current 34,722; reported separately from finance debt"
+  },
+  {
+   "id": "B3_Lease_liability",
+   "period": "2026-03-31",
+   "value": 43677,
+   "raw": "43,677",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Lease liability balance at March 31, 2026 (note 25)",
+    "col": "Total"
+   },
+   "note": "Current 10,246 + Non-current 33,431"
+  },
+  {
+   "id": "B3_Gross_debt_company",
+   "period": "2026-06-30",
+   "value": 70806,
+   "raw": "70,806",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_015.jpg",
+    "page": "image_015.jpg",
+    "row": "Gross debt (TABLE 6 - DEBT METRICS)",
+    "col": "06.30.2026"
+   },
+   "note": "Company definition includes finance leases (Financial debt 25,834 + Finance leases 44,972)"
+  },
+  {
+   "id": "B3_Gross_debt_company",
+   "period": "2026-03-31",
+   "value": 71214,
+   "raw": "71,214",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_015.jpg",
+    "page": "image_015.jpg",
+    "row": "Gross debt (TABLE 6 - DEBT METRICS)",
+    "col": "03.31.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": 60388,
+   "raw": "60,388",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_015.jpg",
+    "page": "image_015.jpg",
+    "row": "Net debt (TABLE 6 - DEBT METRICS)",
+    "col": "06.30.2026"
+   },
+   "note": "Net debt = Gross debt (finance debt + finance leases) less adjusted cash and cash equivalents (glossary p.41); non-IFRS; Net debt/LTM Adjusted EBITDA 1.14x"
+  },
+  {
+   "id": "B4",
+   "period": "2026-03-31",
+   "value": 62093,
+   "raw": "62,093",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_015.jpg",
+    "page": "image_015.jpg",
+    "row": "Net debt (TABLE 6 - DEBT METRICS)",
+    "col": "03.31.2026"
+   },
+   "note": "Net debt = Gross debt (finance debt + finance leases) less adjusted cash and cash equivalents (glossary p.41); non-IFRS"
+  },
+  {
+   "id": "B4",
+   "period": "2025-06-30",
+   "value": 58563,
+   "raw": "58,563",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_015.jpg",
+    "page": "image_015.jpg",
+    "row": "Net debt (TABLE 6 - DEBT METRICS)",
+    "col": "06.30.2025"
+   },
+   "note": "Net debt = Gross debt (finance debt + finance leases) less adjusted cash and cash equivalents (glossary p.41); non-IFRS"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 247077,
+   "raw": "247,077",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Total assets",
+    "col": "06.30.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B5",
+   "period": "2026-03-31",
+   "value": 238738,
+   "raw": "238,738",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Total assets",
+    "col": "03.31.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 92908,
+   "raw": "92,908",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Attributable to the shareholders of Petrobras",
+    "col": "06.30.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "B6",
+   "period": "2026-03-31",
+   "value": 85295,
+   "raw": "85,295",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003000/pbrfs1q26usd_6k.htm",
+    "page": "",
+    "row": "Attributable to the shareholders of Petrobras",
+    "col": "03.31.2026"
+   },
+   "note": ""
+  },
+  {
+   "id": "S1_common",
+   "period": "2026-06-30",
+   "value": 7442231382,
+   "raw": "7,442,231,382",
+   "unit": "shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Common shares (note 26.1 Share capital)",
+    "col": "06.30.2026"
+   },
+   "note": "Note 26.1 gives subscribed and fully paid shares; no point-in-time 'outstanding' count stated. Note 26.5 weighted average number of outstanding shares (Apr-Jun/2026) is identical (7,442,231,382 common / 5,446,501,379 preferred) and no treasury shares shown, but outstanding at date not explicitly disclosed"
+  },
+  {
+   "id": "S1_preferred",
+   "period": "2026-06-30",
+   "value": 5446501379,
+   "raw": "5,446,501,379",
+   "unit": "shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Preferred shares (note 26.1 Share capital)",
+    "col": "06.30.2026"
+   },
+   "note": "Note 26.1 gives subscribed and fully paid shares; no point-in-time 'outstanding' count stated. Note 26.5 weighted average number of outstanding shares (Apr-Jun/2026) is identical (7,442,231,382 common / 5,446,501,379 preferred) and no treasury shares shown, but outstanding at date not explicitly disclosed"
+  },
+  {
+   "id": "S1_total",
+   "period": "2026-06-30",
+   "value": 12888732761,
+   "raw": "12,888,732,761",
+   "unit": "shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Subscribed and fully paid shares (note 26.1)",
+    "col": "06.30.2026"
+   },
+   "note": "Note 26.1 gives subscribed and fully paid shares; no point-in-time 'outstanding' count stated. Note 26.5 weighted average number of outstanding shares (Apr-Jun/2026) is identical (7,442,231,382 common / 5,446,501,379 preferred) and no treasury shares shown, but outstanding at date not explicitly disclosed"
+  },
+  {
+   "id": "S2",
+   "period": "2026-06-30",
+   "value": 2,
+   "raw": "Petrobras' ADSs are equivalent to two shares",
+   "unit": "shares per ADS",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Footnote (1) to note 26.5 Earnings per share",
+    "col": ""
+   },
+   "note": "1 ADS = 2 shares (common or preferred)"
+  },
+  {
+   "id": "R1_remuneration_relating_to_2Q26_total",
+   "period": "2026Q2",
+   "value": 3406,
+   "raw": "US$ 3,406 or R$ 17,376 million",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Total anticipated dividends (note 30 Subsequent events)",
+    "col": "Amount"
+   },
+   "note": "Approved by Board on Aug 6, 2026 (after quarter end), based on 2Q26 net income; record date 08.21.2026; paid in 2 installments Nov 23 & Dec 21, 2026. Composition: interim dividends 1,191 (US$0.0924/sh) + interim interest on capital 2,215 (US$0.1718/sh). Press release p.4: 'approved R$ 17.4 billion in shareholder remuneration related to the 2Q26'"
+  },
+  {
+   "id": "R1_remuneration_relating_to_2Q26_per_share",
+   "period": "2026Q2",
+   "value": 0.2642,
+   "raw": "US$ 0.2642 (R$ 1.3481)",
+   "unit": "US$ per common and preferred share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Total anticipated dividends (note 30)",
+    "col": "Amount per common and preferred share"
+   },
+   "note": "R$ 1.3481 per share"
+  },
+  {
+   "id": "R1_JCP_relating_to_1Q26_declared_in_2Q26_total",
+   "period": "2026Q1",
+   "value": 1845,
+   "raw": "US$ 1,845 or R$ 9,034 million",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Interest on capital - 1st quarter of 2026 (note 26.4)",
+    "col": "Amount"
+   },
+   "note": "Approved by Board May 11, 2026 (within 2Q26), based on 1Q26 net income; record date 06.01.2026; paid Aug 20 & Sep 21, 2026"
+  },
+  {
+   "id": "R1_JCP_relating_to_1Q26_declared_in_2Q26_per_share",
+   "period": "2026Q1",
+   "value": 0.1431,
+   "raw": "US$ 0.1431 (R$ 0.7010)",
+   "unit": "US$ per common and preferred share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Interest on capital - 1st quarter of 2026 (note 26.4)",
+    "col": "Amount per common and preferred share"
+   },
+   "note": ""
+  },
+  {
+   "id": "R1_complementary_dividends_2025_approved_in_2Q26",
+   "period": "2026Q2",
+   "value": 1467,
+   "raw": "US$ 1,467",
+   "unit": "US$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Additional dividends proposed (Statement of changes in equity / note 26.4 text)",
+    "col": "Profit Reserves"
+   },
+   "note": "AGM Apr 16, 2026 approved total 2025 dividends US$7,507 (US$0.5814/outstanding share), incl. US$1,467 complementary paid May-Jun 2026 as interest on capital"
+  },
+  {
+   "id": "R2",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "No share buyback disclosed in 2Q26 FS or press release"
+  },
+  {
+   "id": "OP_Average_Brent",
+   "period": "2026Q2",
+   "value": 104.52,
+   "raw": "104.52",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_016.jpg",
+    "page": "image_016.jpg",
+    "row": "Average Brent crude (US$/bbl) (TABLE 7 - E&P RESULTS)",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Average_Brent",
+   "period": "2026Q1",
+   "value": 80.61,
+   "raw": "80.61",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_016.jpg",
+    "page": "image_016.jpg",
+    "row": "Average Brent crude (US$/bbl) (TABLE 7 - E&P RESULTS)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Average_Brent",
+   "period": "2025Q2",
+   "value": 67.82,
+   "raw": "67.82",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_016.jpg",
+    "page": "image_016.jpg",
+    "row": "Average Brent crude (US$/bbl) (TABLE 7 - E&P RESULTS)",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Average_Brent",
+   "period": "2026H1",
+   "value": 92.57,
+   "raw": "92.57",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_016.jpg",
+    "page": "image_016.jpg",
+    "row": "Average Brent crude (US$/bbl) (TABLE 7 - E&P RESULTS)",
+    "col": "1H26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Oil_gas_production_kboed",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "thousand boed",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004129/image_006.jpg",
+    "page": "image_006.jpg",
+    "row": "",
+    "col": ""
+   },
+   "note": "Absolute production volume not disclosed in these filings; press release text only states 'a 3.4% increase in total production'"
+  },
+  {
+   "id": "OP_Realized_oil_price",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "US$/bbl",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-004129/image_018.jpg",
+    "page": "image_018.jpg",
+    "row": "",
+    "col": ""
+   },
+   "note": "No crude realized price disclosed; only 'Price of basic oil products - Domestic Market (US$/bbl)' recorded separately"
+  },
+  {
+   "id": "OP_Price_of_basic_oil_products_Domestic_Market",
+   "period": "2026Q2",
+   "value": 114.6,
+   "raw": "114.60",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_018.jpg",
+    "page": "image_018.jpg",
+    "row": "Price of basic oil products - Domestic Market (US$/bbl) (TABLE 8 - RTM RESULTS)",
+    "col": "2Q26"
+   },
+   "note": "Domestic oil products sales price, not crude realization"
+  },
+  {
+   "id": "OP_Price_of_basic_oil_products_Domestic_Market",
+   "period": "2026Q1",
+   "value": 86.83,
+   "raw": "86.83",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_018.jpg",
+    "page": "image_018.jpg",
+    "row": "Price of basic oil products - Domestic Market (US$/bbl) (TABLE 8 - RTM RESULTS)",
+    "col": "1Q26"
+   },
+   "note": "Domestic oil products sales price, not crude realization"
+  },
+  {
+   "id": "OP_Price_of_basic_oil_products_Domestic_Market",
+   "period": "2025Q2",
+   "value": 82.96,
+   "raw": "82.96",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_018.jpg",
+    "page": "image_018.jpg",
+    "row": "Price of basic oil products - Domestic Market (US$/bbl) (TABLE 8 - RTM RESULTS)",
+    "col": "2Q25"
+   },
+   "note": "Domestic oil products sales price, not crude realization"
+  },
+  {
+   "id": "OP_Price_of_basic_oil_products_Domestic_Market",
+   "period": "2026H1",
+   "value": 100.76,
+   "raw": "100.76",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_018.jpg",
+    "page": "image_018.jpg",
+    "row": "Price of basic oil products - Domestic Market (US$/bbl) (TABLE 8 - RTM RESULTS)",
+    "col": "1H26"
+   },
+   "note": "Domestic oil products sales price, not crude realization"
+  },
+  {
+   "id": "OP_Natural_gas_sales_price_Brazil",
+   "period": "2026Q2",
+   "value": 59.1,
+   "raw": "59.10",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Natural gas sales price - Brazil (US$/bbl) (TABLE 9 - G&LCE RESULTS)",
+    "col": "2Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Natural_gas_sales_price_Brazil",
+   "period": "2026Q1",
+   "value": 52.04,
+   "raw": "52.04",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Natural gas sales price - Brazil (US$/bbl) (TABLE 9 - G&LCE RESULTS)",
+    "col": "1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Natural_gas_sales_price_Brazil",
+   "period": "2025Q2",
+   "value": 58.65,
+   "raw": "58.65",
+   "unit": "US$/bbl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_019.jpg",
+    "page": "image_019.jpg",
+    "row": "Natural gas sales price - Brazil (US$/bbl) (TABLE 9 - G&LCE RESULTS)",
+    "col": "2Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "OP_Lifting_cost_Brazil",
+   "period": "2026Q2",
+   "value": 6.33,
+   "raw": "6.33",
+   "unit": "US$/boe",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_016.jpg",
+    "page": "image_016.jpg",
+    "row": "Lifting cost Brazil (US$/boe) (TABLE 7)",
+    "col": "2Q26"
+   },
+   "note": "Excludes leases, production taxes, DD&A"
+  },
+  {
+   "id": "OP_Lifting_cost_Brazil",
+   "period": "2026Q1",
+   "value": 6.76,
+   "raw": "6.76",
+   "unit": "US$/boe",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_016.jpg",
+    "page": "image_016.jpg",
+    "row": "Lifting cost Brazil (US$/boe) (TABLE 7)",
+    "col": "1Q26"
+   },
+   "note": "Excludes leases, production taxes, DD&A"
+  },
+  {
+   "id": "OP_Lifting_cost_Brazil",
+   "period": "2025Q2",
+   "value": 5.96,
+   "raw": "5.96",
+   "unit": "US$/boe",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_016.jpg",
+    "page": "image_016.jpg",
+    "row": "Lifting cost Brazil (US$/boe) (TABLE 7)",
+    "col": "2Q25"
+   },
+   "note": "Excludes leases, production taxes, DD&A"
+  },
+  {
+   "id": "X1_FS",
+   "period": "2026Q2",
+   "value": "IFRS (IAS 34), US$ millions",
+   "raw": "Condensed consolidated interim financial statements ... in accordance with IAS 34 - Interim Financial Reporting, as issued by the IASB; (Expressed in millions of US Dollars, unless otherwise indicated)",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004133/pbrfs2q26usd_6k.htm",
+    "page": "",
+    "row": "Notes header / KPMG review report",
+    "col": ""
+   },
+   "note": "Reviewed by KPMG Auditores Independentes Ltda., report dated Aug 6, 2026"
+  },
+  {
+   "id": "X1_PR",
+   "period": "2026Q2",
+   "value": "IFRS Accounting Standards; US$ million",
+   "raw": "Condensed Consolidated Interim Financial Statements has been prepared in accordance with IFRS Accounting Standards",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-004129/image_003.jpg",
+    "page": "image_003.jpg",
+    "row": "Disclaimer",
+    "col": ""
+   },
+   "note": "Non-IFRS: Adjusted EBITDA, FCF, Net debt, adjusted cash"
+  }
+ ]
+}

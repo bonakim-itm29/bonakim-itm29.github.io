@@ -1,0 +1,2031 @@
+{
+ "ticker": "ABEV",
+ "currency": "BRL (R$ million)",
+ "items": [
+  {
+   "id": "Q1",
+   "period": "2026Q2",
+   "value": 20148.9,
+   "raw": "20,148.9",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q26"
+   },
+   "note": "ITR 'Net sales'과 일치"
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q2",
+   "value": 20090.2,
+   "raw": "20,090.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q25"
+   },
+   "note": "ITR 'Net sales'과 일치"
+  },
+  {
+   "id": "Q1",
+   "period": "2026H1",
+   "value": 42613.4,
+   "raw": "42,613.4",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "CONSOLIDATED INCOME STATEMENT / HY26"
+   },
+   "note": "ITR 'Net sales'과 일치"
+  },
+  {
+   "id": "Q1",
+   "period": "2025H1",
+   "value": 42587.6,
+   "raw": "42,587.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "CONSOLIDATED INCOME STATEMENT / HY25"
+   },
+   "note": "ITR 'Net sales'과 일치"
+  },
+  {
+   "id": "Q1",
+   "period": "2026Q1",
+   "value": 22464.5,
+   "raw": "22,464.5",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "CONSOLIDATED INCOME STATEMENT / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q1",
+   "period": "2025Q1",
+   "value": 22497.4,
+   "raw": "22,497.4",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "CONSOLIDATED INCOME STATEMENT / 1Q25"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Brazil_Beer",
+   "period": "2025Q2",
+   "value": 8989.6,
+   "raw": "8,989.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil Beer / 2Q25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil_Beer",
+   "period": "2026Q2",
+   "value": 9791.1,
+   "raw": "9,791.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil Beer / 2Q26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil_Beer",
+   "period": "2025H1",
+   "value": 18990.4,
+   "raw": "18,990.4",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil Beer / HY25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil_Beer",
+   "period": "2026H1",
+   "value": 20751.1,
+   "raw": "20,751.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil Beer / HY26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil_NAB",
+   "period": "2025Q2",
+   "value": 2031.2,
+   "raw": "2,031.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil NAB / 2Q25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil_NAB",
+   "period": "2026Q2",
+   "value": 2060.5,
+   "raw": "2,060.5",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil NAB / 2Q26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil_NAB",
+   "period": "2025H1",
+   "value": 4285.8,
+   "raw": "4,285.8",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil NAB / HY25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil_NAB",
+   "period": "2026H1",
+   "value": 4355.1,
+   "raw": "4,355.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil NAB / HY26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil",
+   "period": "2025Q2",
+   "value": 11020.8,
+   "raw": "11,020.8",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil (Total) / 2Q25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil",
+   "period": "2026Q2",
+   "value": 11851.6,
+   "raw": "11,851.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil (Total) / 2Q26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil",
+   "period": "2025H1",
+   "value": 23276.1,
+   "raw": "23,276.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil (Total) / HY25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil",
+   "period": "2026H1",
+   "value": 25106.2,
+   "raw": "25,106.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil (Total) / HY26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_CAC",
+   "period": "2025Q2",
+   "value": 2784.6,
+   "raw": "2,784.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / CAC / 2Q25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_CAC",
+   "period": "2026Q2",
+   "value": 2317.5,
+   "raw": "2,317.5",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / CAC / 2Q26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_CAC",
+   "period": "2025H1",
+   "value": 5441.5,
+   "raw": "5,441.5",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / CAC / HY25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_CAC",
+   "period": "2026H1",
+   "value": 4562.7,
+   "raw": "4,562.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / CAC / HY26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_LAS",
+   "period": "2025Q2",
+   "value": 3295.2,
+   "raw": "3,295.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / LAS / 2Q25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_LAS",
+   "period": "2026Q2",
+   "value": 3226.2,
+   "raw": "3,226.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / LAS / 2Q26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_LAS",
+   "period": "2025H1",
+   "value": 8831.3,
+   "raw": "8,831.3",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / LAS / HY25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_LAS",
+   "period": "2026H1",
+   "value": 8262.3,
+   "raw": "8,262.3",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / LAS / HY26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Canada",
+   "period": "2025Q2",
+   "value": 2989.7,
+   "raw": "2,989.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Canada / 2Q25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Canada",
+   "period": "2026Q2",
+   "value": 2753.7,
+   "raw": "2,753.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Canada / 2Q26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Canada",
+   "period": "2025H1",
+   "value": 5038.6,
+   "raw": "5,038.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Canada / HY25"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Canada",
+   "period": "2026H1",
+   "value": 4682.2,
+   "raw": "4,682.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Canada / HY26"
+   },
+   "note": "보고(as reported) 금액. Brazil = Beer + NAB 합계 부문(원문 'Total')"
+  },
+  {
+   "id": "Q2_Brazil_Beer",
+   "period": "2026Q1",
+   "value": 10960.0,
+   "raw": "10,960.0",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil Beer / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Brazil_NAB",
+   "period": "2026Q1",
+   "value": 2294.6,
+   "raw": "2,294.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil NAB / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Brazil",
+   "period": "2026Q1",
+   "value": 13254.6,
+   "raw": "13,254.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Brazil (Total) / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_CAC",
+   "period": "2026Q1",
+   "value": 2245.2,
+   "raw": "2,245.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / CAC / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_LAS",
+   "period": "2026Q1",
+   "value": 5036.1,
+   "raw": "5,036.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / LAS / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q2_Canada",
+   "period": "2026Q1",
+   "value": 1928.5,
+   "raw": "1,928.5",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Net revenue",
+    "col": "Ambev - Segment financial information / Canada / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q2",
+   "value": 6376.7,
+   "raw": "6,376.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized EBITDA",
+    "col": "Reconciliation - Profit to EBITDA / 2Q26"
+   },
+   "note": "회사 제시 'Normalized EBITDA'(IFRS 비회계 지표). 정의(조정표): Profit + 영업외 예외항목(above/below EBITDA) + Income tax + Share of results of JV + Net finance results + Depreciation & amortization - total. 비교: 회계상 EBITDA 6,356.4(2Q26)"
+  },
+  {
+   "id": "Q3",
+   "period": "2025Q2",
+   "value": 6152.7,
+   "raw": "6,152.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized EBITDA",
+    "col": "Reconciliation - Profit to EBITDA / 2Q25"
+   },
+   "note": "회사 제시 'Normalized EBITDA'(IFRS 비회계 지표). 정의(조정표): Profit + 영업외 예외항목(above/below EBITDA) + Income tax + Share of results of JV + Net finance results + Depreciation & amortization - total. 비교: 회계상 EBITDA 6,356.4(2Q26)"
+  },
+  {
+   "id": "Q3",
+   "period": "2026H1",
+   "value": 13931.6,
+   "raw": "13,931.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized EBITDA",
+    "col": "Reconciliation - Profit to EBITDA / HY26"
+   },
+   "note": "회사 제시 'Normalized EBITDA'(IFRS 비회계 지표). 정의(조정표): Profit + 영업외 예외항목(above/below EBITDA) + Income tax + Share of results of JV + Net finance results + Depreciation & amortization - total. 비교: 회계상 EBITDA 6,356.4(2Q26)"
+  },
+  {
+   "id": "Q3",
+   "period": "2025H1",
+   "value": 13597.4,
+   "raw": "13,597.4",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized EBITDA",
+    "col": "Reconciliation - Profit to EBITDA / HY25"
+   },
+   "note": "회사 제시 'Normalized EBITDA'(IFRS 비회계 지표). 정의(조정표): Profit + 영업외 예외항목(above/below EBITDA) + Income tax + Share of results of JV + Net finance results + Depreciation & amortization - total. 비교: 회계상 EBITDA 6,356.4(2Q26)"
+  },
+  {
+   "id": "Q3",
+   "period": "2026Q1",
+   "value": 7555.0,
+   "raw": "7,555.0",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Normalized EBITDA",
+    "col": "Financial highlights - Ambev consolidated / 1Q26"
+   },
+   "note": "회사 제시 'Normalized EBITDA'(IFRS 비회계 지표). 정의(조정표): Profit + 영업외 예외항목(above/below EBITDA) + Income tax + Share of results of JV + Net finance results + Depreciation & amortization - total. 비교: 회계상 EBITDA 6,356.4(2Q26)"
+  },
+  {
+   "id": "Q3_EBITDA",
+   "period": "2026Q2",
+   "value": 6356.4,
+   "raw": "6,356.4",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "EBITDA",
+    "col": "Reconciliation - Profit to EBITDA / 2Q26"
+   },
+   "note": "회사 제시 비정규화 'EBITDA'(비회계 지표, 참고용)"
+  },
+  {
+   "id": "Q3_EBITDA",
+   "period": "2025Q2",
+   "value": 6096.1,
+   "raw": "6,096.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "EBITDA",
+    "col": "Reconciliation - Profit to EBITDA / 2Q25"
+   },
+   "note": "회사 제시 비정규화 'EBITDA'(비회계 지표, 참고용)"
+  },
+  {
+   "id": "Q3_EBITDA",
+   "period": "2026H1",
+   "value": 13947.9,
+   "raw": "13,947.9",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "EBITDA",
+    "col": "Reconciliation - Profit to EBITDA / HY26"
+   },
+   "note": "회사 제시 비정규화 'EBITDA'(비회계 지표, 참고용)"
+  },
+  {
+   "id": "Q3_EBITDA",
+   "period": "2025H1",
+   "value": 13522.0,
+   "raw": "13,522.0",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "EBITDA",
+    "col": "Reconciliation - Profit to EBITDA / HY25"
+   },
+   "note": "회사 제시 비정규화 'EBITDA'(비회계 지표, 참고용)"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q2",
+   "value": 4814.3,
+   "raw": "4,814.3",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Income from operations",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q26"
+   },
+   "note": "회계상 영업이익(예외항목 반영 후). ITR 'Income from operations'과 일치"
+  },
+  {
+   "id": "Q4",
+   "period": "2025Q2",
+   "value": 4399.1,
+   "raw": "4,399.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Income from operations",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q25"
+   },
+   "note": "회계상 영업이익(예외항목 반영 후). ITR 'Income from operations'과 일치"
+  },
+  {
+   "id": "Q4",
+   "period": "2026H1",
+   "value": 10802.6,
+   "raw": "10,802.6",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Income from operations",
+    "col": "CONSOLIDATED INCOME STATEMENT / HY26"
+   },
+   "note": "회계상 영업이익(예외항목 반영 후). ITR 'Income from operations'과 일치"
+  },
+  {
+   "id": "Q4",
+   "period": "2025H1",
+   "value": 10109.1,
+   "raw": "10,109.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Income from operations",
+    "col": "CONSOLIDATED INCOME STATEMENT / HY25"
+   },
+   "note": "회계상 영업이익(예외항목 반영 후). ITR 'Income from operations'과 일치"
+  },
+  {
+   "id": "Q4",
+   "period": "2026Q1",
+   "value": 5988.4,
+   "raw": "5,988.4",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Income from operations",
+    "col": "CONSOLIDATED INCOME STATEMENT / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q4_Normalized_Operating_Profit",
+   "period": "2026Q2",
+   "value": 4845.5,
+   "raw": "4,845.5",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized Operating Profit",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q26"
+   },
+   "note": "회사 제시 조정 지표(예외항목 제외 전 영업이익), 회계 수치 아님"
+  },
+  {
+   "id": "Q4_Normalized_Operating_Profit",
+   "period": "2025Q2",
+   "value": 4450.3,
+   "raw": "4,450.3",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized Operating Profit",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q25"
+   },
+   "note": "회사 제시 조정 지표(예외항목 제외 전 영업이익), 회계 수치 아님"
+  },
+  {
+   "id": "Q4_Normalized_Operating_Profit",
+   "period": "2026H1",
+   "value": 10797.0,
+   "raw": "10,797.0",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized Operating Profit",
+    "col": "CONSOLIDATED INCOME STATEMENT / HY26"
+   },
+   "note": "회사 제시 조정 지표(예외항목 제외 전 영업이익), 회계 수치 아님"
+  },
+  {
+   "id": "Q4_Normalized_Operating_Profit",
+   "period": "2025H1",
+   "value": 10181.7,
+   "raw": "10,181.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized Operating Profit",
+    "col": "CONSOLIDATED INCOME STATEMENT / HY25"
+   },
+   "note": "회사 제시 조정 지표(예외항목 제외 전 영업이익), 회계 수치 아님"
+  },
+  {
+   "id": "Q4_Normalized_Operating_Profit",
+   "period": "2026Q1",
+   "value": 5951.5,
+   "raw": "5,951.5",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Normalized Operating Profit",
+    "col": "CONSOLIDATED INCOME STATEMENT / 1Q26"
+   },
+   "note": "회사 제시 조정 지표"
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q2",
+   "value": 3386.915,
+   "raw": "3,386,915",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Equity holders of Ambev (Attributable to)",
+    "col": "Three-month period ended: 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q5",
+   "period": "2025Q2",
+   "value": 2717.722,
+   "raw": "2,717,722",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Equity holders of Ambev (Attributable to)",
+    "col": "Three-month period ended: 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q5",
+   "period": "2026H1",
+   "value": 7155.178,
+   "raw": "7,155,178",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Equity holders of Ambev (Attributable to)",
+    "col": "Six-month period ended: 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q5",
+   "period": "2025H1",
+   "value": 6411.668,
+   "raw": "6,411,668",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Equity holders of Ambev (Attributable to)",
+    "col": "Six-month period ended: 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q5",
+   "period": "2026Q1",
+   "value": 3768.3,
+   "raw": "3,768.3",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Equity holders of Ambev",
+    "col": "CONSOLIDATED INCOME STATEMENT / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q2",
+   "value": 3404.5,
+   "raw": "3,404.5",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized profit – Attributable to Ambev holders",
+    "col": "Ambev (consolidated table) / 2Q26"
+   },
+   "note": "회사 제시 'Normalized profit' 중 'Attributable to Ambev holders'. 정의: Profit에서 EBITDA 상·하 예외항목(exceptional items above/below EBITDA)을 제외. 회계 수치 아님"
+  },
+  {
+   "id": "Q6",
+   "period": "2025Q2",
+   "value": 2759.7,
+   "raw": "2,759.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized profit – Attributable to Ambev holders",
+    "col": "Ambev (consolidated table) / 2Q25"
+   },
+   "note": "회사 제시 'Normalized profit' 중 'Attributable to Ambev holders'. 정의: Profit에서 EBITDA 상·하 예외항목(exceptional items above/below EBITDA)을 제외. 회계 수치 아님"
+  },
+  {
+   "id": "Q6",
+   "period": "2026H1",
+   "value": 7119.7,
+   "raw": "7,119.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized profit – Attributable to Ambev holders",
+    "col": "Ambev (consolidated table) / HY26"
+   },
+   "note": "회사 제시 'Normalized profit' 중 'Attributable to Ambev holders'. 정의: Profit에서 EBITDA 상·하 예외항목(exceptional items above/below EBITDA)을 제외. 회계 수치 아님"
+  },
+  {
+   "id": "Q6",
+   "period": "2025H1",
+   "value": 6469.2,
+   "raw": "6,469.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized profit – Attributable to Ambev holders",
+    "col": "Ambev (consolidated table) / HY25"
+   },
+   "note": "회사 제시 'Normalized profit' 중 'Attributable to Ambev holders'. 정의: Profit에서 EBITDA 상·하 예외항목(exceptional items above/below EBITDA)을 제외. 회계 수치 아님"
+  },
+  {
+   "id": "Q6",
+   "period": "2026Q1",
+   "value": 3715.2,
+   "raw": "3,715.2",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Normalized profit – Attributable to Ambev holders",
+    "col": "Ambev consolidated table / 1Q26"
+   },
+   "note": "회사 제시 'Normalized profit' 중 'Attributable to Ambev holders'. 정의: Profit에서 EBITDA 상·하 예외항목(exceptional items above/below EBITDA)을 제외. 회계 수치 아님"
+  },
+  {
+   "id": "Q6_Normalized_Profit_total",
+   "period": "2026Q2",
+   "value": 3492.7,
+   "raw": "3,492.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized Profit",
+    "col": "Reconciliation - Profit to EBITDA / 2Q26"
+   },
+   "note": "회사 제시 'Normalized Profit'(비지배지분 포함 총액)"
+  },
+  {
+   "id": "Q6_Normalized_Profit_total",
+   "period": "2025Q2",
+   "value": 2832.7,
+   "raw": "2,832.7",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized Profit",
+    "col": "Reconciliation - Profit to EBITDA / 2Q25"
+   },
+   "note": "회사 제시 'Normalized Profit'(비지배지분 포함 총액)"
+  },
+  {
+   "id": "Q6_Normalized_Profit_total",
+   "period": "2026H1",
+   "value": 7325.1,
+   "raw": "7,325.1",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized Profit",
+    "col": "Reconciliation - Profit to EBITDA / HY26"
+   },
+   "note": "회사 제시 'Normalized Profit'(비지배지분 포함 총액)"
+  },
+  {
+   "id": "Q6_Normalized_Profit_total",
+   "period": "2025H1",
+   "value": 6652.9,
+   "raw": "6,652.9",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized Profit",
+    "col": "Reconciliation - Profit to EBITDA / HY25"
+   },
+   "note": "회사 제시 'Normalized Profit'(비지배지분 포함 총액)"
+  },
+  {
+   "id": "Q6_Normalized_Profit_total",
+   "period": "2026Q1",
+   "value": 3832.4,
+   "raw": "3,832.4",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Normalized Profit",
+    "col": "CONSOLIDATED INCOME STATEMENT / 1Q26"
+   },
+   "note": "비지배지분 포함"
+  },
+  {
+   "id": "Q6_Normalized_basic_EPS",
+   "period": "2026Q2",
+   "value": 0.22,
+   "raw": "0.22",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized basic earnings per share (R$)",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q26"
+   },
+   "note": "회사 제시 조정 EPS"
+  },
+  {
+   "id": "Q6_Normalized_basic_EPS",
+   "period": "2025Q2",
+   "value": 0.18,
+   "raw": "0.18",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized basic earnings per share (R$)",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q25"
+   },
+   "note": "회사 제시 조정 EPS"
+  },
+  {
+   "id": "Q6_Normalized_basic_EPS",
+   "period": "2026H1",
+   "value": 0.46,
+   "raw": "0.46",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Normalized basic earnings per share (R$)",
+    "col": "CONSOLIDATED INCOME STATEMENT / HY26"
+   },
+   "note": "회사 제시 조정 EPS"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q2",
+   "value": 0.217,
+   "raw": "0.2170",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – common – R$",
+    "col": "Three-month period ended: 2026"
+   },
+   "note": "보통주(ON) 기본 EPS. 보도자료는 반올림 0.22/0.17/0.46/0.41"
+  },
+  {
+   "id": "Q7",
+   "period": "2025Q2",
+   "value": 0.1742,
+   "raw": "0.1742",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – common – R$",
+    "col": "Three-month period ended: 2025"
+   },
+   "note": "보통주(ON) 기본 EPS. 보도자료는 반올림 0.22/0.17/0.46/0.41"
+  },
+  {
+   "id": "Q7",
+   "period": "2026H1",
+   "value": 0.4584,
+   "raw": "0.4584",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – common – R$",
+    "col": "Six-month period ended: 2026"
+   },
+   "note": "보통주(ON) 기본 EPS. 보도자료는 반올림 0.22/0.17/0.46/0.41"
+  },
+  {
+   "id": "Q7",
+   "period": "2025H1",
+   "value": 0.41,
+   "raw": "0.4100",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share – common – R$",
+    "col": "Six-month period ended: 2025"
+   },
+   "note": "보통주(ON) 기본 EPS. 보도자료는 반올림 0.22/0.17/0.46/0.41"
+  },
+  {
+   "id": "Q7",
+   "period": "2026Q1",
+   "value": 0.24,
+   "raw": "0.24",
+   "unit": "R$/share",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Basic earnings per share (R$)",
+    "col": "CONSOLIDATED INCOME STATEMENT / 1Q26"
+   },
+   "note": "보도자료 소수 2자리 반올림 값"
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q2",
+   "value": 4711.44,
+   "raw": "4,711,440",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Cash flow from operating activities",
+    "col": "Three-month period ended: 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q8",
+   "period": "2025Q2",
+   "value": 3050.04,
+   "raw": "3,050,040",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Cash flow from operating activities",
+    "col": "Three-month period ended: 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q8",
+   "period": "2026H1",
+   "value": 7872.32,
+   "raw": "7,872,320",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Cash flow from operating activities",
+    "col": "Six-month period ended: 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q8",
+   "period": "2025H1",
+   "value": 4254.012,
+   "raw": "4,254,012",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Cash flow from operating activities",
+    "col": "Six-month period ended: 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "Q8",
+   "period": "2026Q1",
+   "value": 3160.9,
+   "raw": "3,160.9",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Cash flow from operating activities",
+    "col": "CONSOLIDATED STATEMENT OF CASH FLOWS / 1Q26"
+   },
+   "note": ""
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q2",
+   "value": -879.877,
+   "raw": "(879,877)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment and intangible assets",
+    "col": "Three-month period ended: 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 행(유출, 음수). 보도자료에 별도 'capex' 제시값 없음; ITR 부문표 'Acquisitions of property, plant and equipment' 반기 합계 1,346,732와 동일"
+  },
+  {
+   "id": "Q9",
+   "period": "2025Q2",
+   "value": -1088.203,
+   "raw": "(1,088,203)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment and intangible assets",
+    "col": "Three-month period ended: 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 행(유출, 음수). 보도자료에 별도 'capex' 제시값 없음; ITR 부문표 'Acquisitions of property, plant and equipment' 반기 합계 1,346,732와 동일"
+  },
+  {
+   "id": "Q9",
+   "period": "2026H1",
+   "value": -1346.732,
+   "raw": "(1,346,732)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment and intangible assets",
+    "col": "Six-month period ended: 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 행(유출, 음수). 보도자료에 별도 'capex' 제시값 없음; ITR 부문표 'Acquisitions of property, plant and equipment' 반기 합계 1,346,732와 동일"
+  },
+  {
+   "id": "Q9",
+   "period": "2025H1",
+   "value": -1916.354,
+   "raw": "(1,916,354)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment and intangible assets",
+    "col": "Six-month period ended: 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표 행(유출, 음수). 보도자료에 별도 'capex' 제시값 없음; ITR 부문표 'Acquisitions of property, plant and equipment' 반기 합계 1,346,732와 동일"
+  },
+  {
+   "id": "Q9",
+   "period": "2026Q1",
+   "value": -466.9,
+   "raw": "(466.9)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment and intangible assets",
+    "col": "CONSOLIDATED STATEMENT OF CASH FLOWS / 1Q26"
+   },
+   "note": "현금 유출(음수)"
+  },
+  {
+   "id": "Q9_Brazil",
+   "period": "2026H1",
+   "value": 869.691,
+   "raw": "869,691",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment",
+    "col": "Reportable segments six-month period / Brazil / 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 부문별 설비투자(양수 표기)"
+  },
+  {
+   "id": "Q9_CAC",
+   "period": "2026H1",
+   "value": 189.531,
+   "raw": "189,531",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment",
+    "col": "Reportable segments six-month period / CAC / 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 부문별 설비투자(양수 표기)"
+  },
+  {
+   "id": "Q9_LAS",
+   "period": "2026H1",
+   "value": 190.421,
+   "raw": "190,421",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment",
+    "col": "Reportable segments six-month period / Latin America – South / 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 부문별 설비투자(양수 표기)"
+  },
+  {
+   "id": "Q9_Canada",
+   "period": "2026H1",
+   "value": 97.089,
+   "raw": "97,089",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Acquisitions of property, plant and equipment",
+    "col": "Reportable segments six-month period / Canada / 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 부문별 설비투자(양수 표기)"
+  },
+  {
+   "id": "Q10",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "보도자료·ITR에 회사 제시 FCF 지표 없음"
+  },
+  {
+   "id": "B1",
+   "period": "2026-06-30",
+   "value": 16610.779,
+   "raw": "16,610,779",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B1",
+   "period": "2025-12-31",
+   "value": 18638.228,
+   "raw": "18,638,228",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Cash and cash equivalents",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B2_Investment_securities_current",
+   "period": "2026-06-30",
+   "value": 1735.617,
+   "raw": "1,735,617",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Investment securities (current assets, note 5.2)",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 유동 'Investment securities'(FVTPL 금융자산)"
+  },
+  {
+   "id": "B2_Investment_securities_current",
+   "period": "2025-12-31",
+   "value": 1681.692,
+   "raw": "1,681,692",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Investment securities (current assets, note 5.2)",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 유동 'Investment securities'(FVTPL 금융자산)"
+  },
+  {
+   "id": "B2_Investment_securities_noncurrent",
+   "period": "2026-06-30",
+   "value": 78.088,
+   "raw": "78,088",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Investment securities (non-current assets)",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 비유동, 참고"
+  },
+  {
+   "id": "B2_Investment_securities_noncurrent",
+   "period": "2025-12-31",
+   "value": 123.256,
+   "raw": "123,256",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Investment securities (non-current assets)",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 비유동, 참고"
+  },
+  {
+   "id": "B3",
+   "period": "2026-06-30",
+   "value": 2948.96,
+   "raw": "2,948,960",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Interest-bearing loans and borrowing – Total (note 11)",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 주의: 이 합계는 리스부채 포함(note 11). 리스 제외 차입금은 아래 B3_ 세부 항목(원문 행) 참조; 별도 합계행 없음"
+  },
+  {
+   "id": "B3",
+   "period": "2025-12-31",
+   "value": 3386.924,
+   "raw": "3,386,924",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Interest-bearing loans and borrowing – Total (note 11)",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 주의: 이 합계는 리스부채 포함(note 11). 리스 제외 차입금은 아래 B3_ 세부 항목(원문 행) 참조; 별도 합계행 없음"
+  },
+  {
+   "id": "B3_current",
+   "period": "2026-06-30",
+   "value": 1073.602,
+   "raw": "1,073,602",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Interest-bearing loans and borrowing – Current liabilities",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 리스부채 939,021 포함"
+  },
+  {
+   "id": "B3_noncurrent",
+   "period": "2026-06-30",
+   "value": 1875.358,
+   "raw": "1,875,358",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Interest-bearing loans and borrowing – Non-current liabilities",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 리스부채 1,647,700 포함"
+  },
+  {
+   "id": "B3_Secured_bank_loans",
+   "period": "2026-06-30",
+   "value": 80.871,
+   "raw": "80,871",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Secured bank loans (Carrying amount)",
+    "col": "06/30/2026 liquidity table"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 유동 17,580 + 비유동 63,291 (note 11)"
+  },
+  {
+   "id": "B3_Other_secured_loans",
+   "period": "2026-06-30",
+   "value": 281.368,
+   "raw": "281,368",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Other secured loans (Carrying amount)",
+    "col": "06/30/2026 liquidity table"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 유동 117,001 + 비유동 164,367 (note 11)"
+  },
+  {
+   "id": "B3_Lease_liabilities",
+   "period": "2026-06-30",
+   "value": 2586.721,
+   "raw": "2,586,721",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Lease liabilities (Carrying amount)",
+    "col": "06/30/2026 liquidity table"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 리스부채(따로). 유동 939,021 + 비유동 1,647,700"
+  },
+  {
+   "id": "B3_Lease_liabilities",
+   "period": "2025-12-31",
+   "value": 2975.646,
+   "raw": "2,975,646",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Lease liabilities (Carrying amount)",
+    "col": "12/31/2025 liquidity table"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B4",
+   "period": "2026-06-30",
+   "value": -15397.436,
+   "raw": "(15,397,436)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Net debt/(cash)",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 회사 제시 'Net debt/(cash)'. 정의: Interest-bearing loans and borrowing(유동+비유동, 리스부채 포함) − Current investment securities − Cash and cash equivalents. 음수 = 순현금"
+  },
+  {
+   "id": "B4",
+   "period": "2025-12-31",
+   "value": -16932.996,
+   "raw": "(16,932,996)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Net debt/(cash)",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 회사 제시 'Net debt/(cash)'. 정의: Interest-bearing loans and borrowing(유동+비유동, 리스부채 포함) − Current investment securities − Cash and cash equivalents. 음수 = 순현금"
+  },
+  {
+   "id": "B5",
+   "period": "2026-06-30",
+   "value": 138209.009,
+   "raw": "138,209,009",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Total assets",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B5",
+   "period": "2025-12-31",
+   "value": 145087.151,
+   "raw": "145,087,151",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Total assets",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B6",
+   "period": "2026-06-30",
+   "value": 88313.174,
+   "raw": "88,313,174",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to Ambev’s shareholders",
+    "col": "06/30/2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "B6",
+   "period": "2025-12-31",
+   "value": 87914.039,
+   "raw": "87,914,039",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Equity attributable to Ambev’s shareholders",
+    "col": "12/31/2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환."
+  },
+  {
+   "id": "S1",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "thousand shares",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": "13. CHANGES IN EQUITY / 06/30/2026"
+   },
+   "note": "기준일 기말 자기주식 제외 유통주식 수를 직접 명시한 행 없음(계산 금지). 원문: 총 발행 15,763,665천주, Treasury shares 310,870천주(아래 S1_ 항목). 참고: 2Q26 가중평균 기본 유통주식 15,513.7백만주(보도자료 IS 'Number of basic shares outstanding'). 보통주(ON)만 존재, 우선주 없음"
+  },
+  {
+   "id": "S1_total_issued_ON",
+   "period": "2026-06-30",
+   "value": 15763665,
+   "raw": "15,763,665",
+   "unit": "thousand common shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Total (shareholding table)",
+    "col": "06/30/2026 Thousands of common shares"
+   },
+   "note": "보통주(ON)만"
+  },
+  {
+   "id": "S1_treasury_ON",
+   "period": "2026-06-30",
+   "value": 310870,
+   "raw": "310,870",
+   "unit": "thousand common shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Treasury shares",
+    "col": "06/30/2026 Thousands of common shares"
+   },
+   "note": "1.97%"
+  },
+  {
+   "id": "S1_weighted_basic",
+   "period": "2026Q2",
+   "value": 15513.7,
+   "raw": "15,513.7",
+   "unit": "million shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Number of basic shares outstanding (millions of shares)",
+    "col": "CONSOLIDATED INCOME STATEMENT / 2Q26"
+   },
+   "note": "가중평균(EPS 산정용), 기말 수치 아님"
+  },
+  {
+   "id": "S1_weighted_basic",
+   "period": "2026H1",
+   "value": 15610.0,
+   "raw": "15,610.0",
+   "unit": "million shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Number of basic shares outstanding (millions of shares)",
+    "col": "CONSOLIDATED INCOME STATEMENT / HY26"
+   },
+   "note": "가중평균"
+  },
+  {
+   "id": "S2",
+   "period": "2026-06-30",
+   "value": null,
+   "raw": "",
+   "unit": "",
+   "status": "null",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "ADR 1주당 원주 비율이 세 문서 어디에도 명시되지 않음"
+  },
+  {
+   "id": "R1_total",
+   "period": "2026Q2",
+   "value": 694.639,
+   "raw": "694,639",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Board of Directors’ Meeting 05/04/2026 – Interest on capital",
+    "col": "13.3.2 Total amount"
+   },
+   "note": "원 단위 R$ thousand → R$ million. 'IOC May 2026', 총액(세전), 지급 2026-12-31까지. 2026년 상반기 선언분은 이 1건뿐(2026H1 동일). 본문엔 'approximately R$700 million'"
+  },
+  {
+   "id": "R1_per_share",
+   "period": "2026Q2",
+   "value": 0.0449,
+   "raw": "0.0449",
+   "unit": "R$/share (gross)",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Board of Directors’ Meeting 05/04/2026 – Interest on capital",
+    "col": "13.3.2 Amount per share"
+   },
+   "note": "보통주(ON), 원천징수 후 순액 R$0.0370"
+  },
+  {
+   "id": "R1_total",
+   "period": "2026H1",
+   "value": 694.639,
+   "raw": "694,639",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Board of Directors’ Meeting 05/04/2026 – Interest on capital",
+    "col": "13.3.2 Total amount"
+   },
+   "note": "2026년 표에 유일한 선언 건"
+  },
+  {
+   "id": "R1_subsequent_IOC",
+   "period": "2026Q3",
+   "value": 1100.0,
+   "raw": "approximately R$ 1.1 billion",
+   "unit": "R$ million",
+   "status": "ambiguous",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Capital Allocation (text, p.1/p.3)",
+    "col": ""
+   },
+   "note": "기간 후 사건: 2026-07-29 이사회 승인 신규 IOC 약 R$1.1 billion(세전), 2026년 12월까지 지급. 주당 금액 미기재. 원 표기 R$ billion → million. 'approximately' 표기"
+  },
+  {
+   "id": "R2_cashflow",
+   "period": "2026Q2",
+   "value": -2239.153,
+   "raw": "(2,239,153)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Proceeds from/(buybacks of) treasury shares",
+    "col": "Three-month period ended: 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표, 순액(유출 음수)"
+  },
+  {
+   "id": "R2_cashflow",
+   "period": "2026H1",
+   "value": -2652.614,
+   "raw": "(2,652,614)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Proceeds from/(buybacks of) treasury shares",
+    "col": "Six-month period ended: 2026"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표, 순액(유출 음수)"
+  },
+  {
+   "id": "R2_cashflow",
+   "period": "2025Q2",
+   "value": -774.602,
+   "raw": "(774,602)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Proceeds from/(buybacks of) treasury shares",
+    "col": "Three-month period ended: 2025"
+   },
+   "note": "원 단위 R$ thousand → R$ million 변환. 현금흐름표, 순액(유출 음수)"
+  },
+  {
+   "id": "R2_program_shares",
+   "period": "2026H1",
+   "value": 171482300,
+   "raw": "171,482,300",
+   "unit": "shares",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "1.3.3 Share Buyback Program (text)",
+    "col": ""
+   },
+   "note": "2025년 10월 승인 프로그램(최대 208,000,000주) 중 2026-06-30까지 취득; 총비용 R$2,751 million. 주식변동표 'Share Buyback' 171,482천주 / R$(2,751,334)천"
+  },
+  {
+   "id": "R2_program_cost",
+   "period": "2026H1",
+   "value": -2751.334,
+   "raw": "(2,751,334)",
+   "unit": "R$ million",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "Share Buyback (treasury shares table, Balance 2026)",
+    "col": "Acquisition/(realization of shares) – Thousands of Brazilian Reais"
+   },
+   "note": "원 단위 R$ thousand → million"
+  },
+  {
+   "id": "OP_total_volume",
+   "period": "2026Q2",
+   "value": 39.7279,
+   "raw": "39,727.9",
+   "unit": "million hl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Volume ('000 hl)",
+    "col": "Financial highlights - Ambev consolidated / 2Q26"
+   },
+   "note": "원 단위 '000 hl → 백만 hl 변환"
+  },
+  {
+   "id": "OP_total_volume",
+   "period": "2025Q2",
+   "value": 39.5693,
+   "raw": "39,569.3",
+   "unit": "million hl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Volume ('000 hl)",
+    "col": "Financial highlights - Ambev consolidated / 2Q25"
+   },
+   "note": "원 단위 '000 hl → 백만 hl 변환"
+  },
+  {
+   "id": "OP_total_volume",
+   "period": "2026H1",
+   "value": 84.6959,
+   "raw": "84,695.9",
+   "unit": "million hl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Volume ('000 hl)",
+    "col": "Financial highlights - Ambev consolidated / HY26"
+   },
+   "note": "원 단위 '000 hl → 백만 hl 변환"
+  },
+  {
+   "id": "OP_total_volume",
+   "period": "2025H1",
+   "value": 84.887,
+   "raw": "84,887.0",
+   "unit": "million hl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "Volume ('000 hl)",
+    "col": "Financial highlights - Ambev consolidated / HY25"
+   },
+   "note": "원 단위 '000 hl → 백만 hl 변환"
+  },
+  {
+   "id": "OP_total_volume",
+   "period": "2026Q1",
+   "value": 44.9679,
+   "raw": "44,967.9",
+   "unit": "million hl",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-002777/abevpr1q26_6k.htm",
+    "page": "",
+    "row": "Volume ('000 hl)",
+    "col": "Financial highlights - Ambev consolidated / 1Q26"
+   },
+   "note": "원 단위 '000 hl → 백만 hl 변환"
+  },
+  {
+   "id": "X1_ITR",
+   "period": "2026H1",
+   "value": null,
+   "raw": "IAS 34 – Interim Financial Reporting as issued by the IASB; IFRS",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003969/abevitr2q26_6k.htm",
+    "page": "",
+    "row": "2. Basis of preparation",
+    "col": ""
+   },
+   "note": "보고통화 R$, 'All amounts in thousands of Brazilian Reais'"
+  },
+  {
+   "id": "X1_PR",
+   "period": "2026Q2",
+   "value": null,
+   "raw": "R$ million; Normalized 지표는 'not accounting measures under accounting practices in Brazil, IFRS or US GAAP'",
+   "unit": "",
+   "status": "ok",
+   "source": {
+    "file": "0001292814-26-003970/abevpr2q26_6k.htm",
+    "page": "",
+    "row": "",
+    "col": ""
+   },
+   "note": "보도자료 R$ million, IFRS 기반 + 비회계 조정지표"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{"ticker":"NU",
+ "top":[
+  {"date":"2025-02-21","filed":"2025-02-20",
+   "title_ko":"4Q24 실적 발표 후 급락(매출 기대 미달·2025 투자 확대 시사)",
+   "summary_ko":"2월 20일 장 마감 후 2024년 4분기·연간 실적(6-K)을 냈고, 다음 날 ADR이 -18.9% 하락했다. 매크로 모델 예측은 -2.3%에 그쳐 잔차가 -18.7%로 표본 내 최대 비매크로 하락이다. 보도자료 본문은 이미지라 로컬 원문에서 확인되는 숫자는 연간 감사 재무제표뿐이며, 하락 원인(매출 컨센서스 미달·2025년 투자 확대 언급)은 Motley Fool(Nasdaq 게재) 기사로만 확인된다.",
+   "why_important_ko":"성장 프리미엄을 받던 주가가 매출 기대 미달과 '투자의 해' 가이던스로 재평가된 사건으로, 이후 수익성 대 성장 투자 논쟁의 출발점이 됐다.",
+   "facts":[
+    {"fact_ko":"2024년 연간 순이익 19억 7,211만 달러(2023년 10억 3,053만 달러), 연결손익계산서 표 기준(단위: 천 달러)","quote":"Net income for the year | 1,972,112 | 1,030,530","file":"NU__000129281425000480__nufs4q24_6k.htm"},
+    {"fact_ko":"2024년 총매출 115억 1,708만 달러(천 달러 단위 표)","quote":"Total Revenue | 11,517,075 | 8,028,976","file":"NU__000129281425000480__nufs4q24_6k.htm"},
+    {"fact_ko":"보도자료(nupr4q24)·발표자료는 본문이 이미지로만 구성돼 로컬 원문에서 분기 수치 인용 불가(모호)","quote":"","file":"NU__000129281425000483__nupr4q24_6k.htm"},
+    {"fact_ko":"(외부 출처, 금요일 하락 기사) 매출이 시장 목표에 미달","quote":"revenue fell short of the market's target","file":"https://www.nasdaq.com/articles/why-nu-stock-plummeting-today"},
+    {"fact_ko":"(외부 출처) 투자자들이 향후 가이던스에 불만","quote":"investors aren't happy with the company's forward guidance","file":"https://www.nasdaq.com/articles/why-nu-stock-plummeting-today"}
+   ]},
+  {"date":"2026-02-26","filed":"2026-02-25",
+   "title_ko":"4Q25 사상 최대 이익에도 하락: 2026 '전환의 해'·효율성 악화 예고",
+   "summary_ko":"2025년 4분기 순이익 8.95억 달러, ROE 33%로 사상 최대 실적과 새 '경영 손익(Managerial P&L)' 공시체계를 발표했으나, 다음 날 ADR은 -9.6% 하락했다(매크로 예측 -0.9%, 잔차 -9.2%). 원문은 2026년을 글로벌 확장 투자의 '변곡의 해'로 규정하며 단기 효율성 비율 상승 압력을 예고했다. 이 문구가 하락의 직접 원인인지는 원문만으로 확정할 수 없어 모호.",
+   "why_important_ko":"실적 서프라이즈보다 미국 진출·멕시코 은행 인가 등 대규모 투자 단계로의 전략 전환과 공시체계 변경이 주가 방향을 바꾼 사례.",
+   "facts":[
+    {"fact_ko":"4Q25 순이익 8억 9,480만 달러, 전분기 대비 13%, 전년 대비 50% 증가","quote":"Net Income (in $ millions) 894.8 782.7 13% 552.6 50%","file":"NU__000129281426000501__nu20260225_6k.htm"},
+    {"fact_ko":"2026년을 변곡의 해로 규정","quote":"Nu views 2026 as an inflection year","file":"NU__000129281426000501__nu20260225_6k.htm"},
+    {"fact_ko":"전략 투자로 단기 효율성 비율 상승 압력 가능성 언급","quote":"may result in near-term upward pressure on the efficiency ratio","file":"NU__000129281426000501__nu20260225_6k.htm"},
+    {"fact_ko":"멕시코 Prosofipo(예금보호기금) 일회성 출연으로 위험조정 NIM이 10.5%로 하락","quote":"one-off extraordinary contribution to Prosofipo","file":"NU__000129281426000501__nu20260225_6k.htm"},
+    {"fact_ko":"미국 OCC 조건부 은행 인가(2026년 1월) 획득","quote":"receiving conditional OCC approval in January 2026","file":"NU__000129281426000501__nu20260225_6k.htm"},
+    {"fact_ko":"4Q25부터 경영 손익(Managerial P&L) 공시체계 도입, KPMG 제한적 검증","quote":"Nubank is introducing its Managerial P&L","file":"NU__000129281426000505__nu20260225_6k2.htm"}
+   ]}
+ ],
+ "others":[
+  {"date":"2025-08-15","filed":"2025-08-14","title_ko":"2Q25 실적: 순이익 6.37억 달러 사상 최대, 매출 37억 달러(+40% FXN)","R":0.0908,"res":0.0881,"file":"NU__000129281425003069__nupr2q25_6k.htm"},
+  {"date":"2026-06-02","filed":"2026-06-01","title_ko":"CFO 교체: 기예르미 라구 → 롭 리빙스턴(전 Visa 북미 CFO), 7/13 발효","R":-0.0816,"res":-0.0884,"file":"NU__000129281426003267__nu20260601_6k.htm"},
+  {"date":"2026-08-14","filed":"2026-08-13","title_ko":"2Q26 실적: 분기 순이익 10억 달러 돌파 언급, 멕시코 은행 출범, NIM 22.9%","R":0.0933,"res":0.084,"file":"raw/NU/0001292814-26-004222/nupr2q26_6k.htm"}
+ ],
+ "no_filing_moves":[
+  {"date":"2023-01-03","R":-0.1253,"res":-0.1314,"cause_ko":"공시 없음·원인 미확인","url":""},
+  {"date":"2026-09-28","R":-0.1001,"res":-0.0902,"cause_ko":"공시 없음·원인 미확인 (9/16 Itaú BBA 하향 기사는 날짜 불일치로 제외)","url":""}
+ ]}
