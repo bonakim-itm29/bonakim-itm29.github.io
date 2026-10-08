@@ -1,18 +1,19 @@
 {
  "_note": "다음 실적발표 일정. status: 확정(회사 공지) / 예상(작년 같은 분기 일정 기준). 날짜는 현지 기준. 매일 자동 점검 작업이 확정되면 고칩니다. reflected_period: 페이지 분석에 이미 반영된 최근 실적 분기.",
- "updated": "2026-10-07",
+ "updated": "2026-10-08",
  "companies": {
   "samsung-electronics": {
    "period": "2026년 3분기",
-   "date": "2026-10-08",
-   "status": "확정",
-   "kind": "잠정실적",
-   "next": {
-    "date": "2026-10-29",
-    "status": "예상",
-    "kind": "확정실적·컨퍼런스콜"
+   "date": "2026-10-29",
+   "status": "예상",
+   "kind": "확정실적·컨퍼런스콜(10/8 잠정실적 발표됨)",
+   "reflected_period": "2026년 2분기",
+   "prelim": {
+    "date": "2026-10-08",
+    "revenue_krw_tn": 195.0,
+    "op_krw_tn": 107.4
    },
-   "reflected_period": "2026년 2분기"
+   "source": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-2026%EB%85%84-3%EB%B6%84%EA%B8%B0-%EC%9E%A0%EC%A0%95%EC%8B%A4%EC%A0%81-%EB%B0%9C%ED%91%9C"
   },
   "sk-hynix": {
    "period": "2026년 3분기",
