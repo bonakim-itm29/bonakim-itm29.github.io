@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>혁신적 탄소배출권 거래</title>
+<meta name="description" content="블록체인·스마트 계약·디지털 MRV로 탄소배출권 거래의 문제를 풀려는 시도를 논문 5편과 실제 사례로 정리">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F5F3; --paper:#FFFFFF; --fg:#17201D; --muted:#5A6661; --line:#D5DCD8; --soft:#E8EDEA;
+  --accent:#1E6B62; --warn:#965812; --warnbg:#FBF1E3; --ok:#2E6B3A; --okbg:#E5F1E7; --bad:#A3362B; --badbg:#F8E6E3;
+  --display:"Noto Serif KR","Nanum Myeongjo",Georgia,serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.72;margin:0}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+.read{max-width:740px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.3;margin:0}
+h1{font-size:clamp(26px,4.4vw,38px);font-weight:800;margin-top:6px}
+h2{font-size:22px;font-weight:800;margin-top:52px;padding-top:16px;border-top:1px solid var(--line)}
+h3{font-size:16.5px;font-weight:600;margin-top:22px}
+p{margin:.65em 0}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--accent)}
+.sub{color:var(--muted);font-size:14px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:14px;text-decoration:none;border:1px solid var(--accent);color:var(--accent);background:var(--paper);border-radius:6px;padding:6px 12px}
+.btn:hover{background:var(--soft)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.oneline{font-size:16.5px;line-height:1.7;background:var(--paper);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0 0}
+.scroll{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--soft);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12.5px;background:var(--soft);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td b{font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{margin:0 0 4px;font-size:16px}
+.card p{font-size:14px;margin:.35em 0 0}
+.card .k{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.chip.ok{border-color:var(--ok);color:var(--ok)} .chip.bad{border-color:var(--bad);color:var(--bad)}
+.paper{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin-top:12px}
+.paper .n{font-family:var(--mono);font-size:15px;color:#fff;background:var(--accent);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center}
+.paper>div{min-width:0}
+.paper h3{margin:0;font-size:16px}
+.paper .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.paper dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px;margin:10px 0 0}
+.paper dt{color:var(--muted);white-space:nowrap} .paper dd{margin:0;min-width:0}
+.look{margin-top:10px;font-size:13.5px;background:var(--okbg);border-radius:4px;padding:8px 10px}
+.look.none{background:var(--soft);color:var(--muted)}
+.case{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:0 6px 6px 0;padding:14px 16px;margin-top:12px}
+.case.fail{border-left-color:var(--bad)}
+.case h3{margin:0;font-size:16px}
+.case .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.case p{font-size:14.5px;margin:.5em 0 0}
+.note{background:var(--warnbg);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;font-size:14px;margin:14px 0}
+ol.plain{padding-left:22px} ol.plain li{margin:8px 0}
+ul.refs{padding-left:18px;font-size:13.5px} ul.refs li{margin:5px 0}
+footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (max-width:560px){.paper{grid-template-columns:1fr}.paper dl{grid-template-columns:1fr}.paper dt{margin-top:4px}}
+</style>
+</head><body>
+<div class="wrap">
+<header class="read">
+  <div class="eyebrow"><a href="../index.html" style="color:inherit">기후기술과 탄소중립경영</a> · 과제 · 문헌·사례 정리</div>
+  <h1>기술은 탄소배출권 거래를 믿을 수 있게 만들 수 있는가</h1>
+  <p class="sub">블록체인·스마트 계약·디지털 MRV로 탄소배출권 거래의 문제를 풀려는 시도를 인용수 상위 논문 5편과 실제 사례로 정리했습니다. 환경 비전공자의 입장에서 개념부터 잡는 것을 목표로 했습니다. 2026-10-15 작성.</p>
+  <div class="btns"><a class="btn" href="혁신적_탄소배출권_거래_솔루션.docx" download>Word 요약본 내려받기</a><a class="btn" href="#cases">실제 사례 바로가기</a><a class="btn" href="#paper-cases">논문 속 사례 보기</a></div>
+  <p class="oneline">블록체인은 <b>기록</b>을 위조할 수 없게 만들고, 스마트 계약은 <b>거래</b>를 자동화하고, 센서·위성·AI는 <b>측정</b>을 정확하게 만든다. 하지만 "그 감축량이 진짜인가"라는 질문은 기술만으로 풀리지 않는다.</p>
+</header>
+
+<section>
+  <h2>1. 지금 탄소시장의 문제</h2>
+  <p class="read">탄소배출권은 이산화탄소 1톤을 배출해도 된다는(또는 줄였다는) 디지털 증서입니다. 이 증서를 다루는 방식에 다섯 가지 약점이 있습니다.</p>
+  <div class="scroll"><table>
+    <tr><th>문제</th><th>쉬운 설명</th><th>실제로 있었던 일</th></tr>
+    <tr><td><b>이중 계산</b></td><td>같은 감축량을 두 곳에서 각자 자기 실적으로 세는 것. 상품권 한 장을 두 번 쓰는 것과 같다.</td><td>파리협정 이후 국가별 등록부가 따로 운영되어, 같은 감축이 여러 번 주장되는지 확인하기 어렵다(세계은행, 2023).</td></tr>
+    <tr><td><b>사기</b></td><td>배출권이 돈처럼 거래되면서 범죄의 대상이 된다.</td><td>2008~09년 EU 배출권거래제에서 배출권을 이용한 부가가치세 사기로 약 50억 유로의 세수 손실(Europol, 2009).</td></tr>
+    <tr><td><b>보안·불투명성</b></td><td>누가 누구에게 배출권을 넘겼는지 기록이 여러 기관에 흩어져 있다.</td><td>2011년 1월 오스트리아·체코·그리스 등의 등록부가 해킹되어 수백만 톤이 도난, EU가 등록부 간 이전을 일시 중단(I4CE, 2011).</td></tr>
+    <tr><td><b>비싼 중개</b></td><td>거래소·브로커·인증기관을 거칠 때마다 수수료와 시간이 든다.</td><td>작은 기업이나 개인, 태양광 가정은 시장에 참여하기 어렵다.</td></tr>
+    <tr><td><b>느린 검증(MRV)</b></td><td>감축량을 측정·보고·검증하는 과정이 사람 손으로 이뤄져 느리고 틀리기 쉽다.</td><td>Verra는 PDF·엑셀·현장 수작업 측정을 대체하려고 위성 기반 디지털 MRV를 시범 도입했다(2022).</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>2. 핵심 개념 5가지</h2>
+  <div class="grid">
+    <div class="card"><div class="k">BLOCKCHAIN</div><h3>블록체인</h3><p>거래 기록을 여러 컴퓨터가 똑같이 나눠 갖는 장부. 반 친구 모두가 같은 출석부를 한 권씩 갖고 있어 누구도 몰래 고칠 수 없는 것과 같다.</p><div class="chips"><span class="chip">이중 계산·사기 방지</span></div></div>
+    <div class="card"><div class="k">SMART CONTRACT</div><h3>스마트 계약</h3><p>조건이 맞으면 자동으로 실행되는 프로그램. 돈을 넣고 버튼을 누르면 사람 없이 물건이 나오는 자판기와 같다.</p><div class="chips"><span class="chip">중개 비용 감소</span></div></div>
+    <div class="card"><div class="k">TOKENIZATION</div><h3>토큰화</h3><p>배출권 1톤을 디지털 토큰 1개로 만드는 것. 쪼개고 옮기기 쉬워 작은 단위로도 거래할 수 있다.</p><div class="chips"><span class="chip">참여 확대</span></div></div>
+    <div class="card"><div class="k">PEER-TO-PEER</div><h3>P2P 거래</h3><p>거래소를 거치지 않고 참여자끼리 직접 사고파는 방식. 중고 거래 앱에서 개인끼리 거래하는 것과 비슷하다.</p><div class="chips"><span class="chip">개인·지역사회 참여</span></div></div>
+    <div class="card"><div class="k">DIGITAL MRV</div><h3>디지털 MRV</h3><p>굴뚝 센서, 위성, AI가 배출량과 감축량을 자동으로 측정해 바로 기록하는 방식. 사람이 엑셀에 옮겨 적는 단계를 없앤다.</p><div class="chips"><span class="chip">검증 속도·정확도</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>3. 논문 5편 요약</h2>
+  <p class="read">인용수는 OpenAlex 기준(2026-10-15 조회)입니다. 이 분야는 2017년 무렵 시작된 신생 분야라 인용 500건을 넘는 논문은 아직 없습니다.</p>
+
+  <div class="paper" id="p1"><span class="n">1</span><div>
+    <h3>블록체인 배출권거래제 + 판매자·구매자 평판 시스템</h3>
+    <div class="meta">Khaqqi, Sikorski, Hadinoto &amp; Kraft (2018) · <i>Applied Energy</i> 209 · 인용 356건 · 무료 원문</div>
+    <dl><dt>문제</dt><dd>중앙 기관에 의존하는 배출권거래제는 투명성이 낮고 사기에 취약하다.</dd>
+    <dt>아이디어</dt><dd>배출권 거래를 블록체인에 기록하고, 온라인 쇼핑몰 판매자 평점처럼 참여자의 평판 점수를 함께 기록해 신뢰할 수 있는 거래 상대가 우대받게 한다.</dd>
+    <dt>핵심 메시지</dt><dd>기술만으로는 부족하고, 참여자가 좋은 행동을 하도록 유인 구조를 함께 설계해야 한다.</dd></dl>
+  </div></div>
+
+  <div class="paper" id="p2"><span class="n">2</span><div>
+    <h3>전기와 탄소배출권을 함께 거래하는 P2P 시장</h3>
+    <div class="meta">Hua, Jiang, Sun &amp; Wu (2020) · <i>Applied Energy</i> 279 · 인용 210건 · 무료 원문</div>
+    <dl><dt>문제</dt><dd>태양광 가정처럼 전기를 만들고 쓰기도 하는 프로슈머는 기존 탄소시장에 참여할 수 없다.</dd>
+    <dt>아이디어</dt><dd>이웃끼리 전기를 직접 사고팔 때 그 전기에 딸린 탄소배출권도 함께 거래하고, 정산은 스마트 계약이 자동으로 처리한다.</dd>
+    <dt>핵심 메시지</dt><dd>탄소시장을 대기업만의 시장에서 개인과 지역사회가 참여하는 시장으로 넓힐 수 있다.</dd></dl>
+  </div></div>
+
+  <div class="paper" id="p3"><span class="n">3</span><div>
+    <h3>건물 감축량 검증(MRV)에 블록체인 적용: 문헌 리뷰</h3>
+    <div class="meta">Woo, Fatima, Kibert, Newman, Tian &amp; Srinivasan (2021) · <i>Building and Environment</i> 205 · 인용 209건</div>
+    <dl><dt>문제</dt><dd>건물에서 에너지를 아껴도 감축량을 믿을 수 있게 증명하기 어려워 크레딧으로 인정받기 힘들다.</dd>
+    <dt>아이디어</dt><dd>측정 데이터를 블록체인에 기록해 MRV 과정을 투명하고 빠르게 만드는 연구들을 정리했다.</dd>
+    <dt>핵심 메시지</dt><dd>탄소시장의 진짜 병목은 거래가 아니라 "얼마나 줄였는지 믿을 수 있게 증명하는 일"이다.</dd></dl>
+  </div></div>
+
+  <div class="paper" id="p4"><span class="n">4</span><div>
+    <h3>센서부터 거래까지 잇는 계층형 블록체인 시스템</h3>
+    <div class="meta">Al Sadawi, Madani, Saboor, Ndiaye &amp; Abu-Lebdeh (2021) · <i>Technological Forecasting and Social Change</i> 173 · 인용 195건</div>
+    <dl><dt>문제</dt><dd>측정·보고·거래가 따로 이뤄져 중간에 오류나 조작이 끼어들 틈이 생긴다.</dd>
+    <dt>아이디어</dt><dd>IoT 센서가 측정한 배출량을 블록체인에 바로 기록하고(사물 블록체인), 스마트 계약이 한도 초과 여부를 확인해 거래까지 자동 처리한다.</dd>
+    <dt>핵심 메시지</dt><dd>1~3번의 아이디어를 하나의 전체 시스템으로 묶은 설계도에 가깝다.</dd></dl>
+  </div></div>
+
+  <div class="paper" id="p5"><span class="n">5</span><div>
+    <h3>의류 제조 공정에 적용한 블록체인 배출권거래</h3>
+    <div class="meta">Fu, Shu &amp; Liu (2018) · <i>Sustainability</i> 10(4) · 인용 191건 · 무료 원문</div>
+    <dl><dt>문제</dt><dd>옷 한 벌이 만들어지기까지 여러 공정에서 생기는 배출을 따로 파악하기 어렵다.</dd>
+    <dt>아이디어</dt><dd>공정별 배출을 블록체인에 공개 기록하는 '배출 링크' 체계를 배출권거래제와 연결했다.</dd>
+    <dt>핵심 메시지</dt><dd>다기준 평가에서 기존 배출권거래제 6.69점, 1번 논문의 블록체인 평판 모델 6.97~7.37점(11점 척도)으로, 블록체인 도입의 개선 가능성을 보였다. 다만 경쟁력 항목은 기존 제도보다 낮게 평가됐다.</dd></dl>
+  </div></div>
+
+  <h3 id="paper-cases">논문 속 사례 보기</h3>
+  <p class="read">다섯 논문은 모두 설계안이나 시뮬레이션 단계입니다. 원문에서 사례를 직접 확인할 수 있는 곳을 정리했습니다.</p>
+  <div class="scroll"><table>
+    <tr><th>논문</th><th>사례 내용</th><th>어디서 보나</th></tr>
+    <tr><td>5. Fu et al. (2018)</td><td>가상 제품 "Product A"의 3단계 제조 공정에 배출 계산 구조를 적용한 사례, 기존 제도·1번 논문 모델과의 다기준 비교</td><td><a href="https://www.mdpi.com/2071-1050/10/4/1105">원문(무료)</a> 4.1절 Case Study, 5절 Multi-Criteria Evaluation</td></tr>
+    <tr><td>참고. Sipthorpe et al. (2022)</td><td>탄소시장용 블록체인 솔루션을 개발하는 실제 조직 39곳을 배출권거래제·자발적 시장·파리협정 6조·국제항공(CORSIA) 네 분야로 나눠 성숙도를 평가. 대부분 개념 검증 단계(기술성숙도 3 이하)이고 한 곳만 상용 단계(9)</td><td><a href="https://doi.org/10.1016/j.oneear.2022.06.004">원문(무료)</a></td></tr>
+    <tr><td>1. Khaqqi et al. (2018)</td><td colspan="2"><a href="https://dr.ntu.edu.sg/bitstream/10356/106481/1/Incorporating%20sellerbuyer%20reputation%20system%20.pdf">무료 원문</a>이 있으나, 작성 시점에 본문을 열람하지 못해 사례 위치는 표시하지 않았습니다.</td></tr>
+    <tr><td>2. Hua et al. (2020)</td><td colspan="2"><a href="http://nrl.northumbria.ac.uk/id/eprint/44604/1/Final%20Manuscript_Applied%20Energy_Hua.pdf">무료 원문(저자 원고)</a>이 있으나, 작성 시점에 본문을 열람하지 못해 사례 위치는 표시하지 않았습니다.</td></tr>
+    <tr><td>3·4. Woo / Al Sadawi</td><td colspan="2">구독 논문이라 본문을 확인하지 못했습니다. 학교 도서관을 통해 열람할 수 있습니다.</td></tr>
+  </table></div>
+</section>
+
+<section id="cases">
+  <h2>4. 실제 사례: 성공과 실패</h2>
+  <p class="read">논문 밖에서 핵심 개념이 실제로 쓰인 사례입니다. 초록은 성과를 낸 시도, 빨강은 교훈을 남긴 시도입니다.</p>
+
+  <div class="case">
+    <h3>기후행동데이터신탁(CAD Trust): 블록체인으로 등록부를 잇다</h3>
+    <div class="meta">세계은행 · 국제배출권거래협회(IETA) · 싱가포르 정부 · 2022년 12월 출범 · <span class="chip ok">블록체인</span></div>
+    <p>여러 탄소 크레딧 등록부의 정보를 공개 블록체인 기반 데이터 계층(Chia 네트워크)으로 연결해, 같은 감축량이 여러 번 주장되는 이중 계산을 찾아낼 수 있게 한 무료 공개 플랫폼입니다. 출범 전 3년간 시험 운영에 11개국 정부가 참여했고, Verra·Gold Standard 같은 주요 인증기관이 운영위원회에 들어가 있습니다.</p>
+    <p class="sub">출처: <a href="https://blogs.worldbank.org/en/climatechange/why-data-infrastructure-key-transparent-carbon-market">World Bank Blogs (2023)</a> · <a href="https://ieta.org/?p=4147">IETA (2022)</a></p>
+  </div>
+
+  <div class="case">
+    <h3>Verra × Pachama: 위성과 AI로 숲의 탄소를 측정</h3>
+    <div class="meta">세계 최대 자발적 탄소 인증기관 Verra · 2022년 11월 시범 도입 발표 · <span class="chip ok">디지털 MRV</span></div>
+    <p>PDF·엑셀·현장 수작업에 의존하던 산림 탄소 측정을, 위성 데이터와 AI 모델로 자동화하는 디지털 MRV 플랫폼을 시범 도입했습니다. 크레딧 발급에 드는 비용과 시간을 줄이고 투명성을 높이는 것이 목적이며, 결과는 향후 디지털 MRV 지침에 반영할 계획이었습니다.</p>
+    <p class="sub">출처: <a href="https://verra.org/worlds-largest-carbon-program-pilots-digital-measuring-of-forest-carbon/">Verra (2022)</a></p>
+  </div>
+
+  <div class="case">
+    <h3>Power Ledger × BCPG: 태국 방콕의 P2P 재생에너지 거래</h3>
+    <div class="meta">호주 Power Ledger · 태국 BCPG · 2018년 방콕 T77 지구 시범 · <span class="chip ok">P2P · 블록체인</span></div>
+    <p>건물들이 태양광으로 만든 전기를 블록체인 위에서 서로 직접 사고판 아시아 최초의 P2P 재생에너지 거래 시범사업입니다. 이후 태국 지방전력청 자회사와 BCPG의 합작사(TDED)와 독점 협력으로 확대되었고, 재생에너지 인증서 거래 플랫폼 도입도 추진했습니다. 2번 논문(Hua et al.)이 제안한 구조가 현실에서 어떤 모습인지 보여줍니다. 다만 공개된 거래량 수치는 없습니다.</p>
+    <p class="sub">출처: <a href="https://www.powerledger.io/media/power-ledger-signed-an-exclusive-partnership-with-tded-to-accelerate-blockchain-based-digital-energy-business-in-thailand">Power Ledger (2020)</a></p>
+  </div>
+
+  <div class="case fail">
+    <h3>Toucan Protocol · KlimaDAO: 토큰화가 저품질 크레딧을 되살리다</h3>
+    <div class="meta">2021~2022 · <span class="chip bad">토큰화의 실패</span></div>
+    <p>Verra에서 퇴역 처리된 크레딧 약 2,200만 톤을 토큰으로 바꿔 블록체인에 올렸습니다. 그런데 가장 싼 크레딧을 사들이는 전략 때문에 오래되고 실제 감축 효과가 의심되는 크레딧에 수요가 몰렸습니다. 결국 Verra는 2022년 5월 25일 퇴역 크레딧의 토큰화를 금지했고 토큰 가격은 급락했습니다.</p>
+    <p><b>교훈:</b> 블록체인은 기록을 투명하게 만들지만, 처음부터 품질이 낮은 크레딧을 걸러내지는 못한다.</p>
+    <p class="sub">출처: <a href="https://time.com/6181907/crypto-carbon-credits/">TIME (2022)</a></p>
+  </div>
+
+  <div class="case fail">
+    <h3>열대우림 상쇄 크레딧의 '유령 크레딧' 논란</h3>
+    <div class="meta">2023년 1월 · 가디언·디차이트·SourceMaterial 공동 조사 · <span class="chip bad">측정의 실패</span></div>
+    <p>9개월간의 언론 조사에서 Verra의 열대우림 상쇄 크레딧 중 90% 이상이 실제 감축이 없는 '유령 크레딧'일 가능성이 높다는 분석이 나왔습니다. Verra는 분석 방법이 잘못되었다고 반박했습니다. 위 Verra × Pachama 디지털 MRV 같은 시도가 왜 필요한지를 보여주는 배경입니다.</p>
+    <p class="sub">출처: <a href="https://www.solardaily.com/reports/Most_rainforest_carbon_offsets_worthless_media_analysis_999.html">Space Daily/AFP (2023)</a></p>
+  </div>
+</section>
+
+<section>
+  <h2>5. 디스커션</h2>
+  <ol class="plain read">
+    <li><b>오라클 문제:</b> 블록체인은 기록의 위조를 막지만, 처음부터 잘못된 데이터가 들어오는 것은 막지 못한다. 결국 신뢰의 핵심은 블록체인 바깥의 측정(MRV)이다. Toucan과 유령 크레딧 사례가 이를 보여준다(Kreibich &amp; Hermwille, 2021).</li>
+    <li><b>성숙도:</b> 탄소시장용 블록체인 프로젝트 대부분이 아직 개념 검증 단계이고(Sipthorpe et al., 2022), 논문 5편도 모두 설계안이나 시뮬레이션이다. 실제 운영에서 효과를 측정한 근거는 부족하다.</li>
+    <li><b>에너지 모순:</b> 일부 블록체인은 전력 소비가 커서, 탄소를 줄이려는 시스템이 오히려 탄소를 배출할 수 있다. 어떤 방식의 블록체인을 쓰는지가 중요하다.</li>
+    <li><b>제도 연계:</b> 기술로 만든 기록을 정부와 국제기구가 공식 감축 실적으로 인정해야 의미가 있다. CAD Trust가 국제기구 주도로 만들어진 이유이기도 하다.</li>
+    <li><b>한국에의 적용:</b> 이러한 기술이 한국 배출권거래제(K-ETS)와 국내 자발적 탄소시장에서 어떤 문제를 먼저 해결할 수 있을지 논의가 필요하다.</li>
+  </ol>
+  <div class="note">1~4번 논문은 본문을 열람하지 못해 서지 정보와 이 분야의 일반적인 내용을 바탕으로 요약했습니다. 5번 논문과 Sipthorpe 리뷰는 원문 또는 초록을 확인했습니다. 구체적인 수치를 인용할 때는 원문을 확인하세요.</div>
+</section>
+
+<section>
+  <h2>참고문헌</h2>
+  <ul class="refs">
+    <li>Khaqqi, K. N., Sikorski, J. J., Hadinoto, K., &amp; Kraft, M. (2018). <a href="https://doi.org/10.1016/j.apenergy.2017.10.070">Incorporating seller/buyer reputation-based system in blockchain-enabled emission trading application</a>. <i>Applied Energy</i>, 209, 8–19.</li>
+    <li>Hua, W., Jiang, J., Sun, H., &amp; Wu, J. (2020). <a href="https://doi.org/10.1016/j.apenergy.2020.115539">A blockchain based peer-to-peer trading framework integrating energy and carbon markets</a>. <i>Applied Energy</i>, 279, 115539.</li>
+    <li>Woo, J., Fatima, R., Kibert, C. J., et al. (2021). <a href="https://doi.org/10.1016/j.buildenv.2021.108199">Applying blockchain technology for building energy performance MRV and the carbon credit market: A review of the literature</a>. <i>Building and Environment</i>, 205, 108199.</li>
+    <li>Al Sadawi, A., Madani, B., Saboor, S., et al. (2021). <a href="https://doi.org/10.1016/j.techfore.2021.121124">A comprehensive hierarchical blockchain system for carbon emission trading utilizing blockchain of things and smart contract</a>. <i>Technological Forecasting and Social Change</i>, 173, 121124.</li>
+    <li>Fu, B., Shu, Z., &amp; Liu, X. (2018). <a href="https://www.mdpi.com/2071-1050/10/4/1105">Blockchain enhanced emission trading framework in fashion apparel manufacturing industry</a>. <i>Sustainability</i>, 10(4), 1105.</li>
+    <li>Sipthorpe, A., Brink, S., Van Leeuwen, T., &amp; Staffell, I. (2022). <a href="https://doi.org/10.1016/j.oneear.2022.06.004">Blockchain solutions for carbon markets are nearing maturity</a>. <i>One Earth</i>, 5(7), 779–791.</li>
+    <li>Kreibich, N., &amp; Hermwille, L. (2021). <a href="https://doi.org/10.1080/14693062.2021.1948384">Caught in between: credibility and feasibility of the voluntary carbon market post-2020</a>. <i>Climate Policy</i>, 21(7), 939–957.</li>
+    <li>Europol (2009.12.9). <a href="https://europeansources.info/?p=436389">Carbon credit fraud causes more than 5 billion euros damage for European taxpayer</a>.</li>
+    <li>I4CE (2011). <a href="https://www.i4ce.org/wp-content/uploads/11-02-Climate-Brief-4-Closing-the-door-to-fraud-in-the-EU-ETS.pdf">Closing the door to fraud in the EU ETS</a>. Climate Brief No. 4.</li>
+    <li>World Bank Blogs (2023.3.7). <a href="https://blogs.worldbank.org/en/climatechange/why-data-infrastructure-key-transparent-carbon-market">Why data infrastructure is key for a transparent carbon market</a>.</li>
+    <li>IETA (2022.12.7). <a href="https://ieta.org/?p=4147">IETA and Founding Partners Announce the Launch of Climate Action Data Trust</a>.</li>
+    <li>Verra (2022.11.16). <a href="https://verra.org/worlds-largest-carbon-program-pilots-digital-measuring-of-forest-carbon/">World's largest carbon program pilots digital measuring of forest carbon</a>.</li>
+    <li>Power Ledger (2020.5.25). <a href="https://www.powerledger.io/media/power-ledger-signed-an-exclusive-partnership-with-tded-to-accelerate-blockchain-based-digital-energy-business-in-thailand">Power Ledger signed an exclusive partnership with TDED in Thailand</a>.</li>
+    <li>Chow, A. R. (2022.5.26). <a href="https://time.com/6181907/crypto-carbon-credits/">Crypto carbon credits and Verra's tokenization ban</a>. <i>TIME</i>.</li>
+    <li>Space Daily/AFP (2023.1.18). <a href="https://www.solardaily.com/reports/Most_rainforest_carbon_offsets_worthless_media_analysis_999.html">Most rainforest carbon offsets worthless: media analysis</a>.</li>
+  </ul>
+</section>
+
+<footer>인용수 출처: OpenAlex(2026-10-15 조회). 논문 요약은 원문을 그대로 옮기지 않고 새로 정리한 것입니다.</footer>
+</div>
+</body></html>
