@@ -32,6 +32,7 @@
 .alert{border:1px solid var(--up);background:color-mix(in srgb,var(--up) 10%,var(--surface));border-radius:10px;padding:10px 14px;margin-top:10px;font-size:14px}
 .alert b{color:var(--up)}
 /* 인과 사슬 */
+.sw li{display:flex;gap:8px;align-items:flex-start}.sw .ck{flex:0 0 auto;width:20px;text-align:center;font-weight:700}.sw .ok{color:var(--up)}.sw .no{color:var(--muted)}.stage{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:700;background:var(--accent-soft);color:var(--accent)}
 .chains{display:grid;gap:14px;margin-top:12px}
 .chain h3{font-size:15.5px;margin:0 0 4px}
 .chain .q{font-size:13px;color:var(--muted);margin:0 0 10px}
@@ -101,6 +102,14 @@ a.big{display:block;color:inherit}
     <div id="moveAlert"></div>
   </div>
   <p class="hint" style="margin-top:8px">시나리오 조건은 칼럼 분석(2편)의 A·B·C 정의를 데이터로 옮긴 것입니다. 신호가 켜지면 깃헙 이슈로 알림이 갑니다. 학습용이며 투자 권유가 아닙니다.</p>
+</section>
+
+<section id="switch">
+  <h2>원유 → 중국 주식 전환 신호</h2>
+  <p class="hint">WTI $150~200 구간에서 원유 비중을 줄이고 중국 주식으로 옮기는 시점을 보기 위한 학습용 신호입니다. ① 원유 쪽 조건(가격 구간·상승 탄력 둔화)과 ② 중국 쪽 조건(이선철 대표가 칼럼에서 중국 내수 회복의 조짐으로 꼽은 지표)을 따로 점검합니다. 시장 데이터로 계산하는 항목은 매일 자동 갱신되고, 정책 발표·월간 통계는 아래 기록을 따릅니다. 투자 권유가 아닙니다.</p>
+  <div class="panel"><div id="swStage"></div><div class="grid2" style="margin-top:10px"><div><h3 style="font-size:15px;margin:0 0 6px">① 원유 쪽</h3><ul class="tight sw" id="swOil"></ul></div><div><h3 style="font-size:15px;margin:0 0 6px">② 중국 쪽</h3><ul class="tight sw" id="swChina"></ul></div></div>
+  <h3 style="font-size:15px;margin:14px 0 6px">정책·통계 기록</h3><div id="swEvents" class="small"></div>
+  <details class="fold mini" style="margin-top:8px"><summary><span>일정과 판단 규칙</span><span class="more">보기</span></summary><div id="swRules" class="small" style="margin-top:8px"></div></details></div>
 </section>
 
 <section>
@@ -313,11 +322,48 @@ function chains(){const dbei=d1m('bei10'),dtp=d1m('tp10_acm'),du=d1m('ust10'),s2
  R.push(['⑤ 원유 실물 → 가격 → 재구성 신호','재고와 선물 커브, 귀금속 대비 가격으로 보는 원유 사이클',[ ['crude_comm','상업 재고'],['crude_spr','SPR'],['wti_front','WTI'],['wti_dec27','27년 12월물'],['osr','오일/실버'],['gor','금/원유'] ],r5]);
  $('chains').innerHTML=R.map(([t,q,ns,rd])=>`<div class="panel chain"><h3>${t}</h3><p class="q">${q}</p><div class="flow">${ns.map(([k,l],i)=>node(k,l,i)).filter(Boolean).join('')}</div><div class="read"><ul>${rd.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`).join('');
  $('chains').querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>openRow(b.dataset.go))}
+
+/* ---------- 원유 → 중국 전환 신호 ---------- */
+function ma(p,n){if(p.length<n)return null;let a=0;for(let i=p.length-n;i<p.length;i++)a+=p[i][1];return a/n}
+function rawPts(k){return pts(k)||[]}
+function switchSignal(CW){
+ const wti=v('wti_front');const wp=rawPts('wti_front');const ma20=ma(wp,20);const hi60=Math.max(...wp.slice(-60).map(x=>x[1]));
+ const oil=[
+  [wti>=150,`WTI $150 이상 (현재 $${fmt(wti,1)}) — 저자가 생산기업·원유 비중 조정의 기준으로 제시한 구간`],
+  [wti>=200,`WTI $200 이상 — 구간 상단`],
+  [wti>=120&&ma20&&wti<ma20&&wti<hi60*0.9,`상승 탄력 둔화: $120 이상에서 20일 평균($${fmt(ma20,1)}) 아래, 최근 60일 고점 대비 −10% 이상`]];
+ const d=(k,days)=>{const p=rawPts(k);if(p.length<2)return null;const L=p[p.length-1];const B=backPt(p,days);return B?[L[1],B[1]]:null};
+ const rr=d('real10',30),cny=d('usdcny',30),cg=d('cgr',30);
+ const rel=(a,b,days)=>{const x=d(a,days),y=d(b,days);return x&&y?(x[0]/x[1])/(y[0]/y[1])-1:null};
+ const kwRel=rel('kweb','spx',30);const hs=rawPts('hsindx').length?rawPts('hsindx'):join(rawPts('hsi'),rawPts('ndx'),(a,b)=>a/b);const hsMA=ma(hs,600);const hsL=hs.length?hs[hs.length-1][1]:null;
+ const cgp=join(rawPts('copper_front'),rawPts('gold_front'),(a,b)=>a/b*1000);const cgC=cgp.length>25?cgp[cgp.length-1][1]/backPt(cgp,30)[1]-1:null;
+ const china=[
+  [rr&&rr[0]<rr[1],`미 10년 실질금리 1개월 하락 (${rr?bp(rr[0]-rr[1]):'–'}) — 저자는 실질금리 하락을 중국 테크 반등의 가장 큰 대외 요인으로 봄`],
+  [cny&&cny[0]<cny[1]&&cny[0]<7.5,`위안화 1개월 강세, 7.5 미만 (USD/CNY ${cny?fmt(cny[0],3):'–'})`],
+  [kwRel!=null&&kwRel>0,`중국 인터넷(KWEB)이 1개월간 S&P 500보다 강함 (${kwRel==null?'–':(kwRel>0?'+':'')+(kwRel*100).toFixed(1)+'%p'})`],
+  [hsMA&&hsL>hsMA,hsMA?`항셍/나스닥 비율이 120주 평균 위 (현재 ${hsL.toFixed(3)} vs 평균 ${hsMA.toFixed(3)}) — 저자가 장기 아웃퍼폼 확인 기준으로 본 추세`:'항셍/나스닥 비율 120주 평균 — 데이터 기간이 부족해 계산하지 못함'],
+  [cgC!=null&&cgC>0,`구리/금 비율 1개월 상승 (${cgC==null?'–':(cgC>0?'+':'')+(cgC*100).toFixed(1)+'%'}) — 중국 실물 수요 기대`]];
+ const ev=(CW&&CW.events)||[];const recent=ev.filter(e=>(Date.now()-new Date(e.date))/864e5<=45);
+ const pos=recent.filter(e=>e.status==='준비'||e.status==='발표'||e.status==='확인').length, neg=recent.filter(e=>e.status==='부정').length;
+ china.push([pos>0&&pos>neg,`최근 45일 정책·통계 기록: 긍정 ${pos}건, 부정 ${neg}건 (아래 기록)`]);
+ const oilOn=oil[0][0]||oil[2][0];const cN=china.filter(x=>x[0]).length;const policy=china[5][0];
+ let st,desc;
+ if(oilOn&&cN>=4&&policy){st='전환 검토';desc='원유 조건과 중국 조건(정책 기록 포함)이 함께 충족됐습니다. 저자의 순서대로라면 원유 비중을 나눠 줄이고 중국 비중을 늘리는 것을 검토할 단계입니다.'}
+ else if(oilOn&&cN>=2){st='준비';desc='원유 쪽 조건은 켜졌고 중국 쪽은 일부만 충족됐습니다. 정책 발표나 통계 확인을 기다리는 단계입니다.'}
+ else if(!oilOn&&cN>=4){st='중국 우호 · 원유 유지';desc='중국 쪽 조건은 좋아지고 있지만 원유가 아직 전환 구간에 이르지 않았습니다.'}
+ else{st='관찰';desc='원유가 전환 구간에 이르지 않았거나 중국 쪽 조건이 부족합니다.'}
+ $('swStage').innerHTML=`<span class="stage">${st}</span> <span class="small">중국 조건 ${cN}/6 충족 · 원유 조건 ${oilOn?'켜짐':'꺼짐'}</span><p style="margin:8px 0 0">${desc}</p>`;
+ const li=a=>a.map(([ok,t])=>`<li><span class="ck ${ok?'ok':'no'}">${ok?'✓':'·'}</span><span>${t}</span></li>`).join('');
+ $('swOil').innerHTML=li(oil);$('swChina').innerHTML=li(china);
+ $('swEvents').innerHTML=ev.length?'<ul class="tight">'+ev.slice().reverse().slice(0,12).map(e=>`<li><b>${e.date}</b> [${e.status}] ${e.title}${e.url?` <a href="${e.url}" target="_blank" rel="noopener">출처</a>`:''}</li>`).join('')+'</ul>':'아직 기록된 정책 발표·통계가 없습니다. 매일 아침 예약 작업이 중국 정부·인민은행 발표와 월간 통계를 확인해 추가합니다.';
+ $('swRules').innerHTML='<ul class="tight"><li><b>단계</b>: 관찰 → 준비(원유 조건 + 중국 조건 2개 이상) → 전환 검토(원유 조건 + 중국 조건 4개 이상, 그중 정책·통계 기록 포함).</li><li><b>원유 조건</b>: WTI $150 이상, 또는 $120 이상에서 상승 탄력 둔화(20일 평균 아래, 60일 고점 대비 −10%).</li>'+(CW&&CW.calendar?CW.calendar.map(c=>`<li><b>${c.name}</b> (${c.when}): ${c.why}</li>`).join(''):'')+'<li>무효화·지연 조건(칼럼): 부동산 안정 지연·고용 개선 미약으로 소비 회복이 길어질 때, 미국의 대중 제재, 위안화 7.5 이상 약세.</li></ul>';
+}
 /* ---------- 시작 ---------- */
 fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;S=d.series;
  $('stamp').textContent='마지막 갱신: '+new Date(d.updated_utc).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',dateStyle:'medium',timeStyle:'short'})+' (한국 시간)';
  {const st=d.stale||[];$('stamp').textContent+=st.length?' · ⚠ 늦어진 지표 '+st.length+'개: '+st.map(x=>x.name+'('+x.last+')').join(', '):' · 모든 지표가 발표 주기대로 최신';}
  try{scenarios()}catch(e){console.error(e)}try{signals()}catch(e){console.error(e)}try{chains()}catch(e){console.error(e)}
+ fetch('china_watch.json?'+Date.now()).then(r=>r.json()).catch(()=>null).then(cw=>{try{switchSignal(cw)}catch(e){console.error(e)}});
  $('groups').innerHTML=GROUPS.map(([g,t])=>`<h3 class="grp">${t}</h3><div class="rows">${ORDER[g].map(rowHtml).join('')}</div>`).join('');
  document.querySelectorAll('details.row').forEach(el=>el.addEventListener('toggle',()=>{if(el.open)fillMore(el)}));
  if(location.hash.startsWith('#r-'))openRow(location.hash.slice(3));

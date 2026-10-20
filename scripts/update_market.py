@@ -98,7 +98,7 @@ COMP = [  # 관심기업 주가: slug(페이지 폴더), 야후 심볼, 통화
 ]
 PRICES = OUT.parent.parent / "companies" / "prices.json"
 
-LONG = {"CL=F", "SI=F", "GC=F"}  # 오일/실버 비율의 장기 비교용
+LONG = {"CL=F", "SI=F", "GC=F", "^HSI", "^IXIC"}  # 오일/실버 비율의 장기 비교용
 
 
 def yahoo(sym, closed_only=False):
