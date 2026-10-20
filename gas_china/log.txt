@@ -1,0 +1,75 @@
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGF26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGF26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGF26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGF26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGF26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGF26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGG26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGG26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGG26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGG26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGG26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGG26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGH26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGH26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGH26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGH26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGH26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGH26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGJ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGJ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGJ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGJ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGJ26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGJ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGK26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGK26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGK26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGK26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGK26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGK26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGM26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGM26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGM26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGM26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGM26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGM26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGN26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGN26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGN26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGN26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGN26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGN26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGQ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGQ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGQ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGQ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGQ26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGQ26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGU26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGU26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGU26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGU26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGU26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGU26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGV26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGV26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGV26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGV26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGV26.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGV26.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGZ31.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGZ31.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGZ31.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGZ31.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGZ31.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGZ31.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGF32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGF32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGF32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGF32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGF32.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGF32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGN32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGN32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGN32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGN32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGN32.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGN32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGQ32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGQ32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGQ32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGQ32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGQ32.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGQ32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
+retry 0 https://query1.finance.yahoo.com/v8/finance/chart/NGU32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 1 https://query1.finance.yahoo.com/v8/finance/chart/NGU32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 2 https://query1.finance.yahoo.com/v8/finance/chart/NGU32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+retry 3 https://query1.finance.yahoo.com/v8/finance/chart/NGU32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits: HTTP Error 404: Not Found
+yahoo fail NGU32.NYM: failed https://query1.finance.yahoo.com/v8/finance/chart/NGU32.NYM?period1=0&period2=1792532103&interval=1d&events=div,splits
