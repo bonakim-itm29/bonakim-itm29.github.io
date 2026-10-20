@@ -33,6 +33,13 @@ FUT = [  # key, 표시명, 야후 심볼, 단위
     ("wti_dec28", "WTI 2028년 12월물", "CLZ28.NYM", "$/bbl"),
     ("brent_dec27", "Brent 2027년 12월물", "BZZ27.NYM", "$/bbl"),
     ("brent_dec28", "Brent 2028년 12월물", "BZZ28.NYM", "$/bbl"),
+    ("ng_front", "천연가스 근월물 (Henry Hub, NYMEX)", "NG=F", "$/MMBtu"),
+    ("ng_dec27", "천연가스 2027년 12월물", "NGZ27.NYM", "$/MMBtu"),
+    ("ng_dec28", "천연가스 2028년 12월물", "NGZ28.NYM", "$/MMBtu"),
+    ("ttf_front", "유럽 가스 TTF 근월물", "TTF=F", "EUR/MWh"),
+    ("jkm_front", "아시아 LNG JKM 근월물", "JKM=F", "$/MMBtu"),
+    ("kweb", "중국 인터넷 ETF (KWEB)", "KWEB", "$"),
+    ("fxi", "중국 대형주 ETF (FXI)", "FXI", "$"),
 ]
 FRED = [
     ("ust10", "미 국채 10년물 금리", "DGS10", "%"),
@@ -41,6 +48,7 @@ FRED = [
     ("real10", "10년 실질금리 (TIPS)", "DFII10", "%"),
     ("wti_spot", "WTI 현물 (쿠싱)", "DCOILWTICO", "$/bbl"),
     ("brent_spot", "Brent 현물 (유럽)", "DCOILBRENTEU", "$/bbl"),
+    ("hh_spot", "Henry Hub 천연가스 현물", "DHHNGSP", "$/MMBtu"),
     ("t10y3m", "장단기 금리차 10년−3개월", "T10Y3M", "%p"),
     ("t10y2y", "장단기 금리차 10년−2년", "T10Y2Y", "%p"),
     ("fed_assets", "연준 총자산", "WALCL", "$M"),
