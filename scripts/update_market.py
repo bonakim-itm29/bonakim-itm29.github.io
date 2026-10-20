@@ -183,7 +183,7 @@ def fill_latest(series, errors):
             errors.append(f"{key} treasury: {e}")
 
 
-AUDIT_ALLOW = {"wti_spot": 14, "brent_spot": 14}  # 일간 값이지만 EIA가 주 1회(수요일) 몰아서 공개
+AUDIT_ALLOW = {"wti_spot": 14, "brent_spot": 14, "hh_spot": 14}  # 일간 값이지만 EIA가 주 1회(수요일) 몰아서 공개
 
 
 def audit(series, errors):

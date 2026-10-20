@@ -65,6 +65,8 @@ def val_items(score, kind, b):
                  "inv": b.get("fcf_yield") if "수익률" in k else b.get("nc_share")}.get(move)
         if "NAV" in k and b.get("nav_sec"):
             exact = b["price"] / b["nav_sec"] if b["nav_sec"] > 0 else None
+        if "보수" in k and b.get("nav_cons") is not None:
+            exact = b["price"] / b["nav_cons"] if b["nav_cons"] > 0 else None
         if x is not None and exact is not None and abs(exact - x) <= 0.06 * abs(x) + 0.006:
             x = exact  # 페이지 표시값(반올림) 대신 정밀값
         if x is None or rule is None or abs(RULES[rule](x) - it["pts"]) > 0.02:
@@ -88,6 +90,9 @@ def main():
             b.update(kind="energy", date=val.get("asof") or DATES.get(slug, DEFAULT_DATE), price=val["price"],
                      mcap=val["mktcap_m"], net_debt=val["net_debt_m"], ev=val["ev_m"],
                      ev_ebitdax=val.get("ev_ebitdax_q2ann"), fcf_yield=val.get("fcf_yield_h1ann"))
+            gn = grab(html, "gasnav")
+            if gn and gn.get("nav_cons") is not None:
+                b["nav_cons"] = gn["nav_cons"]
             if nav and nav.get("rows"):
                 r0 = nav["rows"][0]
                 b.update(nav_sec=r0["nav"], nav_oil0=r0["oil"], nav_per10=nav.get("per10"), nav_bench=nav.get("bench"))
