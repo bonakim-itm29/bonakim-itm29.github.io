@@ -9,7 +9,7 @@
   },
   {
    "name": "당 전체회의(중전회)",
-   "when": "부정기(올해 10월)",
+   "when": "올해 10월 26~29일(5중전회)",
    "why": "올해 의제는 당 운영이라 대형 부양 발표 가능성은 낮게 봄. 경기가 더 나빠지면 전후로 추가 대응 가능"
   },
   {
@@ -34,6 +34,12 @@
   }
  ],
  "events": [
+  {
+   "date": "2026-09-21",
+   "status": "준비",
+   "title": "5중전회 10월 26~29일 베이징 개최 확정. 의제는 당 운영(전면적 엄격한 당 관리) — 경제 대책 발표 가능성은 낮지만 전후 추가 대응이 붙는지 확인",
+   "url": "https://news.cgtn.com/news/2026-09-21/CPC-leadership-stresses-Party-self-governance-sets-Party-plenum-dates-1QCkqPyd3qg/share_amp.html"
+  },
   {
    "date": "2026-09-28",
    "status": "발표",
