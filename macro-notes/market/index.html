@@ -32,7 +32,7 @@
 .alert{border:1px solid var(--up);background:color-mix(in srgb,var(--up) 10%,var(--surface));border-radius:10px;padding:10px 14px;margin-top:10px;font-size:14px}
 .alert b{color:var(--up)}
 /* 인과 사슬 */
-.sw li{display:flex;gap:8px;align-items:flex-start}.sw .ck{flex:0 0 auto;width:20px;text-align:center;font-weight:700}.sw .ok{color:var(--up)}.sw .no{color:var(--muted)}.stage{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:700;background:var(--accent-soft);color:var(--accent)}
+.swl li{display:flex;gap:8px;align-items:flex-start;margin:6px 0}.swl li>span:last-child{flex:1 1 auto;min-width:0}.swl .ck{flex:0 0 auto;width:20px;text-align:center;font-weight:700}.swl .ok{color:var(--up)}.swl .no{color:var(--muted)}#swStage .hd{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}.stage{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:700;background:var(--accent-soft);color:var(--accent)}
 .chains{display:grid;gap:14px;margin-top:12px}
 .chain h3{font-size:15.5px;margin:0 0 4px}
 .chain .q{font-size:13px;color:var(--muted);margin:0 0 10px}
@@ -107,7 +107,7 @@ a.big{display:block;color:inherit}
 <section id="switch">
   <h2>원유 → 중국 주식 전환 신호</h2>
   <p class="hint">WTI $150~200 구간에서 원유 비중을 줄이고 중국 주식으로 옮기는 시점을 보기 위한 학습용 신호입니다. ① 원유 쪽 조건(가격 구간·상승 탄력 둔화·오일/실버 비율)과 ② 중국 쪽 조건(이선철 대표가 칼럼에서 중국 내수 회복의 조짐으로 꼽은 지표)을 따로 점검합니다. 시장 데이터로 계산하는 항목은 매일 자동 갱신되고, 정책 발표·월간 통계는 아래 기록을 따릅니다. 투자 권유가 아닙니다.</p>
-  <div class="panel"><div id="swStage"></div><div class="grid2" style="margin-top:10px"><div><h3 style="font-size:15px;margin:0 0 6px">① 원유 쪽</h3><ul class="tight sw" id="swOil"></ul></div><div><h3 style="font-size:15px;margin:0 0 6px">② 중국 쪽</h3><ul class="tight sw" id="swChina"></ul></div></div>
+  <div class="panel"><div id="swStage"></div><div class="grid2" style="margin-top:10px"><div><h3 style="font-size:15px;margin:0 0 6px">① 원유 쪽</h3><ul class="tight swl" id="swOil"></ul></div><div><h3 style="font-size:15px;margin:0 0 6px">② 중국 쪽</h3><ul class="tight swl" id="swChina"></ul></div></div>
   <h3 style="font-size:15px;margin:14px 0 6px">정책·통계 기록</h3><div id="swEvents" class="small"></div>
   <details class="fold mini" style="margin-top:8px"><summary><span>일정과 판단 규칙</span><span class="more">보기</span></summary><div id="swRules" class="small" style="margin-top:8px"></div></details></div>
 </section>
@@ -355,7 +355,7 @@ function switchSignal(CW){
  else if(oilOn&&cN>=2){st='준비';desc='원유 쪽 조건은 켜졌고 중국 쪽은 일부만 충족됐습니다. 정책 발표나 통계 확인을 기다리는 단계입니다.'}
  else if(!oilOn&&cN>=4){st='중국 우호 · 원유 유지';desc='중국 쪽 조건은 좋아지고 있지만 원유가 아직 전환 구간에 이르지 않았습니다.'}
  else{st='관찰';desc='원유가 전환 구간에 이르지 않았거나 중국 쪽 조건이 부족합니다.'}
- $('swStage').innerHTML=`<span class="stage">${st}</span> <span class="small">중국 조건 ${cN}/${china.length} 충족 · 원유 조건 ${oilOn?'켜짐':'꺼짐'}</span><p style="margin:8px 0 0">${desc}</p>`;
+ $('swStage').innerHTML=`<div class="hd"><span class="stage">${st}</span><span class="small">중국 조건 ${cN}/${china.length} 충족 · 원유 조건 ${oilOn?'켜짐':'꺼짐'}</span></div><p style="margin:8px 0 0">${desc}</p>`;
  const li=a=>a.map(([ok,t])=>`<li><span class="ck ${ok?'ok':'no'}">${ok?'✓':'·'}</span><span>${t}</span></li>`).join('');
  $('swOil').innerHTML=li(oil);$('swChina').innerHTML=li(china);
  $('swEvents').innerHTML=ev.length?'<ul class="tight">'+ev.slice().reverse().slice(0,12).map(e=>`<li><b>${e.date}</b> [${e.status}] ${e.title}${e.url?` <a href="${e.url}" target="_blank" rel="noopener">출처</a>`:''}</li>`).join('')+'</ul>':'아직 기록된 정책 발표·통계가 없습니다. 매일 아침 예약 작업이 중국 정부·인민은행 발표와 월간 통계를 확인해 추가합니다.';
