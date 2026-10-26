@@ -1,6 +1,6 @@
 {
  "_note": "다음 실적발표 일정. status: 확정(회사 공지) / 예상(작년 같은 분기 일정 기준). 날짜는 현지 기준. 매일 자동 점검 작업이 확정되면 고칩니다. reflected_period: 페이지 분석에 이미 반영된 최근 실적 분기.",
- "updated": "2026-10-24",
+ "updated": "2026-10-27",
  "companies": {
   "samsung-electronics": {
    "period": "2026년 3분기",
@@ -26,8 +26,10 @@
   "sk-hynix": {
    "period": "2026년 3분기",
    "date": "2026-10-28",
-   "status": "예상",
-   "reflected_period": "2026년 2분기"
+   "status": "확정",
+   "reflected_period": "2026년 2분기",
+   "kind": "10/28 09:00(서울) 실적 컨퍼런스콜",
+   "source": "https://www.sec.gov/Archives/edgar/data/0002120882/000119312526420934/d413172d6k.htm"
   },
   "sm-energy": {
    "period": "2026년 3분기",
@@ -39,15 +41,19 @@
   },
   "crescent-energy": {
    "period": "2026년 3분기",
-   "date": "2026-11-03",
-   "status": "예상",
-   "reflected_period": "2026년 2분기"
+   "date": "2026-11-02",
+   "status": "확정",
+   "reflected_period": "2026년 2분기",
+   "kind": "11/2 장 마감 후 발표, 11/3 컨퍼런스콜",
+   "source": "https://s21.q4cdn.com/856702509/files/doc_news/2026/10/Crescent-Energy-Schedules-Q3-2026-Earnings-Release-and-Conference-Call-10-15-26.pdf"
   },
   "kosmos-energy": {
    "period": "2026년 3분기",
    "date": "2026-11-02",
-   "status": "예상",
-   "reflected_period": "2026년 2분기"
+   "status": "확정",
+   "reflected_period": "2026년 2분기",
+   "kind": "11/2 영국 장 시작 전 발표, 같은 날 11:00 ET 웹캐스트",
+   "source": "https://finviz.com/news/401071/kosmos-energy-to-host-third-quarter-2026-results-and-webcast-on-november-2-2026"
   },
   "tencent": {
    "period": "2026년 3분기",
@@ -132,9 +138,10 @@
   "itau": {
    "period": "2026년 3분기",
    "date": "2026-11-03",
-   "status": "예상",
+   "status": "확정",
    "reflected_period": "2026년 2분기",
-   "source": "전년 발표 시기 기준 추정(회사 일정 미확인)"
+   "source": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/",
+   "kind": "11/3 장 마감 후 발표, 11/4 컨퍼런스콜"
   },
   "nu": {
    "period": "2026년 3분기",
@@ -145,17 +152,19 @@
   },
   "bradesco": {
    "period": "2026년 3분기",
-   "date": "2026-10-30",
-   "status": "예상",
+   "date": "2026-10-22",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 2분기",
-   "source": "전년 발표 시기 기준 추정(회사 일정 미확인)"
+   "source": "https://www.infomoney.com.br/mercados/bradesco-bbdc4-resultados-terceiro-trimestre-2026/",
+   "kind": "10/22 장 시작 전 발표, 10/23 컨퍼런스콜 — 페이지 반영 대기"
   },
   "ambev": {
    "period": "2026년 3분기",
-   "date": "2026-10-29",
-   "status": "예상",
+   "date": "2026-10-28",
+   "status": "확정",
    "reflected_period": "2026년 2분기",
-   "source": "전년 발표 시기 기준 추정(회사 일정 미확인)"
+   "source": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/",
+   "kind": "10/28 장 시작 전 발표, 10/29 컨퍼런스콜"
   },
   "sabesp": {
    "period": "2026년 3분기",

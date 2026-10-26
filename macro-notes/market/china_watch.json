@@ -1,6 +1,6 @@
 {
  "_note": "원유 → 중국 전환 신호 가운데 시장 데이터로 자동 계산할 수 없는 항목(정책 발표·예고, 월간 통계)의 기록. 매일 아침 예약 작업이 뉴스와 공식 발표를 확인해 추가한다. status: 준비(예고·회의 일정·관계자 발언) / 발표(구체적 정책) / 확인(통계로 효과 확인) / 부정(반대 신호).",
- "updated": "2026-10-24",
+ "updated": "2026-10-27",
  "calendar": [
   {
    "name": "10월 말 정치국 회의",
@@ -53,6 +53,18 @@
    "url": "https://www.thestar.com.my/business/business-news/2026/09/29/china-unveils-rate-cut-mortgage-subsidies-to-spur-growth"
   },
   {
+   "date": "2026-10-09",
+   "status": "발표",
+   "title": "재정부: 남은 지방정부 부채 한도에서 5,500억 위안 추가 배정 — 현·구 단위 재정 보강과 '유효 투자 확대' 지원",
+   "url": "https://www.mysteel.net/analysis/5144196-china-announces-additional-local-government-debt-quota-to-support-growth"
+  },
+  {
+   "date": "2026-10-14",
+   "status": "부정",
+   "title": "9월 원유 수입 3,710만 톤(일 903만 배럴) — 전월비 +1.1%지만 전년비 −21.5%, 비축유 소진으로 수입 대체",
+   "url": "https://www.brecorder.com/news/40444158/chinas-crude-stocks-slump-despite-slight-rise-in-september-import-rate"
+  },
+  {
    "date": "2026-10-19",
    "status": "확인",
    "title": "3분기 GDP 4.5%(예상 4.4%, 2분기 4.3%). 9월 소매판매 +1.1%(8월 +0.4%), 산업생산 +5.5%",
@@ -65,10 +77,22 @@
    "url": "https://thedailyguardian.com/world/update-1-chinas-new-home-prices-fall-again-in-september-as-recovery-stays-elusive-767114/"
   },
   {
+   "date": "2026-10-19",
+   "status": "발표",
+   "title": "상무부 등 9개 부처, 기술 혁신으로 소비를 늘리는 18개 조치 발표(상품·서비스 소비, 유통, 정책 지원). 1~3분기 상품 소매 +1.1%, 서비스 소매 +5%",
+   "url": "https://en.people.cn/n3/2026/1020/c90000-20510189.html"
+  },
+  {
    "date": "2026-10-21",
    "status": "준비",
    "title": "국가발전개혁위: 2026~30년 내수 확대 계획 작성 중·발표 가속, 소비 진작 우선, 신규 정책성 금융수단 집행 가속, 필요 시 추가 대책",
    "url": "https://dailyittehad.com.pk/news/2026/10/21/china-vows-fresh-policy-measures-to-support-growth-says-its-top-economic-planner"
+  },
+  {
+   "date": "2026-10-23",
+   "status": "부정",
+   "title": "9월 광의 재정지출 전년비 −3.7%(7개월 연속 축소), 광의 수입 −3.5% — 재정부 자료 기준 Bloomberg 집계",
+   "url": "https://ca.finance.yahoo.com/news/china-barely-eased-austerity-just-073426239.html"
   }
  ]
 }
