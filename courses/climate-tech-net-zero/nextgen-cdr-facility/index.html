@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NextGen CDR 사례 EDA</title>
+<meta name="description" content="탄소 제거 공동구매 기구 NextGen CDR Facility 사례를 인용수 상위 논문 5편과 관련 문헌 7,852건의 탐색적 분석으로 정리">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F5F3; --paper:#FFFFFF; --fg:#17201D; --muted:#5A6661; --line:#D5DCD8; --soft:#E8EDEA;
+  --accent:#1E6B62; --c1:#00806A; --c2:#B8701A; --warn:#965812; --warnbg:#FBF1E3; --ok:#2E6B3A; --okbg:#E5F1E7; --bad:#A3362B; --badbg:#F8E6E3;
+  --display:"Noto Serif KR","Nanum Myeongjo",Georgia,serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --c1:#2AA391; --c2:#C98428; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111715; --paper:#18201D; --fg:#E3EAE6; --muted:#9AA8A2; --line:#2E3A36; --soft:#212B28;
+  --accent:#5FC0B2; --c1:#2AA391; --c2:#C98428; --warn:#E3A55A; --warnbg:#33281A; --ok:#8DD39A; --okbg:#1E3223; --bad:#EE8B7E; --badbg:#3A2320; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.72;margin:0}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+.read{max-width:740px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.3;margin:0}
+h1{font-size:clamp(26px,4.4vw,38px);font-weight:800;margin-top:6px}
+h2{font-size:22px;font-weight:800;margin-top:52px;padding-top:16px;border-top:1px solid var(--line)}
+h3{font-size:16.5px;font-weight:600;margin-top:22px}
+p{margin:.65em 0}
+a{color:var(--accent)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--accent)}
+.sub{color:var(--muted);font-size:14px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:14px;text-decoration:none;border:1px solid var(--accent);color:var(--accent);background:var(--paper);border-radius:6px;padding:6px 12px}
+.btn:hover{background:var(--soft)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.oneline{font-size:16.5px;line-height:1.7;background:var(--paper);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0 0}
+.scroll{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:6px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--soft);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12.5px;background:var(--soft);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td b{font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{margin:0 0 4px;font-size:16px}
+.card p{font-size:14px;margin:.35em 0 0}
+.card .k{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.chip.ok{border-color:var(--ok);color:var(--ok)} .chip.bad{border-color:var(--bad);color:var(--bad)}
+.paper{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin-top:12px}
+.paper .n{font-family:var(--mono);font-size:15px;color:#fff;background:var(--accent);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center}
+.paper>div{min-width:0}
+.paper h3{margin:0;font-size:16px}
+.paper .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.paper dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14px;margin:10px 0 0}
+.paper dt{color:var(--muted);white-space:nowrap} .paper dd{margin:0;min-width:0}
+.look{margin-top:10px;font-size:13.5px;background:var(--okbg);border-radius:4px;padding:8px 10px}
+.look.none{background:var(--soft);color:var(--muted)}
+.case{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:0 6px 6px 0;padding:14px 16px;margin-top:12px}
+.case.fail{border-left-color:var(--bad)}
+.case h3{margin:0;font-size:16px}
+.case .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.case p{font-size:14.5px;margin:.5em 0 0}
+.note{background:var(--warnbg);border-left:3px solid var(--warn);padding:12px 14px;border-radius:0 6px 6px 0;font-size:14px;margin:14px 0}
+ol.plain{padding-left:22px} ol.plain li{margin:8px 0}
+ul.refs{padding-left:18px;font-size:13.5px} ul.refs li{margin:5px 0}
+footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (max-width:560px){.paper{grid-template-columns:1fr}.paper dl{grid-template-columns:1fr}.paper dt{margin-top:4px}}
+
+
+.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart .grid{stroke:var(--line);stroke-width:1}
+.chart .tick{fill:var(--muted);font-size:11px;font-family:var(--mono)}
+.chart .lab{fill:var(--fg);font-size:12.5px}
+.chart .val{fill:var(--muted);font-size:12px;font-family:var(--mono)}
+.chart .m1{fill:var(--c1)} .chart .m2{fill:var(--c2)}
+.chart .hit{fill:transparent;cursor:default}
+.chart .hit:hover{fill:var(--soft);fill-opacity:.35}
+.chart .hit.rich{cursor:help} .chart .hit:focus{outline:none} .chart .hit:focus-visible{fill:var(--soft);fill-opacity:.5;stroke:var(--accent);stroke-width:1.5}
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin-top:12px;max-width:740px}
+.fig.narrow{max-width:560px}
+@media (max-width:600px){.fig{overflow-x:auto;padding:12px 8px}.fig .chart{min-width:520px}}
+.cap{font-size:14.5px}
+.hint{font-size:12.5px;color:var(--muted);margin-top:6px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-top:10px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.sw.m1{background:var(--c1)} .sw.m2{background:var(--c2)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px;max-width:740px}
+.stats>div{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.sl{font-size:12.5px;color:var(--muted)} .sv{font-size:24px;font-weight:600;margin-top:2px} .sd{font-size:12.5px;color:var(--muted)}
+table.mx td,table.mx th{text-align:center} table.mx td:first-child,table.mx th:first-child{text-align:left;white-space:nowrap}
+table.mx td{color:var(--accent);font-size:15px} table.mx td:first-child{color:var(--fg);font-size:14px}
+table.facts td:first-child{white-space:nowrap;width:1%}
+details.more{margin-top:14px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px 14px;max-width:740px;font-size:14px}
+details.more summary{cursor:pointer;font-weight:600}
+#tip{position:fixed;pointer-events:none;background:var(--paper);color:var(--fg);border:1px solid var(--line);box-shadow:0 6px 20px rgba(0,0,0,.14);font-size:12.5px;line-height:1.55;padding:8px 11px;border-radius:6px;opacity:0;transition:opacity .1s;z-index:10;max-width:340px}
+#tip.simple{white-space:nowrap}
+#tip .tt{font-weight:600;font-size:14px} #tip .tn{font-family:var(--mono);color:var(--muted);font-size:12px;margin-left:6px}
+#tip .tr{margin-top:6px} #tip .tk{display:block;font-size:11.5px;color:var(--accent);font-weight:600;letter-spacing:.02em}
+</style>
+</head><body>
+<div class="wrap">
+<header class="read">
+  <div class="eyebrow"><a href="../index.html" style="color:inherit">기후기술과 탄소중립경영</a> · 과제 · NextGen CDR Facility: From Davos to Details</div>
+  <h1>탄소 제거를 함께 사면 시장이 생길까</h1>
+  <p class="sub">탄소 제거(CDR) 공동구매 기구 NextGen CDR Facility 사례를 인용수 상위 논문 5편과 관련 문헌 7,852건의 탐색적 분석으로 정리했습니다. 2026-10-28 작성.</p>
+  <div class="btns"><a class="btn" href="#case">사례 개요</a><a class="btn" href="#papers">논문 5편</a><a class="btn" href="#eda">탐색적 분석</a><a class="btn" href="#disc">토의 주제</a></div>
+  <p class="oneline">넷제로를 달성하려면 대기 중 탄소를 직접 빼내는 <b>탄소 제거</b>가 필요하지만, 기술은 비싸고 시장은 아직 없다. NextGen은 여러 기업의 돈을 모아 미래 제거량을 미리 사들이는 방식으로 시장을 만들려 한다. 그런데 이런 <b>구매·계약 방식</b>을 다룬 연구는 관련 문헌의 2.9%에 불과하다.</p>
+</header>
+
+<section id="case">
+  <h2>1. 사례 개요</h2>
+  <p class="read">하버드 경영대학원(HBS)의 사례(325-056, 2024년 10월, Peter Tufano·Emily A. Chien·Karina Val)입니다. 아래 사실은 사례 소개문과 South Pole·협력사의 공식 발표로 확인한 내용입니다.</p>
+  <div class="scroll"><table class="facts"><tr><td><b>구상</b></td><td>2021년 5월 South Pole과 미쓰비시상사가 2030년까지 3억~8억 달러 규모의 영구 탄소 제거 크레딧을 사들이는 기구 개발을 발표</td></tr><tr><td><b>출범</b></td><td>2022년 5월 23일, 세계경제포럼(WEF) 연차총회가 열린 다보스에서 NextGen CDR Facility 출범 발표. South Pole과 미쓰비시상사의 합작사</td></tr><tr><td><b>창립 구매자</b></td><td>보스턴컨설팅그룹(BCG), LGT, 미쓰이OSK라인(MOL), 스위스리, UBS 등 5곳. 이후 미즈호 등 합류</td></tr><tr><td><b>목표</b></td><td>2025년까지 검증된 탄소 제거량 100만 톤 이상을 톤당 평균 200달러에 구매하고, 2030년까지 제거 완료</td></tr><tr><td><b>대상 기술</b></td><td>바이오에너지·바이오매스 탄소 포집·저장(BECCS/BiCRS), 직접공기포집·저장(DACS), 풍화 촉진, 고온 바이오차, 제품 광물화. ICROA가 인정한 표준으로 인증</td></tr><tr><td><b>첫 구매</b></td><td>2023년 4월 3개 프로젝트에서 193,125톤 선구매: 1PointFive 직접공기포집(미국 텍사스), Summit Carbon Solutions 바이오매스 탄소 제거(미국 중서부), Carbo Culture 바이오차(핀란드)</td></tr><tr><td><b>후속 구매</b></td><td>2024년 12월 Exomad Green 바이오차 3년간 36,000톤 계약. Carbonfuture의 독립 디지털 MRV로 검증</td></tr></table></div>
+  <p class="read cap"><b>사례의 핵심 질문:</b> 다보스에서 출범을 발표했지만, 실제로 구매 기구가 돌아가려면 세부 계약 조건을 정해야 합니다. 여러 구매자가 낸 돈과 서로 다른 기술의 제거량을 어떻게 나눌지, 값싼 기술과 비싼 기술을 섞어 평균 200달러를 맞추는 구조가 공정한지, 프로젝트가 약속한 양을 제거하지 못하면 위험을 누가 질지가 핵심입니다.</p>
+</section>
+
+<section id="papers">
+  <h2>2. 인용수 상위 논문 5편</h2>
+  <p class="read">OpenAlex에서 탄소 제거 전반, 그리고 비용과 규모를 다룬 논문을 인용수 순으로 골랐습니다(2026-10-28 조회). 인용 2,674건인 Woolf et al.(2010, 바이오차)과 2,384건인 Sanz-Pérez et al.(2016, 직접공기포집 흡착소재 화학)은 인용수는 더 많지만 특정 기술의 과학적 세부를 다뤄 사업 사례 분석과 거리가 있어 제외했습니다.</p>
+  <div class="paper"><span class="n">1</span><div>
+    <h3>CO₂ 활용과 제거의 기술적·경제적 전망</h3>
+    <div class="meta">Hepburn, Adlen, Beddington, Carter, Fuss 외 (2019) · <i>Nature 575</i> · 인용 2,429건 · 무료 원문</div>
+    <dl><dt>원제</dt><dd><a href="https://doi.org/10.1038/s41586-019-1681-6">The technological and economic prospects for CO2 utilization and removal</a></dd>
+    <dt>핵심 내용</dt><dd>CO₂를 원료로 쓰는 '활용'과 대기에서 빼내 저장하는 '제거'의 여러 경로를 비교해, 각 경로가 얼마나 큰 규모로, 얼마의 비용에 가능할지 추정했습니다. 경로마다 규모·비용·저장 기간이 크게 다르다는 점을 보여줍니다.</dd>
+    <dt>사례와 연결</dt><dd>NextGen이 여러 기술을 섞은 포트폴리오로 구매하는 이유를 설명합니다. 기술마다 비용과 저장 기간이 달라 '같은 1톤'으로 묶기 어렵다는 쟁점의 출발점입니다.</dd></dl>
+  </div></div><div class="paper"><span class="n">2</span><div>
+    <h3>대기에서 CO₂를 포집하는 공정</h3>
+    <div class="meta">Keith, Holmes, St. Angelo &amp; Heidel (2018) · <i>Joule 2(8)</i> · 인용 1,906건 · 무료 원문</div>
+    <dl><dt>원제</dt><dd><a href="https://doi.org/10.1016/j.joule.2018.05.006">A Process for Capturing CO2 from the Atmosphere</a></dd>
+    <dt>핵심 내용</dt><dd>연간 약 100만 톤을 포집하는 산업용 직접공기포집(DAC) 공정을 설계하고 시범 플랜트 결과를 보고했습니다. 금융·에너지 조건에 따라 포집 비용이 톤당 94~232달러 범위라고 추정했습니다.</dd>
+    <dt>사례와 연결</dt><dd>NextGen의 첫 구매에 들어간 1PointFive 직접공기포집 프로젝트와 같은 계열의 기술입니다. 톤당 평균 200달러라는 NextGen의 가격 목표가 현실적인지 따져볼 기준이 됩니다.</dd></dl>
+  </div></div><div class="paper"><span class="n">3</span><div>
+    <h3>네거티브 배출 2부: 비용, 잠재량, 부작용</h3>
+    <div class="meta">Fuss, Lamb, Callaghan, Hilaire, Creutzig 외 (2018) · <i>Environmental Research Letters 13(6)</i> · 인용 1,524건 · 무료 원문</div>
+    <dl><dt>원제</dt><dd><a href="https://doi.org/10.1088/1748-9326/aabf9f">Negative emissions—Part 2: Costs, potentials and side effects</a></dd>
+    <dt>핵심 내용</dt><dd>7가지 탄소 제거 기술(BECCS, 조림·재조림, 직접공기포집, 풍화 촉진, 해양 비옥화, 바이오차, 토양 탄소)에 대한 문헌을 체계적으로 검토해 2050년 지속 가능한 잠재량, 비용, 부작용을 정리했습니다. 기술마다 잠재량은 연간 수억~수십억 톤 규모이며, 한 가지 기술만으로는 부족하다고 결론 내립니다.</dd>
+    <dt>사례와 연결</dt><dd>NextGen의 대상 기술 목록과 거의 겹칩니다. 기술마다 비용·영속성·부작용이 다르다는 정리는 포트폴리오 구성과 가격 평균화의 근거가 됩니다.</dd></dl>
+  </div></div><div class="paper"><span class="n">4</span><div>
+    <h3>네거티브 배출의 생물물리적·경제적 한계</h3>
+    <div class="meta">Smith, Davis, Creutzig, Fuss, Minx 외 (2016) · <i>Nature Climate Change 6</i> · 인용 1,440건 · 무료 원문</div>
+    <dl><dt>원제</dt><dd><a href="https://doi.org/10.1038/nclimate2870">Biophysical and economic limits to negative CO2 emissions</a></dd>
+    <dt>핵심 내용</dt><dd>주요 탄소 제거 기술이 토지, 물, 영양분, 에너지, 비용에 미치는 영향을 비교해, 대규모로 쓰면 어느 기술이든 상당한 제약에 부딪힌다는 점을 보였습니다. 탄소 제거에 기대기보다 배출 감축이 먼저라는 결론입니다.</dd>
+    <dt>사례와 연결</dt><dd>탄소 제거를 대량으로 사면 땅과 물 같은 자원을 두고 다른 용도와 경쟁하게 됩니다. 규모를 키우려는 NextGen의 목표와 지속가능성 사이의 긴장을 보여줍니다.</dd></dl>
+  </div></div><div class="paper"><span class="n">5</span><div>
+    <h3>네거티브 배출의 문제점</h3>
+    <div class="meta">Anderson &amp; Peters (2016) · <i>Science 354</i> · 인용 1,247건 · 무료 원문</div>
+    <dl><dt>원제</dt><dd><a href="https://doi.org/10.1126/science.aah4567">The trouble with negative emissions</a></dd>
+    <dt>핵심 내용</dt><dd>2°C 목표를 달성하는 기후 시나리오 대부분이 아직 대규모로 검증되지 않은 탄소 제거 기술에 크게 의존한다고 비판했습니다. 미래의 제거를 믿고 지금의 감축을 미루면 실패했을 때 되돌릴 수 없다는 '도덕적 해이' 문제를 제기합니다.</dd>
+    <dt>사례와 연결</dt><dd>기업이 탄소 제거를 사면서 자기 배출 감축을 늦추는 것은 아닌지라는 질문으로 이어집니다. NextGen 구매자의 넷제로 주장을 평가할 때 핵심 쟁점입니다.</dd></dl>
+  </div></div>
+</section>
+
+<section id="eda">
+  <h2>3. 탐색적 분석</h2>
+  <p class="read">5편이 이 분야에서 어떤 위치인지 보려고, OpenAlex에서 제목·초록에 탄소 제거 관련어(carbon dioxide removal, negative emissions, direct air capture, carbon removal)와 기후 관련어가 함께 들어간 문헌 <b>7,852건</b>(2005~2025년)을 분석했습니다. 막대에 커서를 올리면 값과 설명이 보입니다.</p>
+  <div class="stats"><div><div class="sl">분석 문헌</div><div class="sv">7,852건</div><div class="sd">2005~2025년</div></div><div><div class="sl">2025년 한 해</div><div class="sv">1,824건</div><div class="sd">2015년 89건의 20배</div></div><div><div class="sl">5편 누적 인용</div><div class="sv">8,546건</div><div class="sd">편당 1,247~2,429건</div></div><div><div class="sl">구매·시장 언급</div><div class="sv">2.9%</div><div class="sd">7,852건 중 230건</div></div></div>
+
+  <h3>① 연구는 언제 늘었나: 연도별 문헌 수</h3>
+  <div class="fig"><svg viewBox="0 0 680 260" class="chart" role="img" aria-label="연도별 문헌 수 막대 그래프"><line x1="48" x2="668" y1="230.0" y2="230.0" class="grid"/><text x="40" y="234.0" class="tick" text-anchor="end">0</text><line x1="48" x2="668" y1="178.0" y2="178.0" class="grid"/><text x="40" y="182.0" class="tick" text-anchor="end">500</text><line x1="48" x2="668" y1="126.0" y2="126.0" class="grid"/><text x="40" y="130.0" class="tick" text-anchor="end">1,000</text><line x1="48" x2="668" y1="74.0" y2="74.0" class="grid"/><text x="40" y="78.0" class="tick" text-anchor="end">1,500</text><line x1="48" x2="668" y1="22.0" y2="22.0" class="grid"/><text x="40" y="26.0" class="tick" text-anchor="end">2,000</text><path d="M53.6,230 V230.0 Q53.6,227.7 55.9,227.7 H69.6 Q71.9,227.7 71.9,230.0 V230 Z" class="m1"/><rect x="48.0" y="22" width="29.5" height="208" class="hit" data-tip="2005년 · 22건"/><text x="62.8" y="250" class="tick" text-anchor="middle">05</text><path d="M83.1,230 V230.0 Q83.1,228.3 84.8,228.3 H99.8 Q101.4,228.3 101.4,230.0 V230 Z" class="m1"/><rect x="77.5" y="22" width="29.5" height="208" class="hit" data-tip="2006년 · 16건"/><path d="M112.7,230 V230.0 Q112.7,229.0 113.7,229.0 H129.9 Q131.0,229.0 131.0,230.0 V230 Z" class="m1"/><rect x="107.0" y="22" width="29.5" height="208" class="hit" data-tip="2007년 · 10건"/><path d="M142.2,230 V230.0 Q142.2,227.8 144.4,227.8 H158.3 Q160.5,227.8 160.5,230.0 V230 Z" class="m1"/><rect x="136.6" y="22" width="29.5" height="208" class="hit" data-tip="2008년 · 21건"/><path d="M171.7,230 V230.0 Q171.7,227.5 174.2,227.5 H187.5 Q190.0,227.5 190.0,230.0 V230 Z" class="m1"/><rect x="166.1" y="22" width="29.5" height="208" class="hit" data-tip="2009년 · 24건"/><path d="M201.2,230 V229.9 Q201.2,225.9 205.2,225.9 H215.5 Q219.5,225.9 219.5,229.9 V230 Z" class="m1"/><rect x="195.6" y="22" width="29.5" height="208" class="hit" data-tip="2010년 · 39건"/><text x="210.4" y="250" class="tick" text-anchor="middle">10</text><path d="M230.8,230 V227.8 Q230.8,223.8 234.8,223.8 H245.1 Q249.1,223.8 249.1,227.8 V230 Z" class="m1"/><rect x="225.1" y="22" width="29.5" height="208" class="hit" data-tip="2011년 · 60건"/><path d="M260.3,230 V227.9 Q260.3,223.9 264.3,223.9 H274.6 Q278.6,223.9 278.6,227.9 V230 Z" class="m1"/><rect x="254.7" y="22" width="29.5" height="208" class="hit" data-tip="2012년 · 59건"/><path d="M289.8,230 V224.3 Q289.8,220.3 293.8,220.3 H304.1 Q308.1,220.3 308.1,224.3 V230 Z" class="m1"/><rect x="284.2" y="22" width="29.5" height="208" class="hit" data-tip="2013년 · 93건"/><path d="M319.3,230 V223.3 Q319.3,219.3 323.3,219.3 H333.6 Q337.6,219.3 337.6,223.3 V230 Z" class="m1"/><rect x="313.7" y="22" width="29.5" height="208" class="hit" data-tip="2014년 · 103건"/><path d="M348.8,230 V224.7 Q348.8,220.7 352.8,220.7 H363.2 Q367.2,220.7 367.2,224.7 V230 Z" class="m1"/><rect x="343.2" y="22" width="29.5" height="208" class="hit" data-tip="2015년 · 89건"/><text x="358.0" y="250" class="tick" text-anchor="middle">15</text><text x="358.0" y="214.7" class="val" text-anchor="middle">89</text><path d="M378.4,230 V218.1 Q378.4,214.1 382.4,214.1 H392.7 Q396.7,214.1 396.7,218.1 V230 Z" class="m1"/><rect x="372.8" y="22" width="29.5" height="208" class="hit" data-tip="2016년 · 153건"/><path d="M407.9,230 V214.1 Q407.9,210.1 411.9,210.1 H422.2 Q426.2,210.1 426.2,214.1 V230 Z" class="m1"/><rect x="402.3" y="22" width="29.5" height="208" class="hit" data-tip="2017년 · 191건"/><path d="M437.4,230 V202.9 Q437.4,198.9 441.4,198.9 H451.7 Q455.7,198.9 455.7,202.9 V230 Z" class="m1"/><rect x="431.8" y="22" width="29.5" height="208" class="hit" data-tip="2018년 · 299건"/><path d="M466.9,230 V199.7 Q466.9,195.7 470.9,195.7 H481.2 Q485.2,195.7 485.2,199.7 V230 Z" class="m1"/><rect x="461.3" y="22" width="29.5" height="208" class="hit" data-tip="2019년 · 330건"/><path d="M496.5,230 V190.3 Q496.5,186.3 500.5,186.3 H510.8 Q514.8,186.3 514.8,190.3 V230 Z" class="m1"/><rect x="490.9" y="22" width="29.5" height="208" class="hit" data-tip="2020년 · 420건"/><text x="505.6" y="250" class="tick" text-anchor="middle">20</text><path d="M526.0,230 V170.5 Q526.0,166.5 530.0,166.5 H540.3 Q544.3,166.5 544.3,170.5 V230 Z" class="m1"/><rect x="520.4" y="22" width="29.5" height="208" class="hit" data-tip="2021년 · 611건"/><path d="M555.5,230 V144.0 Q555.5,140.0 559.5,140.0 H569.8 Q573.8,140.0 573.8,144.0 V230 Z" class="m1"/><rect x="549.9" y="22" width="29.5" height="208" class="hit" data-tip="2022년 · 865건"/><path d="M585.0,230 V114.7 Q585.0,110.7 589.0,110.7 H599.3 Q603.3,110.7 603.3,114.7 V230 Z" class="m1"/><rect x="579.4" y="22" width="29.5" height="208" class="hit" data-tip="2023년 · 1,147건"/><path d="M614.6,230 V80.5 Q614.6,76.5 618.6,76.5 H628.9 Q632.9,76.5 632.9,80.5 V230 Z" class="m1"/><rect x="609.0" y="22" width="29.5" height="208" class="hit" data-tip="2024년 · 1,476건"/><path d="M644.1,230 V44.3 Q644.1,40.3 648.1,40.3 H658.4 Q662.4,40.3 662.4,44.3 V230 Z" class="m1"/><rect x="638.5" y="22" width="29.5" height="208" class="hit" data-tip="2025년 · 1,824건"/><text x="653.2" y="250" class="tick" text-anchor="middle">25</text><text x="653.2" y="34.3" class="val" text-anchor="middle">1,824</text></svg></div>
+  <p class="read cap">2015년 89건에서 2025년 1,824건으로 10년 만에 약 20배가 되었습니다. 2015년 파리협정이 1.5~2°C 목표를 정하고, 이를 달성하는 시나리오 대부분이 탄소 제거를 전제로 하면서 연구가 본격화되었습니다. 5편 모두 2016~2019년에 나온, 이 성장기의 기초 논문입니다. 다만 증가의 원인을 이 데이터만으로 단정할 수는 없습니다.</p>
+
+  <h3>② 무엇을 연구하나: 키워드 등장 빈도</h3>
+  <div class="legend"><span><i class="sw m1"></i>제거 기술 경로</span><span><i class="sw m2"></i>경제·제도·운영</span></div>
+  <div class="fig"><svg viewBox="0 0 680 458" class="chart" role="img" aria-label="키워드별 문헌 수"><text x="160" y="23.0" class="lab" text-anchor="end">비용</text><path d="M170,11.0 H546.0 Q550.0,11.0 550.0,15.0 V23.0 Q550.0,27.0 546.0,27.0 H170 Z" class="m2"/><text x="556.0" y="23.0" class="val">2,180건 · 28%</text><rect x="0" y="4" width="680" height="30" class="hit rich" data-tip="비용 · 2,180건 (27.8%)" data-k="kw0" tabindex="0" aria-label="비용: 설명 보기"/><text x="160" y="53.0" class="lab" text-anchor="end">직접공기포집</text><path d="M170,41.0 H497.9 Q501.9,41.0 501.9,45.0 V53.0 Q501.9,57.0 497.9,57.0 H170 Z" class="m1"/><text x="507.9" y="53.0" class="val">1,904건 · 24%</text><rect x="0" y="34" width="680" height="30" class="hit rich" data-tip="직접공기포집 · 1,904건 (24.2%)" data-k="kw1" tabindex="0" aria-label="직접공기포집: 설명 보기"/><text x="160" y="83.0" class="lab" text-anchor="end">정책</text><path d="M170,71.0 H454.0 Q458.0,71.0 458.0,75.0 V83.0 Q458.0,87.0 454.0,87.0 H170 Z" class="m2"/><text x="464.0" y="83.0" class="val">1,652건 · 21%</text><rect x="0" y="64" width="680" height="30" class="hit rich" data-tip="정책 · 1,652건 (21.0%)" data-k="kw2" tabindex="0" aria-label="정책: 설명 보기"/><text x="160" y="113.0" class="lab" text-anchor="end">넷제로</text><path d="M170,101.0 H369.1 Q373.1,101.0 373.1,105.0 V113.0 Q373.1,117.0 369.1,117.0 H170 Z" class="m2"/><text x="379.1" y="113.0" class="val">1,165건 · 15%</text><rect x="0" y="94" width="680" height="30" class="hit rich" data-tip="넷제로 · 1,165건 (14.8%)" data-k="kw3" tabindex="0" aria-label="넷제로: 설명 보기"/><text x="160" y="143.0" class="lab" text-anchor="end">해양</text><path d="M170,131.0 H347.1 Q351.1,131.0 351.1,135.0 V143.0 Q351.1,147.0 347.1,147.0 H170 Z" class="m1"/><text x="357.1" y="143.0" class="val">1,039건 · 13%</text><rect x="0" y="124" width="680" height="30" class="hit rich" data-tip="해양 · 1,039건 (13.2%)" data-k="kw4" tabindex="0" aria-label="해양: 설명 보기"/><text x="160" y="173.0" class="lab" text-anchor="end">BECCS</text><path d="M170,161.0 H292.6 Q296.6,161.0 296.6,165.0 V173.0 Q296.6,177.0 292.6,177.0 H170 Z" class="m1"/><text x="302.6" y="173.0" class="val">726건 · 9%</text><rect x="0" y="154" width="680" height="30" class="hit rich" data-tip="BECCS · 726건 (9.2%)" data-k="kw5" tabindex="0" aria-label="BECCS: 설명 보기"/><text x="160" y="203.0" class="lab" text-anchor="end">바이오차</text><path d="M170,191.0 H231.4 Q235.4,191.0 235.4,195.0 V203.0 Q235.4,207.0 231.4,207.0 H170 Z" class="m1"/><text x="241.4" y="203.0" class="val">375건 · 4.8%</text><rect x="0" y="184" width="680" height="30" class="hit rich" data-tip="바이오차 · 375건 (4.8%)" data-k="kw6" tabindex="0" aria-label="바이오차: 설명 보기"/><text x="160" y="233.0" class="lab" text-anchor="end">풍화 촉진</text><path d="M170,221.0 H230.1 Q234.1,221.0 234.1,225.0 V233.0 Q234.1,237.0 230.1,237.0 H170 Z" class="m1"/><text x="240.1" y="233.0" class="val">368건 · 4.7%</text><rect x="0" y="214" width="680" height="30" class="hit rich" data-tip="풍화 촉진 · 368건 (4.7%)" data-k="kw7" tabindex="0" aria-label="풍화 촉진: 설명 보기"/><text x="160" y="263.0" class="lab" text-anchor="end">조림·재조림</text><path d="M170,251.0 H226.3 Q230.3,251.0 230.3,255.0 V263.0 Q230.3,267.0 226.3,267.0 H170 Z" class="m1"/><text x="236.3" y="263.0" class="val">346건 · 4.4%</text><rect x="0" y="244" width="680" height="30" class="hit rich" data-tip="조림·재조림 · 346건 (4.4%)" data-k="kw8" tabindex="0" aria-label="조림·재조림: 설명 보기"/><text x="160" y="293.0" class="lab" text-anchor="end">통합평가모형</text><path d="M170,281.0 H222.1 Q226.1,281.0 226.1,285.0 V293.0 Q226.1,297.0 222.1,297.0 H170 Z" class="m2"/><text x="232.1" y="293.0" class="val">322건 · 4.1%</text><rect x="0" y="274" width="680" height="30" class="hit rich" data-tip="통합평가모형 · 322건 (4.1%)" data-k="kw9" tabindex="0" aria-label="통합평가모형: 설명 보기"/><text x="160" y="323.0" class="lab" text-anchor="end">MRV</text><path d="M170,311.0 H220.6 Q224.6,311.0 224.6,315.0 V323.0 Q224.6,327.0 220.6,327.0 H170 Z" class="m2"/><text x="230.6" y="323.0" class="val">313건 · 4.0%</text><rect x="0" y="304" width="680" height="30" class="hit rich" data-tip="MRV · 313건 (4.0%)" data-k="kw10" tabindex="0" aria-label="MRV: 설명 보기"/><text x="160" y="353.0" class="lab" text-anchor="end">영속성·내구성</text><path d="M170,341.0 H209.4 Q213.4,341.0 213.4,345.0 V353.0 Q213.4,357.0 209.4,357.0 H170 Z" class="m2"/><text x="219.4" y="353.0" class="val">249건 · 3.2%</text><rect x="0" y="334" width="680" height="30" class="hit rich" data-tip="영속성·내구성 · 249건 (3.2%)" data-k="kw11" tabindex="0" aria-label="영속성·내구성: 설명 보기"/><text x="160" y="383.0" class="lab" text-anchor="end">구매·시장</text><path d="M170,371.0 H206.1 Q210.1,371.0 210.1,375.0 V383.0 Q210.1,387.0 206.1,387.0 H170 Z" class="m2"/><text x="216.1" y="383.0" class="val">230건 · 2.9%</text><rect x="0" y="364" width="680" height="30" class="hit rich" data-tip="구매·시장 · 230건 (2.9%)" data-k="kw12" tabindex="0" aria-label="구매·시장: 설명 보기"/><text x="160" y="413.0" class="lab" text-anchor="end">사회적 수용성</text><path d="M170,401.0 H205.0 Q209.0,401.0 209.0,405.0 V413.0 Q209.0,417.0 205.0,417.0 H170 Z" class="m2"/><text x="215.0" y="413.0" class="val">224건 · 2.9%</text><rect x="0" y="394" width="680" height="30" class="hit rich" data-tip="사회적 수용성 · 224건 (2.9%)" data-k="kw13" tabindex="0" aria-label="사회적 수용성: 설명 보기"/><text x="160" y="443.0" class="lab" text-anchor="end">토양 탄소</text><path d="M170,431.0 H202.4 Q206.4,431.0 206.4,435.0 V443.0 Q206.4,447.0 202.4,447.0 H170 Z" class="m1"/><text x="212.4" y="443.0" class="val">209건 · 2.7%</text><rect x="0" y="424" width="680" height="30" class="hit rich" data-tip="토양 탄소 · 209건 (2.7%)" data-k="kw14" tabindex="0" aria-label="토양 탄소: 설명 보기"/></svg></div>
+  <p class="hint">막대에 커서를 올리거나(휴대폰은 탭) 키보드 Tab으로 이동하면 항목의 의미, 탄소 제거 구매·시장에 미치는 영향, 시사점이 보입니다.</p>
+  <details class="more"><summary>항목별 의미·영향·시사점 표로 보기</summary><div class="scroll"><table><tr><th>항목</th><th>의미</th><th>탄소 제거 구매·시장에 미치는 영향</th><th>시사점</th></tr><tr><td><b>비용</b><br><span class="sd">2,180건 · 28%</span></td><td>탄소 1톤을 제거하는 데 드는 돈입니다. 설비 투자비와 에너지 비용이 대부분입니다.</td><td>구매자가 낼 가격의 하한을 정합니다. 비용이 내려가야 구매 물량이 늘어납니다.</td><td>가장 많이 연구된 주제(28%)입니다. NextGen의 평균 200달러 목표는 기술별 비용 차이를 섞어서 맞춘 숫자라는 점을 기억해야 합니다.</td></tr><tr><td><b>직접공기포집</b><br><span class="sd">1,904건 · 24%</span></td><td>공기에서 CO₂를 화학적으로 걸러내 땅속에 저장하는 기술(DAC)입니다.</td><td>측정이 정확하고 저장이 영구적이어서 품질은 높지만, 현재 가장 비싼 제거 방식입니다.</td><td>연구의 24%를 차지하는 대표 기술입니다. 1PointFive처럼 대형 프로젝트가 성공해야 비용이 내려갑니다(② Keith).</td></tr><tr><td><b>정책</b><br><span class="sd">1,652건 · 21%</span></td><td>탄소 제거를 지원하거나 규제하는 정부 제도입니다. 세액공제, 공공 구매, 인증 기준 등이 있습니다.</td><td>미국 세액공제처럼 정부 지원이 민간 구매자의 부담을 줄여 시장 형성을 돕습니다.</td><td>민간 공동구매(NextGen)와 정부 정책이 어떻게 역할을 나눌지가 과제입니다.</td></tr><tr><td><b>넷제로</b><br><span class="sd">1,165건 · 15%</span></td><td>배출량과 제거량을 같게 맞춰 순배출을 0으로 만드는 목표입니다.</td><td>기업이 탄소 제거를 사는 가장 큰 이유입니다. 줄이기 어려운 배출을 상쇄하는 데 쓰입니다.</td><td>넷제로 주장에서 제거를 얼마나 인정할지 기준이 정해져야 수요가 안정됩니다(⑤ 도덕적 해이 쟁점).</td></tr><tr><td><b>해양</b><br><span class="sd">1,039건 · 13%</span></td><td>바다의 탄소 흡수를 늘리는 방법(알칼리도 증진, 해조류 등)입니다.</td><td>잠재량은 크지만 측정과 생태계 영향 검증이 어려워 크레딧으로 사기 어렵습니다.</td><td>연구는 많지만 NextGen 대상 기술에는 들어 있지 않습니다. 검증 가능성이 구매의 조건임을 보여줍니다.</td></tr><tr><td><b>BECCS</b><br><span class="sd">726건 · 9%</span></td><td>식물(바이오매스)을 태워 에너지를 얻고 나온 CO₂를 포집·저장하는 기술입니다.</td><td>규모를 키우기 쉽고 직접공기포집보다 싸지만, 원료 재배에 넓은 땅이 필요합니다.</td><td>Summit Carbon Solutions 프로젝트가 이 계열입니다. 토지 경쟁 문제(④ Smith)가 따라옵니다.</td></tr><tr><td><b>바이오차</b><br><span class="sd">375건 · 4.8%</span></td><td>바이오매스를 산소 없이 고온으로 가열해 만든 숯을 흙에 넣어 탄소를 저장하는 방식입니다.</td><td>지금 바로 공급할 수 있고 비교적 싸서 초기 구매 물량을 채우는 데 유리합니다.</td><td>Carbo Culture와 Exomad Green이 이 방식입니다. 저장 기간이 지질 저장보다 짧을 수 있어 같은 1톤으로 볼지가 쟁점입니다.</td></tr><tr><td><b>풍화 촉진</b><br><span class="sd">368건 · 4.7%</span></td><td>현무암 같은 암석 가루를 농지에 뿌려 자연적인 풍화로 CO₂를 흡수하게 하는 방식입니다.</td><td>농업과 함께 할 수 있어 잠재량이 크지만, 실제 흡수량 측정이 어렵습니다.</td><td>NextGen 대상 기술이지만 측정(MRV) 방법이 정착되어야 대량 구매가 가능합니다.</td></tr><tr><td><b>조림·재조림</b><br><span class="sd">346건 · 4.4%</span></td><td>나무를 심어 숲으로 탄소를 흡수하는 자연 기반 방식입니다.</td><td>가장 싸지만 산불이나 벌채로 탄소가 다시 나올 수 있어 영속성이 낮습니다.</td><td>NextGen은 영구 저장을 원칙으로 해 자연 기반 방식은 대상에서 뺐습니다. BeZero 사례의 REDD+ 논란과 연결됩니다.</td></tr><tr><td><b>통합평가모형</b><br><span class="sd">322건 · 4.1%</span></td><td>경제와 기후를 함께 계산해 감축 경로를 그리는 모델(IAM)입니다.</td><td>기후 목표 달성에 탄소 제거가 얼마나 필요한지 추정해 장기 수요의 근거가 됩니다.</td><td>이 모형이 제거에 너무 의존한다는 비판(⑤ Anderson &amp; Peters)이 있습니다.</td></tr><tr><td><b>MRV</b><br><span class="sd">313건 · 4.0%</span></td><td>측정·보고·검증. 실제로 얼마나 제거·저장했는지 재고 확인하는 절차입니다.</td><td>구매자가 돈을 내기 전에 확인해야 하는 조건입니다. NextGen은 독립 디지털 MRV를 도입했습니다.</td><td>구매의 전제 조건인데 연구는 4.0%뿐입니다. 사례 제목처럼 '세부 사항'에서 가장 중요한 부분입니다.</td></tr><tr><td><b>영속성·내구성</b><br><span class="sd">249건 · 3.2%</span></td><td>제거한 탄소가 얼마나 오래 대기로 돌아가지 않고 저장되는가입니다.</td><td>저장 기간이 길수록 크레딧 가치가 높습니다. 기술마다 수십 년에서 수천 년까지 차이가 납니다.</td><td>연구는 3.2%뿐입니다. 서로 다른 내구성의 제거량을 한 포트폴리오에 섞을 때 가격을 어떻게 매길지가 과제입니다.</td></tr><tr><td><b>구매·시장</b><br><span class="sd">230건 · 2.9%</span></td><td>탄소 제거를 누가, 어떤 계약으로, 얼마에 사는지에 관한 연구입니다.</td><td>NextGen 같은 공동구매, 장기 선구매 계약이 바로 이 영역입니다.</td><td>가장 적게 연구된 영역(2.9%)입니다. 기술 연구는 많지만 그 기술을 사줄 시장을 설계하는 연구는 부족합니다.</td></tr><tr><td><b>사회적 수용성</b><br><span class="sd">224건 · 2.9%</span></td><td>지역 주민과 대중이 탄소 제거 시설이나 저장을 받아들이는지입니다.</td><td>파이프라인·저장소 반대가 생기면 프로젝트가 지연되거나 무산될 수 있습니다.</td><td>Summit의 CO₂ 파이프라인처럼 지역 반대가 사업 위험이 됩니다. 구매 계약에서 공급 실패 위험으로 반영해야 합니다.</td></tr><tr><td><b>토양 탄소</b><br><span class="sd">209건 · 2.7%</span></td><td>농업 방식을 바꿔 흙 속 탄소를 늘리는 방법입니다.</td><td>비용은 낮지만 측정이 어렵고 다시 배출되기 쉬워 영구 제거로 인정받기 어렵습니다.</td><td>NextGen 대상이 아닙니다. 싸지만 검증이 어려운 제거를 어떻게 다룰지는 시장 전체의 숙제입니다.</td></tr></table></div></details>
+  <p class="read cap"><b>가장 중요한 발견입니다.</b> 연구는 비용(28%)과 직접공기포집(24%)처럼 <b>기술이 얼마에 가능한가</b>에 몰려 있습니다. 반면 사례의 핵심인 <b>구매·시장 설계는 2.9%</b>, 구매의 전제 조건인 <b>MRV는 4.0%, 영속성은 3.2%</b>에 그칩니다. 사례 제목 "다보스에서 세부 사항으로"가 말하는 바로 그 세부 사항이 가장 덜 연구된 영역입니다. 한 문헌이 여러 키워드를 가질 수 있어 합은 100%가 아닙니다.</p>
+
+  <h3>③ 5편의 영향력은 어디로 가나: 2025년 한 해 인용</h3>
+  <div class="fig"><svg viewBox="0 0 680 158" class="chart" role="img" aria-label="논문별 2025년 인용 수"><text x="180" y="23.0" class="lab" text-anchor="end">① Hepburn (2019)</text><path d="M190,11.0 H526.0 Q530.0,11.0 530.0,15.0 V23.0 Q530.0,27.0 526.0,27.0 H190 Z" class="m1"/><text x="536.0" y="23.0" class="val">467건 (누적 2,429)</text><rect x="0" y="4" width="680" height="30" class="hit" data-tip="① Hepburn (2019) · 2025년 인용 467건 · 누적 2,429건"/><text x="180" y="53.0" class="lab" text-anchor="end">② Keith (2018)</text><path d="M190,41.0 H423.3 Q427.3,41.0 427.3,45.0 V53.0 Q427.3,57.0 423.3,57.0 H190 Z" class="m1"/><text x="433.3" y="53.0" class="val">326건 (누적 1,906)</text><rect x="0" y="34" width="680" height="30" class="hit" data-tip="② Keith (2018) · 2025년 인용 326건 · 누적 1,906건"/><text x="180" y="83.0" class="lab" text-anchor="end">③ Fuss (2018)</text><path d="M190,71.0 H349.8 Q353.8,71.0 353.8,75.0 V83.0 Q353.8,87.0 349.8,87.0 H190 Z" class="m1"/><text x="359.8" y="83.0" class="val">225건 (누적 1,524)</text><rect x="0" y="64" width="680" height="30" class="hit" data-tip="③ Fuss (2018) · 2025년 인용 225건 · 누적 1,524건"/><text x="180" y="113.0" class="lab" text-anchor="end">④ Smith (2016)</text><path d="M190,101.0 H281.4 Q285.4,101.0 285.4,105.0 V113.0 Q285.4,117.0 281.4,117.0 H190 Z" class="m1"/><text x="291.4" y="113.0" class="val">131건 (누적 1,440)</text><rect x="0" y="94" width="680" height="30" class="hit" data-tip="④ Smith (2016) · 2025년 인용 131건 · 누적 1,440건"/><text x="180" y="143.0" class="lab" text-anchor="end">⑤ Anderson (2016)</text><path d="M190,131.0 H248.6 Q252.6,131.0 252.6,135.0 V143.0 Q252.6,147.0 248.6,147.0 H190 Z" class="m1"/><text x="258.6" y="143.0" class="val">86건 (누적 1,247)</text><rect x="0" y="124" width="680" height="30" class="hit" data-tip="⑤ Anderson (2016) · 2025년 인용 86건 · 누적 1,247건"/></svg></div>
+  <p class="read cap">2025년 한 해에도 <b>Hepburn(467건)과 Keith(326건)</b>가 가장 많이 인용되어, 기술의 비용과 규모에 대한 관심이 여전히 큽니다. 반면 비판적 시각의 Anderson & Peters는 2021년 317건을 정점으로 2025년 86건으로 줄었고, Smith와 Fuss도 감소세입니다. "탄소 제거가 필요한가"라는 논쟁에서 <b>"어떻게 싸게, 크게 만들 것인가"</b>로 관심이 옮겨간 흐름으로 읽을 수 있습니다.</p>
+
+  <h3>④ 누가 연구하나: 저자 국가</h3>
+  <div class="fig narrow"><svg viewBox="0 0 560 232" class="chart" role="img" aria-label="저자 국가별 문헌 수"><text x="100" y="22.0" class="lab" text-anchor="end">미국</text><path d="M110,10.0 H426.0 Q430.0,10.0 430.0,14.0 V22.0 Q430.0,26.0 426.0,26.0 H110 Z" class="m1"/><text x="436.0" y="22.0" class="val">1,935건</text><rect x="0" y="4" width="560" height="28" class="hit" data-tip="미국 · 1,935건 (25%)"/><text x="100" y="50.0" class="lab" text-anchor="end">영국</text><path d="M110,38.0 H293.7 Q297.7,38.0 297.7,42.0 V50.0 Q297.7,54.0 293.7,54.0 H110 Z" class="m1"/><text x="303.7" y="50.0" class="val">1,135건</text><rect x="0" y="32" width="560" height="28" class="hit" data-tip="영국 · 1,135건 (14%)"/><text x="100" y="78.0" class="lab" text-anchor="end">독일</text><path d="M110,66.0 H258.6 Q262.6,66.0 262.6,70.0 V78.0 Q262.6,82.0 258.6,82.0 H110 Z" class="m1"/><text x="268.6" y="78.0" class="val">923건</text><rect x="0" y="60" width="560" height="28" class="hit" data-tip="독일 · 923건 (12%)"/><text x="100" y="106.0" class="lab" text-anchor="end">중국</text><path d="M110,94.0 H241.1 Q245.1,94.0 245.1,98.0 V106.0 Q245.1,110.0 241.1,110.0 H110 Z" class="m1"/><text x="251.1" y="106.0" class="val">817건</text><rect x="0" y="88" width="560" height="28" class="hit" data-tip="중국 · 817건 (10%)"/><text x="100" y="134.0" class="lab" text-anchor="end">호주</text><path d="M110,122.0 H172.0 Q176.0,122.0 176.0,126.0 V134.0 Q176.0,138.0 172.0,138.0 H110 Z" class="m1"/><text x="182.0" y="134.0" class="val">399건</text><rect x="0" y="116" width="560" height="28" class="hit" data-tip="호주 · 399건 (5%)"/><text x="100" y="162.0" class="lab" text-anchor="end">프랑스</text><path d="M110,150.0 H167.5 Q171.5,150.0 171.5,154.0 V162.0 Q171.5,166.0 167.5,166.0 H110 Z" class="m1"/><text x="177.5" y="162.0" class="val">372건</text><rect x="0" y="144" width="560" height="28" class="hit" data-tip="프랑스 · 372건 (5%)"/><text x="100" y="190.0" class="lab" text-anchor="end">캐나다</text><path d="M110,178.0 H165.7 Q169.7,178.0 169.7,182.0 V190.0 Q169.7,194.0 165.7,194.0 H110 Z" class="m1"/><text x="175.7" y="190.0" class="val">361건</text><rect x="0" y="172" width="560" height="28" class="hit" data-tip="캐나다 · 361건 (5%)"/><text x="100" y="218.0" class="lab" text-anchor="end">네덜란드</text><path d="M110,206.0 H162.7 Q166.7,206.0 166.7,210.0 V218.0 Q166.7,222.0 162.7,222.0 H110 Z" class="m1"/><text x="172.7" y="218.0" class="val">343건</text><rect x="0" y="200" width="560" height="28" class="hit" data-tip="네덜란드 · 343건 (4%)"/></svg></div>
+  <p class="read cap">미국(25%)이 가장 많고 영국(14%), 독일(12%), 중국(10%)이 뒤를 잇습니다. 미국·유럽 중심의 연구 지형은 NextGen의 첫 구매 프로젝트(미국 2곳, 핀란드 1곳)와 창립 구매자(미국·스위스·리히텐슈타인·일본의 금융·컨설팅·해운 기업)의 분포와도 비슷합니다. 한 문헌에 여러 나라 저자가 있으면 각 나라에 모두 셉니다.</p>
+
+  <h3>⑤ 논문은 사례의 어떤 쟁점과 닿아 있나</h3>
+  <p class="read">논문 요약을 바탕으로 직접 분류했습니다(● 직접 다룸, ○ 간접적으로 관련).</p>
+  <div class="scroll"><table class="mx"><tr><th>논문</th><th>기술 포트폴리오</th><th>가격(평균 200달러)</th><th>물량·규모</th><th>품질·내구성·MRV</th><th>감축 지연 우려</th></tr><tr><td>① Hepburn</td><td>●</td><td>●</td><td>●</td><td>○</td><td>○</td></tr><tr><td>② Keith</td><td></td><td>●</td><td>●</td><td></td><td></td></tr><tr><td>③ Fuss</td><td>●</td><td>●</td><td>●</td><td>●</td><td>○</td></tr><tr><td>④ Smith</td><td>●</td><td>●</td><td>●</td><td>○</td><td>●</td></tr><tr><td>⑤ Anderson</td><td></td><td></td><td>○</td><td></td><td>●</td></tr></table></div>
+  <p class="read cap">5편 모두 가격과 규모는 다루지만, <b>품질·내구성·MRV를 정면으로 다룬 논문은 Fuss 한 편</b>뿐입니다. 공동구매에서 구매자 간 물량 배분이나 공급 실패 위험 분담 같은 계약 설계는 5편 어디에서도 다루지 않습니다. 사례가 던지는 질문에 학술 문헌이 아직 답을 주지 못한 셈이며, 이것이 경영 사례로서 이 주제가 갖는 의미입니다.</p>
+
+  <details class="more"><summary>분석 방법과 한계</summary><ul><li>데이터: OpenAlex API, 제목·초록 검색(2026-10-28 조회). 의료용 CO₂ 제거나 수처리 같은 무관한 문헌을 줄이려고 기후 관련어를 함께 걸었지만, 일부 섞여 있을 수 있습니다.</li><li>2026년은 연중이라 연도별 분석에서 뺐습니다. 인용 수는 OpenAlex 기준으로 Google Scholar보다 적게 집계되는 경향이 있습니다.</li><li>Smith et al.은 OpenAlex에 2015년(온라인 선공개)으로 등록되어 있으나 학술지 게재 연도(2016)로 표기했습니다.</li><li>논문-쟁점 연결표는 초록과 요약을 바탕으로 한 작성자의 판단입니다. 사례 내용은 HBS 사례 소개문과 공식 발표를 바탕으로 했으며, 전체 사례 원문은 확인하지 못했습니다.</li></ul></details>
+</section>
+
+<section id="disc">
+  <h2>4. 토의 주제</h2>
+  <ol class="plain read"><li><b>공동구매 계약은 어떻게 짜야 하는가:</b> NextGen은 값싼 바이오차와 비싼 직접공기포집을 섞어 평균 200달러를 맞춥니다. 구매자마다 원하는 기술이 다를 때 물량을 어떻게 나누고, 어떤 프로젝트가 약속한 양을 제거하지 못하면 손실을 누가 나눠 져야 할까요? 이 부분은 학술 연구가 거의 없는 영역입니다.</li><li><b>바이오차 1톤과 직접공기포집 1톤은 같은가:</b> 바이오차는 싸고 지금 바로 공급되지만 저장 기간이 지질 저장보다 짧을 수 있습니다. 내구성이 다른 제거량을 같은 크레딧으로 묶는 것이 정당한지, BeZero 사례의 등급평가처럼 제거 크레딧에도 품질 차등이 필요한지 토론해 볼 수 있습니다.</li><li><b>탄소 제거 구매는 감축을 늦추는가:</b> Anderson & Peters는 미래의 제거를 믿고 지금의 감축을 미루는 위험을 경고했습니다. 금융·해운 기업이 탄소 제거를 사는 것은 시장을 만드는 선도 행동일까요, 아니면 자기 배출 감축을 미루는 수단일까요? 넷제로 주장에서 제거를 얼마나 인정해야 할지 기준이 필요합니다.</li></ol>
+</section>
+
+<section>
+  <h2>참고문헌</h2>
+  <ul class="refs"><li>Hepburn, C., Adlen, E., Beddington, J., et al. (2019). <a href="https://doi.org/10.1038/s41586-019-1681-6">The technological and economic prospects for CO2 utilization and removal</a>. <i>Nature</i>, 575, 87–97.</li><li>Keith, D. W., Holmes, G., St. Angelo, D., &amp; Heidel, K. (2018). <a href="https://doi.org/10.1016/j.joule.2018.05.006">A process for capturing CO2 from the atmosphere</a>. <i>Joule</i>, 2(8), 1573–1594.</li><li>Fuss, S., Lamb, W. F., Callaghan, M. W., et al. (2018). <a href="https://doi.org/10.1088/1748-9326/aabf9f">Negative emissions—Part 2: Costs, potentials and side effects</a>. <i>Environmental Research Letters</i>, 13(6), 063002.</li><li>Smith, P., Davis, S. J., Creutzig, F., et al. (2016). <a href="https://doi.org/10.1038/nclimate2870">Biophysical and economic limits to negative CO2 emissions</a>. <i>Nature Climate Change</i>, 6, 42–50.</li><li>Anderson, K., &amp; Peters, G. (2016). <a href="https://doi.org/10.1126/science.aah4567">The trouble with negative emissions</a>. <i>Science</i>, 354(6309), 182–183.</li><li>Tufano, P., Chien, E. A., &amp; Val, K. (2024). <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=66261">NextGen CDR Facility: From Davos to Details</a>. Harvard Business School Case 325-056.</li><li>South Pole (2021.5.7). <a href="https://www.southpole.com/news/south-pole-announces-development-of-new-facility-to-scale-up-the-next-generation-of-carbon-removals-together-with-mitsubishi-corporation">South Pole announces development of new facility to scale up the next generation of carbon removals together with Mitsubishi Corporation</a>.</li><li>South Pole (2022.5.23). <a href="https://www.southpole.com/news/facility-for-technical-carbon-removals-being-launched-by-major-corporations">Facility for technical carbon removals being launched by major corporations</a>.</li><li>South Pole (2023.4.26). <a href="https://www.southpole.com/news/nextgen-establishes-worlds-largest-diversified-portfolio-of-permanent-carbon-dioxide-removals">NextGen establishes world's largest diversified portfolio of permanent carbon dioxide removals</a>.</li><li>Carbonfuture (2025.5.5). <a href="https://www.carbonfuture.earth/case-studies/nextgen-cdr">Why NextGen is backing carbon removal purchases with independent dMRV</a>.</li></ul>
+</section>
+
+<footer>인용수·문헌 수 출처: OpenAlex(2026-10-28 조회). 논문 요약은 원문을 옮기지 않고 새로 정리한 것입니다.</footer>
+</div>
+<div id="tip" role="tooltip"></div>
+<script>
+(function(){var INFO={"kw0": ["비용", "2,180건 · 28%", "탄소 1톤을 제거하는 데 드는 돈입니다. 설비 투자비와 에너지 비용이 대부분입니다.", "구매자가 낼 가격의 하한을 정합니다. 비용이 내려가야 구매 물량이 늘어납니다.", "가장 많이 연구된 주제(28%)입니다. NextGen의 평균 200달러 목표는 기술별 비용 차이를 섞어서 맞춘 숫자라는 점을 기억해야 합니다."], "kw1": ["직접공기포집", "1,904건 · 24%", "공기에서 CO₂를 화학적으로 걸러내 땅속에 저장하는 기술(DAC)입니다.", "측정이 정확하고 저장이 영구적이어서 품질은 높지만, 현재 가장 비싼 제거 방식입니다.", "연구의 24%를 차지하는 대표 기술입니다. 1PointFive처럼 대형 프로젝트가 성공해야 비용이 내려갑니다(② Keith)."], "kw2": ["정책", "1,652건 · 21%", "탄소 제거를 지원하거나 규제하는 정부 제도입니다. 세액공제, 공공 구매, 인증 기준 등이 있습니다.", "미국 세액공제처럼 정부 지원이 민간 구매자의 부담을 줄여 시장 형성을 돕습니다.", "민간 공동구매(NextGen)와 정부 정책이 어떻게 역할을 나눌지가 과제입니다."], "kw3": ["넷제로", "1,165건 · 15%", "배출량과 제거량을 같게 맞춰 순배출을 0으로 만드는 목표입니다.", "기업이 탄소 제거를 사는 가장 큰 이유입니다. 줄이기 어려운 배출을 상쇄하는 데 쓰입니다.", "넷제로 주장에서 제거를 얼마나 인정할지 기준이 정해져야 수요가 안정됩니다(⑤ 도덕적 해이 쟁점)."], "kw4": ["해양", "1,039건 · 13%", "바다의 탄소 흡수를 늘리는 방법(알칼리도 증진, 해조류 등)입니다.", "잠재량은 크지만 측정과 생태계 영향 검증이 어려워 크레딧으로 사기 어렵습니다.", "연구는 많지만 NextGen 대상 기술에는 들어 있지 않습니다. 검증 가능성이 구매의 조건임을 보여줍니다."], "kw5": ["BECCS", "726건 · 9%", "식물(바이오매스)을 태워 에너지를 얻고 나온 CO₂를 포집·저장하는 기술입니다.", "규모를 키우기 쉽고 직접공기포집보다 싸지만, 원료 재배에 넓은 땅이 필요합니다.", "Summit Carbon Solutions 프로젝트가 이 계열입니다. 토지 경쟁 문제(④ Smith)가 따라옵니다."], "kw6": ["바이오차", "375건 · 4.8%", "바이오매스를 산소 없이 고온으로 가열해 만든 숯을 흙에 넣어 탄소를 저장하는 방식입니다.", "지금 바로 공급할 수 있고 비교적 싸서 초기 구매 물량을 채우는 데 유리합니다.", "Carbo Culture와 Exomad Green이 이 방식입니다. 저장 기간이 지질 저장보다 짧을 수 있어 같은 1톤으로 볼지가 쟁점입니다."], "kw7": ["풍화 촉진", "368건 · 4.7%", "현무암 같은 암석 가루를 농지에 뿌려 자연적인 풍화로 CO₂를 흡수하게 하는 방식입니다.", "농업과 함께 할 수 있어 잠재량이 크지만, 실제 흡수량 측정이 어렵습니다.", "NextGen 대상 기술이지만 측정(MRV) 방법이 정착되어야 대량 구매가 가능합니다."], "kw8": ["조림·재조림", "346건 · 4.4%", "나무를 심어 숲으로 탄소를 흡수하는 자연 기반 방식입니다.", "가장 싸지만 산불이나 벌채로 탄소가 다시 나올 수 있어 영속성이 낮습니다.", "NextGen은 영구 저장을 원칙으로 해 자연 기반 방식은 대상에서 뺐습니다. BeZero 사례의 REDD+ 논란과 연결됩니다."], "kw9": ["통합평가모형", "322건 · 4.1%", "경제와 기후를 함께 계산해 감축 경로를 그리는 모델(IAM)입니다.", "기후 목표 달성에 탄소 제거가 얼마나 필요한지 추정해 장기 수요의 근거가 됩니다.", "이 모형이 제거에 너무 의존한다는 비판(⑤ Anderson & Peters)이 있습니다."], "kw10": ["MRV", "313건 · 4.0%", "측정·보고·검증. 실제로 얼마나 제거·저장했는지 재고 확인하는 절차입니다.", "구매자가 돈을 내기 전에 확인해야 하는 조건입니다. NextGen은 독립 디지털 MRV를 도입했습니다.", "구매의 전제 조건인데 연구는 4.0%뿐입니다. 사례 제목처럼 '세부 사항'에서 가장 중요한 부분입니다."], "kw11": ["영속성·내구성", "249건 · 3.2%", "제거한 탄소가 얼마나 오래 대기로 돌아가지 않고 저장되는가입니다.", "저장 기간이 길수록 크레딧 가치가 높습니다. 기술마다 수십 년에서 수천 년까지 차이가 납니다.", "연구는 3.2%뿐입니다. 서로 다른 내구성의 제거량을 한 포트폴리오에 섞을 때 가격을 어떻게 매길지가 과제입니다."], "kw12": ["구매·시장", "230건 · 2.9%", "탄소 제거를 누가, 어떤 계약으로, 얼마에 사는지에 관한 연구입니다.", "NextGen 같은 공동구매, 장기 선구매 계약이 바로 이 영역입니다.", "가장 적게 연구된 영역(2.9%)입니다. 기술 연구는 많지만 그 기술을 사줄 시장을 설계하는 연구는 부족합니다."], "kw13": ["사회적 수용성", "224건 · 2.9%", "지역 주민과 대중이 탄소 제거 시설이나 저장을 받아들이는지입니다.", "파이프라인·저장소 반대가 생기면 프로젝트가 지연되거나 무산될 수 있습니다.", "Summit의 CO₂ 파이프라인처럼 지역 반대가 사업 위험이 됩니다. 구매 계약에서 공급 실패 위험으로 반영해야 합니다."], "kw14": ["토양 탄소", "209건 · 2.7%", "농업 방식을 바꿔 흙 속 탄소를 늘리는 방법입니다.", "비용은 낮지만 측정이 어렵고 다시 배출되기 쉬워 영구 제거로 인정받기 어렵습니다.", "NextGen 대상이 아닙니다. 싸지만 검증이 어려운 제거를 어떻게 다룰지는 시장 전체의 숙제입니다."]};var EL="탄소 제거 구매·시장에 미치는 영향";var t=document.getElementById('tip');
+function esc(x){return String(x).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+function fill(h){var k=h.getAttribute('data-k');var d=k&&INFO[k];
+ if(d){t.className='';t.innerHTML='<div><span class="tt">'+esc(d[0])+'</span><span class="tn">'+esc(d[1])+'</span></div>'+
+  '<div class="tr"><span class="tk">의미</span>'+esc(d[2])+'</div>'+
+  '<div class="tr"><span class="tk">'+esc(EL)+'</span>'+esc(d[3])+'</div>'+
+  '<div class="tr"><span class="tk">시사점</span>'+esc(d[4])+'</div>';}
+ else{t.className='simple';t.textContent=h.getAttribute('data-tip');}}
+function place(x,y){var w=t.offsetWidth,hh=t.offsetHeight;var nx=x+14,ny=y+14;
+ if(nx+w>innerWidth-8)nx=Math.max(8,x-w-14);if(ny+hh>innerHeight-8)ny=Math.max(8,y-hh-14);t.style.left=nx+'px';t.style.top=ny+'px';}
+var cur=null;
+document.querySelectorAll('.chart .hit').forEach(function(h){
+ h.addEventListener('mouseenter',function(){fill(h);t.style.opacity=1;cur=h;});
+ h.addEventListener('mousemove',function(e){if(cur!==h){fill(h);cur=h;}t.style.opacity=1;place(e.clientX,e.clientY);});
+ h.addEventListener('mouseleave',function(){t.style.opacity=0;cur=null;});
+ h.addEventListener('focus',function(){fill(h);t.style.opacity=1;var r=h.getBoundingClientRect();place(r.left+r.width*0.35,r.bottom-4);});
+ h.addEventListener('blur',function(){t.style.opacity=0;});
+ h.addEventListener('click',function(e){fill(h);t.style.opacity=1;place(e.clientX,e.clientY);cur=h;e.stopPropagation();});});
+document.addEventListener('click',function(){if(cur===null)t.style.opacity=0;cur=null;});
+addEventListener('scroll',function(){t.style.opacity=0;},{passive:true});})();
+</script>
+</body></html>
