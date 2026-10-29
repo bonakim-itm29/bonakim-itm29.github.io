@@ -1,6 +1,6 @@
 {
  "_note": "원유 → 중국 전환 신호 가운데 시장 데이터로 자동 계산할 수 없는 항목(정책 발표·예고, 월간 통계)의 기록. 매일 아침 예약 작업이 뉴스와 공식 발표를 확인해 추가한다. status: 준비(예고·회의 일정·관계자 발언) / 발표(구체적 정책) / 확인(통계로 효과 확인) / 부정(반대 신호).",
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "calendar": [
   {
    "name": "10월 말 정치국 회의",
@@ -93,6 +93,12 @@
    "status": "부정",
    "title": "9월 광의 재정지출 전년비 −3.7%(7개월 연속 축소), 광의 수입 −3.5% — 재정부 자료 기준 Bloomberg 집계",
    "url": "https://ca.finance.yahoo.com/news/china-barely-eased-austerity-just-073426239.html"
+  },
+  {
+   "date": "2026-10-23",
+   "status": "준비",
+   "title": "국무원 상무회의(리창 주재): 서비스업 투자 확대로 서비스 소비 잠재력을 끌어내라고 주문 — 구체적 재정·부동산 조치는 없음",
+   "url": "https://english.www.gov.cn/news/202610/23/content_WS6adb6170c6d00ca5f9a0ded2.html"
   }
  ]
 }

@@ -1,12 +1,12 @@
 {
  "_note": "다음 실적발표 일정. status: 확정(회사 공지) / 예상(작년 같은 분기 일정 기준). 날짜는 현지 기준. 매일 자동 점검 작업이 확정되면 고칩니다. reflected_period: 페이지 분석에 이미 반영된 최근 실적 분기.",
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "companies": {
   "samsung-electronics": {
    "period": "2026년 3분기",
    "date": "2026-10-29",
-   "status": "확정",
-   "kind": "10/29 10:00(KST) 확정실적 컨퍼런스콜(10/8 잠정실적 발표됨)",
+   "status": "발표(반영 대기)",
+   "kind": "10/29 3분기 실적 발표(매출 195.25조 원·영업이익 107.44조 원, 경향신문 보도) — 페이지 반영 대기",
    "reflected_period": "2026년 2분기(3분기 잠정치는 서술에 반영)",
    "prelim": {
     "date": "2026-10-08",
@@ -21,7 +21,7 @@
     "dart_rcpno": "20261008800004",
     "verified": "DART 공정공시 원문 표 대조"
    },
-   "source": "https://www.investegate.co.uk/announcement/rns/samsung-electronics-co-ltd-att---smsd/notice-of-3q-2026-earnings-release-schedule/9812151"
+   "source": "https://www.khan.co.kr/en/article/202610291030017/"
   },
   "sk-hynix": {
    "period": "2026년 3분기",
@@ -128,7 +128,8 @@
    "date": "2026-10-29",
    "status": "확정",
    "reflected_period": "2026년 2분기",
-   "source": "Vale 2026년 기업 일정(2026-01-13 공시)"
+   "source": "Vale 2026년 기업 일정(2026-01-13 공시)",
+   "kind": "10/29 장 마감 후 발표, 10/30 11:00(브라질리아) 웹캐스트"
   },
   "petrobras": {
    "period": "2026년 3분기",
