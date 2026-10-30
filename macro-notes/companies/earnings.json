@@ -1,6 +1,6 @@
 {
  "_note": "다음 실적발표 일정. status: 확정(회사 공지) / 예상(작년 같은 분기 일정 기준). 날짜는 현지 기준. 매일 자동 점검 작업이 확정되면 고칩니다. reflected_period: 페이지 분석에 이미 반영된 최근 실적 분기.",
- "updated": "2026-10-29",
+ "updated": "2026-10-30",
  "companies": {
   "samsung-electronics": {
    "period": "2026년 3분기",
@@ -118,18 +118,18 @@
   "byd": {
    "period": "2026년 3분기",
    "date": "2026-10-29",
-   "status": "확정",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 상반기(2분기)",
-   "source": "https://www.sina.cn/weibo/detail/5354012313912683.html",
-   "kind": "10/29 이사회에서 3분기 실적 승인(10/14 공고)"
+   "source": "https://www.thepaper.cn/newsDetail_forward_34362065",
+   "kind": "10/29 저녁 3분기 보고서 공시(매출 2,214.88억 위안 +13.59%, 귀속순이익 100.2억 위안 +28.08%, 澎湃新闻 보도) — 페이지 반영 대기"
   },
   "vale": {
    "period": "2026년 3분기",
    "date": "2026-10-29",
-   "status": "확정",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 2분기",
-   "source": "Vale 2026년 기업 일정(2026-01-13 공시)",
-   "kind": "10/29 장 마감 후 발표, 10/30 11:00(브라질리아) 웹캐스트"
+   "source": "https://www.moneytimes.com.br/lucro-liquido-da-vale-vale3-cai-54-no-3t26-para-us-125-bilhao-abaixo-das-expectativas-do-mercado-bdap/",
+   "kind": "10/29 장 마감 후 3분기 실적 발표(순이익 US$12.55억, 전년비 −54%, Money Times 보도) — 페이지 반영 대기"
   },
   "petrobras": {
    "period": "2026년 3분기",
@@ -165,10 +165,10 @@
   "ambev": {
    "period": "2026년 3분기",
    "date": "2026-10-29",
-   "status": "확정",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 2분기",
-   "source": "https://ri.ambev.com.br/en/",
-   "kind": "10/29 장 시작 전 발표, 같은 날 12:30(브라질리아) 웹캐스트"
+   "source": "https://bpmoney.com.br/negocios/empresas-na-bolsa/ambev-abev3-lucro-437-bilhoes-terceiro-trimestre-2026/",
+   "kind": "10/29 장 시작 전 3분기 실적 발표(보고 순이익 R$43.7억, BPMoney 보도) — 페이지 반영 대기"
   },
   "sabesp": {
    "period": "2026년 3분기",
