@@ -1,6 +1,6 @@
 {
  "_note": "원유 → 중국 전환 신호 가운데 시장 데이터로 자동 계산할 수 없는 항목(정책 발표·예고, 월간 통계)의 기록. 매일 아침 예약 작업이 뉴스와 공식 발표를 확인해 추가한다. status: 준비(예고·회의 일정·관계자 발언) / 발표(구체적 정책) / 확인(통계로 효과 확인) / 부정(반대 신호).",
- "updated": "2026-11-03",
+ "updated": "2026-11-10",
  "calendar": [
   {
    "name": "10월 말 정치국 회의",
@@ -111,6 +111,24 @@
    "status": "준비",
    "title": "5중전회 폐막: 전면적 엄격한 당 관리 결의만 채택, 공보에 소비·재정·부동산 부양 언급 없음 — 다음 경제 신호는 12월 정치국 회의·중앙경제공작회의",
    "url": "https://english.news.cn/20261029/2eb3bfd7e50d44868dfbd48b525964a5/c.html"
+  },
+  {
+   "date": "2026-11-02",
+   "status": "발표",
+   "title": "인민은행: 증권·펀드·보험사 스와프(SFISF) 3차 운용(31개사 1,000억 위안 넘게 신청), 자사주 매입·지분 확대 재대출 상시화·금리 1.25%→1% 인하 — 증시 지원책, 정책금리·지준율 변경은 없음",
+   "url": "https://www.chinadailyhk.com/article/642132"
+  },
+  {
+   "date": "2026-11-10",
+   "status": "확인",
+   "title": "10월 수입 전년비 +41.6%(예상 32%, 9월 31%), 수출 +35.2% — 세관 통계, Reuters",
+   "url": "https://www.investing.com/news/economy-news/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-5013969"
+  },
+  {
+   "date": "2026-11-10",
+   "status": "확인",
+   "title": "10월 원유 수입 4,194만 톤(일 988만 배럴): 일평균 전월비 +9.4%로 3월 이후 최대, 전년비로는 −13.3% — 세관 통계, Reuters",
+   "url": "https://www.investing.com/news/commodities-news/chinas-october-crude-oil-imports-rise-to-highest-level-since-march-amid-middle-east-war-5014020"
   }
  ]
 }

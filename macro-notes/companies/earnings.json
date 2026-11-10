@@ -1,6 +1,6 @@
 {
  "_note": "다음 실적발표 일정. status: 확정(회사 공지) / 예상(작년 같은 분기 일정 기준). 날짜는 현지 기준. 매일 자동 점검 작업이 확정되면 고칩니다. reflected_period: 페이지 분석에 이미 반영된 최근 실적 분기.",
- "updated": "2026-11-03",
+ "updated": "2026-11-10",
  "companies": {
   "samsung-electronics": {
    "period": "2026년 3분기",
@@ -34,9 +34,9 @@
   "sm-energy": {
    "period": "2026년 3분기",
    "date": "2026-11-03",
-   "status": "확정",
-   "kind": "장 마감 후 발표, 11/4 컨퍼런스콜",
-   "source": "https://www.stocktitan.net/news/SM/sm-energy-schedules-third-quarter-2026-conference-call-for-november-bwbeutx1xsxg.html",
+   "status": "발표(반영 대기)",
+   "kind": "11/3 장 마감 후 3분기 실적 발표(순이익 9,300만 달러, 주당 0.39달러, 회사 보도자료) — 페이지 반영 대기",
+   "source": "https://www.prnewswire.com/news-releases/sm-energy-reports-third-quarter-2026-results-302928401.html",
    "reflected_period": "2026년 2분기"
   },
   "crescent-energy": {
@@ -57,15 +57,19 @@
   },
   "tencent": {
    "period": "2026년 3분기",
-   "date": "2026-11-12",
-   "status": "예상",
-   "reflected_period": "2026년 2분기"
+   "date": "2026-11-18",
+   "status": "확정",
+   "reflected_period": "2026년 2분기",
+   "kind": "11/18 이사회에서 3분기 실적 승인(HKEX 이사회 일정 공시, 9/24)",
+   "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0924/2026092401585.pdf"
   },
   "jd": {
    "period": "2026년 3분기",
-   "date": "2026-11-13",
-   "status": "예상",
-   "reflected_period": "2026년 2분기"
+   "date": "2026-11-17",
+   "status": "확정",
+   "reflected_period": "2026년 2분기",
+   "kind": "11/17 미국 장 시작 전 발표, 07:00(미 동부) 컨퍼런스콜",
+   "source": "https://ir.jd.com/news-releases/news-release-details/jdcom-report-third-quarter-2026-financial-results-november-17"
   },
   "trip-com": {
    "period": "2026년 3분기",
@@ -142,17 +146,17 @@
   "itau": {
    "period": "2026년 3분기",
    "date": "2026-11-03",
-   "status": "확정",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 2분기",
-   "source": "https://www.seudinheiro.com/2026/economia/temporada-de-balancos-do-3t26-bate-a-porta-veja-as-datas-das-divulgacoes-e-das-teleconferencias-davs/",
-   "kind": "11/3 장 마감 후 발표, 11/4 컨퍼런스콜"
+   "source": "https://www.infomoney.com.br/mercados/itau-itub4-resultados-terceiro-trimestre-2026/",
+   "kind": "11/3 장 마감 후 3분기 실적 발표(경상 관리 순이익 126억 헤알, 전년비 +6.2%, InfoMoney 보도) — 페이지 반영 대기"
   },
   "nu": {
    "period": "2026년 3분기",
    "date": "2026-11-12",
    "status": "예상",
    "reflected_period": "2026년 2분기",
-   "source": "전년 발표 시기 기준 추정(회사 일정 미확인)"
+   "source": "https://www.moneytimes.com.br/calendario-de-resultados-do-3t26-balancos-vale-vale3-petrobras-petr4-itau-itub4-mlem/ (Money Times 달력: 11/12 장 시작 전, 회사 공지 미확인)"
   },
   "bradesco": {
    "period": "2026년 3분기",
@@ -173,10 +177,10 @@
   "sabesp": {
    "period": "2026년 3분기",
    "date": "2026-11-05",
-   "status": "예상",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 2분기",
-   "source": "https://riconnect.rico.com.vc/analises/calendario-de-balancos-terceiro-trimestre-de-2026/ (XP·B3·Bloomberg 집계, 회사 공지 미확인)",
-   "kind": "장 마감 후 발표(증권사 집계)"
+   "source": "https://investalk.bb.com.br/noticias/mercado/sbsp3-3t26-bb-analisa-revisao-precoalvo",
+   "kind": "11/5 장 마감 후 3분기 실적 발표(순이익 13.5억 헤알, EBITDA 36억 헤알, BB 리서치 인용) — 페이지 반영 대기"
   },
   "embraer": {
    "period": "2026년 3분기",
@@ -189,10 +193,10 @@
   "axia": {
    "period": "2026년 3분기",
    "date": "2026-11-04",
-   "status": "확정",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 2분기",
-   "source": "https://ri.axia.com.br/en/",
-   "kind": "11/4 브라질 장 마감 후 발표, 11/5 11:00(브라질리아) 컨퍼런스콜"
+   "source": "https://www.riotimesonline.com/brazil-axia-energia-third-quarter-2026-profit/",
+   "kind": "11/4 장 마감 후 3분기 실적 발표(순이익 11.1억 헤알, Rio Times 보도) — 페이지 반영 대기"
   }
  }
 }
