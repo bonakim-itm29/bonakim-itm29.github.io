@@ -1,6 +1,6 @@
 {
  "_note": "다음 실적발표 일정. status: 확정(회사 공지) / 예상(작년 같은 분기 일정 기준). 날짜는 현지 기준. 매일 자동 점검 작업이 확정되면 고칩니다. reflected_period: 페이지 분석에 이미 반영된 최근 실적 분기.",
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "companies": {
   "samsung-electronics": {
    "period": "2026년 3분기",
@@ -79,9 +79,11 @@
   },
   "baidu": {
    "period": "2026년 3분기",
-   "date": "2026-11-18",
-   "status": "예상",
-   "reflected_period": "2026년 2분기"
+   "date": "2026-11-16",
+   "status": "확정",
+   "reflected_period": "2026년 2분기",
+   "kind": "11/16 미국 장 시작 전 발표, 07:30(미 동부) 컨퍼런스콜(회사 공지 10/27)",
+   "source": "https://finviz.com/news/408464/baidu-to-report-third-quarter-2026-financial-results-on-november-16-2026"
   },
   "pdd": {
    "period": "2026년 3분기",
@@ -115,9 +117,11 @@
   },
   "xiaomi": {
    "period": "2026년 3분기",
-   "date": "2026-11-18",
-   "status": "예상",
-   "reflected_period": "2026년 2분기"
+   "date": "2026-11-24",
+   "status": "확정",
+   "reflected_period": "2026년 2분기",
+   "kind": "11/24 이사회에서 3분기 실적 승인(HKEX 이사회 일정 공시, 10/23)",
+   "source": "https://finance.sina.com.cn/stock/bxjj/2026-10-23/doc-iniwffen5122696.shtml"
   },
   "byd": {
    "period": "2026년 3분기",
@@ -138,10 +142,10 @@
   "petrobras": {
    "period": "2026년 3분기",
    "date": "2026-11-10",
-   "status": "예상",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 2분기",
-   "source": "https://riconnect.rico.com.vc/analises/calendario-de-balancos-terceiro-trimestre-de-2026/ (XP·B3·Bloomberg 집계, 회사 공지 미확인)",
-   "kind": "장 마감 후 발표(증권사 집계)"
+   "source": "https://agenciainfra.com/blog/petrobras-lucra-r-398-bi-no-3t26-valor-215-maior-em-relacao-ao-3t25/",
+   "kind": "11/10 장 마감 후 3분기 실적 발표(순이익 R$398억, 전년비 +21.5%, 조정 순이익 R$479억, Agência iNFRA 보도) — 페이지 반영 대기"
   },
   "itau": {
    "period": "2026년 3분기",
@@ -185,10 +189,10 @@
   "embraer": {
    "period": "2026년 3분기",
    "date": "2026-11-10",
-   "status": "예상",
+   "status": "발표(반영 대기)",
    "reflected_period": "2026년 2분기",
-   "source": "https://riconnect.rico.com.vc/analises/calendario-de-balancos-terceiro-trimestre-de-2026/ (XP·B3·Bloomberg 집계, 회사 공지 미확인)",
-   "kind": "장 시작 전 발표(증권사 집계)"
+   "source": "https://www.infomoney.com.br/mercados/embraer-embj3-resultados-terceiro-trimestre-2026/",
+   "kind": "11/10 3분기 실적 발표(조정 순이익 R$3.798억, 전년비 −15.6%, 매출 R$121억, InfoMoney 보도) — 페이지 반영 대기"
   },
   "axia": {
    "period": "2026년 3분기",
