@@ -1,6 +1,6 @@
 {
  "_note": "다음 실적발표 일정. status: 확정(회사 공지) / 예상(작년 같은 분기 일정 기준). 날짜는 현지 기준. 매일 자동 점검 작업이 확정되면 고칩니다. reflected_period: 페이지 분석에 이미 반영된 최근 실적 분기.",
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "companies": {
   "samsung-electronics": {
    "period": "2026년 3분기",
@@ -94,8 +94,10 @@
   "netease": {
    "period": "2026년 3분기",
    "date": "2026-11-19",
-   "status": "예상",
-   "reflected_period": "2026년 2분기"
+   "status": "확정",
+   "reflected_period": "2026년 2분기",
+   "kind": "11/19 미국 장 시작 전 발표, 07:00(미 동부) 컨퍼런스콜(회사 공지 11/5)",
+   "source": "https://www.tradingview.com/news/prnewswire:a2166fad280b1:0-netease-to-report-third-quarter-2026-financial-results-on-november-19/"
   },
   "alibaba": {
    "period": "2026년 9월 분기(FY27 2분기)",
@@ -112,8 +114,10 @@
   "lenovo": {
    "period": "FY2026/27 2분기(2026년 7~9월)",
    "date": "2026-11-19",
-   "status": "예상",
-   "reflected_period": "FY2026/27 1분기(2026년 4~6월)"
+   "status": "확정",
+   "reflected_period": "FY2026/27 1분기(2026년 4~6월)",
+   "kind": "11/19 이사회에서 9월 말 반기 실적 승인·중간배당 검토(HKEX 이사회 일정 공시)",
+   "source": "https://www.tipranks.com/news/company-announcements/lenovo-schedules-board-meeting-to-review-interim-results-and-dividend"
   },
   "xiaomi": {
    "period": "2026년 3분기",
